@@ -1,11 +1,15 @@
 $ember-orange: #E1563F;
 $background-color: #faf4f1;
 $color: black;
-$header-background-color: #e36550;
+$header-background-color: #dd6a58;
 $header-color: white;
 $footer-background-color: #f7f3ee;
 $footer-color: #999;
+$heading-color: #222;
 $font-family: "Source Sans Pro",
+sans-serif;
+$heading-font-family: "Lora", //if Lora can't be found, then stay consistent with the rest of the fonts on the page, don't change. 
+"Source Sans Pro",
 sans-serif;
 $font-size: 16px;
 $line-height: 1.2;

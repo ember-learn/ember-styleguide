@@ -9,15 +9,22 @@
 @import 'es-heading';
 @import 'es-navbar';
 @import 'es-ulist';
-*,
-*:after {
-    box-sizing: border-box; //this should go away if we use Flexbox because it causes issues. 
-}
-
 body {
     font-family: $font-family;
     font-size: $font-size;
     line-height: $line-height;
     background-color: $background-color;
     color: $color;
+    div {
+        &:first-of-type {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            header,
+            main,
+            footer {
+                flex: 1;
+            }
+        }
+    }
 }

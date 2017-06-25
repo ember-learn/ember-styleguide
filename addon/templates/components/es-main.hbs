@@ -1,0 +1,16 @@
+<div class="container"> 
+    {{#if hasAside}}
+    <div class="row">
+        {{#es-aside}}
+        //aside content
+        {{/es-aside}}
+        <div class="col-xs-12 col-md-8 col-lg-9">
+            {{#es-heading}}Page Title{{/es-heading}}
+            {{yield}}
+        </div>
+    </div>
+    {{else}}
+        {{#es-heading}}Page Title{{/es-heading}}
+        {{yield}}
+    {{/if}}
+</div>
