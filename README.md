@@ -1,6 +1,6 @@
 # ember-styleguide
 
-This README outlines the details of collaborating on this Ember addon.
+This addon is intended to provide basic components for easier coordination among the Ember family of websites. Contributions are encouraged.
 
 ## Installation
 
