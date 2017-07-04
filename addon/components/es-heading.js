@@ -4,11 +4,19 @@ import layout from '../templates/components/es-heading';
 export default Ember.Component.extend({
     layout,
     className: ['es-heading'],
-    attributeBindings: ['ariaLabel:aria-label'],
-    tagName: 'h1', //acceptable values are h1-h6
-    ariaLabel: 'descriptive text',
+    classNameBindings: ['isPageHeading:page-heading'],
+    attributeBindings: ['ariaLabel:aria-label', 'title'],
+    tagName: 'h1', //acceptable values should be h1-h6
     ariaRole: 'heading',
     isPageHeading: false, //if true, add classname "page-heading"
-
+    headingText: null,
+    ariaLabel: null,
+    title: Ember.computed('ariaLabel', 'headingText', function() {
+        if (this.get('ariaLabel') === null) {
+            return this.get('headingText');
+        } else {
+            return this.get('ariaLabel');
+        }
+    }),
 
 });
