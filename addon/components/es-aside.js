@@ -3,8 +3,10 @@ import layout from '../templates/components/es-aside';
 
 export default Ember.Component.extend({
     layout,
-    classNames: ['es-aside', 'col-xs-12', 'col-md-3'],
+    attributeBindings: ['ariaLabel:aria-label'],
+    classNames: ['es-aside'],
     tagName: 'aside',
-    ariaRole: 'complementary'
+    ariaRole: 'complementary',
+    ariaLabel: null,
 
 });

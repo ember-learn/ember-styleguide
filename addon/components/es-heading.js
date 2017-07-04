@@ -11,7 +11,7 @@ export default Ember.Component.extend({
     isPageHeading: false, //if true, add classname "page-heading"
     headingText: null,
     ariaLabel: null,
-    title: Ember.computed('ariaLabel', 'headingText', function() {
+    title: Ember.computed('ariaLabel', 'headingText', function() { //is there a more concise way to write this?
         if (this.get('ariaLabel') === null) {
             return this.get('headingText');
         } else {
