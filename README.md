@@ -1,6 +1,7 @@
 # ember-styleguide
 
-This addon is intended to provide basic components for easier coordination among the Ember family of websites. Contributions are encouraged.
+This addon is intended to provide basic components for easier style coordination among the Ember family of websites, although the original intent is to support the emberjs.com website. 
+Contributions are encouraged.
 
 ## Installation
 
