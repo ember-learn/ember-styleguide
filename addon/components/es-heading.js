@@ -3,7 +3,7 @@ import layout from '../templates/components/es-heading';
 
 export default Ember.Component.extend({
     layout,
-    className: ['es-heading'],
+    classNames: ['es-heading'],
     classNameBindings: ['isPageHeading:page-heading'],
     attributeBindings: ['ariaLabel:aria-label', 'title'],
     tagName: 'h1', //acceptable values should be h1-h6
