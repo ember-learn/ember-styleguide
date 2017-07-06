@@ -1,14 +1,17 @@
-// h1 {
-//     font-family: $heading-font-family;
-// }
-// h2 {
-//     font-weight: bold;
-//     letter-spacing: 1px;
-//     text-transform: uppercase;
-//     color: $heading-color;
-// }
-// .page-heading {
-//     padding-bottom: 9px;
-//     margin-bottom: 20px;
-//     border-bottom: 1px solid $ember-orange;
-// }
+h1,
+h2 {
+    font-family: $heading-font-family;
+}
+
+h3 {
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $black;
+}
+
+.page-heading {
+    padding-bottom: 9px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $primary
+}

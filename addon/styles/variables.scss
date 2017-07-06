@@ -1,15 +1,22 @@
-// $ember-orange: #E1563F;
-// $background-color: #faf4f1;
-// $color: black;
-// $header-background-color: #dd6a58;
-// $header-color: white;
-// $footer-background-color: #f7f3ee;
-// $footer-color: #999;
-// $heading-color: #222;
-// $font-family: "Source Sans Pro",
-// sans-serif;
-// $heading-font-family: "Lora", //if Lora can't be found, then stay consistent with the rest of the fonts on the page, don't change. 
-// "Source Sans Pro",
-// sans-serif;
-// $font-size: 16px;
-// $line-height: 1.2;
+$primary: #F4511E;
+$primary-light: #FF844C;
+$primary-dark: #B91400;
+$secondary: #E0E0E0;
+$secondary-light: #FFFFFF;
+$secondary-dark: #AEAEAE;
+$tertiary: #455a64;
+$tertiary-light: #718792;
+$tertiary-dark: #1c313a;
+$black: black;
+$white: white;
+$font-family: "Source Sans Pro",
+sans-serif;
+$heading-font-family: "Lora", //if Lora can't be found, then stay consistent with the rest of the fonts on the page, don't change. 
+"Source Sans Pro",
+sans-serif;
+$font-size: 16px;
+$line-height: 1.2;
+// breakpoints
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;

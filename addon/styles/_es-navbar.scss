@@ -1,0 +1,26 @@
+.es-navbar {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    ul {
+        margin: 0;
+        padding: 0 15%;
+        display: flex;
+        flex: 1;
+        li {
+            padding: 0;
+            margin: 0;
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            a {
+                justify-content: center;
+                align-content: stretch;
+                color: white;
+                line-height: 36px;
+                text-decoration: none;
+            }
+        }
+    }
+}

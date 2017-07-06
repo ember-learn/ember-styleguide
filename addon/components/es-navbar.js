@@ -5,6 +5,7 @@ export default Ember.Component.extend({
     layout,
     attributeBindings: ['ariaLabel:aria-label'],
     classNames: ['es-navbar'],
+    tagName: 'nav',
     ariaRole: 'navigation',
     ariaLabel: null
 
