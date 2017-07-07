@@ -13,13 +13,21 @@
             flex: 1 1 auto;
             display: flex;
             justify-content: space-around;
-            align-items: center;
+            align-items: stretch;
+            font-size: 19px;
+            line-height: 1.2;
             a {
                 justify-content: center;
-                align-content: stretch;
+                align-self: stretch;
                 color: white;
-                line-height: 36px;
                 text-decoration: none;
+                padding: 11px;
+            }
+            form {
+                justify-content: center;
+                display: flex;
+                align-self: stretch;
+                padding: 11px;
             }
         }
     }
