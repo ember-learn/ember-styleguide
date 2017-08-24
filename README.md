@@ -33,3 +33,8 @@ For more information on using ember-cli, visit [https://ember-cli.com/](https://
 * Now: ember-font-awesome for the font icons
 * The `es-pagewrapper` component has a property to indicate if there will be a sidebar or not. There might be a better way to do this.
 * In this addon, the `section` element is used as a container and is intended to span the full width of the viewport. 
+
+## Current Issues
+
+* White on Ember orange. it's not passing accessibility color contrast tests. 
+* the Interface font isn't consistent enough, but it was a cool idea.
