@@ -6,7 +6,13 @@ export default Ember.Component.extend({
     attributeBindings: ['ariaLabel:aria-label'],
     classNames: ['es-header'],
     tagName: 'header',
-    ariaRole: 'banner',
+
+    //accessibility support
+    ariaDescribedby: null,
     ariaLabel: null,
+    ariaRole: 'banner',
+    title: null,
+
+
 
 });

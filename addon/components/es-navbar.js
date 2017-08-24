@@ -6,7 +6,11 @@ export default Ember.Component.extend({
     attributeBindings: ['ariaLabel:aria-label'],
     classNames: ['es-navbar'],
     tagName: 'nav',
+
+    //accessibility support
+    ariaDescribedby: null,
+    ariaLabel: null,
     ariaRole: 'navigation',
-    ariaLabel: null
+    title: null,
 
 });

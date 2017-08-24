@@ -1,22 +1,28 @@
-$primary: #dd6a58;
-$primary-light: #e47051;
-$primary-dark: #a14031;
-$secondary: #E0E0E0;
-$secondary-light: #FFFFFF;
-$secondary-dark: #AEAEAE;
-$tertiary: #455a64;
-$tertiary-light: #718792;
-$tertiary-dark: #1c313a;
-$black: black;
-$white: white;
-$font-family: "Source Sans Pro",
-sans-serif;
-$heading-font-family: "Lora", //if Lora can't be found, then stay consistent with the rest of the fonts on the page, don't change. 
-"Source Sans Pro",
-sans-serif;
-$font-size: 16px;
-$line-height: 1.2;
-// breakpoints
+//breakpoints (1 of 3)
 $screen-md: 768px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
+//colors (2 of 3)
+$primary: #E34C32;
+$primary-light: lighten($primary, 30%);
+$primary-dark: #EF4326;
+$secondary: #4A4A4A;
+$secondary-light: #969696;
+$secondary-dark: #303030;
+$black: #212121; //never pure black
+$white: #fdfdfd; //never pure white
+$success: green; //come back to these state colors and put proper colors in here
+$info: cornflowerblue;
+$warning: goldenrod;
+$danger: red;
+//font things (3 of 3)
+$font-family: 'Interface',
+'Roboto',
+sans-serif;
+$font-family-heading: 'Interface',
+'Alegreya Sans',
+'Roboto',
+sans-serif;
+$font-size: 18px;
+$line-height: 1.2;
+//it's formatting on save and I need to figure out why bc I already told it not to do that.

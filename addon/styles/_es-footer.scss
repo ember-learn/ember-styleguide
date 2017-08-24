@@ -1,22 +1,5 @@
 .es-footer {
     background-color: $secondary;
-    border-top: 1px solid #f9e7e4;
-    display: flex;
-    flex: 1;
-    min-width: 100%;
-    .col {
-        display: flex;
-        flex: 1;
-        justify-content: center;
-        ul {
-            max-width: 300px;
-            margin: 0;
-            padding: 0;
-            li {
-                list-style: none;
-                display: inline-block;
-                a {}
-            }
-        }
-    }
+    color: white;
+    grid-area: footer;
 }

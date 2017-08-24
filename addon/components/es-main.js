@@ -6,7 +6,11 @@ export default Ember.Component.extend({
     attributeBindings: ['ariaLabel:aria-label'],
     classNames: ['es-main'],
     tagName: 'main',
-    ariaRole: 'main',
-    hasAside: false,
+
+
+    //accessibility support
+    ariaDescribedby: null,
     ariaLabel: null,
+    ariaRole: 'main',
+    title: null,
 });

@@ -1,0 +1,19 @@
+.es-ulist {
+    list-style: none;
+    flex: 1;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    li {
+        display: inline-block;
+        justify-content: center;
+        a {
+            padding: 5px;
+            display: block;
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}

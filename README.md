@@ -25,3 +25,11 @@ Contributions are encouraged.
 * `ember build`
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+## WIP Notes
+
+* Permanent: each component has the component name attached as a CSS class. This makes it a little easier to scope styling. 
+* WIP: it may feel as though there is duplicated code throughout these components; during the WIP process, we are favoring duplication over abstraction. 
+* Now: ember-font-awesome for the font icons
+* The `es-pagewrapper` component has a property to indicate if there will be a sidebar or not. There might be a better way to do this.
+* In this addon, the `section` element is used as a container and is intended to span the full width of the viewport. 

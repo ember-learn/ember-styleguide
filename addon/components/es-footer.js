@@ -6,7 +6,12 @@ export default Ember.Component.extend({
     attributeBindings: ['ariaLabel:aria-label'],
     classNames: ['es-footer'],
     tagName: 'footer',
-    ariaRole: 'contentinfo',
+
+
+    //accessibility support
+    ariaDescribedby: null,
     ariaLabel: null,
+    ariaRole: 'contentinfo',
+    title: null,
 
 });
