@@ -1,5 +1,5 @@
 //@import url('https://rsms.me/interface/interface.css');
-@import 'interface';
+// @import 'interface';
 @import 'variables';
 @import 'normalize';
 @import 'es-aside';
@@ -45,9 +45,15 @@ section {
     justify-content: center;
     flex-flow: row wrap;
     min-width: 100%;
+    padding: 1em 0;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0.5em;
+    }
     h2 {
         @media screen and (min-width: 768px) {
             text-align: center;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
     }
 }

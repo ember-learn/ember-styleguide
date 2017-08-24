@@ -1,12 +1,13 @@
 .es-button {
     background-color: $white;
     border: 3px solid $primary;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     padding: 15px 20px;
     text-transform: uppercase;
     text-decoration: none;
     color: $primary;
     font-weight: bold;
+    font-size: 0.9em;
     width: 300px;
     &.button-block {
         width: 100%;

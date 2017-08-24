@@ -10,4 +10,8 @@ export default Ember.Component.extend({
     ariaLabel: null,
     ariaRole: 'group',
     title: null,
+
+    itemUrl: null, //think about this, there has to be something better to name it. 
+    imageUrl: null,
+    altText: null, //for a11y, this is required if the link is an image. 
 });

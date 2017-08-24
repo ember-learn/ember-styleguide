@@ -8,8 +8,8 @@ body {
 }
 
 div.intro {
-    // background-color: rgba(227, 219, 218, 0.85);
-    background-color: #FDFDFD;
+    // background-color: rgba(227, 216, 214, 0.2);
+    background-color: rgba(252, 249, 247, 0.6);
     border: 4px solid darken(#E3DBDA, 10%);
     display: flex;
     flex-flow: column wrap;
@@ -38,5 +38,20 @@ div.intro {
         width: 350px;
         margin: 1em auto;
         text-align: left;
+    }
+}
+
+footer {
+    padding: 2em 1em;
+    font-size: 0.8em;
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            a {
+                color: white;
+            }
+        }
     }
 }
