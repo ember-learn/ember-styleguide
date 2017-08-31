@@ -38,3 +38,10 @@ For more information on using ember-cli, visit [https://ember-cli.com/](https://
 
 * White on Ember orange. it's not passing accessibility color contrast tests. 
 * the Interface font isn't consistent enough, but it was a cool idea.
+
+## Design Notes
+* Fonts: The current font pairings are Roboto & Alegreya Sans from Google Fonts. Tried Interface but it's too inconsistent to recommend use at this time. 
+* Design boldness: it currently looks rather bold, but these decisions cascaded from the buttons, and the planned css interactions on hover will be interesting. 
+* Animation: "energetic and approachable" until I hear otherwise.
+* Underlying CSS approach: mix of Flexbox and Grid
+* Accessibility: currently the color contrast on the navbar is a struggle but otherwise it should be fine, and will remain a central theme of this UI addon. 
