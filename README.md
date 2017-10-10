@@ -45,3 +45,19 @@ For more information on using ember-cli, visit [https://ember-cli.com/](https://
 * Animation: "energetic and approachable" until I hear otherwise.
 * Underlying CSS approach: mix of Flexbox and Grid
 * Accessibility: currently the color contrast on the navbar is a struggle but otherwise it should be fine, and will remain a central theme of this UI addon. 
+
+## CSS Rules
+* need to set up a linter for this
+* mobile-first CSS, i.e., 
+```.my-component {
+     padding: 0 0.25em;
+     @media screen and (min-width: 992px) {
+       padding: 0.5em 1em;
+     }
+   }
+```
+* scope the CSS inside each component but keep it DRY
+* lowercase class names
+* don't use IDs
+* keep specificity reasonably low
+* alpha-order the properties for the element (usually just have to hightlight the group and press F9)
