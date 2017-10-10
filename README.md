@@ -49,7 +49,8 @@ For more information on using ember-cli, visit [https://ember-cli.com/](https://
 ## CSS Rules
 * need to set up a linter for this
 * mobile-first CSS, i.e., 
-```.my-component {
+```
+  .my-component {
      padding: 0 0.25em;
      @media screen and (min-width: 992px) {
        padding: 0.5em 1em;
