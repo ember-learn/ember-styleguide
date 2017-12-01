@@ -40,7 +40,7 @@ For more information on using ember-cli, visit [https://ember-cli.com/](https://
 * the Interface font isn't consistent enough, but it was a cool idea.
 
 ## Design Notes
-* Fonts: The current font pairings are Roboto & Alegreya Sans from Google Fonts. Tried Interface but it's too inconsistent to recommend use at this time. 
+* Fonts: Roboto from Google Fonts. Tried Interface but it's too inconsistent to recommend use at this time. Still unsure about what to do about Apple, because they're currently rendering Google Fonts like total crap. 
 * Design boldness: it currently looks rather bold, but these decisions cascaded from the buttons, and the planned css interactions on hover will be interesting. 
 * Animation: "energetic and approachable" until I hear otherwise.
 * Underlying CSS approach: mix of Flexbox and Grid
@@ -62,3 +62,9 @@ For more information on using ember-cli, visit [https://ember-cli.com/](https://
 * don't use IDs
 * keep specificity reasonably low
 * alpha-order the properties for the element (usually just have to hightlight the group and press F9)
+
+## Styleguide Notes
+* one h1 per page
+* heading elements should never require extra classes or CSS treatments
+* valid HTML should be used
+
