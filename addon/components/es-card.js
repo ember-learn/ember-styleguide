@@ -1,16 +1,16 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import layout from '../templates/components/es-card';
 
-export default Ember.Component.extend({
-    layout,
-    classNames: ['es-card'],
-    classNameBindings: ['hasBorder:border'],
+export default Component.extend({
+  layout,
+  classNames: ['es-card'],
+  classNameBindings: ['hasBorder:border'],
 
-    //accessibility support
-    ariaDescribedby: null,
-    ariaLabel: null,
-    ariaRole: null,
-    title: null,
+  //accessibility support
+  ariaDescribedby: null,
+  ariaLabel: null,
+  ariaRole: null,
+  title: null,
 
-    hasBorder: false,
+  hasBorder: false
 });

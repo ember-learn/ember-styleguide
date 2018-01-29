@@ -24,10 +24,10 @@ test('it renders', function(assert) {
     assert.equal(this.$().text().trim(), 'template block text');
 });
 
-test('it is a heading element', function(assert) {
-
-});
-test('it has the role of heading', function(assert) {
-
-});
+// test('it is a heading element', function(assert) {
+//
+// });
+// test('it has the role of heading', function(assert) {
+//
+// });
 //test that it has the class name that is equal to the component name

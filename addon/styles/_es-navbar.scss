@@ -1,42 +1,42 @@
 .es-navbar {
-    grid-area: nav;
-    background-color: $primary;
-    text-align: center;
-    @media (min-width: 600px) {
-        ul.navigation {
-            display: flex;
-            justify-content: space-between;
-            list-style: none;
-            flex-flow: row wrap;
-            max-width: 70%;
-            margin: 0 auto;
-            li {
-                flex: 1;
-                justify-content: center;
-                a {
-                    text-align: center;
-                    display: block;
-                    color: white;
-                    text-decoration: none;
-                    padding-top: 18px;
-                    padding-bottom: 12px;
-                    font-size: 20px; //it needs to be this size in order to pass accessibility requirements
-                    line-height: 1;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    img {
-                        margin-top: -12px;
-                    }
-                }
-                form.form-search {
-                    display: flex;
-                    flex-flow: column;
-                    margin: auto;
-                    justify-content: center;
-                    padding-right: 5px;
-                    padding-top: 12px;
-                }
-            }
+  grid-area: nav;
+  background-color: $primary;
+  text-align: center;
+  @media (min-width: 600px) {
+    ul.navigation {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      flex-flow: row wrap;
+      max-width: 70%;
+      margin: 0 auto;
+      li {
+        flex: 1;
+        justify-content: center;
+        a {
+          text-align: center;
+          display: block;
+          color: white;
+          text-decoration: none;
+          padding-top: 18px;
+          padding-bottom: 12px;
+          font-size: 20px; //it needs to be this size in order to pass accessibility requirements
+          line-height: 1;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          img {
+            margin-top: -12px;
+          }
         }
+        form.form-search {
+          display: flex;
+          flex-flow: column;
+          margin: auto;
+          justify-content: center;
+          padding-right: 5px;
+          padding-top: 12px;
+        }
+      }
     }
+  }
 }

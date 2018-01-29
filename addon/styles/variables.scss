@@ -16,11 +16,8 @@ $info: cornflowerblue;
 $warning: goldenrod;
 $danger: red;
 //font things (3 of 3)
-$font-family: 'Roboto',
-sans-serif;
-$font-family-heading: 'Alegreya Sans',
-'Roboto',
-sans-serif;
+$font-family: 'Roboto', sans-serif;
+$font-family-heading: 'Alegreya Sans', 'Roboto', sans-serif;
 $font-size: 18px;
 $line-height: 1.2;
 //it's formatting on save and I need to figure out why bc I already told it not to do that.
