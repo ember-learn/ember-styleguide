@@ -1,62 +1,65 @@
 {{#es-pagewrapper}}
-    {{#es-header}}
-        {{#es-navbar}}
-            <ul role="menubar" aria-label="primary site navigation" class="navigation">
-                <li role="none"><a href="/" role="menuitem" class="logo"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="Home" /></a></li>
-                <li role="none"><a href="/learn" role="menuitem">Learn</a></li>
-                <li role="none"><a href="/guides" role="menuitem">Guides</a></li>
-                <li role="none"><a href="/api" role="menuitem">API</a></li>
-                <li role="none"><a href="/community" role="menuitem">Community</a></li>
-                <li role="none"><a href="/blog" role="menuitem">Blog</a></li>
-                <li role="none"><a href="/builds" role="menuitem">Builds</a></li>
-                <li role="menuitem">
-                    <form role="search" class="form-search">
-                        <label for="search" class="sr-only sr-only-focusable">Search</label>
-                        <input type="search" id="search" class="input-search" aria-describedby="search-help-text" />
-                        {{!-- {{fa-icon "search" ariaLabel="search" title="search"}} --}}
-                        <div id="search-help-text" class="sr-only sr-only-focusable">Press enter to search</div>
-                    </form>
-                </li>
-            </ul>
-        {{/es-navbar}}
-    {{/es-header}}
-    {{#es-main}}
-        {{outlet}}
-    {{/es-main}}
-    {{#es-footer}}
-        <div class="col">
-            <ul role="menu">
-                <li role="none">Copyright 2017 <a role="menuitem" href="http://tilde.io/">Tilde Inc.</a></li>
-                <li role="none"><a role="menuitem" href="/team">Team</a></li>
-                <li role="separator" class="separator">|</li>
-                <li role="none"><a role="menuitem" href="/sponsors">Sponsors</a></li>
-                <li role="separator" class="separator">|</li>
-                <li role="none"><a role="menuitem" href="/security">Security</a></li>
-                <li role="separator" class="separator">|</li>
-                <li role="none"><a role="menuitem" href="/legal">Legal</a></li>
-                <li role="separator" class="separator">|</li>
-                <li role="none"><a role="menuitem" href="/logos">Logos</a></li>
-                <li role="separator" class="separator">|</li>
-                <li role="none"><a role="menuitem" href="/community/guidelines">Community Guidelines</a></li>
-            </ul>
-        </div>
-        <div class="col">
-            <p>Ember.js is free, open source, and always will be</p>
-            <ul class="list-inline">
-                <li><a href="http://twitter.com/emberjs"><img src="" alt="ember on twitter" /></a></li>
-                <li><a href="https://github.com/emberjs/ember.js"><img src="" alt="ember on github" /></a></li>
-                <li><a href="https://plus.google.com/communities/106387049790387471205"><img src="" alt="ember on google plus" /></a></li>
-            </ul>
-        </div>
-        <div class="col">
-            <p class="p-inline">
-                Hosted by:
-                <img src="" alt="Heroku" />
-            </p>
-            <p class="p-inline">
-                CDN provided by:
-                <img src="" alt="fastly" />
-            </p>
-        </div>
-    {{/es-footer}}
+  {{#es-header}}
+    {{#es-navbar}}
+      <ul role="menubar" aria-label="primary site navigation" class="navigation">
+        <li role="none"><a href="/" role="menuitem" class="logo"><img
+          src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg"
+          alt="Home"/></a></li>
+        <li role="none"><a href="/learn" role="menuitem">Learn</a></li>
+        <li role="none"><a href="/guides" role="menuitem">Guides</a></li>
+        <li role="none"><a href="/api" role="menuitem">API</a></li>
+        <li role="none"><a href="/community" role="menuitem">Community</a></li>
+        <li role="none"><a href="/blog" role="menuitem">Blog</a></li>
+        <li role="none"><a href="/builds" role="menuitem">Builds</a></li>
+        <li role="menuitem">
+          <form role="search" class="form-search">
+            <label for="search" class="sr-only sr-only-focusable">Search</label>
+            <input type="search" id="search" class="input-search" aria-describedby="search-help-text"/>
+            {{!-- {{fa-icon "search" ariaLabel="search" title="search"}} --}}
+            <div id="search-help-text" class="sr-only sr-only-focusable">Press enter to search</div>
+          </form>
+        </li>
+      </ul>
+    {{/es-navbar}}
+  {{/es-header}}
+  {{#es-main}}
+    {{outlet}}
+  {{/es-main}}
+  {{#es-footer}}
+    <div class="col">
+      <ul role="menu">
+        <li role="none">Copyright 2017 <a role="menuitem" href="http://tilde.io/">Tilde Inc.</a></li>
+        <li role="none"><a role="menuitem" href="/team">Team</a></li>
+        <li role="separator" class="separator">|</li>
+        <li role="none"><a role="menuitem" href="/sponsors">Sponsors</a></li>
+        <li role="separator" class="separator">|</li>
+        <li role="none"><a role="menuitem" href="/security">Security</a></li>
+        <li role="separator" class="separator">|</li>
+        <li role="none"><a role="menuitem" href="/legal">Legal</a></li>
+        <li role="separator" class="separator">|</li>
+        <li role="none"><a role="menuitem" href="/logos">Logos</a></li>
+        <li role="separator" class="separator">|</li>
+        <li role="none"><a role="menuitem" href="/community/guidelines">Community Guidelines</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <p>Ember.js is free, open source, and always will be</p>
+      <ul class="list-inline">
+        <li><a href="http://twitter.com/emberjs"><img src="" alt="ember on twitter"/></a></li>
+        <li><a href="https://github.com/emberjs/ember.js"><img src="" alt="ember on github"/></a></li>
+        <li><a href="https://plus.google.com/communities/106387049790387471205"><img src="" alt="ember on google plus"/></a>
+        </li>
+      </ul>
+    </div>
+    <div class="col">
+      <p class="p-inline">
+        Hosted by:
+        <img src="" alt="Heroku"/>
+      </p>
+      <p class="p-inline">
+        CDN provided by:
+        <img src="" alt="fastly"/>
+      </p>
+    </div>
+  {{/es-footer}}
 {{/es-pagewrapper}}

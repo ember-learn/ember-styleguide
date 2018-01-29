@@ -1,132 +1,163 @@
 {{!--{{outlet}}--}}
-    <section>
-    {{es-heading  headingText="Learning Ember.js" tagName="h1"}}
-    <p class="intro-text">
-        <ul>
-            <li><a href="/learn/quickstart">Quick start</a>: An easy-breezy introduction to the framework.</li>
-            <li><a href="/learn/tutorial">Tutorial</a>: Follow our tutorial to build and deploy your first Ember.js application!</li>
-            <li><a href="/guides">Guides</a>: Whether you're just getting started and want to get familiar with Ember, or you're looking to refresh your knowledge on a specific feature, the guides are the right place for you!</li>
-        </ul>
-    </p>
-    </section>
-    <section>
-        {{es-heading headingText="API Reference" tagName="h2"}}
-        <p>Explore the available API of the various Ember ecosystem libraries. This is where you want to go to read the details about the various features, including example code.</p>
-        <ul>
-            <li><a href="/api"><img src="" alt="ember A.P.I." /></a></li>
-            <li><a href="/api/data/"><img src="" alt="ember data" /></a></li>
-            <li><a href="http://ember-cli.com"><img src="" alt="ember C.L.I" /></a></li>
-        </ul>
-    </section>
-    <section>
-        {{es-heading headingText="Deprecation Guides" tagName="h2"}}
-        <p>Over the course of the years cruft inevitably sneaks into all software projects. In order to clean up outdated funcionality and guide users, Ember has a deprecation process. You can read our deprecation guides for more information. You can find below more direct links to Ember and Ember Data versions.</p>
-        <ul>
-            <li><a href="" aria-label="ember one dot x">Ember 1.x</a></li>
-            <li><a href="" aria-label="ember two dot x">Ember 2.x</a></li>
-            <li><a href="" aria-label="ember data two dot x">Ember Data 2.x</a></li>
-        </ul>
-    </section>
-    <section>
-        {{es-heading headingText="Ecosystem" tagName="h2"}}
-        <p>One of the main strengths of Ember is how shared conventions enable developers to build on top of each other's work and improve the ecosystem for everyone. These are some of the projects more closely maintained by the several Ember teams.</p>
-        <dl>
-            <dt>Ember CLI:</dt>
-            <dd>The official command line toolkit to develop Ember applications. Check out the User Guide, and the documentation on how to extend Ember CLI as an addon developer.</dd>
-            <dt>Ember Inspector:</dt>
-            <dd> A browser plugin/bookmarklet that helps you inspect and debug applications. Learn how best to use it in the Ember Inspector Guides.</dd>
-            <dt>Liquid Fire:</dt>
-            <dd> A toolkit to add animations and transitions to your application. Check out their interactive documentation.</dd>
-            <dt>Ember Twiddle:</dt>
-            <dd> Online code editor so you can share working snippets of code or reproductions of bugs. Try it out today! </dd>
-            <dt>FastBoot:</dt>
-            <dd>Server-side rendering library for Ember applications. Check out the Quickstart to get up and running, and the User Guide for more detailed information.</dd>
-        </dl>
-    </section>
-    <section>
-        {{es-heading headingText="Showcase" tagName="h2"}}
-        <p>In this section you will find applications that are maintained by the Ember.js teams with the help of contributors. While software is always a work in progress, the goal is to showcase patterns and solutions applied in real-world applications.</p>
-        <p>Whether you're simply interested in checking out how some feature is implemented, or you're looking to contribute, one of these projects might pique your interest!</p>
-         <div class="tabs">
-            <div role="tablist" aria-label="ember project showcase">
-                <button role="tab"
-                        aria-selected="true"
-                        aria-controls="super-rentals-tab"
-                        id="super-rentals">
-                    Super Rentals
-                </button>
-                <button role="tab"
-                        aria-selected="false"
-                        aria-controls="builds-tab"
-                        id="builds"
-                        tabindex="-1">
-                    Builds
-                </button>
-                <button role="tab"
-                        aria-selected="false"
-                        aria-controls="api-docs-tab"
-                        id="api-docs"
-                        tabindex="-1">
-                    API Docs
-                </button>
-            </div>
-            <div tabindex="0"
-            role="tabpanel"
-            id="super-rentals-tab"
-            aria-labelledby="super-rentals">
-                {{es-heading headingText="Super Rentals" tagName="h3"}}
-                <img src="" alt="" role="presentation"/>
-                <p>Repository: https://github.com/ember-learn/super-rentals</p>
-                <p>If you've gone through our Tutorial you will already be familiar with this application! Super Rentals is a good starter project to get acclimated to the Ember.js way of doing things. In this repository you'll be able to see:
-                    <ul>
-                        <li>Basic routing, and routing with dynamic segments</li>
-                        <li>Acceptance, integration, and unit tests using Ember CLI Mirage.</li>
-                    </ul>
-                </p>
-            </div>
-            <div tabindex="0"
-            role="tabpanel"
-            id="builds-tab"
-            aria-labelledby="builds"
-            hidden="">
-                {{es-heading headingText="Builds" tagName="h3"}}            
-                <img src="" alt="" role="presentation"/>
-                <p>Repository: <a href="https://github.com/ember-learn/builds">https://github.com/ember-learn/builds</a></p>
-                <p>This is the application that the Ember.js team built to display our various release channels. It is slightly more complex than Super Rentals, and you'll be able to see:
-                    <ul>
-                        <li>Usage of Ember CLI Deploy to deploy to S3.</li>
-                        <li>Loading of an Ember.js application via JavaScript in the website.</li>
-                    </ul>
-                </p>
-            </div>
-            <div tabindex="0"
-            role="tabpanel"
-            id="api-docs-tab"
-            aria-labelledby="api-docs"
-            hidden="">
-                {{es-heading headingText="API docs" tagName="h3"}}
-                <img src="" alt="" role="presentation"/>
-                <p>Repository: <a href="https://github.com/ember-learn/ember-api-docs">https://github.com/ember-learn/ember-api-docs</a></p>
-                <p>This application (currently in beta) was built to display our versioned API docs. It is a good example of a PWA. You'll be able to learn about:
-                    <ul>
-                        <li>See a more full-featured Ember web app in action</li>
-                        <li>Usage of Ember FastBoot.</li>
-                        <li>Enabling service workers and defining web app manifests to enhance your ember apps into progressive web apps.</li>
-                    </ul>
-                </p>
-            </div>
-        </div>
-    </section>
-    <section>
-        {{es-heading headingText="Frequently Asked Questions" tagName="h2"}}
-        {{es-heading headingText="How do I future proof my ember.js application?" tagName="h3"}}
-        <p>Ember.js has a strong emphasis on Stability without Stagnation, which means that framework developers take great care when designing new functionality to make sure it fits with the existing functionalities, and provides a path forward for users to upgrade without being subjected to churn.</p>
-        <p>Ember.js also follow a community-driven process for its development that incorporates RFCs for features and deprecations and a six-week "train release schedule". Every six weeks, candidate features are reviewed and either deemed ready to be included in the stable release, or carry on in beta for another cycle until the next release happens.</p>
-        <p>In short, the best way to make sure you have a healthy application is to keep an eye on RFCs — remembering they document intent but not necessarily the final implementation, — keep your application clean of deprecations, and when possible test your application against beta and canary.</p>
+<section>
+  {{es-heading  headingText="Learning Ember.js" tagName="h1"}}
+  <p class="intro-text">
+  <ul>
+    <li><a href="/learn/quickstart">Quick start</a>: An easy-breezy introduction to the framework.</li>
+    <li><a href="/learn/tutorial">Tutorial</a>: Follow our tutorial to build and deploy your first Ember.js application!
+    </li>
+    <li><a href="/guides">Guides</a>: Whether you're just getting started and want to get familiar with Ember, or you're
+      looking to refresh your knowledge on a specific feature, the guides are the right place for you!
+    </li>
+  </ul>
+  </p>
+</section>
+<section>
+  {{es-heading headingText="API Reference" tagName="h2"}}
+  <p>Explore the available API of the various Ember ecosystem libraries. This is where you want to go to read the
+    details about the various features, including example code.</p>
+  <ul>
+    <li><a href="/api"><img src="" alt="ember A.P.I."/></a></li>
+    <li><a href="/api/data/"><img src="" alt="ember data"/></a></li>
+    <li><a href="http://ember-cli.com"><img src="" alt="ember C.L.I"/></a></li>
+  </ul>
+</section>
+<section>
+  {{es-heading headingText="Deprecation Guides" tagName="h2"}}
+  <p>Over the course of the years cruft inevitably sneaks into all software projects. In order to clean up outdated
+    funcionality and guide users, Ember has a deprecation process. You can read our deprecation guides for more
+    information. You can find below more direct links to Ember and Ember Data versions.</p>
+  <ul>
+    <li><a href="" aria-label="ember one dot x">Ember 1.x</a></li>
+    <li><a href="" aria-label="ember two dot x">Ember 2.x</a></li>
+    <li><a href="" aria-label="ember data two dot x">Ember Data 2.x</a></li>
+  </ul>
+</section>
+<section>
+  {{es-heading headingText="Ecosystem" tagName="h2"}}
+  <p>One of the main strengths of Ember is how shared conventions enable developers to build on top of each other's work
+    and improve the ecosystem for everyone. These are some of the projects more closely maintained by the several Ember
+    teams.</p>
+  <dl>
+    <dt>Ember CLI:</dt>
+    <dd>The official command line toolkit to develop Ember applications. Check out the User Guide, and the documentation
+      on how to extend Ember CLI as an addon developer.
+    </dd>
+    <dt>Ember Inspector:</dt>
+    <dd> A browser plugin/bookmarklet that helps you inspect and debug applications. Learn how best to use it in the
+      Ember Inspector Guides.
+    </dd>
+    <dt>Liquid Fire:</dt>
+    <dd> A toolkit to add animations and transitions to your application. Check out their interactive documentation.
+    </dd>
+    <dt>Ember Twiddle:</dt>
+    <dd> Online code editor so you can share working snippets of code or reproductions of bugs. Try it out today!</dd>
+    <dt>FastBoot:</dt>
+    <dd>Server-side rendering library for Ember applications. Check out the Quickstart to get up and running, and the
+      User Guide for more detailed information.
+    </dd>
+  </dl>
+</section>
+<section>
+  {{es-heading headingText="Showcase" tagName="h2"}}
+  <p>In this section you will find applications that are maintained by the Ember.js teams with the help of contributors.
+    While software is always a work in progress, the goal is to showcase patterns and solutions applied in real-world
+    applications.</p>
+  <p>Whether you're simply interested in checking out how some feature is implemented, or you're looking to contribute,
+    one of these projects might pique your interest!</p>
+  <div class="tabs">
+    <div role="tablist" aria-label="ember project showcase">
+      <button role="tab"
+              aria-selected="true"
+              aria-controls="super-rentals-tab"
+              id="super-rentals">
+        Super Rentals
+      </button>
+      <button role="tab"
+              aria-selected="false"
+              aria-controls="builds-tab"
+              id="builds"
+              tabindex="-1">
+        Builds
+      </button>
+      <button role="tab"
+              aria-selected="false"
+              aria-controls="api-docs-tab"
+              id="api-docs"
+              tabindex="-1">
+        API Docs
+      </button>
+    </div>
+    <div tabindex="0"
+         role="tabpanel"
+         id="super-rentals-tab"
+         aria-labelledby="super-rentals">
+      {{es-heading headingText="Super Rentals" tagName="h3"}}
+      <img src="" alt="" role="presentation"/>
+      <p>Repository: https://github.com/ember-learn/super-rentals</p>
+      <p>If you've gone through our Tutorial you will already be familiar with this application! Super Rentals is a good
+        starter project to get acclimated to the Ember.js way of doing things. In this repository you'll be able to see:
+      <ul>
+        <li>Basic routing, and routing with dynamic segments</li>
+        <li>Acceptance, integration, and unit tests using Ember CLI Mirage.</li>
+      </ul>
+      </p>
+    </div>
+    <div tabindex="0"
+         role="tabpanel"
+         id="builds-tab"
+         aria-labelledby="builds"
+         hidden="">
+      {{es-heading headingText="Builds" tagName="h3"}}
+      <img src="" alt="" role="presentation"/>
+      <p>Repository: <a href="https://github.com/ember-learn/builds">https://github.com/ember-learn/builds</a></p>
+      <p>This is the application that the Ember.js team built to display our various release channels. It is slightly
+        more complex than Super Rentals, and you'll be able to see:
+      <ul>
+        <li>Usage of Ember CLI Deploy to deploy to S3.</li>
+        <li>Loading of an Ember.js application via JavaScript in the website.</li>
+      </ul>
+      </p>
+    </div>
+    <div tabindex="0"
+         role="tabpanel"
+         id="api-docs-tab"
+         aria-labelledby="api-docs"
+         hidden="">
+      {{es-heading headingText="API docs" tagName="h3"}}
+      <img src="" alt="" role="presentation"/>
+      <p>Repository: <a href="https://github.com/ember-learn/ember-api-docs">https://github.com/ember-learn/ember-api-docs</a>
+      </p>
+      <p>This application (currently in beta) was built to display our versioned API docs. It is a good example of a
+        PWA. You'll be able to learn about:
+      <ul>
+        <li>See a more full-featured Ember web app in action</li>
+        <li>Usage of Ember FastBoot.</li>
+        <li>Enabling service workers and defining web app manifests to enhance your ember apps into progressive web
+          apps.
+        </li>
+      </ul>
+      </p>
+    </div>
+  </div>
+</section>
+<section>
+  {{es-heading headingText="Frequently Asked Questions" tagName="h2"}}
+  {{es-heading headingText="How do I future proof my ember.js application?" tagName="h3"}}
+  <p>Ember.js has a strong emphasis on Stability without Stagnation, which means that framework developers take great
+    care when designing new functionality to make sure it fits with the existing functionalities, and provides a path
+    forward for users to upgrade without being subjected to churn.</p>
+  <p>Ember.js also follow a community-driven process for its development that incorporates RFCs for features and
+    deprecations and a six-week "train release schedule". Every six weeks, candidate features are reviewed and either
+    deemed ready to be included in the stable release, or carry on in beta for another cycle until the next release
+    happens.</p>
+  <p>In short, the best way to make sure you have a healthy application is to keep an eye on RFCs — remembering they
+    document intent but not necessarily the final implementation, — keep your application clean of deprecations, and
+    when possible test your application against beta and canary.</p>
 
-        {{es-heading headingText="Should components load data?" tagName="h3"}}        
-        <p>You can find more information at the Boston meetup Core Team panel</p>
-    </section>
+  {{es-heading headingText="Should components load data?" tagName="h3"}}
+  <p>You can find more information at the Boston meetup Core Team panel</p>
+</section>
 
 
 

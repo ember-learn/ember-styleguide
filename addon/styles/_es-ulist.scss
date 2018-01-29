@@ -1,21 +1,21 @@
 .es-ulist {
-    list-style: none;
-    flex: 1;
-    min-width: 100%;
-    display: flex;
+  list-style: none;
+  flex: 1;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  // margin-left: 0;
+  padding-left: 0;
+  li {
+    display: inline-block;
     justify-content: center;
-    // margin-left: 0;
-    padding-left: 0;
-    li {
-        display: inline-block;
-        justify-content: center;
-        a {
-            padding: 5px;
-            display: block;
-            img {
-                display: block;
-                margin: 0 auto;
-            }
-        }
+    a {
+      padding: 5px;
+      display: block;
+      img {
+        display: block;
+        margin: 0 auto;
+      }
     }
+  }
 }

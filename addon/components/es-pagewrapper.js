@@ -1,10 +1,10 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import layout from '../templates/components/es-pagewrapper';
 
-export default Ember.Component.extend({
-    layout,
-    classNameBindings: ['hasAside:pagewrapper-aside:pagewrapper'],
-    hasAside: false,
-    ariaRole: 'presentation',
-    tagName: 'div'
+export default Component.extend({
+  layout,
+  classNameBindings: ['hasAside:pagewrapper-aside:pagewrapper'],
+  hasAside: false,
+  ariaRole: 'presentation',
+  tagName: 'div'
 });

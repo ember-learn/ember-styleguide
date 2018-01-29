@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import layout from '../templates/components/es-codesample';
 
-export default Ember.Component.extend({
-    layout,
-    classNames: ['es-codesample'],
+export default Component.extend({
+  layout,
+  classNames: ['es-codesample']
 });
