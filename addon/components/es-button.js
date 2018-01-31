@@ -9,12 +9,12 @@ export default Component.extend({
     classNames: ['es-button'],
     classNameBindings: [
       'buttonIcon',
-      'buttonDark:button-dark',
-      'buttonLight:button-light',
-      'buttonBlock:button-block',
-      'buttonDense:button-dense',
-      'buttonTiny:button-tiny',
-      'buttonLink:button-link',
+      'isDark:button-dark',
+      'isLight:button-light',
+      'isBlock:button-block',
+      'isDense:button-dense',
+      'isTiny:button-tiny',
+      'isLink:button-link',
       'icon:button-icon',
     ],
     attributeBindings: [
@@ -35,14 +35,14 @@ export default Component.extend({
     type: null,
 
     //sizes
-    buttonBlock: false,
-    buttonDense: false,
-    buttonLink: false,
-    buttonTiny: false,
+    isBlock: false,
+    isDense: false,
+    isLink: false,
+    isTiny: false,
 
     //style
-    buttonDark: false,
-    buttonLight: false,
+    isDark: false,
+    isLight: false,
     disabled: false,
 
     //accessibility support

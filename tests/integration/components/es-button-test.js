@@ -65,7 +65,7 @@ test('button supports font-awesome icon', function(assert) {
 test('can set button-block class', function(assert) {
   this.render(hbs`
     {{es-button
-      buttonBlock=true
+      isBlock=true
     }}
   `);
 
