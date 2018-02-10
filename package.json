@@ -19,6 +19,8 @@
     "test": "ember try:each"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0",
+    "ember-bootstrap": "^1.2.0",
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-sass": "^7.1.4"
