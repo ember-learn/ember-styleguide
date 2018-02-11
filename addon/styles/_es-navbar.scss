@@ -1,3 +1,6 @@
+@import 'ember-bootstrap/dropdown';
+@import 'ember-bootstrap/navbar';
+
 /**
   Header
 **/
@@ -28,9 +31,12 @@
       }
     }
     .navbar-nav {
+      margin-top: 0;
+
       li {
         a {
           color: white;
+          text-decoration: none;
           &:focus {
             outline: 5px auto -webkit-focus-ring-color;
           }
@@ -41,7 +47,7 @@
             color: $orange-darkest;
           }
         }
-        &.open {
+        &.show {
           a {
             background-color: white;
             color: $orange-darkest;
