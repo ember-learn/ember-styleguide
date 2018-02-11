@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "broccoli-funnel": "^2.0.1",
+    "broccoli-merge-trees": "^2.0.0",
     "ember-bootstrap": "^1.2.0",
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
