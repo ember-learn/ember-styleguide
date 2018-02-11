@@ -13,118 +13,48 @@
   </div>
   {{#navbar.content}}
     {{#navbar.nav as |nav|}}
-      {{#nav.item}}
-        {{#bs-dropdown tagName="li" as |dd|}}
-          {{#dd.toggle}}Docs <span class="caret"></span>{{/dd.toggle}}
-          {{#dd.menu as |menu|}}
-            {{#menu.item}}
-              <a href="/guides" class="dropdown-item">Guides</a>
-            {{/menu.item}}
-            {{#menu.item}}
-              <a href="/api" class="dropdown-item">API Reference</a>
-            {{/menu.item}}
-            {{menu.divider}}
-            {{#menu.item}}
-              <a href="/learn" class="dropdown-item">Learn Ember</a>
-            {{/menu.item}}
-          {{/dd.menu}}
-        {{/bs-dropdown}}
-      {{/nav.item}}
-      {{#nav.item}}
-        {{#bs-dropdown tagName="li" as |dd|}}
-          {{#dd.toggle}}Releases <span class="caret"></span>{{/dd.toggle}}
-          {{#dd.menu as |menu|}}
-            {{#menu.item}}
-              <a href="/builds" class="dropdown-item">Channels</a>
-            {{/menu.item}}
-            {{#menu.item}}
-              <a href="/builds/release" class="dropdown-item">-- Stable</a>
-            {{/menu.item}}
-            {{#menu.item}}
-              <a href="/builds/beta" class="dropdown-item">-- Beta</a>
-            {{/menu.item}}
-            {{#menu.item}}
-              <a href="/builds/canary" class="dropdown-item">-- Canary</a>
-            {{/menu.item}}
-            {{menu.divider}}
-            {{#menu.item}}
-              <a href="/deprecations" class="dropdown-item">Deprecations</a>
-            {{/menu.item}}
-            {{#menu.item}}
-              <a href="/statusboard" class="dropdown-item">Status Board</a>
-            {{/menu.item}}
-          {{/dd.menu}}
-        {{/bs-dropdown}}
-      {{/nav.item}}
-      {{#nav.item}}
-        <a href="/blog">Blog</a>
-      {{/nav.item}}
-      {{#nav.item}}
-        {{#bs-dropdown tagName="li" as |dd|}}
-          {{#dd.toggle}}Community <span class="caret"></span>{{/dd.toggle}}
-          {{#dd.menu as |menu|}}
-            {{#menu.item}}
-              <a href="/community" class="dropdown-item">The Ember Community</a>
-            {{/menu.item}}
-            {{#menu.item}}
-              <a href="/guidelines" class="dropdown-item">Guidelines</a>
-            {{/menu.item}}
-            {{#menu.item}}
-              <a href="http://github.com/emberjs/" class="dropdown-item">Contribute (Github)</a>
-            {{/menu.item}}
-            {{menu.divider}}
-            {{#menu.item}}
-              <a href="/community/meetups" class="dropdown-item">Meetups</a>
-            {{/menu.item}}
-            {{#menu.item}}
-              <a href="http://jobs.emberjs.com/" class="dropdown-item">Job Board</a>
-            {{/menu.item}}
-            {{menu.divider}}
-            {{#menu.item}}
-              <a href="http://emberconf.com/" class="dropdown-item">Ember Conf</a>
-            {{/menu.item}}
-            {{#menu.item}}
-              <a href="#" class="dropdown-item">Annual Survey</a>
-            {{/menu.item}}
-          {{/dd.menu}}
-        {{/bs-dropdown}}
-      {{/nav.item}}
-      {{#nav.item}}
-        {{#bs-dropdown tagName="li" as |dd|}}
-          {{#dd.toggle}}About <span class="caret"></span>{{/dd.toggle}}
-          {{#dd.menu as |menu|}}
-            {{#menu.item}}
-              <a href="#" class="dropdown-item">Why Ember</a>
-            {{/menu.item}}
-            {{menu.divider}}
-            {{#menu.item}}
-              <a href="/team" class="dropdown-item">The Team</a>
-            {{/menu.item}}
-            {{menu.divider}}
-            {{#menu.item}}
-              <a href="/logos" class="dropdown-item">Logos</a>
-            {{/menu.item}}
-            {{#menu.item}}
-              <a href="/mascots" class="dropdown-item">Mascots</a>
-            {{/menu.item}}
-            {{menu.divider}}
-            {{#menu.item}}
-              <a href="/ember-users" class="dropdown-item">Who Uses Ember</a>
-            {{/menu.item}}
-            {{#menu.item}}
-              <a href="/sponsors" class="dropdown-item">Sponsors</a>
-            {{/menu.item}}
-            {{menu.divider}}
-            {{#menu.item}}
-              <a href="/legal" class="dropdown-item">Legal</a>
-            {{/menu.item}}
-            {{#menu.item}}
-              <a href="/security" class="dropdown-item">Security</a>
-            {{/menu.item}}
-          {{/dd.menu}}
-        {{/bs-dropdown}}
-      {{/nav.item}}
+      {{#each links as |link|}}
+        {{#nav.item}}
+          {{#if (eq link.type 'link')}}
+            <a href="{{link.href}}">{{link.name}}</a>
+          {{/if}}
+          {{#if (eq link.type 'dropdown')}}
+            {{#bs-dropdown tagName="li" as |dd|}}
+              {{#dd.toggle}}{{link.name}} <span class="caret"></span>{{/dd.toggle}}
+              {{#dd.menu as |menu|}}
+                {{#each link.items as |item|}}
+                  {{#if (eq item.type 'link')}}
+                    {{#menu.item}}
+                      <a href="{{item.href}}" class="dropdown-item">{{item.name}}</a>
+                    {{/menu.item}}
+                  {{/if}}
+                  {{#if (eq item.type 'divider')}}
+                    {{menu.divider}}
+                  {{/if}}
+                {{/each}}
+              {{/dd.menu}}
+            {{/bs-dropdown}}
+          {{/if}}
+        {{/nav.item}}
+      {{/each}}
     {{/navbar.nav}}
+    <form class="navbar-form navbar-right searchbox">
+      <div class="input-group">
+        <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text"
+               class="form-control search input ds-input"
+               placeholder="Search..."
+               id="search-input"
+               role="combobox"
+               aria-expanded="false"
+               aria-owns="algolia-autocomplete-listbox-0"
+               autocorrect="off"
+               autocapitalize="none"
+               spellcheck="false"
+        />
+        <span></span>
+      </div>
+    </form>
   {{/navbar.content}}
 {{/bs-navbar}}
 
@@ -143,23 +73,6 @@
       alt="home"/></a>
   </div>
   <div class="collapse navbar-collapse" id="navbar-collapse">
-    <form class="navbar-form navbar-right searchbox">
-      <div class="input-group">
-        <label for="search-input" class="control-label sr-only">Search</label>
-        <input type="text"
-               class="form-control search input ds-input"
-               placeholder="Search..."
-               id="search-input"
-               role="combobox"
-               aria-expanded="false"
-               aria-owns="algolia-autocomplete-listbox-0"
-               autocorrect="off"
-               autocapitalize="none"
-               spellcheck="false"
-        />
-        <span></span>
-      </div>
-    </form>
   </div>
   <!-- /.navbar-collapse -->
 </div>

@@ -25,7 +25,8 @@
     "ember-bootstrap": "^1.2.0",
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
-    "ember-cli-sass": "^7.1.4"
+    "ember-cli-sass": "^7.1.4",
+    "ember-truth-helpers": "^2.0.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
