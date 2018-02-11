@@ -1,10 +1,12 @@
 {{#bs-navbar
+  backgroundColor='inverse'
   collapsed=collapsed
+  fluid=true
   onCollapse=(action (mut collapsed) true)
   onExpand=(action (mut collapsed) false)
   type='inverse' as |navbar|}}
   <div class="navbar-header">
-    {{navbar.toggle}}
+    {{navbar.toggle align='right'}}
     {{#link-to "index" class="navbar-brand"}}
       <img
         src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg"
