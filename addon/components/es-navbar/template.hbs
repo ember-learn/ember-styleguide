@@ -16,7 +16,7 @@
       {{#each links as |link|}}
         {{#nav.item}}
           {{#if (eq link.type 'link')}}
-            <a href="{{link.href}}">{{link.name}}</a>
+            <a href="{{link.href}}" {{action navbar.collapse}}>{{link.name}}</a>
           {{/if}}
           {{#if (eq link.type 'dropdown')}}
             {{#bs-dropdown tagName="li" as |dd|}}
@@ -25,7 +25,7 @@
                 {{#each link.items as |item|}}
                   {{#if (eq item.type 'link')}}
                     {{#menu.item}}
-                      <a href="{{item.href}}" class="dropdown-item">{{item.name}}</a>
+                      <a href="{{item.href}}" class="dropdown-item" {{action navbar.collapse}}>{{item.name}}</a>
                     {{/menu.item}}
                   {{/if}}
                   {{#if (eq item.type 'divider')}}
