@@ -5,24 +5,22 @@
   onCollapse=(action (mut collapsed) true)
   onExpand=(action (mut collapsed) false)
   type='inverse' as |navbar|}}
-  <div class="navbar-header">
-    {{navbar.toggle align='right'}}
-    {{#link-to "index" class="navbar-brand"}}
-      <img
-        src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg"
-        alt="home">
-    {{/link-to}}
-  </div>
+  {{#link-to "index" class="navbar-brand"}}
+    <img
+      src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg"
+      alt="home">
+  {{/link-to}}
+  {{navbar.toggle}}
   {{#navbar.content}}
     {{#navbar.nav as |nav|}}
       {{#each links as |link|}}
         {{#nav.item}}
           {{#if (eq link.type 'link')}}
-            <a href="{{link.href}}" {{action navbar.collapse}}>{{link.name}}</a>
+            <a href="{{link.href}}" class="nav-link" {{action navbar.collapse}}>{{link.name}}</a>
           {{/if}}
           {{#if (eq link.type 'dropdown')}}
             {{#bs-dropdown tagName="li" as |dd|}}
-              {{#dd.toggle}}{{link.name}} <span class="caret"></span>{{/dd.toggle}}
+              {{#dd.toggle class="nav-link"}}{{link.name}} <span class="caret"></span>{{/dd.toggle}}
               {{#dd.menu as |menu|}}
                 {{#each link.items as |item|}}
                   {{#if (eq item.type 'link')}}
