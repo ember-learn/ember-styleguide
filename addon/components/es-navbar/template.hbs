@@ -1,9 +1,5 @@
 {{#bs-navbar
   backgroundColor='inverse'
-  collapsed=collapsed
-  fluid=true
-  onCollapse=(action (mut collapsed) true)
-  onExpand=(action (mut collapsed) false)
   type='inverse' as |navbar|}}
   {{#link-to "index" class="navbar-brand"}}
     <img
@@ -19,8 +15,8 @@
             <a href="{{link.href}}" class="nav-link" {{action navbar.collapse}}>{{link.name}}</a>
           {{/if}}
           {{#if (eq link.type 'dropdown')}}
-            {{#bs-dropdown tagName="li" as |dd|}}
-              {{#dd.toggle class="nav-link"}}{{link.name}} <span class="caret"></span>{{/dd.toggle}}
+            {{#nav.dropdown tagName="li" as |dd|}}
+              {{#dd.toggle}}{{link.name}} <span class="caret"></span>{{/dd.toggle}}
               {{#dd.menu as |menu|}}
                 {{#each link.items as |item|}}
                   {{#if (eq item.type 'link')}}
@@ -33,7 +29,7 @@
                   {{/if}}
                 {{/each}}
               {{/dd.menu}}
-            {{/bs-dropdown}}
+            {{/nav.dropdown}}
           {{/if}}
         {{/nav.item}}
       {{/each}}
