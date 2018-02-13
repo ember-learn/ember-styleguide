@@ -1,0 +1,13 @@
+<div class="cta-note">
+  <div class="cta-note-body">
+    <div class="cta-note-heading">{{nameTitle}}</div>
+    <div class="cta-note-message">
+      {{#if hasBlock}}
+        {{yield}}
+      {{else}}
+        {{defaultMessage}}
+      {{/if}}
+    </div>
+  </div>
+  <img src={{imageUrl}} width="100" height="100" role="presentation">
+</div>
