@@ -11,6 +11,10 @@
     background-color: $orange;
     border-radius: 0;
     border-color: transparent;
+
+    .mr-auto {
+      margin-right: auto;
+    }
     .navbar-collapse, .navbar-form {
       border-color: $orange-darkest;
     }
