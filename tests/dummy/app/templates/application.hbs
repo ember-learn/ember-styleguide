@@ -1,26 +1,6 @@
 {{#es-pagewrapper}}
   {{#es-header}}
-    {{#es-navbar}}
-      <ul role="menubar" aria-label="primary site navigation" class="navigation">
-        <li role="none"><a href="/" role="menuitem" class="logo"><img
-          src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg"
-          alt="Home"/></a></li>
-        <li role="none"><a href="/learn" role="menuitem">Learn</a></li>
-        <li role="none"><a href="/guides" role="menuitem">Guides</a></li>
-        <li role="none"><a href="/api" role="menuitem">API</a></li>
-        <li role="none"><a href="/community" role="menuitem">Community</a></li>
-        <li role="none"><a href="/blog" role="menuitem">Blog</a></li>
-        <li role="none"><a href="/builds" role="menuitem">Builds</a></li>
-        <li role="menuitem">
-          <form role="search" class="form-search">
-            <label for="search" class="sr-only sr-only-focusable">Search</label>
-            <input type="search" id="search" class="input-search" aria-describedby="search-help-text"/>
-            {{!-- {{fa-icon "search" ariaLabel="search" title="search"}} --}}
-            <div id="search-help-text" class="sr-only sr-only-focusable">Press enter to search</div>
-          </form>
-        </li>
-      </ul>
-    {{/es-navbar}}
+    {{es-navbar links=model}}
   {{/es-header}}
   {{#es-main}}
     {{outlet}}
