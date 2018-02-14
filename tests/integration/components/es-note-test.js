@@ -1,3 +1,4 @@
+import { find } from 'ember-native-dom-helpers';
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
@@ -11,11 +12,11 @@ test('it renders', function(assert) {
   this.render(hbs`{{es-note}}`);
 
   assert.ok(
-    testHeading.includes(this.$('.cta-note-heading').text().trim()),
+    testHeading.includes(find('.cta-note-heading').textContent.trim()),
     'displays heading'
   );
   assert.equal(
-    this.$('.cta-note-message').text().trim(),
+    find('.cta-note-message').textContent.trim(),
     'Hello!!! No message provided.'
   );
 
@@ -26,12 +27,12 @@ test('it renders', function(assert) {
   `);
 
   assert.ok(
-    testHeading.includes(this.$('.cta-note-heading').text().trim()),
+    testHeading.includes(find('.cta-note-heading').textContent.trim()),
     'displays heading'
   );
 
   assert.equal(
-    this.$('.cta-note-message').text().trim(),
+    find('.cta-note-message').textContent.trim(),
     'template block text'
   );
 });
@@ -51,7 +52,7 @@ test('out of 2 mascots randomly selects each at least 1 in 10 renders', function
     let name;
 
     this.render(hbs`{{es-note mascots=mascots}}`);
-    name = this.$('.cta-note-heading').text().trim().split(' ')[0];
+    name = find('.cta-note-heading').textContent.trim().split(' ')[0];
 
     renderedNames.push(name);
   }
