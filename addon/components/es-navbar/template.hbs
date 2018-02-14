@@ -13,7 +13,7 @@
         {{#each links as |link|}}
           {{#if (eq link.type 'link')}}
             {{#nav.item}}
-              <a href="{{link.href}}" class="nav-link" {{action navbar.collapse}}>{{link.name}}</a>
+              <a href="{{link.href}}" class="nav-link">{{link.name}}</a>
             {{/nav.item}}
           {{/if}}
           {{#if (eq link.type 'dropdown')}}
@@ -23,7 +23,7 @@
                 {{#each link.items as |item|}}
                   {{#if (eq item.type 'link')}}
                     {{#menu.item}}
-                      <a href="{{item.href}}" class="dropdown-item" {{action navbar.collapse}}>{{item.name}}</a>
+                      <a href="{{item.href}}" class="dropdown-item">{{item.name}}</a>
                     {{/menu.item}}
                   {{/if}}
                   {{#if (eq item.type 'divider')}}
