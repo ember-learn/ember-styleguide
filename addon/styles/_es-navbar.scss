@@ -3,23 +3,28 @@
 @import 'ember-bootstrap/transitions';
 
 /**
-  Header
+  Navbar in header
 **/
 .navbar {
   margin-bottom: 0;
+
   &.navbar-inverse {
     background-color: $orange;
-    border-radius: 0;
     border-color: transparent;
+    border-radius: 0;
+    padding: 0;
 
     .mr-auto {
       margin-right: auto;
     }
+
     .navbar-collapse, .navbar-form {
       border-color: $orange-darkest;
     }
+
     .navbar-toggler {
-      border-color: white;
+      border-color: $white;
+
       &:hover {
         background-color: $orange-darker;
       }
@@ -28,47 +33,65 @@
         background-image: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
       }
     }
+
     .navbar-brand {
       img {
-        margin-top: -10px;
         @media screen and (min-width: 768px) {
-          margin-top: -10px;
           margin-bottom: 0;
-          padding-bottom: 0;
           margin-right: 10px;
+          padding-bottom: 0;
         }
       }
     }
+
     .navbar-nav {
       margin-top: 0;
 
       li {
+        align-content: stretch;
+        display: flex;
+        justify-content: center;
+
         a {
-          color: white;
+          align-items: center;
+          color: $white;
+          display: flex;
+          flex: 1;
+          min-height: 50px;
+          padding: 0 0.5em;
           text-decoration: none;
+
           &:focus {
             outline: 5px auto -webkit-focus-ring-color;
           }
         }
+
         &.active {
+
           a {
             background-color: white;
             color: $orange-darkest;
           }
         }
+
         &.show {
+
           a {
             background-color: white;
             color: $orange-darkest;
           }
+
           .dropdown-menu {
             background-color: white;
             border-radius: 0;
+
             @media screen and (min-width: 768px) {
               border-radius: 0 0 4px 4px;
               border-color-top: white;
             }
+
             .dropdown-item {
+
               &:hover,
               :focus {
                 background-color: $orange-lightest;
@@ -76,6 +99,7 @@
                 outline: 0 !important;
               }
             }
+
             .dropdown-divider {
               border: 1px solid $orange-lightest;
             }
@@ -83,13 +107,16 @@
         }
       }
     }
+
     form.navbar-right.navbar-form {
       @media screen and (min-width: 768px) {
         margin-bottom: 0;
       }
+
       .input-group {
         min-width: 100%;
       }
+
       .form-control {
         background: url(/images/search-icon.svg) rgba(255, 255, 255, 0.1) 10px 8px no-repeat;
         border-color: transparent;
