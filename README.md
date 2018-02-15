@@ -1,7 +1,8 @@
 # ember-styleguide [![Build Status](https://travis-ci.org/ember-learn/ember-styleguide.svg?branch=master)](https://travis-ci.org/ember-learn/ember-styleguide)
 
-This addon is intended to provide basic components for easier style coordination among the Ember family of websites, although the original intent is to support the emberjs.com website. 
-Contributions are encouraged.
+This addon is intended to provide basic components for easier style coordination among the Ember family of websites, although the original intent is to support the emberjs.com website. We are committed to the goal of meeting WCAG 2.0 AA conformance standards. 
+
+Contributions are encouraged! 
 
 ## Installation
 
@@ -34,37 +35,7 @@ For more information on using ember-cli, visit [https://ember-cli.com/](https://
 * The `es-pagewrapper` component has a property to indicate if there will be a sidebar or not. There might be a better way to do this.
 * In this addon, the `section` element is used as a container and is intended to span the full width of the viewport. 
 
-## Current Issues
-
-* White on Ember orange. it's not passing accessibility color contrast tests. 
-* the Interface font isn't consistent enough, but it was a cool idea.
-
-## Design Notes
-* Fonts: Roboto from Google Fonts. Tried Interface but it's too inconsistent to recommend use at this time. Still unsure about what to do about Apple, because they're currently rendering Google Fonts like total crap. 
-* Design boldness: it currently looks rather bold, but these decisions cascaded from the buttons, and the planned css interactions on hover will be interesting. 
-* Animation: "energetic and approachable" until I hear otherwise.
-* Underlying CSS approach: mix of Flexbox and Grid
-* Accessibility: currently the color contrast on the navbar is a struggle but otherwise it should be fine, and will remain a central theme of this UI addon. 
-
-## CSS Rules
-* need to set up a linter for this
-* mobile-first CSS, i.e., 
-```
-  .my-component {
-     padding: 0 0.25em;
-     @media screen and (min-width: 992px) {
-       padding: 0.5em 1em;
-     }
-   }
-```
-* scope the CSS inside each component but keep it DRY
-* lowercase class names
-* don't use IDs
-* keep specificity reasonably low
-* alpha-order the properties for the element (usually just have to hightlight the group and press F9)
-
 ## Styleguide Notes
 * one h1 per page
 * heading elements should never require extra classes or CSS treatments
 * valid HTML should be used
-
