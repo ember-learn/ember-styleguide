@@ -43,6 +43,7 @@
     "ember-export-application-global": "^2.0.0",
     "ember-font-awesome": "^3.0.5",
     "ember-load-initializers": "^1.0.0",
+    "ember-native-dom-helpers": "^0.5.10",
     "ember-resolver": "^4.0.0",
     "ember-sinon": "^1.0.1",
     "ember-source": "~2.18.0",
