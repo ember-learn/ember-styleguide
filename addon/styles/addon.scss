@@ -20,6 +20,7 @@
 @import 'es-navbar';
 @import 'es-ulist';
 @import 'es-note';
+@import 'es-accordion';
 
 body {
   font-family: $font-family;
@@ -64,6 +65,18 @@ section {
       padding-bottom: 0;
     }
   }
+}
+.text-error {
+	color: $danger;
+}
+.text-warning {
+	color: $warning;
+}
+.text-info {
+	color: $info;
+}
+.text-success {
+	color: $success;
 }
 
 // helper classes

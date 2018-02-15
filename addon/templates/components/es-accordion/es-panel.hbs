@@ -1,0 +1,22 @@
+<div class="accordion-heading {{if isExpanded "active"}}" onclick={{action "toggleOpen"}}>
+  <div class="content">
+    {{title}}
+  </div>
+  <div class="content">
+    Avail:
+    <span class="content-sub">{{availability}}</span>
+  </div>
+  <div class="content">
+    Status:
+    <span class="content-sub text-{{statusTextColor}}">
+      <i class="fa {{statusIcon}}"></i>
+      {{statusLabel}}
+    </span>
+  </div>
+  <button class="button-icon" aria-lable="expand collapse"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+</div>
+<div class="accordion-body {{unless isExpanded "collapse"}}">
+  <div class="accordion-content">
+    {{yield}}
+  </div>
+</div>
