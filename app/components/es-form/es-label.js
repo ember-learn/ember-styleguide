@@ -1,1 +1,1 @@
-export { default } from 'ember-styleguide/components/es-form\es-label';
+export { default } from 'ember-styleguide/components/es-form/es-label';
