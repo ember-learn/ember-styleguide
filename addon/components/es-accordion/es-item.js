@@ -106,26 +106,24 @@ export default Component.extend({
     }
   },
 
-  actions: {
-    toggleOpen() {
-      const {
-        isExpanded,
-        accordionItemIndex,
-        'accordionState.setActivePanel': setActivePanel,
-      } = getProperties(this, [
-        'isExpanded',
-        'accordionItemIndex',
-        'accordionState.setActivePanel',
-      ]);
-      let index;
+  mouseDown() {
+    const {
+      isExpanded,
+      accordionItemIndex,
+      'accordionState.setActivePanel': setActivePanel,
+    } = getProperties(this, [
+      'isExpanded',
+      'accordionItemIndex',
+      'accordionState.setActivePanel',
+    ]);
+    let index;
 
-      if (isExpanded) {
-        index = null;
-      } else {
-        index = accordionItemIndex;
-      }
-
-      setActivePanel(index);
+    if (isExpanded) {
+      index = null;
+    } else {
+      index = accordionItemIndex;
     }
+
+    setActivePanel(index);
   },
 });
