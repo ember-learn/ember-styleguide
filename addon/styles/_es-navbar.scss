@@ -50,7 +50,14 @@
       li {
         align-content: stretch;
         display: flex;
+        flex-flow: column wrap;
         justify-content: center;
+        min-width: 100%;
+
+        @media screen and (min-width: 992px){
+          min-width: auto;
+          flex-flow: row wrap;
+        }
 
         a {
           align-items: center;
@@ -84,6 +91,7 @@
           .dropdown-menu {
             background-color: white;
             border-radius: 0;
+            margin: 0 -1px;
 
             @media screen and (min-width: 768px) {
               border-radius: 0 0 4px 4px;
@@ -91,7 +99,7 @@
             }
 
             .dropdown-item {
-
+              min-height: 36px;
               &:hover,
               :focus {
                 background-color: $orange-lightest;
@@ -115,16 +123,19 @@
 
       .input-group {
         min-width: 100%;
+        padding: 0.25em 0;
       }
 
       .form-control {
         background: url(/images/search-icon.svg) rgba(255, 255, 255, 0.1) 10px 8px no-repeat;
         border-color: transparent;
+        border-radius: 3px;
         border-right: 0;
         box-shadow: none;
-        border-radius: 35px;
         color: white;
-        padding-left: 2.5em;
+        font-family: 'Roboto', sans-serif;
+        min-width: 100%;
+        padding: 0.25em 0.5em;
         &:-ms-input-placeholder {
           color: $orange-lightest !important;
         }
