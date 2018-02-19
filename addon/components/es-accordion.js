@@ -8,6 +8,7 @@ import {
 import {
   isPresent,
 } from '@ember/utils';
+import { computed } from '@ember/object';
 
 export default Component.extend({
   layout,
@@ -18,6 +19,26 @@ export default Component.extend({
   focusIndex: null,
   panelIndexes: null,
 
+  accordionState: computed('activePanel', 'focusIndex', function() {
+    const {
+      activePanel,
+      focusIndex,
+      actions,
+    } = getProperties(this, [
+      'activePanel',
+      'focusIndex',
+      'actions',
+    ]);
+
+    return {
+      activePanel,
+      focusIndex,
+      setActivePanel: actions.setActivePanel.bind(this),
+      setFocusIndex: actions.setFocusIndex.bind(this),
+      registerIndex: actions.registerIndex.bind(this),
+    };
+  }),
+
   init() {
     this._super(...arguments);
 
@@ -25,11 +46,7 @@ export default Component.extend({
   },
 
   keypress(e) {
-    const {
-      key,
-    } = getProperties(e, [
-      'key',
-    ]);
+    const key = get(e, 'keyCode');
     const {
       activePanel,
       focusIndex,
@@ -40,8 +57,8 @@ export default Component.extend({
 
     /* Key press required for standared keys */
     switch (key) {
-    case 'Enter':
-    case ' ':
+    case 13:
+    case 32:
       if (activePanel !== focusIndex) {
         set(this, 'activePanel', focusIndex);
       } else {
@@ -52,16 +69,7 @@ export default Component.extend({
   },
 
   keyDown(e) {
-    const {
-      key,
-    } = getProperties(e, [
-      'key',
-    ]);
-
-    this._triggerFromKeyboard(key);
-  },
-
-  _triggerFromKeyboard(key) {
+    const key = get(e, 'keyCode');
     const {
       activePanel,
       focusIndex,
@@ -76,48 +84,37 @@ export default Component.extend({
 
     if (isPresent(focusIndex)) {
       switch (key) {
-      case 'ArrowUp':
+      case 38:
         if (activePanel > first) {
           this.decrementProperty('activePanel');
         }
         break;
-      case 'ArrowDown':
+      case 40:
         if (activePanel < last) {
           this.incrementProperty('activePanel');
         }
         break;
-      case 'Home':
-        set(this, 'activePanel', 0);
+      case 36:
+        set(this, 'activePanel', first);
         break;
-      case 'End':
+      case 35:
         set(this, 'activePanel', last);
         break;
-      // case 'PageUp':
-      //   if (ctrlKey) {
-      //
-      //   }
-      //   break;
-      // case 'PageDown':
-      //   if (ctrlKey) {
-      //
-      //   }
-      //   break;
-      default:
       }
     }
   },
 
   actions: {
-    setActivePanel(panel) {
-      set(this, 'activePanel', parseInt(panel));
+    setActivePanel(panelIndex) {
+      return set(this, 'activePanel', panelIndex);
     },
 
     setFocusIndex(panelIndex) {
       set(this, 'focusIndex', panelIndex);
     },
 
-    registerIndex(panel) {
-      get(this, 'panelIndexes').push(parseInt(panel));
+    registerIndex(panelIndex) {
+      get(this, 'panelIndexes').push(panelIndex);
     },
   },
 });

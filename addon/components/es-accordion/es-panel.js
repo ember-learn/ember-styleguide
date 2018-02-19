@@ -5,20 +5,26 @@ import {
   getProperties,
   setProperties,
 } from '@ember/object';
-import { computed } from '@ember/object';
+import {
+  computed,
+} from '@ember/object';
 import {
   Statuses as statuses,
 } from '../../constants/es-accordion';
-import { A } from '@ember/array';
+import {
+  A,
+} from '@ember/array';
+import {
+  isPresent,
+} from '@ember/utils';
 
 export default Component.extend({
   layout,
 
   classNames: ['accordion'],
 
-  activePanel: null,
-  availability: 'Not yet available',
-  focusIndex: null,
+  accordionState: null,
+  availability: null,
   panelIndex: null,
   status: null,
   statuses,
@@ -26,69 +32,40 @@ export default Component.extend({
   statusTextColor: null,
   title: null,
 
-  isExpanded: computed('activePanel', 'panelIndex', 'expanded', function() {
-    const {
-      activePanel,
-      panelIndex,
-    } = getProperties(this, [
-      'activePanel',
-      'panelIndex',
-    ]);
+  availabilityMessage: computed('availability', function() {
+    const availability = get(this, 'availability');
 
-    if (activePanel === panelIndex) {
-      return true;
-    } else {
-      return false;
-    }
+    return isPresent(availability) ? availability : 'Not yet available';
   }),
 
-  focusIn() {
-    const {
-      panelIndex,
-      setFocusIndex,
-    } = getProperties(this, [
-      'panelIndex',
-      'setFocusIndex',
-    ]);
+  isExpanded: computed(
+    'accordionState.activePanel',
+    'panelIndex',
+    'expanded',
+    function()
+    {
+      const panelIndex = get(this, 'panelIndex');
+      const activePanel = get(this, 'accordionState.activePanel');
 
-    setFocusIndex(panelIndex);
-  },
-
-  focusOut() {
-    const {
-      focusIndex,
-      panelIndex,
-    } = getProperties(this, [
-      'focusIndex',
-      'panelIndex',
-    ]);
-
-    if (focusIndex === panelIndex) {
-      get(this, 'setFocusIndex')(null);
+      if (activePanel === panelIndex) {
+        return true;
+      } else {
+        return false;
+      }
     }
-  },
+  ),
 
   init() {
     this._super(...arguments);
 
     const {
+      'accordionState.registerIndex': registerIndex,
       panelIndex,
-      registerIndex,
-    } = getProperties(this, [
-      'panelIndex',
-      'registerIndex'
-    ]);
-
-    registerIndex(panelIndex);
-  },
-
-  didInsertElement() {
-    this._super(...arguments);
-
-    const {
       status,
       statuses,
     } = getProperties(this, [
+      'accordionState.registerIndex',
+      'panelIndex',
       'status',
       'statuses',
     ]);
@@ -99,6 +76,34 @@ export default Component.extend({
       statusIcon: statusObject.icon,
       statusTextColor: statusObject.color,
     });
+
+    registerIndex(panelIndex);
+  },
+
+  focusIn() {
+    const {
+      panelIndex,
+      'accordionState.setFocusIndex': setFocusIndex,
+    } = getProperties(this, [
+      'panelIndex',
+      'accordionState.setFocusIndex',
+    ]);
+
+    setFocusIndex(panelIndex);
+  },
+
+  focusOut() {
+    const {
+      'accordionState.focusIndex': focusIndex,
+      panelIndex,
+    } = getProperties(this, [
+      'accordionState.focusIndex',
+      'panelIndex',
+    ]);
+
+    if (focusIndex === panelIndex) {
+      get(this, 'accordionState.setFocusIndex')(null);
+    }
   },
 
   actions: {
@@ -106,11 +111,11 @@ export default Component.extend({
       const {
         isExpanded,
         panelIndex,
-        setActivePanel,
+        'accordionState.setActivePanel': setActivePanel,
       } = getProperties(this, [
         'isExpanded',
         'panelIndex',
-        'setActivePanel'
+        'accordionState.setActivePanel',
       ]);
       let index;
 

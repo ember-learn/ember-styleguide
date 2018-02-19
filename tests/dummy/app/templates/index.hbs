@@ -1,39 +1,27 @@
 {{outlet}}
 
-{{#es-accordion as |activePanel focusIndex setFocusIndex setActivePanel registerIndex|}}
+{{#es-accordion as |accordionState|}}
   {{#es-accordion/es-panel
     title="JavaScript Modules API"
     status="shipped"
-    activePanel=activePanel
     panelIndex=0
-    focusIndex=focusIndex
-    setFocusIndex=setFocusIndex
-    setActivePanel=setActivePanel
-    registerIndex=registerIndex
+    accordionState=accordionState
   }}
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nisi culpa magnam quam sed exercitationem alias corrupti aspernatur illo nobis eos dicta esse quasi assumenda officiis nostrum, impedit voluptates commodi.</p>
   {{/es-accordion/es-panel}}
   {{#es-accordion/es-panel
     title="Module Unification"
     status="inProgress"
-    activePanel=activePanel
     panelIndex=1
-    focusIndex=focusIndex
-    setFocusIndex=setFocusIndex
-    setActivePanel=setActivePanel
-    registerIndex=registerIndex
+    accordionState=accordionState
   }}
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nisi culpa magnam quam sed exercitationem alias corrupti aspernatur illo nobis eos dicta esse quasi assumenda officiis nostrum, impedit voluptates commodi.</p>
   {{/es-accordion/es-panel}}
   {{#es-accordion/es-panel
     title="Code Splitting"
     status="rfcSubmitted"
-    activePanel=activePanel
     panelIndex=2
-    focusIndex=focusIndex
-    setFocusIndex=setFocusIndex
-    setActivePanel=setActivePanel
-    registerIndex=registerIndex
+    accordionState=accordionState
   }}
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nisi culpa magnam quam sed exercitationem alias corrupti aspernatur illo nobis eos dicta esse quasi assumenda officiis nostrum, impedit voluptates commodi.</p>
   {{/es-accordion/es-panel}}

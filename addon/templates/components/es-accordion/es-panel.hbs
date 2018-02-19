@@ -1,19 +1,18 @@
 <div class="accordion-heading {{if isExpanded "active"}}" onclick={{action "toggleOpen"}}>
-  <div class="content">
+  <div class="content" data-role="title">
     {{title}}
   </div>
-  <div class="content">
-    Avail:
-    <span class="content-sub">{{availability}}</span>
+  <div class="content" data-role="availability">
+    Avail: <span class="content-sub">{{availabilityMessage}}</span>
   </div>
   <div class="content">
     Status:
-    <span class="content-sub text-{{statusTextColor}}">
+    <span class="content-sub text-{{statusTextColor}}" data-role="status">
       <i class="fa {{statusIcon}}"></i>
       {{statusLabel}}
     </span>
   </div>
-  <button class="button-icon" aria-lable="expand collapse"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+  <button class="button-icon" data-role="accordion-item-button" aria-lable="expand collapse"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
 </div>
 <div class="accordion-body {{unless isExpanded "collapse"}}">
   <div class="accordion-content">
