@@ -11,9 +11,9 @@ import {
   run
 } from '@ember/runloop';
 
-let statuses, status, title, availability, panelIndex, accordionState;
+let statuses, status, title, availability, accordionItemIndex, accordionState;
 
-moduleForComponent('es-accordion/es-panel', 'Integration | Component | es accordion/es panel', {
+moduleForComponent('es-accordion/es-panel', 'Integration | Component | es accordion/es item', {
   integration: true,
 
   beforeEach() {
@@ -28,7 +28,7 @@ moduleForComponent('es-accordion/es-panel', 'Integration | Component | es accord
     status = 'shipped';
     title = 'JavaScript Modules API';
     availability = null;
-    panelIndex = 1;
+    accordionItemIndex = 1;
     accordionState = {
       activePanel: null,
       focusIndex: null,
@@ -39,7 +39,7 @@ moduleForComponent('es-accordion/es-panel', 'Integration | Component | es accord
 
     setProperties(this, {
       availability,
-      panelIndex,
+      accordionItemIndex,
       accordionState,
       status,
       statuses,
@@ -48,22 +48,22 @@ moduleForComponent('es-accordion/es-panel', 'Integration | Component | es accord
   },
 
   afterEach() {
-    statuses = status = title = availability = panelIndex = accordionState = null;
+    statuses = status = title = availability = accordionItemIndex = accordionState = null;
   },
 });
 
 test('it displays provided data', function(assert) {
   this.render(hbs`
-    {{#es-accordion/es-panel
+    {{#es-accordion/es-item
       availability=availability
       title=title
       status=status
       statuses=statuses
-      panelIndex=panelIndex
+      accordionItemIndex=accordionItemIndex
       accordionState=accordionState
     }}
       template block text
-    {{/es-accordion/es-panel}}
+    {{/es-accordion/es-item}}
   `);
 
   assert.equal(find('.accordion-content').textContent.trim(), 'template block text');
@@ -80,16 +80,16 @@ test('it displays provided data', function(assert) {
 
 test('it correctly handles user inputs', function(assert) {
   this.render(hbs`
-    {{#es-accordion/es-panel
+    {{#es-accordion/es-item
       availability=availability
       title=title
       status=status
       statuses=statuses
-      panelIndex=panelIndex
+      accordionItemIndex=accordionItemIndex
       accordionState=accordionState
     }}
       template block text
-    {{/es-accordion/es-panel}}
+    {{/es-accordion/es-item}}
   `);
 
   assert.ok(

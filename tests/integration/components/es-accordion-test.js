@@ -32,14 +32,14 @@ test('it renders', function(assert) {
     {{#es-accordion
       as |accordionState|
     }}
-      {{#es-accordion/es-panel
+      {{#es-accordion/es-item
         title="Accordion Item Title"
         status="shipped"
-        panelIndex=0
+        accordionItemIndex=0
         accordionState=accordionState
       }}
         template block text
-      {{/es-accordion/es-panel}}
+      {{/es-accordion/es-item}}
     {{/es-accordion}}
   `);
 
@@ -57,14 +57,14 @@ test('it correctly handles user input', function(assert) {
       focusIndex=focusIndex
       as |accordionState|
     }}
-      {{#es-accordion/es-panel
+      {{#es-accordion/es-item
         title="Accordion Item Title"
         status="shipped"
-        panelIndex=0
+        accordionItemIndex=0
         accordionState=accordionState
       }}
         template block text
-      {{/es-accordion/es-panel}}
+      {{/es-accordion/es-item}}
     {{/es-accordion}}
   `);
 
@@ -102,22 +102,22 @@ test('it correctly handles keyboard input', function(assert) {
       focusIndex=focusIndex
       as |accordionState|
     }}
-      {{#es-accordion/es-panel
+      {{#es-accordion/es-item
         title="First Accordion Item"
         status="shipped"
-        panelIndex=23
+        accordionItemIndex=23
         accordionState=accordionState
       }}
         template block text
-      {{/es-accordion/es-panel}}
-      {{#es-accordion/es-panel
+      {{/es-accordion/es-item}}
+      {{#es-accordion/es-item
         title="Second Accordion Item"
         status="shipped"
-        panelIndex=25
+        accordionItemIndex=25
         accordionState=accordionState
       }}
         template block text
-      {{/es-accordion/es-panel}}
+      {{/es-accordion/es-item}}
     {{/es-accordion}}
   `);
 

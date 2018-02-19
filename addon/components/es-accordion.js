@@ -20,7 +20,7 @@ export default Component.extend({
 
   activePanel: null,
   focusIndex: null,
-  panelIndexes: null,
+  accordionItemIndexes: null,
 
   accordionState: computed('activePanel', 'focusIndex', function() {
     const {
@@ -45,7 +45,7 @@ export default Component.extend({
   init() {
     this._super(...arguments);
 
-    set(this, 'panelIndexes', []);
+    set(this, 'accordionItemIndexes', []);
   },
 
   keyDown(e) {
@@ -53,28 +53,28 @@ export default Component.extend({
     const {
       activePanel,
       focusIndex,
-      panelIndexes,
+      accordionItemIndexes,
     } = getProperties(this, [
       'activePanel',
       'focusIndex',
-      'panelIndexes',
+      'accordionItemIndexes',
     ]);
-    const first = Math.min(...panelIndexes);
-    const last = Math.max(...panelIndexes);
-    let activePanelIndex = A(panelIndexes).indexOf(activePanel);
+    const first = Math.min(...accordionItemIndexes);
+    const last = Math.max(...accordionItemIndexes);
+    let activeaccordionItemIndex = A(accordionItemIndexes).indexOf(activePanel);
 
     if (isPresent(focusIndex)) {
       switch (key) {
       case 38:
         if (activePanel > first) {
-          activePanelIndex--
-          set(this, 'activePanel', panelIndexes[activePanelIndex]);
+          activeaccordionItemIndex--
+          set(this, 'activePanel', accordionItemIndexes[activeaccordionItemIndex]);
         }
         break;
       case 40:
         if (activePanel < last) {
-          activePanelIndex++
-          set(this, 'activePanel', panelIndexes[activePanelIndex]);
+          activeaccordionItemIndex++
+          set(this, 'activePanel', accordionItemIndexes[activeaccordionItemIndex]);
         }
         break;
       case 36:
@@ -96,16 +96,16 @@ export default Component.extend({
   },
 
   actions: {
-    setActivePanel(panelIndex) {
-      return set(this, 'activePanel', panelIndex);
+    setActivePanel(accordionItemIndex) {
+      return set(this, 'activePanel', accordionItemIndex);
     },
 
-    setFocusIndex(panelIndex) {
-      set(this, 'focusIndex', panelIndex);
+    setFocusIndex(accordionItemIndex) {
+      set(this, 'focusIndex', accordionItemIndex);
     },
 
-    registerIndex(panelIndex) {
-      get(this, 'panelIndexes').push(panelIndex);
+    registerIndex(accordionItemIndex) {
+      get(this, 'accordionItemIndexes').push(accordionItemIndex);
     },
   },
 });

@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import layout from '../../templates/components/es-accordion/es-panel';
+import layout from '../../templates/components/es-accordion/es-item';
 import {
   get,
   getProperties,
@@ -25,7 +25,7 @@ export default Component.extend({
 
   accordionState: null,
   availability: null,
-  panelIndex: null,
+  accordionItemIndex: null,
   status: null,
   statuses,
   statusIcon: null,
@@ -40,14 +40,14 @@ export default Component.extend({
 
   isExpanded: computed(
     'accordionState.activePanel',
-    'panelIndex',
+    'accordionItemIndex',
     'expanded',
     function()
     {
-      const panelIndex = get(this, 'panelIndex');
+      const accordionItemIndex = get(this, 'accordionItemIndex');
       const activePanel = get(this, 'accordionState.activePanel');
 
-      if (activePanel === panelIndex) {
+      if (activePanel === accordionItemIndex) {
         return true;
       } else {
         return false;
@@ -60,12 +60,12 @@ export default Component.extend({
 
     const {
       'accordionState.registerIndex': registerIndex,
-      panelIndex,
+      accordionItemIndex,
       status,
       statuses,
     } = getProperties(this, [
       'accordionState.registerIndex',
-      'panelIndex',
+      'accordionItemIndex',
       'status',
       'statuses',
     ]);
@@ -77,31 +77,31 @@ export default Component.extend({
       statusTextColor: statusObject.color,
     });
 
-    registerIndex(panelIndex);
+    registerIndex(accordionItemIndex);
   },
 
   focusIn() {
     const {
-      panelIndex,
+      accordionItemIndex,
       'accordionState.setFocusIndex': setFocusIndex,
     } = getProperties(this, [
-      'panelIndex',
+      'accordionItemIndex',
       'accordionState.setFocusIndex',
     ]);
 
-    setFocusIndex(panelIndex);
+    setFocusIndex(accordionItemIndex);
   },
 
   focusOut() {
     const {
       'accordionState.focusIndex': focusIndex,
-      panelIndex,
+      accordionItemIndex,
     } = getProperties(this, [
       'accordionState.focusIndex',
-      'panelIndex',
+      'accordionItemIndex',
     ]);
 
-    if (focusIndex === panelIndex) {
+    if (focusIndex === accordionItemIndex) {
       get(this, 'accordionState.setFocusIndex')(null);
     }
   },
@@ -110,11 +110,11 @@ export default Component.extend({
     toggleOpen() {
       const {
         isExpanded,
-        panelIndex,
+        accordionItemIndex,
         'accordionState.setActivePanel': setActivePanel,
       } = getProperties(this, [
         'isExpanded',
-        'panelIndex',
+        'accordionItemIndex',
         'accordionState.setActivePanel',
       ]);
       let index;
@@ -122,7 +122,7 @@ export default Component.extend({
       if (isExpanded) {
         index = null;
       } else {
-        index = panelIndex;
+        index = accordionItemIndex;
       }
 
       setActivePanel(index);
