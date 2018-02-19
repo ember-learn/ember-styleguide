@@ -1,4 +1,4 @@
-<div class="accordion-heading {{if isExpanded "active"}}" onclick={{action "toggleOpen"}}>
+<div class="accordion-heading {{if isExpanded "active"}}" {{action "toggleOpen" bubbles=false}}>
   <div class="content" data-role="title">
     {{title}}
   </div>

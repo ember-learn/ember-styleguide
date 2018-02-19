@@ -9,6 +9,9 @@ import {
   isPresent,
 } from '@ember/utils';
 import { computed } from '@ember/object';
+import {
+  A,
+} from '@ember/array';
 
 export default Component.extend({
   layout,
@@ -45,29 +48,6 @@ export default Component.extend({
     set(this, 'panelIndexes', []);
   },
 
-  keypress(e) {
-    const key = get(e, 'keyCode');
-    const {
-      activePanel,
-      focusIndex,
-    } = getProperties(this, [
-      'activePanel',
-      'focusIndex',
-    ]);
-
-    /* Key press required for standared keys */
-    switch (key) {
-    case 13:
-    case 32:
-      if (activePanel !== focusIndex) {
-        set(this, 'activePanel', focusIndex);
-      } else {
-        set(this, 'activePanel', null);
-      }
-      break;
-    }
-  },
-
   keyDown(e) {
     const key = get(e, 'keyCode');
     const {
@@ -81,17 +61,20 @@ export default Component.extend({
     ]);
     const first = Math.min(...panelIndexes);
     const last = Math.max(...panelIndexes);
+    let activePanelIndex = A(panelIndexes).indexOf(activePanel);
 
     if (isPresent(focusIndex)) {
       switch (key) {
       case 38:
         if (activePanel > first) {
-          this.decrementProperty('activePanel');
+          activePanelIndex--
+          set(this, 'activePanel', panelIndexes[activePanelIndex]);
         }
         break;
       case 40:
         if (activePanel < last) {
-          this.incrementProperty('activePanel');
+          activePanelIndex++
+          set(this, 'activePanel', panelIndexes[activePanelIndex]);
         }
         break;
       case 36:
@@ -99,6 +82,14 @@ export default Component.extend({
         break;
       case 35:
         set(this, 'activePanel', last);
+        break;
+      case 13:
+      case 32:
+        if (activePanel !== focusIndex) {
+          set(this, 'activePanel', focusIndex);
+        } else {
+          set(this, 'activePanel', null);
+        }
         break;
       }
     }
