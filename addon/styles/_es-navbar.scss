@@ -50,9 +50,10 @@
       li {
         align-content: stretch;
         display: flex;
-        justify-content: center;
         flex-flow: column wrap;
+        justify-content: center;
         min-width: 100%;
+
         @media screen and (min-width: 992px){
           min-width: auto;
           flex-flow: row wrap;
@@ -66,9 +67,6 @@
           min-height: 50px;
           padding: 0 0.5em;
           text-decoration: none;
-          @media screen and (min-width: 992px){
-            
-          }
 
           &:focus {
             outline: 5px auto -webkit-focus-ring-color;
