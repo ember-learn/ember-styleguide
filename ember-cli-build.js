@@ -8,7 +8,10 @@ module.exports = function(defaults) {
       'bootstrapVersion': 4,
       'importBootstrapFont': false,
       'importBootstrapCSS': false
-    }
+    },
+    svgJar: {
+      sourceDirs: ['public/assets/images'],
+    },
   });
 
   /*
