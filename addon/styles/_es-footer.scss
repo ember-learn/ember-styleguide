@@ -1,6 +1,8 @@
 .es-footer {
-  background-color: $secondary;
-  color: white;
+  // background-color: $secondary;
+  background-color: #f2ece9; // Needs to replace by variable
+  color: #999; // Needs to replace by variable
+  border-top: #e5dbd6; // Needs to replace by variable
   grid-area: footer;
   margin-top: 60px;
   display: flex;
@@ -9,6 +11,7 @@
 
   .col {
     text-align: center;
+    padding: 12px 0;
   }
 
   .col > [role='menu'] {
