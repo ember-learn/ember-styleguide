@@ -1,7 +1,10 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import sinon from 'sinon';
-import { set, setProperties } from '@ember/object';
+import {
+  set,
+  setProperties,
+} from '@ember/object';
 import {
   find,
   click,
@@ -30,9 +33,9 @@ moduleForComponent('es-accordion/es-panel', 'Integration | Component | es accord
     availability = null;
     accordionItemIndex = 1;
     accordionState = {
-      activePanel: null,
+      activeItem: null,
       focusIndex: null,
-      setActivePanel: sinon.spy(),
+      setActiveItem: sinon.spy(),
       registerIndex: sinon.spy(),
       setFocusIndex: sinon.spy(),
     };
@@ -94,29 +97,34 @@ test('it correctly handles user inputs', function(assert) {
 
   assert.ok(
     accordionState.registerIndex.calledOnce,
+    'registerIndex called'
   );
 
   click('.accordion-heading');
 
   assert.ok(
-    accordionState.setActivePanel.calledOnce,
+    accordionState.setActiveItem.calledOnce,
+    'setActiveItem called'
   );
 
   focus('.button-icon');
 
   assert.ok(
     accordionState.setFocusIndex.calledOnce,
+    'setFocusIndex called'
   );
 
   assert.ok(
     find('.accordion-body.collapse'),
+    'accordion item is collapsed'
   );
 
   run(() => {
-    set(this, 'accordionState.activePanel', 1);
+    set(this, 'accordionState.activeItem', 1);
   });
 
   assert.notOk(
     find('.accordion-content.collapse'),
+    'accordion item is expanded'
   );
 });

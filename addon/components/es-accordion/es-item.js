@@ -39,15 +39,15 @@ export default Component.extend({
   }),
 
   isExpanded: computed(
-    'accordionState.activePanel',
+    'accordionState.activeItem',
     'accordionItemIndex',
     'expanded',
     function()
     {
       const accordionItemIndex = get(this, 'accordionItemIndex');
-      const activePanel = get(this, 'accordionState.activePanel');
+      const activeItem = get(this, 'accordionState.activeItem');
 
-      if (activePanel === accordionItemIndex) {
+      if (activeItem === accordionItemIndex) {
         return true;
       } else {
         return false;
@@ -95,14 +95,16 @@ export default Component.extend({
   focusOut() {
     const {
       'accordionState.focusIndex': focusIndex,
+      'accordionState.setFocusIndex': setFocusIndex,
       accordionItemIndex,
     } = getProperties(this, [
       'accordionState.focusIndex',
+      'accordionState.setFocusIndex',
       'accordionItemIndex',
     ]);
 
     if (focusIndex === accordionItemIndex) {
-      get(this, 'accordionState.setFocusIndex')(null);
+      setFocusIndex(null);
     }
   },
 
@@ -110,11 +112,11 @@ export default Component.extend({
     const {
       isExpanded,
       accordionItemIndex,
-      'accordionState.setActivePanel': setActivePanel,
+      'accordionState.setActiveItem': setActiveItem,
     } = getProperties(this, [
       'isExpanded',
       'accordionItemIndex',
-      'accordionState.setActivePanel',
+      'accordionState.setActiveItem',
     ]);
     let index;
 
@@ -124,6 +126,6 @@ export default Component.extend({
       index = accordionItemIndex;
     }
 
-    setActivePanel(index);
+    setActiveItem(index);
   },
 });

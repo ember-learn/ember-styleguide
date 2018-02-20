@@ -18,25 +18,25 @@ export default Component.extend({
 
   classNames: ['accordion-group'],
 
-  activePanel: null,
+  activeItem: null,
   focusIndex: null,
   accordionItemIndexes: null,
 
-  accordionState: computed('activePanel', 'focusIndex', function() {
+  accordionState: computed('activeItem', 'focusIndex', function() {
     const {
-      activePanel,
+      activeItem,
       focusIndex,
       actions,
     } = getProperties(this, [
-      'activePanel',
+      'activeItem',
       'focusIndex',
       'actions',
     ]);
 
     return {
-      activePanel,
+      activeItem,
       focusIndex,
-      setActivePanel: actions.setActivePanel.bind(this),
+      setActiveItem: actions.setActiveItem.bind(this),
       setFocusIndex: actions.setFocusIndex.bind(this),
       registerIndex: actions.registerIndex.bind(this),
     };
@@ -49,55 +49,66 @@ export default Component.extend({
   },
 
   keyDown(e) {
-    const key = get(e, 'keyCode');
+    const keyCode = get(e, 'keyCode');
     const {
-      activePanel,
-      focusIndex,
       accordionItemIndexes,
+      activeItem,
+      focusIndex,
     } = getProperties(this, [
-      'activePanel',
-      'focusIndex',
       'accordionItemIndexes',
+      'activeItem',
+      'focusIndex',
     ]);
     const first = Math.min(...accordionItemIndexes);
     const last = Math.max(...accordionItemIndexes);
-    let activeaccordionItemIndex = A(accordionItemIndexes).indexOf(activePanel);
+    let itemIndexOfIndex = A(accordionItemIndexes).indexOf(activeItem);
+    let targetIndex;
 
     if (isPresent(focusIndex)) {
-      switch (key) {
+      switch (keyCode) {
       case 38:
-        if (activePanel > first) {
-          activeaccordionItemIndex--
-          set(this, 'activePanel', accordionItemIndexes[activeaccordionItemIndex]);
+        if (activeItem === null || itemIndexOfIndex === -1) {
+          targetIndex = focusIndex;
+        } else if (activeItem === first) {
+          targetIndex = last;
+        } else {
+          itemIndexOfIndex--
+          targetIndex = accordionItemIndexes[itemIndexOfIndex];
         }
         break;
       case 40:
-        if (activePanel < last) {
-          activeaccordionItemIndex++
-          set(this, 'activePanel', accordionItemIndexes[activeaccordionItemIndex]);
+        if (activeItem === null || itemIndexOfIndex === -1) {
+          targetIndex = focusIndex;
+        } else if (activeItem === last) {
+          targetIndex = first;
+        } else {
+          itemIndexOfIndex++
+          targetIndex = accordionItemIndexes[itemIndexOfIndex];
         }
         break;
       case 36:
-        set(this, 'activePanel', first);
+        targetIndex = first;
         break;
       case 35:
-        set(this, 'activePanel', last);
+        targetIndex = last;
         break;
       case 13:
       case 32:
-        if (activePanel !== focusIndex) {
-          set(this, 'activePanel', focusIndex);
+        if (activeItem !== focusIndex) {
+          targetIndex = focusIndex;
         } else {
-          set(this, 'activePanel', null);
+          targetIndex = null;
         }
         break;
       }
+
+      set(this, 'activeItem', targetIndex);
     }
   },
 
   actions: {
-    setActivePanel(accordionItemIndex) {
-      return set(this, 'activePanel', accordionItemIndex);
+    setActiveItem(accordionItemIndex) {
+      return set(this, 'activeItem', accordionItemIndex);
     },
 
     setFocusIndex(accordionItemIndex) {

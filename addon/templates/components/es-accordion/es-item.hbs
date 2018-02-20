@@ -12,7 +12,14 @@
       {{statusLabel}}
     </span>
   </div>
-  <button class="button-icon" data-role="accordion-item-button" aria-lable="expand collapse"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+  <button
+    class="button-icon"
+    data-role="accordion-item-button"
+    aria-label="expand collapse"
+    aria-expanded="{{isExpanded}}"
+  >
+    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+  </button>
 </div>
 <div class="accordion-body {{unless isExpanded "collapse"}}">
   <div class="accordion-content">

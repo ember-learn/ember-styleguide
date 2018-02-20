@@ -1,29 +1,34 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import { find, click, focus, keyEvent, findAll } from 'ember-native-dom-helpers';
+import {
+  find,
+  click,
+  focus,
+  keyEvent,
+  findAll,
+} from 'ember-native-dom-helpers';
 import {
   get,
   setProperties,
 } from '@ember/object';
 
-
-let activePanel, focusIndex;
+let activeItem, focusIndex;
 
 moduleForComponent('es-accordion', 'Integration | Component | es accordion', {
   integration: true,
 
   beforeEach() {
-    activePanel = null;
+    activeItem = null;
     focusIndex = null;
 
     setProperties(this, {
-      activePanel,
+      activeItem,
       focusIndex
     });
   },
 
   afterEach() {
-    activePanel = focusIndex = null;
+    activeItem = focusIndex = null;
   },
 });
 
@@ -53,7 +58,7 @@ test('it renders', function(assert) {
 test('it correctly handles user input', function(assert) {
   this.render(hbs`
     {{#es-accordion
-      activePanel=activePanel
+      activeItem=activeItem
       focusIndex=focusIndex
       as |accordionState|
     }}
@@ -76,7 +81,7 @@ test('it correctly handles user input', function(assert) {
   click('.accordion-heading');
 
   assert.equal(
-    get(this, 'activePanel'),
+    get(this, 'activeItem'),
     0,
     'Clicking on an accordion element heading set it as active'
   );
@@ -98,7 +103,7 @@ test('it correctly handles user input', function(assert) {
 test('it correctly handles keyboard input', function(assert) {
   this.render(hbs`
     {{#es-accordion
-      activePanel=activePanel
+      activeItem=activeItem
       focusIndex=focusIndex
       as |accordionState|
     }}
@@ -134,7 +139,7 @@ test('it correctly handles keyboard input', function(assert) {
   keyEvent(findAll('[data-role=accordion-item-button]')[0], 'keydown', 36);
 
   assert.equal(
-    get(this, 'activePanel'),
+    get(this, 'activeItem'),
     23,
     'Keydown on "Home" sets the bottom accordion element as active'
   );
@@ -143,7 +148,7 @@ test('it correctly handles keyboard input', function(assert) {
   keyEvent(findAll('[data-role=accordion-item-button]')[0], 'keydown', 35);
 
   assert.equal(
-    get(this, 'activePanel'),
+    get(this, 'activeItem'),
     25,
     'Keydown on "End" sets the bottom accordion element as active'
   );
@@ -152,7 +157,7 @@ test('it correctly handles keyboard input', function(assert) {
   keyEvent(findAll('[data-role=accordion-item-button]')[0], 'keydown', 38);
 
   assert.equal(
-    get(this, 'activePanel'),
+    get(this, 'activeItem'),
     23,
     'Keydown on "Arrow Up" set previous accordion element as active'
   );
@@ -161,7 +166,7 @@ test('it correctly handles keyboard input', function(assert) {
   keyEvent(findAll('[data-role=accordion-item-button]')[0], 'keydown', 40);
 
   assert.equal(
-    get(this, 'activePanel'),
+    get(this, 'activeItem'),
     25,
     'Keydown on "Arrow Down" set next accordion element as active'
   );
@@ -171,7 +176,7 @@ test('it correctly handles keyboard input', function(assert) {
   keyEvent(findAll('[data-role=accordion-item-button]')[1], 'keydown', 32);
 
   assert.equal(
-    get(this, 'activePanel'),
+    get(this, 'activeItem'),
     null,
     'Keydown on "Space" removes the current accordion element from being active'
   );
@@ -185,7 +190,7 @@ test('it correctly handles keyboard input', function(assert) {
   keyEvent(findAll('[data-role=accordion-item-button]')[1], 'keydown', 13);
 
   assert.equal(
-    get(this, 'activePanel'),
+    get(this, 'activeItem'),
     25,
     'Keydown on "Enter" set the current accordion element as active'
   );
