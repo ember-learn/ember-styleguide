@@ -1,22 +1,18 @@
-import { moduleForComponent, skip } from 'ember-qunit';
+import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
 moduleForComponent('es-navbar', 'Integration | Component | es navbar', {
   integration: true
 });
 
-skip('regular navbar component renders', function(assert) {
-
+test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
   this.render(hbs`{{es-navbar}}`);
 
-  assert.ok(true);
-});
+  assert.equal(this.$().text().trim(), 'Search');
 
-skip('block navbar component renders', function(assert) {
-  
   // Template block usage:
   this.render(hbs`
     {{#es-navbar}}
@@ -24,5 +20,5 @@ skip('block navbar component renders', function(assert) {
     {{/es-navbar}}
   `);
 
-  assert.ok(true);
+  assert.equal(this.$().text().trim(), 'Search');
 });

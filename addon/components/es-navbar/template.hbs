@@ -1,0 +1,81 @@
+<div class="container">
+  {{#bs-navbar
+    backgroundColor='inverse'
+    type='inverse' as |navbar|}}
+    {{#link-to "index" class="navbar-brand"}}
+      <img
+        src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg"
+        alt="home">
+    {{/link-to}}
+    {{navbar.toggle}}
+    {{#navbar.content}}
+      {{#navbar.nav class="mr-auto" as |nav|}}
+        {{#each links as |link|}}
+          {{#if (eq link.type 'link')}}
+            {{#nav.item}}
+              <a href="{{link.href}}" class="nav-link">{{link.name}}</a>
+            {{/nav.item}}
+          {{/if}}
+          {{#if (eq link.type 'dropdown')}}
+            {{#nav.dropdown tagName="li" as |dd|}}
+              {{#dd.toggle}}{{link.name}} <span class="caret"></span>{{/dd.toggle}}
+              {{#dd.menu as |menu|}}
+                {{#each link.items as |item|}}
+                  {{#if (eq item.type 'link')}}
+                    {{#menu.item}}
+                      <a href="{{item.href}}" class="dropdown-item">{{item.name}}</a>
+                    {{/menu.item}}
+                  {{/if}}
+                  {{#if (eq item.type 'divider')}}
+                    {{menu.divider}}
+                  {{/if}}
+                {{/each}}
+              {{/dd.menu}}
+            {{/nav.dropdown}}
+          {{/if}}
+
+        {{/each}}
+      {{/navbar.nav}}
+      {{#navbar.nav as |nav|}}
+        <form class="navbar-form navbar-right searchbox">
+          <div class="input-group">
+            <label for="search-input" class="control-label sr-only">Search</label>
+            <input type="text"
+                   class="form-control search input ds-input"
+                   placeholder="Search..."
+                   id="search-input"
+                   role="combobox"
+                   aria-expanded="false"
+                   aria-owns="algolia-autocomplete-listbox-0"
+                   autocorrect="off"
+                   autocapitalize="none"
+                   spellcheck="false"
+            />
+            <span></span>
+          </div>
+        </form>
+      {{/navbar.nav}}
+    {{/navbar.content}}
+  {{/bs-navbar}}
+</div>
+
+{{!--
+<div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+            aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/"><img
+      src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg"
+      alt="home"/></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+  </div>
+  <!-- /.navbar-collapse -->
+</div>
+<!-- /.container-fluid -->
+--}}

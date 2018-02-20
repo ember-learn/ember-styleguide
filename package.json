@@ -19,9 +19,14 @@
     "test": "ember try:each"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0",
+    "broccoli-funnel": "^2.0.1",
+    "broccoli-merge-trees": "^2.0.0",
+    "ember-bootstrap": "^1.2.0",
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
-    "ember-cli-sass": "^7.1.4"
+    "ember-cli-sass": "^7.1.4",
+    "ember-truth-helpers": "^2.0.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -43,6 +48,7 @@
     "ember-export-application-global": "^2.0.0",
     "ember-font-awesome": "^3.0.5",
     "ember-load-initializers": "^1.0.0",
+    "ember-native-dom-helpers": "^0.5.10",
     "ember-resolver": "^4.0.0",
     "ember-sinon": "^1.0.1",
     "ember-source": "~2.18.0",
