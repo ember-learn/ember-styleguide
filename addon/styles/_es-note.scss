@@ -40,19 +40,18 @@
 		display: flex;
 		flex-flow: row;
 		justify-content: space-between;
+		margin-bottom: 0.5em;
+		margin-top: 0.5em;
 		padding: 12px 22px;
 		@media screen and (min-width:768px) {
-			width: 80%;
+			width: 90%;
 		}
 		.cta-note-body {
 			font-size: 1em;
 			line-height: 1.5;
 			margin: 0;
 			padding: 0 1em 0 0;
-			width:95%;
-			@media screen and (min-width:772px) {
-				width: 85%;
-			}
+			
 			.cta-note-heading {
 				color: $orange-darkest;
 				font-size: 1.3em;
