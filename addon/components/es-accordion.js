@@ -50,6 +50,16 @@ export default Component.extend({
 
   keyDown(e) {
     const keyCode = get(e, 'keyCode');
+    const focusIndex = get(this, 'focusIndex');
+
+    if (isPresent(focusIndex)) {
+      const targetIndex = this._resolveTargetItemIndex(keyCode);
+
+      set(this, 'activeItem', targetIndex);
+    }
+  },
+
+  _resolveTargetItemIndex(keyCode) {
     const {
       accordionItemIndexes,
       activeItem,
@@ -64,8 +74,7 @@ export default Component.extend({
     let itemIndexOfIndex = A(accordionItemIndexes).indexOf(activeItem);
     let targetIndex;
 
-    if (isPresent(focusIndex)) {
-      switch (keyCode) {
+    switch (keyCode) {
       case 38:
         if (activeItem === null || itemIndexOfIndex === -1) {
           targetIndex = focusIndex;
@@ -100,10 +109,11 @@ export default Component.extend({
           targetIndex = null;
         }
         break;
-      }
-
-      set(this, 'activeItem', targetIndex);
+      default:
+        targetIndex = activeItem;
     }
+
+    return targetIndex;
   },
 
   actions: {
