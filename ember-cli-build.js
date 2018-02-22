@@ -9,9 +9,6 @@ module.exports = function(defaults) {
       'importBootstrapFont': false,
       'importBootstrapCSS': false
     },
-    svgJar: {
-      sourceDirs: ['public/assets/images'],
-    },
   });
 
   /*
