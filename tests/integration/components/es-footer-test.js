@@ -12,9 +12,14 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{es-footer}}`);
 
+  const footerSocialLinks = document.querySelectorAll('.footer-social a');
+  const footerContribtuionsLinks = document.querySelectorAll('.footer-contributions .contributor');
+  const footer = document.querySelector('.footer');
+  const footerStyle = window.getComputedStyle(footer, null);
+  const footerBgColor = footerStyle.getPropertyValue('background-color');
 
-  assert.equal(this.$('.footer-social').children().length, 3, 'social links are loading');
-  assert.equal(this.$('.footer-contributions').children().length, 2, 'contributors links are loading');
-  assert.equal(this.$('.footer.responsive').css('background-color'), 'rgb(242, 236, 233)', 'background color is rendering');
+  assert.equal(footerSocialLinks.length, 3, 'social links are loading');
+  assert.equal(footerContribtuionsLinks.length, 2, 'contributors links are loading');
+  assert.equal(footerBgColor, 'rgb(242, 236, 233)', 'background color is rendering');
 
 });
