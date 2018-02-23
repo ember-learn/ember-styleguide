@@ -1,5 +1,4 @@
 import Component from '@ember/component';
-import { computed } from '@ember/object';
 import layout from '../templates/components/es-footer';
 
 export default Component.extend({
