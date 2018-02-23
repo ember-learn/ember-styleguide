@@ -7,13 +7,10 @@ export default Component.extend({
   classNames: ['es-footer'],
   tagName: 'footer',
   currentYear: null,
-  
   init() {
-    this._super(...arguments);
-    
+    this._super(...arguments); 
     this.currentYear = new Date().getUTCFullYear();
-  }),
-
+  },
   //accessibility support
   ariaDescribedby: null,
   ariaLabel: null,
