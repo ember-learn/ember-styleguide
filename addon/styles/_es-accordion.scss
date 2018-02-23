@@ -1,0 +1,119 @@
+.accordion-group {
+	border: 1px solid $gray-lighter;
+	border-radius: 2px;
+	border-bottom: none; //stay last
+	.accordion {
+		display: flex;
+		flex-flow: row wrap;
+		flex: 1;
+		min-width: 100%;
+		.accordion-heading {
+			align-items: center;
+			background-color: $white;
+			border-bottom: 1px solid $gray-lighter;
+			display: flex;
+			flex-flow: row wrap;
+			flex: 1;
+			height: 54px;
+			min-width: 100%;
+			padding: 0 10px;
+			@media screen and (min-width: 768px) {
+				padding: 0 36px;
+			}
+			&:last-of-type {
+				border-bottom-color: transparent;
+			}
+			&:hover {
+				background-color: $gray-lightest;
+			}
+			&.active {
+				background-color: $gray-lightest;
+			}
+			.content {
+				background-color: transparent;
+				color: $black;
+				flex-flow: row wrap;
+				flex: 1;
+				font-weight: 400;
+				padding-right: 24px;
+				&:first-of-type {
+					font-size: 1em;
+					font-weight: 500;
+				}
+				.content-sub {
+					font-weight: 500;
+				}
+			}
+			.button-icon {
+				background-color: transparent;
+				border-color: transparent;
+				color: $gray;
+				height: 36px;
+				width: 36px;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+		.accordion-body {
+			border-bottom: 1px solid $gray-lighter;
+			display: flex;
+			flex: 1;
+			flex-flow: row wrap;
+			min-width: 100%;
+			padding: 0 10px 1em 10px;
+			@media screen and (min-width:768px) {
+				padding: 0 36px 1em 36px;
+			}
+      &.collapse {
+        display: none;
+      }
+
+			.accordion-content{
+				flex: 1;
+				&:first-of-type {
+					&:not(:last-of-type) {
+						padding-right: 0.5em;
+					}
+				}
+				&:last-of-type {
+					min-width: 100%;
+					@media screen and (min-width: 768px) {
+						min-width: 20%;
+						max-width: 25%;
+						padding-left: 1em;
+					}
+				}
+				.content-title {
+					color: $black;
+					font-size: 1.2em;
+					font-weight: 500;
+					line-height: 1;
+					margin-top: 1em;
+				}
+				.content-list {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+					li {
+						margin: 0;
+						padding: 5px 0 0;
+						a {
+							align-items: center;
+							display: flex;
+							img {
+								background-color: $gray-lightest;
+								border-radius: 50%;
+								display: inline-block;
+								height: 30px;
+								margin-right: 2px;
+								width: 30px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.accordion-footer {} //don't need it yet
+	}
+}
