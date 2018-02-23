@@ -7,8 +7,12 @@ export default Component.extend({
   attributeBindings: ['ariaLabel:aria-label'],
   classNames: ['es-footer'],
   tagName: 'footer',
-  currentYear: computed(function () {
-    return new Date().getUTCFullYear();
+  currentYear: null,
+  
+  init() {
+    this._super(...arguments);
+    
+    this.currentYear = new Date().getUTCFullYear();
   }),
 
   //accessibility support
