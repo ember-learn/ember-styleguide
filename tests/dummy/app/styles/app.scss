@@ -10,7 +10,6 @@ body {
 }
 
 div.intro {
-  // background-color: rgba(227, 216, 214, 0.2);
   background-color: rgba(252, 249, 247, 0.6);
   border: 4px solid darken(#E3DBDA, 10%);
   display: flex;
@@ -40,7 +39,6 @@ div.intro {
   }
 
   pre {
-    // background-color: #E3DBDA;
     margin: 1em auto;
     padding: 1em;
     text-align: left;
@@ -50,7 +48,6 @@ div.intro {
 
 footer {
   font-size: 0.8em;
-  padding: 2em 1em;
 
   ul {
     margin: 0;
