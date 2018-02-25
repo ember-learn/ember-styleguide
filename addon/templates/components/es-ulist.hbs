@@ -1,1 +1,11 @@
-{{yield}}
+<div>
+    <ul aria-describedby="{{ariaDescribedby}}">
+        {{es-heading headingText=title tagName="h3" class="title"}}
+        
+        {{#each listItems as |item|}}            
+            <li>
+                {{yield item}}
+            </li>
+        {{/each}}
+    </ul>    
+</div>

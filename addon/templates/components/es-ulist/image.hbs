@@ -1,0 +1,19 @@
+{{#if isIconLeft}}
+    <div class="flex image-left">
+        {{#if isIcon}}
+            <i class="icons {{item.src}}"></i>
+        {{else}}
+            <img src="{{item.src}}" alt="Image src" width="{{width}}" height="{{height}}" class="image"/>
+        {{/if}}
+        {{yield item}}
+    </div>
+{{else}}
+    <div class="flex image-right">
+        {{yield item}}
+        {{#if isIcon}}
+            <i class="icons {{item.src}}"></i>
+        {{else}}
+            <img src="{{item.src}}" alt="Image src" width="{{width}}" height="{{height}}" class="image"/>
+        {{/if}}
+    </div>
+{{/if}}
