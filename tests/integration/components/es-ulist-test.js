@@ -38,7 +38,7 @@ test('it render normal - list', function(assert) {
     {{/es-ulist}}
   `);
 
-  assert.equal(this.$('.es-ulist ul .title').text().trim(), model.name, 'List title rendered');
+  assert.equal(this.$('.es-ulist .title').text().trim(), model.name, 'List title rendered');
   assert.equal(this.$('.es-ulist ul li:eq(0)').text().trim(), model.items[0].text, 'First Item rendered correctly');
   assert.equal(this.$('.es-ulist ul li:eq(2)').text().trim(), model.items[2].text, 'Third item in the list rendered correctly');
 });
@@ -69,7 +69,7 @@ test('it render list with left image', function(assert) {
     {{/es-ulist}}
   `);
 
-  assert.equal(this.$('.es-ulist ul .title').text().trim(), model.name, 'List Title rendered');
+  assert.equal(this.$('.es-ulist .title').text().trim(), model.name, 'List Title rendered');
   assert.equal(this.$('.es-ulist ul li:eq(0) .es-ulist-image').length > 0, true, 'List with Image rendered');
 });
 
@@ -163,7 +163,7 @@ test('should render icons on the left', function(assert) {
     {{/es-ulist}}
   `);
 
-  assert.equal(this.$('.es-ulist ul .title').text().trim(), model.name, 'Title rendered');
+  assert.equal(this.$('.es-ulist .title').text().trim(), model.name, 'Title rendered');
   assert.equal(this.$('.es-ulist ul li:eq(0) .es-ulist-image .icons').length > 0, true, 'List with icons rendered');
 });
 
@@ -190,7 +190,7 @@ test('it renders a list with links', function(assert) {
     {{/es-ulist}}
   `);
 
-  assert.equal(this.$('.es-ulist ul .title').text().trim(), model.name, 'List title rendered');
+  assert.equal(this.$('.es-ulist .title').text().trim(), model.name, 'List title rendered');
   assert.equal(this.$('.es-ulist ul li:eq(0) a').length > 0, true, 'List items rendered');
 });
 

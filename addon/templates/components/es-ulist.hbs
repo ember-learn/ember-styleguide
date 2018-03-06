@@ -1,7 +1,7 @@
 <div>
-    <ul aria-describedby="{{ariaDescribedby}}">
-        {{es-heading headingText=title tagName="h3" class="title"}}
-        
+    {{es-heading headingText=title tagName="h3" class="title"}}
+    
+    <ul aria-describedby="{{ariaDescribedby}}">                
         {{#each listItems as |item|}}            
             <li>
                 {{yield item}}
