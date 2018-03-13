@@ -9,7 +9,7 @@ import {
 
 export default Component.extend({
   layout,
-  classNames: ['post-header'],
+  classNames: ['es-blog-heading'],
 
   author: null,
   postDate: null,

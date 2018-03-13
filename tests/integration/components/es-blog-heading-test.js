@@ -47,12 +47,12 @@ moduleForComponent('es-blog-heading', 'Integration | Component | es blog heading
 
 test('it renders', function(assert) {
   assert.equal(
-    find('.post-title a'),
+    find('.post-title.list-view a'),
     postUrl,
     'displays title as link'
   );
   assert.equal(
-    find('h2.post-title').textContent.trim(),
+    find('.post-title.list-view').textContent.trim(),
     postTitle,
     'displays title'
   );
@@ -68,14 +68,14 @@ test('it renders', function(assert) {
   );
   assert.notOk(
     find('.post-tag'),
-    'does not tag if not set'
+    'does not display tag if not set'
   );
 });
 
 test('displays proper tag', function(assert) {
   assert.notOk(
     find('.post-tag'),
-    'does not tag if not set'
+    'does not display tag if not set'
   );
 
   run(() => {
@@ -101,13 +101,13 @@ test('displays proper tag', function(assert) {
 
 test('renders correct title format', function(assert) {
   assert.equal(
-    find('.post-title a'),
+    find('.post-title.list-view a'),
     postUrl,
     'displays title as link when url is provided'
   );
   assert.ok(
-    find('h2.post-title'),
-    'displays title with h2 tag when url provided'
+    find('.post-title.list-view'),
+    'displays list view title when a url is provided'
   );
 
   run(() => {
@@ -115,11 +115,11 @@ test('renders correct title format', function(assert) {
   });
 
   assert.notOk(
-    find('.post-title a'),
-    'does not display title as link when url is not provided'
+    find('.post-title.list-view a'),
+    'does not display title as link when a url is not provided'
   );
   assert.ok(
-    find('h1.post-title'),
-    'displays title with h1 tag when url provided'
+    find('.post-title.page-view'),
+    'displays page view title when a url is provided'
   );
 });
