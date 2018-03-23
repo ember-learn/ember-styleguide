@@ -1,15 +1,17 @@
 import Component from '@ember/component';
 import layout from '../templates/components/es-ulist';
+import { computed } from '@ember/object';
 
 export default Component.extend({
   layout,
   classNames: ['es-ulist'],
 
   //accessibility support
-  ariaDescribedby: null,
-  ariaLabel: null,
+  ariaDescribedby: computed.alias('list.id'),
+  ariaLabel: computed.alias('list.name'),
+  listItems: computed.alias('list.items'),
   ariaRole: 'group',
-  title: null,
+  title: computed.alias('list.name'),
 
   itemUrl: null, //think about this, there has to be something better to name it.
   imageUrl: null,
