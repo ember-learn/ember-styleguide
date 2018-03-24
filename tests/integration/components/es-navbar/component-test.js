@@ -20,5 +20,5 @@ test('it renders', function(assert) {
     {{/es-navbar}}
   `);
 
-  assert.equal(this.$().text().trim(), 'Search');
+  assert.equal(this.$().text().trim(), 'template block text');
 });
