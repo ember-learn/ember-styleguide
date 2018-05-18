@@ -2,11 +2,11 @@
   {{#bs-navbar
     backgroundColor='inverse'
     type='inverse' as |navbar|}}
-    {{#link-to "index" class="navbar-brand"}}
+    <a class="navbar-brand" href="https://www.emberjs.com">
       <img
         src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg"
         alt="home">
-    {{/link-to}}
+    </a>
     {{navbar.toggle}}
     {{#navbar.content}}
       {{#navbar.nav class="mr-auto" as |nav|}}
