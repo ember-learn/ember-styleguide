@@ -1,0 +1,70 @@
+.accordion-group {
+	.accordion {
+		.accordion-heading {
+			@media screen and (min-width: 768px) {
+			}
+
+			&:last-of-type {
+			}
+
+			&:hover {
+			}
+
+			&.active {
+			}
+			.content {
+
+				&:first-of-type {
+				}
+
+				.content-sub {
+
+				}
+			}
+
+			.button-icon {
+
+				&:hover {
+
+				}
+			}
+		}
+		.accordion-body {
+
+			@media screen and (min-width:768px) {
+
+			}
+      &.collapse {
+
+      }
+
+			.accordion-content{
+
+				&:first-of-type {
+
+					&:not(:last-of-type) {
+
+					}
+				}
+				&:last-of-type {
+
+					@media screen and (min-width: 768px) {
+
+					}
+				}
+				.content-title {
+
+				}
+				.content-list {
+					li {
+						a {
+							img {
+							}
+						}
+					}
+				}
+			}
+		}
+		.accordion-footer {} //don't need it yet
+	}
+}
