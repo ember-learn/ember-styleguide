@@ -1,0 +1,37 @@
+.es-blog-heading {
+  .post-title {
+    &.page-view {
+      
+    }
+
+    &.list-view {
+      
+      a {
+        &:hover {
+      
+        }
+      }
+    }
+  }
+
+  .post-date {
+    
+    @media screen and (min-width: 768px) {
+    
+    }
+  }
+
+  .post-author {
+    
+  }
+
+  .post-tag {
+    
+    &.syndicated {
+      
+    }
+    &.guest {
+      
+    }
+  }
+}

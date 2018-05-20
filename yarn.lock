@@ -2753,6 +2753,13 @@ ember-cli-get-dependency-depth@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-get-dependency-depth/-/ember-cli-get-dependency-depth-1.0.0.tgz#e0afecf82a2d52f00f28ab468295281aec368d11"
 
+ember-cli-head@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-head/-/ember-cli-head-0.4.1.tgz#28b7ee86439746640834b232a3b34ab1329f3cf3"
+  dependencies:
+    ember-cli-babel "^6.11.0"
+    ember-cli-htmlbars "^2.0.3"
+
 ember-cli-htmlbars-inline-precompile@^0.4.0:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars-inline-precompile/-/ember-cli-htmlbars-inline-precompile-0.4.4.tgz#24a7617152630d64a047e553b72e00963a4f8d73"
@@ -3332,6 +3339,13 @@ ember-source@~2.18.0:
     inflection "^1.12.0"
     jquery "^3.2.1"
     resolve "^1.3.3"
+
+ember-theme-changerr@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/ember-theme-changerr/-/ember-theme-changerr-0.7.0.tgz#1b4cbc4e2a0305bf7150baeec59052126241d2a3"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-head "^0.4.1"
 
 ember-truth-helpers@^2.0.0:
   version "2.0.0"

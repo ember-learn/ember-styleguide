@@ -1,7 +1,7 @@
 {
   "name": "ember-styleguide",
   "version": "0.0.0",
-  "description": "Addon to help standardize the ember family of websites",
+  "description": "Addon to help standardize the Ember family of websites - now with themes",
   "keywords": [
     "ember-addon"
   ],
@@ -26,6 +26,7 @@
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-sass": "^7.1.4",
+    "ember-theme-changerr": "^0.7.0",
     "ember-truth-helpers": "^2.0.0"
   },
   "devDependencies": {
