@@ -9,6 +9,11 @@ module.exports = function(defaults) {
       'importBootstrapFont': false,
       'importBootstrapCSS': false
     },
+    svgJar: {
+      sourceDirs: [
+        'tests/dummy/public/assets/images/icons'
+      ]
+    }
   });
 
   /*
