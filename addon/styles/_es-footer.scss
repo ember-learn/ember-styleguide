@@ -119,13 +119,16 @@
 }
 
 .footer .footer-contributions .contributor {
-  flex: 1 0 11em;
+  flex: 1 0 8em;
 }
 
-.footer .footer-contributions .heroku-logo {
-  max-height: 35px;
+.footer .footer-contributions .contributor p {
+  color: #444444;
 }
 
+.footer .footer-contributions .heroku-logo,
+.footer .footer-contributions .percy-logo,
+.footer .footer-contributions .dnsimple-logo,
 .footer .footer-contributions .fastly-logo {
   max-height: 45px;
 }
