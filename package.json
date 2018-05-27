@@ -7,7 +7,10 @@
   ],
   "repository": "https://github.com/ember-learn/ember-styleguide.git",
   "license": "MIT",
-  "contributors": "Ember.JS Learning team",
+  "contributors": [
+    "Sivakumar Kailasam <siva@rubberduck.engineering>",
+    "Ember.JS Learning team"
+  ],
   "directories": {
     "doc": "doc",
     "test": "tests"
