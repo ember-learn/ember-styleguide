@@ -17,7 +17,8 @@
     "lint:js": "$(npm bin)/eslint ./*.js addon addon-test-support app config lib server test-support tests",
     "release": "np",
     "start": "ember serve",
-    "test": "ember try:each"
+    "test": "ember test",
+    "test:all": "ember try:each"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
