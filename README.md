@@ -1,9 +1,12 @@
-# ember-styleguide [![Build Status](https://travis-ci.org/ember-learn/ember-styleguide.svg?branch=master)](https://travis-ci.org/ember-learn/ember-styleguide)
+# ember-styleguide [![Build Status](https://travis-ci.org/ember-learn/ember-styleguide.svg?branch=master)](https://travis-ci.org/ember-learn/ember-styleguide) [![Latest NPM release](https://img.shields.io/npm/v/ember-learn/ember-styleguide.svg)](https://www.npmjs.com/package/ember-learn/ember-styleguide.svg)
 
 This addon is intended to provide basic components for easier style coordination among the Ember family of websites, although the original intent is to support the emberjs.com website. We are committed to the goal of meeting WCAG 2.0 AA conformance standards. 
 
-Contributions are encouraged! Here's where you can see the designs in progress - feel free to submit ideas of your own! 
-https://codepen.io/melsumner/pen/9d551738a81e319a773395a2cfa1a82e 
+Contributions are encouraged! You'll notice that the issues in this repository have been labeled to help you find the issue that is just right for you! 
+
+[See the visual design](https://codepen.io/melsumner/pen/9d551738a81e319a773395a2cfa1a82e) as a work in progress & feel free to submit ideas of your own! 
+
+
 
 ## Installation
 
