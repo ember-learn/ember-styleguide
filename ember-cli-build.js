@@ -9,6 +9,13 @@ module.exports = function(defaults) {
       importBootstrapFont: false,
       importBootstrapCSS: false
     },
+    svgJar: {
+      sourceDirs: [
+        'public',
+        'node_modules/ember-styleguide/public',
+        'tests/dummy/public'
+      ]
+    }
   });
 
   /*

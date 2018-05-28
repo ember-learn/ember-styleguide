@@ -11,8 +11,7 @@ module.exports = {
       sourceDirs: [
         'public',
         'node_modules/ember-styleguide/public',
-        'tests/dummy/public',
-        'tests/dummy/public/assets/images/icons'
+        'tests/dummy/public'
       ]
     }
   },
