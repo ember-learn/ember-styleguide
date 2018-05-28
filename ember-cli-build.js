@@ -10,6 +10,7 @@ module.exports = function(defaults) {
       importBootstrapCSS: false
     },
     svgJar: {
+      strategy: ['inline'],
       sourceDirs: ['tests/dummy/public/assets/images/icons']
     }
   });
