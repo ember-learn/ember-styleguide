@@ -6,6 +6,16 @@ const path = require('path');
 module.exports = {
   name: 'ember-styleguide',
 
+  options: {
+    svgJar: {
+      sourceDirs: [
+        'public',
+        'node_modules/ember-styleguide/public',
+        'tests/dummy/public'
+      ]
+    }
+  },
+
   included() {
     this._super.included.apply(this, arguments);
   },
