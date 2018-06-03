@@ -10,9 +10,11 @@
 @import 'ember-bootstrap/transitions';
 
 @import 'variables';
+@import 'utils';
 @import 'normalize';
 @import 'es-aside';
 @import 'es-button';
+@import 'es-image';
 @import 'es-buttonbar';
 @import 'es-card';
 @import 'es-codesample';
@@ -71,16 +73,16 @@ section {
   }
 }
 .text-error {
-	color: $danger;
+  color: $danger;
 }
 .text-warning {
-	color: $warning;
+  color: $warning;
 }
 .text-info {
-	color: $info;
+  color: $info;
 }
 .text-success {
-	color: $success;
+  color: $success;
 }
 
 // helper classes
