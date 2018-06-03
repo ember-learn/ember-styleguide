@@ -1,22 +1,27 @@
 {
   "name": "ember-styleguide",
-  "version": "0.0.0",
+  "version": "1.1.0",
   "description": "Addon to help standardize the ember family of websites",
   "keywords": [
     "ember-addon"
   ],
+  "repository": "https://github.com/ember-learn/ember-styleguide.git",
   "license": "MIT",
-  "author": "",
+  "contributors": [
+    "Sivakumar Kailasam <siva@rubberduck.engineering>",
+    "Ember.JS Learning team"
+  ],
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
   "scripts": {
     "build": "ember build",
     "lint:js": "$(npm bin)/eslint ./*.js addon addon-test-support app config lib server test-support tests",
+    "release": "np",
     "start": "ember serve",
-    "test": "ember try:each"
+    "test": "ember test",
+    "test:all": "ember try:each"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
@@ -60,6 +65,7 @@
     "eslint-plugin-node": "^5.2.1",
     "loader.js": "^4.2.3",
     "normalize.css": "^4.1.1",
+    "np": "*",
     "stylelint-config-standard": "^18.0.0",
     "stylelint-declaration-strict-value": "^1.0.4",
     "stylelint-order": "^0.8.0",
@@ -67,6 +73,9 @@
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

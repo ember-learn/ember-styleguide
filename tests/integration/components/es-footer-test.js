@@ -15,6 +15,6 @@ test('it renders', function(assert) {
   const footerBgColor = footerStyle.getPropertyValue('background-color');
 
   assert.equal(footerSocialLinks.length, 3, 'social links are loading');
-  assert.equal(footerContribtuionsLinks.length, 2, 'contributors links are loading');
+  assert.equal(footerContribtuionsLinks.length, 4, 'contributors links are loading');
   assert.equal(footerBgColor, 'rgb(242, 236, 233)', 'background color is rendering');
 });

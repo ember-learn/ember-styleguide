@@ -10,7 +10,11 @@ module.exports = function(defaults) {
       importBootstrapCSS: false
     },
     svgJar: {
-      sourceDirs: ['tests/dummy/public/assets/images/icons']
+      sourceDirs: [
+        'public',
+        'node_modules/ember-styleguide/public',
+        'tests/dummy/public'
+      ]
     }
   });
 
