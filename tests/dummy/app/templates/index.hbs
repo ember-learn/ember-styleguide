@@ -28,12 +28,12 @@
 {{/es-accordion}}
 
 {{#es-ulist list=model.normalList as |item|}}
-  {{es-ulist/text item=item}}
+  {{es-text text=item.text tagName="div" class="es-ulist-text"}}
 {{/es-ulist}}
 
 {{#es-ulist list=model.imageList as |item|}}  
   {{#es-ulist/image item=item as |item|}}
-    {{es-ulist/text item=item isNonBlock=true}}
+    {{es-text text=item.text tagName="span" class="es-ulist-text"}}
   {{/es-ulist/image}}
 {{/es-ulist}}
 
@@ -42,3 +42,67 @@
       {{es-ulist/link item=item isExternal=true}}
   {{/es-ulist/image}}
 {{/es-ulist}}
+
+<div class="row es-m-b--m">
+  {{#each verticalCards as |card|}}
+    <div class="col-sm-3">
+      {{es-card
+          heading=card.heading
+          text=card.text
+          imageSrc=card.imageSrc
+          buttonLabel=card.buttonLabel
+          borderColor=card.borderColor
+      }}
+    </div>
+  {{/each}}
+</div>
+
+<div class="row es-m-b--m">
+  <div class="col-sm-12">
+    {{es-card
+        heading=horizontalCard.heading
+        text=horizontalCard.text
+        imageSrc=horizontalCard.imageSrc
+        buttonLabel=horizontalCard.buttonLabel
+        borderColor=horizontalCard.borderColor
+        isImageRight=horizontalCard.isImageRight
+        isImageLeft=horizontalCard.isImageLeft
+        isHeadingAbove=horizontalCard.isHeadingAbove
+    }}
+  </div>
+</div>
+
+<div class="row es-m-b--m">
+  {{#each horizontalCards as |card|}}
+    <div class="col-sm-6">
+      {{es-card
+          heading=card.heading
+          text=card.text
+          imageSrc=card.imageSrc
+          buttonLabel=card.buttonLabel
+          borderColor=card.borderColor
+          isImageRight=card.isImageRight
+          isImageLeft=card.isImageLeft
+          isHeadingAbove=card.isHeadingAbove
+      }}
+    </div>
+  {{/each}}
+</div>
+
+{{#es-card as |c|}}
+  {{c.heading 
+      headingText="Heading"
+  }}
+  {{c.text
+      text='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ullam accusamus incidunt voluptatum minima, officia illo quos dolore perferendis nobis, earum, aut enim nemo suscipit quia! Adipisci optio repellat dolore labore natus ad! Deleniti recusandae maiores totam adipisci enim rem consequuntur inventore consectetur debitis impedit, dolorum ipsum earum obcaecati deserunt dolores ducimus quisquam tempora nostrum officiis voluptatum assumenda placeat est. Rem quidem quasi nemo dignissimos eius sunt ducimus est! Sequi, impedit. Blanditiis fugit, quas maxime totam deserunt eos, quod suscipit praesentium, iure vitae provident voluptatibus magnam quisquam. Excepturi ullam accusantium laborum non vero porro libero, deserunt eveniet sequi eos illum!'
+  }}
+  
+  {{c.button 
+      label="Button"
+      isTiny=true
+      isDark=true
+  }}
+  {{c.image
+      src="http://fillmurray.com/200/300"
+  }}
+{{/es-card}}
