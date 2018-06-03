@@ -1,1 +1,55 @@
-{{yield}}
+{{#if hasBlock}}
+
+  {{yield 
+    (hash
+      heading=(component "es-heading" tagName="h3")
+      button=(component "es-button")
+      text=(component "es-text" tagName="div")
+      image=(component "es-image")
+    )
+  }}
+
+{{else}}
+
+  {{#if isHeadingAbove}}
+    <div class="es-card__heading">
+      {{es-heading headingText=heading}}
+    </div>
+  {{/if}}
+
+  {{#if (or isImageLeft isImageRight)}}
+    <div class="es-card__image">
+      {{es-image src=imageSrc}}
+    </div>
+  {{/if}}
+
+  <div class="es-card__body">
+    {{#if (not (or isImageLeft isImageRight))}}
+      <div class="es-card__image">
+        {{es-image src=imageSrc}}
+      </div>
+    {{/if}}
+
+    {{#if (not isHeadingAbove)}}
+      <div class="es-card__heading">
+        {{es-heading headingText=heading}}
+      </div>
+    {{/if}}
+
+    <div class="es-card__text">
+      {{es-text tagName="div" text=text}}
+    </div>
+
+    {{#if buttonLabel}}
+      <div class="es-card__button">
+        {{es-button 
+            label=buttonLabel
+            isTiny=true
+            isDark=true
+        }}
+      </div>
+    {{/if}}
+  </div>
+
+{{/if}}
+
