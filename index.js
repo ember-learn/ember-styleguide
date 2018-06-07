@@ -20,10 +20,11 @@ module.exports = {
     this._super.included.apply(this, arguments);
   },
 
-  treeForAddonStyles(tree) {
+  treeForStyles(tree) {
     let bootstrapTree = new Funnel(this.getBootstrapStylesPath(), {
       destDir: 'ember-bootstrap'
     });
+    
     return mergeTrees([bootstrapTree, tree]);
   },
 
