@@ -1,4 +1,6 @@
-@import '../../addon/styles/variables';
+// variables
+$white: #fdfdfd;
+$white-e: #e3dbda;
 
 * {
   box-sizing: border-box;
@@ -11,7 +13,7 @@ body {
 
 div.intro {
   background-color: rgba(252, 249, 247, 0.6);
-  border: 4px solid darken(#E3DBDA, 10%);
+  border: 4px solid darken($white-e, 10%);
   display: flex;
   flex: 1 1 auto;
   flex-flow: column wrap;
