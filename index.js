@@ -5,6 +5,9 @@ const path = require('path');
 
 module.exports = {
   name: 'ember-styleguide',
+  isDevelopingAddon() {
+    return true;
+  },
 
   options: {
     svgJar: {
@@ -13,7 +16,10 @@ module.exports = {
         'node_modules/ember-styleguide/public',
         'tests/dummy/public'
       ]
-    }
+    },
+    googleFonts: [
+      'Roboto:400,700' 
+    ],
   },
 
   included() {
