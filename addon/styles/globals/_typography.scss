@@ -1,0 +1,86 @@
+body {
+	font-size: 16px;
+  font-family: $font-family;
+  font-weight: normal;
+  line-height: 1.2;
+  
+  @media screen and (min-width:992px) {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $orange-darker;
+  &:hover, &:focus {
+    color: $orange-darkest;
+  }
+}
+
+p {
+
+  a {
+    color: $orange-darker;
+    text-decoration: underline;
+    &:hover, &:focus {
+      color: $orange-darkest;
+      cursor: pointer;
+    }
+  }
+}
+
+h1 {
+  color: $gray;
+  font-size: 2.25em;
+  font-weight: bold;
+  line-height: 1.125;
+  margin-bottom: 0.5em;
+  max-width: 100%;
+  text-align: center;
+  @media screen and (min-width: 992px) {
+    text-align: left;
+  }
+  
+  + p {
+    margin-top: 0;
+  }
+}
+
+h2 {
+	color: $orange-darkest;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1;
+  margin: 1.25em 0 0.75em 0;
+  text-align: center;
+  @media screen and (min-width: 992px) {
+    text-align: left;
+  }
+
+  + p {
+    margin-top: 0;
+  }
+
+}
+
+h3 {
+  color: $gray-darker;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1;
+  margin: 1.25em auto 0.5em auto;
+
+  + p {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+h4 {
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1;
+  margin: 24px 0 12px 0;
+}

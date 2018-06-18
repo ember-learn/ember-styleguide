@@ -1,5 +1,6 @@
-//@import url('https://rsms.me/interface/interface.css');
-// @import 'interface';
+@import 'globals/normalize';
+@import 'globals/variables';
+@import 'globals/typography';
 
 @import 'ember-bootstrap/functions';
 @import 'ember-bootstrap/variables';
@@ -9,8 +10,6 @@
 @import 'ember-bootstrap/navbar';
 @import 'ember-bootstrap/transitions';
 
-@import 'variables';
-@import 'normalize';
 @import 'es-aside';
 @import 'es-button';
 @import 'es-buttonbar';
