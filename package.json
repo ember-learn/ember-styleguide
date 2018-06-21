@@ -1,6 +1,6 @@
 {
   "name": "ember-styleguide",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Addon to help standardize the ember family of websites",
   "keywords": [
     "ember-addon"
