@@ -19,6 +19,7 @@ a {
 }
 
 p {
+  min-width: 100%;
 
   a {
     color: $orange-darker;
@@ -36,9 +37,9 @@ h1 {
   font-weight: bold;
   line-height: 1.125;
   margin-bottom: 0.5em;
-  max-width: 100%;
+  min-width: 100%;
   text-align: center;
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     text-align: left;
   }
   
@@ -53,15 +54,19 @@ h2 {
   font-weight: bold;
   line-height: 1;
   margin: 1.25em 0 0.75em 0;
-  text-align: center;
-  @media screen and (min-width: 992px) {
-    text-align: left;
+  min-width: 100%;
+  
+  &:first-of-type {
+    margin-top: 0;
   }
-
+  
+  .icon-link-ext {
+    font-size: 0.6em;
+  }
+  
   + p {
     margin-top: 0;
   }
-
 }
 
 h3 {
