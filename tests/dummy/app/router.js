@@ -1,39 +1,46 @@
-import EmberRouter from '@ember/routing/router';
-import config from './config/environment';
+import AddonDocsRouter, { docsRoute } from "ember-cli-addon-docs/router";
+import config from "./config/environment";
 
-const Router = EmberRouter.extend({
+const Router = AddonDocsRouter.extend({
   location: config.locationType,
   rootURL: config.rootURL
 });
 
 Router.map(function() {
-  this.route('learn', function() {
-    this.route('quick-start');
-    this.route('tutorial');
-    this.route('deprecation');
-    this.route('showcase');
+  docsRoute(this, function() {
+    this.route("usage");
+    this.route("branding", function() {
+      this.route("colors");
+      this.route("typography");
+      this.route("logo");
+      this.route("mascot");
+    });
+
+    this.route("accessibility");
+
+    this.route("components", function() {
+      this.route("es-accordion");
+      this.route("es-form");
+      this.route("es-ulist");
+      this.route("es-aside");
+      this.route("es-blog-heading");
+      this.route("es-button");
+      this.route("es-buttonbar");
+      this.route("es-card");
+      this.route("es-codesample");
+      this.route("es-datatable");
+      this.route("es-footer");
+      this.route("es-header");
+      this.route("es-heading");
+      this.route("es-main");
+      this.route("es-navbar");
+      this.route("es-note");
+      this.route("es-pagewrapper");
+      this.route("es-search");
+      this.route("es-ulist");
+    });
   });
-  this.route('guides');
-  this.route('api', function() {
-    this.route('ember-data');
-  });
-  this.route('community', function() {
-    this.route('meetups');
-    this.route('mascots');
-    this.route('guidelines');
-    this.route('logos');
-  });
-  this.route('blog');
-  this.route('builds', function() {
-    this.route('canary');
-    this.route('beta');
-    this.route('release');
-  });
-  this.route('team');
-  this.route('sponsors');
-  this.route('security');
-  this.route('legal');
-  this.route('ember-users');
+  this.route("not-found", { path: "/*path" });
 });
 
 export default Router;

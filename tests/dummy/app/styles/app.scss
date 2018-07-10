@@ -1,66 +1,24 @@
-// variables
-$white: #fdfdfd;
-$white-e: #e3dbda;
+//overrides
+$black: #212121;
+$gray-lighter: #999999;
 
-* {
-  box-sizing: border-box;
-}
+a {
+  color: $gray-lighter;
 
-body {
-  background: url('images/background-shades.svg') center center no-repeat;
-  background-size: cover;
-}
-
-div.intro {
-  background-color: rgba(252, 249, 247, 0.6);
-  border: 4px solid darken($white-e, 10%);
-  display: flex;
-  flex: 1 1 auto;
-  flex-flow: column wrap;
-  justify-content: center;
-  margin-bottom: 1em;
-  max-width: 90%;
-  padding-bottom: 2em;
-  text-align: center;
-
-  @media screen and (min-width: 768px) {
-    max-width: 500px;
-  }
-
-  h2 {
-    margin-bottom: 0;
-  }
-
-  p {
-    margin: 0 auto;
-    width: 70%;
-  }
-
-  .es-button {
-    margin: 0 auto;
-  }
-
-  pre {
-    margin: 1em auto;
-    padding: 1em;
-    text-align: left;
-    width: 350px;
+  &:hover,
+  &:focus {
+    color: $black;
   }
 }
 
-footer {
-  font-size: 0.8em;
-
-  ul {
-    margin: 0;
-    padding: 0;
-
-    li {
-      display: inline-block;
-
-      a {
-        color: $white;
-      }
-    }
+.docs-hero h1 {
+  @media screen and (min-width: 992px) {
+    text-align: center;
   }
+}
+
+section {
+  display: block;
+  min-width: auto;
+  padding: 0;
 }

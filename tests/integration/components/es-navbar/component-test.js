@@ -9,15 +9,15 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{es-navbar}}`);
+  this.render(hbs`{{es-navbar/component}}`);
 
   assert.equal(this.$().text().trim(), 'Search');
 
   // Template block usage:
   this.render(hbs`
-    {{#es-navbar}}
+    {{#es-navbar/component}}
       template block text
-    {{/es-navbar}}
+    {{/es-navbar/component}}
   `);
 
   assert.equal(this.$().text().trim(), 'template block text');
