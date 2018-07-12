@@ -6,6 +6,8 @@ import defaultLinks from '../../constants/links';
 
 export default Component.extend({
   layout,
+  tagName: 'nav',
+  ariaLabel: 'Ember',
   navLinks: computed('links.[]', function() {
     if(this.links) {
       return this.links;

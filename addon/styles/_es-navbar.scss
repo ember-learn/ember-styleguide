@@ -1,210 +1,72 @@
-/**
-  Navbar in header
-**/
-.navbar {
-  margin-bottom: 0;
-
-  &.navbar-inverse {
-    background-color: $orange;
-    border-color: transparent;
-    border-radius: 0;
-    padding: 0;
-
-    .mr-auto {
-      margin-right: auto;
-    }
-
-    .navbar-collapse, .navbar-form {
-      border-color: $orange-darkest;
-    }
-
-    .navbar-toggler {
-      border-color: $white;
-
-      &:hover {
-        background-color: $orange-darker;
-      }
-
-      .navbar-toggler-icon {
-        background-image: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
-      }
-    }
-
-    .navbar-brand {
-      img, svg {
-        @media screen and (min-width: 768px) {
-          margin-bottom: 0;
-          margin-right: 10px;
-          padding-bottom: 0;
-        }
-      }
-    }
-
-    .navbar-nav {
-      margin-top: 0;
-
-      li {
-        align-content: stretch;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        min-width: 100%;
-
-        @media screen and (min-width: 992px){
-          min-width: auto;
-          flex-flow: row wrap;
-        }
-
-        a {
-          align-items: center;
-          color: $white;
-          display: flex;
-          flex: 1;
-          min-height: 50px;
-          padding: 0 0.5em;
-          text-decoration: none;
-
-          &:focus {
-            outline: 5px auto -webkit-focus-ring-color;
-          }
-        }
-
-        &.active {
-
-          a {
-            background-color: white;
-            color: $orange-darkest;
-          }
-        }
-
-        &.show {
-
-          a {
-            background-color: white;
-            color: $orange-darkest;
-          }
-
-          .dropdown-menu {
-            background-color: white;
-            border-radius: 0;
-            margin: 0 -1px;
-
-            @media screen and (min-width: 768px) {
-              border-radius: 0 0 4px 4px;
-              border-color-top: white;
-            }
-
-            .dropdown-item {
-              min-height: 36px;
-              &:hover,
-              :focus {
-                background-color: $orange-lightest;
-                color: $orange-darkest;
-                outline: 0 !important;
-              }
-            }
-
-            .dropdown-divider {
-              border: 1px solid $orange-lightest;
-            }
-          }
-        }
-      }
-    }
-
-    form.navbar-right.navbar-form {
-      @media screen and (min-width: 768px) {
-        margin-bottom: 0;
-      }
-
-      .input-group {
-        min-width: 100%;
-        padding: 0.25em 0;
-      }
-
-      .form-control {
-        background: url(/images/search-icon.svg) rgba(255, 255, 255, 0.1) 10px 8px no-repeat;
-        border-color: transparent;
-        border-radius: 3px;
-        border-right: 0;
-        box-shadow: none;
-        color: white;
-        font-family: 'Roboto', sans-serif;
-        min-width: 100%;
-        padding: 0.25em 0.5em;
-        &:-ms-input-placeholder {
-          color: $orange-lightest !important;
-        }
-        &:-ms-input-placeholder {
-          color: $orange-lightest !important;
-        }
-        &::placeholder {
-          color: $orange-lightest !important;
-        }
-        &::placeholder {
-          color: $orange-lightest !important;
-        }
-      }
-    }
-  }
+ul[role="menubar"] {
+  margin: 10px;
+  padding: 10px;
+  font-size: 110%;
+  list-style: none;
+  background-color: #EEEEEE;
 }
 
-// Algolia overrides
-.ds-dataset-1 {
-  span.ds-suggestions {
-    @media screen and (min-width: 0px) and (max-width: 768px) {
-      z-index: 1000 !important;
-    }
-  }
+ul[role="menubar"] [role="menuitem"],
+ul[role="menubar"] [role="separator"] {
+  padding: 0.25em;
+  background-color: #EEEEEE;
+  border: 2px solid #EEEEEE;
 }
 
-.algolia-docsearch-footer {
-  border-top-color: $orange-lighter;
+ul[role="menubar"] [role="separator"] {
+  padding-top: 0.15em;
+  background-image: url('../images/separator.png');
+  background-position: center;
+  background-repeat: repeat-x;
 }
 
-.algolia-docsearch-suggestion {
-  border-bottom-color: $orange-lighter;
+ul[role="menubar"] [role="menuitem"]:focus,
+ul[role="menubar"] [role="menuitem"]:hover,
+ul[role="menubar"] [role="separator"]:focus,
+ul[role="menubar"] [role="separator"]:hover {
+  background-color: black;
+  color: white;
 }
 
-.algolia-docsearch-suggestion--highlight {
-  color: $orange-darker;
+ul[role="menubar"] a[role="menuitem"] {
+  text-decoration: none;
+  color: black;
 }
 
-.algolia-docsearch-suggestion--subcategory-column {
-  border-right-color: $orange-lighter;
-  color: $gray-darkest;
-  background-color: $orange-lightest;
+ul[role="menubar"] li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.algolia-autocomplete {
-  width: 100%;
+ul[role="menubar"] > li {
+  display: inline;
+  position: relative;
 }
 
-.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-  width: 100%;
+ul[role="menubar"] > li.dropdown > a:after {
+  content: '\25bc';
+  font-size: small;
+  padding-left: .25em;
 }
 
-.algolia-autocomplete .aa-hint {
-  color: #999;
+
+ul[role="menubar"] ul[role="menu"] {
+  display: none;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.algolia-autocomplete .aa-dropdown-menu {
-  width: 100%;
-  background-color: #fff;
-  border: 1px solid #999;
-  border-top: none;
+
+ul[role="menubar"] ul[role="menu"] li a {
+  display: block;
+  width: 10em;
 }
 
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-  cursor: pointer;
-  padding: 5px 4px;
-}
-
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-  background-color: #B2D7FF;
-}
-
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-  font-weight: bold;
-  font-style: normal;
+ul[role="menubar"] ul[role="menu"] a[aria-haspopup="true"]:after {
+  content: url('../images/right-arrow-brown.png');
+  padding-right: 2em;
 }
