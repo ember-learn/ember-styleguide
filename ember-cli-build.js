@@ -13,6 +13,7 @@ module.exports = function(defaults) {
       sourceDirs: [
         'public',
         'node_modules/ember-styleguide/public',
+        'node_modules/ember-cli-addon-docs/public',
         'tests/dummy/public'
       ]
     }
