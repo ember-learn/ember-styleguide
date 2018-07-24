@@ -12,7 +12,7 @@ Contributions are encouraged! You'll notice that the issues in this repository h
 
 * `git clone <repository-url>` this repository
 * `cd ember-styleguide`
-* `npm install`
+* `yarn install`
 
 ## Running
 
@@ -21,7 +21,7 @@ Contributions are encouraged! You'll notice that the issues in this repository h
 
 ## Running Tests
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
+* `yarn test:all` (Runs `ember try:each` to test your addon against multiple Ember versions)
 * `ember test`
 * `ember test --server`
 
