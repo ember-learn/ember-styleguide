@@ -3,7 +3,7 @@
     logo='ember'
     slimHeading='Ember'
     strongHeading='Styleguide'
-    byline='A styleguide for the Ember.js family of websites.'}}
+    byline='A styleguide & component UI addon for the Ember.js family of websites.'}}
 </div>
 
 <div class='docs-container docs-md'>
@@ -15,7 +15,7 @@
 
     <h2 class='flex items-center docs-h2'> Installation </h2>
 
-    ```sh
+    ```
     ember install ember-styleguide
     ```
   </section>
