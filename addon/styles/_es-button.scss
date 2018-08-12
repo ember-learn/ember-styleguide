@@ -1,8 +1,11 @@
 .es-button {
-  border-radius: 3px;
+	background-color: $orange-darker;
+	border-radius: 3px;
+	border: 3px solid transparent;
+	color: $white;
 	font-family: "Roboto";
 	font-size: 1.2em;
-	font-weight: 500;
+	font-weight: 400;
 	height: 54px;
 	letter-spacing: 1px;
 	margin: 9px 0.2em;
@@ -11,19 +14,22 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: all 0.4s ease 0s;
+	&:hover,
+		:focus {
+			background-color: $orange-darkest;
+			color: $white;
+			cursor: pointer;
+	}
+
   &.button-block {
-    box-sizing: border-box;
-		width: 100%;
-		max-width: 100%;
 		margin: 9px auto;
+		max-width: 100%;
+		width: 100%;
+    box-sizing: border-box;
   }
   &.button-dense {
-		height: 48px;
 		font-size: 17px;
-	}
-  &:hover,
-	:focus {
-		cursor: pointer;
+		height: 48px;
 	}
   &.button-light {
 		background-color: $white;
@@ -34,33 +40,21 @@
 			color: $orange-darkest;
 		}
 	}
-	&.button-dark {
-		background-color: $orange-darker;
-		border: 3px solid transparent;
-		color: $white;
-		font-weight: 400;
-		&:hover,
-		:focus {
-			background-color: $orange-darkest;
-			color: $white;
-			cursor: pointer;
-		}
-	}
 	&.disabled {
+		background-color: $gray-lightest;
 		border-color: $gray-lighter !important;
 		color: $gray-lighter !important;
-		background-color: $gray-lightest;
 		&:hover,
 		:focus {
-			cursor: not-allowed;
+			background-color: $gray-lightest;
 			border-color: $gray-lighter;
 			color: $gray-lighter;
-			background-color: $gray-lightest;
+			cursor: not-allowed;
 		}
 	}
 	&.button-link {
-		border-color: transparent;
 		background-color: transparent;
+		border-color: transparent;
 		color: $orange-darker;
 		margin: 9px 12px;
 		padding: 0 12px;
@@ -83,9 +77,9 @@
   	vertical-align: middle;
   }
   @media screen and (max-width: 768px) {
-    box-sizing: border-box;
-		width: 100%;
-		max-width: 100%;
 		margin: 9px auto;
+		max-width: 100%;
+		width: 100%;
+    box-sizing: border-box;
   }
 }

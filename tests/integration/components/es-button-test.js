@@ -127,18 +127,9 @@ test('can disable button', function(assert) {
 
   this.render(hbs`
     {{es-button
-      disabled=disabled
+      isDisabled=true
     }}
   `);
-
-  assert.ok(
-    this.$('button').is(':enabled'),
-    'button is disabled'
-  );
-
-  run(() => {
-    this.set('disabled', true);
-  });
 
   assert.ok(
     this.$('button').is(':disabled'),
@@ -158,34 +149,6 @@ test('displays set data-role', function(assert) {
   assert.ok(
     this.$(`[data-role=${dataRole}]`),
     'set data-role is displayed'
-  );
-});
-
-test('can display default and set ariaRole', function(assert) {
-  const ariaRole = 'some-aria-role';
-
-  this.setProperties({
-    ariaRole,
-  });
-
-  this.render(hbs`
-    {{es-button
-      ariaRole=ariaRole
-    }}
-  `);
-
-  assert.ok(
-    this.$(`[role=${ariaRole}]`),
-    'set role is displayed'
-  );
-
-  run(() => {
-    this.set('ariaRole', null);
-  });
-
-  assert.ok(
-    this.$('[role=button]'),
-    'default role is displayed'
   );
 });
 
