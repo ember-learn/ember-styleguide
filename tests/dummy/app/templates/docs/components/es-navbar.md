@@ -8,3 +8,9 @@ Use a json file to identify what links you want in your navbar.
   {{/demo.example}}
   {{demo.snippet 'es-navbar.hbs'}}
 {{/docs-demo}}
+
+<aside role="note">
+
+Have ideas for this component? Submit an issue or a PR at [https://github.com/ember-learn/ember-styleguide](https://github.com/ember-learn/ember-styleguide).
+
+</aside>
