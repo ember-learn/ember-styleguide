@@ -127,18 +127,9 @@ test('can disable button', function(assert) {
 
   this.render(hbs`
     {{es-button
-      isDisabled=false
+      isDisabled=true
     }}
   `);
-
-  assert.ok(
-    this.$('button').is(':enabled'),
-    'button is not disabled'
-  );
-
-  run(() => {
-    this.set('isDisabled', true);
-  });
 
   assert.ok(
     this.$('button').is(':disabled'),
