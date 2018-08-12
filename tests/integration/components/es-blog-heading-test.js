@@ -1,17 +1,10 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import {
-  find,
-} from 'ember-native-dom-helpers';
-import {
-  set,
-  setProperties,
-} from '@ember/object';
-import {
-  run,
-} from '@ember/runloop';
+import { find } from 'ember-native-dom-helpers';
+import { set, setProperties } from '@ember/object';
+import { run } from '@ember/runloop';
 
-let author, postDate, postUrl, postTitle, postType;
+let author, postDate, postUrl, postTitle;
 
 moduleForComponent('es-blog-heading', 'Integration | Component | es blog heading', {
   integration: true,
@@ -20,28 +13,25 @@ moduleForComponent('es-blog-heading', 'Integration | Component | es blog heading
     postDate = '03-20-2018';
     postUrl = 'https://emberjs.com/blog';
     postTitle = 'Pretty Awesome Blog Post';
-    postType = null;
 
     setProperties(this, {
       author,
       postDate,
       postUrl,
-      postTitle,
-      postType,
+      postTitle
     });
 
     this.render(hbs`
       {{es-blog-heading
         author=author
         postDate=postDate
-        postType=postType
         postUrl=postUrl
         postTitle=postTitle
       }}
     `);
   },
   afterEach() {
-    author = postDate = postUrl = postTitle = postType = null;
+    author = postDate = postUrl = postTitle = null;
   }
 });
 
@@ -65,37 +55,6 @@ test('it renders', function(assert) {
     find('.post-author').textContent.trim(),
     `By ${author}`,
     'displays author'
-  );
-  assert.notOk(
-    find('.post-tag'),
-    'does not display tag if not set'
-  );
-});
-
-test('displays proper tag', function(assert) {
-  assert.notOk(
-    find('.post-tag'),
-    'does not display tag if not set'
-  );
-
-  run(() => {
-    set(this, 'postType', 'guest');
-  });
-
-  assert.equal(
-    find('.post-tag').textContent.trim(),
-    'Guest Post',
-    'displays guest tag'
-  );
-
-  run(() => {
-    set(this, 'postType', 'syndicated');
-  });
-
-  assert.equal(
-    find('.post-tag').textContent.trim(),
-    'Syndicated Post',
-    'displays syndicated tag'
   );
 });
 

@@ -38,25 +38,13 @@
   }
 
   .post-author {
-    color: $blue;
+    color: $gray;
     display: inline-block;
     font-size: 0.8em;
     font-weight: bold;
     text-transform: uppercase;
-  }
-
-  .post-tag {
-    clear: both;
-    display: block;
-    font-size: 0.8em;
-    line-height: 1;
-    text-transform: uppercase;
-    margin-top: 0.35em;
-    &.syndicated {
-      color: $blue;
-    }
     &.guest {
-      color: $gray;
+      color: $blue;
     }
   }
 }
