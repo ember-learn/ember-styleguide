@@ -6,9 +6,5 @@
   <h1 class="post-title page-view">{{postTitle}}</h1>
 {{/if}}
 <div class="post-date">{{moment-format postDate 'MMM DD, YYYY' 'MM-DD-YYYY'}}</div>
-<div class="post-author">By {{author}}</div>
-{{#if isNonStandardPost}}
-  <div class="post-tag {{if isGuestPost "guest" "syndicated"}}">
-    {{if isGuestPost "Guest" "Syndicated"}} Post
-  </div>
-{{/if}}
+<div class="post-author {{if isGuestPost "guest"}}">By {{author}}</div>
+
