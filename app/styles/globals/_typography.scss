@@ -1,6 +1,6 @@
 body {
 	font-size: 16px;
-  font-family: $font-family-sans-serif;
+  font-family: $font-family;
   font-weight: normal;
   line-height: 1.2;
   
@@ -29,6 +29,10 @@ p {
       cursor: pointer;
     }
   }
+}
+h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
 }
 
 h1 {

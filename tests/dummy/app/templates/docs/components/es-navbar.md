@@ -1,11 +1,6 @@
 # Navbar
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-navbar-empty'}}
-    {{es-navbar/component}}
-  {{/demo.example}}
-  {{demo.snippet 'es-navbar-empty'}}
-{{/docs-demo}}
+Use a json file to identify what links you want in your navbar. 
 
 {{#docs-demo as |demo|}}
   {{#demo.example name='es-navbar.hbs'}}

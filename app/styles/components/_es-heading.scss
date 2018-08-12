@@ -1,4 +1,5 @@
 .es-heading {
+  font-family: $font-family-heading;
   flex: 1;
   min-width: 100%;
 }
@@ -12,9 +13,10 @@ h1.es-heading {
 }
 
 h2.es-heading {
-  flex: 1;
+  font-family: $font-family;
+  text-transform: uppercase;
   letter-spacing: 1px;
+  flex: 1;
   min-width: 100%;
   padding: 0.5em 0;
-  text-transform: uppercase;
 }

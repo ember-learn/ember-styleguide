@@ -1,0 +1,96 @@
+.cta {
+	align-items: center;
+	color: $orange-darkest;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	min-width: 100px;
+	margin: auto;
+	max-width: 95%;
+	@media screen and (min-width: 992px){
+		max-width: 80%;
+	}
+	&.cta-background {
+		background-color: $orange-lightest;
+		border-radius: 2px;
+		padding: 12px 24px;
+	}
+	.cta-message {
+		background-color: $orange-lightest;
+		border-radius: 2px;
+		display: inline-block;
+		font-size: 1.3em;
+		line-height: 1.2;
+		min-width: auto;
+		margin: auto;
+	}
+	button {
+		min-width: 100%;
+		@media screen and (min-width:768px) {
+			min-width: 150px;
+		}
+	}
+	.cta-note {
+		align-content: stretch;
+		align-items: stretch;
+		background-color: $orange-lightest;
+		border-left: 4px solid $orange-darker;
+		border-radius: 2px;
+		color: $black;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		margin-bottom: 0.5em;
+		margin-top: 0.5em;
+		padding: 12px 22px;
+		@media screen and (min-width:768px) {
+			width: 90%;
+		}
+		.cta-note-body {
+			font-size: 1em;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0 1em 0 0;
+			
+			.cta-note-heading {
+				color: $orange-darkest;
+				font-size: 1.3em;
+				font-style: italic;
+				font-weight: bold;
+				line-height: 1.5;
+				margin-bottom: 3px;
+				min-width: 100%;
+			}
+			.cta-note-message {
+				div, p {
+					margin: 0;
+				}
+			}
+		}
+		img {
+			display: none;
+			@media screen and (min-width:768px) {
+				display: inline-flex;
+				margin: auto 0;
+				transform: rotate(15deg);
+			}
+		}
+	}
+}
+.cta-link {
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: auto;
+	max-width: 95%;
+	min-width: 100%;
+	padding: 1.25em;
+	text-align: center;
+	@media screen and (min-width: 768px) {
+		max-width: 85%;
+	}
+	a {
+		padding: 1em;
+	}
+}

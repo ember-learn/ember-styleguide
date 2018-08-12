@@ -27,20 +27,8 @@ $gray-lightest: #eeeeee;
 $gray-darker: darken($gray, 10%);
 $gray-darkest: darken($gray, 15%);
 //font things (3 of 3)
-$font-size: 16px;
+$font-family: 'Roboto', sans-serif;
+$font-family-heading: 'Roboto', sans-serif;
+$font-size: 18px;
 $line-height: 1.2;
-$font-family-sans-serif:
-  // Safari for OS X and iOS (San Francisco)
-  -apple-system,
-  // Chrome < 56 for OS X (San Francisco)
-  BlinkMacSystemFont,
-  // Windows & Android
-  "Roboto",
-  // Basic web fallback
-  "Helvetica Neue", Arial, sans-serif,
-  // Emoji fonts
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-
-  //standardizing some stuff
-  $border-radius: 4px;
-  
+//it's formatting on save and I need to figure out why bc I already told it not to do that.
