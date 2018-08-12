@@ -4,7 +4,7 @@
     {{nav.section 'Components'}}
     {{nav.item 'Accordion' 'docs.components.es-accordion'}}
     {{nav.item 'Form' 'docs.components.es-form'}}
-    {{nav.item 'Ulist' 'docs.components.es-ulist'}}
+    {{nav.item 'List' 'docs.components.es-ulist'}}
     {{nav.item 'Aside' 'docs.components.es-aside'}}
     {{nav.item 'Blog heading' 'docs.components.es-blog-heading'}}
     {{nav.item 'Button' 'docs.components.es-button'}}

@@ -9,19 +9,9 @@ const Router = AddonDocsRouter.extend({
 Router.map(function() {
   docsRoute(this, function() {
     this.route("usage");
-    this.route("branding", function() {
-      this.route("colors");
-      this.route("typography");
-      this.route("logo");
-      this.route("mascot");
-    });
-
-    this.route("accessibility");
 
     this.route("components", function() {
       this.route("es-accordion");
-      this.route("es-form");
-      this.route("es-ulist");
       this.route("es-aside");
       this.route("es-blog-heading");
       this.route("es-button");
@@ -30,6 +20,7 @@ Router.map(function() {
       this.route("es-codesample");
       this.route("es-datatable");
       this.route("es-footer");
+      this.route("es-form");
       this.route("es-header");
       this.route("es-heading");
       this.route("es-main");
