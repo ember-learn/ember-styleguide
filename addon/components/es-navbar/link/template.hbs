@@ -15,7 +15,7 @@
      tabindex="{{if (eq index 0) 0 -1}}">
     {{link.name}}
   </a>
-  <ul role="menu" aria-label={{link.name}}>
+  <ul class="dropdown" role="menu" aria-label={{link.name}}>
     {{#each link.items as |item|}}
       {{#if (eq item.type 'link')}}
         <li role="none">

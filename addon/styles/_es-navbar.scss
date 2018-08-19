@@ -1,36 +1,75 @@
+nav.es-navbar {
+  width: 100%;
+  background-color: $orange;
+}
+
+nav.es-navbar .spacer {
+  flex: 10;
+}
+
+nav.es-navbar hr {
+  border-top: 1px solid $orange;
+  margin: 0.1em 0;
+}
+
+ul li[aria-expanded=true] {
+  background-color: white;
+
+  a[role=menuitem] {
+    color: $orange;
+  }
+}
+
+li[aria-expanded=true] ul.dropdown {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+}
+
+nav.es-navbar div.container {
+  display: flex;
+}
+
 ul[role="menubar"] {
-  margin: 10px;
-  padding: 10px;
-  font-size: 110%;
+  display: flex;
+  align-items: center;
+  min-height: 55px;
+  font-size: 1.3em;
   list-style: none;
-  background-color: #EEEEEE;
+  padding: 0;
 }
 
-ul[role="menubar"] [role="menuitem"],
-ul[role="menubar"] [role="separator"] {
-  padding: 0.25em;
-  background-color: #EEEEEE;
-  border: 2px solid #EEEEEE;
-}
-
-ul[role="menubar"] [role="separator"] {
-  padding-top: 0.15em;
-  background-image: url('../images/separator.png');
-  background-position: center;
-  background-repeat: repeat-x;
+ul[role="menubar"] [role="menuitem"] {
+  height: 100%;
+  padding: 0 .5em;
+  line-height: 50px;
 }
 
 ul[role="menubar"] [role="menuitem"]:focus,
-ul[role="menubar"] [role="menuitem"]:hover,
-ul[role="menubar"] [role="separator"]:focus,
-ul[role="menubar"] [role="separator"]:hover {
-  background-color: black;
-  color: white;
+ul[role="menubar"] [role="menuitem"]:hover {
+  background-color: white;
+  color: $orange;
 }
 
 ul[role="menubar"] a[role="menuitem"] {
+  font-size: 0.8em;
   text-decoration: none;
-  color: black;
+  color: white;
+}
+
+ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:focus,
+ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:hover  {
+  background-color: $orange;
+  color: white;
+}
+
+ul.dropdown a[role="menuitem"] {
+  color: $orange;
+  padding: 0 1em;
+}
+
+ul[role="menubar"] [role="menuitem"]:focus,
+ul[role="menubar"] [role="menuitem"]:hover {
+  background-color: white;
+  color: $orange;
 }
 
 ul[role="menubar"] li {
@@ -40,7 +79,9 @@ ul[role="menubar"] li {
 }
 
 ul[role="menubar"] > li {
-  display: inline;
+  height: 100%;
+  align-items: center;
+  display: flex;
   position: relative;
 }
 
@@ -63,7 +104,7 @@ ul[role="menubar"] ul[role="menu"] {
 
 ul[role="menubar"] ul[role="menu"] li a {
   display: block;
-  width: 10em;
+  width: 15em;
 }
 
 ul[role="menubar"] ul[role="menu"] a[aria-haspopup="true"]:after {

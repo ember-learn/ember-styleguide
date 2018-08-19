@@ -1,7 +1,39 @@
-<ul id="menubar1"
-    role="menubar"
-    aria-label="Mythical University">
-  {{#each links as |link index|}}
-    {{es-navbar/link link=link index=index}}
-  {{/each}}
-</ul>
+<div class="container">
+  <a class="navbar-brand" href="https://www.emberjs.com">
+    <img
+      src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg"
+      alt="home">
+  </a>
+
+  <ul role="menubar">
+    {{#each links as |link index|}}
+      {{es-navbar/link link=link index=index}}
+    {{/each}}
+  </ul>
+
+  <div class="spacer">
+
+  </div>
+
+  {{#if hasBlock}}
+    {{yield}}
+  {{else}}
+    <form class="navbar-form navbar-right searchbox">
+      <div class="input-group">
+        <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text"
+               class="form-control search input ds-input"
+               placeholder="Search..."
+               id="search-input"
+               role="combobox"
+               aria-expanded="false"
+               aria-owns="algolia-autocomplete-listbox-0"
+               autocorrect="off"
+               autocapitalize="none"
+               spellcheck="false"
+        />
+        <span></span>
+      </div>
+    </form>
+  {{/if}}
+</div>
