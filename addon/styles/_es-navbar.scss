@@ -27,6 +27,13 @@ li[aria-expanded=true] ul.dropdown {
 
 nav.es-navbar div.container {
   display: flex;
+  max-width: 1200px;
+  min-width: 850px;
+}
+
+nav.es-navbar form {
+  display: flex;
+  align-items: center;
 }
 
 ul[role="menubar"] {
