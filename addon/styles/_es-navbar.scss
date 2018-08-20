@@ -22,6 +22,7 @@ ul li[aria-expanded=true] {
 
 li[aria-expanded=true] ul.dropdown {
   box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+  background-color: white;
 }
 
 nav.es-navbar div.container {
@@ -35,6 +36,7 @@ ul[role="menubar"] {
   font-size: 1.3em;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 ul[role="menubar"] [role="menuitem"] {
