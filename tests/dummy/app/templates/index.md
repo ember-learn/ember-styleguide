@@ -10,7 +10,7 @@
   <section class='max-w-md mx-auto pb-8'>
     <h2 class='flex items-center docs-h2'> Motivation </h2>
 
-    This addon is intended to be the guide for the ember-styleguide and glimmer-styleguide components. Feedback is welcome in the team-learning channel of the <a href="https://ember-community-slackin.herokuapp.com" target="_blank">Ember Community Slack chat</a>.
+    This addon is intended to be the guide for the ember-styleguide and glimmer-styleguide components. Feedback is welcome in the team-learning channel of the <a href="https://discordapp.com/invite/zT3asNS" target="_blank">Ember Community Discord chat</a>.
 
 
     <h2 class='flex items-center docs-h2'> Installation </h2>
