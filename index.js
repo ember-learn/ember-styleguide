@@ -18,11 +18,21 @@ module.exports = {
       ]
     },
     googleFonts: [
-      'Roboto:400,700' 
+      'Roboto:400,700'
     ],
   },
 
-  included() {
+  included(app, parentAddon) {
+    let target = (app || parentAddon);
+    target.options = target.options || {};
+
+    const defaultEmberBootStrapOptions = {
+      bootstrapVersion: 4,
+      importBootstrapFont: false,
+      importBootstrapCSS: false
+    };
+    target.options['ember-bootstrap'] = target.options['ember-bootstrap'] || defaultEmberBootStrapOptions;
+
     this._super.included.apply(this, arguments);
   },
 
