@@ -33,7 +33,15 @@ module.exports = {
     };
     target.options['ember-bootstrap'] = target.options['ember-bootstrap'] || defaultEmberBootStrapOptions;
 
+    this.checkPreprocessor();
+
     this._super.included.apply(this, arguments);
+  },
+
+  treeForStyles() {
+    return new Funnel(this.getEmberStyleguideStylesPath(), {
+      destDir: 'ember-styleguide'
+    });
   },
 
   treeForAddonStyles(tree) {
@@ -43,8 +51,19 @@ module.exports = {
     return mergeTrees([bootstrapTree, tree]);
   },
 
+  getEmberStyleguideStylesPath() {
+    let pkgPath = path.dirname(__filename);
+    return path.join(pkgPath, 'addon', 'styles');
+  },
+
   getBootstrapStylesPath() {
     let pkgPath = path.dirname(require.resolve(`bootstrap/package.json`));
     return path.join(pkgPath, 'scss');
+  },
+
+  checkPreprocessor() {
+    if (!this.app.project.findAddonByName('ember-cli-sass')) {
+      this.ui.writeLine('ember-styleguide: npm package "ember-cli-sass" is missing. Consider using it to use `@import \'ember-styleguide/globals/variables\'` in your styles.');
+    }
   }
 };
