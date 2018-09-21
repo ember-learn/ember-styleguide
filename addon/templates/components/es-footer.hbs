@@ -1,62 +1,23 @@
 <div class="footer responsive">
   <div class="container">
 
-    <div class="footer-info">
-      Copyright {{currentYear}}
-      <a href="http://tilde.io">Tilde Inc.</a>
-      <br>
-      <a href="https://emberjs.com/team">Team</a> |
-      <a href="https://emberjs.com/sponsors">Sponsors</a>
-      <br>
-      <a href="https://emberjs.com/security">Security</a> |
-      <a href="https://emberjs.com/legal">Legal</a> |
-      <a href="https://emberjs.com/logos">Brand</a>
-      <br>
-      <a href="https://emberjs.com/guidelines">Community Guidelines</a>
-    </div>
+    {{yield (hash
+        info = (component 'es-footer/es-info')
+        statement = (component 'es-footer/es-statement')
+        contributions = (component 'es-footer/es-contributions')
+    )}}
 
-    <div class="footer-statement">
-      {{yield}}
-      <p class="footer-tagline">Ember.js is free, open source and always will be.</p>
-      <div class="footer-social">
-        <a href="http://twitter.com/emberjs" title="Twitter">
-          {{svg-jar "twitter-logo"}}
-        </a>
-        <a href="https://github.com/emberjs/ember.js" title="GitHub">
-          {{svg-jar "github-logo"}}
-        </a>
-        <a href="https://discordapp.com/invite/zT3asNS" title="Discord">
-          {{svg-jar "discord-logo"}}
-        </a>
-      </div>
-    </div>
+    {{#unless hasBlock}}
 
-    <div class="footer-contributions">
-      <div class="contributor">
-        <p>Hosted by:</p>
-        <a href="https://www.heroku.com/emberjs">
-          {{svg-jar "heroku-logo" class="heroku-logo"}}
-        </a>
-      </div>
-      <div class="contributor">
-        <p>CDN provided by:</p>
-        <a href="https://www.fastly.com">
-          {{svg-jar "fastly-logo" class="fastly-logo"}}
-        </a>
-      </div>
-      <div class="contributor">
-        <p>Tested with:</p>
-        <a href="https://percy.io">
-          {{svg-jar "percy-logo" class="percy-logo"}}
-        </a>
-      </div>
-      <div class="contributor">
-        <p>Resolved with:</p>
-        <a href="https://dnsimple.com/resolving/emberjs">
-          {{svg-jar "dnsimple-logo-dark" class="dnsimple-logo"}}
-        </a>
-      </div>
-    </div>
+      {{!--
+        Pass footer properties to support
+        {{es-footer tagline="My custom tagline" contributorLinks=myLinks}}
+      --}}
+      {{es-footer/es-info infoLinks=infoLinks}}
+      {{es-footer/es-statement tagline=tagline socialLinks=socialLinks}}
+      {{es-footer/es-contributions contributorLinks=contributorLinks}}
+
+    {{/unless}}
 
   </div>
 </div>
