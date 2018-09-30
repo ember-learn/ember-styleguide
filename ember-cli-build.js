@@ -7,6 +7,7 @@ module.exports = function(defaults) {
     svgJar: {
       sourceDirs: [
         'public',
+        'addon/public',
         'node_modules/ember-styleguide/public',
         'node_modules/ember-cli-addon-docs/public',
         'tests/dummy/public'
