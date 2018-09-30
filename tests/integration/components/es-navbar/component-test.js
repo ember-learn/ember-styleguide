@@ -11,14 +11,14 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{es-navbar/component}}`);
 
-  assert.equal(this.$().text().trim(), 'Search');
+  assert.equal(this.$('label').text().trim(), 'Search');
 
   // Template block usage:
   this.render(hbs`
     {{#es-navbar/component}}
-      template block text
+      <div class="block-text">template block text</div>
     {{/es-navbar/component}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$('.block-text').text().trim(), 'template block text');
 });
