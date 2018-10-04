@@ -51,6 +51,10 @@ module.exports = {
     return mergeTrees([bootstrapTree, tree]);
   },
 
+  treeForPublic: function() {
+    return new Funnel(path.join(this.root, 'public'));
+  },
+
   getEmberStyleguideStylesPath() {
     let pkgPath = path.dirname(__filename);
     return path.join(pkgPath, 'addon', 'styles');

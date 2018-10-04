@@ -1,7 +1,7 @@
 export const Mascots = [
-  { image: 'assets/images/icon-tomster.png', name: 'Tomster' },
-  
-  { image: 'assets/images/icon-zoey.png', name: 'Zoey' },
+  { image: '/images/mascots/tomster.png', name: 'Tomster' },
+
+  { image: '/images/mascots/zoey.png', name: 'Zoey' },
 ];
 
 export const DefaultMessage = 'Hello!!! No message provided.';
