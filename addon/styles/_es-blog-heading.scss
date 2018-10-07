@@ -1,29 +1,29 @@
 .es-blog-heading {
   .post-title {
-    &.page-view {
-      color: $secondary;
-      font-size: 2.25em;
-      margin-bottom: 0.01em;
-      margin-top: 0.7em;
-    }
-
-    &.list-view {
-      color: $orange-darkest;
-      font-size: 1.75em;
-      font-weight: bold;
-      letter-spacing: none;
-      line-height: 1;
-      margin-bottom: 0.19em;
-      margin-top: 0.2em;
-      a {
-        color: $orange-darker;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
+		a {
+			color: $orange-darker;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
   }
+	.page-view {
+		color: $secondary;
+		font-size: 2.25em;
+		margin-bottom: 0.01em;
+		margin-top: 0.7em;
+	}
+
+	.list-view {
+		color: $orange-darkest;
+		font-size: 1.75em;
+		font-weight: bold;
+		letter-spacing: none;
+		line-height: 1;
+		margin-bottom: 0.19em;
+		margin-top: 0.2em;
+	}
 
   .post-date {
     color: $gray;

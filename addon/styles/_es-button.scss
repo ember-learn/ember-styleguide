@@ -15,7 +15,7 @@
 	text-transform: uppercase;
 	transition: all 0.4s ease 0s;
 	&:hover,
-		:focus {
+	&:focus {
 			background-color: $orange-darkest;
 			color: $white;
 			cursor: pointer;
@@ -35,7 +35,8 @@
 		background-color: $white;
 		border: 3px solid $orange;
 		color: $orange-darker;
-		&:hover {
+		&:hover, 
+		&:focus {
 			border-color: $orange-darkest;
 			color: $orange-darkest;
 		}
@@ -45,7 +46,7 @@
 		border-color: $gray-lighter !important;
 		color: $gray-lighter !important;
 		&:hover,
-		:focus {
+		&:focus {
 			background-color: $gray-lightest;
 			border-color: $gray-lighter;
 			color: $gray-lighter;
