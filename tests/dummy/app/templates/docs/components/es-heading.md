@@ -30,6 +30,13 @@
   {{demo.snippet 'es-heading-page-heading'}}
 {{/docs-demo}}
 
+{{#docs-demo as |demo|}}
+  {{#demo.example name='es-heading-page-heading-h2'}}
+    {{es-heading headingText='This is heading text in an H2' tagName='h2'}}
+  {{/demo.example}}
+  {{demo.snippet 'es-heading-page-heading-h2'}}
+{{/docs-demo}}
+
 <aside role="note">
 
 Have ideas for this component? Submit an issue or a PR at [https://github.com/ember-learn/ember-styleguide](https://github.com/ember-learn/ember-styleguide).

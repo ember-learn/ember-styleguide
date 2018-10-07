@@ -1,87 +1,79 @@
 .es-ulist {
-  list-style: none;
-  flex: 1;
-  min-width: 100%;
   display: flex;
+  flex-flow: row wrap;
+  flex: 1;
   justify-content: center;
-  // margin-left: 0;
-  padding-left: 0;
+  list-style: none;
+  margin: auto;
+  padding: 0;
 
-  ul {
-    margin: 0;
-    padding: 0;
-    li {
-      justify-content: center;
-      list-style: none;
-
-      a {
-        padding: 5px;
-        display: block;
-        img {
-          display: block;
-          margin: 0 auto;
-        }
-      }
-    }
-  }
+  &.bordered {
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+	}
 }
-
-.es-ulist-text {
-  color: $orange;
-  padding: 5px 0px;
+.list-title {
+	display: flex;
+	flex: 1;
+	font-size: 1.125em;
+	font-weight: bold;
+	line-height: 1.5;
+	margin: auto;
+	min-width: 100%;
+	padding: 0 0.25rem;
 }
-
-.link-text {
-  a {
-    color: $orange;
-    padding: 5px 0px;
-    text-decoration: none;
-    
-    &:hover {
-      opacity: .8;
-    }
-  }
-
-  &.inline {
-    a {
-      display: inline;
-    }    
-  }
+.list-default {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	list-style: none;
+	margin: 0;
+	min-width: 100%;
+	padding: 0;
+	&:first-of-type {
+		margin-bottom: 0.5rem;
+	}
 }
-
-.es-ulist-image {
-  padding: 5px 0px;
-
-  .image {
-    border-radius: 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    object-fit: cover;
-  }
-
-  .es-ulist-text {
-    color: $orange;
-    position: relative;
-    top: -1em;
-  }
-
-  .image-left {
-    .es-ulist-text {
-      padding-left: 5px;
-    }
-
-    .link-text {
-      a {
-        position: relative;
-        top: -1em;
-      }
-    }
-  }
-
-  .image-right {
-    .image {
-      padding-left: 5px;
-    }
-  }
+.list-item {
+	line-height: 1.5;
+	list-style: none;
+	margin: 0 auto 0.25rem auto;
+	min-width: 100%;
+	padding: 0 0.25rem;
+	display: flex;
+	align-items: center;
+}
+.list-item-image {
+	display: block;
+	max-height: 50px;
+	max-width: 100%;
+	border-radius: 50%;
+	height: auto;
+	width: 50px;
+	overflow: hidden;
+	border: 1px solid transparent;
+	margin: auto 0.125em;
+	object-fit: contain;
+}
+.list-item-link {
+	display: flex;
+	align-items: center;
+	min-width: 100%;
+	&:hover {
+		.list-item-image {
+			box-shadow: 0 0 2px 1px rgba(202, 211, 214, 0.5);
+		}
+	}
+}
+.list-item-image {
+	display: inline-flex;
+	max-height: 50px;
+	max-width: 100%;
+	border-radius: 50%;
+	height: auto;
+	width: 50px;
+	overflow: hidden;
+	border: 1px solid $gray-lighter;
+	margin: auto 0.125em;
+	object-fit: contain;
 }

@@ -1,23 +1,27 @@
-.footer > .container {
-  max-width: 960px;
-  margin: auto;
-}
+.footer {
+	> .container {
+		max-width: 960px;
+		margin: auto;
+	}
 
-.not-responsive .footer > .container {
-  width: 960px;
-}
-.not-responsive .footer {
-  min-width: 960px;
-}
+	.not-responsive & > .container {
+		width: 960px;
+	}
+	.not-responsive & {
+		min-width: 960px;
+	}
 
-.footer a:hover {
-  border-bottom: none;
+	a:hover {
+		border-bottom: none;
+	}
 }
 
 @media screen and (max-width: $screen-md) {
   .responsive.footer .container {
-    padding: 2rem 1rem;
+		padding: 2rem 1rem;
+	}
 
+	.responsive .container {
     .footer-info {
       margin-top: 12px;
       margin-bottom: 12px;
@@ -69,7 +73,6 @@
 
 .footer .footer-info {
   color: #555;
-  // font-size: 0.75rem;
   font-size: 11px;
   line-height: 24px;
   font-weight: 600;
@@ -83,15 +86,15 @@
 }
 
 @media screen and (max-width: $screen-lg) {
-  .responsive.footer .footer-info {
+  .responsive .footer-info {
     text-align: center;
   }
 
-  .responsive.footer .footer-statement {
+  .responsive .footer-statement {
     text-align: center;
   }
 
-  .responsive.footer .footer-tagline {
+  .responsive .footer-tagline {
     padding-left: 2em;
     padding-right: 2em;
   }
@@ -115,31 +118,30 @@
 
 .footer .footer-contributions {
   font-size: 11px;
-  text-align: center;
+	text-align: center;
+	
+	@media screen and (min-width: $screen-lg) {
+		display: flex;
+		flex:0 0 21em;
+		max-width: 100%;
+		flex-flow: row wrap
+	}
 }
 
-.footer .footer-contributions .contributor {
+.footer .contributor {
   flex: 1 0 8em;
 }
 
-.footer .footer-contributions .contributor p {
+.footer .contributor p {
   color: #444444;
 }
 
-.footer .footer-contributions .heroku-logo,
-.footer .footer-contributions .percy-logo,
-.footer .footer-contributions .dnsimple-logo,
-.footer .footer-contributions .fastly-logo {
+.footer .contributor-logo,
+.footer .heroku-logo,
+.footer .percy-logo,
+.footer .dnsimple-logo,
+.footer .fastly-logo {
   max-height: 45px;
-}
-
-@media screen and (min-width: $screen-lg) {
-  .footer .footer-contributions {
-    display: flex;
-    flex:0 0 21em;
-    max-width: 100%;
-    flex-flow: row wrap
-  }
 }
 
 .footer .footer-social a {

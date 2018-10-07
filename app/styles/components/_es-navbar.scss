@@ -14,7 +14,8 @@
       margin-right: auto;
     }
 
-    .navbar-collapse, .navbar-form {
+		.navbar-collapse, 
+		.navbar-form {
       border-color: $orange-darkest;
     }
 
@@ -24,17 +25,18 @@
       &:hover {
         background-color: $orange-darker;
       }
-
-      .navbar-toggler-icon {
-        background-image: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
-      }
     }
 
+		.navbar-toggler-icon {
+			background-image: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
+		}
+
     .navbar-brand {
-      img {
+      img, svg {
         @media screen and (min-width: 768px) {
           margin-bottom: 0;
           margin-right: 10px;
+          margin-left: 10px;
           padding-bottom: 0;
         }
       }
@@ -54,98 +56,96 @@
           min-width: auto;
           flex-flow: row wrap;
         }
-
-        a {
-          align-items: center;
-          color: $white;
-          display: flex;
-          flex: 1;
-          min-height: 50px;
-          padding: 0 0.5em;
-          text-decoration: none;
-
-          &:focus {
-            outline: 5px auto -webkit-focus-ring-color;
-          }
-        }
-
-        &.active {
-
-          a {
-            background-color: white;
-            color: $orange-darkest;
-          }
-        }
-
-        &.show {
-
-          a {
-            background-color: white;
-            color: $orange-darkest;
-          }
-
-          .dropdown-menu {
-            background-color: white;
-            border-radius: 0;
-            margin: 0 -1px;
-
-            @media screen and (min-width: 768px) {
-              border-radius: 0 0 4px 4px;
-              border-color-top: white;
-            }
-
-            .dropdown-item {
-              min-height: 36px;
-              &:hover,
-              :focus {
-                background-color: $orange-lightest;
-                color: $orange-darkest;
-                outline: 0 !important;
-              }
-            }
-
-            .dropdown-divider {
-              border: 1px solid $orange-lightest;
-            }
-          }
-        }
       }
+
+			a {
+				align-items: center;
+				color: $white;
+				display: flex;
+				flex: 1;
+				min-height: 50px;
+				padding: 0 0.5em;
+				text-decoration: none;
+
+				&:focus {
+					outline: 5px auto -webkit-focus-ring-color;
+				}
+			}
+
+			.active {
+				a {
+					background-color: white;
+					color: $orange-darkest;
+				}
+			}
+
+			.show {
+				a {
+					background-color: white;
+					color: $orange-darkest;
+				}
+
+				.dropdown-menu {
+					background-color: white;
+					border-radius: 0;
+					margin: 0 -1px;
+
+					@media screen and (min-width: 768px) {
+						border-radius: 0 0 4px 4px;
+						border-color-top: white;
+					}
+				}
+
+				.dropdown-item {
+					min-height: 36px;
+					&:hover,
+					:focus {
+						background-color: $orange-lightest;
+						color: $orange-darkest;
+						outline: 0 !important;
+					}
+				}
+
+				.dropdown-divider {
+					border: 1px solid $orange-lightest;
+				}
+			}
     }
 
-    form.navbar-right.navbar-form {
+    .navbar-form {
       @media screen and (min-width: 768px) {
         margin-bottom: 0;
       }
-
-      .input-group {
-        min-width: 100%;
-        padding: 0.25em 0;
-      }
-
-      .form-control {
-        background: url(/images/search-icon.svg) rgba(255, 255, 255, 0.1) 10px 8px no-repeat;
-        border-color: transparent;
-        border-radius: 3px;
-        border-right: 0;
-        box-shadow: none;
-        color: white;
-        font-family: 'Roboto', sans-serif;
-        min-width: 100%;
-        padding: 0.25em 0.5em;
-        &:-ms-input-placeholder {
-          color: $orange-lightest !important;
-        }
-        &:-ms-input-placeholder {
-          color: $orange-lightest !important;
-        }
-        &::placeholder {
-          color: $orange-lightest !important;
-        }
-        &::placeholder {
-          color: $orange-lightest !important;
-        }
-      }
     }
+
+		.input-group {
+			min-width: 100%;
+			padding: 0.25em 0;
+		}
+
+		.form-control {
+			background: url(/images/search-icon.svg) rgba(255, 255, 255, 0.1) 10px 8px no-repeat;
+			border-color: transparent;
+			border-radius: 3px;
+			border-right: 0;
+			box-shadow: none;
+			color: white;
+			font-family: 'Roboto', sans-serif;
+			min-width: 100%;
+			padding: 0.25em 0.5em;
+			&:-ms-input-placeholder {
+				color: $orange-lightest !important;
+			}
+			&:-ms-input-placeholder {
+				color: $orange-lightest !important;
+			}
+			&::placeholder {
+				color: $orange-lightest !important;
+			}
+			&::placeholder {
+				color: $orange-lightest !important;
+			}
+		}
   }
 }
 
@@ -180,7 +180,8 @@
   width: 100%;
 }
 
-.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+.algolia-autocomplete .aa-input, 
+.algolia-autocomplete .aa-hint {
   width: 100%;
 }
 
