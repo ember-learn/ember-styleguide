@@ -15,7 +15,14 @@ module.exports = function(defaults) {
         'node_modules/ember-cli-addon-docs/public',
         'tests/dummy/public'
       ]
-    }
+    },
+    'ember-cli-uglify': {
+      uglify: {
+        compress: {
+          collapse_vars: false // TODO: remove this once this is resolved https://github.com/ember-cli/ember-cli-uglify/issues/49
+        },
+      },
+    },
   });
 
   /*
