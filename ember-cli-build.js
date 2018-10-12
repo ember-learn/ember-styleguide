@@ -1,9 +1,12 @@
 'use strict';
-
+const nodeSass = require('node-sass');
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
+    sassOptions: {
+      implementation: nodeSass
+    },
     svgJar: {
       sourceDirs: [
         'public',
@@ -12,7 +15,14 @@ module.exports = function(defaults) {
         'node_modules/ember-cli-addon-docs/public',
         'tests/dummy/public'
       ]
-    }
+    },
+    'ember-cli-uglify': {
+      uglify: {
+        compress: {
+          collapse_vars: false // TODO: remove this once this is resolved https://github.com/ember-cli/ember-cli-uglify/issues/49
+        },
+      },
+    },
   });
 
   /*
