@@ -1,25 +1,16 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { find, click, focus, render } from '@ember/test-helpers';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import sinon from 'sinon';
-import {
-  set,
-  setProperties,
-} from '@ember/object';
-import {
-  find,
-  click,
-  focus,
-} from 'ember-native-dom-helpers';
-import {
-  run
-} from '@ember/runloop';
+import { set, setProperties } from '@ember/object';
 
 let statuses, status, title, availability, accordionItemIndex, accordionState;
 
-moduleForComponent('es-accordion/es-panel', 'Integration | Component | es accordion/es item', {
-  integration: true,
+module('Integration | Component | es accordion/es item', function(hooks) {
+  setupRenderingTest(hooks);
 
-  beforeEach() {
+  hooks.beforeEach(() => {
     statuses = [
       {
         status: 'shipped',
@@ -39,7 +30,13 @@ moduleForComponent('es-accordion/es-panel', 'Integration | Component | es accord
       registerIndex: sinon.spy(),
       setFocusIndex: sinon.spy(),
     };
+  });
 
+  hooks.afterEach(() => {
+    statuses = status = title = availability = accordionItemIndex = accordionState = null;
+  });
+
+  test('it displays provided data', async function(assert) {
     setProperties(this, {
       availability,
       accordionItemIndex,
@@ -48,83 +45,91 @@ moduleForComponent('es-accordion/es-panel', 'Integration | Component | es accord
       statuses,
       title,
     });
-  },
+    
+    await render(hbs`
+      {{#es-accordion/es-item
+        availability=availability
+        title=title
+        status=status
+        statuses=statuses
+        accordionItemIndex=accordionItemIndex
+        accordionState=accordionState
+      }}
+        template block text
+      {{/es-accordion/es-item}}
+    `);
 
-  afterEach() {
-    statuses = status = title = availability = accordionItemIndex = accordionState = null;
-  },
-});
+    assert.equal(find('.accordion-content').textContent.trim(), 'template block text');
+    assert.equal(find('[data-role=title]').textContent.trim(), title);
+    assert.equal(find('[data-role=availability]').textContent.trim(), 'Avail: Not yet available');
+    assert.equal(find('[data-role=status]').textContent.trim(), statuses[0].label);
 
-test('it displays provided data', function(assert) {
-  this.render(hbs`
-    {{#es-accordion/es-item
-      availability=availability
-      title=title
-      status=status
-      statuses=statuses
-      accordionItemIndex=accordionItemIndex
-      accordionState=accordionState
-    }}
-      template block text
-    {{/es-accordion/es-item}}
-  `);
+    await set(this, 'availability', 'Some availability');
 
-  assert.equal(find('.accordion-content').textContent.trim(), 'template block text');
-  assert.equal(find('[data-role=title]').textContent.trim(), title);
-  assert.equal(find('[data-role=availability]').textContent.trim(), 'Avail: Not yet available');
-  assert.equal(find('[data-role=status]').textContent.trim(), statuses[0].label);
+    await render(hbs`
+      {{#es-accordion/es-item
+        availability=availability
+        title=title
+        status=status
+        statuses=statuses
+        accordionItemIndex=accordionItemIndex
+        accordionState=accordionState
+      }}
+        template block text
+      {{/es-accordion/es-item}}
+    `);
 
-  run(() => {
-    set(this, 'availability', 'Some availability');
+    assert.equal(find('[data-role=availability]').textContent.trim(), 'Avail: Some availability');
   });
 
-  assert.equal(find('[data-role=availability]').textContent.trim(), 'Avail: Some availability');
-});
+  test('it correctly handles user inputs', async function(assert) {
+    setProperties(this, {
+      availability,
+      accordionItemIndex,
+      accordionState,
+      status,
+      statuses,
+      title,
+    });
 
-test('it correctly handles user inputs', function(assert) {
-  this.render(hbs`
-    {{#es-accordion/es-item
-      availability=availability
-      title=title
-      status=status
-      statuses=statuses
-      accordionItemIndex=accordionItemIndex
-      accordionState=accordionState
-    }}
-      template block text
-    {{/es-accordion/es-item}}
-  `);
+    await render(hbs`
+      {{#es-accordion/es-item
+        availability=availability
+        title=title
+        status=status
+        statuses=statuses
+        accordionItemIndex=accordionItemIndex
+        accordionState=accordionState
+      }}
+        template block text
+      {{/es-accordion/es-item}}
+    `);
 
-  assert.ok(
-    accordionState.registerIndex.calledOnce,
-    'registerIndex called'
-  );
+    assert.ok(accordionState.registerIndex.calledOnce, 'registerIndex called');
 
-  click('.accordion-heading');
+    await click('.accordion-heading');
+    assert.ok(accordionState.setActiveItem.calledOnce, 'setActiveItem called');
 
-  assert.ok(
-    accordionState.setActiveItem.calledOnce,
-    'setActiveItem called'
-  );
+    await focus('.button-icon');
 
-  focus('.button-icon');
+    assert.ok(accordionState.setFocusIndex.calledOnce, 'setFocusIndex called');
+    assert.ok(find('.accordion-body.collapse'), 'accordion item is collapsed');
 
-  assert.ok(
-    accordionState.setFocusIndex.calledOnce,
-    'setFocusIndex called'
-  );
-
-  assert.ok(
-    find('.accordion-body.collapse'),
-    'accordion item is collapsed'
-  );
-
-  run(() => {
     set(this, 'accordionState.activeItem', 1);
-  });
 
-  assert.notOk(
-    find('.accordion-content.collapse'),
-    'accordion item is expanded'
-  );
+    await render(hbs`
+      {{#es-accordion/es-item
+        availability=availability
+        title=title
+        status=status
+        statuses=statuses
+        accordionItemIndex=accordionItemIndex
+        accordionState=accordionState
+      }}
+        template block text
+      {{/es-accordion/es-item}}
+    `);
+
+    assert.notOk(find('.accordion-content.collapse'), 'accordion item is expanded');
+  });
 });
