@@ -4,7 +4,7 @@ const Funnel = require('broccoli-funnel');
 const path = require('path');
 
 module.exports = {
-  name: 'ember-styleguide',
+  name: require('./package').name,
   isDevelopingAddon() {
     return true;
   },
