@@ -1,4 +1,4 @@
-import { find, click, focus, render } from '@ember/test-helpers';
+import { click, focus, render } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
@@ -45,7 +45,7 @@ module('Integration | Component | es accordion/es item', function(hooks) {
       statuses,
       title,
     });
-    
+
     await render(hbs`
       {{#es-accordion/es-item
         availability=availability
@@ -59,10 +59,10 @@ module('Integration | Component | es accordion/es item', function(hooks) {
       {{/es-accordion/es-item}}
     `);
 
-    assert.equal(find('.accordion-content').textContent.trim(), 'template block text');
-    assert.equal(find('[data-role=title]').textContent.trim(), title);
-    assert.equal(find('[data-role=availability]').textContent.trim(), 'Avail: Not yet available');
-    assert.equal(find('[data-role=status]').textContent.trim(), statuses[0].label);
+    assert.dom('.accordion-content').hasText('template block text');
+    assert.dom('[data-role=title]').hasText(title);
+    assert.dom('[data-role=availability]').hasText('Avail: Not yet available');
+    assert.dom('[data-role=status]').hasText(statuses[0].label);
 
     await set(this, 'availability', 'Some availability');
 
@@ -79,7 +79,7 @@ module('Integration | Component | es accordion/es item', function(hooks) {
       {{/es-accordion/es-item}}
     `);
 
-    assert.equal(find('[data-role=availability]').textContent.trim(), 'Avail: Some availability');
+    assert.dom('[data-role=availability]').hasText('Avail: Some availability');
   });
 
   test('it correctly handles user inputs', async function(assert) {
@@ -113,7 +113,7 @@ module('Integration | Component | es accordion/es item', function(hooks) {
     await focus('.button-icon');
 
     assert.ok(accordionState.setFocusIndex.calledOnce, 'setFocusIndex called');
-    assert.ok(find('.accordion-body.collapse'), 'accordion item is collapsed');
+    assert.dom('.accordion-body.collapse').exists('accordion item is collapsed');
 
     set(this, 'accordionState.activeItem', 1);
 
@@ -130,6 +130,6 @@ module('Integration | Component | es accordion/es item', function(hooks) {
       {{/es-accordion/es-item}}
     `);
 
-    assert.notOk(find('.accordion-content.collapse'), 'accordion item is expanded');
+    assert.dom('.accordion-content.collapse').doesNotExist('accordion item is expanded');
   });
 });

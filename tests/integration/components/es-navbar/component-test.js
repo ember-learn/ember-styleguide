@@ -1,4 +1,4 @@
-import { find, render } from '@ember/test-helpers';
+import { render } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
@@ -12,7 +12,7 @@ module('Integration | Component | es navbar', function(hooks){
 
     await render(hbs`{{es-navbar/component}}`);
 
-    assert.equal(find('label').textContent.trim(), 'Search');
+    assert.dom('label').hasText('Search');
 
     // Template block usage:
     await render(hbs`
@@ -21,7 +21,7 @@ module('Integration | Component | es navbar', function(hooks){
       {{/es-navbar/component}}
     `);
 
-    assert.equal(find('.block-text').textContent.trim(), 'template block text');
+    assert.dom('.block-text').hasText('template block text');
   });
 
 });

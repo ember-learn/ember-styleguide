@@ -13,7 +13,7 @@ module('Integration | Component | es heading', function(hooks){
 
       await render(hbs `{{es-heading}}`);
 
-      assert.equal(this.element.textContent.trim(), '');
+      assert.dom(this.element).hasText('');
 
       // Template block usage:
       await render(hbs `
@@ -22,7 +22,7 @@ module('Integration | Component | es heading', function(hooks){
       {{/es-heading}}
     `);
 
-      assert.equal(this.element.textContent.trim(), 'template block text');
+      assert.dom(this.element).hasText('template block text');
   });
 
   // test('it is a heading element', function(assert) {

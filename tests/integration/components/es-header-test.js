@@ -1,4 +1,4 @@
-import { find, findAll, render } from '@ember/test-helpers';
+import { render } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
@@ -13,7 +13,7 @@ module('Integration | Component | es header', function(hooks){
 
       await render(hbs `{{es-header}}`);
 
-      assert.equal(this.element.textContent.trim(), '');
+      assert.dom(this.element).hasText('');
 
       // Template block usage:
       await render(hbs `
@@ -22,23 +22,23 @@ module('Integration | Component | es header', function(hooks){
       {{/es-header}}
     `);
 
-      assert.equal(this.element.textContent.trim(), 'template block text');
+      assert.dom(this.element).hasText('template block text');
   });
 
   test('it uses the header html element', async function(assert) {
       await render(hbs `{{es-header}}`);
-      assert.equal(findAll('header').length, 1, "the header uses the header html element!");
+      assert.dom('header').exists({ count: 1 }, "the header uses the header html element!");
   });
 
   test('it has the role of banner', async function(assert) {
       await render(hbs `{{es-header}}`);
-      assert.equal(find('header').getAttribute('role'), 'banner', 'header has the role of banner');
+      assert.dom('header').hasAttribute('role', 'banner', 'header has the role of banner');
   });
 
   //the class matches the component name
   //but how do I make it so it just checks for the one of them?
   test('it has the className es-header', async function(assert) {
       await render(hbs `{{es-header}}`);
-      assert.equal(find('header').getAttribute('class'), 'es-header ember-view', 'header has the class of es-header');
+      assert.dom('header').hasAttribute('class', 'es-header ember-view', 'header has the class of es-header');
   });
 });

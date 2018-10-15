@@ -1,6 +1,6 @@
-import { find, render } from '@ember/test-helpers';
-import { module, test } from 'qunit';
-import { setupRenderingTest, skip } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
+import { module, skip, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | es ulist', function(hooks){
@@ -13,7 +13,7 @@ module('Integration | Component | es ulist', function(hooks){
 
     await render(hbs`{{es-ulist}}`);
 
-    assert.equal(find('*').textContent.trim(), '');
+    assert.dom('*').hasText('');
   });
 
   skip('the list is populated', function(){

@@ -1,4 +1,10 @@
-import { find, click, focus, triggerKeyEvent, findAll, render } from '@ember/test-helpers';
+import {
+  click,
+  focus,
+  triggerKeyEvent,
+  findAll,
+  render
+} from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
@@ -39,11 +45,7 @@ module('Integration | Component | es accordion', function(hooks){
       {{/es-accordion}}
     `);
 
-    assert.equal(
-      find('.accordion-heading > .content').textContent.trim(),
-      'Accordion Item Title',
-      'correct title is displayed'
-    );
+    assert.dom('.accordion-heading > .content').hasText('Accordion Item Title', 'correct title is displayed');
   });
 
   test('it correctly handles user input', async function(assert) {
@@ -64,11 +66,11 @@ module('Integration | Component | es accordion', function(hooks){
       {{/es-accordion}}
     `);
 
-    assert.ok(find('.accordion-body.collapse'), 'accordion is collapsed');
+    assert.dom('.accordion-body.collapse').exists('accordion is collapsed');
 
     await click('.accordion-heading');
     assert.equal(get(this, 'activeItem'), 0, 'Clicking on an accordion element heading set it as active');
-    assert.notOk(find('.accordion-body.collapse'), 'accordion is expended');
+    assert.dom('.accordion-body.collapse').doesNotExist('accordion is expended');
 
     await focus('[data-role=accordion-item-button]');
     assert.equal(get(this, 'focusIndex'), 0, 'the focus index changes on focus');

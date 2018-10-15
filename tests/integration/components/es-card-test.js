@@ -3,7 +3,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-module('es-card', 'Integration | Component | es card', function(hooks){
+module('Integration | Component | es card', function(hooks){
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
@@ -12,8 +12,8 @@ module('es-card', 'Integration | Component | es card', function(hooks){
     // Handle any actions with this.on('myAction', function(val) { ... });
 
     await render(hbs`{{es-card}}`);
+    assert.dom('*').hasText('');
 
-    assert.equal(this.element.textContent.trim(), '');
 
     // Template block usage:
     await render(hbs`
@@ -22,6 +22,6 @@ module('es-card', 'Integration | Component | es card', function(hooks){
       {{/es-card}}
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom(this.element).hasText('template block text');
   });
 });

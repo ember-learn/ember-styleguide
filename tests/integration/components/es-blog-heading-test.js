@@ -1,4 +1,4 @@
-import { find, render } from '@ember/test-helpers';
+import { render } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
@@ -34,10 +34,10 @@ module('Integration | Component | es blog heading', function(hooks) {
       }}
     `);
 
-    assert.equal(find('.post-title.list-view a').getAttribute('href'), postUrl, 'displays title as link');
-    assert.equal(find('.post-title.list-view').textContent.trim(), postTitle, 'displays title');
-    assert.equal(find('.post-date').textContent.trim(), 'Mar 20, 2018', 'displays formatted date');
-    assert.equal(find('.post-author').textContent.trim(), `By ${author}`, 'displays author');
+    assert.dom('.post-title.list-view a').hasAttribute('href', postUrl, 'displays title as link');
+    assert.dom('.post-title.list-view').hasText(postTitle, 'displays title');
+    assert.dom('.post-date').hasText('Mar 20, 2018', 'displays formatted date');
+    assert.dom('.post-author').hasText(`By ${author}`, 'displays author');
   });
 
   test('renders correct title format', async function(assert) {
@@ -47,7 +47,7 @@ module('Integration | Component | es blog heading', function(hooks) {
       postUrl,
       postTitle,
     });
-    
+
     await render(hbs`
       {{es-blog-heading
         author=author
@@ -57,14 +57,14 @@ module('Integration | Component | es blog heading', function(hooks) {
       }}
     `);
 
-    assert.equal(find('.post-title.list-view a').getAttribute('href'), postUrl, 'displays title as link when url is provided');
-    assert.ok(find('.post-title.list-view'), 'displays list view title when a url is provided');
+    assert.dom('.post-title.list-view a').hasAttribute('href', postUrl, 'displays title as link when url is provided');
+    assert.dom('.post-title.list-view').exists('displays list view title when a url is provided');
 
     run(() => {
       set(this, 'postUrl', null);
     });
 
-    assert.notOk(find('.post-title.list-view a'), 'does not display title as link when a url is not provided');
-    assert.ok(find('.post-title.page-view'), 'displays page view title when a url is provided');
+    assert.dom('.post-title.list-view a').doesNotExist('does not display title as link when a url is not provided');
+    assert.dom('.post-title.page-view').exists('displays page view title when a url is provided');
   });
 });

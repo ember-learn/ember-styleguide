@@ -16,10 +16,7 @@ module('Integration | Component | es note', function(hooks){
       testHeading.includes(find('.cta-note-heading').textContent.trim()),
       'displays heading'
     );
-    assert.equal(
-      find('.cta-note-message').textContent.trim(),
-      'Hello!!! No message provided.'
-    );
+    assert.dom('.cta-note-message').hasText('Hello!!! No message provided.');
 
     await render(hbs`
       {{#es-note}}
@@ -32,10 +29,7 @@ module('Integration | Component | es note', function(hooks){
       'displays heading'
     );
 
-    assert.equal(
-      find('.cta-note-message').textContent.trim(),
-      'template block text'
-    );
+    assert.dom('.cta-note-message').hasText('template block text');
   });
 
   test('out of 2 mascots randomly selects each at least 1 in 10 renders', async function(assert) {

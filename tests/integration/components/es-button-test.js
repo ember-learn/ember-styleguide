@@ -11,7 +11,7 @@ module('Integration | Component | es button', function(hooks){
   test('it renders', async function(assert) {
     await render(hbs`{{es-button}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.dom(this.element).hasText('');
 
     await render(hbs`
       {{#es-button}}
@@ -19,12 +19,12 @@ module('Integration | Component | es button', function(hooks){
       {{/es-button}}
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom(this.element).hasText('template block text');
   });
 
   test('has html button tag and base class', async function(assert) {
     await render(hbs`{{es-button}}`);
-    assert.ok(find('button'), 'has button tag');
+    assert.dom('button').exists('has button tag');
     assert.ok(document.querySelector('.es-button'), 'has base es-button class');
   });
 
@@ -56,7 +56,7 @@ module('Integration | Component | es button', function(hooks){
       }}
     `);
 
-    assert.equal(this.element.textContent.trim(), label, 'displays button label');
+    assert.dom(this.element).hasText(label, 'displays button label');
   });
 
   test('calls closure function when clicked', async function(assert) {
