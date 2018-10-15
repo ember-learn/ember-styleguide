@@ -1,25 +1,27 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('es-form/es-textfield', 'Integration | Component | es form/es textfield', {
-  integration: true
-});
+module('Integration | Component | es form/es textfield', function(hooks){
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
+  test('it renders', async function(assert) {
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{es-form/es-textfield}}`);
+    await render(hbs`{{es-form/es-textfield}}`);
 
-  assert.equal(this.$().text().trim(), '');
+    assert.equal(this.element.textContent.trim(), '');
 
-  // Template block usage:
-  this.render(hbs`
-    {{#es-form/es-textfield}}
-      template block text
-    {{/es-form/es-textfield}}
-  `);
+    // Template block usage:
+    await render(hbs`
+      {{#es-form/es-textfield}}
+        template block text
+      {{/es-form/es-textfield}}
+    `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), 'template block text');
+  });
 });
