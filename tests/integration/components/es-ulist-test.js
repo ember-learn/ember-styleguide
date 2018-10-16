@@ -1,32 +1,34 @@
-import { moduleForComponent, test, skip } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
+import { module, skip, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('es-ulist', 'Integration | Component | es ulist', {
-  integration: true
-});
+module('Integration | Component | es ulist', function(hooks){
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
+  test('it renders', async function(assert) {
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{es-ulist}}`);
+    await render(hbs`{{es-ulist}}`);
 
-  assert.equal(this.$().text().trim(), '');
-});
+    assert.dom('*').hasText('');
+  });
 
-skip('the list is populated', function(){
-  
-});
+  skip('the list is populated', function(){
 
-skip('a list with images renders the images correctly', function(){ 
+  });
 
-});
+  skip('a list with images renders the images correctly', function(){
 
-skip('the id value of the list title matches the value in the aria-describedby property on the list element', function(){
+  });
 
-});
+  skip('the id value of the list title matches the value in the aria-describedby property on the list element', function(){
 
-skip('when hasLink is set to true, a link element renders', function(){
+  });
 
+  skip('when hasLink is set to true, a link element renders', function(){
+
+  });
 });
