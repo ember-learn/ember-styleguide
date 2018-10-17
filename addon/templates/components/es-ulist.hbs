@@ -7,13 +7,13 @@
         {{#if hasLink}}
           <a href={{item.link}} class="list-item-link">
             {{#if hasImage}}
-              <img src={{item.image}} class="list-item-image" alt="">
+              <img src={{item.image}} class="list-item-image" alt={{item.alt}}>
             {{/if}}
             {{item.text}}
           </a>
         {{else}}
           {{#if hasImage}}
-            <img src={{item.image}} class="list-item-image" alt="">
+            <img src={{item.image}} class="list-item-image" alt={{item.alt}}>
           {{/if}}
           {{item.text}}
         {{/if}}
