@@ -48,6 +48,10 @@ h1 {
   }
 }
 
+section > p:first-of-type {
+  margin-top: 0;
+}
+
 h2 {
 	color: $orange-darkest;
   font-size: 2em;
