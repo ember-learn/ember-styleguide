@@ -1,4 +1,9 @@
 
+2.3.1 / 2018-10-23
+==================
+
+  * Fixing sass error in consuming applications #110 @mansona
+
 2.3.0 / 2018-10-23
 ==================
 
