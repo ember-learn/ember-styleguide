@@ -1,6 +1,6 @@
 {
   "name": "ember-styleguide",
-  "version": "2.2.0",
+  "version": "2.3.1",
   "description": "Addon to help standardize the ember family of websites",
   "keywords": [
     "ember-addon"
@@ -35,7 +35,8 @@
     "ember-cli-htmlbars": "^3.0.0",
     "ember-cli-sass": "^8.0.1",
     "ember-svg-jar": "^1.2.2",
-    "ember-truth-helpers": "^2.1.0"
+    "ember-truth-helpers": "^2.1.0",
+    "node-sass": "^4.9.4"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
@@ -76,7 +77,6 @@
     "eslint-plugin-ember": "^5.2.0",
     "eslint-plugin-node": "^7.0.1",
     "loader.js": "^4.7.0",
-    "node-sass": "^4.9.4",
     "normalize.css": "^8.0.0",
     "np": "*",
     "qunit-dom": "^0.8.0",
