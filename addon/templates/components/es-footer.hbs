@@ -1,11 +1,13 @@
 <div class="footer responsive">
   <div class="container">
 
-    {{yield (hash
-        info = (component 'es-footer/es-info')
-        statement = (component 'es-footer/es-statement')
-        contributions = (component 'es-footer/es-contributions')
-    )}}
+    {{yield
+      (hash
+      info = (component "es-footer/es-info")
+      statement = (component "es-footer/es-statement")
+      contributions = (component "es-footer/es-contributions")
+      )
+    }}
 
     {{#unless hasBlock}}
 

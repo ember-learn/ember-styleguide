@@ -6,9 +6,9 @@ Copyright {{currentYear}}
   {{#each infoLinks as |link index|}}
     <a href={{link.href}}>{{link.name}}</a>
     {{#if link.lineBreak}}
-      <br/>
+      <br>
     {{else if (not-eq index infoLinksLastIndex)}}
-       |
+      |
     {{/if}}
   {{/each}}
 {{/if}}
