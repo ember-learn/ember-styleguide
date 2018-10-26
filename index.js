@@ -6,9 +6,9 @@ const nodeSass = require('node-sass');
 
 module.exports = {
   name: require('./package').name,
-  isDevelopingAddon() {
-    return true;
-  },
+  // isDevelopingAddon() {
+  //   return true;
+  // },
 
   options: {
     svgJar: {
