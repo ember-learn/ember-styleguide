@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
+    "@fortawesome/ember-fontawesome": "^0.1.8",
     "broccoli-asset-rev": "^3.0.0",
     "ember-a11y-landmarks": "^1.0.1",
     "ember-cli": "~3.5.0",
