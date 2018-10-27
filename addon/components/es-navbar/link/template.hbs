@@ -1,32 +1,38 @@
-{{#if (eq link.type 'link')}}
-  <a role="menuitem"
-     aria-haspopup="true"
-     aria-expanded="false"
-     href="{{link.href}}"
-     tabindex="{{if (eq index 0) 0 -1}}">
+{{#if (eq link.type "link")}}
+  <a
+    role="menuitem"
+    aria-haspopup="true"
+    aria-expanded="false"
+    href={{link.href}}
+    tabindex={{if (eq index 0) 0 -1}}
+  >
     {{link.name}}
   </a>
 {{/if}}
-{{#if (eq link.type 'dropdown')}}
-  <a role="menuitem"
-     aria-haspopup="true"
-     aria-expanded="false"
-     href="javascript:void(0)"
-     tabindex="{{if (eq index 0) 0 -1}}">
+{{#if (eq link.type "dropdown")}}
+  <a
+    role="menuitem"
+    aria-haspopup="true"
+    aria-expanded="false"
+    href="javascript:void(0)"
+    tabindex={{if (eq index 0) 0 -1}}
+  >
     {{link.name}}
   </a>
   <ul class="dropdown" role="menu" aria-label={{link.name}}>
     {{#each link.items as |item|}}
-      {{#if (eq item.type 'link')}}
+      {{#if (eq item.type "link")}}
         <li role="none">
-          <a role="menuitem"
-             href="{{item.href}}"
-             tabindex="-1">
+          <a
+            role="menuitem"
+            href={{item.href}}
+            tabindex="-1"
+          >
             {{item.name}}
           </a>
         </li>
       {{/if}}
-      {{#if (eq item.type 'divider')}}
+      {{#if (eq item.type "divider")}}
         <hr>
       {{/if}}
     {{/each}}
