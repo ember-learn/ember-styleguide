@@ -70,7 +70,7 @@ module.exports = {
   },
 
   checkPreprocessor() {
-    if (!this.app.project.findAddonByName('ember-cli-sass')) {
+    if (this.app && !this.app.project.findAddonByName('ember-cli-sass')) {
       this.ui.writeLine('ember-styleguide: npm package "ember-cli-sass" is missing. Consider using it to use `@import \'ember-styleguide/globals/variables\'` in your styles.');
     }
   }
