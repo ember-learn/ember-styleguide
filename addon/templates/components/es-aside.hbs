@@ -1,1 +1,10 @@
-{{yield}}
+
+<nav class="toc-container" aria-label="table of contents">
+  <ul class="toc-level-0" role="list">
+    {{yield
+      (hash
+        category=(component "es-aside/es-category")
+      )
+    }}
+  </ul>
+</nav>

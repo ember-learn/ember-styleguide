@@ -1,0 +1,6 @@
+{{yield
+  (hash
+    toggle=(component "es-aside/category-toggle" on-click=(action "toggleIsOpen") isOpen=isOpen)
+    body=(component "es-aside/category-body" isOpen=isOpen)
+    isOpen=isOpen)
+}}

@@ -1,0 +1,9 @@
+{{#if isOpen}}
+  <ol class="toc-level-1" role="list">
+    {{yield
+      (hash
+        option=(component "es-aside/category-option")
+      )
+    }}
+  </ol>
+{{/if}}
