@@ -10,7 +10,7 @@
     {{navbar.toggle}}
     {{#navbar.content}}
       {{#navbar.nav class="mr-auto" as |nav|}}
-        {{#each links as |link|}}
+        {{#each navLinks as |link|}}
           {{#if (eq link.type "link")}}
             {{#nav.item}}
               <a href={{link.href}} class="nav-link">{{link.name}}</a>
