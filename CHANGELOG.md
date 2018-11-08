@@ -1,3 +1,9 @@
+
+v2.4.0 / 2018-11-08
+==================
+
+  * Implementing default links for the Navbar #114 from @mansona
+
 v2.3.3 / 2018-11-01
 ===================
 
