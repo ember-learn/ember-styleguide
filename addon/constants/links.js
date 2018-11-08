@@ -93,7 +93,7 @@ export default [{
     type: 'divider'
   }, {
     href: 'https://emberjs.com/logos',
-    name: 'Logos',
+    name: 'Branding',
     type: 'link'
   }, {
     href: 'https://emberjs.com/mascots',
