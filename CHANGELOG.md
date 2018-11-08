@@ -1,3 +1,13 @@
+v2.3.3 / 2018-11-01
+===================
+
+  * prevent crash when addon depends on ember-styleguide #112 from @mansona
+  * Turn on template linting #108 from @aklkv
+
+v2.3.2 / 2018-10-26
+===================
+
+  * Comment out isDevelopingAddon #111 from @toddjordan
 
 2.3.1 / 2018-10-23
 ==================
