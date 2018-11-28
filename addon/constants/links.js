@@ -3,11 +3,15 @@ export default [{
   type: 'dropdown',
   items: [{
     href: 'https://guides.emberjs.com',
-    name: 'Guides',
+    name: 'Ember.js Guides',
     type: 'link'
   }, {
     href: 'https://emberjs.com/api',
     name: 'API Reference',
+    type: 'link'
+  }, {
+    href: 'https://cli.emberjs.com',
+    name: 'CLI Guides',
     type: 'link'
   }, {
     type: 'divider'
