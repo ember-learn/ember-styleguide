@@ -7,6 +7,12 @@ module.exports = function(defaults) {
     sassOptions: {
       implementation: nodeSass
     },
+    fontawesome: {
+      icons: {
+        'free-solid-svg-icons': 'all',
+        'free-regular-svg-icons': 'all',
+      }
+    },
     svgJar: {
       sourceDirs: [
         'public',
