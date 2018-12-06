@@ -8,23 +8,14 @@ export default Component.extend({
   classNames: ['es-ulist'],
   classNameBindings: ['hasBorder:bordered'],
 
-  
   listId: computed(function() {
-    return ('list-' + this.get('elementId'));
+    return ('list-' + this.elementId);
   }),
 
-  //accessibility support
-  ariaLabelledby: null, //for the ul element
-  ariaLabel: null,
-  listItems: null,
-  listTitle: null,
-  
   hasImage: false,
   hasLink: false,
   hasBorder: false,
 
   isUnorderedList: true, //add flexibility to use ordered or unordered list.
   isTitleVisible: true, //add the flexibility to visually hide the title for the list. It should still be there for ADA.
-
-
 });

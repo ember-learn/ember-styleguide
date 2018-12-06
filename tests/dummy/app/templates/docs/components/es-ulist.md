@@ -8,7 +8,7 @@ The list component is an unstyled, unordered list. A title must be defined, but 
 
 {{#docs-demo as |demo|}}
   {{#demo.example name='es-ulist.hbs'}}
-    {{es-ulist listTitle="Zoey by City" listItems=listItems}}
+    <EsUlist @listTitle="Zoey by City" @listItems={{listItems}} />
   {{/demo.example}}
   {{demo.snippet 'es-ulist.hbs'}}
 {{/docs-demo}}
@@ -17,7 +17,7 @@ The list component is an unstyled, unordered list. A title must be defined, but 
 
 {{#docs-demo as |demo|}}
   {{#demo.example name='es-ulist-imagelist.hbs'}}
-    {{es-ulist listTitle="Zoey by City" listItems=listItems hasImage=true}}
+    <EsUlist @listTitle="Zoey by City" @listItems={{listItems}} @hasImage={{true}} />
   {{/demo.example}}
   {{demo.snippet 'es-ulist-imagelist.hbs'}}
 {{/docs-demo}}
@@ -26,15 +26,20 @@ The list component is an unstyled, unordered list. A title must be defined, but 
 
 {{#docs-demo as |demo|}}
   {{#demo.example name='es-ulist-linklist.hbs'}}
-    {{es-ulist listTitle="Zoey by City" listItems=listItems hasImage=true hasLink=true}}
+    <EsUlist
+      @listTitle="Zoey by City"
+      @listItems={{listItems}}
+      @hasImage={{true}}
+      @hasLink={{true}}
+    />
   {{/demo.example}}
   {{demo.snippet 'es-ulist-linklist.hbs'}}
 {{/docs-demo}}
 
 ## Other use cases
 
-- to add a border: 'hasBorder=true'
-- to use an ordered list: 'isUnorderedList=false',
-- to visually hide the list title (it still must exist for A11y): 'isTitleVisible=false' 
+- to add a border: '@hasBorder={{true}}'
+- to use an ordered list: '@isUnorderedList={{false}}',
+- to visually hide the list title (it still must exist for A11y): '@isTitleVisible={{false}}'
 
 {{docs-note}}

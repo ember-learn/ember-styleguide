@@ -1,25 +1,19 @@
-<div class="list-title {{if isTitleVisible sr-only}}" id={{listId}}>{{listTitle}}</div>
+<div class="list-title {{if isTitleVisible sr-only}}" id={{listId}}>{{@listTitle}}</div>
 
 {{#if isUnorderedList}}
   <ul aria-labelledby={{listId}} class="list list-default">
-    {{#each listItems as |item|}}
-      <li class="list-item">
-        {{#if hasLink}}
-          <a href={{item.link}} class="list-item-link">
-            {{#if hasImage}}
-              <img src={{item.image}} class="list-item-image" alt={{item.alt}}>
-            {{/if}}
-            {{item.text}}
-          </a>
-        {{else}}
-          {{#if hasImage}}
-            <img src={{item.image}} class="list-item-image" alt={{item.alt}}>
-          {{/if}}
-          {{item.text}}
-        {{/if}}
-      </li>
-    {{/each}}
+    <EsUlistElements
+      @listItems={{@listItems}}
+      @hasLink={{@hasLink}}
+      @hasImage={{@hasImage}}
+    />
   </ul>
 {{else}}
-
+  <ol aria-labelledby={{listId}} class="list list-default">
+    <EsUlistElements
+      @listItems={{@listItems}}
+      @hasLink={{@hasLink}}
+      @hasImage={{@hasImage}}
+    />
+  </ol>
 {{/if}}
