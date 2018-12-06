@@ -7,11 +7,11 @@ export default [{
     type: 'link'
   }, {
     href: 'https://emberjs.com/api',
-    name: 'API Reference',
+    name: 'Ember.js API Reference',
     type: 'link'
   }, {
     href: 'https://cli.emberjs.com',
-    name: 'CLI Guides',
+    name: 'CLI Guides and API',
     type: 'link'
   }, {
     type: 'divider'
