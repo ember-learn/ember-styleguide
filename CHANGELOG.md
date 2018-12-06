@@ -1,4 +1,10 @@
 
+v2.5.0 / 2018-12-06
+==================
+
+  * Using ember-fontawesome #104 from @prasannavijayan
+  * Add CLI Guides to the default navbar links #115 from @jenweber
+
 v2.4.0 / 2018-11-08
 ==================
 
