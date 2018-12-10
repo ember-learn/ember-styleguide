@@ -37,8 +37,4 @@ The list component is an unstyled, unordered list. A title must be defined, but 
 - to use an ordered list: 'isUnorderedList=false',
 - to visually hide the list title (it still must exist for A11y): 'isTitleVisible=false' 
 
-<aside role="note">
-
-Have ideas for this component? Submit an issue or a PR at [https://github.com/ember-learn/ember-styleguide](https://github.com/ember-learn/ember-styleguide).
-
-</aside>
+{{docs-note}}
