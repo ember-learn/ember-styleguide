@@ -29,15 +29,15 @@ export default [{
     type: 'link'
   }, {
     href: 'https://emberjs.com/builds/release',
-    name: '-- Stable',
+    name: '&rarr; Stable',
     type: 'link'
   }, {
     href: 'https://emberjs.com/builds/beta',
-    name: '-- Beta',
+    name: '&rarr; Beta',
     type: 'link'
   }, {
     href: 'https://emberjs.com/builds/canary',
-    name: '-- Canary',
+    name: '&rarr; Canary',
     type: 'link'
   }, {
     type: 'divider'
