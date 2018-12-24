@@ -8,11 +8,7 @@ module('Integration | Component | es ulist', function(hooks){
 
   test('it renders with border', async function(assert) {
 
-    await render(hbs`
-        <EsUlist 
-          @hasBorder={{true}}
-        />`
-    );
+    await render(hbs`{{es-ulist hasBorder=true}}`);
 
     assert.dom('.es-ulist').hasClass('bordered');
 
@@ -22,12 +18,7 @@ module('Integration | Component | es ulist', function(hooks){
     test('it renders the title with correct id', async function(assert) {
       assert.expect(2);
 
-      await render(hbs`
-        <EsUlist 
-          @elementId="mylist"
-          @listTitle="My List Title"
-        />`
-      );
+      await render(hbs`{{es-ulist elementId="mylist" listTitle="My List Title"}}`);
 
       assert.dom('#mylist').hasText('My List Title');
       assert.dom('.es-ulist').doesNotHaveClass('bordered');
@@ -36,14 +27,7 @@ module('Integration | Component | es ulist', function(hooks){
     test('it renders the title with sr-only class when isTitleVisible is true', async function(assert) {
       assert.expect(2);
 
-      await render(hbs`
-        <EsUlist 
-          @isTitleVisible={{true}}
-          @sr-only="srClass"
-          @elementId="mylist"
-          @listTitle="My List Title" 
-        />`
-      );
+      await render(hbs`{{es-ulist isTitleVisible=true sr-only="srClass" elementId="mylist" listTitle="My List Title"}}`);
 
       assert.dom('#list-mylist').hasClass('list-title');
       assert.dom('#list-mylist').hasClass('srClass');
@@ -52,14 +36,7 @@ module('Integration | Component | es ulist', function(hooks){
     test('it renders the title without sr-only class when isTitleVisible is false', async function(assert) {
       assert.expect(2);
 
-      await render(hbs`
-        <EsUlist 
-          @isTitleVisible={{false}}
-          @sr-only="srClass"
-          @elementId="mylist"
-          @listTitle="My List Title" 
-        />`
-      );
+      await render(hbs`{{es-ulist isTitleVisible=false sr-only="srClass" elementId="mylist" listTitle="My List Title"}}`);
 
       assert.dom('#list-mylist').hasClass('list-title');
       assert.dom('#list-mylist').doesNotHaveClass('srClass');
@@ -73,11 +50,7 @@ module('Integration | Component | es ulist', function(hooks){
       test('the list does not have unorderded items', async function(assert){
         assert.expect(1);
 
-        await render(hbs`
-          <EsUlist 
-            @isUnorderedList={{false}}
-          />`
-        );
+        await render(hbs`{{es-ulist isUnorderedList=false}}`);
 
         assert.dom('.es-ulist ul').doesNotExist();
       });
@@ -88,12 +61,7 @@ module('Integration | Component | es ulist', function(hooks){
       test('the id value of the list title matches the value in the aria-describedby property on the list element', async function(assert){
         assert.expect(2);
 
-        await render(hbs`
-            <EsUlist 
-              @elementId='mylist'
-              @isUnorderedList={{true}}
-            />`
-        );
+        await render(hbs`{{es-ulist elementId='mylist' isUnorderedList=true}}`);
 
         assert.dom('.es-ulist ul').hasAttribute('aria-describedby', 'list-mylist');
         assert.dom('.list-title').hasAttribute('id', 'list-mylist');
@@ -103,11 +71,7 @@ module('Integration | Component | es ulist', function(hooks){
       test('the list does not have ordered items', async function(assert){
         assert.expect(1);
 
-        await render(hbs`
-          <EsUlist 
-            @isUnorderedList={{false}}
-          />`
-        );
+        await render(hbs`{{es-ulist isUnorderedList=false}}`);
 
         assert.dom('.es-ulist ol').doesNotExist();
       });
@@ -138,12 +102,7 @@ module('Integration | Component | es ulist', function(hooks){
         test('the list has correct aria label and classes', async function(assert){
           assert.expect(3);
 
-          await render(hbs`
-            <EsUlist 
-              @elementId='mylist'
-              @isUnorderedList={{true}}
-            />`
-          );
+          await render(hbs`{{es-ulist elementId='mylist' isUnorderedList=true}}`);
 
           assert.dom('.es-ulist ul').hasAttribute('aria-labelledby', 'list-mylist');
           assert.dom('.es-ulist ul').hasClass('list');
@@ -154,12 +113,7 @@ module('Integration | Component | es ulist', function(hooks){
         test('the list is populated', async function(assert){
           assert.expect(14);
 
-          await render(hbs`
-            <EsUlist 
-              @isUnorderedList={{true}}
-              @listItems={{listItems}}
-            />`
-          );
+          await render(hbs`{{es-ulist isUnorderedList=true listItems=listItems}}`);
 
           assert.dom('.es-ulist ul li').exists({count: 3});
           assert.dom('.es-ulist ul li:nth-child(1) img').hasAttribute('src', '/images/tomsters/columbus.png');
