@@ -1,18 +1,22 @@
 <div class="list-title {{if isTitleVisible sr-only}}" id={{listId}}>{{listTitle}}</div>
 
 {{#if isUnorderedList}}
-  <ul aria-labelledby={{listId}} class="list list-default">
+  <ul
+    aria-labelledby={{listId}}
+    aria-describedby={{listId}}
+    class="list list-default"
+  >
     {{#each listItems as |item|}}
       <li class="list-item">
-        {{#if hasLink}}
+        {{#if item.link}}
           <a href={{item.link}} class="list-item-link">
-            {{#if hasImage}}
+            {{#if item.image}}
               <img src={{item.image}} class="list-item-image" alt={{item.alt}}>
             {{/if}}
             {{item.text}}
           </a>
         {{else}}
-          {{#if hasImage}}
+          {{#if item.image}}
             <img src={{item.image}} class="list-item-image" alt={{item.alt}}>
           {{/if}}
           {{item.text}}
