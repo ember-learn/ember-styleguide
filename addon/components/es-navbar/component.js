@@ -9,6 +9,13 @@ export default Component.extend({
   tagName: 'nav',
   classNames: ['es-navbar'],
   ariaLabel: 'Ember',
+  navHome: computed('home', function() {
+    if (this.home) {
+      return this.home;
+    }
+
+    return 'https://www.emberjs.com';
+  }),
   navLinks: computed('links.[]', function() {
     if(this.links) {
       return this.links;
