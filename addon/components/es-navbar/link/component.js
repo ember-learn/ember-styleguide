@@ -33,7 +33,7 @@ export default Component.extend({
   init() {
     this._super(...arguments);
 
-    this.$.tabIndex = -1;
+    this.element.tabIndex = -1;
   },
 
   didInsertElement() {
