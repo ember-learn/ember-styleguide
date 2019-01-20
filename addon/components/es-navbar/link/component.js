@@ -5,10 +5,6 @@ import { equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { next } from '@ember/runloop';
 
-function isPrintableCharacter (str) {
-  return str.length === 1 && str.match(/\S/);
-}
-
 export default Component.extend({
   layout,
   tagName: 'li',
@@ -51,9 +47,6 @@ export default Component.extend({
       links.forEach((ancor) => {
         ancor.addEventListener('blur', () => this.handleBlur());
       });
-
-      // set this.Chars to the first letter of each link content for text search in setFocusByFirstCharacter
-      this.firstChars = links.map(link => link.text.trim()[0].toLowerCase());
     }
   },
 
@@ -148,43 +141,7 @@ export default Component.extend({
     nextItem.querySelector('a').focus();
   },
 
-  setFocusByFirstCharacter (inputCharacter) {
-    let character = inputCharacter.toLowerCase();
-
-    let subItems = Array.from(this.element.querySelectorAll('ul[role="menu"] li'));
-    let focused = subItems.find(item => document.activeElement === item.querySelector('a'));
-    let start = subItems.indexOf(focused) + 1;
-
-    if (start === subItems.length) {
-      start = 0;
-    }
-
-    // Check remaining slots in the menu
-    let index = this.getIndexFirstChars(start, character);
-
-    // If not found in remaining slots, check from beginning
-    if (index === -1) {
-      index = this.getIndexFirstChars(0, character);
-    }
-
-    // If match was found...
-    if (index > -1) {
-      subItems[ index ].querySelector('a').focus();
-    }
-  },
-
-  getIndexFirstChars (startIndex, char) {
-    for (var i = startIndex; i < this.firstChars.length; i++) {
-      if (char === this.firstChars[ i ]) {
-        return i;
-      }
-    }
-    return -1;
-  },
-
-
   keyDown(event) {
-    const char = event.key;
     let flag = false;
     let clickEvent;
     let mousedownEvent;
@@ -257,17 +214,6 @@ export default Component.extend({
 
       case this.keyCode.ESC:
         this.closePopupMenu(true);
-        break;
-
-      default:
-        if (isPrintableCharacter(char)) {
-          if(this.get('expanded')) {
-            this.setFocusByFirstCharacter(char);
-          } else {
-            this.get('navbar').setFocusByFirstCharacter(char)
-          }
-          flag = true;
-        }
         break;
     }
 
