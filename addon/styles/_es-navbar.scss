@@ -25,25 +25,18 @@ li[aria-expanded=true] ul.dropdown {
   background-color: white;
 }
 
-nav.es-navbar div.container {
-  display: flex;
-  max-width: 1140px;
-  min-width: 850px;
-}
-
-nav.es-navbar form {
-  display: flex;
-  align-items: center;
-}
-
 ul[role="menubar"] {
   display: flex;
-  align-items: center;
-  min-height: 55px;
+  flex-direction: column;
+  align-items: start;
   font-size: 1.3em;
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+ul[role="menubar"][aria-expanded="false"] {
+  max-height: 0;
 }
 
 ul[role="menubar"] [role="menuitem"] {
@@ -66,8 +59,7 @@ ul[role="menubar"] a[role="menuitem"] {
 
 ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:focus,
 ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:hover  {
-  background-color: $orange;
-  color: white;
+  outline: 0;
 }
 
 ul.dropdown a[role="menuitem"] {
@@ -89,7 +81,8 @@ ul[role="menubar"] li {
 
 ul[role="menubar"] > li {
   height: 100%;
-  align-items: center;
+  width: 100%;
+  flex-direction: column;
   display: flex;
   position: relative;
 }
@@ -100,11 +93,13 @@ ul[role="menubar"] > li.dropdown > a:after {
   padding-left: .25em;
 }
 
+ul[role="menubar"][aria-expanded="true"] ul[role="menu"]{
+  top: 0 !important;
+}
 
 ul[role="menubar"] ul[role="menu"] {
   display: none;
-  position: absolute;
-  top: -2px;
+  width: 100%;
   left: 0;
   margin: 0;
   padding: 0;
@@ -119,4 +114,75 @@ ul[role="menubar"] ul[role="menu"] li a {
 ul[role="menubar"] ul[role="menu"] a[aria-haspopup="true"]:after {
   content: url('../images/right-arrow-brown.png');
   padding-right: 2em;
+}
+
+.navbar-toggler {
+  padding: .25rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  border-color: #fdfdfd;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: center center no-repeat;
+  background-size: 100% 100%;
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  nav.es-navbar div.container {
+    display: flex;
+    max-width: 1140px;
+    min-width: 850px;
+  }
+
+  ul[role="menubar"] {
+    flex-direction: row;
+    align-items: center;
+    min-height: 55px;
+  }
+
+  ul[role="menubar"] > li {
+    width: inherit;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  li[aria-expanded=true] ul.dropdown {
+    position: absolute;
+  }
+
+  ul[role="menubar"] ul[role="menu"] {
+    position: absolute;
+    top: inherit;
+    width: inherit;
+  }
+  .navbar-toggler {
+    display: none
+  }
+  ul[role="menubar"][aria-expanded="false"] {
+    max-height: inherit;
+  }
+
+  ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:focus,
+  ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:hover  {
+    background-color: $orange;
+    color: white;
+    outline: inherit;
+  }
 }

@@ -22,5 +22,12 @@ export default Component.extend({
     }
 
     return defaultLinks;
-  })
+  }),
+  actions: {
+    toggleMenu() {
+      let menu = this.element.querySelector('ul[role="menubar"]');
+
+      menu.setAttribute('aria-expanded', menu.getAttribute('aria-expanded') !== 'true');
+    }
+  }
 });
