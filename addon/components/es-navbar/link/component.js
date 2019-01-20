@@ -105,7 +105,10 @@ export default Component.extend({
   }).volatile(),
 
   setFocusToFirstItem() {
-    this.element.querySelector('ul[role="menu"] li a').focus();
+    let element = this.element.querySelector('ul[role="menu"] li a')
+    if (element) {
+      element.focus();
+    }
   },
 
   setFocusToLastItem() {
@@ -118,8 +121,11 @@ export default Component.extend({
     let focused = subItems.find(item => document.activeElement === item.querySelector('a'));
     let focusedIndex = subItems.indexOf(focused);
 
-
     let nextItem = subItems[(focusedIndex + 1) % subItems.length];
+
+    if (!nextItem) {
+      return;
+    }
 
     nextItem.querySelector('a').focus();
   },
@@ -137,6 +143,10 @@ export default Component.extend({
     }
 
     let nextItem = subItems[nextIndex];
+
+    if (!nextItem) {
+      return;
+    }
 
     nextItem.querySelector('a').focus();
   },
