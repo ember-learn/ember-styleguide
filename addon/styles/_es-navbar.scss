@@ -1,210 +1,188 @@
-/**
-  Navbar in header
-**/
-.navbar {
-  margin-bottom: 0;
+nav.es-navbar {
+  width: 100%;
+  background-color: $orange;
+}
 
-  &.navbar-inverse {
+nav.es-navbar .spacer {
+  flex: 10;
+}
+
+nav.es-navbar hr {
+  border-top: 1px solid $orange;
+  margin: 0.1em 0;
+}
+
+ul li[aria-expanded=true] {
+  background-color: white;
+
+  a[role=menuitem] {
+    color: $orange;
+  }
+}
+
+li[aria-expanded=true] ul.dropdown {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+  background-color: white;
+}
+
+ul[role="menubar"] {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 1.3em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul[role="menubar"][aria-expanded="false"] {
+  max-height: 0;
+}
+
+ul[role="menubar"] [role="menuitem"] {
+  height: 100%;
+  padding: 0 .5em;
+  line-height: 50px;
+}
+
+ul[role="menubar"] [role="menuitem"]:focus,
+ul[role="menubar"] [role="menuitem"]:hover {
+  background-color: white;
+  color: $orange;
+}
+
+ul[role="menubar"] a[role="menuitem"] {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: white;
+}
+
+ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:focus,
+ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:hover  {
+  outline: 0;
+}
+
+ul.dropdown a[role="menuitem"] {
+  color: $orange;
+  padding: 0 1em;
+}
+
+ul[role="menubar"] [role="menuitem"]:focus,
+ul[role="menubar"] [role="menuitem"]:hover {
+  background-color: white;
+  color: $orange;
+}
+
+ul[role="menubar"] li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul[role="menubar"] > li {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+}
+
+ul[role="menubar"] > li.dropdown > a:after {
+  content: '\25bc';
+  font-size: small;
+  padding-left: .25em;
+}
+
+ul[role="menubar"][aria-expanded="true"] ul[role="menu"]{
+  top: 0 !important;
+}
+
+ul[role="menubar"] ul[role="menu"] {
+  display: none;
+  width: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+ul[role="menubar"] ul[role="menu"] li a {
+  display: block;
+  width: 15em;
+}
+
+ul[role="menubar"] ul[role="menu"] a[aria-haspopup="true"]:after {
+  content: url('../images/right-arrow-brown.png');
+  padding-right: 2em;
+}
+
+.navbar-toggler {
+  padding: .25rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  border-color: #fdfdfd;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: center center no-repeat;
+  background-size: 100% 100%;
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  nav.es-navbar div.container {
+    display: flex;
+    max-width: 1140px;
+    min-width: 850px;
+  }
+
+  ul[role="menubar"] {
+    flex-direction: row;
+    align-items: center;
+    min-height: 55px;
+  }
+
+  ul[role="menubar"] > li {
+    width: inherit;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  li[aria-expanded=true] ul.dropdown {
+    position: absolute;
+  }
+
+  ul[role="menubar"] ul[role="menu"] {
+    position: absolute;
+    top: inherit;
+    width: inherit;
+  }
+  .navbar-toggler {
+    display: none
+  }
+  ul[role="menubar"][aria-expanded="false"] {
+    max-height: inherit;
+  }
+
+  ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:focus,
+  ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:hover  {
     background-color: $orange;
-    border-color: transparent;
-    border-radius: 0;
-    padding: 0;
-
-    .mr-auto {
-      margin-right: auto;
-    }
-
-    .navbar-collapse, .navbar-form {
-      border-color: $orange-darkest;
-    }
-
-    .navbar-toggler {
-      border-color: $white;
-
-      &:hover {
-        background-color: $orange-darker;
-      }
-
-      .navbar-toggler-icon {
-        background-image: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
-      }
-    }
-
-    .navbar-brand {
-      img, svg {
-        @media screen and (min-width: 768px) {
-          margin-bottom: 0;
-          margin-right: 10px;
-          padding-bottom: 0;
-        }
-      }
-    }
-
-    .navbar-nav {
-      margin-top: 0;
-
-      li {
-        align-content: stretch;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        min-width: 100%;
-
-        @media screen and (min-width: 992px){
-          min-width: auto;
-          flex-flow: row wrap;
-        }
-
-        a {
-          align-items: center;
-          color: $white;
-          display: flex;
-          flex: 1;
-          min-height: 50px;
-          padding: 0 0.5em;
-          text-decoration: none;
-
-          &:focus {
-            outline: 5px auto -webkit-focus-ring-color;
-          }
-        }
-
-        &.active {
-
-          a {
-            background-color: white;
-            color: $orange-darkest;
-          }
-        }
-
-        &.show {
-
-          a {
-            background-color: white;
-            color: $orange-darkest;
-          }
-
-          .dropdown-menu {
-            background-color: white;
-            border-radius: 0;
-            margin: 0 -1px;
-
-            @media screen and (min-width: 768px) {
-              border-radius: 0 0 4px 4px;
-              border-color-top: white;
-            }
-
-            .dropdown-item {
-              min-height: 36px;
-              &:hover,
-              :focus {
-                background-color: $orange-lightest;
-                color: $orange-darkest;
-                outline: 0 !important;
-              }
-            }
-
-            .dropdown-divider {
-              border: 1px solid $orange-lightest;
-            }
-          }
-        }
-      }
-    }
-
-    form.navbar-right.navbar-form {
-      @media screen and (min-width: 768px) {
-        margin-bottom: 0;
-      }
-
-      .input-group {
-        min-width: 100%;
-        padding: 0.25em 0;
-      }
-
-      .form-control {
-        background: url(/images/search-icon.svg) rgba(255, 255, 255, 0.1) 10px 8px no-repeat;
-        border-color: transparent;
-        border-radius: 3px;
-        border-right: 0;
-        box-shadow: none;
-        color: white;
-        font-family: 'Roboto', sans-serif;
-        min-width: 100%;
-        padding: 0.25em 0.5em;
-        &:-ms-input-placeholder {
-          color: $orange-lightest !important;
-        }
-        &:-ms-input-placeholder {
-          color: $orange-lightest !important;
-        }
-        &::placeholder {
-          color: $orange-lightest !important;
-        }
-        &::placeholder {
-          color: $orange-lightest !important;
-        }
-      }
-    }
+    color: white;
+    outline: inherit;
   }
-}
-
-// Algolia overrides
-.ds-dataset-1 {
-  span.ds-suggestions {
-    @media screen and (min-width: 0px) and (max-width: 768px) {
-      z-index: 1000 !important;
-    }
-  }
-}
-
-.algolia-docsearch-footer {
-  border-top-color: $orange-lighter;
-}
-
-.algolia-docsearch-suggestion {
-  border-bottom-color: $orange-lighter;
-}
-
-.algolia-docsearch-suggestion--highlight {
-  color: $orange-darker;
-}
-
-.algolia-docsearch-suggestion--subcategory-column {
-  border-right-color: $orange-lighter;
-  color: $gray-darkest;
-  background-color: $orange-lightest;
-}
-
-.algolia-autocomplete {
-  width: 100%;
-}
-
-.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-  width: 100%;
-}
-
-.algolia-autocomplete .aa-hint {
-  color: #999;
-}
-
-.algolia-autocomplete .aa-dropdown-menu {
-  width: 100%;
-  background-color: #fff;
-  border: 1px solid #999;
-  border-top: none;
-}
-
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-  cursor: pointer;
-  padding: 5px 4px;
-}
-
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-  background-color: #B2D7FF;
-}
-
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-  font-weight: bold;
-  font-style: normal;
 }
