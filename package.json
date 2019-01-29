@@ -41,8 +41,8 @@
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
     "@fortawesome/ember-fontawesome": "^0.1.8",
-    "@fortawesome/free-solid-svg-icons": "5.4.2",
     "@fortawesome/free-regular-svg-icons": "5.4.2",
+    "@fortawesome/free-solid-svg-icons": "5.4.2",
     "broccoli-asset-rev": "^3.0.0",
     "ember-a11y-landmarks": "^1.0.1",
     "ember-cli": "~3.5.0",
@@ -71,6 +71,7 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-moment": "^7.8.0",
     "ember-native-dom-helpers": "^0.6.2",
+    "ember-percy": "^1.5.0",
     "ember-qunit": "^3.4.1",
     "ember-resolver": "^5.0.1",
     "ember-sinon": "^2.2.0",
