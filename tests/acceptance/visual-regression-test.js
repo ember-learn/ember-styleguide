@@ -32,7 +32,7 @@ module('Acceptance | visual regression', function(hooks) {
     await pages.reduce(async (prev, componentName) => {
       await prev;
 
-      await visit(`components/${componentName}`);
+      await visit(`docs/components/${componentName}`);
 
       await percySnapshot(componentName);
 
