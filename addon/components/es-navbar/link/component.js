@@ -30,13 +30,9 @@ export default Component.extend({
 
   navbar: service(),
 
-  init() {
-    this._super(...arguments);
-
-    this.element.tabIndex = -1;
-  },
-
   didInsertElement() {
+    this.element.tabIndex = -1;
+
     this.get('navbar').register(this);
     this.domNode = this.element.querySelector('ul[role="menu"]');
 
