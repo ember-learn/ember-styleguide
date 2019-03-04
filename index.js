@@ -1,14 +1,14 @@
 'use strict';
-const mergeTrees = require('broccoli-merge-trees');
 const Funnel = require('broccoli-funnel');
 const path = require('path');
 const nodeSass = require('node-sass');
 
 module.exports = {
   name: require('./package').name,
-  // isDevelopingAddon() {
-  //   return true;
-  // },
+
+  isDevelopingAddon() {
+    return true;
+  },
 
   options: {
     svgJar: {
@@ -27,14 +27,6 @@ module.exports = {
     let target = (app || parentAddon);
     target.options = target.options || {};
 
-    const defaultEmberBootStrapOptions = {
-      bootstrapVersion: 4,
-      importBootstrapFont: false,
-      importBootstrapCSS: false
-    };
-
-    target.options['ember-bootstrap'] = target.options['ember-bootstrap'] || defaultEmberBootStrapOptions;
-
     target.options.sassOptions = target.options.sassOptions || { implementation: nodeSass };
 
     this.checkPreprocessor();
@@ -48,13 +40,6 @@ module.exports = {
     });
   },
 
-  treeForAddonStyles(tree) {
-    let bootstrapTree = new Funnel(this.getBootstrapStylesPath(), {
-      destDir: 'ember-bootstrap'
-    });
-    return mergeTrees([bootstrapTree, tree]);
-  },
-
   treeForPublic: function() {
     return new Funnel(path.join(this.root, 'public'));
   },
@@ -62,11 +47,6 @@ module.exports = {
   getEmberStyleguideStylesPath() {
     let pkgPath = path.dirname(__filename);
     return path.join(pkgPath, 'addon', 'styles');
-  },
-
-  getBootstrapStylesPath() {
-    let pkgPath = path.dirname(require.resolve(`bootstrap/package.json`));
-    return path.join(pkgPath, 'scss');
   },
 
   checkPreprocessor() {
