@@ -1,3 +1,5 @@
+$menu-height: 55px;
+
 nav.es-navbar {
   width: 100%;
   background-color: $orange;
@@ -42,7 +44,7 @@ ul[role="menubar"][aria-expanded="false"] {
 ul[role="menubar"] [role="menuitem"] {
   height: 100%;
   padding: 0 .5em;
-  line-height: 50px;
+  line-height: $menu-height;
 }
 
 ul[role="menubar"] [role="menuitem"]:focus,
@@ -167,7 +169,7 @@ ul[role="menubar"] ul[role="menu"] a[aria-haspopup="true"]:after {
   ul[role="menubar"] {
     flex-direction: row;
     align-items: center;
-    min-height: 55px;
+    min-height: $menu-height;
   }
 
   ul[role="menubar"] > li {
