@@ -65,7 +65,7 @@ export default Component.extend({
     // Set CSS properties
     if(this.domNode) {
       this.domNode.style.display = 'block';
-      this.domNode.style.top = (rect.height - 1) + 'px';
+      this.domNode.style.top = rect.height + 'px';
       this.domNode.style.zIndex = 1000;
     }
 
