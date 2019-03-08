@@ -88,9 +88,16 @@ ul[role="menubar"] > li {
 }
 
 ul[role="menubar"] > li.dropdown > a:after {
-  content: '\25bc';
-  font-size: small;
-  padding-left: .25em;
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
 }
 
 ul[role="menubar"][aria-expanded="true"] ul[role="menu"]{
