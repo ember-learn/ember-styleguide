@@ -1,4 +1,5 @@
 $menu-height: 55px;
+$menu-orange: #9b2918;
 
 nav.es-navbar {
   width: 100%;
@@ -10,7 +11,7 @@ nav.es-navbar .spacer {
 }
 
 nav.es-navbar hr {
-  border-top: 1px solid $orange;
+  border-top: 1px solid $menu-orange;
   margin: 0.1em 0;
 }
 
@@ -18,7 +19,7 @@ ul li[aria-expanded=true] {
   background-color: white;
 
   a[role=menuitem] {
-    color: $orange;
+    color: $menu-orange;
   }
 }
 
@@ -50,7 +51,7 @@ ul[role="menubar"] [role="menuitem"] {
 ul[role="menubar"] [role="menuitem"]:focus,
 ul[role="menubar"] [role="menuitem"]:hover {
   background-color: white;
-  color: $orange;
+  color: $menu-orange;
 }
 
 ul[role="menubar"] a[role="menuitem"] {
@@ -65,14 +66,14 @@ ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:hover  {
 }
 
 ul.dropdown a[role="menuitem"] {
-  color: $orange;
+  color: $menu-orange;
   padding: 0 1em;
 }
 
 ul[role="menubar"] [role="menuitem"]:focus,
 ul[role="menubar"] [role="menuitem"]:hover {
   background-color: white;
-  color: $orange;
+  color: $menu-orange;
 }
 
 ul[role="menubar"] li {
