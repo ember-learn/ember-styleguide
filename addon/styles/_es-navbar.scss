@@ -24,9 +24,13 @@ ul li[aria-expanded=true] {
   }
 }
 
-li[aria-expanded=true] ul.dropdown {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+li[aria-expanded=true] ul[role="menu"].dropdown {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   background-color: white;
+  border: solid 1px rgba(0,0,0, .1);
+  border-top: 0;
+  // this is adjusting for the border
+  margin-left: -1px;
 }
 
 ul[role="menubar"] {
