@@ -1,5 +1,6 @@
 $menu-height: 55px;
 $menu-orange: #9b2918;
+$dropdown-border-radius: 6px;
 
 nav.es-navbar {
   width: 100%;
@@ -183,6 +184,12 @@ ul[role="menubar"] ul[role="menu"] a[aria-haspopup="true"]:after {
 
   li[aria-expanded=true] ul.dropdown {
     position: absolute;
+  }
+
+  li[aria-expanded=true] ul.dropdown,
+  li[aria-expanded=true] ul.dropdown li:last-child a {
+    border-bottom-right-radius: $dropdown-border-radius;
+    border-bottom-left-radius: $dropdown-border-radius;
   }
 
   ul[role="menubar"] ul[role="menu"] {
