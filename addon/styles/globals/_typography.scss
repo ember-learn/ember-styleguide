@@ -2,11 +2,10 @@ body {
   font-size: 16px;
   font-family: $font-family-sans-serif;
   font-weight: normal;
-  line-height: 1.2;
-  
+  line-height: 1.5;
+
   @media screen and (min-width:992px) {
     font-size: 18px;
-    line-height: 1.2;
   }
 }
 
@@ -42,7 +41,7 @@ h1 {
   @media screen and (min-width: 768px) {
     text-align: left;
   }
-  
+
   + p {
     margin-top: 0;
   }
@@ -59,15 +58,15 @@ h2 {
   line-height: 1;
   margin: 1.25em 0 0.75em 0;
   min-width: 100%;
-  
+
   &:first-of-type {
     margin-top: 0;
   }
-  
+
   .icon-link-ext {
     font-size: 0.6em;
   }
-  
+
   + p {
     margin-top: 0;
   }
