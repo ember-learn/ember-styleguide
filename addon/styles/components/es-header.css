@@ -1,0 +1,8 @@
+header.es-header {
+  background-color: var(--color-dark);
+  height: 6em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

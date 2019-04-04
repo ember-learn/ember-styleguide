@@ -1,0 +1,13 @@
+:root {
+  --container-width-large: 64em;
+  --color-dark: #1C1E23;
+}
+
+body {
+  font-size: 16pt;
+}
+
+.container {
+  max-width: var(--container-width-large);
+  margin: auto;
+}
