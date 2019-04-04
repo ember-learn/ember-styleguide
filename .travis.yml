@@ -12,7 +12,8 @@ addons:
   chrome: stable
 
 cache:
-  yarn: true
+  directories:
+    - $HOME/.npm
 
 env:
   global:
@@ -36,9 +37,9 @@ jobs:
     - stage: "Tests"
       name: "Tests"
       script:
-        - yarn lint:hbs
-        - yarn lint:js
-        - yarn test
+        - npm run lint:hbs
+        - npm run lint:js
+        - npm test
 
     # we recommend new addons test the current and previous LTS
     # as well as latest stable release (bonus points to beta/canary)
@@ -52,6 +53,8 @@ jobs:
 
 before_install:
   - npm config set spin false
+  - npm install -g npm@latest
+  - npm --version
 
 script:
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO
