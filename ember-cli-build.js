@@ -1,18 +1,11 @@
 'use strict';
-const nodeSass = require('node-sass');
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
+
+const CssImport = require('postcss-import')
+const PresetEnv = require('postcss-preset-env');
 
 module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
-    sassOptions: {
-      implementation: nodeSass
-    },
-    fontawesome: {
-      icons: {
-        'free-solid-svg-icons': 'all',
-        'free-regular-svg-icons': 'all',
-      }
-    },
     svgJar: {
       sourceDirs: [
         'public',
@@ -21,7 +14,19 @@ module.exports = function(defaults) {
         'node_modules/ember-cli-addon-docs/public',
         'tests/dummy/public'
       ]
-    }
+    },
+    postcssOptions: {
+      compile: {
+        enabled: true,
+        plugins: [
+          { module: CssImport },
+          {
+            module: PresetEnv,
+            options: { stage: 3 }
+          }
+        ]
+      }
+    },
   });
 
   /*

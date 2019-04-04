@@ -13,6 +13,19 @@ module.exports = {
   },
 
   options: {
+    postcssOptions: {
+      compile: {
+        enabled: true,
+        plugins: [
+          { module: CssImport },
+          {
+            module: PresetEnv,
+            options: { stage: 3 }
+          }
+        ]
+      }
+    },
+
     svgJar: {
       sourceDirs: [
         'public',
@@ -23,15 +36,6 @@ module.exports = {
     googleFonts: [
       'Roboto:400,700'
     ],
-    postcssOptions: {
-      compile: {
-        enabled: true,
-        plugins: [
-          { module: CssImport },
-          { module: PresetEnv({ stage: 3 }) }
-        ]
-      }
-    }
   },
 
   treeForPublic: function() {
