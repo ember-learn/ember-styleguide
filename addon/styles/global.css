@@ -18,8 +18,3 @@ body {
   background-color: var(--color-dark);
   color: var(--color-light);
 }
-
-h1 {
-  margin-left: inherit;
-  margin-right: inherit;
-}
