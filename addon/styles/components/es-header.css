@@ -1,6 +1,5 @@
 header.es-header {
-  background-color: var(--color-dark);
-  height: 6em;
+  height: 6rem;
 
   display: flex;
   justify-content: center;

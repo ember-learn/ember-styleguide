@@ -1,6 +1,7 @@
 :root {
   --container-width-large: 64em;
   --color-dark: #1C1E23;
+  --color-light: #FFE6E6;
 }
 
 body {
@@ -9,5 +10,16 @@ body {
 
 .container {
   max-width: var(--container-width-large);
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+h1 {
+  margin-left: inherit;
+  margin-right: inherit;
 }
