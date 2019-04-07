@@ -1,5 +1,10 @@
-{{#if hasBlock}}
-  {{yield}}
-{{else}}
-  {{label}}
-{{/if}}
+<button
+  class="es-button {{if @isLight 'button-light'}} {{if @isTiny 'button-tiny'}} {{if @isBlock 'button-block'}}"
+  ...attributes
+>
+  {{#if hasBlock}}
+    {{yield}}
+  {{else}}
+    {{@label}}
+  {{/if}}
+</button>
