@@ -5,7 +5,7 @@
   {{#each contributorLinks as |link|}}
     <div class="contributor">
       <p>{{link.name}}</p>
-      <a href={{link.href}} title={{link.title}}>
+      <a href={{link.href}} title={{link.title}} aria-label={{link.title}}>
         {{svg-jar link.class class="contributor-logo"}}
       </a>
     </div>

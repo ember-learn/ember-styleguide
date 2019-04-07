@@ -2,15 +2,18 @@
 const socialLinks = [{
   title: 'Twitter',
   href: 'http://twitter.com/emberjs',
-  class: 'twitter-logo'
+  class: 'twitter-logo',
+  label: 'Official Ember Twitter Account'
 }, {
   title: 'GitHub',
   href: 'https://github.com/emberjs/ember.js',
-  class: 'github-logo'
+  class: 'github-logo',
+  label: 'Ember.js github repository'
 }, {
   title: 'Discord',
   href: 'https://discordapp.com/invite/zT3asNS',
-  class: 'discord-logo'
+  class: 'discord-logo',
+  label: 'Join the Ember Community Discord'
 }];
 
 
@@ -18,7 +21,7 @@ const contributorLinks = [{
   name: 'Hosted by:',
   title: "Heroku",
   href: 'https://www.heroku.com/emberjs',
-  class: 'heroku-logo'
+  class: 'heroku-logo',
 }, {
   name: 'CDN provided by:',
   title: "Fastly",
