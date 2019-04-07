@@ -10,6 +10,9 @@ export default Component.extend({
   tagName: 'li',
   tabIndex: 0,
 
+  role: 'menuitem',
+
+  attributeBindings: ['role'],
   classNameBindings: ['isDropdown:dropdown'],
   isDropdown: equal('link.type', 'dropdown'),
 

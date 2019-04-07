@@ -6,7 +6,6 @@ nav.es-navbar {
   width: 100%;
   height: 2.5rem;
   max-width: var(--container-width-large);
-  background-color: $orange;
 
   & .navbar-brand {
     margin-right: 2em;
@@ -52,40 +51,34 @@ ul[role="menubar"][aria-expanded="false"] {
   max-height: 0;
 }
 
-ul[role="menubar"] [role="menuitem"] {
+.navbar-link__dropdown {
   height: 100%;
   padding: 0 .5em;
   line-height: $menu-height;
 }
 
-ul[role="menubar"] [role="menuitem"]:focus,
-ul[role="menubar"] [role="menuitem"]:hover {
+.navbar-link__dropdown:focus,
+.navbar-link__dropdown:hover {
   background-color: white;
   color: $menu-orange;
 }
 
-ul[role="menubar"] a[role="menuitem"] {
+.navbar-link__dropdown {
   font-size: 0.8em;
   text-decoration: none;
   color: white;
 }
 
-ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:focus,
-ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:hover  {
+li[aria-expanded=true] .navbar-link__dropdown-item:focus,
+li[aria-expanded=true] .navbar-link__dropdown-item:hover  {
   outline: 0;
 }
 
-ul.dropdown a[role="menuitem"] {
+.navbar-link__dropdown-item {
   color: $menu-orange;
   padding: 0 1em;
   font-size: 0.8em;
   line-height: 2.5em;
-}
-
-ul[role="menubar"] [role="menuitem"]:focus,
-ul[role="menubar"] [role="menuitem"]:hover {
-  background-color: white;
-  color: $menu-orange;
 }
 
 ul[role="menubar"] li {
@@ -128,8 +121,8 @@ ul[role="menubar"] ul[role="menu"] {
 }
 
 
-ul[role="menubar"] ul[role="menu"] li a {
-  /* display: block; */
+.navbar-link__dropdown-item {
+  display: block;
   width: 15em;
 }
 
@@ -171,7 +164,7 @@ ul[role="menubar"] ul[role="menu"] a[aria-haspopup="true"]:after {
   }
 }
 
-// Large devices (desktops, 992px and up)
+/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   nav.es-navbar div.container {
     display: flex;
@@ -213,8 +206,8 @@ ul[role="menubar"] ul[role="menu"] a[aria-haspopup="true"]:after {
     max-height: inherit;
   }
 
-  ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:focus,
-  ul li[aria-expanded=true] ul.dropdown a[role="menuitem"]:hover  {
+  li[aria-expanded=true] .navbar-link__dropdown-item:focus,
+  li[aria-expanded=true] .navbar-link__dropdown-item:hover  {
     background-color: $orange;
     color: white;
     outline: inherit;

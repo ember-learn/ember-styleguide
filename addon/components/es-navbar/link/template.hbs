@@ -1,6 +1,6 @@
 {{#if (eq link.type "link")}}
   <a
-    role="menuitem"
+    class="navbar-link__dropdown"
     aria-haspopup="true"
     aria-expanded="false"
     href={{link.href}}
@@ -11,7 +11,7 @@
 {{/if}}
 {{#if (eq link.type "dropdown")}}
   <a
-    role="menuitem"
+    class="navbar-link__dropdown"
     aria-haspopup="true"
     aria-expanded="false"
     href="javascript:void(0)"
@@ -24,7 +24,7 @@
       {{#if (eq item.type "link")}}
         <li role="none">
           <a
-            role="menuitem"
+            class="navbar-link__dropdown-item"
             href={{item.href}}
             tabindex="-1"
           >
