@@ -1,0 +1,10 @@
+.es-button {
+  background-color: var(--color-ember-orange);
+  color: var(--color-light);
+  font-size: var(--text-preset-4);
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 4px;
+}

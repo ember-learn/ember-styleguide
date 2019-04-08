@@ -2,6 +2,9 @@
   --container-width-large: 64em;
   --color-dark: #1C1E23;
   --color-light: #FFF;
+  --color-ember-orange: #E04E39;
+
+  --text-preset-4: 18pt;
 }
 
 body {
