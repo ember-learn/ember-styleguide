@@ -7,10 +7,6 @@
   --text-preset-4: 18pt;
 }
 
-body {
-  font-size: 16pt;
-}
-
 .container {
   max-width: var(--container-width-large);
   margin-left: auto;

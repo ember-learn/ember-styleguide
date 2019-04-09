@@ -36,12 +36,19 @@ module.exports = {
         'tests/dummy/public'
       ]
     },
-    googleFonts: [
-      'Roboto:400,700'
-    ],
   },
 
   treeForPublic: function() {
     return new Funnel(path.join(this.root, 'public'));
   },
+
+  contentFor: function(type) {
+    if (type === 'head') {
+      // preload the most common fonts for modern browsers
+      return `<link rel="preload" as="font" type="font/woff2" href="/fonts/open-sans-v16-latin-regular.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/open-sans-v16-latin-300.woff2" crossorigin>`;
+    }
+
+    return '';
+  }
 };
