@@ -25,12 +25,39 @@
        url('/fonts/open-sans-v16-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-body {
-  font-size: 16pt;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 300;
+
+.sans {
+  font-family: 'Open Sans', sans-serif;
 }
 
-h1 {
-  font-weight: 300;
+.bold {
+  font-weight: 800;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.xsmall {
+  font-size: var(--text-preset-1);
+}
+
+.small {
+  font-size: var(--text-preset-2);
+}
+
+.medium {
+  font-size: var(--text-preset-3);
+}
+
+.large {
+  font-size: var(--text-preset-4);
+}
+
+.xlarge {
+  font-size: var(--text-preset-5);
+}
+
+.text-center {
+  text-align: center;
 }

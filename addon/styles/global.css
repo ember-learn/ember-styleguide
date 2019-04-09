@@ -1,10 +1,63 @@
 :root {
-  --container-width-large: 64em;
+  --container-width-large: 64rem;
   --color-dark: #1C1E23;
-  --color-light: #FFF;
+  --color-light: #FFFFFF;
+  --color-muted: #F4F6F8;
   --color-ember-orange: #E04E39;
+  --text-preset-1: 1rem;
+  --text-preset-2: 1.2rem;
+  --text-preset-3: 1.8rem;
+  --text-preset-4: 2.8rem;
+  --text-preset-5: 3.5rem;
+}
 
-  --text-preset-4: 18pt;
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  margin: 0 0 1.2rem 0;
+}
+
+@media (max-width: 1280px) and (min-width: 421px) {
+  body,
+  html {
+    
+  }
+}
+
+@media (max-width: 520px) {
+  body,
+  html {
+    
+  }
+}
+
+/* move beyond this point */
+
+.dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.muted {
+  background-color: var(--color-muted);
 }
 
 .container {
@@ -13,7 +66,8 @@
   margin-right: auto;
 }
 
-.dark {
-  background-color: var(--color-dark);
-  color: var(--color-light);
+.content-section {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  border: 1px solid #CCC;
 }
