@@ -1,0 +1,9 @@
+.card {
+  border: 1px solid var(--color-gray);
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+.card-content {
+  padding: 1em;
+}
