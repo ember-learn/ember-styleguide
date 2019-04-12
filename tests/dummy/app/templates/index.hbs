@@ -31,17 +31,18 @@
   <div class="container">
     <h2 class="large">Batteries are included</h2>
     <p>Ember’s out-of-the-box experience has everything you need to start building on day one, and keep shipping for years. Never wire together your own framework again.</p>
-    <div class="tabs">
-      <div class="tabs-item tabs-item--active">
-        <a class="tabs-link" href="#">Build Pipeline</a>
-      </div>
-      <div class="tabs-item">
-        <a class="tabs-link" href="#">Routing</a>
-      </div>
-      <div class="tabs-item">
-        <a class="tabs-link" href="#">Data Layer</a>
-      </div>
-    </div>
+
+    <EsTabs as |Tab|>
+      <Tab @title="Build Pipeline">
+        Ember CLI is the backbone of modern Ember apps. Code generators let you quickly create new components and tests. Use the local server for a development environment with Babel, fast rebuilds, auto-reloading and a test runner. Build your app for production with a single command.
+      </Tab>
+      <Tab @title="Routing">
+        I love me some routing
+      </Tab>
+      <Tab @title="Data Layer">
+        Let's get our data on 😎
+      </Tab>
+    </EsTabs>
 
     <div class="card">
       <div class="card-content">
@@ -52,4 +53,3 @@
     <p class="medium">Ember CLI is the backbone of modern Ember apps. Code generators let you quickly create new components and tests. Use the local server for a development environment with Babel, fast rebuilds, auto-reloading and a test runner. Build your app for production with a single command.</p>
   </div>
 </section>
-

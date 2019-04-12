@@ -1,0 +1,9 @@
+<div class="tabs-item {{if this.active 'tabs-item--active'}}">
+  <a class="tabs-link" href="javascript:void(0)" onclick={{action 'click'}}>{{@title}}</a>
+</div>
+
+{{#if this.active}}
+  <EmberWormhole @to={{@wormholeId}}>
+    <p>{{yield}}</p>
+  </EmberWormhole>
+{{/if}}
