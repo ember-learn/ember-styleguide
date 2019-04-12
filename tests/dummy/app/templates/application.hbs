@@ -1,2 +1,10 @@
-{{docs-header}}
-{{outlet}}
+<EsHeader class="dark">
+  <EsNavbar @home="/">
+  </EsNavbar>
+</EsHeader>
+
+<main>
+  {{outlet}}
+</main>
+
+<EsFooter />
