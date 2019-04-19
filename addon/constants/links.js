@@ -24,19 +24,19 @@ export default [{
   name: 'Releases',
   type: 'dropdown',
   items: [{
-    href: 'https://emberjs.com/builds',
+    href: 'https://emberjs.com/releases',
     name: 'Channels',
     type: 'link'
   }, {
-    href: 'https://emberjs.com/builds/release',
+    href: 'https://emberjs.com/releases/release',
     name: '→ Stable',
     type: 'link'
   }, {
-    href: 'https://emberjs.com/builds/beta',
+    href: 'https://emberjs.com/releases/beta',
     name: '→ Beta',
     type: 'link'
   }, {
-    href: 'https://emberjs.com/builds/canary',
+    href: 'https://emberjs.com/releases/canary',
     name: '→ Canary',
     type: 'link'
   }, {
@@ -116,7 +116,7 @@ export default [{
   }, {
     type: 'divider'
   }, {
-    href: 'https://emberjs.com/legal',
+    href: 'https://emberjs.com/about/legal',
     name: 'Legal',
     type: 'link'
   }, {
