@@ -14,8 +14,8 @@ export default [{
     name: 'CLI Guides',
     type: 'link'
   }, {
-    href: 'https://emberjs.com/editions/octane',
-    name: 'Ember Octane (Preview)',
+    href: 'https://emberjs.com/editions',
+    name: 'Editions',
     type: 'link'
   }, {
     type: 'divider'
