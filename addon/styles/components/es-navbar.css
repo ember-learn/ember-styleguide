@@ -10,6 +10,10 @@ nav.es-navbar {
   & .navbar-brand {
     margin-right: 2em;
   }
+
+  & ul, & li {
+    display:inline
+  }
 }
 
 nav.es-navbar .spacer {
@@ -212,8 +216,4 @@ ul[role="menubar"] ul[role="menu"] a[aria-haspopup="true"]:after {
     color: white;
     outline: inherit;
   }
-}
-
-ul, li {
-    display:inline
 }
