@@ -18,7 +18,9 @@ Router.map(function() {
   this.route('css', function() {
     this.route('overview');
     this.route('helpers');
-  })
+  });
+
+  this.route('demo');
 });
 
 export default Router;
