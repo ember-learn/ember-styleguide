@@ -1,24 +1,27 @@
 import Controller from '@ember/controller';
 
 const components = [
-  'accordion',
-  'aside',
   'button',
-  'buttonbar',
-  'card',
-  'codesample',
-  'datatable',
   'footer',
-  'form',
   'header',
-  'heading',
-  'main',
-  'nav',
   'navbar',
   'note',
-  'pagewrapper',
-  'search',
-  'ulist',
+  'page-header',
+
+  // TODO: consider deleting the component
+  // 'accordion',
+  // 'aside',
+  // 'buttonbar',
+  // 'card',
+  // 'codesample',
+  // 'datatable',
+  // 'form',
+  // 'heading',
+  // 'main',
+  // 'nav',
+  // 'pagewrapper',
+  // 'search',
+  // 'ulist',
 ]
 
 export default Controller.extend({
