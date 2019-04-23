@@ -36,7 +36,7 @@
     "normalize.css": "^8.0.1",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.6.0",
-    "sparkles-component": "^1.3.0"
+    "sparkles-component": "github:rwjblue/sparkles-component"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
