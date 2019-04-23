@@ -1,19 +1,16 @@
 import Component from "sparkles-component";
-import { action, computed } from '@ember-decorators/object';
 
 import defaultLinks from '../constants/links';
 
 export default class EsNavbar extends Component {
-  @computed('home')
   get navHome() {
-    if (this.home) {
-      return this.home;
+    if (this.args.home) {
+      return this.args.home;
     }
 
     return 'https://www.emberjs.com';
   }
 
-  @computed('links.[]')
   get navLinks() {
     if(this.links) {
       return this.links;
@@ -22,7 +19,6 @@ export default class EsNavbar extends Component {
     return defaultLinks;
   }
 
-  @action
   toggleMenu() {
     let menu = this.element.querySelector('ul[role="menubar"]');
 
