@@ -11,15 +11,15 @@ module('Integration | Component | es buttonbar', function(hooks){
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.on('myAction', function(val) { ... });
 
-    await render(hbs`{{es-buttonbar}}`);
+    await render(hbs`<EsButtonbar />`);
 
     assert.dom(this.element).hasText('');
 
     // Template block usage:
     await render(hbs`
-      {{#es-buttonbar}}
+      <EsButtonbar>
         template block text
-      {{/es-buttonbar}}
+      </EsButtonbar>
     `);
 
     assert.dom(this.element).hasText('template block text');

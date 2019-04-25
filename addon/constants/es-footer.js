@@ -16,18 +16,22 @@ const socialLinks = [{
 
 const contributorLinks = [{
   name: 'Hosted by:',
+  title: "Heroku",
   href: 'https://www.heroku.com/emberjs',
   class: 'heroku-logo'
 }, {
   name: 'CDN provided by:',
+  title: "Fastly",
   href: 'https://www.fastly.com',
   class: 'fastly-logo'
 }, {
   name: 'Tested with:',
+  title: "Percy",
   href: 'https://percy.io',
   class: 'percy-logo'
 }, {
   name: 'Resolved with:',
+  title: "Dnsimple",
   href: 'https://dnsimple.com/resolving/emberjs',
   class: 'dnsimple-logo-dark'
 }];
