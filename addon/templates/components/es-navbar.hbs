@@ -7,15 +7,12 @@
     >
   </a>
 
-  <ul role="menubar" aria-expanded="false">
+  <ul class="navbar-nav" role="menubar" aria-expanded="false">
     {{#each navLinks as |link index|}}
       {{es-navbar/link link=link index=index}}
     {{/each}}
   </ul>
 
-  <div class="spacer">
-
-  </div>
 
   {{#if hasBlock}}
     {{yield}}
