@@ -6,10 +6,7 @@
 	justify-content: center;
 	min-width: 100px;
 	margin: auto;
-	max-width: 95%;
-	@media screen and (min-width: 992px){
-		max-width: 80%;
-	}
+  max-width: 100%;
 	&.cta-background {
 		background-color: $orange-lightest;
 		border-radius: 2px;

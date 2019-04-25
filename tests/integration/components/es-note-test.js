@@ -10,7 +10,7 @@ module('Integration | Component | es note', function(hooks){
   test('it renders', async function(assert) {
     const testHeading = 'Tomster says... Zoey says...';
 
-    await render(hbs`{{es-note}}`);
+    await render(hbs`<EsNote />`);
 
     assert.ok(
       testHeading.includes(find('.cta-note-heading').textContent.trim()),
@@ -19,9 +19,9 @@ module('Integration | Component | es note', function(hooks){
     assert.dom('.cta-note-message').hasText('Hello!!! No message provided.');
 
     await render(hbs`
-      {{#es-note}}
+      <EsNote>
         template block text
-      {{/es-note}}
+      </EsNote>
     `);
 
     assert.ok(
@@ -46,7 +46,7 @@ module('Integration | Component | es note', function(hooks){
     for (let i = 0; i < 10; i++) {
       let name;
 
-      await render(hbs`{{es-note mascots=mascots}}`);
+      await render(hbs`<EsNote @mascots={{mascots}} />`);
       name = find('.cta-note-heading').textContent.trim().split(' ')[0];
 
       renderedNames.push(name);
