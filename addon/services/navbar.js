@@ -13,6 +13,10 @@ export default Service.extend({
     this.firstChars.push(item.element.querySelector('a').text.trim()[0].toLowerCase());
   },
 
+  closePopupMenu() {
+    this.items.forEach(item => item.closePopupMenu());
+  },
+
   setFocusToNextItem(item) {
     const items = this.get('items');
 

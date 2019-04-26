@@ -7,7 +7,7 @@
   </a>
 
   <ul role="menubar" aria-expanded="false">
-    {{#each links as |link index|}}
+    {{#each navLinks as |link index|}}
       {{es-navbar/link link=link index=index}}
     {{/each}}
   </ul>
@@ -39,7 +39,11 @@
     </form>
   {{/if}}
 
-  <button class="navbar-toggler ember-view" onclick={{action "toggleMenu"}}>
+  <button
+    class="navbar-toggler ember-view"
+    onclick={{action "toggleMenu"}}
+    aria-label="Open navigation"
+  >
     <span class="navbar-toggler-icon"></span>
   </button>
 </div>

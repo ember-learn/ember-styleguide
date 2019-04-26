@@ -30,13 +30,9 @@ export default Component.extend({
 
   navbar: service(),
 
-  init() {
-    this._super(...arguments);
-
-    this.element.tabIndex = -1;
-  },
-
   didInsertElement() {
+    this.element.tabIndex = -1;
+
     this.get('navbar').register(this);
     this.domNode = this.element.querySelector('ul[role="menu"]');
 
@@ -69,8 +65,8 @@ export default Component.extend({
     // Set CSS properties
     if(this.domNode) {
       this.domNode.style.display = 'block';
-      this.domNode.style.top = (rect.height - 1) + 'px';
-      this.domNode.style.zIndex = 100;
+      this.domNode.style.top = rect.height + 'px';
+      this.domNode.style.zIndex = 1000;
     }
 
     this.set('expanded', true);
