@@ -4,12 +4,12 @@
 
 {{#docs-demo as |demo|}}
   {{#demo.example name='es-blog-heading.hbs'}}
-    {{es-blog-heading
-      author='Sara Poster'
-      postDate='03-20-2018'
-      postUrl='https://emberjs.com/blog'
-      postTitle='Pretty Awesome Blog Post'
-    }}
+    <EsBlogHeading
+      @author='Sara Poster'
+      @postDate='03-20-2018'
+      @postUrl='https://emberjs.com/blog'
+      @postTitle='Pretty Awesome Blog Post'
+    />
   {{/demo.example}}
   {{demo.snippet 'es-blog-heading.hbs'}}
 {{/docs-demo}}
@@ -18,13 +18,13 @@
 
 {{#docs-demo as |demo|}}
   {{#demo.example name='es-blog-heading-guest.hbs'}}
-    {{es-blog-heading
-      author='Sara Poster'
-      postDate='03-20-2018'
-      postUrl='https://emberjs.com/blog'
-      postTitle='Pretty Awesome Blog Post'
-      isGuestPost=true
-    }}
+    <EsBlogHeading
+      @author='Sara Poster'
+      @postDate='03-20-2018'
+      @postUrl='https://emberjs.com/blog'
+      @postTitle='Pretty Awesome Blog Post'
+      @isGuestPost=true
+    />
   {{/demo.example}}
   {{demo.snippet 'es-blog-heading-guest.hbs'}}
 {{/docs-demo}}

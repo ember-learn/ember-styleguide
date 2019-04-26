@@ -26,12 +26,12 @@ module('Integration | Component | es blog heading', function(hooks) {
     });
 
     await render(hbs`
-      {{es-blog-heading
-        author=author
-        postDate=postDate
-        postUrl=postUrl
-        postTitle=postTitle
-      }}
+      <EsBlogHeading
+        @author={{author}}
+        @postDate={{postDate}}
+        @postUrl={{postUrl}}
+        @postTitle={{postTitle}}
+      />
     `);
 
     assert.dom('.post-title.list-view a').hasAttribute('href', postUrl, 'displays title as link');
@@ -49,12 +49,12 @@ module('Integration | Component | es blog heading', function(hooks) {
     });
 
     await render(hbs`
-      {{es-blog-heading
-        author=author
-        postDate=postDate
-        postUrl=postUrl
-        postTitle=postTitle
-      }}
+      <EsBlogHeading
+        @author={{author}}
+        @postDate={{postDate}}
+        @postUrl={{postUrl}}
+        @postTitle={{postTitle}}
+      />
     `);
 
     assert.dom('.post-title.list-view a').hasAttribute('href', postUrl, 'displays title as link when url is provided');
