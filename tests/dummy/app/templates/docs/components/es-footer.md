@@ -19,9 +19,9 @@
     {{!-- Check out the component blocks and their respective
     configuration --}}
     <EsFooter as |f|>
-      <f.info @infoLinks={{infoLinks}}/>
-      <f.statement @socialLinks={{socialLinks}}/>
-      <f.contributions @contributorLinks={{contributorLinks}}/>
+      <f.info @infoLinks={{infoLinks}} />
+      <f.statement @socialLinks={{socialLinks}} />
+      <f.contributions @contributorLinks={{contributorLinks}} />
     </EsFooter>
   {{/demo.example}}
   {{demo.snippet 'demo3'}}
