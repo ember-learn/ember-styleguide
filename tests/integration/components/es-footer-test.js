@@ -7,7 +7,7 @@ module('Integration | Component | es footer', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    await render(hbs`{{es-footer}}`);
+    await render(hbs`<EsFooter/>`);
 
     const footerSocialLinks = document.querySelectorAll('.footer-social a');
     const footerContribtuionsLinks = document.querySelectorAll('.footer-contributions .contributor');
