@@ -58,12 +58,12 @@ module('Integration | Component | es ulist', function(hooks){
     });
     module('Unordered List', function () {
 
-      test('the id value of the list title matches the value in the aria-describedby property on the list element', async function(assert){
+      test('the id value of the list title matches the value in the aria-labelledby property on the list element', async function(assert){
         assert.expect(2);
 
         await render(hbs`{{es-ulist elementId='mylist' isUnorderedList=true}}`);
 
-        assert.dom('.es-ulist ul').hasAttribute('aria-describedby', 'list-mylist');
+        assert.dom('.es-ulist ul').hasAttribute('aria-labelledby', 'list-mylist');
         assert.dom('.list-title').hasAttribute('id', 'list-mylist');
 
       });
