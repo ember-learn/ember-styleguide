@@ -99,13 +99,15 @@ ul[role="menu"] li {
 
 ul[role="menu"] li> a {
   padding: 1rem;
+  font-weight: 600;
   display: block;
   text-decoration: none;
-  color: var(--color-dark);
+  color: var(--color-ember-orange);
 }
 
-ul[role="menu"] li> a:hover {
-  background: var(--color-muted);
+ul[role="menu"] li> a:hover, ul[role="menu"] li> a:focus {
+  background: var(--color-ember-orange);
+  color: var(--color-light);
 }
 
 
