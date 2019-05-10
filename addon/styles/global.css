@@ -52,12 +52,12 @@ h6 {
 
 /* move beyond this point */
 
-.dark {
+.background-dark {
   background-color: var(--color-dark);
   color: var(--color-light);
 }
 
-.muted {
+.background-muted {
   background-color: var(--color-muted);
 }
 
@@ -71,4 +71,8 @@ h6 {
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
   border: 1px solid #CCC;
+}
+
+.background-orange {
+  background-color: var(--color-ember-orange);
 }

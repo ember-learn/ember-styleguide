@@ -1,4 +1,14 @@
-body > div.ember-view {
+:root {
+  --padding-small: 0.5rem;
+  --padding-medium: 1rem;
+  --font-size-medium: 1.2rem;
+  --font-size-small: 1rem;
+  --font-size-x-small: 0.8rem;
+  --font-weight-medium: 500;
+  --text-color-muted: #444444;
+}
+
+body>div.ember-view {
   display: grid;
   grid-template-areas:
     "nav nav"
@@ -54,8 +64,8 @@ pre {
   }
 
   & a {
-      color: #212121;
-      text-decoration: none
+    color: #212121;
+    text-decoration: none
   }
 
   & a.active {
@@ -67,4 +77,40 @@ pre {
     color: #ffc107;
     text-decoration: none
   }
+}
+
+.color-swatches-wrap {
+  display: flex;
+  margin: 0 -1rem;
+}
+
+.color-swatch {
+  border-radius: 4px;
+  border: 1px solid #CCC;
+  padding: var(--padding-medium);
+  margin: 1rem;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 25%;
+}
+
+.color-swatch-sample {
+  height: 100px;
+}
+
+.spec-list {
+}
+
+.spec-list-item {
+  margin-bottom: 1rem;
+}
+
+.spec-list-item .label {
+  font-size: var(--font-size-x-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-color-muted);
+}
+
+.spec-list-item .value {
+  font-size: var(--font-size-small);
 }
