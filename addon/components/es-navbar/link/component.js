@@ -9,7 +9,10 @@ export default Component.extend({
   tagName: 'li',
   tabIndex: 0,
 
+  expanded: false,
+
   classNameBindings: ['isDropdown:dropdown'],
+  attributeBindings: ['expanded:ariaExpanded'],
   isDropdown: equal('link.type', 'dropdown'),
 
   keyCode: Object.freeze({
@@ -87,14 +90,6 @@ export default Component.extend({
       }
       this.set('expanded', false);
     }
-  },
-
-  get expanded() {
-    return this.element.getAttribute('aria-expanded') === 'true';
-  },
-
-  set expanded(value) {
-    this.element.setAttribute('aria-expanded', value);
   },
 
   setFocusToFirstItem() {
