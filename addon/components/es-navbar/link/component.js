@@ -1,6 +1,5 @@
 import Component from '@ember/component';
 import layout from './template';
-import { computed } from '@ember/object';
 import { equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { next } from '@ember/runloop';
@@ -10,7 +9,10 @@ export default Component.extend({
   tagName: 'li',
   tabIndex: 0,
 
+  expanded: false,
+
   classNameBindings: ['isDropdown:dropdown'],
+  attributeBindings: ['expanded:ariaExpanded'],
   isDropdown: equal('link.type', 'dropdown'),
 
   keyCode: Object.freeze({
@@ -89,15 +91,6 @@ export default Component.extend({
       this.set('expanded', false);
     }
   },
-
-  expanded: computed({
-    get() {
-      return this.element.getAttribute('aria-expanded') === 'true';
-    },
-    set(key, value) {
-      this.element.setAttribute('aria-expanded', value);
-    }
-  }).volatile(),
 
   setFocusToFirstItem() {
     let element = this.element.querySelector('ul[role="menu"] li a')
