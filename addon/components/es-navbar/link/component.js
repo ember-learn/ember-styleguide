@@ -1,6 +1,5 @@
 import Component from '@ember/component';
 import layout from './template';
-import { computed } from '@ember/object';
 import { equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { next } from '@ember/runloop';
@@ -90,14 +89,13 @@ export default Component.extend({
     }
   },
 
-  expanded: computed({
-    get() {
-      return this.element.getAttribute('aria-expanded') === 'true';
-    },
-    set(key, value) {
-      this.element.setAttribute('aria-expanded', value);
-    }
-  }).volatile(),
+  get expanded() {
+    return this.element.getAttribute('aria-expanded') === 'true';
+  },
+
+  set expanded(value) {
+    this.element.setAttribute('aria-expanded', value);
+  },
 
   setFocusToFirstItem() {
     let element = this.element.querySelector('ul[role="menu"] li a')
