@@ -1,3 +1,5 @@
+@import "color-pallet";
+
 body > div.ember-view {
   display: grid;
   grid-template-areas:
