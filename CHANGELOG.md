@@ -1,4 +1,31 @@
 
+v3.0.0 / 2019-05-16
+==================
+
+  * Update nav links to refer to new subdomains #173 from @sivakumar-kailasam
+  * removing node 6, bumping LTS versions for ember-try #172 from @melsumner
+  * Bump ember-bootstrap to get rid of ember.copy deprecation #170 from @sivakumar-kailasam
+  * Convert es-footer to be an angle bracket component #125 from @esbanarango & @hakilebara
+  * Add ember-angle-bracket-invocation-polyfill #163 from @amyrlam
+  * Update legal and releases links #159 from @j-brennan
+  * fixing accessibility bugs on navbar toggle button and footer links #149 from @alexpark90
+  * Comply with axe-core 2.2 #150 from @wycats
+  * Update _es-navbar.scss #147 from @melsumner
+  * Navbar tweaks #146 from @mansona
+  * Update _es-note.scss #144 from @melsumner
+  * fixing z-index of dropdown #143 from @aklkv
+  * Add closePopupMenu function to navbar service #142 from @patocallaghan
+  * es-navbar: hide menu items when navbar is closed #140 from @mansona
+  * Fixing default links #139 from @mansona
+  * Fixing issue with element not being available when setting tabIndex #136 from @mansona
+  * replacing &rarr; with → #137 from @mansona
+  * Fully Accessible and Bootstrap-Free navbar #77 from @mansona
+  * update `links.js` #132 from @locks
+  * extract docs-note to a separate component #131 from @sivakumar-kailasam
+  * use angle-bracket syntax for es-blog-heading component #128 from @jbailey4
+  * use angle-bracket syntax for es-buttonbar component #127 from @jbailey4
+  * use angle-bracket syntax for es-note component #126 from @jbailey4
+
 v2.5.0 / 2018-12-06
 ==================
 
