@@ -14,10 +14,6 @@ export default [{
     name: 'CLI Guides',
     type: 'link'
   }, {
-    href: 'https://emberjs.com/editions',
-    name: 'Editions',
-    type: 'link'
-  }, {
     type: 'divider'
   }, {
     href: 'https://emberjs.com/learn',
@@ -45,6 +41,10 @@ export default [{
     type: 'link'
   }, {
     type: 'divider'
+  }, {
+    href: 'https://emberjs.com/editions',
+    name: 'Editions',
+    type: 'link'
   }, {
     href: 'https://emberjs.com/deprecations',
     name: 'Deprecations',
