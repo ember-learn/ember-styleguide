@@ -21,6 +21,12 @@ module.exports = {
     googleFonts: [
       'Roboto:400,700'
     ],
+    fontawesome: {
+      icons: {
+        'free-solid-svg-icons': 'all',
+        'free-regular-svg-icons': 'all',
+      }
+    },
   },
 
   included(app, parentAddon) {
