@@ -97,5 +97,8 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "resolutions": {
+    "ember-responsive": "github:freshbooks/ember-responsive#a21e0d4"
   }
 }
