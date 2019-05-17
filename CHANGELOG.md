@@ -1,5 +1,5 @@
 
-v3.0.0 / 2019-05-16
+v3.0.0 / 2019-05-17
 ==================
 
   * Update nav links to refer to new subdomains #173 from @sivakumar-kailasam
