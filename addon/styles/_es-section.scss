@@ -1,0 +1,12 @@
+.es-section {
+
+  &.dark {
+    background-color: $black;
+    color: $white;
+  }
+  &.accent {
+    .es-heading {
+      color: $orange;
+    }
+  }
+}
