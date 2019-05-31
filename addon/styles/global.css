@@ -5,11 +5,14 @@
   --color-muted: #F4F6F8;
   --color-ember-orange: #E04E39;
   --color-gray: #A2A3A8;
-  --text-preset-1: 1rem;
-  --text-preset-2: 1.2rem;
-  --text-preset-3: 1.8rem;
-  --text-preset-4: 2.8rem;
-  --text-preset-5: 3.5rem;
+  --text-preset-1: 0.8rem;
+  --text-preset-2: 1rem;
+  --text-preset-3: 2rem;
+  --text-preset-4: 3rem;
+  --text-preset-5: 4rem;
+  --font-weight-1: 300;
+  --font-weight-2: 400;
+  --font-weight-3: 600; 
 }
 
 body, html {
@@ -20,9 +23,9 @@ body, html {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: var(--text-preset-2);
   line-height: 1.6;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
   font-weight: 300;
 }
 
@@ -32,7 +35,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 300;
+  font-weight: 500;
   margin: 0 0 1.2rem 0;
 }
 
