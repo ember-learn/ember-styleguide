@@ -51,23 +51,23 @@
   font-style: italic;
 }
 
-.xsmall {
+.xsmall, small {
   font-size: var(--text-preset-1);
 }
 
-.small {
+.small, p {
   font-size: var(--text-preset-2);
 }
 
-.medium {
+.medium, h3 {
   font-size: var(--text-preset-3);
 }
 
-.large {
+.large, h2 {
   font-size: var(--text-preset-4);
 }
 
-.xlarge {
+.xlarge, h1 {
   font-size: var(--text-preset-5);
 }
 
@@ -79,7 +79,7 @@
   font-weight: var(--font-weight-2);
 }
 
-.bold {
+.bold, strong {
   font-weight: var(--font-weight-3);
 }
 
