@@ -66,7 +66,7 @@ export default [{
     name: 'Guidelines',
     type: 'link'
   }, {
-    href: 'http://github.com/emberjs/',
+    href: 'https://help-wanted.emberjs.com/',
     name: 'Contribute (Github)',
     type: 'link'
   }, {
