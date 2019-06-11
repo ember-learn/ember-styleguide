@@ -46,8 +46,8 @@ export default [{
     name: 'Deprecations',
     type: 'link'
   }, {
-    href: 'https://emberjs.com/statusboard',
-    name: 'Status Board',
+    href: 'https://github.com/emberjs/rfc-tracking/issues',
+    name: 'RFC Tracking',
     type: 'link'
   }]
 }, {
