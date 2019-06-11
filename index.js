@@ -1,6 +1,9 @@
 'use strict';
 const Funnel = require('broccoli-funnel');
+const MergeTrees = require('broccoli-merge-trees');
 const path = require('path');
+const resolve = require('resolve');
+const StaticSiteJson = require('broccoli-static-site-json');
 
 const CssImport = require('postcss-import')
 const PresetEnv = require('postcss-preset-env');
@@ -39,7 +42,14 @@ module.exports = {
   },
 
   treeForPublic: function() {
-    return new Funnel(path.join(this.root, 'public'));
+    const publicTree = new Funnel(path.join(this.root, 'public'));
+
+    const contentsJson = new StaticSiteJson('docs', {
+      contentFolder: 'docs',
+      collate: true,
+    });
+
+    return new MergeTrees([publicTree, contentsJson]);
   },
 
   contentFor: function(type) {
@@ -50,5 +60,24 @@ module.exports = {
     }
 
     return '';
-  }
+  },
+
+  treeForVendor(vendor) {
+    let templateCompilerTree = new Funnel(
+      path.dirname(resolve.sync('ember-source/package.json'), { basedir: this.project.root }),
+      {
+        srcDir: 'dist',
+        destDir: 'ember'
+      }
+    );
+    return new MergeTrees([
+      vendor,
+      templateCompilerTree,
+    ].filter(Boolean));
+  },
+
+  included() {
+    this._super.included.apply(this, arguments);
+    this.import('vendor/ember/ember-template-compiler.js');
+  },
 };
