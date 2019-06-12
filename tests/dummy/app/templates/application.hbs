@@ -3,13 +3,13 @@
   </EsNavbar>
 </EsHeader>
 
-{{!-- <aside>
+<aside>
   <ul class="styleguide-menu">
     <li>
       Guides
       <ul>
         <li>
-          {{#link-to 'index'}} Working with ember-styleguide {{/link-to}}
+          {{#link-to 'show' 'index'}} Working with ember-styleguide {{/link-to}}
         </li>
       </ul>
     </li>
@@ -17,13 +17,13 @@
       Foundations
       <ul>
         <li>
-          {{#link-to 'concepts.colours'}} Colours {{/link-to}}
+          {{#link-to 'show' 'concepts/colours'}} Colours {{/link-to}}
         </li>
         <li>
-          {{#link-to 'concepts.layout'}} Layout {{/link-to}}
+          {{#link-to 'show' 'concepts/layout'}} Layout {{/link-to}}
         </li>
         <li>
-          {{#link-to 'concepts.typeography'}} Typeography {{/link-to}}
+          {{#link-to 'show' 'concepts/typeography'}} Typeography {{/link-to}}
         </li>
       </ul>
     </li>
@@ -32,7 +32,7 @@
       <ul>
         {{#each components as |componentName|}}
           <li>
-            {{#link-to 'demo-components' componentName}} {{componentName}} {{/link-to}}
+            {{#link-to 'show' (concat 'components/demo-' componentName)}} {{componentName}} {{/link-to}}
           </li>
         {{/each}}
       </ul>
@@ -41,15 +41,15 @@
       CSS
       <ul>
         <li>
-          {{#link-to 'css.overview'}} Overview {{/link-to}}
+          {{#link-to 'show' 'css/overview'}} Overview {{/link-to}}
         </li>
         <li>
-          {{#link-to 'css.helpers'}} Helpers {{/link-to}}
+          {{#link-to 'show' 'css/helpers'}} Helpers {{/link-to}}
         </li>
       </ul>
     </li>
   </ul>
-</aside> --}}
+</aside>
 
 <main>
   {{outlet}}

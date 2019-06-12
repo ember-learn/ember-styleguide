@@ -4,33 +4,6 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 const CssImport = require('postcss-import')
 const PresetEnv = require('postcss-preset-env');
 
-var myMarked = require('marked');
-
-// Get reference
-var renderer = new myMarked.Renderer();
-
-let code = renderer.code;
-
-// Override function
-renderer.code = function () {
-  let result = code(...arguments);
-
-  console.log('code', code);
-
-  return '<h1>hello from code</h1>'
-
-  return result;
-  var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
-
-  return `
-          <h${level}>
-            <a name="${escapedText}" class="anchor" href="#${escapedText}">
-              <span class="header-link"></span>
-            </a>
-            ${text}
-          </h${level}>`;
-};
-
 module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
     svgJar: {
@@ -56,12 +29,6 @@ module.exports = function(defaults) {
           }
         ]
       }
-    },
-    'ember-cli-markdown-templates': {
-      syntaxHighlight: true,
-      markedOptions: {
-        renderer,
-      }
     }
   });
 
@@ -72,7 +39,6 @@ module.exports = function(defaults) {
     behave. You most likely want to be modifying `./index.js` or app's build file
   */
 
-  app.import('node_modules/ember-source/dist/ember-template-compiler.js');
   // app.import('vendor/shims/template-compiler.js');
   app.import('node_modules/highlightjs/styles/default.css');
 
