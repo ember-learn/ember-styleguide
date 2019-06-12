@@ -76,8 +76,29 @@ module.exports = {
     ].filter(Boolean));
   },
 
-  included() {
+  included(app) {
     this._super.included.apply(this, arguments);
     this.import('vendor/ember/ember-template-compiler.js');
+
+    if(!app.options['ember-prism']) {
+      app.options['ember-prism'] = {
+        // theme: 'okaidia',
+
+        components: [
+          'apacheconf',
+          'bash',
+          'css',
+          'handlebars',
+          'http',
+          'javascript',
+          'json',
+          'markup-templating',
+          'ruby',
+          'scss'
+        ],
+
+        plugins: ['line-numbers', 'normalize-whitespace']
+      }
+    }
   },
 };

@@ -7,21 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('show', { path: ':id' });
-  // this.route('concepts', function() {
-  //   this.route('colours');
-  //   this.route('layout');
-  //   this.route('typeography');
-  // })
-  //
-  // this.route('demo-components', { path: 'components/:id' });
-  //
-  // this.route('css', function() {
-  //   this.route('overview');
-  //   this.route('helpers');
-  // });
-  //
-  // this.route('demo');
+  this.route('show', { path: '*path' });
 });
 
 export default Router;
