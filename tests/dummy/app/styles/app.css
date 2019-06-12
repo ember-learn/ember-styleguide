@@ -72,10 +72,6 @@ footer {
   border-width: 1px;
   border-radius: 3px;
 
-  & .example {
-    margin: 10px;
-  }
-
   & pre {
     border-color: #CCC;
     border-width: 1px;
