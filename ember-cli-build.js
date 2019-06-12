@@ -39,8 +39,5 @@ module.exports = function(defaults) {
     behave. You most likely want to be modifying `./index.js` or app's build file
   */
 
-  // app.import('vendor/shims/template-compiler.js');
-  app.import('node_modules/highlightjs/styles/default.css');
-
   return app.toTree();
 };

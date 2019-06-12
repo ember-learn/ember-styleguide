@@ -1,6 +1,5 @@
 # Header
 
 ```handlebars
-{{es-header}}
+<EsHeader />
 ```
-{{es-header}}

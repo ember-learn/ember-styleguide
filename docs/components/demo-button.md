@@ -5,28 +5,22 @@
 Simplest use case: a button with text in it, telling the user what to do.
 
 ```handlebars
-{{es-button label="click me"}}
+<EsButton @label="click me" />
 ```
-
-{{es-button label="click me"}}
 
 
 Also supported- block use:
 
 ```handlebars
-{{#es-button}}
+<EsButton>
   click me <span>🐹</span>
-{{/es-button}}
+</EsButton>
 ```
-
-{{#es-button}}
-  click me <span>🐹</span>
-{{/es-button}}
 
 To toggle the 'disabled' property, set 'isDisabled' to true
 
 ```handlebars
-{{es-button label="click me" isDisabled=true}}
+<EsButton @label="click me" disabled=true />
 ```
 
 ## Styles
@@ -34,34 +28,26 @@ To toggle the 'disabled' property, set 'isDisabled' to true
 Outline button style:
 
 ```handlebars
-{{es-button label="click me" isDark=false}}
+<EsButton @label="click me" @isDark=false />
 ```
-
-{{es-button label="click me" isDark=false}}
 
 Smaller button:
 
 ```handlebars
-{{es-button label="click me" isTiny=true}}
+<EsButton @label="click me" @isTiny=true />
 ```
-
-{{es-button label="click me" isTiny=true}}
 
 Less Padding:
 
 ```handlebars
-{{es-button label="click me" isDark=true isDense=true}}
+<EsButton @label="click me" @isDark=true @isDense=true />
 ```
-
-{{es-button label="click me" isDark=true isDense=true}}
 
 Full-width button:
 
 ```handlebars
-{{es-button label="click me" isBlock=true}}
+<EsButton @label="click me" @isBlock=true />
 ```
-
-{{es-button label="click me" isBlock=true}}
 
 ## Accessibility
 
@@ -70,14 +56,10 @@ Since we're using the native HTML button element and requiring a label value to 
 If you are going to put an icon in the button, then you will need to set an aria-label property on the button:
 
 ```handlebars
-{{#es-button  ariaLabel="Hamster Secrets" title="Hamster Secrets"}}
+<EsButton @ariaLabel="Hamster Secrets" @title="Hamster Secrets">
   🐹
-{{/es-button}}
+</EsButton>
 ```
-
-{{#es-button  ariaLabel="Hamster Secrets" title="Hamster Secrets"}}
-  🐹
-{{/es-button}}
 
 ## Other Uses
 
