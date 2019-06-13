@@ -1,7 +1,8 @@
 
-v3.0.0 / 2019-05-16
+v3.0.0 / 2018-05-23
 ==================
 
+  * Updated ember-cli-addon-docs
   * Update nav links to refer to new subdomains #173 from @sivakumar-kailasam
   * removing node 6, bumping LTS versions for ember-try #172 from @melsumner
   * Bump ember-bootstrap to get rid of ember.copy deprecation #170 from @sivakumar-kailasam
