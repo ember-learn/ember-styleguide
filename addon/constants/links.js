@@ -6,7 +6,7 @@ export default [{
     name: 'Ember.js Guides',
     type: 'link'
   }, {
-    href: 'https://emberjs.com/api',
+    href: 'https://api.emberjs.com',
     name: 'API Reference',
     type: 'link'
   }, {
@@ -42,7 +42,7 @@ export default [{
   }, {
     type: 'divider'
   }, {
-    href: 'https://emberjs.com/deprecations',
+    href: 'https://deprecations.emberjs.com',
     name: 'Deprecations',
     type: 'link'
   }, {
@@ -51,7 +51,7 @@ export default [{
     type: 'link'
   }]
 }, {
-  href: 'https://emberjs.com/blog',
+  href: 'https://blog.emberjs.com',
   name: 'Blog',
   type: 'link'
 }, {
@@ -66,7 +66,7 @@ export default [{
     name: 'Guidelines',
     type: 'link'
   }, {
-    href: 'http://github.com/emberjs/',
+    href: 'https://help-wanted.emberjs.com/',
     name: 'Contribute (Github)',
     type: 'link'
   }, {
