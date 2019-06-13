@@ -48,13 +48,13 @@ module.exports = {
     this._super.included.apply(this, arguments);
   },
 
-  treeForStyles() {
-    return new Funnel(this.getEmberStyleguideStylesPath(), {
-      destDir: 'ember-styleguide'
-    });
-  },
+  // treeForStyles() {
+  //   return new Funnel(this.getEmberStyleguideStylesPath(), {
+  //     destDir: 'ember-styleguide'
+  //   });
+  // },
 
-  treeForAddonStyles(tree) {
+  treeForStyles(tree) {
     let bootstrapTree = new Funnel(this.getBootstrapStylesPath(), {
       destDir: 'ember-bootstrap'
     });
