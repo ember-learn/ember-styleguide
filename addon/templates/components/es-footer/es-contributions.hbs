@@ -1,0 +1,13 @@
+
+{{#if hasBlock}}
+  {{yield}}
+{{else}}
+  {{#each contributorLinks as |link|}}
+    <div class="contributor">
+      <p>{{link.name}}</p>
+      <a href={{link.href}} title={{link.title}}>
+        {{svg-jar link.class class="contributor-logo"}}
+      </a>
+    </div>
+  {{/each}}
+{{/if}}

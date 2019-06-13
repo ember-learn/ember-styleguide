@@ -1,25 +1,27 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('es-search', 'Integration | Component | es search', {
-  integration: true
-});
+module('Integration | Component | es search', function(hooks){
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
+  test('it renders', async function(assert) {
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{es-search}}`);
+    await render(hbs`{{es-search}}`);
 
-  assert.equal(this.$().text().trim(), '');
+    assert.dom('*').hasText('');
 
-  // Template block usage:
-  this.render(hbs`
-    {{#es-search}}
-      template block text
-    {{/es-search}}
-  `);
+    // Template block usage:
+    await render(hbs`
+      {{#es-search}}
+        template block text
+      {{/es-search}}
+    `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+    assert.dom(this.element).hasText('template block text');
+  });
 });

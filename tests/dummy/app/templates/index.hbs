@@ -1,31 +1,11 @@
-{{outlet}}
-
-{{#es-accordion as |accordionState|}}
-  {{#es-accordion/es-item
-    title="JavaScript Modules API"
-    status="shipped"
-    accordionItemIndex=0
-    accordionState=accordionState
+<div class="docs-hero">
+  {{docs-hero
+    logo="ember"
+    slimHeading="Ember"
+    strongHeading="Styleguide"
+    byline="A styleguide & component UI addon for the Ember.js family of websites."
   }}
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nisi culpa magnam quam sed exercitationem alias corrupti aspernatur illo nobis eos dicta esse quasi assumenda officiis nostrum, impedit voluptates commodi.</p>
-  {{/es-accordion/es-item}}
-  {{#es-accordion/es-item
-    title="Module Unification"
-    status="inProgress"
-    accordionItemIndex=1
-    accordionState=accordionState
-  }}
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nisi culpa magnam quam sed exercitationem alias corrupti aspernatur illo nobis eos dicta esse quasi assumenda officiis nostrum, impedit voluptates commodi.</p>
-  {{/es-accordion/es-item}}
-  {{#es-accordion/es-item
-    title="Code Splitting"
-    status="rfcSubmitted"
-    accordionItemIndex=2
-    accordionState=accordionState
-  }}
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nisi culpa magnam quam sed exercitationem alias corrupti aspernatur illo nobis eos dicta esse quasi assumenda officiis nostrum, impedit voluptates commodi.</p>
-  {{/es-accordion/es-item}}
-{{/es-accordion}}
+</div>
 
 {{#es-ulist list=model.normalList as |item|}}
   {{es-text text=item.text tagName="div" class="es-ulist-text"}}
@@ -106,3 +86,16 @@
       src="http://fillmurray.com/200/300"
   }}
 {{/es-card}}
+<div class="docs-container docs-md">
+  <section class="docs-max-w-md docs-mx-auto docs-pb-8">
+    <h2 class="flex items-center docs-h2"> Motivation </h2>
+
+    <p>This addon is intended to be the guide for the ember-styleguide and glimmer-styleguide components. Feedback is welcome in the team-learning channel of the <a href="https://discordapp.com/invite/zT3asNS" target="_blank" rel="noopener">Ember Community Discord chat</a>.</p>
+
+    <h2 class="flex items-center docs-h2">Installation</h2>
+    {{! template-lint-disable }}
+    <pre class="docs-md__code">
+      <code class="undefinedsh">ember install ember-styleguide</code>
+    </pre>
+  </section>
+</div>

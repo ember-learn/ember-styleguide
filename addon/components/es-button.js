@@ -9,29 +9,27 @@ export default Component.extend({
     classNames: ['es-button'],
     classNameBindings: [
       'buttonIcon',
-      'isDark:button-dark',
-      'isLight:button-light',
+      'isDark:button-dark:button-light',
       'isBlock:button-block',
       'isDense:button-dense',
       'isTiny:button-tiny',
       'isLink:button-link',
       'icon:button-icon',
+      'isDisabled:disabled'
     ],
     attributeBindings: [
       'ariaDisabled:aria-disabled',
-      'ariaDescribedby:aria-describedby',
       'ariaLabel:aria-label',
       'ariaPressed:aria-pressed',
       'dataRole:data-role',
-      'disabled',
-      'ariaRole:role',
+      'isDisabled:disabled',
       'title',
       'type'
     ],
 
     //attributes
     dataRole: null,
-    label: null,
+    label: null, //require this
     type: null,
 
     //sizes
@@ -41,16 +39,13 @@ export default Component.extend({
     isTiny: false,
 
     //style
-    isDark: false,
-    isLight: false,
-    disabled: false,
+    isDark: true,
+    isDisabled: false,
 
     //accessibility support
-    ariaDescribedby: null,
     ariaDisabled: false,
     ariaLabel: null,
     ariaPressed: null,
-    ariaRole: 'button',
     title: null,
 
     //icon support

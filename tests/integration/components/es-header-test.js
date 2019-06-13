@@ -1,42 +1,44 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('es-header', 'Integration | Component | es header', {
-    integration: true
-});
+module('Integration | Component | es header', function(hooks){
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
+  test('it renders', async function(assert) {
 
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.on('myAction', function(val) { ... });
 
-    this.render(hbs `{{es-header}}`);
+      await render(hbs `{{es-header}}`);
 
-    assert.equal(this.$().text().trim(), '');
+      assert.dom(this.element).hasText('');
 
-    // Template block usage:
-    this.render(hbs `
-    {{#es-header}}
-      template block text
-    {{/es-header}}
-  `);
+      // Template block usage:
+      await render(hbs `
+      {{#es-header}}
+        template block text
+      {{/es-header}}
+    `);
 
-    assert.equal(this.$().text().trim(), 'template block text');
-});
+      assert.dom(this.element).hasText('template block text');
+  });
 
-test('it uses the header html element', function(assert) {
-    this.render(hbs `{{es-header}}`);
-    assert.equal(this.$('header').length, 1, "the header uses the header html element!");
-});
+  test('it uses the header html element', async function(assert) {
+      await render(hbs `{{es-header}}`);
+      assert.dom('header').exists({ count: 1 }, "the header uses the header html element!");
+  });
 
-test('it has the role of banner', function(assert) {
-    this.render(hbs `{{es-header}}`);
-    assert.equal(this.$('header').attr('role'), 'banner', 'header has the role of banner');
-});
+  test('it has the role of banner', async function(assert) {
+      await render(hbs `{{es-header}}`);
+      assert.dom('header').hasAttribute('role', 'banner', 'header has the role of banner');
+  });
 
-//the class matches the component name
-//but how do I make it so it just checks for the one of them?
-test('it has the className es-header', function(assert) {
-    this.render(hbs `{{es-header}}`);
-    assert.equal(this.$('header').attr('class'), 'es-header ember-view', 'header has the class of es-header');
+  //the class matches the component name
+  //but how do I make it so it just checks for the one of them?
+  test('it has the className es-header', async function(assert) {
+      await render(hbs `{{es-header}}`);
+      assert.dom('header').hasAttribute('class', 'es-header ember-view', 'header has the class of es-header');
+  });
 });

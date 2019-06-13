@@ -1,11 +1,25 @@
-<div>
-    {{es-heading headingText=title tagName="h3" class="title"}}
-    
-    <ul aria-describedby="{{ariaDescribedby}}">                
-        {{#each listItems as |item|}}            
-            <li>
-                {{yield item}}
-            </li>
-        {{/each}}
-    </ul>    
-</div>
+<div class="list-title {{if isTitleVisible sr-only}}" id={{listId}}>{{listTitle}}</div>
+
+{{#if isUnorderedList}}
+  <ul aria-labelledby={{listId}} class="list list-default">
+    {{#each listItems as |item|}}
+      <li class="list-item">
+        {{#if hasLink}}
+          <a href={{item.link}} class="list-item-link">
+            {{#if hasImage}}
+              <img src={{item.image}} class="list-item-image" alt={{item.alt}}>
+            {{/if}}
+            {{item.text}}
+          </a>
+        {{else}}
+          {{#if hasImage}}
+            <img src={{item.image}} class="list-item-image" alt={{item.alt}}>
+          {{/if}}
+          {{item.text}}
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+
+{{/if}}

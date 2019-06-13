@@ -1,0 +1,95 @@
+body {
+	font-size: 16px;
+  font-family: $font-family;
+  font-weight: normal;
+  line-height: 1.2;
+  
+  @media screen and (min-width:992px) {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $orange-darker;
+  &:hover, &:focus {
+    color: $orange-darkest;
+  }
+}
+
+p {
+  min-width: 100%;
+
+  a {
+    color: $orange-darker;
+    text-decoration: underline;
+    &:hover, &:focus {
+      color: $orange-darkest;
+      cursor: pointer;
+    }
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+h1 {
+  color: $gray;
+  font-size: 2.25em;
+  font-weight: bold;
+  line-height: 1.125;
+  margin-bottom: 0.5em;
+  min-width: 100%;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+  
+  + p {
+    margin-top: 0;
+  }
+}
+
+h2 {
+	color: $orange-darkest;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1;
+  margin: 1.25em 0 0.75em 0;
+  min-width: 100%;
+  
+  &:first-of-type {
+    margin-top: 0;
+  }
+  
+  .icon-link-ext {
+    font-size: 0.6em;
+  }
+  
+  + p {
+    margin-top: 0;
+  }
+}
+
+h3 {
+  color: $gray-darker;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1;
+  margin: 1.25em auto 0.5em auto;
+
+  + p {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+h4 {
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1;
+  margin: 24px 0 12px 0;
+}
