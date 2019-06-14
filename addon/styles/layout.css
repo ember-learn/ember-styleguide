@@ -13,11 +13,28 @@
   flex-basis: 0;
 }
 
-.align-center {
+.justify-center {
   justify-content: center;
+}
+
+.align-end {
+  align-items: flex-end;
 }
 
 .col-50 {
   width: 50%;
   margin: 0 1rem;
 }
+
+@media (max-width: 576px) {
+  .row {
+    flex-direction: column;
+  }
+  .col-50 {
+    width: 100%;
+  }
+}
+
+
+
+

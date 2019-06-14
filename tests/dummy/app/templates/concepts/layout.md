@@ -3,7 +3,7 @@
 ### Content Width
 
 #### Center Aligned fixed width
-<div class="row align-center">
+<div class="row justify-center">
   <div class="col-50 text-center">
     <h2>Build with the teams that never stop shipping.</h2>
     <p>Some of the best development teams in the world have been iterating on their products for years with Ember. With scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use every step of the way.</p>
@@ -11,7 +11,7 @@
 </div>
 
 #### Left Aligned fixed width
-<div class="row align-start">
+<div class="row">
   <div class="col-50">
     <h3>A Simple Component</h3>
     <p>Ember Components are a superset of HTML – that means is a full-fledged Ember Component! To pass data into Components, use the @ symbol along with an argument name.</p>
@@ -63,5 +63,20 @@
         <p>Find out about the newest releases and latest work happening in the ecosystem by visiting the official Ember Blog.</p>
       </div>
     </div>
+  </div>
+</div>
+
+#### Photo Grid
+
+<div class="row align-end">
+  <div class="col">
+    <img class="img-fluid margin-bottom-small" src="https://dummyimage.com/400x500/000/fff">
+  </div>
+  <div class="col">
+    <img class="img-fluid margin-bottom-small" src="https://dummyimage.com/500x300/000/fff">
+    <img class="img-fluid margin-bottom-small" src="https://dummyimage.com/600x400/000/fff">
+  </div>
+  <div class="col">
+    <img class="img-fluid margin-bottom-small" src="https://dummyimage.com/400x500/000/fff">
   </div>
 </div>
