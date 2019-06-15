@@ -1,92 +1,12 @@
 @import "color-pallet";
 
-body > div.ember-view {
-  display: grid;
-  grid-template-areas:
-    "nav nav"
-    "toc content"
-    "footer footer";
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: auto;
-}
-
-header {
-  grid-area: nav;
-}
-
-aside {
-  grid-area: toc;
-}
-
-main {
-  grid-area: content;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-footer {
-  grid-area: footer;
-}
-
-/* Temporary styleguide menu */
-.styleguide-menu {
-  list-style: none;
-  padding-left: 1rem;
-  font-size: 14px;
-
-  & ul {
-    list-style: none;
-    padding-left: 1rem
-  }
-
-  & li {
-    display: list-item;
-    padding-top: .6rem;
-    text-transform: uppercase
-  }
-
-  & ul {
-    display: block;
-  }
-
-  & a {
-      color: #212121;
-      text-decoration: none
-  }
-
-  & a.active {
-    color: #00bcd4;
-    text-decoration: none
-  }
-
-  & a:hover {
-    color: #ffc107;
-    text-decoration: none
-  }
-}
-
-.self-executing-code-block {
-  border-color: #CCC;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 3px;
-
-  & pre {
-    border-color: #CCC;
-    border-width: 1px;
-    border-top-style: solid;
-    padding: 10px;
-    margin: 0;
-  }
-}
-
-p {
-  margin: 1em 0;
-}
-
 /* resetting back to common margins for headers */
-h1, h2, h3, h4, h5, h6 {
+.field-guide-wrapper > main > h1,
+.field-guide-wrapper > main > h2,
+.field-guide-wrapper > main > h3,
+.field-guide-wrapper > main > h4,
+.field-guide-wrapper > main > h5,
+.field-guide-wrapper > main > h6 {
   margin-block-start: 0.83em;
   margin-block-end: 0.83em;
   margin-inline-start: 0px;

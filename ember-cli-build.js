@@ -29,6 +29,23 @@ module.exports = function(defaults) {
           }
         ]
       }
+    },
+    // required until https://github.com/ember-cli/ember-cli/issues/8448 is fixed
+    'ember-prism': {
+      components: [
+        'apacheconf',
+        'bash',
+        'css',
+        'handlebars',
+        'http',
+        'javascript',
+        'json',
+        'markup-templating',
+        'ruby',
+        'scss'
+      ],
+
+      plugins: ['line-numbers', 'normalize-whitespace']
     }
   });
 

@@ -23,7 +23,14 @@ module.exports = function(environment) {
     },
 
     fastboot: {
-      hostWhitelist: ['example.com', 'subdomain.example.com', /^localhost:\d+$/]
+      hostWhitelist: [/^localhost:\d+$/]
+    },
+
+    'field-guide': {
+      name: 'Ember',
+      logo: '/ember-logo.png',
+      copyright: 'Ember Field Guide is designed to document the [ember-styleguide](https://github.com/ember-learn/ember-styleguide) project. For more information view the readme',
+      github: 'https://github.com/ember-learn/ember-styleguide'
     }
   };
 
