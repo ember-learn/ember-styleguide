@@ -2,8 +2,6 @@
 
 This component is not yet implemented
 
+```handlebars
+<EsDatatable />
 ```
-{{es-datatable}}
-```
-
-{{es-datatable}}

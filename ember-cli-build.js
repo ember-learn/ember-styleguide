@@ -6,6 +6,9 @@ const PresetEnv = require('postcss-preset-env');
 
 module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
+    fingerprint: {
+      extensions: ['js', 'css', 'map']
+    },
     svgJar: {
       sourceDirs: [
         'public',

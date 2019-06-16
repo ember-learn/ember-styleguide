@@ -1,9 +1,9 @@
-# Code Sample
+# Form
 
 This component is not yet implemented
 
 ```handlebars
-{{es-codesample}}
-```
+<EsForm>
 
-{{es-codesample}}
+</EsForm>
+```

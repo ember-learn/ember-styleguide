@@ -8,9 +8,28 @@ import {
 import {
   computed,
 } from '@ember/object';
-import {
-  Statuses as statuses,
-} from '../../constants/es-accordion';
+
+const statuses = [
+  {
+    status: 'shipped',
+    label: 'Shipped',
+    icon: 'fa-check-circle',
+    color: 'success',
+  },
+  {
+    status: 'inProgress',
+    label: 'In Progress',
+    icon: 'fa-dot-circle-o',
+    color: 'info',
+  },
+  {
+    status: 'rfcSubmitted',
+    label: 'RFC Submitted',
+    icon: 'fa-info-circle',
+    color: 'warning',
+  },
+];
+
 import {
   A,
 } from '@ember/array';

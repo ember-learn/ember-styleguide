@@ -1,6 +1,5 @@
 # Main
 
 ```handlebars
-{{es-main}}
+<EsMain />
 ```
-{{es-main}}

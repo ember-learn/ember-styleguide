@@ -73,7 +73,7 @@
     "ember-try": "^1.0.0",
     "eslint-plugin-ember": "^6.2.0",
     "eslint-plugin-node": "^9.0.1",
-    "field-guide": "^0.1.0",
+    "field-guide": "^0.1.2",
     "field-guide-default-template": "^0.1.1",
     "loader.js": "^4.7.0",
     "np": "*",

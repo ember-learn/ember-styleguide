@@ -1,7 +1,5 @@
 # Aside
 
 ```handlebars
-{{es-aside}}
+<EsAside />
 ```
-
-{{es-aside}}
