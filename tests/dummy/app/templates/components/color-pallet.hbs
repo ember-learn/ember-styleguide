@@ -19,6 +19,20 @@
       </dl>
     {{/if}}
 
+    {{#if @variable}}
+      <dl>
+        <dt class="color-pallet__details-title">Variable</dt>
+        <dd>{{@variable}}</dd>
+      </dl>
+    {{/if}}
+
+    {{#if @class-name}}
+      <dl>
+        <dt class="color-pallet__details-title">Class Name</dt>
+        <dd>{{@class-name}}</dd>
+      </dl>
+    {{/if}}
+
     <dl>
       <dt class="color-pallet__details-title">RGB</dt>
       <dd>{{rgbString}}</dd>

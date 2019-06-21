@@ -4,7 +4,7 @@
 
 #### Center Aligned fixed width
 <div class="row justify-center">
-  <div class="col-50 text-center">
+  <div class="col-one-half text-center">
     <h2>Build with the teams that never stop shipping.</h2>
     <p>Some of the best development teams in the world have been iterating on their products for years with Ember. With scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use every step of the way.</p>
   </div>
@@ -12,7 +12,7 @@
 
 #### Left Aligned fixed width
 <div class="row">
-  <div class="col-50">
+  <div class="col-one-half">
     <h3>A Simple Component</h3>
     <p>Ember Components are a superset of HTML – that means is a full-fledged Ember Component! To pass data into Components, use the @ symbol along with an argument name.</p>
   </div>

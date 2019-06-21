@@ -1,9 +1,14 @@
+.container {
+  padding: var(--spacing-4) 0;
+  margin: 0 auto;
+  width: var(--max-width);
+}
+
 .row {
   display: flex;
   margin-left: -1rem;
   margin-right: -1rem;
-  width: 100%;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
@@ -21,8 +26,13 @@
   align-items: flex-end;
 }
 
-.col-50 {
+.col-one-half {
   width: 50%;
+  margin: 0 1rem;
+}
+
+.col-one-third {
+  width: 30.3%;
   margin: 0 1rem;
 }
 
