@@ -5,6 +5,10 @@
   --color-muted: #F4F6F8;
   --color-ember-orange: #E04E39;
   --color-gray: #A2A3A8;
+  --color-success: #D9F9E3;
+  --color-danger: #FFD8E1;
+  --color-warning: #FCFFC9;
+  --color-info: #E3EEFC;
   --text-preset-1: 0.8rem;
   --text-preset-2: 1rem;
   --text-preset-3: 2rem;
@@ -13,6 +17,11 @@
   --font-weight-1: 300;
   --font-weight-2: 400;
   --font-weight-3: 600; 
+  --spacing-1: 0.5rem;
+  --spacing-2: 1rem;
+  --spacing-3: 2rem;
+  --spacing-4: 4rem;
+  --max-width: 80rem;
 }
 
 body, html {
@@ -60,8 +69,12 @@ h6 {
   color: var(--color-light);
 }
 
-.muted {
+.bg-muted {
   background-color: var(--color-muted);
+}
+
+.bg-info {
+  background: var(--color-info);
 }
 
 .container {
