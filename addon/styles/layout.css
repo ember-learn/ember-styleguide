@@ -1,0 +1,40 @@
+.row {
+  display: flex;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  width: 100%;
+  flex-wrap: nowrap;
+  margin-bottom: 2rem;
+}
+
+.row >.col {
+  margin: 0 1rem;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.col-50 {
+  width: 50%;
+  margin: 0 1rem;
+}
+
+@media (max-width: 576px) {
+  .row {
+    flex-direction: column;
+  }
+  .col-50 {
+    width: 100%;
+  }
+}
+
+
+
+
