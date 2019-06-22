@@ -32,7 +32,7 @@ const contributorLinks = [{
 }, {
   name: 'Resolved with:',
   title: "Dnsimple",
-  href: 'https://dnsimple.com/resolving/emberjs',
+  href: 'https://dnsimple.link/resolving-emberjs',
   class: 'dnsimple-logo-dark'
 }];
 
