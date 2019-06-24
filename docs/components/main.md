@@ -3,4 +3,3 @@
 ```handlebars
 {{es-main}}
 ```
-{{es-main}}

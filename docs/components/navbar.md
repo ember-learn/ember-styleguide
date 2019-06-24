@@ -5,10 +5,7 @@ The navbar comes with the default Ember links, if you would like to override the
 ```handlebars
 {{es-navbar}}
 ```
-{{es-navbar}}
 
 ```handlebars
 {{es-navbar links=customLinks}}
 ```
-
-{{es-navbar links=customLinks}}

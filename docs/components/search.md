@@ -3,5 +3,3 @@
 ```handlebars
 {{es-search}}
 ```
-
-{{es-search}}

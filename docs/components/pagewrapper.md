@@ -3,5 +3,3 @@
 ```handlebars
 {{es-pagewrapper}}
 ```
-
-{{es-pagewrapper}}

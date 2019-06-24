@@ -7,7 +7,6 @@ The primary palette is applied across every page of the website and contains the
 
 The following swatches contain a sample of each of the primary palette colours, along with recommendations for its usage and the acceptable contrast guidelines when coupled with text.
 
-
 <div class="row">
   <div class="col-one-third">
     <ColorPallet @color="#1A1A1A" @name="Dark Gray" @variable="--color-dark" @class-name="bg-dark"/>
@@ -22,6 +21,7 @@ The following swatches contain a sample of each of the primary palette colours, 
     <ColorPallet @color="#FFFFFF" @name="Light" @variable="--color-light" @class-name="bg-light"/>
   </div>
 </div>
+
 
 
 ## Secondary Colours
