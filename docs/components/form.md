@@ -7,7 +7,3 @@ This component is not yet implemented
 ...
 {{/es-form}}
 ```
-
-{{#es-form}}
-
-{{/es-form}}

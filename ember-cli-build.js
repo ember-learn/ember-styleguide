@@ -6,6 +6,9 @@ const PresetEnv = require('postcss-preset-env');
 
 module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
+    fingerprint: {
+      extensions: ['js', 'css', 'map']
+    },
     svgJar: {
       sourceDirs: [
         'public',
@@ -30,8 +33,22 @@ module.exports = function(defaults) {
         ]
       }
     },
-    'ember-cli-markdown-templates': {
-      syntaxHighlight: true,
+    // required until https://github.com/ember-cli/ember-cli/issues/8448 is fixed
+    'ember-prism': {
+      components: [
+        'apacheconf',
+        'bash',
+        'css',
+        'handlebars',
+        'http',
+        'javascript',
+        'json',
+        'markup-templating',
+        'ruby',
+        'scss'
+      ],
+
+      plugins: ['line-numbers', 'normalize-whitespace']
     }
   });
 
@@ -41,8 +58,6 @@ module.exports = function(defaults) {
     This build file does *not* influence how the addon or the app using it
     behave. You most likely want to be modifying `./index.js` or app's build file
   */
-
-  app.import('node_modules/highlightjs/styles/default.css');
 
   return app.toTree();
 };
