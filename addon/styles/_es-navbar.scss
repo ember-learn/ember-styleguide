@@ -109,10 +109,6 @@ ul[role="menubar"] > li.dropdown > a:after {
   border-left: 4px solid transparent;
 }
 
-ul[role="menubar"][aria-expanded="true"] ul[role="menu"]{
-  top: 0 !important;
-}
-
 ul[role="menubar"] ul[role="menu"] {
   display: none;
   width: 100%;
