@@ -25,7 +25,11 @@ export default [{
   type: 'dropdown',
   items: [{
     href: 'https://emberjs.com/releases',
-    name: 'Channels',
+    name: 'Overview',
+    type: 'link'
+  }, {
+    href: 'https://emberjs.com/releases/lts',
+    name: '→ LTS',
     type: 'link'
   }, {
     href: 'https://emberjs.com/releases/release',
