@@ -39,8 +39,8 @@ export default Component.extend({
       this.element.querySelector('button').onmousedown = () => this.expand();
       let links = Array.from(this.domNode.querySelectorAll('a'))
 
-      links.forEach((ancor) => {
-        ancor.addEventListener('blur', () => this.handleBlur());
+      links.forEach((anchor) => {
+        anchor.addEventListener('blur', () => this.handleBlur());
       });
     }
   },
