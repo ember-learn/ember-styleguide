@@ -51,6 +51,7 @@ export default Component.extend({
   // - if I'm in a dropdown list, should I be able to TAB key through that list?
   // - if yes, what should happen when I am on the last item in the list and press the TAB key again?
   // - also remember that SHIFT + TAB will need to work too (if TAB does)
+  // - how much of this should go into es-navbar.js instead of here in the es-navbar/link component?
   
 
 
