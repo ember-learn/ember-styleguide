@@ -1,23 +1,27 @@
-nav.es-navbar {
-  width: 100%;
-  max-width: var(--container-width-large);
-  padding: 1rem;
-  font-size: var(--text-preset-2);
+.es-navbar {
+  background-color: #1C1E23;
+  color: white;
   display: flex;
   flex-direction: column;
+  font-size: var(--text-preset-2);
+  max-width: var(--container-width-large);
+  padding: 0.5rem;
+  width: 100%;
 }
 
 .navbar-brand {
   display: block;
-  padding: 0 2rem;
-  height: 6rem;
+  padding: 0 1rem;
+  height: 3rem;
+  /* TODO using order is not ideal for accessibility */
   order: 2;
 }
 
-.navbar-nav {
+.navbar-list {
   padding: 0;
   width: 100%;
-  margin: 1rem 0 0 0;
+  margin: 0.5rem 0 0 0;
+  /* TODO using order is not ideal for accessibility */
   order: 3;
 }
 
@@ -27,9 +31,10 @@ nav.es-navbar {
   border-radius: 4px;
   border-color: var(--color-light);
   margin-left: auto;
+  /* TODO using order is not ideal for accessibility */
   order: 1;
-  margin-bottom: -6rem;
-  height: 6rem;
+  margin-bottom: -3rem;
+  height: 3rem;
 }
 
 .navbar-toggler .navbar-toggler-icon {
@@ -38,107 +43,125 @@ nav.es-navbar {
 
 .navbar-toggler-icon {
   display: block;
-  width: 5rem;
-  height: 3rem;
-  vertical-align: middle;
+  width: 2.5rem;
+  height: 1.5rem;
   content: "";
   background: center center no-repeat;
   background-size: 100% 100%;
 }
 
-.navbar-nav >li {
+.navbar-list-item {
   list-style: none;
   position: relative;
 }
 
-.navbar-link__dropdown {
-  display: block;
-  padding: 2rem;
-  line-height: 2rem;
+.navbar-list-item-link {
+  padding: 1rem;
+  color: inherit;
   text-decoration: none;
-  color: #FFF;
-  white-space: nowrap;
-  font-weight: 600;
 }
 
-.dropdown .navbar-link__dropdown::after {
+.navbar-list-item-dropdown-toggle {
+  background-color: transparent;
+  border-color: transparent;
+  color: #FFF;
+  display: block;
+  font-weight: 600;
+  line-height: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navbar-list-item-dropdown-toggle::after {
   content: '';
   display: inline-block;
   width: 0;
   height: 0;
   vertical-align: middle;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   border-top: 5px dashed;
-  border-top: 5px solid var(--color-orange);
+  border-top: 5px solid var(--color-ember-orange);
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
 }
 
-li[aria-expanded=true] .navbar-link__dropdown {
+.navbar-list-item-dropdown-toggle[aria-expanded="true"] {
   background: #FFFFFF;
-  color: var(--color-orange);
+  color: var(--color-ember-orange);
 }
 
-ul[role="menu"] {
+.navbar-dropdown-list {
   display: none;
   padding: 0;
   background: #FFFFFF;
-  box-shadow: 5px 5px 5px 0 rgba(50,50,50,0.2);
+  box-shadow: 5px 5px 5px 0 rgba(50, 50, 50, 0.2);
 }
 
-ul[role="menu"] hr {
+li.separator {
   margin: 0;
+  /* TODO fix this */
+  border-bottom: 1px solid black;
 }
 
-ul[role="menu"] li {
+.navbar-dropdown-list-item {
   list-style: none;
   display: block;
   white-space: nowrap;
   background: #FFF;
 }
 
-ul[role="menu"] li> a {
-  padding: 2rem;
+.navbar-dropdown-list-item-link {
+  padding: 1rem;
   font-weight: 600;
   display: block;
   text-decoration: none;
-  color: var(--color-orange);
+  color: var(--color-ember-orange);
 }
 
-ul[role="menu"] li> a:hover, ul[role="menu"] li> a:focus {
-  background: var(--color-orange);
+.navbar-dropdown-list-item-link:hover,
+.navbar-dropdown-list-item-link:focus {
+  background: var(--color-ember-orange);
   color: var(--color-light);
 }
 
 
-ul[role="menubar"][aria-expanded="true"] li{
+/* TODO This rule doesn't make sense so I'm commenting it out for now
+ul[role="menubar"][aria-expanded="true"] li {
   background: blue;
-}
+} */
 
 @media (min-width: 992px) {
   nav.es-navbar {
     display: flex;
     flex-direction: row;
   }
+
   .navbar-brand {
     padding: 0;
+    /* TODO using order is not ideal for accessibility */
     order: 1;
   }
-  .navbar-nav {
+
+  .navbar-list {
+    /* TODO using order is not ideal for accessibility */
     order: 2;
-    margin: 0 2rem;
+    margin: 0 1rem;
     padding: 0;
     display: flex;
     align-items: center;
   }
+
   .navbar-toggler {
+    /* TODO using order is not ideal for accessibility */
     order: 3;
   }
-  ul[role="menu"] {
+
+  .navbar-dropdown-list {
     display: none;
     position: absolute;
     padding: 0;
     background: #FFFFFF;
-    box-shadow: 5px 5px 5px 0 rgba(50,50,50,0.2);
+    box-shadow: 5px 5px 5px 0 rgba(50, 50, 50, 0.2);
   }
 }

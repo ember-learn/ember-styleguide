@@ -1,47 +1,12 @@
-<nav class="es-navbar" aria-label="Ember">
+<nav class="es-navbar">
+  <button class="navbar-toggler ember-view" onclick={{action this.toggleMenu}} aria-label="Site Navigation" aria-expanded="false">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <a class="navbar-brand" href={{navHome}}>
-    <img
-      src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg"
-      alt="home"
-    >
-  </a>
-
-  <ul class="navbar-nav" role="menubar" aria-expanded="false">
+  <ul class="navbar-list">
     {{#each navLinks as |link index|}}
       {{es-navbar/link link=link index=index}}
     {{/each}}
   </ul>
 
-
-  {{#if hasBlock}}
-    {{yield}}
-  {{else}}
-    <form class="navbar-form navbar-right searchbox">
-      <div class="input-group">
-        <label for="search-input" class="control-label sr-only">Search</label>
-        <input
-          type="text"
-          class="form-control search input ds-input"
-          placeholder="Search..."
-          id="search-input"
-          role="combobox"
-          aria-expanded="false"
-          aria-owns="algolia-autocomplete-listbox-0"
-          autocorrect="off"
-          autocapitalize="none"
-          spellcheck="false"
-        >
-        <span></span>
-      </div>
-    </form>
-  {{/if}}
-
-  <button
-    class="navbar-toggler ember-view"
-    onclick={{action this.toggleMenu}}
-    aria-label="Open navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
 </nav>
