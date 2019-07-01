@@ -3,7 +3,9 @@
   color: white;
   display: flex;
   flex-direction: column;
-  font-size: var(--text-preset-2);
+  /* font-size: var(--text-preset-2); */
+  font-size: 1.2em;
+  font-weight: 500;
   max-width: var(--container-width-large);
   padding: 0.5rem;
   width: 100%;
@@ -42,12 +44,12 @@
 }
 
 .navbar-toggler-icon {
-  display: block;
-  width: 2.5rem;
-  height: 1.5rem;
-  content: "";
-  background: center center no-repeat;
   background-size: 100% 100%;
+  background: center center no-repeat;
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 2.5rem;
 }
 
 .navbar-list-item {
@@ -56,8 +58,8 @@
 }
 
 .navbar-list-item-link {
-  padding: 1rem;
   color: inherit;
+  padding: 1rem;
   text-decoration: none;
 }
 
@@ -66,102 +68,103 @@
   border-color: transparent;
   color: #FFF;
   display: block;
-  font-weight: 600;
-  line-height: 1rem;
   padding: 1rem;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.navbar-list-item-dropdown-toggle::after {
-  content: '';
-  display: inline-block;
-  width: 0;
-  height: 0;
-  vertical-align: middle;
-  margin-left: 0.5rem;
-  border-top: 5px dashed;
-  border-top: 5px solid var(--color-ember-orange);
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
+.navbar-list-item-dropdown-toggle:hover {
+  cursor: pointer;
 }
 
-.navbar-list-item-dropdown-toggle[aria-expanded="true"] {
-  background: #FFFFFF;
-  color: var(--color-ember-orange);
-}
+  .navbar-list-item-dropdown-toggle::after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px dashed;
+    border-top: 5px solid white;
+    content: '';
+    display: inline-block;
+    height: 0;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    width: 0;
+  }
 
-.navbar-dropdown-list {
-  display: none;
-  padding: 0;
-  background: #FFFFFF;
-  box-shadow: 5px 5px 5px 0 rgba(50, 50, 50, 0.2);
-}
+  .navbar-list-item-dropdown-toggle[aria-expanded="true"] {
+    background: #FFFFFF;
+    color: var(--color-ember-orange);
+  }
 
-li.separator {
-  margin: 0;
-  /* TODO fix this */
-  border-bottom: 1px solid black;
-}
+  .navbar-dropdown-list {
+    background: #FFFFFF;
+    box-shadow: 5px 5px 5px 0 rgba(50, 50, 50, 0.2);
+    display: none;
+    padding: 0;
+  }
 
-.navbar-dropdown-list-item {
-  list-style: none;
-  display: block;
-  white-space: nowrap;
-  background: #FFF;
-}
+  li.separator {
+    margin: 0;
+    /* TODO fix this */
+    border-bottom: 1px solid black;
+  }
 
-.navbar-dropdown-list-item-link {
-  padding: 1rem;
-  font-weight: 600;
-  display: block;
-  text-decoration: none;
-  color: var(--color-ember-orange);
-}
+  .navbar-dropdown-list-item {
+    background: #FFF;
+    display: block;
+    list-style: none;
+    white-space: nowrap;
+  }
 
-.navbar-dropdown-list-item-link:hover,
-.navbar-dropdown-list-item-link:focus {
-  background: var(--color-ember-orange);
-  color: var(--color-light);
-}
+  .navbar-dropdown-list-item-link {
+    color: var(--color-ember-orange);
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+  }
+
+  .navbar-dropdown-list-item-link:hover,
+  .navbar-dropdown-list-item-link:focus {
+    background: var(--color-ember-orange);
+    color: var(--color-light);
+  }
 
 
-/* TODO This rule doesn't make sense so I'm commenting it out for now
+  /* TODO This rule doesn't make sense so I'm commenting it out for now
 ul[role="menubar"][aria-expanded="true"] li {
   background: blue;
 } */
 
-@media (min-width: 992px) {
-  nav.es-navbar {
-    display: flex;
-    flex-direction: row;
-  }
+  @media (min-width: 992px) {
+    nav.es-navbar {
+      display: flex;
+      flex-direction: row;
+    }
 
-  .navbar-brand {
-    padding: 0;
-    /* TODO using order is not ideal for accessibility */
-    order: 1;
-  }
+    .navbar-brand {
+      padding: 0;
+      /* TODO using order is not ideal for accessibility */
+      order: 1;
+    }
 
-  .navbar-list {
-    /* TODO using order is not ideal for accessibility */
-    order: 2;
-    margin: 0 1rem;
-    padding: 0;
-    display: flex;
-    align-items: center;
-  }
+    .navbar-list {
+      /* TODO using order is not ideal for accessibility */
+      order: 2;
+      align-items: center;
+      display: flex;
+      margin: 0 1rem;
+      padding: 0;
+    }
 
-  .navbar-toggler {
-    /* TODO using order is not ideal for accessibility */
-    order: 3;
-  }
+    .navbar-toggler {
+      /* TODO using order is not ideal for accessibility */
+      order: 3;
+    }
 
-  .navbar-dropdown-list {
-    display: none;
-    position: absolute;
-    padding: 0;
-    background: #FFFFFF;
-    box-shadow: 5px 5px 5px 0 rgba(50, 50, 50, 0.2);
+    .navbar-dropdown-list {
+      background: #FFFFFF;
+      box-shadow: 5px 5px 5px 0 rgba(50, 50, 50, 0.2);
+      display: none;
+      padding: 0;
+      position: absolute;
+    }
   }
-}

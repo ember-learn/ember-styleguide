@@ -17,7 +17,7 @@
   --text-preset-5: 12rem;
   --font-weight-1: 300;
   --font-weight-2: 400;
-  --font-weight-3: 600; 
+  --font-weight-3: 600;
   --spacing-1: 2rem;
   --spacing-2: 4rem;
   --spacing-3: 8rem;
@@ -29,7 +29,8 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 2rem;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 
@@ -53,14 +54,14 @@ h6 {
 @media (max-width: 1280px) and (min-width: 421px) {
   body,
   html {
-    
+
   }
 }
 
 @media (max-width: 520px) {
   body,
   html {
-    
+
   }
 }
 
