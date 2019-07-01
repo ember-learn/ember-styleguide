@@ -29,11 +29,11 @@ body, html {
   padding: 0;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
+  line-height: 1.5;
 }
 
 p {
   font-size: var(--text-preset-2);
-  line-height: 1.6;
   margin: 0 0 0.5rem 0;
   font-weight: 300;
 }
