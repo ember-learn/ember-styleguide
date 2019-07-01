@@ -33,10 +33,10 @@ export default Component.extend({
     // this.element.tabIndex = -1;
 
     this.get('navbar').register(this);
-    this.domNode = this.element.querySelector('ul[role="menu"]');
+    this.domNode = this.element.querySelector('ul.navbar-dropdown-list');
 
     if(this.domNode) {
-      this.element.querySelector('a').onmousedown = () => this.expand();
+      this.element.querySelector('button').onmousedown = () => this.expand();
       let links = Array.from(this.domNode.querySelectorAll('a'))
 
       links.forEach((ancor) => {
