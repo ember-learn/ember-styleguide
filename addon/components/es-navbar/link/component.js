@@ -29,21 +29,29 @@ export default Component.extend({
 
   navbar: service(),
 
-  // TODO open dropdown menu
+  // TODO open the dropdown menu
   // - set aria-expanded on the dropdown button to true
   // - show the dropdown-list
   // - remove tabindex=-1 from links in the dropdown-list 
 
-  // TODO close dropdown menu
+  // TODO close the dropdown menu
   // - set aria-expanded on the dropdown button to false
   // - hide the dropdown-list 
   // - add tabindex=-1 to the links in the dropdown-list
 
   // TODO down arrow key navigation
   // - moves focus to the next link in the list
-  // - if it's at the last item, close the dropdown menu (3 steps) then move focus to the next top-level item in the navbar
+  // - if it's at the last item, either: don't do anything, or go to the first item in the dropdown-list 
   
   // TODO up arrow key navigation
   // - moves focus to the previous item in the list. 
-  // - if it's at the first item, close the dropdown menu (3 steps) then move focus to the previous top-level item in the navbar
+  // - if it's at the first item, either: don't do anything, or go to the last item in the dropdown-list
+
+  // TODO questions to answer: 
+  // - if I'm in a dropdown list, should I be able to TAB key through that list?
+  // - if yes, what should happen when I am on the last item in the list and press the TAB key again?
+  // - also remember that SHIFT + TAB will need to work too (if TAB does)
+  
+
+
 });
