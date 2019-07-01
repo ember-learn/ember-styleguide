@@ -7,24 +7,24 @@ import { next } from '@ember/runloop';
 
 export default Component.extend({
   layout,
-  tagName: 'li',
-  classNames: ['navbar-list-item'],
-  classNameBindings: ['isDropdown:dropdown'],
-  isDropdown: equal('link.type', 'dropdown'),
+  tagName: "li",
+  classNames: ["navbar-list-item"],
+  classNameBindings: ["isDropdown:dropdown"],
+  isDropdown: equal("link.type", "dropdown"),
 
   keyCode: Object.freeze({
-    'TAB': 9,
-    'RETURN': 13,
-    'ESC': 27,
-    'SPACE': 32,
-    'PAGEUP': 33,
-    'PAGEDOWN': 34,
-    'END': 35,
-    'HOME': 36,
-    'LEFT': 37,
-    'UP': 38,
-    'RIGHT': 39,
-    'DOWN': 40
+    TAB: 9,
+    RETURN: 13,
+    ESC: 27,
+    SPACE: 32,
+    PAGEUP: 33,
+    PAGEDOWN: 34,
+    END: 35,
+    HOME: 36,
+    LEFT: 37,
+    UP: 38,
+    RIGHT: 39,
+    DOWN: 40
   }),
 
   navbar: service(),
@@ -32,29 +32,33 @@ export default Component.extend({
   didInsertElement() {
     // this.element.tabIndex = -1;
 
-    this.get('navbar').register(this);
-    this.domNode = this.element.querySelector('ul.navbar-dropdown-list');
+    this.get("navbar").register(this);
+    this.domNode = this.element.querySelector("ul.navbar-dropdown-list");
 
-    if(this.domNode) {
-      this.element.querySelector('button').onmousedown = () => this.expand();
-      let links = Array.from(this.domNode.querySelectorAll('a'))
+    if (this.domNode) {
+      this.element.querySelector("button").onmousedown = () => this.expand();
+      let links = Array.from(this.domNode.querySelectorAll("a"));
 
-      links.forEach((anchor) => {
-        anchor.addEventListener('blur', () => this.handleBlur());
+      links.forEach(anchor => {
+        anchor.addEventListener("blur", () => this.handleBlur());
       });
     }
   },
 
   handleBlur() {
     next(this, function() {
-      let subItems = Array.from(this.element.querySelectorAll('.navbar-dropdown-list-item'));
-      let focused = subItems.find(item => document.activeElement === item.querySelector('button'));
+      let subItems = Array.from(
+        this.element.querySelectorAll(".navbar-dropdown-list-item")
+      );
+      let focused = subItems.find(
+        item => document.activeElement === item.querySelector("button")
+      );
 
       // debugger
-      if(!focused) {
+      if (!focused) {
         this.closePopupMenu();
       }
-    })
+    });
   },
 
   openPopupMenu() {
@@ -62,13 +66,14 @@ export default Component.extend({
     var rect = this.element.getBoundingClientRect();
 
     // Set CSS properties
-    if(this.domNode) {
-      this.domNode.style.display = 'block';
-      this.domNode.style.top = rect.height + 'px';
+    // TODO add a CSS class instead and attach these properties in the stylesheet.
+    if (this.domNode) {
+      this.domNode.style.display = "block";
+      this.domNode.style.top = rect.height + "px";
       this.domNode.style.zIndex = 10;
     }
 
-    this.set('expanded', true);
+    this.set("expanded", true);
   },
 
   closePopupMenu(force) {
@@ -81,38 +86,45 @@ export default Component.extend({
     }
 
     if (force || (!hasFocus && !this.hasHover && !controllerHasHover)) {
-      if(this.domNode) {
-        this.domNode.style.display = 'none';
+      if (this.domNode) {
+        this.domNode.style.display = "none";
         this.domNode.style.zIndex = 0;
       }
-      this.set('expanded', false);
+      this.set("expanded", false);
     }
   },
 
   expanded: computed({
+    //TODO fix this per https://deprecations.emberjs.com/v3.x/#toc_computed-property-volatile
     get() {
-      return this.element.getAttribute('aria-expanded') === 'true';
+      return this.element.getAttribute("aria-expanded") === "true";
     },
     set(key, value) {
-      this.element.setAttribute('aria-expanded', value);
+      this.element.setAttribute("aria-expanded", value);
     }
   }).volatile(),
 
   setFocusToFirstItem() {
-    let element = this.element.querySelector('.navbar-dropdown-list-item-link')
+    let element = this.element.querySelector(".navbar-dropdown-list-item-link");
     if (element) {
       element.focus();
     }
   },
 
   setFocusToLastItem() {
-    this.element.querySelector('ul[role="menu"] li a:last-of-type').focus();
+    this.element
+      .querySelector(".navbar-dropdown-list-item-link:last-of-type")
+      .focus();
   },
 
   setFocusToNextItem() {
-    let subItems = Array.from(this.element.querySelectorAll('ul[role="menu"] li'));
+    let subItems = Array.from(
+      this.element.querySelectorAll(".navbar-dropdown-list-item")
+    );
 
-    let focused = subItems.find(item => document.activeElement === item.querySelector('a'));
+    let focused = subItems.find(
+      item => document.activeElement === item.querySelector("a")
+    );
     let focusedIndex = subItems.indexOf(focused);
 
     let nextItem = subItems[(focusedIndex + 1) % subItems.length];
@@ -121,13 +133,17 @@ export default Component.extend({
       return;
     }
 
-    nextItem.querySelector('a').focus();
+    nextItem.querySelector("a").focus();
   },
 
   setFocusToPreviousItem() {
-    let subItems = Array.from(this.element.querySelectorAll('ul[role="menu"] li'));
+    let subItems = Array.from(
+      this.element.querySelectorAll(".navbar-dropdown-list-item")
+    );
 
-    let focused = subItems.find(item => document.activeElement === item.querySelector('a'));
+    let focused = subItems.find(
+      item => document.activeElement === item.querySelector("a")
+    );
     let focusedIndex = subItems.indexOf(focused);
 
     let nextIndex = focusedIndex - 1;
@@ -142,7 +158,7 @@ export default Component.extend({
       return;
     }
 
-    nextItem.querySelector('a').focus();
+    nextItem.querySelector("a").focus();
   },
 
   keyDown(event) {
@@ -155,15 +171,15 @@ export default Component.extend({
       case this.keyCode.SPACE:
         // Create simulated mouse event to mimic the behavior of ATs
         // and let the event handler handleClick do the housekeeping.
-        mousedownEvent = new MouseEvent('mousedown', {
-          'view': window,
-          'bubbles': true,
-          'cancelable': true
+        mousedownEvent = new MouseEvent("mousedown", {
+          view: window,
+          bubbles: true,
+          cancelable: true
         });
-        clickEvent = new MouseEvent('click', {
-          'view': window,
-          'bubbles': true,
-          'cancelable': true
+        clickEvent = new MouseEvent("click", {
+          view: window,
+          bubbles: true,
+          cancelable: true
         });
 
         document.activeElement.dispatchEvent(mousedownEvent);
@@ -172,7 +188,7 @@ export default Component.extend({
         flag = true;
         break;
       case this.keyCode.DOWN:
-        if(this.get('expanded')) {
+        if (this.get("expanded")) {
           this.setFocusToNextItem();
         } else {
           this.openPopupMenu();
@@ -182,17 +198,17 @@ export default Component.extend({
         break;
 
       case this.keyCode.LEFT:
-        this.get('navbar').setFocusToPreviousItem(this);
+        this.get("navbar").setFocusToPreviousItem(this);
         flag = true;
         break;
 
       case this.keyCode.RIGHT:
-        this.get('navbar').setFocusToNextItem(this);
+        this.get("navbar").setFocusToNextItem(this);
         flag = true;
         break;
 
       case this.keyCode.UP:
-        if(this.get('expanded')) {
+        if (this.get("expanded")) {
           this.setFocusToPreviousItem();
         } else {
           this.openPopupMenu();
@@ -229,12 +245,12 @@ export default Component.extend({
 
   expand() {
     next(this, () => {
-      if(this.get('expanded')) {
+      if (this.get("expanded")) {
         this.closePopupMenu();
       } else {
         this.openPopupMenu();
         this.setFocusToFirstItem();
       }
-    })
+    });
   }
 });
