@@ -65,7 +65,7 @@ export default Component.extend({
     if(this.domNode) {
       this.domNode.style.display = 'block';
       this.domNode.style.top = rect.height + 'px';
-      this.domNode.style.zIndex = 1000;
+      this.domNode.style.zIndex = 10;
     }
 
     this.set('expanded', true);
