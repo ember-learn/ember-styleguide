@@ -20,7 +20,7 @@ export default class EsNavbar extends Component {
   }
 
   toggleMenu() {
-    let menu = this.element.querySelector('ul[role="menubar"]');
+    let menu = this.element.querySelector('.navbar-list');
 
     menu.setAttribute('aria-expanded', menu.getAttribute('aria-expanded') !== 'true');
   }

@@ -8,11 +8,7 @@ import { next } from '@ember/runloop';
 export default Component.extend({
   layout,
   tagName: 'li',
-  tabIndex: 0,
-
-  role: 'menuitem',
-
-  attributeBindings: ['role'],
+  classNames: ['navbar-list-item'],
   classNameBindings: ['isDropdown:dropdown'],
   isDropdown: equal('link.type', 'dropdown'),
 
@@ -34,7 +30,7 @@ export default Component.extend({
   navbar: service(),
 
   didInsertElement() {
-    this.element.tabIndex = -1;
+    // this.element.tabIndex = -1;
 
     this.get('navbar').register(this);
     this.domNode = this.element.querySelector('ul[role="menu"]');
@@ -51,8 +47,8 @@ export default Component.extend({
 
   handleBlur() {
     next(this, function() {
-      let subItems = Array.from(this.element.querySelectorAll('ul[role="menu"] li'));
-      let focused = subItems.find(item => document.activeElement === item.querySelector('a'));
+      let subItems = Array.from(this.element.querySelectorAll('.navbar-dropdown-list-item'));
+      let focused = subItems.find(item => document.activeElement === item.querySelector('button'));
 
       // debugger
       if(!focused) {
@@ -103,7 +99,7 @@ export default Component.extend({
   }).volatile(),
 
   setFocusToFirstItem() {
-    let element = this.element.querySelector('ul[role="menu"] li a')
+    let element = this.element.querySelector('.navbar-dropdown-list-item-link')
     if (element) {
       element.focus();
     }
