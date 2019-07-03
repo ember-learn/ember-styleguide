@@ -159,8 +159,7 @@ ul[role="menubar"][aria-expanded="true"] li {
     }
 
     .navbar-toggler {
-      /* TODO using order is not ideal for accessibility */
-      order: 3;
+      display: none; /* TODO remove this properly or else screen readers will still pick up on it */
     }
 
     .navbar-dropdown-list {
