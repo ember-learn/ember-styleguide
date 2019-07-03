@@ -8,27 +8,29 @@
 {{/if}}
 {{#if (eq link.type "dropdown")}}
   <button
+    {{action "triggerDropdown"}}
     class="navbar-list-item-dropdown-toggle"
-    aria-expanded="false"
+    aria-expanded={{isExpanded}}
   >
     {{link.name}}
   </button>
-  <ul class="navbar-dropdown-list">
-    {{#each link.items as |item|}}
-      {{#if (eq item.type "link")}}
-        <li class="navbar-dropdown-list-item">
-          <a
-            class="navbar-dropdown-list-item-link"
-            href={{item.href}}
-            tabindex="-1"
-          >
-            {{item.name}}
-          </a>
-        </li>
-      {{/if}}
-      {{#if (eq item.type "divider")}}
-        <li role="separator" class="separator"></li>
-      {{/if}}
-    {{/each}}
-  </ul>
+  {{#if isDropdownOpen}}
+    <ul class="navbar-dropdown-list">
+      {{#each link.items as |item|}}
+        {{#if (eq item.type "link")}}
+          <li class="navbar-dropdown-list-item">
+            <a
+              class="navbar-dropdown-list-item-link"
+              href={{item.href}}
+            >
+              {{item.name}}
+            </a>
+          </li>
+        {{/if}}
+        {{#if (eq item.type "divider")}}
+          <li role="separator" class="separator"></li>
+        {{/if}}
+      {{/each}}
+    </ul>
+  {{/if}}
 {{/if}}

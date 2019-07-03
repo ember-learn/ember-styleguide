@@ -3,21 +3,23 @@ import layout from './template';
 import { computed } from '@ember/object';
 import { equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
-import { next } from '@ember/runloop';
+import { schedule, next } from '@ember/runloop';
 
 export default Component.extend({
   layout,
-  tagName: "li",
-  classNames: ["navbar-list-item"],
-  classNameBindings: ["isDropdown:dropdown"],
-  isDropdown: equal("link.type", "dropdown"),
+  tagName: 'li',
+  classNames: ['navbar-list-item'],
+  classNameBindings: ['isDropdown:dropdown'],
+  isDropdown: equal('link.type', 'dropdown'),
 
-  // we need a few keys to respond when we use them
-  // the ESC key should close the dropdown menu we are currently on
-  // the TAB key should close the dropdown menu we are currently on and move focus to the next item in the top-level of the navbar
-  // the ENTER or SPACE key should toggle the dropdown menu. It will already visit whatever link is focused because we used semantic HTML
-  // the UP and DOWN key should move us up and down inside of the list we are already in
+  isDropdownOpen: false,
 
+  // because aria-expanded requires a string value instead of a boolean
+  isExpanded: computed('isDropdownOpen', function() {
+    return this.isDropdownOpen ? 'true' : 'false';
+  }),
+
+  // TODO do we need this?
   keyCode: Object.freeze({
     TAB: 9,
     RETURN: 13,
@@ -27,32 +29,59 @@ export default Component.extend({
     DOWN: 40
   }),
 
-  navbar: service(),
+  navbar: service(), //TODO  also do we need this too?
 
-  // TODO open the dropdown menu
-  // - set aria-expanded on the dropdown button to true
-  // - show the dropdown-list
-  // - remove tabindex=-1 from links in the dropdown-list 
+  actions: {
+    triggerDropdown() {
+      this.toggleProperty('isDropdownOpen');
 
-  // TODO close the dropdown menu
-  // - set aria-expanded on the dropdown button to false
-  // - hide the dropdown-list 
-  // - add tabindex=-1 to the links in the dropdown-list
+      if (this.isDropdownOpen) {
+        // once it's open, let's make sure it can do some things
+        schedule('afterRender', this, function() {
+          // Define startup states
+          // Dropdown list
+          let dropdownList = this.element.querySelector('.navbar-dropdown-list');
 
-  // TODO down arrow key navigation
-  // - moves focus to the next link in the list
-  // - if it's at the last item, either: don't do anything, or go to the first item in the dropdown-list 
-  
-  // TODO up arrow key navigation
-  // - moves focus to the previous item in the list. 
-  // - if it's at the first item, either: don't do anything, or go to the last item in the dropdown-list
+          // Identify / set focus on the first item in the dropdown list automatically
+          let firstFocusable = this.element.querySelector('.navbar-dropdown-list li:first-of-type a');
+          firstFocusable.focus();
+          
+          // Need some event listeners for keyboard events
+          dropdownList.addEventListener('keydown', event => {
+          
+            // Listen for ESC key to exit
+            if (event.keyCode === 27 && this.isDropdownOpen) {
+              this.closeDropdown();
+            } else if (this.isDropdownOpen) {
+              // if focus leaves the open dropdown, close it (without trying to otherwise control focus)
+              this.handleBlur();
+            } else {
+              return;
+            }
+          });
+        });
+      }
+    }
+  },
+  closeDropdown() {
+    // set the isDropdownOpen to false, which will make the dropdown go away
+    this.set('isDropdownOpen', false);
+    // after that rendering bit happens, we need to return the focus to the trigger
+    schedule('afterRender', this, function() {
+      let dropdownTrigger = this.element.querySelector('.navbar-list-item-dropdown-toggle');
+      dropdownTrigger.focus();
+    });
+  },
 
-  // TODO questions to answer: 
-  // - if I'm in a dropdown list, should I be able to TAB key through that list?
-  // - if yes, what should happen when I am on the last item in the list and press the TAB key again?
-  // - also remember that SHIFT + TAB will need to work too (if TAB does)
-  // - how much of this should go into es-navbar.js instead of here in the es-navbar/link component?
-  
+  handleBlur() {
+    next(this, function() {
+      let subItems = Array.from(this.element.querySelectorAll('.navbar-dropdown-list li'));
+      let focused = subItems.find(item => document.activeElement === item.querySelector('a'));
 
+      if (!focused) {
+        this.set('isDropdownOpen', false);
+      }
+    });
+  }
 
 });
