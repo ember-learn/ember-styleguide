@@ -10,6 +10,16 @@
           </div>
       {{/each}}
     </div>
+
+    <div class="color-pallet__example-text-row" style="grid-template-columns: repeat({{textClasses.length}}, 1fr)">
+      {{#each textClasses as |textClass|}}
+          <span class="{{textClass}} color-pallet__example-text text-light">A</span>
+
+          <div class="color-pallet__example-text-result">
+            <span {{did-insert this.checkPassFail textClass rgb}}></span>
+          </div>
+      {{/each}}
+    </div>
   </div>
   <div class="color-pallet__details">
     {{#if @name}}
