@@ -65,7 +65,7 @@ export default Component.extend({
     this.set('isDropdownOpen', false);
   },
 
-  handleBlur() {
+  handleBlur() { //TODO this isn't working, figure out why
     next(this, function() {
       let subItems = Array.from(this.element.querySelectorAll('.navbar-dropdown-list li'));
       let focused = subItems.find(item => document.activeElement === item.querySelector('a'));
