@@ -20,12 +20,13 @@ env:
     # See https://git.io/vdao3 for details.
     - JOBS=1
 
-# test the PRS to website-redesign-rfc
-# branches:
-#   only:
-#     - master
-#     # npm version tags
-#     - /^v\d+\.\d+\.\d+/
+branches:
+  only:
+    # test the PRS to website-redesign-rfc
+    - website-redesign-rfc
+    - master
+    # npm version tags
+    - /^v\d+\.\d+\.\d+/
 
 jobs:
   fail_fast: true
