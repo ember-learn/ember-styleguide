@@ -28,23 +28,24 @@ export default Component.extend({
       if (this.isDropdownOpen) {
         // once it's open, let's make sure it can do some things
         schedule('afterRender', this, function() {
-          // Define startup states
-          // Dropdown list
+
+
+          // move focus to the first item in the dropdown
           let dropdownList = this.element.querySelector('.navbar-dropdown-list');
+          this.handleFirstElementFocus();
 
-          // Identify / set focus on the first item in the dropdown list automatically
-          let firstFocusable = this.element.querySelector('.navbar-dropdown-list li:first-of-type a');
-          firstFocusable.focus();
-
-          // Need some event listeners for keyboard events
+          // add event listeners for keyboard events
           dropdownList.addEventListener('keydown', event => {
 
-            // Listen for ESC key to exit
+            // ESC key should close the dropdown and return focus to the toggle
             if (event.keyCode === 27 && this.isDropdownOpen) {
               this.closeDropdown();
+              this.returnFocus();
+
+            // if focus leaves the open dropdown, close it (without trying to otherwise control focus)
             } else if (this.isDropdownOpen) {
-              // if focus leaves the open dropdown, close it (without trying to otherwise control focus)
               this.handleBlur();
+
             } else {
               return;
             }
@@ -53,9 +54,19 @@ export default Component.extend({
       }
     }
   },
+
   closeDropdown() {
     // set the isDropdownOpen to false, which will make the dropdown go away
     this.set('isDropdownOpen', false);
+  },
+
+  handleFirstElementFocus() {
+    // Identify / set focus on the first item in the dropdown list automatically
+    let firstFocusable = this.element.querySelector('.navbar-dropdown-list li:first-of-type a');
+    firstFocusable.focus();
+  },
+
+  returnFocus() {
     // after that rendering bit happens, we need to return the focus to the trigger
     schedule('afterRender', this, function() {
       let dropdownTrigger = this.element.querySelector('.navbar-list-item-dropdown-toggle');
@@ -72,6 +83,10 @@ export default Component.extend({
         this.set('isDropdownOpen', false);
       }
     });
+  },
+
+  willDestroyElement() {
+    document.removeEventListener('keydown', this.triggerDropdown);
   }
 
 });
