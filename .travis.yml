@@ -22,6 +22,8 @@ env:
 
 branches:
   only:
+    # test the PRS to website-redesign-rfc
+    - website-redesign-rfc
     - master
     # npm version tags
     - /^v\d+\.\d+\.\d+/
