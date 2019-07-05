@@ -19,16 +19,6 @@ export default Component.extend({
     return this.isDropdownOpen ? 'true' : 'false';
   }),
 
-  // TODO do we need this?
-  keyCode: Object.freeze({
-    TAB: 9,
-    RETURN: 13,
-    ESC: 27,
-    SPACE: 32,
-    UP: 38,
-    DOWN: 40
-  }),
-
   navbar: service(), //TODO  also do we need this too?
 
   actions: {
