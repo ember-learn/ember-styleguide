@@ -93,6 +93,8 @@
 }
 .text-intro {
   font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.4;
   margin-bottom: 6vh;
 }
 

@@ -98,21 +98,21 @@ h1, h2 {
 
 /* the weird shit for the backgrounds */
 .section-bg-wrapper {
+  height: 725px;
+  margin-bottom: -690px;
   position: relative;
-  height: 750px;
   width: 100%;
-  margin-bottom: -650px;
 }
 .section-bg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 30%;
-  height: 100%;
   background-image: linear-gradient(#e04e39, #e04e39);
-  transform: skewY(-15deg);
-  transform-origin: bottom right;
-  z-index:-1;
   border-top-left-radius: 7px;
+  bottom: 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: bottom right;
+  transform: skewY(-15deg);
+  width: 30%;
+  z-index:-1;
 }
