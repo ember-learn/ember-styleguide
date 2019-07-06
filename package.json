@@ -37,6 +37,7 @@
     "normalize.css": "^8.0.1",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.6.0",
+    "rsvp": "^4.8.5",
     "sparkles-component": "github:rwjblue/sparkles-component"
   },
   "devDependencies": {

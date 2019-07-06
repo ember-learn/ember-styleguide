@@ -2,9 +2,17 @@
   background-color: var(--color-ember-orange);
   color: var(--color-light);
   font-size: var(--text-preset-2);
-  padding-left: 4.5rem;
-  padding-right: 4.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   border-radius: 4px;
+}
+.link-as-button {
+  text-decoration: none;
+}
+
+.es-button-icon {
+  background-color: transparent;
+  border-color: transparent;
 }
