@@ -23,6 +23,9 @@
   --spacing-4: 4rem;
   --max-width: 80rem;
 }
+*, *:after {
+  box-sizing: border-box;
+}
 
 body, html {
   margin: 0;
@@ -32,10 +35,10 @@ body, html {
   line-height: 1.5;
 }
 
-p {
-  font-size: var(--text-preset-2);
-  margin: 0 0 0.5rem 0;
-  font-weight: 300;
+p { 
+  font-size: 1.25em;
+  font-weight: 400;
+  margin: 0.25em 0.5em;
 }
 
 h1,
@@ -50,6 +53,7 @@ h6 {
 
 h1, h2 {
   min-width: 100%;
+  line-height: 1;
 }
 
 @media (max-width: 1280px) and (min-width: 421px) { 
@@ -60,12 +64,6 @@ h1, h2 {
   }
 }
 
-@media (max-width: 520px) {
-  body,
-  html {
-    
-  }
-}
 
 /* move beyond this point */
 

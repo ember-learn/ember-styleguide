@@ -2,10 +2,27 @@
   width: 100%;
 }
 
-.margin-bottom-small, .margin-bottom-2rem {
+.margin-bottom-small, .margin-bottom-narrow {
   margin-bottom: 2rem;
 }
 
-.margin-left-small {
+.margin-left-small, .margin-left-narrow {
   margin-left: 2rem;
 }
+
+
+/* if we name the modifiers the same as a word or google doc would use for page layout, it's more intuitive */
+/* TODO we can adjust these, I'm more putting these here because I need them in general */
+.padding-sides-normal {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.padding-sides-narrow {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.padding-sides-wide {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+

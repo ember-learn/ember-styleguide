@@ -1,0 +1,18 @@
+.es-list {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+/* TODO not sure how to write this in the style this project is now using */
+
+/* .es-list-images {
+  & img {
+    max-width: 50%;
+    & @media screen and (min-width: 992px) {
+      max-width: 125px;
+      height: auto;
+    }
+  }
+} */

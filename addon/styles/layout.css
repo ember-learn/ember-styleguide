@@ -6,9 +6,7 @@
 
 .row {
   display: flex;
-  margin-left: -1rem;
-  margin-right: -1rem;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   margin-bottom: 2rem;
 }
 
@@ -40,7 +38,9 @@
   width: 30.3%;
   margin: 0 1rem;
 }
-
+.one-third {
+  width: 33.3333%;
+}
 @media (max-width: 576px) {
   .row {
     flex-direction: column;
@@ -56,6 +56,9 @@
 section {
   display: flex;
   flex-flow: row wrap;
+  @media screen and (min-width: 992px) {
+    padding-top: 4em;
+  }
   & .full {
       min-width: 100%;
   }
