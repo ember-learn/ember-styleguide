@@ -6,12 +6,13 @@ const browsers = [
   'last 1 Safari versions'
 ];
 
-const isCI = !!process.env.CI;
-const isProduction = process.env.EMBER_ENV === 'production';
-
-if (isCI || isProduction) {
-  browsers.push('ie 11');
-}
+// TODO: Temporary fix for Travis tests
+// const isCI = !!process.env.CI;
+// const isProduction = process.env.EMBER_ENV === 'production';
+//
+// if (isCI || isProduction) {
+//   browsers.push('ie 11');
+// }
 
 module.exports = {
   browsers

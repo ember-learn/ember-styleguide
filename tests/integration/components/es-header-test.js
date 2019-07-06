@@ -39,6 +39,6 @@ module('Integration | Component | es header', function(hooks){
   //but how do I make it so it just checks for the one of them?
   test('it has the className es-header', async function(assert) {
       await render(hbs `{{es-header}}`);
-      assert.dom('header').hasAttribute('class', 'es-header ember-view', 'header has the class of es-header');
+      assert.dom('header').hasClass('es-header');
   });
 });

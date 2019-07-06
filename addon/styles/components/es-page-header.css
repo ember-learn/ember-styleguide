@@ -1,6 +1,9 @@
 .es-page-header {
   padding-top: 1.5rem;
   padding-bottom: 4.5rem;
+  background-image: url('/images/pattern-1.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .es-page-header__title {
