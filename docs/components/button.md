@@ -73,7 +73,7 @@ Since we're using the native HTML button element and requiring a label value to 
 If you are going to put an icon in the button, then you will need to set an aria-label property on the button:
 
 ```handlebars
-{{#es-button  ariaLabel="Hamster Secrets" title="Hamster Secrets"}}
+{{#es-button  ariaLabel="Hamster Secrets" title="Hamster Secrets" isIcon=true}}
   🐹
 {{/es-button}}
 ```

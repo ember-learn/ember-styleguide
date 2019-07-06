@@ -1,11 +1,11 @@
-# Colours
+# Colors
 
 ### Here we talk about the color scheme
 
-## Primary Colours
-The primary palette is applied across every page of the website and contains the brand, accent and neutral colours. The purpose of the primary palette is to keep uniformity across all pages while encouraging accessibility best practices.
+## Primary Colors
+The primary palette is applied across every page of the website and contains the brand, accent and neutral colors. The purpose of the primary palette is to keep uniformity across all pages while encouraging accessibility best practices.
 
-The following swatches contain a sample of each of the primary palette colours, along with recommendations for its usage and the acceptable contrast guidelines when coupled with text.
+The following swatches contain a sample of each of the primary palette colors, along with recommendations for its usage and the acceptable contrast guidelines when coupled with text.
 
 <div class="row">
   <div class="col">
@@ -26,7 +26,7 @@ The following swatches contain a sample of each of the primary palette colours, 
 
 
 
-## Secondary Colours
+## Secondary colors
 The secondary palette is applied to UI elements and it's not part of the base colors. The purpose of the secondary palette is to ensure the readability, usability, and accessibility of all UI elements and enhance the communication of actions, changes in state, or errors.
 
 <div class="row">

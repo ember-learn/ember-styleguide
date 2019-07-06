@@ -69,6 +69,7 @@
 
 .xlarge, h1 {
   font-size: var(--text-preset-5);
+  line-height: 1;
 }
 
 .light {

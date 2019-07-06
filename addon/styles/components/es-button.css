@@ -2,14 +2,17 @@
   background-color: var(--color-orange);
   color: var(--color-light);
   font-size: var(--text-preset-2);
-  padding-left: 8rem;
-  padding-right: 8rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   border-radius: 4px;
 }
-
-a.es-button {
-  display: inline-block;
+.link-as-button {
   text-decoration: none;
+}
+
+.es-button-icon {
+  background-color: transparent;
+  border-color: transparent;
 }

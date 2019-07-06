@@ -3,11 +3,13 @@
   {{yield}}
 {{else}}
   <p class="footer-tagline">{{tagline}}</p>
-  <div class="footer-social">
+  <ul class="footer-social">
     {{#each socialLinks as |link|}}
+    <li>
       <a href={{link.href}} title={{link.title}} aria-label={{link.label}}>
         {{svg-jar link.class}}
       </a>
+    </li>
     {{/each}}
-  </div>
+  </ul>
 {{/if}}
