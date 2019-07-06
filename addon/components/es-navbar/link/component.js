@@ -11,7 +11,6 @@ export default Component.extend({
   classNames: ['navbar-list-item'],
   classNameBindings: ['isDropdown:dropdown'],
   isDropdown: equal('link.type', 'dropdown'),
-
   isDropdownOpen: false,
 
   // because aria-expanded requires a string value instead of a boolean
@@ -22,24 +21,22 @@ export default Component.extend({
   navbar: service(),
 
   actions: {
-    triggerDropdown() {
+    toggleDropdown() {
       this.toggleProperty('isDropdownOpen');
-
+        
       if (this.isDropdownOpen) {
-        // once it's open, let's make sure it can do some things
+        // if it's open, let's make sure it can do some things
         schedule('afterRender', this, function() {
 
           // move focus to the first item in the dropdown
-          let dropdownList = this.element.querySelector('.navbar-dropdown-list');
           this.handleFirstElementFocus();
 
-          dropdownList.addEventListener('click', event =>{
-            if (this.isDropdownOpen) {
-              this.handleBlur();
-            }
-          });
+          // add event listeners
+          let dropdownList = this.element.querySelector('.navbar-dropdown-list');
 
-          // add event listeners for keyboard events
+          //TODO ...for click events outside this dropdown
+
+          //...for certain keypress events
           dropdownList.addEventListener('keydown', event => {
 
             // ESC key should close the dropdown and return focus to the toggle
@@ -65,11 +62,16 @@ export default Component.extend({
     this.set('isDropdownOpen', false);
   },
 
-  handleBlur() { //TODO this isn't working, figure out why
+  openDropdown() { //might not need this
+    // open the dropdown and set the focus to the first item inside
+    this.set('isDropdownOpen', true);
+    this.handleFirstElementFocus();
+  },
+
+  handleBlur() { //TODO is this working?
     next(this, function() {
       let subItems = Array.from(this.element.querySelectorAll('.navbar-dropdown-list li'));
       let focused = subItems.find(item => document.activeElement === item.querySelector('a'));
-      console.log(focused);
 
       //if the dropdown isn't focused, close it
       if (!focused) {
@@ -92,7 +94,7 @@ export default Component.extend({
     });  
   },
 
-  willDestroy() {
+  willDestroyElement() {
     document.removeEventListener('keydown', this.triggerDropdown);
     document.removeEventListener('click', this.triggerDropdown);
   }
