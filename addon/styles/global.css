@@ -36,12 +36,10 @@ body, html {
   line-height: 1.5;
 }
 
-
 p {
-  font-size: var(--text-preset-2);
-  line-height: 1.6;
-  margin: 0 0 1rem 0;
-  font-weight: 300;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0.25em 0.5em;
 }
 
 h1,
@@ -88,4 +86,25 @@ h1, h2 {
   padding-top: 8rem;
   padding-bottom: 8rem;
   border: 1px solid #CCC;
+}
+
+/* the weird shit for the backgrounds */
+.section-bg-wrapper {
+  position: relative;
+  height: 750px;
+  width: 100%;
+  margin-bottom: -650px;
+}
+.section-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-image: linear-gradient(#e04e39, #e04e39);
+  transform: skewY(-15deg);
+  transform-origin: bottom right;
+  z-index:-1;
+  border-top-left-radius: 7px;
 }

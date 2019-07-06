@@ -330,6 +330,10 @@
   margin-bottom: 2rem;
 }
 
+.margin-bottom-wide {
+  margin-bottom: 5vh;
+}
+
 .margin-left-small, .margin-left-narrow {
   margin-left: 2rem;
 }
@@ -346,6 +350,7 @@
   padding-right: 0.25em;
 }
 .padding-sides-wide {
-  padding-left: 1em;
-  padding-right: 1em;
+  /* TODO ADD MEDIA QUERIES */
+  padding-left: 15%;
+  padding-right: 15%;
 }

@@ -41,6 +41,12 @@
 .one-third {
   width: 33.3333%;
 }
+.two-thirds {
+  width: 66.6666%;
+}
+.three-fourths {
+  width: 75%;
+}
 @media (max-width: 576px) {
   .row {
     flex-direction: column;
