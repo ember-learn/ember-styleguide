@@ -1,18 +1,47 @@
 .es-button {
   background-color: var(--color-ember-orange);
+  border-radius: 4px;
   color: var(--color-light);
-  font-size: var(--text-preset-2);
+  font-size: 24px; /* buttons have to have this size if they are on the orange background */
+  padding-bottom: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-radius: 4px;
-}
-.link-as-button {
   text-decoration: none;
+}
+.es-button-secondary {
+  font-size: 24px; /* should match the primary button, we can abstract a base button class later */
+  background-color: transparent;
+}
+
+.link-as-button {
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+  z-index: 0;
+}
+.link-as-button:after {
+  background-color: #E04E39;
+  bottom: 8%;
+  content: " ";
+  display: inline-block;
+  height: 24%;
+  left: 0;
+  position: absolute;
+  top: auto;
+  transform: scaleY(1);
+  width: 100%;
+  z-index: -1;
 }
 
 .es-button-icon {
   background-color: transparent;
   border-color: transparent;
+}
+
+.es-button + .es-button-secondary {
+  @media screen and (min-width: 992px){
+    margin-left: 20px;
+  }
+  
 }

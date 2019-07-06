@@ -55,7 +55,7 @@
   font-size: var(--text-preset-1);
 }
 
-.small, p {
+.small, p { /* TODO this isn't going to work for A11y */
   font-size: var(--text-preset-2);
 }
 
@@ -94,4 +94,8 @@
 
 .text-right {
   text-align: right;
+}
+.text-intro {
+  font-size: 1.5em;
+  margin-bottom: 6vh;
 }
