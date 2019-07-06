@@ -29,29 +29,10 @@ export default Component.extend({
         schedule('afterRender', this, function() {
 
           // move focus to the first item in the dropdown
-          this.handleFirstElementFocus();
+          this.processFirstElementFocus();
+          this.processKeyPress();
 
-          // add event listeners
-          let dropdownList = this.element.querySelector('.navbar-dropdown-list');
-
-          //TODO ...for click events outside this dropdown
-
-          //...for certain keypress events
-          dropdownList.addEventListener('keydown', event => {
-
-            // ESC key should close the dropdown and return focus to the toggle
-            if (event.keyCode === 27 && this.isDropdownOpen) {
-              this.closeDropdown();
-              this.returnFocus();
-
-            // if focus leaves the open dropdown via keypress, close it (without trying to otherwise control focus)  
-            } else if (this.isDropdownOpen) {
-              this.handleBlur();
-
-            } else {
-              return;
-            }
-          });
+          
         });
       }
     }
@@ -65,10 +46,10 @@ export default Component.extend({
   openDropdown() { //might not need this
     // open the dropdown and set the focus to the first item inside
     this.set('isDropdownOpen', true);
-    this.handleFirstElementFocus();
+    this.processFirstElementFocus();
   },
 
-  handleBlur() { //TODO is this working?
+  processBlur() { //TODO is this working?
     next(this, function() {
       let subItems = Array.from(this.element.querySelectorAll('.navbar-dropdown-list li'));
       let focused = subItems.find(item => document.activeElement === item.querySelector('a'));
@@ -80,10 +61,36 @@ export default Component.extend({
     });
   }, 
 
-  handleFirstElementFocus() {
+  processClick() {
+
+  },
+
+  processFirstElementFocus() {
     // Identify the first item in the dropdown list & set focus on it
     let firstFocusable = this.element.querySelector('.navbar-dropdown-list li:first-of-type a');
     firstFocusable.focus();
+  },
+
+  processKeyPress() {
+    // add event listeners
+    let dropdownList = this.element.querySelector('.navbar-dropdown-list');
+
+    //...for certain keypress events
+    dropdownList.addEventListener('keydown', event => {
+
+      // ESC key should close the dropdown and return focus to the toggle
+      if (event.keyCode === 27 && this.isDropdownOpen) {
+        this.closeDropdown();
+        this.returnFocus();
+
+      // if focus leaves the open dropdown via keypress, close it (without trying to otherwise control focus)  
+      } else if (this.isDropdownOpen) {
+          this.processBlur();
+
+      } else {
+          return;
+      }
+    });
   },
 
   returnFocus() {
