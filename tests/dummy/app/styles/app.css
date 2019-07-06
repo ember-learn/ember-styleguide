@@ -3,3 +3,9 @@
 .self-executing-code-block {
   margin-bottom: 2rem;
 }
+
+@media only percy {
+  .hide-in-percy {
+    visibility: hidden;
+  }
+}
