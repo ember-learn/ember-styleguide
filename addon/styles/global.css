@@ -51,7 +51,12 @@ h6 {
   margin: 0 0 2rem 0;
 }
 
-@media (max-width: 1280px) and (min-width: 421px) {
+h1, h2 {
+  min-width: 100%;
+}
+
+@media (max-width: 1280px) and (min-width: 421px) { 
+  /* TODO this media query is incorrect - CSS should be mobile-first */
   body,
   html {
 

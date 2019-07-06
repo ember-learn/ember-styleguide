@@ -1,5 +1,5 @@
 .container {
-  padding: var(--spacing-4) 0;
+  padding: var(--spacing-3) 0;
   margin: 0 auto;
   width: var(--max-width);
 }
@@ -30,7 +30,12 @@
   width: 50%;
   margin: 0 2rem;
 }
-
+.half {
+  width: 50%;
+}
+.center-block {
+  margin: 0 auto;
+}
 .col-one-third {
   width: 30.3%;
   margin: 0 2rem;
@@ -45,3 +50,10 @@
   }
 }
 
+section {
+  display: flex;
+  flex-flow: row wrap;
+  & .full {
+      min-width: 100%;
+  }
+}

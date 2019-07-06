@@ -321,3 +321,7 @@
 .padding-right-xlarge {
   padding-right: var(--spacing-5);
 }
+
+.margin-bottom-small, .margin-bottom-2rem {
+  margin-bottom: 2rem;
+}
