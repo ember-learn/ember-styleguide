@@ -1,4 +1,16 @@
 
+v3.1.1 / 2019-06-24
+==================
+
+  * Fix navbar formatting #185 from @jenweber
+
+v3.1.0 / 2018-06-22
+==================
+
+  * add es-section component #175 from @MelSumner
+  * [Doc] Update the Help Wanted link in nav bar #178 from @vasind
+  * Updated dnsimple target link in es-footer component from @sivakumar-kailasam
+
 v3.0.0 / 2018-05-23
 ==================
 
