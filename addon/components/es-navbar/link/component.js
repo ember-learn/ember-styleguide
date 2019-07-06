@@ -30,9 +30,7 @@ export default Component.extend({
 
           // move focus to the first item in the dropdown
           this.processFirstElementFocus();
-          this.processKeyPress();
-
-          
+          this.processKeyPress();          
         });
       }
     }
@@ -49,7 +47,7 @@ export default Component.extend({
     this.processFirstElementFocus();
   },
 
-  processBlur() { //TODO is this working?
+  processBlur() { 
     next(this, function() {
       let subItems = Array.from(this.element.querySelectorAll('.navbar-dropdown-list li'));
       let focused = subItems.find(item => document.activeElement === item.querySelector('a'));
@@ -62,7 +60,7 @@ export default Component.extend({
   }, 
 
   processClick() {
-
+    // TODO handle mouseclick outside the current dropdown
   },
 
   processFirstElementFocus() {
@@ -103,6 +101,6 @@ export default Component.extend({
 
   willDestroyElement() {
     document.removeEventListener('keydown', this.triggerDropdown);
-    document.removeEventListener('click', this.triggerDropdown);
+    // document.removeEventListener('click', this.triggerDropdown);
   }
 });
