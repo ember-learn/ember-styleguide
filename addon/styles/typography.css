@@ -51,12 +51,8 @@
   font-style: italic;
 }
 
-.xsmall, small {
+.xsmall, small, .small {
   font-size: var(--text-preset-1);
-}
-
-.small, p { /* TODO this isn't going to work for A11y */
-  font-size: var(--text-preset-2);
 }
 
 .medium, h3 {

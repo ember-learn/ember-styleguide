@@ -24,12 +24,15 @@
   --spacing-4: 16rem;
   --spacing-5: 24rem;
 }
+*, *:after {
+  box-sizing: border-box;
+}
 
 body, html {
   margin: 0;
   padding: 0;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -53,9 +56,10 @@ h6 {
 
 h1, h2 {
   min-width: 100%;
+  line-height: 1;
 }
 
-@media (max-width: 1280px) and (min-width: 421px) { 
+@media (max-width: 1280px) and (min-width: 421px) {
   /* TODO this media query is incorrect - CSS should be mobile-first */
   body,
   html {
