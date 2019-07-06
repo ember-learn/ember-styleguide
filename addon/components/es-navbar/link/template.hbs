@@ -8,7 +8,7 @@
 {{/if}}
 {{#if (eq link.type "dropdown")}}
   <button
-    {{action "triggerDropdown"}}
+    onclick={{action "toggleDropdown"}}
     class="navbar-list-item-dropdown-toggle"
     aria-expanded={{isExpanded}}
   >
