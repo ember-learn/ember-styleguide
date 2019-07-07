@@ -331,8 +331,22 @@
 }
 
 .margin-bottom-wide {
-  margin-bottom: 5vh;
+  @media screen and (min-width:992px) {
+    margin-bottom: 5vh;
+  }
 }
+.margin-top-wide {
+  @media screen and (min-width:992px) {
+    margin-top: 5vh;
+  }
+}
+.margin-top-bottom-wide {
+  @media screen and (min-width:992px) {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+}
+
 
 .margin-left-small, .margin-left-narrow {
   margin-left: 2rem;
@@ -353,4 +367,10 @@
   /* TODO ADD MEDIA QUERIES */
   padding-left: 15%;
   padding-right: 15%;
+}
+
+.padding-right-half {
+  @media screen and (min-width: 992px) {
+    padding-right: 50%;
+  }
 }

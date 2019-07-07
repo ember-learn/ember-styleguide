@@ -37,8 +37,8 @@ body, html {
 }
 
 p {
-  font-size: 1em;
-  font-weight: normal;
+  font-size: 1.2rem;
+  font-weight: 300;
   margin: 0.25em 0.5em;
 }
 
@@ -107,5 +107,6 @@ h1, h2 {
   transform: skewY(-15deg);
   width: 30%;
   z-index:-1;
-  border-top-left-radius: 7px;
 }
+
+/* TODO this grid generator tool is really useful: https://cssgrid-generator.netlify.com/ */
