@@ -1,0 +1,8 @@
+/* this component has a paragraph of text on one side, and and image on the other, and alternates depending on position. */
+.es-media {
+  /* TODO think about smaller viewports and put them here */
+    @media screen and (min-width: 992px) {
+      display: flex;
+      flex-flow: row wrap;    
+  }
+}

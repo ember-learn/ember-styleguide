@@ -1,4 +1,4 @@
-.es-button {
+.es-button { /* TODO we should have es-button-primary */
   background-color: var(--color-ember-orange);
   border-radius: 4px;
   color: var(--color-light);
@@ -45,3 +45,6 @@
   }
   
 }
+
+/* TODO add hover state */
+/* TODO add focus state */

@@ -16,3 +16,22 @@
     }
   }
 } */
+
+
+
+.es-list-hero-images {
+  /* don't show it on mobile- it's not necessary for the site and it's not kind to the users' bandwidth */
+  display: none;
+
+  @media screen and (min-width: 992px) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    grid-column-gap: 50px;
+    grid-row-gap: 0px;
+    max-height: 400px; /* whatever the max height of the images are */
+  }
+}
