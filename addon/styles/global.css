@@ -18,11 +18,11 @@
   --font-weight-1: 300;
   --font-weight-2: 400;
   --font-weight-3: 600; 
-  --spacing-1: 1rem;
-  --spacing-2: 2rem;
-  --spacing-3: 4rem;
-  --spacing-4: 8rem;
-  --spacing-5: 12rem;
+  --spacing-1: 2rem;
+  --spacing-2: 4rem;
+  --spacing-3: 8rem;
+  --spacing-4: 16rem;
+  --spacing-5: 32rem;
 }
 
 body, html {

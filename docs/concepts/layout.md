@@ -15,14 +15,6 @@ Example of a centered half column. A column class is used to limit its width.
   </div>
 </div>
 ```
-<div class="card component-example">
-<div class="row justify-center">
-  <div class="col-one-half text-center">
-    <h2>Build with the teams that never stop shipping.</h2>
-    <p>Some of the best development teams in the world have been iterating on their products for years with Ember. With scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use every step of the way.</p>
-  </div>
-</div>
-</div>
 
 ### Left Aligned fixed width
 
@@ -34,14 +26,7 @@ Example of a centered half column. A column class is used to limit its width.
   </div>
 </div>
 ```
-<div class="card component-example">
-<div class="row">
-  <div class="col-one-half">
-    <h3>A Simple Component</h3>
-    <p>Ember Components are a superset of HTML – that means is a full-fledged Ember Component! To pass data into Components, use the @ symbol along with an argument name.</p>
-  </div>
-</div>
-</div>
+
 
 ### Equally Distributed Columns
 
@@ -73,33 +58,8 @@ Example of a centered half column. A column class is used to limit its width.
   </div>
 </div>
 ```
-<div class="row">
-  <div class="col">
-    <div class="card text-center">
-      <div class="card-content">
-        <h3>Podcasts</h3>
-        <p>Rock n' Roll with EmberJS.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card text-center">
-      <div class="card-content">
-        <h3>Books</h3>
-        <p>Rock n' Roll with EmberJS.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card text-center">
-      <div class="card-content">
-        <h3>Videos</h3>
-        <p>Rock n' Roll with EmberJS.</p>
-      </div>
-    </div>
-  </div>
-</div>
 
+```html
 <div class="row">
   <div class="col">
     <div class="card">
@@ -135,8 +95,10 @@ Example of a centered half column. A column class is used to limit its width.
     <img class="img-fluid margin-bottom-small" src="https://dummyimage.com/400x500/000/fff">
   </div>
 </div>
-
-## Offsets
+```
+## Spacing Scale
+The spacing scale is used to manage spacing a white-space within layouts and components.
+The spacing scale can be applied to both margin and padding properties.
 
 <div class="row">
   <div class="card col">
@@ -175,4 +137,7 @@ Example of a centered half column. A column class is used to limit its width.
     </div>
   </div>
 </div><!--row-->
-```
+
+
+### Applying Spacing
+In order to apply the spacing scale on pages, a set of predefined classes exist for both margins and paddings. 
