@@ -1,11 +1,11 @@
 .card {
   border: 1px solid var(--color-gray);
+  margin-bottom: var(--spacing-2);
   border-radius: 4px;
-  margin-bottom: 2rem;
   height: 100%;
   overflow: hidden;
 }
 
 .card-content {
-  padding: 2rem;
+  padding: var(--spacing-2);
 }

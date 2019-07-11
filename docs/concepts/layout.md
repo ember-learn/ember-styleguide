@@ -102,35 +102,35 @@ The spacing scale can be applied to both margin and padding properties.
 
 <div class="row">
   <div class="card col">
-    <div class="spacer-xsmall bg-info">
+    <div class="spacer-xsmall bg-orange">
     </div>
     <div class="card-content">
       <h4>Extra Small Offset</h4>
     </div>
   </div>
   <div class="card col">
-    <div class="spacer-small bg-info">
+    <div class="spacer-small bg-orange">
     </div>
     <div class="card-content">
       <h4>Small Offset</h4>
     </div>
   </div>
   <div class="card col">
-    <div class="spacer-medium bg-info">
+    <div class="spacer-medium bg-orange">
     </div>
     <div class="card-content">
       <h4>Medium Offset</h4>
     </div>
   </div>
   <div class="card col">
-    <div class="spacer-large bg-info">
+    <div class="spacer-large bg-orange">
     </div>
     <div class="card-content">
       <h4>Large Offset</h4>
     </div>
   </div>
   <div class="card col">
-    <div class="spacer-xlarge bg-info">
+    <div class="spacer-xlarge bg-orange">
     </div>
     <div class="card-content">
       <h4>Extra Large Offset</h4>
@@ -139,5 +139,177 @@ The spacing scale can be applied to both margin and padding properties.
 </div><!--row-->
 
 
-### Applying Spacing
-In order to apply the spacing scale on pages, a set of predefined classes exist for both margins and paddings. 
+## Applying Spacing with Helpers
+In order to apply the spacing scale on pages, a set of predefined helper classes exist for both margins and paddings. 
+
+### Margin Helpers
+
+<table class="margin-bottom-medium">
+  <thead>
+    <tr>
+      <th>Scale</th>
+      <th>Location</th>
+      <th>Helper Class</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Small</td>
+      <td>All Sides</td>
+      <td><code>.margin-small</code></td>
+      <td>
+        <div class="bg-muted border-dashed">
+          <div class="bg-orange margin-small">Content</div>
+        </div>
+      </td>
+    </tr>
+     <tr>
+      <td>Small</td>
+      <td>Vertical Sides</td>
+      <td><code>.margin-vertical-small</code></td>
+      <td>
+        <div class="bg-muted border-dashed">
+          <div class="bg-orange margin-vertical-small">Content</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>Horizontal Sides</td>
+      <td><code>.margin-horizontal-small</code></td>
+      <td>
+        <div class="bg-muted border-dashed">
+          <div class="bg-orange margin-horizontal-small">Content</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>Top</td>
+      <td><code>.margin-top-small</code></td>
+      <td>
+        <div class="bg-muted border-dashed">
+          <div class="bg-orange margin-top-small">Content</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>Bottom</td>
+      <td><code>.margin-bottom-small</code></td>
+      <td>
+        <div class="bg-muted border-dashed">
+          <div class="bg-orange margin-bottom-small">Content</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>Left</td>
+      <td><code>.margin-left-small</code></td>
+      <td>
+        <div class="bg-muted border-dashed">
+          <div class="bg-orange margin-left-small">Content</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>Right</td>
+      <td><code>.margin-right-small</code></td>
+      <td>
+        <div class="bg-muted border-dashed">
+          <div class="bg-orange margin-right-small">Content</div>
+        </div>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+### Padding Helpers
+
+<table>
+  <thead>
+    <tr>
+      <th>Scale</th>
+      <th>Location</th>
+      <th>Helper Class</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Small</td>
+      <td>All Sides</td>
+      <td><code>.padding-small</code></td>
+      <td>
+          <div class="bg-orange padding-small">
+            <div class="border-dashed">Content</div>
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>All Vertical Sides</td>
+      <td><code>.padding-vertical-small</code></td>
+      <td>
+          <div class="bg-orange padding-vertical-small">
+            <div class="border-dashed">Content</div>
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>All Horizontal Sides</td>
+      <td><code>.padding-horizontal-small</code></td>
+      <td>
+          <div class="bg-orange padding-horizontal-small">
+            <div class="border-dashed">Content</div>
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>Top</td>
+      <td><code>.padding-top-small</code></td>
+      <td>
+          <div class="bg-orange padding-top-small">
+            <div class="border-dashed">Content</div>
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>Bottom</td>
+      <td><code>.padding-bottom-small</code></td>
+      <td>
+          <div class="bg-orange padding-bottom-small">
+            <div class="border-dashed">Content</div>
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>Left</td>
+      <td><code>.paddding-left-small</code></td>
+      <td>
+          <div class="bg-orange padding-left-small">
+            <div class="border-dashed">Content</div>
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>Right</td>
+      <td><code>.padding-right-small</code></td>
+      <td>
+          <div class="bg-orange padding-right-small">
+            <div class="border-dashed">Content</div>
+          </div>
+      </td>
+    </tr>
+
+  </tbody>
+</table>

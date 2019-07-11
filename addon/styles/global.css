@@ -22,7 +22,7 @@
   --spacing-2: 4rem;
   --spacing-3: 8rem;
   --spacing-4: 16rem;
-  --spacing-5: 32rem;
+  --spacing-5: 24rem;
 }
 
 body, html {
@@ -66,22 +66,7 @@ h6 {
 
 /* move beyond this point */
 
-.dark {
-  background-color: var(--color-dark);
-  color: var(--color-light);
 
-  & a {
-    color: var(--color-light);
-  }
-}
-
-.bg-muted {
-  background-color: var(--color-muted);
-}
-
-.bg-info {
-  background: var(--color-info);
-}
 
 .container {
   max-width: var(--container-width-large);
