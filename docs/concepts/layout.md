@@ -140,93 +140,38 @@ The spacing scale can be applied to both margin and padding properties.
 
 
 ## Applying Spacing with Helpers
-In order to apply the spacing scale on pages, a set of predefined helper classes exist for both margins and paddings. 
+In order to apply the spacing scale on pages, a set of predefined helper classes exist for both margins and paddings.
 
 ### Margin Helpers
 
-<table class="margin-bottom-medium">
-  <thead>
-    <tr>
-      <th>Scale</th>
-      <th>Location</th>
-      <th>Helper Class</th>
-      <th>Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Small</td>
-      <td>All Sides</td>
-      <td><code>.margin-small</code></td>
-      <td>
-        <div class="bg-muted border-dashed">
-          <div class="bg-orange margin-small">Content</div>
-        </div>
-      </td>
-    </tr>
-     <tr>
-      <td>Small</td>
-      <td>Vertical Sides</td>
-      <td><code>.margin-vertical-small</code></td>
-      <td>
-        <div class="bg-muted border-dashed">
-          <div class="bg-orange margin-vertical-small">Content</div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>Small</td>
-      <td>Horizontal Sides</td>
-      <td><code>.margin-horizontal-small</code></td>
-      <td>
-        <div class="bg-muted border-dashed">
-          <div class="bg-orange margin-horizontal-small">Content</div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>Small</td>
-      <td>Top</td>
-      <td><code>.margin-top-small</code></td>
-      <td>
-        <div class="bg-muted border-dashed">
-          <div class="bg-orange margin-top-small">Content</div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>Small</td>
-      <td>Bottom</td>
-      <td><code>.margin-bottom-small</code></td>
-      <td>
-        <div class="bg-muted border-dashed">
-          <div class="bg-orange margin-bottom-small">Content</div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>Small</td>
-      <td>Left</td>
-      <td><code>.margin-left-small</code></td>
-      <td>
-        <div class="bg-muted border-dashed">
-          <div class="bg-orange margin-left-small">Content</div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>Small</td>
-      <td>Right</td>
-      <td><code>.margin-right-small</code></td>
-      <td>
-        <div class="bg-muted border-dashed">
-          <div class="bg-orange margin-right-small">Content</div>
-        </div>
-      </td>
-    </tr>
-
-  </tbody>
-</table>
+<div>
+  <table class="margin-bottom-medium">
+    <thead>
+      <tr>
+        <th>Scale</th>
+        <th>Location</th>
+        <th>Helper Class</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each (array '-small' '-medium' '-large') as |size|}}
+        {{#each (array '' '-vertical' '-horizontal' '-top' '-bottom' '-left' '-right') as |direction|}}
+          <tr>
+            <td>{{size}}</td>
+            <td>{{direction}}</td>
+            <td><code>.margin{{direction}}{{size}}</code></td>
+            <td>
+              <div class="bg-muted border-dashed">
+                <div class="bg-orange margin{{direction}}{{size}}">Content</div>
+              </div>
+            </td>
+          </tr>
+        {{/each}}
+      {{/each}}
+    </tbody>
+  </table>
+</div>
 
 ### Padding Helpers
 
@@ -240,76 +185,19 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Small</td>
-      <td>All Sides</td>
-      <td><code>.padding-small</code></td>
-      <td>
-          <div class="bg-orange padding-small">
-            <div class="border-dashed">Content</div>
-          </div>
-      </td>
-    </tr>
-    <tr>
-      <td>Small</td>
-      <td>All Vertical Sides</td>
-      <td><code>.padding-vertical-small</code></td>
-      <td>
-          <div class="bg-orange padding-vertical-small">
-            <div class="border-dashed">Content</div>
-          </div>
-      </td>
-    </tr>
-    <tr>
-      <td>Small</td>
-      <td>All Horizontal Sides</td>
-      <td><code>.padding-horizontal-small</code></td>
-      <td>
-          <div class="bg-orange padding-horizontal-small">
-            <div class="border-dashed">Content</div>
-          </div>
-      </td>
-    </tr>
-    <tr>
-      <td>Small</td>
-      <td>Top</td>
-      <td><code>.padding-top-small</code></td>
-      <td>
-          <div class="bg-orange padding-top-small">
-            <div class="border-dashed">Content</div>
-          </div>
-      </td>
-    </tr>
-    <tr>
-      <td>Small</td>
-      <td>Bottom</td>
-      <td><code>.padding-bottom-small</code></td>
-      <td>
-          <div class="bg-orange padding-bottom-small">
-            <div class="border-dashed">Content</div>
-          </div>
-      </td>
-    </tr>
-    <tr>
-      <td>Small</td>
-      <td>Left</td>
-      <td><code>.paddding-left-small</code></td>
-      <td>
-          <div class="bg-orange padding-left-small">
-            <div class="border-dashed">Content</div>
-          </div>
-      </td>
-    </tr>
-    <tr>
-      <td>Small</td>
-      <td>Right</td>
-      <td><code>.padding-right-small</code></td>
-      <td>
-          <div class="bg-orange padding-right-small">
-            <div class="border-dashed">Content</div>
-          </div>
-      </td>
-    </tr>
-
+    {{#each (array '-small' '-medium' '-large') as |size|}}
+      {{#each (array '' '-vertical' '-horizontal' '-top' '-bottom' '-left' '-right') as |direction|}}
+        <tr>
+          <td>{{size}}</td>
+          <td>{{direction}}</td>
+          <td><code>.padding{{direction}}{{size}}</code></td>
+          <td>
+              <div class="bg-orange padding{{direction}}{{size}}">
+                <div class="border-dashed">Content</div>
+              </div>
+          </td>
+        </tr>
+      {{/each}}
+    {{/each}}
   </tbody>
 </table>
