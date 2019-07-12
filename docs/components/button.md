@@ -23,6 +23,23 @@ To toggle the 'disabled' property, set 'isDisabled' to true
 {{es-button label="click me" isDisabled=true}}
 ```
 
+To add interactivity you can pass an action to `onClicked`
+
+```handlebars
+<EsButton @onClicked={{action (mut value) (increment value)}}>
+  Increment Value
+</EsButton>
+
+{{value}}
+```
+
+## Styling Links
+It is also possible to style a link to look like a button using the `something` class
+
+```html
+<a href="https://emberjs.com" class="es-button">Go to Ember homepage</a>
+```
+
 ## Styles
 
 Outline button style:
