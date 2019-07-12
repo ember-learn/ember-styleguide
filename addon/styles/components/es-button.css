@@ -8,3 +8,8 @@
   padding-bottom: 2rem;
   border-radius: 4px;
 }
+
+a.es-button {
+  display: inline-block;
+  text-decoration: none;
+}
