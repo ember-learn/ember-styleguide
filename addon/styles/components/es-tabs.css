@@ -19,9 +19,9 @@
 }
 
 .tabs-item--active {
-  border-bottom: 2px solid var(--color-ember-orange);
+  border-bottom: 2px solid var(--color-orange);
 }
 
 .tabs-item--active .tabs-link {
-  color: var(--color-ember-orange);
+  color: var(--color-orange);
 }

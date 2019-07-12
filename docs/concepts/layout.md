@@ -1,9 +1,12 @@
 # Layout
 
-## Content Width
+## Grid
 
-### Center Aligned fixed width
+### Grid Usage
+A grid can be formed with fixed boxes by arranging tiles in an inline block, icons in toolbars, etc. Column count grows with browser width. Tiles wrap to the next line, or are sometimes truncated with an overflow scroll. The column width is defined by the column classes, if no width is defined the columns will resize to fit the row.
 
+#### Center Aligned fixed width column
+Example of a centered half column. A column class is used to limit its width.
 ```html
 <div class="row justify-center">
   <div class="col-one-half text-center">
@@ -23,6 +26,7 @@
   </div>
 </div>
 ```
+
 
 ### Equally Distributed Columns
 
@@ -53,7 +57,9 @@
     </div>
   </div>
 </div>
+```
 
+```html
 <div class="row">
   <div class="col">
     <div class="card">
@@ -90,3 +96,108 @@
   </div>
 </div>
 ```
+## Spacing Scale
+The spacing scale is used to manage spacing a white-space within layouts and components.
+The spacing scale can be applied to both margin and padding properties.
+
+<div class="row">
+  <div class="card col">
+    <div class="spacer-xsmall bg-orange">
+    </div>
+    <div class="card-content">
+      <h4>Extra Small Offset</h4>
+    </div>
+  </div>
+  <div class="card col">
+    <div class="spacer-small bg-orange">
+    </div>
+    <div class="card-content">
+      <h4>Small Offset</h4>
+    </div>
+  </div>
+  <div class="card col">
+    <div class="spacer-medium bg-orange">
+    </div>
+    <div class="card-content">
+      <h4>Medium Offset</h4>
+    </div>
+  </div>
+  <div class="card col">
+    <div class="spacer-large bg-orange">
+    </div>
+    <div class="card-content">
+      <h4>Large Offset</h4>
+    </div>
+  </div>
+  <div class="card col">
+    <div class="spacer-xlarge bg-orange">
+    </div>
+    <div class="card-content">
+      <h4>Extra Large Offset</h4>
+    </div>
+  </div>
+</div><!--row-->
+
+
+## Applying Spacing with Helpers
+In order to apply the spacing scale on pages, a set of predefined helper classes exist for both margins and paddings.
+
+### Margin Helpers
+
+<div>
+  <table class="margin-bottom-medium">
+    <thead>
+      <tr>
+        <th>Scale</th>
+        <th>Location</th>
+        <th>Helper Class</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each (array '-small' '-medium' '-large') as |size|}}
+        {{#each (array '' '-vertical' '-horizontal' '-top' '-bottom' '-left' '-right') as |direction|}}
+          <tr>
+            <td>{{size}}</td>
+            <td>{{direction}}</td>
+            <td><code>.margin{{direction}}{{size}}</code></td>
+            <td>
+              <div class="bg-muted border-dashed">
+                <div class="bg-orange margin{{direction}}{{size}}">Content</div>
+              </div>
+            </td>
+          </tr>
+        {{/each}}
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+### Padding Helpers
+
+<table>
+  <thead>
+    <tr>
+      <th>Scale</th>
+      <th>Location</th>
+      <th>Helper Class</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each (array '-small' '-medium' '-large') as |size|}}
+      {{#each (array '' '-vertical' '-horizontal' '-top' '-bottom' '-left' '-right') as |direction|}}
+        <tr>
+          <td>{{size}}</td>
+          <td>{{direction}}</td>
+          <td><code>.padding{{direction}}{{size}}</code></td>
+          <td>
+              <div class="bg-orange padding{{direction}}{{size}}">
+                <div class="border-dashed">Content</div>
+              </div>
+          </td>
+        </tr>
+      {{/each}}
+    {{/each}}
+  </tbody>
+</table>

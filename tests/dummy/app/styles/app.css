@@ -9,3 +9,7 @@
     visibility: hidden;
   }
 }
+
+.border-dashed {
+  border: 1px dashed var(--color-gray);
+}

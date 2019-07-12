@@ -1,40 +1,42 @@
 :root {
-  --container-width-large: 64rem;
+  font-size: 8px;
+  --container-width-large: 128rem;
   --color-dark: #1C1E23;
   --color-light: #FFFFFF;
   --color-muted: #F4F6F8;
-  --color-ember-orange: #E04E39;
+  --color-orange: #E04E39;
   --color-gray: #A2A3A8;
   --color-success: #D9F9E3;
   --color-danger: #FFD8E1;
   --color-warning: #FCFFC9;
   --color-info: #E3EEFC;
-  --text-preset-1: 0.8rem;
-  --text-preset-2: 1rem;
-  --text-preset-3: 2rem;
-  --text-preset-4: 3rem;
-  --text-preset-5: 4rem;
+  --text-preset-1: 1.5rem;
+  --text-preset-2: 2.5rem;
+  --text-preset-3: 4rem;
+  --text-preset-4: 8rem;
+  --text-preset-5: 12rem;
   --font-weight-1: 300;
   --font-weight-2: 400;
   --font-weight-3: 600; 
-  --spacing-1: 0.5rem;
-  --spacing-2: 1rem;
-  --spacing-3: 2rem;
-  --spacing-4: 4rem;
-  --max-width: 80rem;
+  --spacing-1: 2rem;
+  --spacing-2: 4rem;
+  --spacing-3: 8rem;
+  --spacing-4: 16rem;
+  --spacing-5: 24rem;
 }
 
 body, html {
   margin: 0;
   padding: 0;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
+  font-size: 2rem;
 }
+
 
 p {
   font-size: var(--text-preset-2);
   line-height: 1.6;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 1rem 0;
   font-weight: 300;
 }
 
@@ -45,7 +47,7 @@ h4,
 h5,
 h6 {
   font-weight: 500;
-  margin: 0 0 1.2rem 0;
+  margin: 0 0 2rem 0;
 }
 
 @media (max-width: 1280px) and (min-width: 421px) {
@@ -64,22 +66,7 @@ h6 {
 
 /* move beyond this point */
 
-.dark {
-  background-color: var(--color-dark);
-  color: var(--color-light);
 
-  & a {
-    color: var(--color-light);
-  }
-}
-
-.bg-muted {
-  background-color: var(--color-muted);
-}
-
-.bg-info {
-  background: var(--color-info);
-}
 
 .container {
   max-width: var(--container-width-large);
@@ -88,7 +75,7 @@ h6 {
 }
 
 .content-section {
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   border: 1px solid #CCC;
 }

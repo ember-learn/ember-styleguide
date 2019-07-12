@@ -6,14 +6,14 @@
 
 .row {
   display: flex;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .row >.col {
-  margin: 0 1rem;
+  margin: 0 2rem;
   flex-grow: 1;
   flex-basis: 0;
 }
@@ -28,12 +28,12 @@
 
 .col-one-half {
   width: 50%;
-  margin: 0 1rem;
+  margin: 0 2rem;
 }
 
 .col-one-third {
   width: 30.3%;
-  margin: 0 1rem;
+  margin: 0 2rem;
 }
 
 @media (max-width: 576px) {
@@ -44,7 +44,4 @@
     width: 100%;
   }
 }
-
-
-
 
