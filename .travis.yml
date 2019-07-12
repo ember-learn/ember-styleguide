@@ -19,6 +19,7 @@ env:
   global:
     # See https://git.io/vdao3 for details.
     - JOBS=1
+    - PERCY_ENABLE=0 # disable percy by default
 
 branches:
   only:
@@ -38,6 +39,8 @@ jobs:
 
     - stage: "Tests"
       name: "Tests"
+      env:
+        - PERCY_ENABLE=1
       script:
         - npm run lint:hbs
         - npm run lint:js

@@ -8,16 +8,18 @@ The primary palette is applied across every page of the website and contains the
 The following swatches contain a sample of each of the primary palette colours, along with recommendations for its usage and the acceptable contrast guidelines when coupled with text.
 
 <div class="row">
-  <div class="col-one-third">
+  <div class="col">
     <ColorPallet @color="#1A1A1A" @name="Dark Gray" @variable="--color-dark" @class-name="bg-dark"/>
   </div>
-  <div class="col-one-third">
+  <div class="col">
     <ColorPallet @color="#E04E39" @name="Orange" @variable="--color-orange" @class-name="bg-orange"/>
   </div>
-  <div class="col-one-third">
+  <div class="col">
     <ColorPallet @color="#F4F6F8" @name="Muted Gray" @variable="--color-muted" @class-name="bg-muted"/>
   </div>
-  <div class="col-one-third">
+</div>
+<div class="row">
+  <div class="col">
     <ColorPallet @color="#FFFFFF" @name="Light" @variable="--color-light" @class-name="bg-light"/>
   </div>
 </div>
@@ -28,19 +30,21 @@ The following swatches contain a sample of each of the primary palette colours, 
 The secondary palette is applied to UI elements and it's not part of the base colors. The purpose of the secondary palette is to ensure the readability, usability, and accessibility of all UI elements and enhance the communication of actions, changes in state, or errors.
 
 <div class="row">
-  <div class="col-one-third">
+  <div class="col">
     <ColorPallet @color="#A2A3A8" @name="Light" @variable="--color-gray" @class-name="bg-gray"/>
   </div>
-  <div class="col-one-third">
+  <div class="col">
     <ColorPallet @color="#E3EEFC" @name="Color Info" @variable="--color-info" @class-name="bg-info"/>
   </div>
-  <div class="col-one-third">
+  <div class="col">
     <ColorPallet @color="#FFD8E1" @name="Color Danger" @variable="--color-danger" @class-name="bg-danger"/>
   </div>
-  <div class="col-one-third">
+</div>
+<div class="row">
+  <div class="col">
     <ColorPallet @color="#FCFFC9" @name="Color Warning" @variable="--color-warning" @class-name="bg-warning"/>
   </div>
-  <div class="col-one-third">
+  <div class="col">
     <ColorPallet @color="#D9F9E3" @name="Color Success" @variable="--color-success" @class-name="bg-success"/>
   </div>
 </div>
