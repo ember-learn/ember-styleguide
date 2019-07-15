@@ -46,6 +46,10 @@ export default [{
   }, {
     type: 'divider'
   }, {
+    href: 'https://emberjs.com/editions',
+    name: 'Editions',
+    type: 'link'
+  }, {
     href: 'https://deprecations.emberjs.com',
     name: 'Deprecations',
     type: 'link'
