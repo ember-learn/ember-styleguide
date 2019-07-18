@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
-    <title>Combined Shape Copy 4</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M7.98852133,38.8555766 C6.87013564,39.3639001 5.6240189,38.4603259 5.75968409,37.23942 L6.49036179,30.6637556 C3.00854934,27.4389438 1,23.0781344 1,18.4155149 C1,8.76174271 9.53848165,1 20,1 C30.4615184,1 39,8.76174271 39,18.4155149 C39,28.069287 30.4615184,35.8310297 20,35.8310297 C18.5222642,35.8310297 17.0657664,35.6762419 15.6512988,35.3727263 L7.98852133,38.8555766 Z" id="Combined-Shape" fill="#2AC3E3" fill-rule="nonzero"></path>
-    </g>
-</svg>
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><path d="M7.989 38.856a1.583 1.583 0 0 1-2.23-1.617l.731-6.575C3.01 27.439 1 23.078 1 18.416 1 8.762 9.538 1 20 1s19 7.762 19 17.416c0 9.653-8.538 17.415-19 17.415a20.72 20.72 0 0 1-4.349-.458L7.99 38.856z" fill="#2AC3E3" fill-rule="nonzero"/></svg>
