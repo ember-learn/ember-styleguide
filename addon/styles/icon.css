@@ -1,0 +1,13 @@
+.icon-wrapper {
+  display: inline-block;
+}
+
+.circle {
+  border-radius: 50%;
+  padding: 1em;
+}
+
+.icon {
+  width: 2em;
+  vertical-align: middle;
+}

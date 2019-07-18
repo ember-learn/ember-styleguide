@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M21,32 L21,37 C21,37.5522847 20.5522847,38 20,38 C19.4477153,38 19,37.5522847 19,37 L19,32 C12.372583,32 7,26.627417 7,20 L7,15 C7,14.4477153 7.44771525,14 8,14 C8.55228475,14 9,14.4477153 9,15 L9,20 C9,25.5228475 13.4771525,30 19,30 L21,30 C26.5228475,30 31,25.5228475 31,20 L31,15 C31,14.4477153 31.4477153,14 32,14 C32.5522847,14 33,14.4477153 33,15 L33,20 C33,26.627417 27.627417,32 21,32 Z M20,2 C23.8659932,2 27,5.13400675 27,9 L27,19 C27,22.8659932 23.8659932,26 20,26 C16.1340068,26 13,22.8659932 13,19 L13,9 C13,5.13400675 16.1340068,2 20,2 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+</svg>

@@ -13,8 +13,8 @@
   --text-preset-1: 1.5rem;
   --text-preset-2: 2.5rem;
   --text-preset-3: 4rem;
-  --text-preset-4: 8rem;
-  --text-preset-5: 12rem;
+  --text-preset-4: 6rem;
+  --text-preset-5: 8rem;
   --font-weight-1: 300;
   --font-weight-2: 400;
   --font-weight-3: 600; 
@@ -65,8 +65,6 @@ h6 {
 }
 
 /* move beyond this point */
-
-
 
 .container {
   max-width: var(--container-width-large);

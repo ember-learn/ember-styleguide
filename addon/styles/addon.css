@@ -5,6 +5,7 @@
 @import "colors.css";
 @import "helpers.css";
 @import "layout.css";
+@import "icon.css";
 
 @import "components/es-navbar.css";
 @import "components/es-header.css";
