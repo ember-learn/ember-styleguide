@@ -8,6 +8,14 @@
 }
 
 .icon {
-  width: 2em;
+  width: 1.5em;
   vertical-align: middle;
+}
+
+.icon-left {
+  margin-right: 0.5em;
+}
+
+.icon-right {
+  margin-left: 0.5em;
 }
