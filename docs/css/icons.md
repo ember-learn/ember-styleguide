@@ -56,7 +56,8 @@ Icons are used inside an icon-wrapper that defines it's size and styling options
 
 #### Card
 
-<div class="card text-center">
+```html
+<div class="card text-center margin-small">
   <div class="card-content">
     <div class="icon-wrapper medium circle bg-orange margin-small">
       <img class="icon" src="/images/icons/mic-icon.svg">
@@ -65,5 +66,5 @@ Icons are used inside an icon-wrapper that defines it's size and styling options
     <p>Rock n' Roll with EmberJS.</p>
   </div>
 </div>
-
+```
 
