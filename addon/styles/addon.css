@@ -5,6 +5,7 @@
 @import "colors.css";
 @import "helpers.css";
 @import "layout.css";
+@import "icon.css";
 
 @import "components/es-button.css";
 @import "components/es-card.css";
