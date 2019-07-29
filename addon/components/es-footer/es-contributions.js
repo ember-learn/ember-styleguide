@@ -1,9 +1,5 @@
-import Component from '@ember/component';
-import layout from '../../templates/components/es-footer/es-contributions';
-import { contributorLinks } from '../../constants/es-footer';
+import Component from 'sparkles-component';
 
-export default Component.extend({
-  classNames: ['footer-contributions'],
-  layout,
-  contributorLinks
-});
+export default class EsContributions extends Component {
+
+}

@@ -1,25 +1,15 @@
 <footer class="es-footer" ...attributes>
-  <div class="container">
+  {{!--
+    Pass footer properties to support
+    {{es-footer tagline="My custom tagline" contributorLinks=myLinks}}
+  --}}
+  {{es-footer/es-info infoLinks=infoLinks}}
 
-    {{yield
-      (hash
-      info = (component "es-footer/es-info")
-      statement = (component "es-footer/es-statement")
-      contributions = (component "es-footer/es-contributions")
-      )
-    }}
+  <hr class="footer-hr">
 
-    {{#unless hasBlock}}
+  {{es-footer/es-statement tagline=tagline socialLinks=socialLinks}}
 
-      {{!--
-        Pass footer properties to support
-        {{es-footer tagline="My custom tagline" contributorLinks=myLinks}}
-      --}}
-      {{es-footer/es-info infoLinks=infoLinks}}
-      {{es-footer/es-statement tagline=tagline socialLinks=socialLinks}}
-      {{es-footer/es-contributions contributorLinks=contributorLinks}}
+  <hr class="footer-hr">
 
-    {{/unless}}
-
-  </div>
+  {{es-footer/es-contributions contributorLinks=contributorLinks}}
 </footer>
