@@ -1,14 +1,9 @@
+<div class="footer-info container">
+  <img src="/images/ember-logo.svg" alt="Ember Logo" class="footer-logo margin-right-medium">
 
-Copyright {{currentYear}}
-{{#if hasBlock}}
-  {{yield}}
-{{else}}
-  {{#each infoLinks as |link index|}}
-    <a href={{link.href}}>{{link.name}}</a>
-    {{#if link.lineBreak}}
-      <br>
-    {{else if (not-eq index infoLinksLastIndex)}}
-      |
-    {{/if}}
-  {{/each}}
-{{/if}}
+  <div class="footer-info-links">
+    {{#each args.infoLinks as |link|}}
+      <a href={{link.href}} class="small margin-bottom-xsmall margin-left-xsmall">{{link.name}}</a>
+    {{/each}}
+  </div>
+</div>

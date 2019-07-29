@@ -40,10 +40,6 @@ const contributorLinks = [{
 }];
 
 const infoLinks = [{
-  name: 'Tilde Inc.',
-  href: 'http://tilde.io',
-  lineBreak: true
-}, {
   name: 'Team',
   href: 'https://emberjs.com/team'
 }, {
@@ -57,7 +53,7 @@ const infoLinks = [{
   name: 'Legal',
   href: 'https://emberjs.com/legal'
 }, {
-  name: 'Brand',
+  name: 'Branding',
   href: 'https://emberjs.com/brand',
   lineBreak: true
 }, {

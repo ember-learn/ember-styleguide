@@ -1,10 +1,9 @@
-import Component from '@ember/component';
-import layout from '../../templates/components/es-footer/es-statement';
-import { tagline, socialLinks } from '../../constants/es-footer';
+import Component from 'sparkles-component';
 
-export default Component.extend({
-  classNames: ['footer-statement'],
-  layout,
-  tagline,
-  socialLinks
-});
+export default class EsStatement extends Component {
+  constructor() {
+    super(...arguments)
+
+    this.currentYear = new Date().getUTCFullYear();
+  }
+}
