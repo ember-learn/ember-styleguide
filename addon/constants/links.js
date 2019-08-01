@@ -25,7 +25,11 @@ export default [{
   type: 'dropdown',
   items: [{
     href: 'https://emberjs.com/releases',
-    name: 'Channels',
+    name: 'Overview',
+    type: 'link'
+  }, {
+    href: 'https://emberjs.com/releases/lts',
+    name: '→ LTS',
     type: 'link'
   }, {
     href: 'https://emberjs.com/releases/release',
@@ -42,12 +46,16 @@ export default [{
   }, {
     type: 'divider'
   }, {
+    href: 'https://emberjs.com/editions',
+    name: 'Editions',
+    type: 'link'
+  }, {
     href: 'https://deprecations.emberjs.com',
     name: 'Deprecations',
     type: 'link'
   }, {
-    href: 'https://emberjs.com/statusboard',
-    name: 'Status Board',
+    href: 'https://github.com/emberjs/rfc-tracking/issues',
+    name: 'RFC Tracking',
     type: 'link'
   }]
 }, {
