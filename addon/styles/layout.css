@@ -14,10 +14,6 @@
   grid-column: span 6/span 6;
 }
 
-.max-width {
-  max-width: 100%;
-}
-
 .col-1 {
   grid-column: span 1/span 1;
 }
@@ -119,48 +115,5 @@
 
   .col-6 {
     grid-column: span 4/span 4;
-  }
-}
-
-
-.row {
-  display: flex;
-  margin-left: -2rem;
-  margin-right: -2rem;
-  flex-wrap: wrap;
-  margin-bottom: 4rem;
-}
-
-.row >.col {
-  margin: 0 2rem;
-  flex-grow: 1;
-  flex-basis: 0;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.align-end {
-  align-items: flex-end;
-}
-
-.col-one-half {
-  width: 50%;
-  margin: 0 2rem;
-}
-
-.col-one-third {
-  width: 30.3%;
-  margin: 0 2rem;
-}
-
-.cards {
-
-}
-
-@media (max-width: 576px) {
-  .row {
-    flex-direction: column;
   }
 }

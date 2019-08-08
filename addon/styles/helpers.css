@@ -321,3 +321,7 @@
 .padding-right-xlarge {
   padding-right: var(--spacing-5);
 }
+
+.max-width {
+  max-width: 100%;
+}

@@ -87,40 +87,41 @@ Example of a centered half column. A column class is used to limit its width.
   </div>
 </div>
 ```
+
 ## Spacing Scale
 The spacing scale is used to manage spacing a white-space within layouts and components.
 The spacing scale can be applied to both margin and padding properties.
 
-<div class="row">
-  <div class="card col">
+<div class="layout-grid">
+  <div class="card col-1">
     <div class="spacer-xsmall bg-orange">
     </div>
     <div class="card-content">
       <h4>Extra Small Offset</h4>
     </div>
   </div>
-  <div class="card col">
+  <div class="card col-1">
     <div class="spacer-small bg-orange">
     </div>
     <div class="card-content">
       <h4>Small Offset</h4>
     </div>
   </div>
-  <div class="card col">
+  <div class="card col-1">
     <div class="spacer-medium bg-orange">
     </div>
     <div class="card-content">
       <h4>Medium Offset</h4>
     </div>
   </div>
-  <div class="card col">
+  <div class="card col-1">
     <div class="spacer-large bg-orange">
     </div>
     <div class="card-content">
       <h4>Large Offset</h4>
     </div>
   </div>
-  <div class="card col">
+  <div class="card col-1">
     <div class="spacer-xlarge bg-orange">
     </div>
     <div class="card-content">
