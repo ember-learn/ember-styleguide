@@ -1,6 +1,6 @@
 {{! template-lint-disable no-inline-styles style-concatenation }}
 
-<div class="color-pallet">
+<div class="color-pallet" ...attributes>
   <div class="color-pallet__example" style="background-color: {{@color}}">
     <div class="color-pallet__example-text-row" style="grid-template-columns: repeat({{textClasses.length}}, 1fr)">
       {{#each textClasses as |textClass|}}
