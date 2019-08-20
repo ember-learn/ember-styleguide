@@ -40,9 +40,6 @@
 		margin-bottom: 0.5em;
 		margin-top: 0.5em;
 		padding: 12px 22px;
-		@media screen and (min-width:768px) {
-			width: 90%;
-		}
 		.cta-note-body {
 			font-size: 1em;
 			line-height: 1.5;
@@ -84,9 +81,6 @@
 	min-width: 100%;
 	padding: 1.25em;
 	text-align: center;
-	@media screen and (min-width: 768px) {
-		max-width: 85%;
-	}
 	a {
 		padding: 1em;
 	}
