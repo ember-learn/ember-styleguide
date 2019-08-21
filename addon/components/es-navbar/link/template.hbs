@@ -1,40 +1,36 @@
 {{#if (eq link.type "link")}}
   <a
-    class="navbar-link__dropdown"
-    aria-haspopup="true"
-    aria-expanded="false"
+    class="navbar-list-item-link"
     href={{link.href}}
-    tabindex={{if (eq index 0) 0 -1}}
   >
     {{link.name}}
   </a>
 {{/if}}
 {{#if (eq link.type "dropdown")}}
-  <a
-    class="navbar-link__dropdown"
-    aria-haspopup="true"
-    aria-expanded="false"
-    href="javascript:void(0)"
-    tabindex={{if (eq index 0) 0 -1}}
+  <button
+    onclick={{action "toggleDropdown"}}
+    class="navbar-list-item-dropdown-toggle {{if isDropdownOpen "active"}}"
+    aria-expanded={{isExpanded}}
   >
     {{link.name}}
-  </a>
-  <ul class="dropdown" role="menu" aria-label={{link.name}}>
-    {{#each link.items as |item|}}
-      {{#if (eq item.type "link")}}
-        <li role="none">
-          <a
-            class="navbar-link__dropdown-item"
-            href={{item.href}}
-            tabindex="-1"
-          >
-            {{item.name}}
-          </a>
-        </li>
-      {{/if}}
-      {{#if (eq item.type "divider")}}
-        <hr>
-      {{/if}}
-    {{/each}}
-  </ul>
+  </button>
+  {{#if isDropdownOpen}}
+    <ul class="navbar-dropdown-list">
+      {{#each link.items as |item|}}
+        {{#if (eq item.type "link")}}
+          <li class="navbar-dropdown-list-item">
+            <a
+              class="navbar-dropdown-list-item-link"
+              href={{item.href}}
+            >
+              {{item.name}}
+            </a>
+          </li>
+        {{/if}}
+        {{#if (eq item.type "divider")}}
+          <li role="separator" class="separator"></li>
+        {{/if}}
+      {{/each}}
+    </ul>
+  {{/if}}
 {{/if}}

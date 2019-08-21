@@ -3,242 +3,104 @@ import layout from './template';
 import { computed } from '@ember/object';
 import { equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
-import { next } from '@ember/runloop';
+import { schedule, next } from '@ember/runloop';
 
 export default Component.extend({
   layout,
   tagName: 'li',
-  tabIndex: 0,
-
-  role: 'menuitem',
-
-  attributeBindings: ['role'],
+  classNames: ['navbar-list-item'],
   classNameBindings: ['isDropdown:dropdown'],
   isDropdown: equal('link.type', 'dropdown'),
+  isDropdownOpen: false,
 
-  keyCode: Object.freeze({
-    'TAB': 9,
-    'RETURN': 13,
-    'ESC': 27,
-    'SPACE': 32,
-    'PAGEUP': 33,
-    'PAGEDOWN': 34,
-    'END': 35,
-    'HOME': 36,
-    'LEFT': 37,
-    'UP': 38,
-    'RIGHT': 39,
-    'DOWN': 40
+  // because aria-expanded requires a string value instead of a boolean
+  isExpanded: computed('isDropdownOpen', function() {
+    return this.isDropdownOpen ? 'true' : 'false';
   }),
 
   navbar: service(),
 
-  didInsertElement() {
-    this.element.tabIndex = -1;
+  actions: {
+    toggleDropdown() {
+      this.toggleProperty('isDropdownOpen');
 
-    this.get('navbar').register(this);
-    this.domNode = this.element.querySelector('ul[role="menu"]');
+      if (this.isDropdownOpen) {
+        // if it's open, let's make sure it can do some things
+        schedule('afterRender', this, function() {
 
-    if(this.domNode) {
-      this.element.querySelector('a').onmousedown = () => this.expand();
-      let links = Array.from(this.domNode.querySelectorAll('a'))
-
-      links.forEach((ancor) => {
-        ancor.addEventListener('blur', () => this.handleBlur());
-      });
+          // move focus to the first item in the dropdown
+          this.processFirstElementFocus();
+          this.processKeyPress();
+        });
+      }
     }
   },
 
-  handleBlur() {
+  closeDropdown() {
+    // set the isDropdownOpen to false, which will make the dropdown go away
+    this.set('isDropdownOpen', false);
+  },
+
+  openDropdown() { //might not need this
+    // open the dropdown and set the focus to the first item inside
+    this.set('isDropdownOpen', true);
+    this.processFirstElementFocus();
+  },
+
+  processBlur() {
     next(this, function() {
-      let subItems = Array.from(this.element.querySelectorAll('ul[role="menu"] li'));
+      let subItems = Array.from(this.element.querySelectorAll('.navbar-dropdown-list li'));
       let focused = subItems.find(item => document.activeElement === item.querySelector('a'));
 
-      // debugger
-      if(!focused) {
-        this.closePopupMenu();
+      //if the dropdown isn't focused, close it
+      if (!focused) {
+        this.closeDropdown();
       }
-    })
+    });
   },
 
-  openPopupMenu() {
-    // Get position and bounding rectangle of controller object's DOM node
-    var rect = this.element.getBoundingClientRect();
-
-    // Set CSS properties
-    if(this.domNode) {
-      this.domNode.style.display = 'block';
-      this.domNode.style.top = rect.height + 'px';
-      this.domNode.style.zIndex = 1000;
-    }
-
-    this.set('expanded', true);
+  processClick() {
+    // TODO handle mouseclick outside the current dropdown
   },
 
-  closePopupMenu(force) {
-    var controllerHasHover = this.hasHover;
-
-    var hasFocus = this.hasFocus;
-
-    if (!this.isMenubarItem) {
-      controllerHasHover = false;
-    }
-
-    if (force || (!hasFocus && !this.hasHover && !controllerHasHover)) {
-      if(this.domNode) {
-        this.domNode.style.display = 'none';
-        this.domNode.style.zIndex = 0;
-      }
-      this.set('expanded', false);
-    }
+  processFirstElementFocus() {
+    // Identify the first item in the dropdown list & set focus on it
+    let firstFocusable = this.element.querySelector('.navbar-dropdown-list li:first-of-type a');
+    firstFocusable.focus();
   },
 
-  expanded: computed({
-    get() {
-      return this.element.getAttribute('aria-expanded') === 'true';
-    },
-    set(key, value) {
-      this.element.setAttribute('aria-expanded', value);
-    }
-  }).volatile(),
+  processKeyPress() {
+    // add event listeners
+    let dropdownList = this.element.querySelector('.navbar-dropdown-list');
 
-  setFocusToFirstItem() {
-    let element = this.element.querySelector('ul[role="menu"] li a')
-    if (element) {
-      element.focus();
-    }
-  },
+    //...for certain keypress events
+    dropdownList.addEventListener('keydown', event => {
 
-  setFocusToLastItem() {
-    this.element.querySelector('ul[role="menu"] li a:last-of-type').focus();
-  },
+      // ESC key should close the dropdown and return focus to the toggle
+      if (event.keyCode === 27 && this.isDropdownOpen) {
+        this.closeDropdown();
+        this.returnFocus();
 
-  setFocusToNextItem() {
-    let subItems = Array.from(this.element.querySelectorAll('ul[role="menu"] li'));
+      // if focus leaves the open dropdown via keypress, close it (without trying to otherwise control focus)
+      } else if (this.isDropdownOpen) {
+          this.processBlur();
 
-    let focused = subItems.find(item => document.activeElement === item.querySelector('a'));
-    let focusedIndex = subItems.indexOf(focused);
-
-    let nextItem = subItems[(focusedIndex + 1) % subItems.length];
-
-    if (!nextItem) {
-      return;
-    }
-
-    nextItem.querySelector('a').focus();
-  },
-
-  setFocusToPreviousItem() {
-    let subItems = Array.from(this.element.querySelectorAll('ul[role="menu"] li'));
-
-    let focused = subItems.find(item => document.activeElement === item.querySelector('a'));
-    let focusedIndex = subItems.indexOf(focused);
-
-    let nextIndex = focusedIndex - 1;
-
-    if (nextIndex < 0) {
-      nextIndex = subItems.length - 1;
-    }
-
-    let nextItem = subItems[nextIndex];
-
-    if (!nextItem) {
-      return;
-    }
-
-    nextItem.querySelector('a').focus();
-  },
-
-  keyDown(event) {
-    let flag = false;
-    let clickEvent;
-    let mousedownEvent;
-
-    switch (event.keyCode) {
-      case this.keyCode.RETURN:
-      case this.keyCode.SPACE:
-        // Create simulated mouse event to mimic the behavior of ATs
-        // and let the event handler handleClick do the housekeeping.
-        mousedownEvent = new MouseEvent('mousedown', {
-          'view': window,
-          'bubbles': true,
-          'cancelable': true
-        });
-        clickEvent = new MouseEvent('click', {
-          'view': window,
-          'bubbles': true,
-          'cancelable': true
-        });
-
-        document.activeElement.dispatchEvent(mousedownEvent);
-        document.activeElement.dispatchEvent(clickEvent);
-
-        flag = true;
-        break;
-      case this.keyCode.DOWN:
-        if(this.get('expanded')) {
-          this.setFocusToNextItem();
-        } else {
-          this.openPopupMenu();
-          this.setFocusToFirstItem();
-        }
-        flag = true;
-        break;
-
-      case this.keyCode.LEFT:
-        this.get('navbar').setFocusToPreviousItem(this);
-        flag = true;
-        break;
-
-      case this.keyCode.RIGHT:
-        this.get('navbar').setFocusToNextItem(this);
-        flag = true;
-        break;
-
-      case this.keyCode.UP:
-        if(this.get('expanded')) {
-          this.setFocusToPreviousItem();
-        } else {
-          this.openPopupMenu();
-          this.setFocusToLastItem();
-        }
-        break;
-
-      case this.keyCode.HOME:
-      case this.keyCode.PAGEUP:
-        this.setFocusToFirstItem();
-        flag = true;
-        break;
-
-      case this.keyCode.END:
-      case this.keyCode.PAGEDOWN:
-        this.setFocusToLastItem();
-        flag = true;
-        break;
-
-      case this.keyCode.TAB:
-        this.closePopupMenu(true);
-        break;
-
-      case this.keyCode.ESC:
-        this.closePopupMenu(true);
-        break;
-    }
-
-    if (flag) {
-      event.stopPropagation();
-      event.preventDefault();
-    }
-  },
-
-  expand() {
-    next(this, () => {
-      if(this.get('expanded')) {
-        this.closePopupMenu();
       } else {
-        this.openPopupMenu();
-        this.setFocusToFirstItem();
+          return;
       }
-    })
+    });
+  },
+
+  returnFocus() {
+    // after that rendering bit happens, we need to return the focus to the trigger
+    schedule('afterRender', this, function() {
+      let dropdownTrigger = this.element.querySelector('.navbar-list-item-dropdown-toggle');
+      dropdownTrigger.focus();
+    });
+  },
+
+  willDestroyElement() {
+    document.removeEventListener('keydown', this.triggerDropdown);
+    // document.removeEventListener('click', this.triggerDropdown);
   }
 });
