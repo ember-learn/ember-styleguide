@@ -6,6 +6,7 @@
 @import "helpers.css";
 @import "layout.css";
 @import "icon.css";
+@import "background-shapes.css";
 
 @import "components/es-navbar.css";
 @import "components/es-header.css";
