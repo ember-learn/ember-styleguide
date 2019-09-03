@@ -2,6 +2,8 @@
 
 The list component is an unstyled, unordered list. A title must be defined, but can be visually hidden.
 
+**Note: this component is deprecated and will be removed in the next version of ember-styleguide**
+
 ## Uses
 
 ### Unstyled, Unordered List
