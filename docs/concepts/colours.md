@@ -1,11 +1,12 @@
 # Colours
 
-### Here we talk about the color scheme
+### Usage
+#### Legibility
+Website elements like text and icons should meet accesibility standards when used against coloured backgrounds. The following swatches contain a sample of each of the primary palette colours, along with recommendations for its usage and the acceptable contrast guidelines when coupled with text.
+
 
 ## Primary Colours
 The primary palette is applied across every page of the website and contains the brand, accent and neutral colours. The purpose of the primary palette is to keep uniformity across all pages while encouraging accessibility best practices.
-
-The following swatches contain a sample of each of the primary palette colours, along with recommendations for its usage and the acceptable contrast guidelines when coupled with text.
 
 <div class="layout-grid">
   <ColorPallet class="col-2-large" @color="#1A1A1A" @name="Dark Gray" @variable="--color-dark" @class-name="bg-dark" />

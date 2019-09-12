@@ -71,6 +71,14 @@
   font-size: var(--text-preset-5);
 }
 
+h1, h2, h3 {
+  margin-bottom: var(--spacing-1);
+}
+
+p {
+  margin-bottom: var(--spacing-2);
+}
+
 .light {
   font-weight: var(--font-weight-1);
 }
