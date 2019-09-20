@@ -64,6 +64,15 @@ h6 {
   }
 }
 
+a {
+  color: var(--color-orange);
+  text-decoration: none;
+}
+
+a:active, .active {
+  color: var(--color-dark);
+}
+
 /* move beyond this point */
 
 .container {

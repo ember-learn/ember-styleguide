@@ -1,0 +1,14 @@
+.sidebar {
+  float: left;
+  min-width: 25%;
+  padding: var(--spacing-1);
+  border: 1px solid gray;
+}
+
+.sidebar-item {
+  display: block;
+}
+
+.sidebar-group {
+  margin-bottom: var(--spacing-1);
+}
