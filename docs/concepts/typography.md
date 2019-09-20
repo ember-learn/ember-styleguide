@@ -4,8 +4,7 @@
 #### Legibility
 Text legibility is primarily affected by color. All text on the website should comply with the Web Content Accessibility Guidelines (WCAG 2.0) Level AA requirements.
 
-
-Please refer to the <a href="colours">Colours</a> section for more information on colour contrast and accessibility.
+Please refer to the <a href="colours">Colors</a> section for more information on color contrast and accessibility.
 
 ### Sizes
 

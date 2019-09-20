@@ -2,11 +2,10 @@
 
 ### Usage
 #### Legibility
-Website elements like text and icons should meet accesibility standards when used against coloured backgrounds. The following swatches contain a sample of each of the primary palette colours, along with recommendations for its usage and the acceptable contrast guidelines when coupled with text.
-
+Website elements like text and icons should meet accesibility standards when used against colored backgrounds. The following swatches contain a sample of each of the primary palette colors, along with recommendations for its usage and the acceptable contrast guidelines when coupled with text.
 
 ## Primary Colours
-The primary palette is applied across every page of the website and contains the brand, accent and neutral colours. The purpose of the primary palette is to keep uniformity across all pages while encouraging accessibility best practices.
+The primary palette is applied across every page of the website and contains the brand, accent and neutral colors. The purpose of the primary palette is to keep uniformity across all pages while encouraging accessibility best practices.
 
 <div class="layout-grid">
   <ColorPallet class="col-2-large" @color="#1A1A1A" @name="Dark Gray" @variable="--color-dark" @class-name="bg-dark" />
@@ -18,7 +17,7 @@ The primary palette is applied across every page of the website and contains the
   <ColorPallet class="col-2-large" @color="#FFFFFF" @name="Light" @variable="--color-light" @class-name="bg-light"/>
 </div>
 
-## Secondary Colours
+## Secondary Colors
 The secondary palette is applied to UI elements and it's not part of the base colors. The purpose of the secondary palette is to ensure the readability, usability, and accessibility of all UI elements and enhance the communication of actions, changes in state, or errors.
 
 <div class="layout-grid">
