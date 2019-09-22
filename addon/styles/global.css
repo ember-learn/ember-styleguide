@@ -10,11 +10,13 @@
   --color-danger: #FFD8E1;
   --color-warning: #FCFFC9;
   --color-info: #E3EEFC;
+
   --text-preset-1: 1.5rem;
-  --text-preset-2: 2.5rem;
-  --text-preset-3: 4rem;
-  --text-preset-4: 6rem;
-  --text-preset-5: 8rem;
+  --text-preset-2: 2.25rem;
+  --text-preset-3: 3.375rem;
+  --text-preset-4: 5.063rem;
+  --text-preset-5: 7.594rem;
+
   --font-weight-1: 300;
   --font-weight-2: 400;
   --font-weight-3: 600; 
