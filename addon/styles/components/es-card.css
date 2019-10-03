@@ -1,11 +1,10 @@
 .card {
   border: 1px solid var(--color-gray);
-  margin-bottom: var(--spacing-2);
   border-radius: 4px;
   height: 100%;
   overflow: hidden;
 }
 
 .card-content {
-  padding: var(--spacing-2);
+  margin: var(--spacing-2);
 }

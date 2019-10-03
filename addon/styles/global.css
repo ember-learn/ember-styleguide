@@ -61,6 +61,15 @@ body {
   line-height: var(--line-height-2);
 }
 
+a {
+  color: var(--color-orange);
+  text-decoration: none;
+}
+
+a:active, .active {
+  color: var(--color-dark);
+}
+
 p {
   margin: 0 0 1rem 0;
 }
