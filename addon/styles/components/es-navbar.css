@@ -11,12 +11,14 @@
   width: 100%;
 }
 
-.navbar-brand {
-  display: block;
-  padding: 0 1rem;
-  height: 3rem;
+.navbar-brand-wrapper {
+  padding: 1rem;
   /* TODO using order is not ideal for accessibility */
   order: 2;
+}
+
+.navbar-brand {
+  height: 5rem;
 }
 
 .navbar-list {
