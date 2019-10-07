@@ -24,6 +24,29 @@ export default Component.extend({
     this._super(...arguments);
     this.get('navbar').register(this);
   },
+
+  didInsertElement() {
+    let button = this.element.querySelector('.navbar-list-item-dropdown-toggle')
+
+    if(button) {
+      button.addEventListener('blur', () => this.processBlur());
+    }
+  },
+
+  setupLinkBlurs() {
+    if(this.linkBlursActive) {
+      return;
+    }
+
+    this.set('linkBlursActive', true);
+
+    let links = Array.from(this.element.querySelectorAll('.navbar-dropdown-list-item-link'));
+
+    links.forEach((ancor) => {
+      ancor.addEventListener('blur', () => this.processBlur());
+    });
+  },
+
   actions: {
     toggleDropdown(event) {
       this.get('navbar').closePopupMenu(this);
@@ -32,6 +55,8 @@ export default Component.extend({
       if (this.isDropdownOpen) {
         // if it's open, let's make sure it can do some things
         schedule('afterRender', this, function() {
+          this.setupLinkBlurs();
+
           // move focus to the first item in the dropdown only when opened with keyboard
           // ref https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail
           if(event.detail === 0) {
