@@ -25,16 +25,19 @@ export default Component.extend({
     this.get('navbar').register(this);
   },
   actions: {
-    toggleDropdown() {
+    toggleDropdown(event) {
       this.get('navbar').closePopupMenu(this);
       this.toggleProperty('isDropdownOpen');
 
       if (this.isDropdownOpen) {
         // if it's open, let's make sure it can do some things
         schedule('afterRender', this, function() {
+          // move focus to the first item in the dropdown only when opened with keyboard
+          // ref https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail
+          if(event.detail === 0) {
+            this.processFirstElementFocus();
+          }
 
-          // move focus to the first item in the dropdown
-          this.processFirstElementFocus();
           this.processKeyPress();
         });
       }
