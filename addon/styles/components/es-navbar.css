@@ -27,6 +27,11 @@
   margin: 0.5rem 0 0 0;
   /* TODO using order is not ideal for accessibility */
   order: 3;
+  display: none;
+}
+
+.navbar-list[aria-expanded="true"] {
+  display: inline-block;
 }
 
 .navbar-toggler {
