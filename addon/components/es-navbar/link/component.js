@@ -20,8 +20,13 @@ export default Component.extend({
 
   navbar: service(),
 
+  init() {
+    this._super(...arguments);
+    this.get('navbar').register(this);
+  },
   actions: {
     toggleDropdown() {
+      this.get('navbar').closePopupMenu(this);
       this.toggleProperty('isDropdownOpen');
 
       if (this.isDropdownOpen) {
