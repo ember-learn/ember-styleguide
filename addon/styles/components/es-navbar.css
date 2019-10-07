@@ -113,6 +113,7 @@
 
   li.separator {
     margin: 0;
+    height: 0;
     /* TODO fix this */
     border-bottom: 1px solid black;
   }
