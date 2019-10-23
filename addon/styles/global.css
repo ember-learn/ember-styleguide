@@ -16,14 +16,16 @@
   --font-size-3: 2rem;
   --font-size-4: 2.5rem;
   --font-size-5: 4.5rem;
+  --font-size-display: 7.75rem;
 
   --line-height-1: calc(16 / 12);
   --line-height-2: 1.6;
   --line-height-3: 1.5;
   --line-height-4: 1.2;
   --line-height-5: calc(48 / 36);
+  --line-height-display: calc(64 / 62);
 
-  --font-weight-1: 300;
+  --font-weight-1: 200;
   --font-weight-2: 400;
   --font-weight-3: 700;
 
