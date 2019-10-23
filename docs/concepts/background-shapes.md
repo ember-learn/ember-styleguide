@@ -66,9 +66,6 @@ The other type of background shape is a "swipe" that can either be a swipe acros
   <div class="col-4-large offset-1-large text-center margin-vertical-large">
     <h2>More stuff to show location of swipe</h2>
   </div>
-  <div class="col-4-large offset-1-large text-center margin-vertical-large">
-    <h2>yes this needs quite a large section</h2>
-  </div>
 </div>
 ```
 

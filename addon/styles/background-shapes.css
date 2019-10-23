@@ -21,7 +21,7 @@
 }
 
 .bg-shape-swipe-top {
-  background: url(/images/swipe-top.svg) no-repeat top center;
+  background: var(--color-orange) url('/images/swipe-top.svg') no-repeat bottom left;
   background-size: contain;
 }
 
