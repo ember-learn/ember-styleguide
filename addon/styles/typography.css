@@ -1,50 +1,44 @@
-
-/* open-sans-300 - latin */
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: url('/fonts/open-sans-v16-latin-300.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans Light'), local('OpenSans-Light'),
-       url('/fonts/open-sans-v16-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/open-sans-v16-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fonts/open-sans-v16-latin-300.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/open-sans-v16-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fonts/open-sans-v16-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
-}
-/* open-sans-regular - latin */
-@font-face {
-  font-family: 'Open Sans';
+  font-family: "Inter web";
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/open-sans-v16-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans Regular'), local('OpenSans-Regular'),
-       url('/fonts/open-sans-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/open-sans-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fonts/open-sans-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/open-sans-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fonts/open-sans-v16-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+  font-display: swap;
+  src: url("/fonts/Inter-Regular.woff2?v=3.11") format("woff2"), url("/fonts/Inter-Regular.woff?v=3.11") format("woff");
 }
-/* open-sans-600 - latin */
+
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Inter web";
   font-style: normal;
-  font-weight: 600;
-  src: url('/fonts/open-sans-v16-latin-600.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
-       url('/fonts/open-sans-v16-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/open-sans-v16-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fonts/open-sans-v16-latin-600.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/open-sans-v16-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fonts/open-sans-v16-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
+  font-weight: 700; /* semibold should be 600, but since we don't use bold, it's easier to map differently than changing all usages of the bold cut to semibold */
+  font-display: swap;
+  src: url("/fonts/Inter-SemiBold.woff2?v=3.11") format("woff2"),
+    url("/fonts/Inter-SemiBold.woff?v=3.11") format("woff");
+}
+
+@font-face {
+  font-family: "Inter web";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/Inter-Light-BETA.woff2?v=3.11") format("woff2"),
+    url("/fonts/Inter-Light-BETA.woff?v=3.11") format("woff");
+}
+
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/Inter-roman.var.woff2?v=3.11") format("woff2");
 }
 
 .sans {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-family-sans);
 }
 
 .bold {
-  font-weight: 800;
+  font-weight: var(--font-weight-3);
 }
 
 .italic {
@@ -87,7 +81,8 @@ p {
   font-weight: var(--font-weight-2);
 }
 
-.bold, strong {
+.bold,
+strong {
   font-weight: var(--font-weight-3);
 }
 
