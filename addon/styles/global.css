@@ -44,6 +44,11 @@ p {
   font-weight: 300;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 h1,
 h2,
 h3,
