@@ -14,10 +14,10 @@ Icons are used inside an icon-wrapper that defines it's size and styling options
 
 ```html
 <div class="icon-wrapper margin-small">
-  <img class="icon" src="/images/icons/bubble-icon.svg">
+  <img class="icon" src="/images/icons/bubble-icon.svg" width="40" height="40" />
 </div>
 <div class="icon-wrapper circle bg-orange margin-small">
-  <img class="icon" src="/images/icons/mic-icon.svg">
+  <img class="icon" src="/images/icons/mic-icon.svg" width="40" height="40" />
 </div>
 ```
 
@@ -25,32 +25,33 @@ Icons are used inside an icon-wrapper that defines it's size and styling options
 
 ```html
 <div class="icon-wrapper xsmall margin-xsmall">
-  <img class="icon" alt="speech bubble" src="/images/icons/bubble-icon.svg">
+  <img class="icon" alt="speech bubble" src="/images/icons/bubble-icon.svg" width="40" height="40" />
 </div>
 <div class="icon-wrapper small margin-xsmall">
-  <img class="icon" alt="speech bubble" src="/images/icons/bubble-icon.svg">
+  <img class="icon" alt="speech bubble" src="/images/icons/bubble-icon.svg" width="40" height="40" />
 </div>
 <div class="icon-wrapper medium margin-xsmall">
-  <img class="icon" alt="speech bubble" src="/images/icons/bubble-icon.svg">
+  <img class="icon" alt="speech bubble" src="/images/icons/bubble-icon.svg" width="40" height="40" />
 </div>
 <div class="icon-wrapper large margin-xsmall">
-  <img class="icon" alt="speech bubble" src="/images/icons/bubble-icon.svg">
+  <img class="icon" alt="speech bubble" src="/images/icons/bubble-icon.svg" width="40" height="40" />
 </div>
 <div class="icon-wrapper xlarge margin-xsmall">
-  <img class="icon" alt="speech bubble" src="/images/icons/bubble-icon.svg">
+  <img class="icon" alt="speech bubble" src="/images/icons/bubble-icon.svg" width="40" height="40" />
 </div>
 ```
 
 ### Using icons within components
+
 #### Button
 
 ```html
 <button class="es-button xsmall margin-bottom-small">
-  <img class="icon icon-left" src="/images/icons/mic-icon.svg"> Click Me 
+  <img class="icon icon-left" src="/images/icons/mic-icon.svg" width="40" height="40" /> Click Me
 </button>
 
 <button class="es-button small margin-bottom-small">
-  Click Me <img class="icon icon-right" src="/images/icons/mic-icon.svg"> 
+  Click Me <img class="icon icon-right" src="/images/icons/mic-icon.svg" width="40" height="40" />
 </button>
 ```
 
@@ -60,11 +61,10 @@ Icons are used inside an icon-wrapper that defines it's size and styling options
 <div class="card text-center margin-small">
   <div class="card-content">
     <div class="icon-wrapper medium circle bg-orange margin-small">
-      <img class="icon" src="/images/icons/mic-icon.svg">
+      <img class="icon" src="/images/icons/mic-icon.svg" width="40" height="40" />
     </div>
     <h3>Podcasts</h3>
     <p>Rock n' Roll with EmberJS.</p>
   </div>
 </div>
 ```
-
