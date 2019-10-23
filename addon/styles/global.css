@@ -1,5 +1,6 @@
 :root {
-  --font-family-sans: 'Inter var', 'Inter web', sans-serif;
+  --font-family-sans: 'Inter var', 'Inter web', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
   --container-width-large: 128rem;
   --color-dark: #1c1e23;
   --color-light: #ffffff;
