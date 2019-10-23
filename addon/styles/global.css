@@ -1,15 +1,15 @@
 :root {
   --font-family-sans: 'Inter var', 'Inter web', sans-serif;
   --container-width-large: 128rem;
-  --color-dark: #1C1E23;
-  --color-light: #FFFFFF;
-  --color-muted: #F4F6F8;
-  --color-orange: #E04E39;
-  --color-gray: #A2A3A8;
-  --color-success: #D9F9E3;
-  --color-danger: #FFD8E1;
-  --color-warning: #FCFFC9;
-  --color-info: #E3EEFC;
+  --color-dark: #1c1e23;
+  --color-light: #ffffff;
+  --color-muted: #f4f6f8;
+  --color-orange: #e04e39;
+  --color-gray: #a2a3a8;
+  --color-success: #d9f9e3;
+  --color-danger: #ffd8e1;
+  --color-warning: #fcffc9;
+  --color-info: #e3eefc;
 
   --font-size-1: 1.5rem;
   --font-size-2: 1.875rem; /* 15dp, no need to use calc() for such a basic value */
@@ -92,5 +92,5 @@ h6 {
 .content-section {
   padding-top: 8rem;
   padding-bottom: 8rem;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }
