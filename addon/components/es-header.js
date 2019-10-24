@@ -1,13 +1,10 @@
 import Component from 'sparkles-component';
 import { set } from '@ember/object';
-import { inject as service } from '@ember/service';
 
 import defaultLinks from '../constants/links';
 
 export default class EsHeader extends Component {
   expanded = false;
-
-  @service fastboot;
 
   get navHome() {
     if (this.args.home) {
@@ -32,7 +29,7 @@ export default class EsHeader extends Component {
   didInsertElement() {
     // Ensure menu is marked as expanded if there is enough screen estate
     // TODO: Dynamically calculate necessary horizontal space and collapse based on that
-    if (!this.fastboot.isFastBoot) {
+    if (typeof FastBoot === 'undefined') {
       const mq = matchMedia('(min-width: 992px)');
 
       mq.addListener(event => {
