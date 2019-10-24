@@ -9,7 +9,7 @@
 @font-face {
   font-family: 'Inter web';
   font-style: normal;
-  font-weight: 700; /* semibold should be 600, but since we don't use bold, it's easier to map differently than changing all usages of the bold cut to semibold */
+  font-weight: 600;
   font-display: swap;
   src: url('/fonts/Inter-SemiBold.woff2?v=3.11') format('woff2'),
     url('/fonts/Inter-SemiBold.woff?v=3.11') format('woff');
