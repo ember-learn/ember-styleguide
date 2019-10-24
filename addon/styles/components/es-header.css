@@ -1,5 +1,159 @@
-header.es-header {
+.es-header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-dark);
+  padding: 1.5rem 10px;
+}
+
+.es-navbar {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  max-width: var(--container-width-large);
+  width: 100%;
+}
+
+.navbar-brand {
+  display: block;
+  height: 5rem;
+  margin-right: 1rem;
+}
+
+.navbar-list {
+  padding: 0;
+  width: 100%;
+  display: none;
+  font-weight: 600;
+  list-style: none;
+}
+
+.navbar-list > li > * {
+  display: block;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+[aria-expanded='true'] ~ .navbar-list {
+  display: inline-block;
+}
+
+.navbar-toggler {
+  display: inline-block;
+  border: 0;
+  margin-left: auto;
+  margin-top: -5rem;
+  width: 5rem;
+  height: 5rem;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg height='24' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 18a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2zm0-7a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2zm0-7a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2z' fill='%23fff' fill-rule='evenodd'/%3E%3C/svg%3E")
+    right center no-repeat;
+  overflow: hidden;
+  text-indent: -999rem;
+}
+
+.navbar-list-item {
+  position: relative;
+  padding: ;
+}
+
+.navbar-list-item-link {
+  display: block;
+  color: inherit;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+}
+
+.navbar-list-item-dropdown-toggle {
+  border: 0;
+  color: #fff;
+  display: block;
+  padding: 1rem 3.5rem 1rem 1.5rem;
+  text-decoration: none;
+  white-space: nowrap;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg width='8' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.295 3.707C-.335 3.077.11 2 1.002 2h5.996c.891 0 1.337 1.077.707 1.707l-2.998 3a1 1 0 0 1-1.414 0l-2.998-3z' fill='%23A3A6AF' fill-rule='nonzero'/%3E%3C/svg%3E")
+    right 1.5rem center no-repeat;
+}
+
+.navbar-list-item-dropdown-toggle:focus,
+.navbar-list-item-dropdown-toggle:hover {
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.295 3.707C-.335 3.077.11 2 1.002 2h5.996c.891 0 1.337 1.077.707 1.707l-2.998 3a1 1 0 0 1-1.414 0l-2.998-3z' fill='%23FFF' fill-rule='nonzero'/%3E%3C/svg%3E");
+}
+
+.navbar-list-item-dropdown-toggle[aria-expanded='true'] {
+  color: #ff5c44;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.295 3.707C-.335 3.077.11 2 1.002 2h5.996c.891 0 1.337 1.077.707 1.707l-2.998 3a1 1 0 0 1-1.414 0l-2.998-3z' fill='%23FF5C44' fill-rule='nonzero'/%3E%3C/svg%3E");
+}
+
+.navbar-dropdown-list {
+  background: #f4f6f8;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+li.separator {
+  margin: 0;
+  height: 0;
+  list-style: none;
+  /* TODO fix this */
+  border-bottom: 2px solid #dee2e7;
+}
+
+.navbar-dropdown-list-item {
+  background: #fff;
+  display: block;
+  list-style: none;
+  white-space: nowrap;
+}
+
+a.navbar-dropdown-list-item-link {
+  color: var(--color-orange);
+  display: block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+a.navbar-dropdown-list-item-link:hover,
+a.navbar-dropdown-list-item-link:focus {
+  background: #dee2e7;
+  color: #cf2d20;
+}
+
+/* TODO This rule doesn't make sense so I'm commenting it out for now
+ul[role="menubar"][aria-expanded="true"] li {
+  background: blue;
+} */
+
+@media (min-width: 992px) {
+  .es-navbar {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .navbar-brand {
+    padding: 0;
+  }
+
+  .navbar-list {
+    display: flex;
+    margin: 0;
+  }
+
+  .navbar-toggler {
+    display: none; /* TODO remove this properly or else screen readers will still pick up on it */
+  }
+
+  .navbar-dropdown-list {
+    box-shadow: 0 0 1px 0 rgba(73, 79, 95, 0.6), 0 2px 10px -5px rgba(73, 79, 95, 0.55),
+      0 3px 30px -15px rgba(73, 79, 95, 0.8), 0 0 50px -5px rgba(73, 79, 95, 0.5);
+    padding: 0;
+    position: absolute;
+    left: -0.5rem;
+    z-index: 100;
+  }
 }

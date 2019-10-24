@@ -1,5 +1,7 @@
 # Header
 
+Shows the side wide header with the global navigation.
+
 ```handlebars
-{{es-header}}
+<EsHeader />
 ```

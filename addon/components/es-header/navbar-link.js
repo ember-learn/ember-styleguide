@@ -26,15 +26,15 @@ export default Component.extend({
   },
 
   didInsertElement() {
-    let button = this.element.querySelector('.navbar-list-item-dropdown-toggle')
+    let button = this.element.querySelector('.navbar-list-item-dropdown-toggle');
 
-    if(button) {
+    if (button) {
       button.addEventListener('blur', () => this.processBlur());
     }
   },
 
   setupLinkBlurs() {
-    if(this.linkBlursActive) {
+    if (this.linkBlursActive) {
       return;
     }
 
@@ -42,7 +42,7 @@ export default Component.extend({
 
     let links = Array.from(this.element.querySelectorAll('.navbar-dropdown-list-item-link'));
 
-    links.forEach((ancor) => {
+    links.forEach(ancor => {
       ancor.addEventListener('blur', () => this.processBlur());
     });
   },
@@ -59,14 +59,14 @@ export default Component.extend({
 
           // move focus to the first item in the dropdown only when opened with keyboard
           // ref https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail
-          if(event.detail === 0) {
+          if (event.detail === 0) {
             this.processFirstElementFocus();
           }
 
           this.processKeyPress();
         });
       }
-    }
+    },
   },
 
   closeDropdown() {
@@ -74,7 +74,8 @@ export default Component.extend({
     this.set('isDropdownOpen', false);
   },
 
-  openDropdown() { //might not need this
+  openDropdown() {
+    //might not need this
     // open the dropdown and set the focus to the first item inside
     this.set('isDropdownOpen', true);
     this.processFirstElementFocus();
@@ -108,18 +109,16 @@ export default Component.extend({
 
     //...for certain keypress events
     dropdownList.addEventListener('keydown', event => {
-
       // ESC key should close the dropdown and return focus to the toggle
       if (event.keyCode === 27 && this.isDropdownOpen) {
         this.closeDropdown();
         this.returnFocus();
 
-      // if focus leaves the open dropdown via keypress, close it (without trying to otherwise control focus)
+        // if focus leaves the open dropdown via keypress, close it (without trying to otherwise control focus)
       } else if (this.isDropdownOpen) {
-          this.processBlur();
-
+        this.processBlur();
       } else {
-          return;
+        return;
       }
     });
   },
@@ -135,5 +134,5 @@ export default Component.extend({
   willDestroyElement() {
     document.removeEventListener('keydown', this.triggerDropdown);
     // document.removeEventListener('click', this.triggerDropdown);
-  }
+  },
 });
