@@ -28,7 +28,7 @@
 
   --font-weight-1: 200;
   --font-weight-2: 400;
-  --font-weight-3: 700;
+  --font-weight-3: 600;
 
   --spacing-1: 2rem;
   --spacing-2: 3rem;
@@ -68,6 +68,10 @@ h5,
 h6 {
   font-weight: 500;
   margin: 0 0 2rem 0;
+}
+
+strong {
+  font-weight: var(--font-weight-3);
 }
 
 /*
