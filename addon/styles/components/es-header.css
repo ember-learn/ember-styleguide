@@ -3,7 +3,12 @@
   justify-content: center;
   align-items: center;
   background-color: var(--color-dark);
-  padding: 1.5rem 10px;
+  padding: 1.5rem 0;
+}
+
+.es-header ul,
+.es-header li {
+  list-style: none;
 }
 
 .es-navbar {
@@ -16,25 +21,31 @@
   width: 100%;
 }
 
+.navbar-brand-wrapper {
+  border-radius: 10px;
+}
+
 .navbar-brand {
   display: block;
   height: 5rem;
-  margin-right: 1rem;
+  margin: 0 1.5rem 0 1rem; /* should be 0 1.5rem, but the logo needs to be slightly more left to be visually aligned */
 }
 
 .navbar-list {
+  margin: 1.5rem 0 0;
   padding: 0;
-  width: 100%;
   display: none;
-  font-weight: 600;
+  font-weight: var(--font-weight-3);
   list-style: none;
 }
 
 .navbar-list > li > * {
   display: block;
+  text-align: left;
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
+  border-radius: 10px;
 }
 
 [aria-expanded='true'] ~ .navbar-list {
@@ -44,39 +55,44 @@
 .navbar-toggler {
   display: inline-block;
   border: 0;
-  margin-left: auto;
-  margin-top: -5rem;
-  width: 5rem;
+  margin: -5rem 0.5rem 0 auto;
+  width: 4.5rem;
   height: 5rem;
   background: transparent
     url("data:image/svg+xml,%3Csvg height='24' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 18a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2zm0-7a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2zm0-7a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2z' fill='%23fff' fill-rule='evenodd'/%3E%3C/svg%3E")
-    right center no-repeat;
+    right 1rem center no-repeat;
   overflow: hidden;
   text-indent: -999rem;
+  border-radius: 10px;
 }
 
 .navbar-list-item {
   position: relative;
-  padding: ;
+}
+
+.navbar-list-item-link,
+.navbar-list-item-dropdown-toggle {
+  margin: 0 0.5rem;
+  padding: 1rem;
+  color: #fff;
 }
 
 .navbar-list-item-link {
   display: block;
   color: inherit;
-  padding: 1rem 1.5rem;
   text-decoration: none;
 }
 
 .navbar-list-item-dropdown-toggle {
+  width: calc(100% - 1rem);
   border: 0;
-  color: #fff;
   display: block;
-  padding: 1rem 3.5rem 1rem 1.5rem;
+  padding-right: 3rem;
   text-decoration: none;
   white-space: nowrap;
   background: transparent
     url("data:image/svg+xml,%3Csvg width='8' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.295 3.707C-.335 3.077.11 2 1.002 2h5.996c.891 0 1.337 1.077.707 1.707l-2.998 3a1 1 0 0 1-1.414 0l-2.998-3z' fill='%23A3A6AF' fill-rule='nonzero'/%3E%3C/svg%3E")
-    right 1.5rem center no-repeat;
+    right 2rem center no-repeat;
 }
 
 .navbar-list-item-dropdown-toggle:focus,
@@ -86,47 +102,52 @@
 
 .navbar-list-item-dropdown-toggle[aria-expanded='true'] {
   color: #ff5c44;
-  background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.295 3.707C-.335 3.077.11 2 1.002 2h5.996c.891 0 1.337 1.077.707 1.707l-2.998 3a1 1 0 0 1-1.414 0l-2.998-3z' fill='%23FF5C44' fill-rule='nonzero'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.295 3.707C-.335 3.077.11 2 1.002 2h5.996c.891 0 1.337 1.077.707 1.707l-2.998 3a1 1 0 0 1-1.414 0l-2.998-3z' fill='%23E04E39' fill-rule='nonzero'/%3E%3C/svg%3E");
 }
 
 .navbar-dropdown-list {
+  margin: 0 1.5rem 1rem;
+  padding: 0;
   background: #f4f6f8;
   border-radius: 5px;
-  overflow: hidden;
 }
 
-li.separator {
+.navbar-dropdown-list :first-child :first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.navbar-dropdown-list :last-child :last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.separator {
   margin: 0;
   height: 0;
   list-style: none;
-  /* TODO fix this */
   border-bottom: 2px solid #dee2e7;
 }
 
 .navbar-dropdown-list-item {
-  background: #fff;
   display: block;
-  list-style: none;
   white-space: nowrap;
 }
 
-a.navbar-dropdown-list-item-link {
+.navbar-dropdown-list-item-link {
   color: var(--color-orange);
   display: block;
   padding: 1rem 2rem;
   text-decoration: none;
 }
 
-a.navbar-dropdown-list-item-link:hover,
-a.navbar-dropdown-list-item-link:focus {
+.navbar-dropdown-list-item-link:hover,
+.navbar-dropdown-list-item-link:focus {
+  position: relative;
   background: #dee2e7;
   color: #cf2d20;
+  z-index: 1;
 }
-
-/* TODO This rule doesn't make sense so I'm commenting it out for now
-ul[role="menubar"][aria-expanded="true"] li {
-  background: blue;
-} */
 
 @media (min-width: 992px) {
   .es-navbar {
@@ -145,15 +166,30 @@ ul[role="menubar"][aria-expanded="true"] li {
   }
 
   .navbar-toggler {
-    display: none; /* TODO remove this properly or else screen readers will still pick up on it */
+    display: none;
+  }
+
+  .navbar-list-item-link {
+    padding: 1rem 1.5rem;
+  }
+
+  .navbar-list-item-dropdown-toggle {
+    width: auto;
+    margin: 0;
+    padding: 1rem 3.5rem 1rem 1.5rem;
+    background-position: right 1.5rem center;
   }
 
   .navbar-dropdown-list {
     box-shadow: 0 0 1px 0 rgba(73, 79, 95, 0.6), 0 2px 10px -5px rgba(73, 79, 95, 0.55),
       0 3px 30px -15px rgba(73, 79, 95, 0.8), 0 0 50px -5px rgba(73, 79, 95, 0.5);
-    padding: 0;
+    margin: 0;
     position: absolute;
     left: -0.5rem;
     z-index: 100;
+  }
+
+  .navbar-dropdown-list-item-link {
+    padding-right: 3rem;
   }
 }
