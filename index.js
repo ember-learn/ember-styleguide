@@ -48,7 +48,7 @@ module.exports = {
         '/fonts/Inter-roman.var.woff2?v=3.11',
         '/fonts/Inter-Regular.woff2?v=3.11',
         '/fonts/Inter-SemiBold.woff2?v=3.11',
-        '/fonts/Inter-Light-BETA.woff2?v=3.11',
+        '/fonts/Inter-ExtraLight-BETA.woff2?v=3.11',
       ];
 
       // preload the most common fonts for modern browsers
