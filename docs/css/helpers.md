@@ -3,10 +3,10 @@
 ## Theming Helpers
 
 ### Dark Background
-If you would like a section or a div to use the dark style then you need to add `class="dark"` to the element that you would like to be dark. This helper class sets the background to the dark colour and automatically sets the text colour to be white
+If you would like a section or a div to use the dark style then you need to add `class="bg-dark"` to the element that you would like to be dark. This helper class sets the background to the dark colour and automatically sets the text colour to be white
 
 ```html
-<div class="dark">
+<div class="bg-dark">
   hello there
 </div>
 ```
@@ -15,11 +15,13 @@ If you would like a section or a div to use the dark style then you need to add 
 If you want to adjust border properties.
 
 ### Rounded Corners
+
 ```html
 <div class="rounded-small bg-orange margin-small padding-small text-light">Hello!</div>
 ```
+
 ```html
-<div class="rounded-large margin-small padding-small text-light bg-dark">Hello!</div>
+<div class="rounded-large margin-small padding-small bg-dark">Hello!</div>
 ```
 
 ## Spacing Helpers

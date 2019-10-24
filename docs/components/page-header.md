@@ -8,7 +8,7 @@ should use the `<EsPageHeader />` component:
 <EsPageHeader
   @headline="A framework for ambitious web developers"
   @detail="Ember.js is a productive, battle-tested JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device."
-  class="dark"
+  class="bg-dark"
 >
   <EsButton>Go</EsButton>
 </EsPageHeader>
@@ -18,7 +18,7 @@ This example is making use of the [`dark` css helper](/css/helpers#dark)
 which will most likely be required for the header section of the page.
 
 If you do for some reason need an `EsPageHeader` with a light background you can
-remove the `class="dark"` css helper.
+remove the `class="bg-dark"` css helper.
 
 ```handlebars
 <EsPageHeader
