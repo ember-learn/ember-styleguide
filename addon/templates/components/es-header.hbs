@@ -20,6 +20,10 @@
       {{/each}}
     </ul>
 
-    {{yield}}
+    {{#if hasBlock}}
+      <div class="navbar-end">
+        {{yield}}
+      </div>
+    {{/if}}
   </nav>
 </header>

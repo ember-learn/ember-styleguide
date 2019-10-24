@@ -48,8 +48,9 @@
   border-radius: 10px;
 }
 
-[aria-expanded='true'] ~ .navbar-list {
-  display: inline-block;
+[aria-expanded='true'] ~ .navbar-list,
+[aria-expanded='true'] ~ .navbar-end {
+  display: block;
 }
 
 .navbar-toggler {
@@ -149,6 +150,11 @@
   z-index: 1;
 }
 
+.navbar-end {
+  display: none;
+  margin: 1rem 1.5rem;
+}
+
 @media (min-width: 992px) {
   .es-navbar {
     display: flex;
@@ -191,5 +197,11 @@
 
   .navbar-dropdown-list-item-link {
     padding-right: 3rem;
+  }
+
+  .navbar-end {
+    display: block;
+    align-self: center;
+    margin: 0 1.5rem 0 auto;
   }
 }
