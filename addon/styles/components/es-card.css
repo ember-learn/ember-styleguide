@@ -5,6 +5,15 @@
   overflow: hidden;
 }
 
+.card__image {
+  display: block;
+  max-width: 64px;
+  max-height: 64px;
+
+  margin: var(--spacing-2);
+  float: left;
+}
+
 .card-content {
   margin: var(--spacing-2);
 }

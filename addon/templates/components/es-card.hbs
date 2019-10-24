@@ -1,1 +1,8 @@
-{{yield}}
+<div class="card" ...attributes>
+  {{#if @image}}
+    <img class="card__image" src={{@image}}>
+  {{/if}}
+  <div class="card-content">
+    {{yield}}
+  </div>
+</div>

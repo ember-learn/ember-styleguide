@@ -1,16 +1,5 @@
-import Component from '@ember/component';
-import layout from '../templates/components/es-card';
+import Component from 'sparkles-component';
 
-export default Component.extend({
-  layout,
-  classNames: ['es-card'],
-  classNameBindings: ['hasBorder:border'],
+export default class EsCard extends Component {
 
-  //accessibility support
-  ariaDescribedby: null,
-  ariaLabel: null,
-  ariaRole: null,
-  title: null,
-
-  hasBorder: false
-});
+}
