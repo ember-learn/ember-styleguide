@@ -1,6 +1,6 @@
 <li class="card" ...attributes>
   {{#if @image}}
-    <img class="card__image" src={{@image}}>
+    <img class="card__image" src={{@image}} alt={{if @alt @alt ""}}>
   {{/if}}
   <div class="card-content">
     {{yield}}

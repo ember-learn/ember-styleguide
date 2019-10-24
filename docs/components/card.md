@@ -23,6 +23,16 @@ You can also add an image to the card using the `@image` parameter:
 </ul>
 ```
 
+By default images will be considered decorative and ignored by screen readers, but if you want to provide an alt text for the image you can provide it with the `@alt` parameter:
+
+```html
+<ul class="list-unstyled">
+  <EsCard @image="/ember-logo.png" @alt="Ember Logo">
+    This is a card
+  </EsCard>
+</ul>
+```
+
 By default the card will have the image to the left of the content. If you want to make the card a **vertical** card you can apply the `vertical` attribute;
 
 ```html
