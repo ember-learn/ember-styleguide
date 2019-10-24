@@ -3,6 +3,28 @@
   border-radius: 4px;
   height: 100%;
   overflow: hidden;
+  position: relative;
+}
+
+.card[card-link] h1 > a::after,
+.card[card-link] h2 > a::after,
+.card[card-link] h3 > a::after,
+.card[card-link] h4 > a::after {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+}
+
+.card[card-link] a {
+  color: inherit;
+}
+
+.card[card-link]:focus-within,
+.card[card-link]:hover {
+    background-color: var(--color-muted);
 }
 
 .card__image {

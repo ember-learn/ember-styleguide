@@ -69,16 +69,43 @@ And here is a fuller example of a vertical, full-image card that has more struct
 </div>
 ```
 
+You can also create a card that allows a link to an external resource using `<a href=""></a>` somewhere in the card body, most likely in the header:
+
+
+```html
+<EsCard class="col-3-large" @image="/images/icons/discuss-logo.svg">
+  <h3>
+    <a href="http://discuss.emberjs.com">Discussion Forum</a>
+  </h3>
+  <p>Post and search longer-form questions in our public forum.</p>
+</EsCard>
+```
+
+But if you would like the whole card to become interactive and act as a link you can add the `card-link` attribute. This will stretch the link to be the full area of the card:
+
+```html
+<EsCard class="col-3-large" @image="/images/icons/discuss-logo.svg" card-link>
+  <h3>
+    <a href="http://discuss.emberjs.com">Discussion Forum</a>
+  </h3>
+  <p>Post and search longer-form questions in our public forum.</p>
+</EsCard>
+```
+
 And here is a full card based page layout that might be useful when building sites using this component:
 
 ```html
 <div class="layout-grid">
-  <EsCard class="col-3-large" @image="/images/icons/discuss-logo.svg">
-    <h3>Discussion Forum</h3>
+  <EsCard class="col-3-large" @image="/images/icons/discuss-logo.svg" card-link>
+    <h3>
+      <a href="http://discuss.emberjs.com">Discussion Forum</a>
+    </h3>
     <p>Post and search longer-form questions in our public forum.</p>
   </EsCard>
-  <EsCard class="col-3-large" @image="/images/icons/discord-logo.svg">
-    <h3>Discord community chat</h3>
+  <EsCard class="col-3-large" @image="/images/icons/discord-logo.svg" card-link>
+    <h3>
+      <a href="https://discord.gg/emberjs">Discord community chat</a>
+    </h3>
     <p>Join our real-time chat server to connect with other developers and get answers.</p>
   </EsCard>
 
