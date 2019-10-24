@@ -37,6 +37,11 @@
   --spacing-5: 24rem;
 }
 
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0px 3px rgba(25, 116, 220, 0.8);
+}
+
 body,
 html {
   margin: 0;
