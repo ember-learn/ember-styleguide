@@ -1,47 +1,63 @@
 :root {
-  font-size: 8px;
+  --font-family-sans: 'Inter var', 'Inter web', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
   --container-width-large: 128rem;
-  --color-dark: #1C1E23;
-  --color-light: #FFFFFF;
-  --color-muted: #F4F6F8;
-  --color-orange: #E04E39;
-  --color-gray: #A2A3A8;
-  --color-success: #D9F9E3;
-  --color-danger: #FFD8E1;
-  --color-warning: #FCFFC9;
-  --color-info: #E3EEFC;
+  --color-dark: #1c1e23;
+  --color-light: #ffffff;
+  --color-muted: #f4f6f8;
+  --color-orange: #e04e39;
+  --color-gray: #a2a3a8;
+  --color-success: #d9f9e3;
+  --color-danger: #ffd8e1;
+  --color-warning: #fcffc9;
+  --color-info: #e3eefc;
 
-  --text-preset-1: 1.5rem;
-  --text-preset-2: 2.25rem;
-  --text-preset-3: 3.375rem;
-  --text-preset-4: 5.063rem;
-  --text-preset-5: 7.594rem;
+  --font-size-1: 1.5rem;
+  --font-size-2: 1.875rem; /* 15dp, no need to use calc() for such a basic value */
+  --font-size-3: 2rem;
+  --font-size-4: 2.5rem;
+  --font-size-5: 4.5rem;
+  --font-size-display: 7.75rem;
 
-  --font-weight-1: 300;
+  --line-height-1: calc(16 / 12);
+  --line-height-2: 1.6;
+  --line-height-3: 1.5;
+  --line-height-4: 1.2;
+  --line-height-5: calc(48 / 36);
+  --line-height-display: calc(64 / 62);
+
+  --font-weight-1: 200;
   --font-weight-2: 400;
-  --font-weight-3: 600; 
+  --font-weight-3: 700;
+
   --spacing-1: 2rem;
-  --spacing-2: 4rem;
-  --spacing-3: 8rem;
+  --spacing-2: 3rem;
+  --spacing-3: 7rem;
   --spacing-4: 16rem;
   --spacing-5: 24rem;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 2rem;
+  font-family: var(--font-family-sans);
   background: var(--color-light);
   color: var(--color-dark);
+  border: 0;
 }
 
+html {
+  font-size: 50%; /* 8px if using default Browser settings of 16px, while staying scalable */
+}
+
+body {
+  font-size: var(--font-size-2);
+  line-height: var(--line-height-2);
+}
 
 p {
-  font-size: var(--text-preset-2);
-  line-height: 1.6;
   margin: 0 0 1rem 0;
-  font-weight: 300;
 }
 
 h1,
@@ -54,19 +70,19 @@ h6 {
   margin: 0 0 2rem 0;
 }
 
+/*
 @media (max-width: 1280px) and (min-width: 421px) {
   body,
   html {
-    
   }
 }
 
 @media (max-width: 520px) {
   body,
   html {
-    
   }
 }
+*/
 
 /* move beyond this point */
 
@@ -79,5 +95,5 @@ h6 {
 .content-section {
   padding-top: 8rem;
   padding-bottom: 8rem;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }

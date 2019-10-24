@@ -1,93 +1,121 @@
-
-/* open-sans-300 - latin */
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: url('/fonts/open-sans-v16-latin-300.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans Light'), local('OpenSans-Light'),
-       url('/fonts/open-sans-v16-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/open-sans-v16-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fonts/open-sans-v16-latin-300.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/open-sans-v16-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fonts/open-sans-v16-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
-}
-/* open-sans-regular - latin */
-@font-face {
-  font-family: 'Open Sans';
+  font-family: 'Inter web';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/open-sans-v16-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans Regular'), local('OpenSans-Regular'),
-       url('/fonts/open-sans-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/open-sans-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fonts/open-sans-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/open-sans-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fonts/open-sans-v16-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+  font-display: swap;
+  src: url('/fonts/Inter-Regular.woff2?v=3.11') format('woff2'), url('/fonts/Inter-Regular.woff?v=3.11') format('woff');
 }
-/* open-sans-600 - latin */
+
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Inter web';
   font-style: normal;
-  font-weight: 600;
-  src: url('/fonts/open-sans-v16-latin-600.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
-       url('/fonts/open-sans-v16-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/open-sans-v16-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fonts/open-sans-v16-latin-600.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/open-sans-v16-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fonts/open-sans-v16-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
+  font-weight: 700; /* semibold should be 600, but since we don't use bold, it's easier to map differently than changing all usages of the bold cut to semibold */
+  font-display: swap;
+  src: url('/fonts/Inter-SemiBold.woff2?v=3.11') format('woff2'),
+    url('/fonts/Inter-SemiBold.woff?v=3.11') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter web';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('/fonts/Inter-ExtraLight-BETA.woff2?v=3.11') format('woff2'),
+    url('/fonts/Inter-ExtraLight-BETA.woff?v=3.11') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Inter-roman.var.woff2?v=3.11') format('woff2');
 }
 
 .sans {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-family-sans);
 }
 
 .bold {
-  font-weight: 800;
+  font-weight: var(--font-weight-3);
 }
 
 .italic {
   font-style: italic;
 }
 
-.xsmall, small {
-  font-size: var(--text-preset-1);
+p + * {
+  margin-top: var(--spacing-2);
 }
 
-.small, p {
-  font-size: var(--text-preset-2);
+.xsmall,
+small {
+  font-size: var(--font-size-1);
+  line-height: var(--line-height-1);
 }
 
-.medium, h3 {
-  font-size: var(--text-preset-3);
+.small,
+p {
+  font-size: var(--font-size-2);
+  line-height: var(--line-height-2);
 }
 
-.large, h2 {
-  font-size: var(--text-preset-4);
+.medium,
+h3 {
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-3);
+  font-weight: var(--font-weight-3);
 }
 
-.xlarge, h1 {
-  font-size: var(--text-preset-5);
+.large,
+h2 {
+  font-size: var(--font-size-4);
+  line-height: var(--line-height-4);
+  font-weight: var(--font-weight-3);
 }
 
-h1, h2, h3 {
+.xlarge,
+h1 {
+  font-size: var(--font-size-5);
+  line-height: var(--line-height-5);
+  font-weight: var(--font-weight-2);
+}
+
+.display {
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-display);
+  font-weight: var(--font-weight-1);
+}
+
+h1,
+h2,
+h3 {
   margin-bottom: var(--spacing-1);
 }
 
-p {
-  margin-bottom: var(--spacing-2);
+h1 + * {
+  margin-top: var(--spacing-2);
 }
 
-.light {
-  font-weight: var(--font-weight-1);
+* + h1 {
+  margin-top: var(--spacing-2);
+}
+
+* + h2 {
+  margin-top: var(--spacing-3);
+}
+
+* + h3 {
+  margin-top: var(--spacing-1);
 }
 
 .regular {
   font-weight: var(--font-weight-2);
 }
 
-.bold, strong {
+.bold,
+strong {
   font-weight: var(--font-weight-3);
 }
 

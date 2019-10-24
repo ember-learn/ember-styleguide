@@ -2,7 +2,7 @@
 const Funnel = require('broccoli-funnel');
 const path = require('path');
 
-const CssImport = require('postcss-import')
+const CssImport = require('postcss-import');
 const PresetEnv = require('postcss-preset-env');
 
 module.exports = {
@@ -44,11 +44,19 @@ module.exports = {
 
   contentFor: function(type) {
     if (type === 'head') {
+      const filesToPreload = [
+        '/fonts/Inter-roman.var.woff2?v=3.11',
+        '/fonts/Inter-Regular.woff2?v=3.11',
+        '/fonts/Inter-SemiBold.woff2?v=3.11',
+        '/fonts/Inter-Light-BETA.woff2?v=3.11',
+      ];
+
       // preload the most common fonts for modern browsers
-      return `<link rel="preload" as="font" type="font/woff2" href="/fonts/open-sans-v16-latin-regular.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="/fonts/open-sans-v16-latin-300.woff2" crossorigin>`;
+      return filesToPreload
+        .map(file => `<link rel="preload" as="font" type="font/woff2" href="${file}" crossorigin>`)
+        .join('\n');
     }
 
     return '';
-  }
+  },
 };

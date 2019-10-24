@@ -9,8 +9,12 @@ To use the "background boxes" shape then you need to use the `bg-shape-boxes` cs
 ```html
 <div class="layout-grid bg-shape-boxes dark padding-vertical-large">
   <div class="col-4-large offset-1-large text-center">
-    <h2>Build with the teams that never stop shipping.</h2>
-    <p>Some of the best development teams in the world have been iterating on their products for years with Ember. With scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use every step of the way.</p>
+    <h1>Build with the teams that never stop shipping.</h1>
+    <p>
+      Some of the best development teams in the world have been iterating on their products for years with Ember. With
+      scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
+      every step of the way.
+    </p>
   </div>
   <div class="col-4-large offset-1-large text-center">
     <h2>More stuff to show location of boxes</h2>
@@ -23,14 +27,22 @@ There is an alternative "background boxes" shape that you can use with `bg-shape
 ```html
 <div class="layout-grid bg-shape-boxes-bottom dark padding-vertical-large">
   <div class="col-4-large offset-1-large text-center">
-    <h2>Build with the teams that never stop shipping.</h2>
-    <p>Some of the best development teams in the world have been iterating on their products for years with Ember. With scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use every step of the way.</p>
+    <h1>Build with the teams that never stop shipping.</h1>
+    <p>
+      Some of the best development teams in the world have been iterating on their products for years with Ember. With
+      scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
+      every step of the way.
+    </p>
   </div>
 </div>
 <div class="layout-grid padding-vertical-medium">
   <div class="col-4-large offset-1-large text-center">
     <h2>More content to show off the shapes</h2>
-    <p>Some of the best development teams in the world have been iterating on their products for years with Ember. With scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use every step of the way.</p>
+    <p>
+      Some of the best development teams in the world have been iterating on their products for years with Ember. With
+      scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
+      every step of the way.
+    </p>
   </div>
 </div>
 ```
@@ -47,8 +59,12 @@ If you are using the [PageHeader component](/components/page-header/) then you w
 </EsPageHeader>
 <div class="layout-grid">
   <div class="col-4-large offset-1-large text-center">
-    <h2>Build with the teams that never stop shipping.</h2>
-    <p>Some of the best development teams in the world have been iterating on their products for years with Ember. With scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use every step of the way.</p>
+    <h1>Build with the teams that never stop shipping.</h1>
+    <p>
+      Some of the best development teams in the world have been iterating on their products for years with Ember. With
+      scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
+      every step of the way.
+    </p>
   </div>
 </div>
 ```
@@ -61,7 +77,11 @@ The other type of background shape is a "swipe" that can either be a swipe acros
 <div class="layout-grid bg-shape-swipe-top">
   <div class="col-4-large offset-1-large text-center margin-vertical-large">
     <h2>Build with the teams that never stop shipping.</h2>
-    <p>Some of the best development teams in the world have been iterating on their products for years with Ember. With scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use every step of the way.</p>
+    <p>
+      Some of the best development teams in the world have been iterating on their products for years with Ember. With
+      scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
+      every step of the way.
+    </p>
   </div>
   <div class="col-4-large offset-1-large text-center margin-vertical-large">
     <h2>More stuff to show location of swipe</h2>
@@ -75,7 +95,11 @@ and then using the `bg-shape-swipe-bottom` we can get a shape for the bottom of 
 <div class="layout-grid dark bg-shape-swipe-bottom">
   <div class="col-4-large offset-1-large text-center margin-vertical-large">
     <h2>Build with the teams that never stop shipping.</h2>
-    <p>Some of the best development teams in the world have been iterating on their products for years with Ember. With scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use every step of the way.</p>
+    <p>
+      Some of the best development teams in the world have been iterating on their products for years with Ember. With
+      scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
+      every step of the way.
+    </p>
   </div>
   <div class="col-4-large offset-1-large text-center margin-vertical-large">
     <h2>More stuff to show location of swipe</h2>
