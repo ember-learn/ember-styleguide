@@ -325,3 +325,11 @@
 .max-width {
   max-width: 100%;
 }
+
+.rounded-small {
+  border-radius: 0.75rem;
+}
+
+.rounded-large {
+  border-radius: 1.25rem;
+}

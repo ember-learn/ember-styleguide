@@ -7,7 +7,7 @@ In the new design we have a number of background shapes that can be used to spru
 To use the "background boxes" shape then you need to use the `bg-shape-boxes` css helper as follows
 
 ```html
-<div class="layout-grid bg-shape-boxes dark padding-vertical-large">
+<div class="layout-grid bg-shape-boxes bg-dark padding-vertical-large">
   <div class="col-4-large offset-1-large text-center">
     <h1>Build with the teams that never stop shipping.</h1>
     <p>
@@ -25,7 +25,7 @@ To use the "background boxes" shape then you need to use the `bg-shape-boxes` cs
 There is an alternative "background boxes" shape that you can use with `bg-shape-boxes-bottom` that will automatically continue into the following dom node (e.g. the next div)
 
 ```html
-<div class="layout-grid bg-shape-boxes-bottom dark padding-vertical-large">
+<div class="layout-grid bg-shape-boxes-bottom bg-dark padding-vertical-large">
   <div class="col-4-large offset-1-large text-center">
     <h1>Build with the teams that never stop shipping.</h1>
     <p>
@@ -53,7 +53,7 @@ If you are using the [PageHeader component](/components/page-header/) then you w
 <EsPageHeader
   @headline="Demo for background shapes"
   @detail="This section is using boxes-bottom and continues in the the next section"
-  class="dark"
+  class="bg-dark"
 >
   <EsButton>Go</EsButton>
 </EsPageHeader>
@@ -92,7 +92,7 @@ The other type of background shape is a "swipe" that can either be a swipe acros
 and then using the `bg-shape-swipe-bottom` we can get a shape for the bottom of a section:
 
 ```html
-<div class="layout-grid dark bg-shape-swipe-bottom">
+<div class="layout-grid bg-dark bg-shape-swipe-bottom">
   <div class="col-4-large offset-1-large text-center margin-vertical-large">
     <h2>Build with the teams that never stop shipping.</h2>
     <p>

@@ -132,64 +132,7 @@ The spacing scale can be applied to both margin and padding properties.
 
 
 ## Applying Spacing with Helpers
+
 In order to apply the spacing scale on pages, a set of predefined helper classes exist for both margins and paddings.
 
-### Margin Helpers
-
-<div>
-  <table class="margin-bottom-medium">
-    <thead>
-      <tr>
-        <th>Scale</th>
-        <th>Location</th>
-        <th>Helper Class</th>
-        <th>Example</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each (array '-small' '-medium' '-large') as |size|}}
-        {{#each (array '' '-vertical' '-horizontal' '-top' '-bottom' '-left' '-right') as |direction|}}
-          <tr>
-            <td>{{size}}</td>
-            <td>{{direction}}</td>
-            <td><code>.margin{{direction}}{{size}}</code></td>
-            <td>
-              <div class="bg-muted border-dashed">
-                <div class="bg-orange margin{{direction}}{{size}}">Content</div>
-              </div>
-            </td>
-          </tr>
-        {{/each}}
-      {{/each}}
-    </tbody>
-  </table>
-</div>
-
-### Padding Helpers
-
-<table>
-  <thead>
-    <tr>
-      <th>Scale</th>
-      <th>Location</th>
-      <th>Helper Class</th>
-      <th>Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each (array '-small' '-medium' '-large') as |size|}}
-      {{#each (array '' '-vertical' '-horizontal' '-top' '-bottom' '-left' '-right') as |direction|}}
-        <tr>
-          <td>{{size}}</td>
-          <td>{{direction}}</td>
-          <td><code>.padding{{direction}}{{size}}</code></td>
-          <td>
-              <div class="bg-orange padding{{direction}}{{size}}">
-                <div class="border-dashed">Content</div>
-              </div>
-          </td>
-        </tr>
-      {{/each}}
-    {{/each}}
-  </tbody>
-</table>
+Check out [Spacing Helpers](/css/helpers#spacinghelpers) for more information
