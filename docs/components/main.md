@@ -1,5 +1,0 @@
-# Main
-
-```handlebars
-{{es-main}}
-```

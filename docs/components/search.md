@@ -1,5 +1,0 @@
-# Search
-
-```handlebars
-{{es-search}}
-```
