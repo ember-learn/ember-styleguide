@@ -1,5 +1,20 @@
 # Layout
 
+## Container
+
+The main width of content is defined by using a `.container` CSS class. This will automatically centre content and make sure that it stays within the defined "max width" of the container. Here is an example of a dark background with some content in the middle:
+
+```html
+<div class="bg-dark">
+  <section class="container">
+    <h1>Hi there</h1>
+    <p>Some content</p>
+  </section>
+</div>
+```
+
+This container should be used on most pages to keep content aligned with headers and footers (and other content).
+
 ## Grid
 
 ### Grid Usage
