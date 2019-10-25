@@ -1,3 +1,29 @@
 <header class="es-header" role="banner" ...attributes>
-  {{yield}}
+  <nav class="es-navbar">
+    <a class="navbar-brand-wrapper" href={{navHome}}>
+      <img
+        class="navbar-brand"
+        src="/images/ember-logo.svg"
+        alt="home"
+        width="83"
+        height="40"
+      >
+    </a>
+
+    <button class="navbar-toggler ember-view" onclick={{action this.toggleMenu}} aria-expanded={{if this.expanded "true" "false"}}>
+      Show Site Navigation
+    </button>
+
+    <ul class="navbar-list">
+      {{#each navLinks as |link index|}}
+        {{es-header/navbar-link link=link index=index}}
+      {{/each}}
+    </ul>
+
+    {{#if hasBlock}}
+      <div class="navbar-end">
+        {{yield}}
+      </div>
+    {{/if}}
+  </nav>
 </header>

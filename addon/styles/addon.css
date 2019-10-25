@@ -1,16 +1,15 @@
-@import "normalize.css";
+@import 'normalize.css';
 
-@import "global.css";
-@import "typography.css";
-@import "colors.css";
-@import "helpers.css";
-@import "layout.css";
-@import "icon.css";
-@import "background-shapes.css";
+@import 'global.css';
+@import 'typography.css';
+@import 'colors.css';
+@import 'helpers.css';
+@import 'layout.css';
+@import 'icon.css';
+@import 'background-shapes.css';
 
-@import "components/es-navbar.css";
-@import "components/es-header.css";
-@import "components/es-page-header.css";
-@import "components/es-button.css";
-@import "components/es-card.css";
-@import "components/es-footer.css";
+@import 'components/es-header.css';
+@import 'components/es-page-header.css';
+@import 'components/es-button.css';
+@import 'components/es-card.css';
+@import 'components/es-footer.css';
