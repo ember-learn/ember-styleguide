@@ -4,6 +4,16 @@
   width: var(--max-width);
 }
 
+.flex-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
 .layout-grid {
   display: grid;
   grid-template-columns: repeat(6,1fr);

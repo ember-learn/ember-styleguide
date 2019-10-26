@@ -134,3 +134,7 @@ strong {
 .text-light {
   color: var(--color-light);
 }
+
+.text-muted {
+  color: var(--color-gray);
+}

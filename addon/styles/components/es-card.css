@@ -1,11 +1,52 @@
 .card {
   border: 1px solid var(--color-gray);
-  margin-bottom: var(--spacing-2);
   border-radius: 4px;
   height: 100%;
   overflow: hidden;
+  position: relative;
+}
+
+.card[card-link] h1 > a::after,
+.card[card-link] h2 > a::after,
+.card[card-link] h3 > a::after,
+.card[card-link] h4 > a::after {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+}
+
+.card[card-link] a {
+  color: inherit;
+}
+
+.card[card-link]:focus-within,
+.card[card-link]:hover {
+    background-color: var(--color-muted);
+}
+
+.card__image {
+  display: block;
+  max-width: 64px;
+  max-height: 64px;
+
+  margin: var(--spacing-2);
+  float: left;
+}
+
+.card[vertical] .card__image {
+  margin: var(--spacing-2) auto;
+  float: none;
+}
+
+.card[full-image] .card__image {
+  max-width: 100%;
+  max-height: inherit;
+  margin: 0;
 }
 
 .card-content {
-  padding: var(--spacing-2);
+  margin: var(--spacing-2);
 }
