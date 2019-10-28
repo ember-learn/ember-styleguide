@@ -1,4 +1,45 @@
 
+4.0.0-0 / 2019-10-28
+==================
+
+  * Implement new Card Component #218 from @ghislaineguerin and @mansona
+  * Remove unused documentation #230 from @mansona
+  * Add more Css Helpers #221 from @ghislaineguerin
+  * Update global navigation to match latest design #227 from @pichfl
+  * Fixes to Inter font use #226 from @pichfl
+  * Introduce Inter font #225 from @pichfl
+  * fix background shape `swipe-top` #223 from @mansona
+  * small navbar fixes #220 from @mansona
+  * Fix initial navbar implementation #219 from @mansona
+  * Set body and text color #213 from @ghislaineguerin
+  * improve typography and color docs #214 from @ghislaineguerin
+  * implementing background shapes #204 from @mansona
+  * optimising ember-logo.svg with svgo #206 from @mansona
+  * Initial work on navbar redesign #202 from @MelSumner
+  * Remove es-ulist #203 from @mansona
+  * removing tabs implemenation #201 from @mansona
+  * Use CSS grid for layout classes #199 from @ghislaineguerin
+  * implementing new footer #197 from @mansona
+  * add icon classes #196 from @ghislaineguerin
+  * adding the ability to style links as buttons #195 from @mansona
+  * Fixing colour documentation on smaller screens #194 from @mansona
+  * Add offsets and spacing helper classes #193 from @ghislaineguerin
+  * Fixing tests, travis and turning on Percy #192 from @mansona
+  * finalising es-page-header #190 from @mansona
+  * Adding colour contrast test to colour pallet component #189 from @mansona
+  * Create accessibility docs from @MelSumner
+  * add primary and secondary palettes #181 from @ghislaineguerin
+  * Layout classes #177 from @ghislaineguerin
+  * Add typography styles #176 from @ghislaineguerin
+  * adding color pallet implementation #174 from @mansona
+  * Add styling for new nav component #162 from @ghislaineguerin
+  * documenting page-header and css helper `dark` #161 from @mansona
+  * using field-guide instead of ember-cli-addon-docs #156, #160, #186 from @ghislaineguerin and @mansona
+  * Starting typeography implementation #155 from @mansona
+  * Convert Button to sparkles component #154 from @mansona
+  * moving over to postcss
+  * starting out with a blank slate
+
 v3.1.1 / 2019-06-24
 ==================
 
@@ -23,9 +64,9 @@ v3.0.0 / 2018-05-23
   * Update legal and releases links #159 from @j-brennan
   * fixing accessibility bugs on navbar toggle button and footer links #149 from @alexpark90
   * Comply with axe-core 2.2 #150 from @wycats
-  * Update _es-navbar.scss #147 from @melsumner
+  * Update `_es-navbar.scss` #147 from @melsumner
   * Navbar tweaks #146 from @mansona
-  * Update _es-note.scss #144 from @melsumner
+  * Update `_es-note.scss` #144 from @melsumner
   * fixing z-index of dropdown #143 from @aklkv
   * Add closePopupMenu function to navbar service #142 from @patocallaghan
   * es-navbar: hide menu items when navbar is closed #140 from @mansona
