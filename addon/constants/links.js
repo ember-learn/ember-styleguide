@@ -6,7 +6,7 @@ export default [{
     name: 'Ember.js Guides',
     type: 'link'
   }, {
-    href: 'https://emberjs.com/api',
+    href: 'https://api.emberjs.com',
     name: 'API Reference',
     type: 'link'
   }, {
@@ -24,34 +24,42 @@ export default [{
   name: 'Releases',
   type: 'dropdown',
   items: [{
-    href: 'https://emberjs.com/builds',
-    name: 'Channels',
+    href: 'https://emberjs.com/releases',
+    name: 'Overview',
     type: 'link'
   }, {
-    href: 'https://emberjs.com/builds/release',
+    href: 'https://emberjs.com/releases/lts',
+    name: '→ LTS',
+    type: 'link'
+  }, {
+    href: 'https://emberjs.com/releases/release',
     name: '→ Stable',
     type: 'link'
   }, {
-    href: 'https://emberjs.com/builds/beta',
+    href: 'https://emberjs.com/releases/beta',
     name: '→ Beta',
     type: 'link'
   }, {
-    href: 'https://emberjs.com/builds/canary',
+    href: 'https://emberjs.com/releases/canary',
     name: '→ Canary',
     type: 'link'
   }, {
     type: 'divider'
   }, {
-    href: 'https://emberjs.com/deprecations',
+    href: 'https://emberjs.com/editions',
+    name: 'Editions',
+    type: 'link'
+  }, {
+    href: 'https://deprecations.emberjs.com',
     name: 'Deprecations',
     type: 'link'
   }, {
-    href: 'https://emberjs.com/statusboard',
-    name: 'Status Board',
+    href: 'https://github.com/emberjs/rfc-tracking/issues',
+    name: 'RFC Tracking',
     type: 'link'
   }]
 }, {
-  href: 'https://emberjs.com/blog',
+  href: 'https://blog.emberjs.com',
   name: 'Blog',
   type: 'link'
 }, {
@@ -66,7 +74,7 @@ export default [{
     name: 'Guidelines',
     type: 'link'
   }, {
-    href: 'http://github.com/emberjs/',
+    href: 'https://help-wanted.emberjs.com/',
     name: 'Contribute (Github)',
     type: 'link'
   }, {
@@ -116,7 +124,7 @@ export default [{
   }, {
     type: 'divider'
   }, {
-    href: 'https://emberjs.com/legal',
+    href: 'https://emberjs.com/about/legal',
     name: 'Legal',
     type: 'link'
   }, {

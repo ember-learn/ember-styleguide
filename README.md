@@ -33,5 +33,4 @@ See the [Contributing](CONTRIBUTING.md) guide for details.
 * Each component must have the component name attached to the component as a CSS class.
 * It may feel as though there is duplicated code throughout these components; during the WIP process, we are favoring duplication over abstraction.
 * Font icons through [ember-fontawesome](https://fontawesome.com/how-to-use/on-the-web/using-with/ember) - it is supported by the font awesome team and they render to SVG.
-* The `es-pagewrapper` component has a property to indicate if there will be a sidebar or not. There might be a better way to do this.
 * In this addon, the `section` element is used as a container and is intended to span the full width of the viewport.
