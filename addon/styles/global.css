@@ -50,11 +50,11 @@
   --grid-gap: 3rem;
   --grid-margin: 1.5rem;
 
-  --spacing-1: 2rem;
-  --spacing-2: 3rem;
-  --spacing-3: 6rem;
-  --spacing-4: 9rem;
-  --spacing-5: 24rem;
+  --spacing-1: 1rem;
+  --spacing-2: 2rem;
+  --spacing-3: 3rem;
+  --spacing-4: 5rem;
+  --spacing-5: 8rem;
 }
 
 /* 984px = 2rem + 119rem + 2rem */
@@ -77,6 +77,12 @@
     --line-height-xl: calc(48 / 36);
     --line-height-displaay-1: calc(64 / 62);
     --line-height-displaay-2: calc(32 / 19);
+
+    --spacing-1: 2rem;
+    --spacing-2: 3rem;
+    --spacing-3: 6rem;
+    --spacing-4: 9rem;
+    --spacing-5: 24rem;
   }
 }
 
