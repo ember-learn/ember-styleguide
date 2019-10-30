@@ -3,6 +3,7 @@
 ## Theming Helpers
 
 ### Dark Background
+
 If you would like a section or a div to use the dark style then you need to add `class="bg-dark"` to the element that you would like to be dark. This helper class sets the background to the dark colour and automatically sets the text colour to be white
 
 ```html
@@ -12,12 +13,13 @@ If you would like a section or a div to use the dark style then you need to add 
 ```
 
 ## Border Helpers
+
 If you want to adjust border properties.
 
 ### Rounded Corners
 
 ```html
-<div class="rounded-small bg-orange margin-small padding-small text-light">Hello!</div>
+<div class="rounded-small bg-brand margin-small padding-small text-light">Hello!</div>
 ```
 
 ```html
@@ -37,6 +39,7 @@ If you want to remove default list styling you can use the `list-unstyled` css h
 ```
 
 ## Spacing Helpers
+
 In order to apply the spacing scale on pages, a set of predefined helper classes exist for both margins and paddings.
 
 ### Margin Helpers
@@ -60,7 +63,7 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
             <td><code>.margin{{direction}}{{size}}</code></td>
             <td>
               <div class="bg-muted border-dashed">
-                <div class="bg-orange margin{{direction}}{{size}}">Content</div>
+                <div class="bg-brand margin{{direction}}{{size}}">Content</div>
               </div>
             </td>
           </tr>
@@ -89,7 +92,7 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
           <td>{{direction}}</td>
           <td><code>.padding{{direction}}{{size}}</code></td>
           <td>
-              <div class="bg-orange padding{{direction}}{{size}}">
+              <div class="bg-brand padding{{direction}}{{size}}">
                 <div class="border-dashed">Content</div>
               </div>
           </td>

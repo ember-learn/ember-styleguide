@@ -2,10 +2,24 @@
   --font-family-sans: 'Inter var', 'Inter web', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
 
-  --color-dark: #1c1e23;
-  --color-light: #ffffff;
-  --color-muted: #f4f6f8;
-  --color-orange: #e04e39;
+  --white: #fff;
+  --gray-100: #f4f6f8;
+  --gray-200: #ebeef2;
+  --gray-300: #dce0e6;
+  --gray-400: #bec4cc;
+  --gray-500: #8f949f;
+  --gray-600: #6a707a;
+  --gray-700: #42474f;
+  --gray-800: #2b2d34;
+  --gray-900: #1c1e24;
+  --black: #000;
+
+  --color-brand: #e04e39;
+
+  --color-dark: var(--gray-900);
+  --color-light: var(--white);
+  --color-muted: var(--gray-100);
+  --color-brand: #e04e39;
   --color-gray: #a2a3a8;
   --color-success: #d9f9e3;
   --color-danger: #ffd8e1;
@@ -73,7 +87,7 @@ body {
 }
 
 a {
-  color: var(--color-orange);
+  color: var(--color-brand);
   text-decoration: none;
 }
 

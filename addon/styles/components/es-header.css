@@ -139,7 +139,7 @@
 }
 
 .navbar-dropdown-list-item-link {
-  color: var(--color-orange);
+  color: var(--color-brand);
   display: block;
   padding: 1rem 2rem;
   text-decoration: none;
