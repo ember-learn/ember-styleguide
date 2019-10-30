@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-dark);
+  background-color: var(--color-gray-900);
   padding: 1rem var(--grid-margin);
 }
 
@@ -12,8 +12,8 @@
 }
 
 .es-navbar {
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  background-color: var(--color-gray-900);
+  color: var(--color-gray-100);
   display: flex;
   flex-direction: column;
   font-size: 2rem;

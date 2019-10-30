@@ -138,9 +138,9 @@ strong {
 }
 
 .text-light {
-  color: var(--color-light);
+  color: var(--color-gray-100);
 }
 
 .text-muted {
-  color: var(--color-gray);
+  color: var(--color-gray-600);
 }

@@ -2,24 +2,23 @@
   --font-family-sans: 'Inter var', 'Inter web', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
 
-  --white: #fff;
-  --gray-100: #f4f6f8;
-  --gray-200: #ebeef2;
-  --gray-300: #dce0e6;
-  --gray-400: #bec4cc;
-  --gray-500: #8f949f;
-  --gray-600: #6a707a;
-  --gray-700: #42474f;
-  --gray-800: #2b2d34;
-  --gray-900: #1c1e24;
-  --black: #000;
+  --color-white: #fff;
+  --color-gray-100: #f4f6f8;
+  --color-gray-200: #ebeef2;
+  --color-gray-300: #dce0e6;
+  --color-gray-400: #bec4cc;
+  --color-gray-500: #8f949f;
+  --color-gray-600: #6a707a;
+  --color-gray-700: #42474f;
+  --color-gray-800: #2b2d34;
+  --color-gray-900: #1c1e24;
+  --color-black: #000;
 
   --color-brand: #e04e39;
+  --color-brand-text: #ffd7d2;
+  --color-brand-hc-light: #ff5c44;
+  --color-brand-hc-dark: #cf2d20;
 
-  --color-dark: var(--gray-900);
-  --color-light: var(--white);
-  --color-muted: var(--gray-100);
-  --color-brand: #e04e39;
   --color-gray: #a2a3a8;
   --color-success: #d9f9e3;
   --color-danger: #ffd8e1;
@@ -96,8 +95,8 @@ html {
   margin: 0;
   padding: 0;
   font-family: var(--font-family-sans);
-  background: var(--color-light);
-  color: var(--color-dark);
+  background: var(--color-white);
+  color: var(--color-gray-700);
   border: 0;
 }
 
@@ -117,7 +116,7 @@ a {
 
 a:active,
 .active {
-  color: var(--color-dark);
+  color: var(--color-gray-900);
 }
 
 p {
@@ -132,6 +131,7 @@ h5,
 h6 {
   font-weight: 500;
   margin: 0 0 2rem 0;
+  color: var(--color-gray-900);
 }
 
 strong {
