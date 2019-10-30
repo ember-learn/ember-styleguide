@@ -158,7 +158,7 @@
 
 @media (min-width: 984px) {
   .es-header {
-    /* padding: 1.5rem var(--grid-margin); */
+    padding: 1.5rem var(--grid-margin);
   }
 
   .es-navbar {
