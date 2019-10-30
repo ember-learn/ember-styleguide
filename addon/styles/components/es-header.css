@@ -22,17 +22,19 @@
 }
 
 .navbar-brand-wrapper {
+  display: block;
+  margin-right: auto;
   border-radius: 10px;
 }
 
 .navbar-brand {
   display: block;
   height: 5rem;
-  margin: 0 1.5rem 0 -0.5rem; /* should be 0 1.5rem, but the logo needs to be slightly more left to be visually aligned */
+  margin: 0 0 0 -0.5rem;
 }
 
 .navbar-list {
-  margin: 1.5rem 0 0;
+  margin: 1.5rem -1.5rem 0;
   padding: 0;
   display: none;
   font-weight: var(--font-weight-3);
@@ -55,7 +57,7 @@
 .navbar-toggler {
   display: inline-block;
   border: 0;
-  margin: -5rem 0.5rem 0 auto;
+  margin: -5rem -0.5rem 0 auto;
   padding: 0;
   width: 4.5rem;
   height: 5rem;
@@ -153,7 +155,7 @@
 
 .navbar-end {
   display: none;
-  margin: 1rem 1.5rem;
+  margin: 1rem 0;
 }
 
 @media (min-width: 984px) {
@@ -165,6 +167,10 @@
     display: flex;
     flex-direction: row;
     padding: 0;
+  }
+
+  .navbar-brand-wrapper {
+    margin-right: 1.5rem;
   }
 
   .navbar-brand {
