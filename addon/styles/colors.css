@@ -44,3 +44,19 @@
 .bg-info {
   background: var(--color-info);
 }
+
+.text-light {
+  color: var(--color-brand-text);
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  & .medium,
+  & .large,
+  & .xlarge {
+    color: var(--color-white);
+  }
+}
