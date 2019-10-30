@@ -34,11 +34,11 @@ div.color-pallet {
 
 .color-pallet__example-text-result span {
   font-family: monospace;
-  font-size: var(--font-size-1);
+  font-size: var(--font-size-xs);
   background-color: var(--color-dark);
   color: var(--color-light);
   border-radius: 4px;
-  line-height: var(--font-size-2);
+  line-height: var(--font-size-base);
   display: inline-block;
   padding: 0 var(--spacing-1);
 }

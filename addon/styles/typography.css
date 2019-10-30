@@ -51,41 +51,47 @@ p + * {
 
 .xsmall,
 small {
-  font-size: var(--font-size-1);
-  line-height: var(--line-height-1);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
 }
 
 .small,
 p {
-  font-size: var(--font-size-2);
-  line-height: var(--line-height-2);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
 }
 
 .medium,
 h3 {
-  font-size: var(--font-size-3);
-  line-height: var(--line-height-3);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
   font-weight: var(--font-weight-3);
 }
 
 .large,
 h2 {
-  font-size: var(--font-size-4);
-  line-height: var(--line-height-4);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
   font-weight: var(--font-weight-3);
 }
 
 .xlarge,
 h1 {
-  font-size: var(--font-size-5);
-  line-height: var(--line-height-5);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
   font-weight: var(--font-weight-2);
 }
 
-.display {
-  font-size: var(--font-size-display);
-  line-height: var(--line-height-display);
+.display,
+.display-1 {
+  font-size: var(--font-size-display-1);
+  line-height: var(--line-height-display-1);
   font-weight: var(--font-weight-1);
+}
+
+.display-2 {
+  font-size: var(--font-size-display-2);
+  line-height: var(--line-height-display-2);
 }
 
 h1,
