@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--color-dark);
-  padding: 1.5rem 0;
+  padding: 1rem var(--grid-margin);
 }
 
 .es-header ul,
@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   font-size: 2rem;
-  max-width: var(--container-width-large);
+  max-width: var(--container-width);
   width: 100%;
 }
 
@@ -28,7 +28,7 @@
 .navbar-brand {
   display: block;
   height: 5rem;
-  margin: 0 1.5rem 0 1rem; /* should be 0 1.5rem, but the logo needs to be slightly more left to be visually aligned */
+  margin: 0 1.5rem 0 -0.5rem; /* should be 0 1.5rem, but the logo needs to be slightly more left to be visually aligned */
 }
 
 .navbar-list {
@@ -43,7 +43,6 @@
   display: block;
   text-align: left;
   font-size: inherit;
-  line-height: inherit;
   font-weight: inherit;
   border-radius: 10px;
 }
@@ -57,6 +56,7 @@
   display: inline-block;
   border: 0;
   margin: -5rem 0.5rem 0 auto;
+  padding: 0;
   width: 4.5rem;
   height: 5rem;
   background: transparent
@@ -74,6 +74,7 @@
 .navbar-list-item-link,
 .navbar-list-item-dropdown-toggle {
   margin: 0 0.5rem;
+  line-height: 3rem;
   padding: 1rem;
   color: #fff;
 }
@@ -155,7 +156,11 @@
   margin: 1rem 1.5rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 984px) {
+  .es-header {
+    /* padding: 1.5rem var(--grid-margin); */
+  }
+
   .es-navbar {
     display: flex;
     flex-direction: row;
