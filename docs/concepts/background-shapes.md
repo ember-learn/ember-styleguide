@@ -75,7 +75,7 @@ The other type of background shape is a "swipe" that can either be a swipe acros
 
 ```html
 <div class="layout-grid bg-shape-swipe-top">
-  <div class="col-4-large offset-1-large text-center margin-vertical-large">
+  <div class="col-4-large offset-1-large text-center text-light margin-vertical-large">
     <h2>Build with the teams that never stop shipping.</h2>
     <p>
       Some of the best development teams in the world have been iterating on their products for years with Ember. With
