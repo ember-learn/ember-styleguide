@@ -2,8 +2,31 @@
 
 ## Theming Helpers
 
+All of the below will set the desired background color and ensure corresponding foreground colors as well.
+
+### Light Background
+
+If you would like a section or a div to use the dark style then you need to add `class="bg-light"` to the element that you would like to be light.
+
+```html
+<div class="bg-light">
+  hello there
+</div>
+```
+
+### Light Muted Background
+
+If you would like a section or a div to use the dark style then you need to add `class="bg-light-muted"` to the element that you would like to be light, but slightly darker.
+
+```html
+<div class="bg-light-muted">
+  hello there
+</div>
+```
+
 ### Dark Background
-If you would like a section or a div to use the dark style then you need to add `class="bg-dark"` to the element that you would like to be dark. This helper class sets the background to the dark colour and automatically sets the text colour to be white
+
+If you would like a section or a div to use the dark style then you need to add `class="bg-dark"` to the element that you would like to be dark.
 
 ```html
 <div class="bg-dark">
@@ -11,17 +34,20 @@ If you would like a section or a div to use the dark style then you need to add 
 </div>
 ```
 
+Please note that there currently is no `bg-dark-muted`, as it's unused.
+
 ## Border Helpers
+
 If you want to adjust border properties.
 
 ### Rounded Corners
 
 ```html
-<div class="rounded-small bg-orange margin-small padding-small text-light">Hello!</div>
+<div class="rounded bg-brand margin-small padding-small text-light">Hello!</div>
 ```
 
 ```html
-<div class="rounded-large margin-small padding-small bg-dark">Hello!</div>
+<div class="rounded-lg margin-small padding-small bg-dark">Hello!</div>
 ```
 
 ## List Styles
@@ -37,6 +63,7 @@ If you want to remove default list styling you can use the `list-unstyled` css h
 ```
 
 ## Spacing Helpers
+
 In order to apply the spacing scale on pages, a set of predefined helper classes exist for both margins and paddings.
 
 ### Margin Helpers
@@ -59,8 +86,8 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
             <td>{{direction}}</td>
             <td><code>.margin{{direction}}{{size}}</code></td>
             <td>
-              <div class="bg-muted border-dashed">
-                <div class="bg-orange margin{{direction}}{{size}}">Content</div>
+              <div class="bg-light-muted border-dashed">
+                <div class="bg-brand margin{{direction}}{{size}}">Content</div>
               </div>
             </td>
           </tr>
@@ -89,7 +116,7 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
           <td>{{direction}}</td>
           <td><code>.padding{{direction}}{{size}}</code></td>
           <td>
-              <div class="bg-orange padding{{direction}}{{size}}">
+              <div class="bg-brand padding{{direction}}{{size}}">
                 <div class="border-dashed">Content</div>
               </div>
           </td>

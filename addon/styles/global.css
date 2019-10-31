@@ -2,49 +2,91 @@
   --font-family-sans: 'Inter var', 'Inter web', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
 
-  --color-dark: #1c1e23;
-  --color-light: #ffffff;
-  --color-muted: #f4f6f8;
-  --color-orange: #e04e39;
+  --color-white: #fff;
+  --color-gray-100: #f4f6f8;
+  --color-gray-200: #ebeef2;
+  --color-gray-300: #dce0e6;
+  --color-gray-400: #bec4cc;
+  --color-gray-500: #8f949f;
+  --color-gray-600: #6a707a;
+  --color-gray-700: #42474f;
+  --color-gray-800: #2b2d34;
+  --color-gray-900: #1c1e24;
+  --color-black: #000;
+
+  --color-brand: #e04e39;
+  --color-brand-text: #ffd7d2;
+  --color-brand-hc-light: #ff5c44;
+  --color-brand-hc-dark: #cf2d20;
+
   --color-gray: #a2a3a8;
   --color-success: #d9f9e3;
   --color-danger: #ffd8e1;
   --color-warning: #fcffc9;
   --color-info: #e3eefc;
 
-  --font-size-1: 1.5rem;
-  --font-size-2: 1.875rem; /* 15dp, no need to use calc() for such a basic value */
-  --font-size-3: 2rem;
-  --font-size-4: 2.5rem;
-  --font-size-5: 4.5rem;
-  --font-size-display: 7.75rem;
+  --font-size-xs: 1.375rem; /* 11px */
+  --font-size-base: 1.625rem; /* p = 13px */
+  --font-size-md: 1.875rem; /* h3 = 15px */
+  --font-size-lg: 2.25rem; /* h2 = 18px */
+  --font-size-xl: 3.125rem; /* h1 = 25px */
+  --font-size-display-1: 4rem; /* display 1 = 32px */
+  --font-size-display-2: 1.875rem; /* display 2 = 15px */
 
-  --line-height-1: calc(16 / 12);
-  --line-height-2: 1.6;
-  --line-height-3: 1.5;
-  --line-height-4: 1.2;
-  --line-height-5: calc(48 / 36);
-  --line-height-display: calc(64 / 62);
+  --line-height-xs: calc(16 / 11);
+  --line-height-base: calc(24 / 13);
+  --line-height-md: 1.6;
+  --line-height-lg: calc(32 / 18);
+  --line-height-xl: 1.28;
+  --line-height-display-1: 1.25;
+  --line-height-display-2: 1.6;
 
   --font-weight-1: 200;
   --font-weight-2: 400;
   --font-weight-3: 600;
 
   --container-width: 119rem;
-  --grid-gap: 3rem;
+  --grid-gap-x: 3rem;
+  --grid-gap-y: 6rem;
   --grid-margin: 1.5rem;
 
-  --spacing-1: 2rem;
-  --spacing-2: 3rem;
-  --spacing-3: 6rem;
-  --spacing-4: 9rem;
-  --spacing-5: 24rem;
+  --spacing-1: 1rem;
+  --spacing-2: 2rem;
+  --spacing-3: 3rem;
+  --spacing-4: 5rem;
+  --spacing-5: 8rem;
+
+  --radius: 0.625rem;
+  --radius-lg: 1.25rem;
 }
 
 /* 984px = 2rem + 119rem + 2rem */
 @media (min-width: 984px) {
   :root {
-    --grid-gap: 4rem;
+    --font-size-xs: 1.5rem; /* 12px */
+    --font-size-base: 1.875rem; /* 15px */
+    --font-size-md: 2rem; /* 16px */
+    --font-size-lg: 2.5rem; /* 20px */
+    --font-size-xl: 4.5rem; /* 36px */
+    --font-size-display-1: 7.75rem; /* 62px */
+    --font-size-display-2: 2.375rem; /* 19px */
+
+    --line-height-xs: calc(16 / 12);
+    --line-height-base: 1.6;
+    --line-height-md: 1.5;
+    --line-height-lg: 1.2;
+    --line-height-xl: calc(48 / 36);
+    --line-height-display-1: calc(64 / 62);
+    --line-height-display-2: calc(32 / 19);
+
+    --spacing-1: 2rem;
+    --spacing-2: 3rem;
+    --spacing-3: 6rem;
+    --spacing-4: 9rem;
+    --spacing-5: 24rem;
+
+    --grid-gap-x: 4rem;
+    --grid-gap-y: 9rem;
   }
 }
 
@@ -58,8 +100,8 @@ html {
   margin: 0;
   padding: 0;
   font-family: var(--font-family-sans);
-  background: var(--color-light);
-  color: var(--color-dark);
+  background: var(--color-white);
+  color: var(--color-gray-700);
   border: 0;
 }
 
@@ -68,18 +110,18 @@ html {
 }
 
 body {
-  font-size: var(--font-size-2);
-  line-height: var(--line-height-2);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
 }
 
 a {
-  color: var(--color-orange);
+  color: var(--color-brand);
   text-decoration: none;
 }
 
 a:active,
 .active {
-  color: var(--color-dark);
+  color: var(--color-gray-900);
 }
 
 p {
@@ -92,8 +134,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
+  font-weight: var(--font-weight-2);
   margin: 0 0 2rem 0;
+  color: var(--color-gray-900);
 }
 
 strong {

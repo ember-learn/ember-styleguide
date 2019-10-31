@@ -19,7 +19,7 @@
 .layout-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: var(--grid-gap);
+  grid-gap: var(--grid-gap-y) var(--grid-gap-x);
 }
 
 .layout-grid > * {

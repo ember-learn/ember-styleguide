@@ -1,6 +1,6 @@
 .card {
-  border: 1px solid var(--color-gray);
-  border-radius: 4px;
+  border: 2px solid var(--color-gray-300);
+  border-radius: var(--radius-lg);
   height: 100%;
   overflow: hidden;
   position: relative;
@@ -11,7 +11,7 @@
 .card[card-link] h3 > a::after,
 .card[card-link] h4 > a::after {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -24,7 +24,7 @@
 
 .card[card-link]:focus-within,
 .card[card-link]:hover {
-    background-color: var(--color-muted);
+  background-color: var(--color-gray-200);
 }
 
 .card__image {

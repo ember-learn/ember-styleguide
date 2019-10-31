@@ -1,4 +1,4 @@
-@import "color-pallet";
+@import 'color-pallet';
 
 .self-executing-code-block {
   margin-bottom: 2rem;
@@ -11,5 +11,5 @@
 }
 
 .border-dashed {
-  border: 1px dashed var(--color-gray);
+  border: 1px dashed var(--color-gray-500);
 }

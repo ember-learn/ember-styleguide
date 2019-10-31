@@ -5,7 +5,7 @@
 .es-footer {
   & a {
     text-decoration: none;
-    color: var(--color-dark);
+    color: var(--color-gray-900);
   }
 
   & .footer-info {
@@ -25,7 +25,7 @@
 
   & .footer-hr {
     border: 0;
-    border-bottom: 2px solid var(--color-muted);
+    border-bottom: 2px solid var(--color-gray-200);
     margin: 0;
   }
 
@@ -36,7 +36,7 @@
   }
 
   & .footer-copyright {
-    color: var(--color-gray);
+    color: var(--color-gray-600);
   }
 
   & .footer-social {
@@ -44,16 +44,16 @@
     align-items: center;
 
     & svg {
-      fill: var(--color-gray);
+      fill: var(--color-gray-600);
     }
   }
 
   & .footer-contributions-wrapper {
-    background-color: var(--color-muted);
+    background-color: var(--color-white);
   }
 
   & .footer-contributions {
-    color: var(--color-gray);
+    color: var(--color-gray-600);
     padding: 0;
     display: flex;
     justify-content: space-between;
