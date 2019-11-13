@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--color-gray-900);
-  padding: 1rem var(--grid-margin);
+  padding: 0 var(--grid-margin);
 }
 
 .es-header ul,
@@ -16,27 +16,29 @@
   color: var(--color-gray-100);
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: inherit;
   max-width: var(--container-width);
   width: 100%;
+  padding: 0.5rem 0;
 }
 
 .navbar-brand-wrapper {
   display: block;
-  margin-right: auto;
-  border-radius: 10px;
+  height: 2.5rem;
+  margin: auto auto auto 0;
+  border-radius: var(--radius-lg);
 }
 
 .navbar-brand {
   display: block;
-  height: 5rem;
-  margin: 0 0 0 -0.5rem;
+  height: 100%;
+  width: auto;
 }
 
 .navbar-list {
-  margin: 1.5rem -1.5rem 0;
-  padding: 0;
   display: none;
+  margin: 0.5rem -0.5rem 0;
+  padding: 0;
   font-weight: var(--font-weight-3);
   list-style: none;
 }
@@ -44,29 +46,32 @@
 .navbar-list > li > * {
   display: block;
   text-align: left;
-  font-size: inherit;
+  font-size: var(--font-size-base);
   font-weight: inherit;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
+  box-sizing: border-box;
+  line-height: var(--line-height-base);
+  color: #fff;
 }
 
-[aria-expanded='true'] ~ .navbar-list,
-[aria-expanded='true'] ~ .navbar-end {
+[aria-expanded="true"] ~ .navbar-list,
+[aria-expanded="true"] ~ .navbar-end {
   display: block;
 }
 
 .navbar-toggler {
-  display: inline-block;
-  border: 0;
-  margin: -5rem -0.5rem 0 auto;
+  display: block;
+  width: 3rem;
+  height: 2rem;
+  margin: -2.25rem -0.5rem 0.25rem auto;
   padding: 0;
-  width: 4.5rem;
-  height: 5rem;
+  border: 0;
   background: transparent
     url("data:image/svg+xml,%3Csvg height='24' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 18a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2zm0-7a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2zm0-7a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2z' fill='%23fff' fill-rule='evenodd'/%3E%3C/svg%3E")
-    right 1rem center no-repeat;
+    center no-repeat;
   overflow: hidden;
   text-indent: -999rem;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
 }
 
 .navbar-list-item {
@@ -74,29 +79,29 @@
 }
 
 .navbar-list-item-link,
-.navbar-list-item-dropdown-toggle {
-  margin: 0 0.5rem;
-  line-height: 3rem;
-  padding: 1rem;
-  color: #fff;
+.navbar-list-item-dropdown-toggle,
+.navbar-dropdown-list-item-link {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
 }
 
 .navbar-list-item-link {
   display: block;
   color: inherit;
   text-decoration: none;
+  width: unset;
 }
 
 .navbar-list-item-dropdown-toggle {
-  width: calc(100% - 1rem);
   border: 0;
   display: block;
-  padding-right: 3rem;
+  padding-right: 2rem;
   text-decoration: none;
   white-space: nowrap;
   background: transparent
     url("data:image/svg+xml,%3Csvg width='8' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.295 3.707C-.335 3.077.11 2 1.002 2h5.996c.891 0 1.337 1.077.707 1.707l-2.998 3a1 1 0 0 1-1.414 0l-2.998-3z' fill='%23A3A6AF' fill-rule='nonzero'/%3E%3C/svg%3E")
-    right 2rem center no-repeat;
+    right 1.25rem center no-repeat;
 }
 
 .navbar-list-item-dropdown-toggle:focus,
@@ -104,26 +109,26 @@
   background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.295 3.707C-.335 3.077.11 2 1.002 2h5.996c.891 0 1.337 1.077.707 1.707l-2.998 3a1 1 0 0 1-1.414 0l-2.998-3z' fill='%23FFF' fill-rule='nonzero'/%3E%3C/svg%3E");
 }
 
-.navbar-list-item-dropdown-toggle[aria-expanded='true'] {
+.navbar-list-item-dropdown-toggle[aria-expanded="true"] {
   color: #ff5c44;
   background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.295 4.293C-.335 4.923.11 6 1.002 6h5.996c.891 0 1.337-1.077.707-1.707l-2.998-3a1 1 0 0 0-1.414 0l-2.998 3z' fill='%23E04E39' fill-rule='nonzero'/%3E%3C/svg%3E");
 }
 
 .navbar-dropdown-list {
-  margin: 0 1.5rem 1rem;
+  margin: 0;
   padding: 0;
   background: #f4f6f8;
-  border-radius: 5px;
+  border-radius: var(--radius);
 }
 
 .navbar-dropdown-list :first-child :first-child {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
 }
 
 .navbar-dropdown-list :last-child :last-child {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
 }
 
 .separator {
@@ -141,7 +146,7 @@
 .navbar-dropdown-list-item-link {
   color: var(--color-brand);
   display: block;
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
   text-decoration: none;
 }
 
@@ -155,14 +160,9 @@
 
 .navbar-end {
   display: none;
-  margin: 1rem 0;
 }
 
-@media (min-width: 984px) {
-  .es-header {
-    padding: 1.5rem var(--grid-margin);
-  }
-
+@media (min-width: 1008px) {
   .es-navbar {
     display: flex;
     flex-direction: row;
@@ -170,36 +170,49 @@
   }
 
   .navbar-brand-wrapper {
-    margin-right: 1.5rem;
-  }
-
-  .navbar-brand {
-    padding: 0;
+    height: 2.8125rem;
+    margin-right: var(--spacing-4);
   }
 
   .navbar-list {
     display: flex;
-    margin: 0;
+    margin-top: 0;
   }
 
   .navbar-toggler {
     display: none;
   }
 
+  .navbar-list-item {
+    padding: var(--spacing-3) var(--spacing-3) var(--spacing-3) 0;
+  }
+
+  .navbar-list-item-link,
+  .navbar-list-item-dropdown-toggle {
+    padding: 0.3125rem 0 0.25rem;
+  }
+
   .navbar-list-item-link {
-    padding: 1rem 1.5rem;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 
   .navbar-list-item-dropdown-toggle {
     width: auto;
-    margin: 0;
-    padding: 1rem 3.5rem 1rem 1.5rem;
-    background-position: right 1.5rem center;
+    margin-left: -0.5rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+    background-position: right center;
   }
 
   .navbar-dropdown-list {
-    box-shadow: 0 0 1px 0 rgba(73, 79, 95, 0.6), 0 2px 10px -5px rgba(73, 79, 95, 0.55),
-      0 3px 30px -15px rgba(73, 79, 95, 0.8), 0 0 50px -5px rgba(73, 79, 95, 0.5);
+    box-shadow: 0 0 1px 0 rgba(73, 79, 95, 0.6),
+      0 2px 10px -5px rgba(73, 79, 95, 0.55),
+      0 3px 30px -15px rgba(73, 79, 95, 0.8),
+      0 0 50px -5px rgba(73, 79, 95, 0.5);
+    width: auto;
     margin: 0;
     position: absolute;
     left: -0.5rem;
@@ -207,12 +220,10 @@
   }
 
   .navbar-dropdown-list-item-link {
-    padding-right: 3rem;
   }
 
   .navbar-end {
     display: block;
     align-self: center;
-    margin: 0 1.5rem 0 auto;
   }
 }
