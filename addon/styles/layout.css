@@ -13,11 +13,11 @@
 .layout {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: var(--grid-gap-y) var(--grid-gap-x);
+  grid-gap: var(--grid-gap-md) var(--grid-gap-lg);
   grid-auto-flow: row dense;
 }
 
-@media (max-width: 983px) {
+@media (max-width: 1007px) {
   .layout > * {
     grid-column-end: span 4;
   }
@@ -55,7 +55,7 @@
   }
 }
 
-@media (min-width: 984px) {
+@media (min-width: 1008px) {
   .layout > * {
     grid-column-end: span 6;
   }

@@ -7,14 +7,14 @@
 
   display: grid;
   grid-template-columns: repeat(var(--column-count), 1fr);
-  grid-gap: var(--grid-gap-x);
+  grid-gap: var(--grid-gap-md);
 }
 
 .grid > * {
   grid-column: span 1;
 }
 
-@media (max-width: 983px) {
+@media (max-width: 1007px) {
   .sm\:grid-2 {
     --column-count: 2;
   }
@@ -28,7 +28,7 @@
   }
 }
 
-@media (min-width: 984px) {
+@media (min-width: 1008px) {
   .lg\:grid-2 {
     --column-count: 2;
   }
@@ -43,9 +43,7 @@
 
   .lg\:grid-5 {
     --column-count: 5;
-  }
 
-  .lg\:grid-6 {
-    --column-count: 6;
+    grid-gap: var(--grid-gap-sm);
   }
 }
