@@ -125,3 +125,20 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
     {{/each}}
   </tbody>
 </table>
+
+### Responsive Videos
+
+```html
+<div class="embed-video">
+  <!-- code from YouTube -->
+  <iframe
+    width="640"
+    height="360"
+    src="https://www.youtube.com/embed/rY5D38RQoEg"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+  <!-- /code from YouTube -->
+</div>
+```
