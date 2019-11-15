@@ -13,7 +13,7 @@
     padding: var(--spacing-2) 0;
 
     & .footer-logo {
-      height: 5rem;
+      height: 3rem;
     }
   }
 
