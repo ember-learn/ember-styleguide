@@ -1,4 +1,14 @@
 
+4.0.0-1 / 2019-11-15
+==================
+
+  * Helper for responsive video embeds #246 from @pichfl
+  * Overhaul Sizes, Layout and Grids #245 from @pichfl
+  * Add presentation role to image in es-card if its alternate text is empty string #243 from @ijlee2
+  * Add link underlines back #240 from @ghislaineguerin
+  * Update and cleanup CSS variables and related helpers #239 from @pichfl
+  * Add outside spacing for containers on mobile #238 from @pichfl
+
 4.0.0-0 / 2019-10-28
 ==================
 
