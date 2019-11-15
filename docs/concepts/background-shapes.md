@@ -7,8 +7,8 @@ In the new design we have a number of background shapes that can be used to spru
 To use the "background boxes" shape then you need to use the `bg-shape-boxes` css helper as follows
 
 ```html
-<div class="layout-grid bg-shape-boxes bg-dark padding-vertical-large">
-  <div class="col-4-large offset-1-large text-center">
+<div class="layout bg-shape-boxes bg-dark padding-vertical-large">
+  <div class="lg:col-4 lg:start-2 text-center">
     <h1>Build with the teams that never stop shipping.</h1>
     <p>
       Some of the best development teams in the world have been iterating on their products for years with Ember. With
@@ -16,8 +16,11 @@ To use the "background boxes" shape then you need to use the `bg-shape-boxes` cs
       every step of the way.
     </p>
   </div>
-  <div class="col-4-large offset-1-large text-center">
+  <div class="margin-large text-center">
     <h2>More stuff to show location of boxes</h2>
+  </div>
+  <div class="margin-large text-center">
+    <h2>Even more stuff to show location of boxes</h2>
   </div>
 </div>
 ```
@@ -25,8 +28,8 @@ To use the "background boxes" shape then you need to use the `bg-shape-boxes` cs
 There is an alternative "background boxes" shape that you can use with `bg-shape-boxes-bottom` that will automatically continue into the following dom node (e.g. the next div)
 
 ```html
-<div class="layout-grid bg-shape-boxes-bottom bg-dark padding-vertical-large">
-  <div class="col-4-large offset-1-large text-center">
+<div class="layout bg-shape-boxes-bottom bg-dark padding-vertical-large">
+  <div class="lg:col-4 lg:start-2 text-center margin-vertical-large">
     <h1>Build with the teams that never stop shipping.</h1>
     <p>
       Some of the best development teams in the world have been iterating on their products for years with Ember. With
@@ -35,8 +38,8 @@ There is an alternative "background boxes" shape that you can use with `bg-shape
     </p>
   </div>
 </div>
-<div class="layout-grid padding-vertical-medium">
-  <div class="col-4-large offset-1-large text-center">
+<div class="layout padding-vertical-large">
+  <div class="lg:col-4 lg:start-2 text-center">
     <h2>More content to show off the shapes</h2>
     <p>
       Some of the best development teams in the world have been iterating on their products for years with Ember. With
@@ -57,8 +60,8 @@ If you are using the [PageHeader component](/components/page-header/) then you w
 >
   <EsButton>Go</EsButton>
 </EsPageHeader>
-<div class="layout-grid">
-  <div class="col-4-large offset-1-large text-center">
+<div class="layout">
+  <div class="lg:col-4 lg:start-2 text-center margin-vertical-large">
     <h1>Build with the teams that never stop shipping.</h1>
     <p>
       Some of the best development teams in the world have been iterating on their products for years with Ember. With
@@ -74,8 +77,8 @@ If you are using the [PageHeader component](/components/page-header/) then you w
 The other type of background shape is a "swipe" that can either be a swipe across the top of the section using `bg-shape-swipe-top` or a rectangle from the bottom of the section using `bg-shape-swipe-bottom`.
 
 ```html
-<div class="layout-grid bg-shape-swipe-top">
-  <div class="col-4-large offset-1-large text-center text-light margin-vertical-large">
+<div class="layout bg-shape-swipe-top">
+  <div class="lg:col-4 lg:start-2 text-center text-light margin-vertical-large">
     <h2>Build with the teams that never stop shipping.</h2>
     <p>
       Some of the best development teams in the world have been iterating on their products for years with Ember. With
@@ -83,8 +86,12 @@ The other type of background shape is a "swipe" that can either be a swipe acros
       every step of the way.
     </p>
   </div>
-  <div class="col-4-large offset-1-large text-center margin-vertical-large">
+  <div class="text-center margin-vertical-large">
     <h2>More stuff to show location of swipe</h2>
+  </div>
+
+  <div class="text-center margin-vertical-large">
+    <h2>Even more stuff to show location of swipe</h2>
   </div>
 </div>
 ```
@@ -92,8 +99,8 @@ The other type of background shape is a "swipe" that can either be a swipe acros
 and then using the `bg-shape-swipe-bottom` we can get a shape for the bottom of a section:
 
 ```html
-<div class="layout-grid bg-dark bg-shape-swipe-bottom">
-  <div class="col-4-large offset-1-large text-center margin-vertical-large">
+<div class="layout bg-dark bg-shape-swipe-bottom">
+  <div class="lg:col-4 lg:start-2 text-center margin-vertical-large">
     <h2>Build with the teams that never stop shipping.</h2>
     <p>
       Some of the best development teams in the world have been iterating on their products for years with Ember. With
@@ -101,10 +108,13 @@ and then using the `bg-shape-swipe-bottom` we can get a shape for the bottom of 
       every step of the way.
     </p>
   </div>
-  <div class="col-4-large offset-1-large text-center margin-vertical-large">
+  <div class="text-center margin-vertical-large">
     <h2>More stuff to show location of swipe</h2>
   </div>
-  <div class="col-4-large offset-1-large text-center margin-vertical-large">
+  <div class="text-center margin-vertical-large">
+    <h2>Even more stuff to show location of swipe</h2>
+  </div>
+  <div class="text-center margin-vertical-large">
     <h2>yes this needs quite a large section</h2>
   </div>
 </div>

@@ -22,7 +22,9 @@
 
 .bg-shape-swipe-top {
   background: var(--color-brand) url('/images/swipe-top.svg') no-repeat bottom left;
-  background-size: contain;
+  background-size: cover;
+  /* this fixes a slight rendering issue in chrome */
+  margin-bottom: -1px;
 }
 
 .bg-shape-swipe-bottom {

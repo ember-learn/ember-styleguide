@@ -1,6 +1,9 @@
 :root {
-  --font-family-sans: 'Inter var', 'Inter web', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  /* Vertical rhythm is based on multiples of 8. */
+
+  --font-family-sans: "Inter var", "Inter web", -apple-system,
+    BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji;
 
   --color-white: #fff;
   --color-gray-100: #f4f6f8;
@@ -25,68 +28,73 @@
   --color-warning: #fcffc9;
   --color-info: #e3eefc;
 
-  --font-size-xs: 1.375rem; /* 11px */
-  --font-size-base: 1.625rem; /* p = 13px */
-  --font-size-md: 1.875rem; /* h3 = 15px */
-  --font-size-lg: 2.25rem; /* h2 = 18px */
-  --font-size-xl: 3.125rem; /* h1 = 25px */
-  --font-size-display-1: 4rem; /* display 1 = 32px */
-  --font-size-display-2: 1.875rem; /* display 2 = 15px */
+  --font-size-xs: 0.8125rem; /* 13px, use sparsly! */
+  --font-size-base: 0.9375rem; /* p = 15px */
+  --font-size-md: 0.9375rem; /* h3 = 15px */
+  --font-size-lg: 1.1875rem; /* h2 = 19px */
+  --font-size-xl: 1.5625rem; /* h1 = 25px */
+  --font-size-display-1: 1.8754rem; /* display 1 = 30px */
+  --font-size-display-2: 0.9375rem; /* display 2 = 15px */
 
-  --line-height-xs: calc(16 / 11);
-  --line-height-base: calc(24 / 13);
-  --line-height-md: 1.6;
-  --line-height-lg: calc(32 / 18);
-  --line-height-xl: 1.28;
-  --line-height-display-1: 1.25;
-  --line-height-display-2: 1.6;
+  --line-height-xs: calc(16 / 13); /* 16px */
+  --line-height-base: 1.6; /* 24px */
+  --line-height-md: 1.6; /* 24px */
+  --line-height-lg: calc(24 / 19); /* 24px */
+  --line-height-xl: 2; /* 32px */
+  --line-height-display-1: calc(32 / 30); /* 32px */
+  --line-height-display-2: 1.6; /* 24px */
 
   --font-weight-1: 200;
   --font-weight-2: 400;
   --font-weight-3: 600;
 
-  --container-width: 119rem;
-  --grid-gap-x: 3rem;
-  --grid-gap-y: 6rem;
-  --grid-margin: 1.5rem;
+  --spacing-1: 0.5rem; /* 8px */
+  --spacing-2: 1rem; /* 16px */
+  --spacing-3: 1.5rem; /* 24px */
+  --spacing-4: 2.5rem; /* 40px */
+  --spacing-5: 3.5rem; /* 56px */
+  --spacing-6: 4rem; /* 64px */
 
-  --spacing-1: 1rem;
-  --spacing-2: 2rem;
-  --spacing-3: 3rem;
-  --spacing-4: 5rem;
-  --spacing-5: 8rem;
+  --container-width: 60.75rem;
+  --grid-gap-sm: var(--spacing-2);
+  --grid-gap-md: var(--spacing-3);
+  --grid-gap-lg: var(--spacing-4);
+  --grid-margin: 0.75rem;
 
-  --radius: 0.625rem;
-  --radius-lg: 1.25rem;
+  --radius: 0.3125rem;
+  --radius-lg: 0.625rem;
 }
 
-/* 984px = 2rem + 119rem + 2rem */
-@media (min-width: 984px) {
+@media (min-width: 1008px) {
+  /* Vertical rhythm is based on multiples of 9. */
+
   :root {
-    --font-size-xs: 1.5rem; /* 12px */
-    --font-size-base: 1.875rem; /* 15px */
-    --font-size-md: 2rem; /* 16px */
-    --font-size-lg: 2.5rem; /* 20px */
-    --font-size-xl: 4.5rem; /* 36px */
-    --font-size-display-1: 7.75rem; /* 62px */
-    --font-size-display-2: 2.375rem; /* 19px */
+    --font-size-xs: 0.875rem; /* 14px, use sparsly! */
+    --font-size-base: 1rem; /* 16px */
+    --font-size-md: 1.0625rem; /* 17px */
+    --font-size-lg: 1.25rem; /* 20px */
+    --font-size-xl: 2.25rem; /* 36px */
+    --font-size-display-1: 3rem; /* 48px */
+    --font-size-display-2: 1.125rem; /* 18px */
 
-    --line-height-xs: calc(16 / 12);
-    --line-height-base: 1.6;
-    --line-height-md: 1.5;
-    --line-height-lg: 1.2;
-    --line-height-xl: calc(48 / 36);
-    --line-height-display-1: calc(64 / 62);
-    --line-height-display-2: calc(32 / 19);
+    --line-height-xs: calc(16 / 14); /* 16px */
+    --line-height-base: 1.6875; /* 27px */
+    --line-height-md: calc(27 / 17); /* 27px */
+    --line-height-lg: 1.35; /* 27px */
+    --line-height-xl: 1.25; /* 45px */
+    --line-height-display-1: 1.125; /* 54px */
+    --line-height-display-2: 1.5; /* 27px */
 
-    --spacing-1: 2rem;
-    --spacing-2: 3rem;
-    --spacing-3: 6rem;
-    --spacing-4: 9rem;
-    --spacing-5: 24rem;
+    --spacing-1: 0.5625rem; /* 9px */
+    --spacing-2: 1.125rem; /* 18px */
+    --spacing-3: 1.6875rem; /* 27px */
+    --spacing-4: 2.25rem; /* 36px */
+    --spacing-5: 3.375rem; /* 54px */
+    --spacing-6: 4.5rem; /* 72px */
 
-    --grid-gap-x: 4rem;
-    --grid-gap-y: 9rem;
+    --grid-gap-sm: var(--spacing-3); /* 27px */
+    --grid-gap-md: 2.25rem; /* 36px */
+    --grid-gap-lg: var(--spacing-4); /* 54px */
   }
 }
 
@@ -103,10 +111,6 @@ html {
   background: var(--color-white);
   color: var(--color-gray-700);
   border: 0;
-}
-
-html {
-  font-size: 50%; /* 8px if using default Browser settings of 16px, while staying scalable */
 }
 
 body {
