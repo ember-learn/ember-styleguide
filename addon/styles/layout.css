@@ -12,7 +12,7 @@
 
 .layout {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: var(--grid-gap-md) var(--grid-gap-lg);
   grid-auto-flow: row dense;
 }
@@ -56,6 +56,10 @@
 }
 
 @media (min-width: 1008px) {
+  .layout {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
   .layout > * {
     grid-column-end: span 6;
   }
