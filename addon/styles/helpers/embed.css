@@ -1,0 +1,31 @@
+/**
+ * Wrap YouTube and other iFrame based video embeds into this class.
+ *
+ * ```html
+ * <div class="embed-video">
+ *   <!-- code from YouTube -->
+ *   <iframe
+ *     width="640"
+ *     height="360"
+ *     src="https://www.youtube.com/embed/rY5D38RQoEg"
+ *     frameborder="0"
+ *     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+ *     allowfullscreen
+ *   ></iframe>
+ *   <!-- /code from YouTube -->
+ * </div>
+ * ```
+ */
+.embed-video {
+  position: relative;
+  height: 0;
+  padding: 0 0 56.25%; /* 16:9 */
+}
+
+.embed-video > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

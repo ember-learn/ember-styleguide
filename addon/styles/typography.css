@@ -3,7 +3,8 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/Inter-Regular.woff2?v=3.11') format('woff2'), url('/fonts/Inter-Regular.woff?v=3.11') format('woff');
+  src: url('/fonts/Inter-Regular.woff2?v=3.11') format('woff2'),
+    url('/fonts/Inter-Regular.woff?v=3.11') format('woff');
 }
 
 @font-face {
@@ -45,23 +46,28 @@
   font-style: italic;
 }
 
+p {
+  margin: 0;
+}
+
 p + * {
   margin-top: var(--spacing-2);
 }
 
-.xsmall,
+.small,
 small {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
 }
 
-.small,
+.base,
 p {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
 
 .medium,
+.h3,
 h3 {
   font-size: var(--font-size-md);
   line-height: var(--line-height-md);
@@ -69,6 +75,7 @@ h3 {
 }
 
 .large,
+.h2,
 h2 {
   font-size: var(--font-size-lg);
   line-height: var(--line-height-lg);
@@ -76,6 +83,7 @@ h2 {
 }
 
 .xlarge,
+.h1,
 h1 {
   font-size: var(--font-size-xl);
   line-height: var(--line-height-xl);
@@ -100,18 +108,26 @@ h3 {
   margin-bottom: var(--spacing-1);
 }
 
+.xlarge + *,
+.h1 + *,
 h1 + * {
-  margin-top: var(--spacing-2);
+  margin-top: var(--spacing-3);
 }
 
+* + .xlarge,
+* + .h1,
 * + h1 {
-  margin-top: var(--spacing-2);
+  margin-top: var(--spacing-6);
 }
 
+* + .large,
+* + .h2,
 * + h2 {
   margin-top: var(--spacing-3);
 }
 
+* + .medium,
+* + .h3,
 * + h3 {
   margin-top: var(--spacing-1);
 }

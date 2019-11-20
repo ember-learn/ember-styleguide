@@ -1,9 +1,8 @@
 :root {
   /* Vertical rhythm is based on multiples of 8. */
 
-  --font-family-sans: "Inter var", "Inter web", -apple-system,
-    BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji;
+  --font-family-sans: 'Inter var', 'Inter web', -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 
   --color-white: #fff;
   --color-gray-100: #f4f6f8;
@@ -28,7 +27,7 @@
   --color-warning: #fcffc9;
   --color-info: #e3eefc;
 
-  --font-size-xs: 0.8125rem; /* 13px, use sparsly! */
+  --font-size-sm: 0.8125rem; /* 13px, use sparsly! */
   --font-size-base: 0.9375rem; /* p = 15px */
   --font-size-md: 0.9375rem; /* h3 = 15px */
   --font-size-lg: 1.1875rem; /* h2 = 19px */
@@ -69,7 +68,7 @@
   /* Vertical rhythm is based on multiples of 9. */
 
   :root {
-    --font-size-xs: 0.875rem; /* 14px, use sparsly! */
+    --font-size-sm: 0.875rem; /* 14px, use sparsly! */
     --font-size-base: 1rem; /* 16px */
     --font-size-md: 1.0625rem; /* 17px */
     --font-size-lg: 1.25rem; /* 20px */
@@ -116,6 +115,10 @@ html {
 body {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
+}
+
+main {
+  background-color: var(--color-gray-100);
 }
 
 a {
