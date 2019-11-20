@@ -17,10 +17,12 @@
 
 .bg-light {
   background-color: var(--color-gray-100);
+  color: var(--color-gray-700);
 }
 
 .bg-light-muted {
   background-color: var(--color-gray-200);
+  color: var(--color-gray-700);
 }
 
 .bg-dark {
