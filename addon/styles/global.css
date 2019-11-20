@@ -149,6 +149,18 @@ strong {
   font-weight: var(--font-weight-3);
 }
 
+figure,
+figcaption {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  margin-top: var(--spacing-1);
+  color: var(--color-gray-600);
+}
+
 /*
 @media (max-width: 1280px) and (min-width: 421px) {
   body,
