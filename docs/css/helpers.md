@@ -43,11 +43,11 @@ If you want to adjust border properties.
 ### Rounded Corners
 
 ```html
-<div class="rounded bg-brand margin-small padding-small text-light">Hello!</div>
+<div class="rounded bg-brand m-1 p-1 text-light">Hello!</div>
 ```
 
 ```html
-<div class="rounded-lg margin-small padding-small bg-dark">Hello!</div>
+<div class="rounded-lg m-1 p-1 bg-dark">Hello!</div>
 ```
 
 ## List Styles
