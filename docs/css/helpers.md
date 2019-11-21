@@ -95,7 +95,7 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
           <td>{{direction.name}}</td>
           <td><code>.m{{direction.value}}-{{size}}</code></td>
           <td>
-            <div class="bg-light-muted">
+            <div class="bg-light-muted border-dashed">
               <div class="bg-dark m{{direction.value}}-{{size}}">Content</div>
             </div>
           </td>
@@ -134,8 +134,8 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
           <td>{{direction.name}}</td>
           <td><code>.p{{direction.value}}-{{size}}</code></td>
           <td>
-            <div class="bg-light-muted p{{direction.value}}-{{size}}">
-              <div class="bg-dark">Content</div>
+            <div class="bg-light-muted border-dashed ">
+              <div class="bg-dark p{{direction.value}}-{{size}}">Content</div>
             </div>
           </td>
         </tr>
