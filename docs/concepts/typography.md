@@ -10,23 +10,23 @@ Please refer to the <a href="colours">Colors</a> section for more information on
 
 ### Sizes
 
-Use `.small` for small headings or notice paragraphs.
+Use `.text-sm` for small headings or notice paragraphs.
 
 ```html
-<div class="small">
+<div class="text-sm">
   Build with the teams that never stop shipping.
 </div>
 ```
 
-Use `.base` for body text, navigation items or links.
+Use `.text-base` for body text, navigation items or links.
 
 ```html
-<div class="base">
+<div class="text-base">
   Build with the teams that never stop shipping.
 </div>
 ```
 
-`.base` is also the default paragraph size.
+`.text-base` is also the default paragraph size.
 
 ```html
 <div>
@@ -34,10 +34,10 @@ Use `.base` for body text, navigation items or links.
 </div>
 ```
 
-Use `.medium` for section headings. This is also the default size for the `h3` element.
+Use `.text-md` for section headings. This is also the default size for the `h3` element.
 
 ```html
-<div class="medium">
+<div class="text-md">
   Build with the teams that never stop shipping.
 </div>
 ```
@@ -45,7 +45,7 @@ Use `.medium` for section headings. This is also the default size for the `h3` e
 Use `.large` for content page headings. This is also the default size for the `h2` element.
 
 ```html
-<div class="large">
+<div class="text-lg">
   Build with the teams that never stop shipping.
 </div>
 ```
@@ -53,7 +53,7 @@ Use `.large` for content page headings. This is also the default size for the `h
 Use `.xlarge` for landing page headlines. This is also the default size for the `h1` element.
 
 ```html
-<div class="xlarge">
+<div class="text-xl">
   Build with the teams that never stop shipping.
 </div>
 ```
@@ -71,7 +71,7 @@ Use `.display` in page headers.
 Use `.regular`
 
 ```html
-<div class="medium regular">
+<div class="text-md regular">
   Build with the teams that never stop shipping.
 </div>
 ```
@@ -79,7 +79,7 @@ Use `.regular`
 Use `.bold` if you must style something as bold and no semantic information needs to be carried. Prefer using `<strong>`.
 
 ```html
-<div class="medium bold">
+<div class="text-md bold">
   Build with the teams that never stop shipping.
 </div>
 ```

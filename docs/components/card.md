@@ -77,7 +77,7 @@ And here is a fuller example of a vertical, full-image card that has more struct
     <p>A framework for ambitious web developers. Try it out!</p>
     <div class="flex-horizontal-between">
       <div><a href="#">Visit Website</a></div>
-      <div class="small text-muted">COPYRIGHT 2019 TILDE INC.</div>
+      <div class="text-sm text-muted">COPYRIGHT 2019 TILDE INC.</div>
     </div>
   </EsCard>
 </ul>
@@ -127,7 +127,7 @@ And here is a full card based page layout that might be useful when building sit
   </EsCard>
 </ul>
 
-<p class="col-6-large">
+<p>
   Beyond our core online channels, you can dig deeper with these learning resources from the
   community members
 </p>
