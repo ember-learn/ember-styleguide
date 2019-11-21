@@ -28,6 +28,76 @@
   margin: var(--spacing-6);
 }
 
+.mx-0 {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.mx-1 {
+  margin-right: var(--spacing-1);
+  margin-left: var(--spacing-1);
+}
+
+.mx-2 {
+  margin-right: var(--spacing-2);
+  margin-left: var(--spacing-2);
+}
+
+.mx-3 {
+  margin-right: var(--spacing-3);
+  margin-left: var(--spacing-3);
+}
+
+.mx-4 {
+  margin-right: var(--spacing-4);
+  margin-left: var(--spacing-4);
+}
+
+.mx-5 {
+  margin-right: var(--spacing-5);
+  margin-left: var(--spacing-5);
+}
+
+.mx-6 {
+  margin-right: var(--spacing-6);
+  margin-left: var(--spacing-6);
+}
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.my-1 {
+  margin-top: var(--spacing-1);
+  margin-bottom: var(--spacing-1);
+}
+
+.my-2 {
+  margin-top: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+}
+
+.my-3 {
+  margin-top: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+}
+
+.my-4 {
+  margin-top: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.my-5 {
+  margin-top: var(--spacing-5);
+  margin-bottom: var(--spacing-5);
+}
+
+.my-6 {
+  margin-top: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+}
+
 .mt-0 {
   margin-top: 0;
 }
@@ -138,74 +208,4 @@
 
 .ml-6 {
   margin-left: var(--spacing-6);
-}
-
-.mx-0 {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.mx-1 {
-  margin-right: var(--spacing-1);
-  margin-left: var(--spacing-1);
-}
-
-.mx-2 {
-  margin-right: var(--spacing-2);
-  margin-left: var(--spacing-2);
-}
-
-.mx-3 {
-  margin-right: var(--spacing-3);
-  margin-left: var(--spacing-3);
-}
-
-.mx-4 {
-  margin-right: var(--spacing-4);
-  margin-left: var(--spacing-4);
-}
-
-.mx-5 {
-  margin-right: var(--spacing-5);
-  margin-left: var(--spacing-5);
-}
-
-.mx-6 {
-  margin-right: var(--spacing-6);
-  margin-left: var(--spacing-6);
-}
-
-.my-0 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.my-1 {
-  margin-top: var(--spacing-1);
-  margin-bottom: var(--spacing-1);
-}
-
-.my-2 {
-  margin-top: var(--spacing-2);
-  margin-bottom: var(--spacing-2);
-}
-
-.my-3 {
-  margin-top: var(--spacing-3);
-  margin-bottom: var(--spacing-3);
-}
-
-.my-4 {
-  margin-top: var(--spacing-4);
-  margin-bottom: var(--spacing-4);
-}
-
-.my-5 {
-  margin-top: var(--spacing-5);
-  margin-bottom: var(--spacing-5);
-}
-
-.my-6 {
-  margin-top: var(--spacing-6);
-  margin-bottom: var(--spacing-6);
 }

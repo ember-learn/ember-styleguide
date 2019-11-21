@@ -32,16 +32,16 @@
   --font-size-md: 0.9375rem; /* h3 = 15px */
   --font-size-lg: 1.1875rem; /* h2 = 19px */
   --font-size-xl: 1.5625rem; /* h1 = 25px */
-  --font-size-display-1: 1.8754rem; /* display 1 = 30px */
-  --font-size-display-2: 0.9375rem; /* display 2 = 15px */
+  --font-size-hero-1: 1.8754rem; /* display 1 = 30px */
+  --font-size-hero-2: 0.9375rem; /* display 2 = 15px */
 
   --line-height-xs: calc(16 / 13); /* 16px */
   --line-height-base: 1.6; /* 24px */
   --line-height-md: 1.6; /* 24px */
   --line-height-lg: calc(24 / 19); /* 24px */
   --line-height-xl: 2; /* 32px */
-  --line-height-display-1: calc(32 / 30); /* 32px */
-  --line-height-display-2: 1.6; /* 24px */
+  --line-height-hero-1: calc(32 / 30); /* 32px */
+  --line-height-hero-2: 1.6; /* 24px */
 
   --font-weight-1: 200;
   --font-weight-2: 400;
@@ -73,16 +73,16 @@
     --font-size-md: 1.0625rem; /* 17px */
     --font-size-lg: 1.25rem; /* 20px */
     --font-size-xl: 2.25rem; /* 36px */
-    --font-size-display-1: 3rem; /* 48px */
-    --font-size-display-2: 1.125rem; /* 18px */
+    --font-size-hero-1: 3rem; /* 48px */
+    --font-size-hero-2: 1.125rem; /* 18px */
 
     --line-height-xs: calc(16 / 14); /* 16px */
     --line-height-base: 1.6875; /* 27px */
     --line-height-md: calc(27 / 17); /* 27px */
     --line-height-lg: 1.35; /* 27px */
     --line-height-xl: 1.25; /* 45px */
-    --line-height-display-1: 1.125; /* 54px */
-    --line-height-display-2: 1.5; /* 27px */
+    --line-height-hero-1: 1.125; /* 54px */
+    --line-height-hero-2: 1.5; /* 27px */
 
     --spacing-1: 0.5625rem; /* 9px */
     --spacing-2: 1.125rem; /* 18px */
