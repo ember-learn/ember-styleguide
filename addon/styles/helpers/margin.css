@@ -1,5 +1,9 @@
 /* Margin helpers. Class names are intentionally short to discern them from "proper" class names */
 
+.m-0 {
+  margin: 0;
+}
+
 .m-1 {
   margin: var(--spacing-1);
 }
@@ -22,6 +26,10 @@
 
 .m-6 {
   margin: var(--spacing-6);
+}
+
+.mt-0 {
+  margin-top: 0;
 }
 
 .mt-1 {
@@ -48,6 +56,10 @@
   margin-top: var(--spacing-6);
 }
 
+.mr-0 {
+  margin-right: 0;
+}
+
 .mr-1 {
   margin-right: var(--spacing-1);
 }
@@ -70,6 +82,10 @@
 
 .mr-6 {
   margin-right: var(--spacing-6);
+}
+
+.mb-0 {
+  margin-bottom: 0;
 }
 
 .mb-1 {
@@ -96,6 +112,10 @@
   margin-bottom: var(--spacing-6);
 }
 
+.ml-0 {
+  margin-left: 0;
+}
+
 .ml-1 {
   margin-left: var(--spacing-1);
 }
@@ -118,6 +138,11 @@
 
 .ml-6 {
   margin-left: var(--spacing-6);
+}
+
+.mx-0 {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .mx-1 {
@@ -148,6 +173,11 @@
 .mx-6 {
   margin-right: var(--spacing-6);
   margin-left: var(--spacing-6);
+}
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .my-1 {
