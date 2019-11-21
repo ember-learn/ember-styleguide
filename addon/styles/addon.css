@@ -22,6 +22,3 @@
 @import 'components/es-footer.css';
 @import 'components/es-header.css';
 @import 'components/es-page-header.css';
-
-/* Guide styling. TODO: Strip this from export */
-@import 'guide.css';
