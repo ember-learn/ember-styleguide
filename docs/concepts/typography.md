@@ -10,18 +10,26 @@ Please refer to the <a href="colours">Colors</a> section for more information on
 
 ### Sizes
 
-Use `.xsmall` for small headings or notice paragraphs.
+Use `.small` for small headings or notice paragraphs.
 
 ```html
-<div class="xsmall">
+<div class="small">
   Build with the teams that never stop shipping.
 </div>
 ```
 
-Use `.small` for body text, navigation items or links. This is also the default paragraph size.
+Use `.base` for body text, navigation items or links.
 
 ```html
-<div class="small">
+<div class="base">
+  Build with the teams that never stop shipping.
+</div>
+```
+
+`.base` is also the default paragraph size.
+
+```html
+<div>
   Build with the teams that never stop shipping.
 </div>
 ```

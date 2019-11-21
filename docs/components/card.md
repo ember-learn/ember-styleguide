@@ -77,7 +77,7 @@ And here is a fuller example of a vertical, full-image card that has more struct
     <p>A framework for ambitious web developers. Try it out!</p>
     <div class="flex-horizontal-between">
       <div><a href="#">Visit Website</a></div>
-      <div class="xsmall text-muted">COPYRIGHT 2019 TILDE INC.</div>
+      <div class="small text-muted">COPYRIGHT 2019 TILDE INC.</div>
     </div>
   </EsCard>
 </ul>
