@@ -59,4 +59,9 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  & .footer-contributor-logo {
+    height: 1.6875rem;
+    max-width: 4rem;
+  }
 }
