@@ -89,7 +89,7 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
         (hash value='l' name="left") 
       ) as |direction|
     }}
-      {{#each (array '1' '2' '3' '4' '5') as |size|}}
+      {{#each (array '0' '1' '2' '3' '4' '5') as |size|}}
         <tr>
           <td>{{size}}</td>
           <td>{{direction.name}}</td>
@@ -128,7 +128,7 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
         (hash value='l' name="left") 
       ) as |direction|
     }}
-      {{#each (array '1' '2' '3' '4' '5') as |size|}}
+      {{#each (array '0' '1' '2' '3' '4' '5') as |size|}}
         <tr>
           <td>{{size}}</td>
           <td>{{direction.name}}</td>
