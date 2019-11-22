@@ -1,4 +1,11 @@
 
+4.0.0-2 / 2019-11-22
+==================
+
+  * Fix inline link styling #252 from @pichfl
+  * Implemented `.well` css helper and added documentation #251 from @pichfl
+  * Significant font/spacing/padding/margin rework to align with the design #249 from @pichfl
+
 4.0.0-1 / 2019-11-15
 ==================
 
