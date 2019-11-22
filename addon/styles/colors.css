@@ -41,6 +41,13 @@
   & a {
     color: var(--color-white);
   }
+
+  & a {
+    background-image: linear-gradient(
+      var(--color-white-40),
+      var(--color-white-40)
+    );
+  }
 }
 
 .bg-info {

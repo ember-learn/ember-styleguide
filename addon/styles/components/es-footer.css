@@ -6,6 +6,7 @@
   & a {
     text-decoration: none;
     color: var(--color-gray-900);
+    background-image: none;
   }
 
   & .footer-info {
