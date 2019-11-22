@@ -48,7 +48,7 @@
 }
 
 .text-light {
-  color: var(--color-brand-text);
+  color: var(--color-white);
 
   & h1,
   & h2,

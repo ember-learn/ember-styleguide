@@ -4,10 +4,10 @@
   <div class="color-pallet__example" style="background-color: {{@color}}">
     <div class="color-pallet__example-text-row" style="grid-template-columns: repeat({{textClasses.length}}, 1fr)">
       {{#each textClasses as |textClass|}}
-        <span class="{{textClass}} color-pallet__example-text">A</span>
+        <span class="{{textClass}} color-pallet__example-text m-0">A</span>
 
 
-        <div class="color-pallet__example-text-result">
+        <div class="color-pallet__example-text-result m-0">
           <span {{did-insert this.checkPassFail textClass rgb}}></span>
         </div>
       {{/each}}
@@ -15,9 +15,9 @@
 
     <div class="color-pallet__example-text-row" style="grid-template-columns: repeat({{textClasses.length}}, 1fr)">
       {{#each textClasses as |textClass|}}
-        <span class="{{textClass}} color-pallet__example-text text-light">A</span>
+        <span class="{{textClass}} color-pallet__example-text m-0 text-light">A</span>
 
-        <div class="color-pallet__example-text-result">
+        <div class="color-pallet__example-text-result m-0">
           <span {{did-insert this.checkPassFail textClass rgb}}></span>
         </div>
       {{/each}}

@@ -1,37 +1,37 @@
 @font-face {
-  font-family: 'Inter web';
+  font-family: "Inter web";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/Inter-Regular.woff2?v=3.11') format('woff2'),
-    url('/fonts/Inter-Regular.woff?v=3.11') format('woff');
+  src: url("/fonts/Inter-Regular.woff2?v=3.11") format("woff2"),
+    url("/fonts/Inter-Regular.woff?v=3.11") format("woff");
 }
 
 @font-face {
-  font-family: 'Inter web';
+  font-family: "Inter web";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('/fonts/Inter-SemiBold.woff2?v=3.11') format('woff2'),
-    url('/fonts/Inter-SemiBold.woff?v=3.11') format('woff');
+  src: url("/fonts/Inter-SemiBold.woff2?v=3.11") format("woff2"),
+    url("/fonts/Inter-SemiBold.woff?v=3.11") format("woff");
 }
 
 @font-face {
-  font-family: 'Inter web';
+  font-family: "Inter web";
   font-style: normal;
   font-weight: 200;
   font-display: swap;
-  src: url('/fonts/Inter-ExtraLight-BETA.woff2?v=3.11') format('woff2'),
-    url('/fonts/Inter-ExtraLight-BETA.woff?v=3.11') format('woff');
+  src: url("/fonts/Inter-ExtraLight-BETA.woff2?v=3.11") format("woff2"),
+    url("/fonts/Inter-ExtraLight-BETA.woff?v=3.11") format("woff");
 }
 
 @font-face {
-  font-family: 'Inter var';
+  font-family: "Inter var";
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
-  font-named-instance: 'Regular';
-  src: url('/fonts/Inter-roman.var.woff2?v=3.11') format('woff2');
+  font-named-instance: "Regular";
+  src: url("/fonts/Inter-roman.var.woff2?v=3.11") format("woff2");
 }
 
 .sans {
@@ -87,14 +87,13 @@ h1 {
   font-weight: var(--font-weight-2);
 }
 
-.text-hero,
-.text-hero-1 {
+.text-hero-xl {
   font-size: var(--font-size-hero-1);
   line-height: var(--line-height-hero-1);
   font-weight: var(--font-weight-1);
 }
 
-.text-hero-2 {
+.text-hero-base {
   font-size: var(--font-size-hero-2);
   line-height: var(--line-height-hero-2);
 }
@@ -151,4 +150,34 @@ strong {
 
 .text-muted {
   color: var(--color-gray-600);
+}
+
+/* Legacy, to be removed */
+
+.xsmall {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.small {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+.medium {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+  font-weight: var(--font-weight-3);
+}
+
+.large {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+  font-weight: var(--font-weight-3);
+}
+
+.xlarge {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  font-weight: var(--font-weight-2);
 }
