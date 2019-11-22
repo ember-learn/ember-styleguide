@@ -34,7 +34,7 @@ div.color-pallet {
 
 .color-pallet__example-text-result span {
   font-family: monospace;
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   background-color: var(--color-gray-900);
   color: var(--color-gray-100);
   border-radius: 4px;

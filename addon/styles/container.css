@@ -2,6 +2,6 @@
   max-width: var(--container-width);
   margin-left: auto;
   margin-right: auto;
-  padding: var(--spacing-4) var(--grid-margin);
+  padding: var(--spacing-6) var(--grid-margin);
   box-sizing: content-box;
 }

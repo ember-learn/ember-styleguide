@@ -12,6 +12,7 @@
 
 .grid > * {
   grid-column: span 1;
+  align-items: stretch;
 }
 
 @media (max-width: 1007px) {

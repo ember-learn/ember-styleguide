@@ -43,11 +43,11 @@ If you want to adjust border properties.
 ### Rounded Corners
 
 ```html
-<div class="rounded bg-brand margin-small padding-small text-light">Hello!</div>
+<div class="rounded bg-brand m-1 p-1 text-light">Hello!</div>
 ```
 
 ```html
-<div class="rounded-lg margin-small padding-small bg-dark">Hello!</div>
+<div class="rounded-lg m-1 p-1 bg-dark">Hello!</div>
 ```
 
 ## List Styles
@@ -68,38 +68,7 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
 
 ### Margin Helpers
 
-<div>
-  <table class="margin-bottom-medium">
-    <thead>
-      <tr>
-        <th>Scale</th>
-        <th>Location</th>
-        <th>Helper Class</th>
-        <th>Example</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each (array '-small' '-medium' '-large') as |size|}}
-        {{#each (array '' '-vertical' '-horizontal' '-top' '-bottom' '-left' '-right') as |direction|}}
-          <tr>
-            <td>{{size}}</td>
-            <td>{{direction}}</td>
-            <td><code>.margin{{direction}}{{size}}</code></td>
-            <td>
-              <div class="bg-light-muted border-dashed">
-                <div class="bg-brand margin{{direction}}{{size}}">Content</div>
-              </div>
-            </td>
-          </tr>
-        {{/each}}
-      {{/each}}
-    </tbody>
-  </table>
-</div>
-
-### Padding Helpers
-
-<table>
+<table class="mb-5">
   <thead>
     <tr>
       <th>Scale</th>
@@ -109,16 +78,65 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
     </tr>
   </thead>
   <tbody>
-    {{#each (array '-small' '-medium' '-large') as |size|}}
-      {{#each (array '' '-vertical' '-horizontal' '-top' '-bottom' '-left' '-right') as |direction|}}
+    {{#each 
+      (array
+        (hash value='' name='all') 
+        (hash value='x' name="horizontal") 
+        (hash value='y' name="vertical") 
+        (hash value='t' name="top") 
+        (hash value='r' name="right")
+        (hash value='b' name="bottom") 
+        (hash value='l' name="left") 
+      ) as |direction|
+    }}
+      {{#each (array '0' '1' '2' '3' '4' '5') as |size|}}
         <tr>
           <td>{{size}}</td>
-          <td>{{direction}}</td>
-          <td><code>.padding{{direction}}{{size}}</code></td>
+          <td>{{direction.name}}</td>
+          <td><code>.m{{direction.value}}-{{size}}</code></td>
           <td>
-              <div class="bg-brand padding{{direction}}{{size}}">
-                <div class="border-dashed">Content</div>
-              </div>
+            <div class="bg-light-muted border-dashed">
+              <div class="bg-dark m{{direction.value}}-{{size}}">Content</div>
+            </div>
+          </td>
+        </tr>
+      {{/each}}
+    {{/each}}
+  </tbody>
+</table>
+
+### Padding Helpers
+
+<table class="mb-5">
+  <thead>
+    <tr>
+      <th>Scale</th>
+      <th>Location</th>
+      <th>Helper Class</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each 
+      (array
+        (hash value='' name='all') 
+        (hash value='x' name="horizontal") 
+        (hash value='y' name="vertical") 
+        (hash value='t' name="top") 
+        (hash value='r' name="right")
+        (hash value='b' name="bottom") 
+        (hash value='l' name="left") 
+      ) as |direction|
+    }}
+      {{#each (array '0' '1' '2' '3' '4' '5') as |size|}}
+        <tr>
+          <td>{{size}}</td>
+          <td>{{direction.name}}</td>
+          <td><code>.p{{direction.value}}-{{size}}</code></td>
+          <td>
+            <div class="bg-light-muted border-dashed ">
+              <div class="bg-dark p{{direction.value}}-{{size}}">Content</div>
+            </div>
           </td>
         </tr>
       {{/each}}

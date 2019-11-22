@@ -28,23 +28,27 @@ The general layout helper is `layout` that will automatically apply a reasonable
 ```html
 <ul class="layout list-unstyled">
   <EsCard>
-    Some of the best development teams in the world have been iterating on their products for years with Ember. With
-    scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
+    Some of the best development teams in the world have been iterating on their
+    products for years with Ember. With scalable UI architecture baked-in from
+    the start, you’ll be working with the same patterns these organizations use
     every step of the way.
   </EsCard>
   <EsCard>
-    Some of the best development teams in the world have been iterating on their products for years with Ember. With
-    scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
+    Some of the best development teams in the world have been iterating on their
+    products for years with Ember. With scalable UI architecture baked-in from
+    the start, you’ll be working with the same patterns these organizations use
     every step of the way.
   </EsCard>
   <EsCard>
-    Some of the best development teams in the world have been iterating on their products for years with Ember. With
-    scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
+    Some of the best development teams in the world have been iterating on their
+    products for years with Ember. With scalable UI architecture baked-in from
+    the start, you’ll be working with the same patterns these organizations use
     every step of the way.
   </EsCard>
   <EsCard>
-    Some of the best development teams in the world have been iterating on their products for years with Ember. With
-    scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
+    Some of the best development teams in the world have been iterating on their
+    products for years with Ember. With scalable UI architecture baked-in from
+    the start, you’ll be working with the same patterns these organizations use
     every step of the way.
   </EsCard>
 </ul>
@@ -55,23 +59,27 @@ The true power of the `layout` helper is when you want to have some elements tak
 ```html
 <ul class="layout list-unstyled">
   <EsCard class="lg:col-3">
-    Some of the best development teams in the world have been iterating on their products for years with Ember. With
-    scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
+    Some of the best development teams in the world have been iterating on their
+    products for years with Ember. With scalable UI architecture baked-in from
+    the start, you’ll be working with the same patterns these organizations use
     every step of the way.
   </EsCard>
   <EsCard class="lg:col-3">
-    Some of the best development teams in the world have been iterating on their products for years with Ember. With
-    scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
+    Some of the best development teams in the world have been iterating on their
+    products for years with Ember. With scalable UI architecture baked-in from
+    the start, you’ll be working with the same patterns these organizations use
     every step of the way.
   </EsCard>
   <EsCard class="lg:col-2">
-    Some of the best development teams in the world have been iterating on their products for years with Ember. With
-    scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
+    Some of the best development teams in the world have been iterating on their
+    products for years with Ember. With scalable UI architecture baked-in from
+    the start, you’ll be working with the same patterns these organizations use
     every step of the way.
   </EsCard>
   <EsCard class="lg:col-3">
-    Some of the best development teams in the world have been iterating on their products for years with Ember. With
-    scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
+    Some of the best development teams in the world have been iterating on their
+    products for years with Ember. With scalable UI architecture baked-in from
+    the start, you’ll be working with the same patterns these organizations use
     every step of the way.
   </EsCard>
 </ul>
@@ -90,9 +98,10 @@ Here is an example of a centered element that only takes up 4 (out of the availa
   <div class="lg:col-4 lg:start-2 text-center">
     <h2>Build with the teams that never stop shipping.</h2>
     <p>
-      Some of the best development teams in the world have been iterating on their products for years with Ember. With
-      scalable UI architecture baked-in from the start, you’ll be working with the same patterns these organizations use
-      every step of the way.
+      Some of the best development teams in the world have been iterating on
+      their products for years with Ember. With scalable UI architecture
+      baked-in from the start, you’ll be working with the same patterns these
+      organizations use every step of the way.
     </p>
   </div>
 </div>
@@ -105,8 +114,9 @@ Here is an example of a centered element that only takes up 4 (out of the availa
   <div class="lg:col-3">
     <h3>A Simple Component</h3>
     <p>
-      Ember Components are a superset of HTML – that means is a full-fledged Ember Component! To pass data into
-      Components, use the @ symbol along with an argument name.
+      Ember Components are a superset of HTML – that means is a full-fledged
+      Ember Component! To pass data into Components, use the @ symbol along with
+      an argument name.
     </p>
   </div>
 </div>
@@ -121,8 +131,9 @@ Columns can be reordered by specifying a start column for two elements, making t
   <div class="lg:col-4 lg:start-3">
     <h3>A Simple Component</h3>
     <p>
-      Ember Components are a superset of HTML – that means is a full-fledged Ember Component! To pass data into
-      Components, use the @ symbol along with an argument name.
+      Ember Components are a superset of HTML – that means is a full-fledged
+      Ember Component! To pass data into Components, use the @ symbol along with
+      an argument name.
     </p>
   </div>
   <div class="lg:col-2 lg:start-1 bg-brand"></div>
@@ -132,31 +143,34 @@ Columns can be reordered by specifying a start column for two elements, making t
 If you look at the DOM for the above example you will see that the order hasn't changed so this is essentially just a visual change. This helps with accessibility, but it also means that when you view this example on mobile the visual order will reflect the DOM order. This is particularly useful for cases where you want to alternate order of things on desktop but want the visual order to be different on mobile. View this next example on mobile to see the effect in action:
 
 ```html
-<div class="layout">  
+<div class="layout">
   <div class="lg:col-4">
     <h3>A Simple Component</h3>
     <p>
-      Ember Components are a superset of HTML – that means is a full-fledged Ember Component! To pass data into
-      Components, use the @ symbol along with an argument name.
+      Ember Components are a superset of HTML – that means is a full-fledged
+      Ember Component! To pass data into Components, use the @ symbol along with
+      an argument name.
     </p>
   </div>
-  <img height="50px" src="/ember-logo.png" class="lg:col-2">
+  <img height="50px" src="/ember-logo.png" class="lg:col-2" />
   <div class="lg:col-4 lg:start-3">
     <h3>A Simple Component</h3>
     <p>
-      Ember Components are a superset of HTML – that means is a full-fledged Ember Component! To pass data into
-      Components, use the @ symbol along with an argument name.
+      Ember Components are a superset of HTML – that means is a full-fledged
+      Ember Component! To pass data into Components, use the @ symbol along with
+      an argument name.
     </p>
   </div>
-  <img height="50px" src="/ember-logo.png" class="lg:col-2 lg:start-1">
+  <img height="50px" src="/ember-logo.png" class="lg:col-2 lg:start-1" />
   <div class="lg:col-4">
     <h3>A Simple Component</h3>
     <p>
-      Ember Components are a superset of HTML – that means is a full-fledged Ember Component! To pass data into
-      Components, use the @ symbol along with an argument name.
+      Ember Components are a superset of HTML – that means is a full-fledged
+      Ember Component! To pass data into Components, use the @ symbol along with
+      an argument name.
     </p>
   </div>
-  <img height="50px" src="/ember-logo.png" class="lg:col-2">
+  <img height="50px" src="/ember-logo.png" class="lg:col-2" />
 </div>
 ```
 
@@ -187,20 +201,26 @@ You can specify the number of items per row by using anything from `lg:grid-2` t
 
 ```html
 <ul class="grid lg:grid-2 list-unstyled">
-  <EsCard class="text-center">
-    <h3>Podcasts</h3>
-    <p>Rock n' Roll with EmberJS.</p>
-  </EsCard>
+  <li>
+    <EsCard class="text-center">
+      <h3>Podcasts</h3>
+      <p>Rock n' Roll with EmberJS.</p>
+    </EsCard>
+  </li>
 
-  <EsCard class="text-center">
-    <h3>Books</h3>
-    <p>Rock n' Roll with EmberJS.</p>
-  </EsCard>
+  <li>
+    <EsCard class="text-center">
+      <h3>Books</h3>
+      <p>Rock n' Roll with EmberJS.</p>
+    </EsCard>
+  </li>
 
-  <EsCard class="text-center">
-    <h3>Videos</h3>
-    <p>Rock n' Roll with EmberJS.</p>
-  </EsCard>
+  <li>
+    <EsCard class="text-center">
+      <h3>Videos</h3>
+      <p>Rock n' Roll with EmberJS.</p>
+    </EsCard>
+  </li>
 </ul>
 ```
 
@@ -211,35 +231,35 @@ The spacing scale can be applied to both margin and padding properties.
 
 <div class="layout">
   <div class="card lg:col-1">
-    <div class="spacer-xsmall bg-brand">
+    <div class="pb-1 bg-brand">
     </div>
     <div class="card-content">
       <h4>Extra Small Offset</h4>
     </div>
   </div>
   <div class="card lg:col-1">
-    <div class="spacer-small bg-brand">
+    <div class="pb-2 bg-brand">
     </div>
     <div class="card-content">
       <h4>Small Offset</h4>
     </div>
   </div>
   <div class="card lg:col-1">
-    <div class="spacer-medium bg-brand">
+    <div class="pb-3 bg-brand">
     </div>
     <div class="card-content">
       <h4>Medium Offset</h4>
     </div>
   </div>
   <div class="card lg:col-1">
-    <div class="spacer-large bg-brand">
+    <div class="pb-4 bg-brand">
     </div>
     <div class="card-content">
       <h4>Large Offset</h4>
     </div>
   </div>
   <div class="card lg:col-1">
-    <div class="spacer-xlarge bg-brand">
+    <div class="pb-5 bg-brand">
     </div>
     <div class="card-content">
       <h4>Extra Large Offset</h4>

@@ -14,7 +14,6 @@ Here is an example of a card
 
 You can also add an image to the card using the `@image` parameter:
 
-
 ```html
 <ul class="list-unstyled layout">
   <EsCard @image="/ember-logo.png" class="lg:col-2">
@@ -44,7 +43,6 @@ By default the card will have the image to the left of the content. If you want 
 ```
 
 It is unlikely that you will be using this vertical display of a card with a full width container so you might want to use a layout grid to contain the card:
-
 
 ```html
 <ul class="list-unstyled layout">
@@ -77,16 +75,15 @@ And here is a fuller example of a vertical, full-image card that has more struct
   <EsCard @image="/ember-logo.png" vertical full-image class="lg:col-2">
     <h3>Ember.js</h3>
     <p>A framework for ambitious web developers. Try it out!</p>
-    <div class="flex-row justify-content-between">
+    <div class="flex-horizontal-between">
       <div><a href="#">Visit Website</a></div>
-      <div class="xsmall text-muted">COPYRIGHT 2019 TILDE INC.</div>
+      <div class="text-sm text-muted">COPYRIGHT 2019 TILDE INC.</div>
     </div>
   </EsCard>
 </ul>
 ```
 
 You can also create a card that allows a link to an external resource using `<a href=""></a>` somewhere in the card body, most likely in the header:
-
 
 ```html
 <ul class="list-unstyled layout">
@@ -130,7 +127,10 @@ And here is a full card based page layout that might be useful when building sit
   </EsCard>
 </ul>
 
-<p class="col-6-large">Beyond our core online channels, you can dig deeper with these learning resources from the community members</p>
+<p>
+  Beyond our core online channels, you can dig deeper with these learning resources from the
+  community members
+</p>
 
 <ul class="list-unstyled layout">
   <EsCard class="lg:col-2 text-center" vertical @image="/images/icons/mic-icon.svg">

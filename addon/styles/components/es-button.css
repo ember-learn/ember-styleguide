@@ -1,11 +1,18 @@
 .es-button {
   background-color: var(--color-brand);
   color: var(--color-white);
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  border-radius: 4px;
+  padding-left: var(--spacing-3);
+  padding-right: var(--spacing-3);
+  padding-top: var(--spacing-1);
+  padding-bottom: var(--spacing-1);
+  border: 0;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+}
+
+.es-button:active {
+  background: var(--color-brand-hc-dark);
 }
 
 a.es-button {

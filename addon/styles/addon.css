@@ -1,18 +1,24 @@
+/* Reset */
 @import 'normalize.css';
 
+/* Globals */
 @import 'global.css';
 @import 'typography.css';
+
+/* Helpers */
+@import 'helpers/index.css';
+
+/* Modules */
 @import 'colors.css';
-@import 'helpers.css';
 @import 'container.css';
 @import 'layout.css';
 @import 'grid.css';
-@import 'flex.css';
 @import 'icon.css';
 @import 'background-shapes.css';
 
-@import 'components/es-header.css';
-@import 'components/es-page-header.css';
+/* Components */
 @import 'components/es-button.css';
 @import 'components/es-card.css';
 @import 'components/es-footer.css';
+@import 'components/es-header.css';
+@import 'components/es-page-header.css';

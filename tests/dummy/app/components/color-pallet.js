@@ -26,11 +26,11 @@ var relativeLuminance = function(c) {
 
 export default class ColorPallet extends Component {
   textClasses = [
-    'xsmall',
-    'small',
-    'medium',
-    'large',
-    'xlarge',
+    'text-sm',
+    'text-base',
+    'text-md',
+    'text-lg',
+    'text-xl',
   ]
 
   constructor(attrs) {
