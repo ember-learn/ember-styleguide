@@ -115,13 +115,18 @@ body {
   line-height: var(--line-height-base);
 }
 
+a {
+  color: var(--color-brand-hc-dark);
+  text-decoration: underline;
+}
+
 main {
   background-color: var(--color-gray-100);
 }
 
-a,
-a:link,
-a:visited {
+main a,
+main a:link,
+main a:visited {
   color: var(--color-brand-hc-dark);
   text-decoration: none;
   background: no-repeat left bottom
@@ -129,13 +134,13 @@ a:visited {
   background-size: 100% 0.1875rem;
 }
 
-a:focus,
-a:hover {
+main a:focus,
+main a:hover {
   color: var(--color-brand);
 }
 
-a:active,
-.active {
+main a:active,
+main .active {
   color: var(--color-brand);
 }
 

@@ -3,10 +3,18 @@
 } */
 
 .es-footer {
-  & a {
+  & a,
+  &:link,
+  &:visited {
     text-decoration: none;
-    color: var(--color-gray-900);
+    color: var(--color-gray-600);
     background-image: none;
+  }
+
+  & a:focus,
+  & a:hover {
+    text-decoration: underline;
+    color: var(--color-brand);
   }
 
   & .footer-info {
@@ -64,5 +72,14 @@
   & .footer-contributor-logo {
     height: 1.6875rem;
     max-width: 4rem;
+  }
+}
+
+footer.es-footer {
+  & a,
+  &:link,
+  &:visited {
+    color: var(--color-gray-600);
+    background-image: none;
   }
 }
