@@ -91,7 +91,9 @@
   box-sizing: border-box;
 }
 
-.navbar-list-item-link {
+.navbar-list-item-link,
+.navbar-list-item-link:link,
+.navbar-list-item-link:visited {
   display: block;
   color: inherit;
   text-decoration: none;

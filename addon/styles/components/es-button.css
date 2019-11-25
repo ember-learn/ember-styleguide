@@ -1,4 +1,7 @@
-.es-button {
+.es-button,
+a.es-button,
+a.es-button:link,
+a.es-button:visited {
   background-color: var(--color-brand);
   color: var(--color-white);
   padding-left: var(--spacing-3);
