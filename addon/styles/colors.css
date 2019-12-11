@@ -29,6 +29,9 @@
   background-color: var(--color-gray-900);
   color: var(--color-gray-300);
 
+  --color-link: var(--color-brand);
+  --color-link-hover: var(--color-brand-hc-light);
+
   & h1,
   & h2,
   & h3,

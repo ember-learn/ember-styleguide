@@ -67,6 +67,20 @@
 
   --radius: 0.3125rem;
   --radius-lg: 0.625rem;
+
+
+  --color-button-text: var(--color-white);
+  --color-button-bg: var(--color-brand);
+  --color-button-bg-hover: var(--color-brand-hc-dark);
+  --color-button-secondary-text: var(--color-brand);
+  --color-button-secondary-bg: var(--color-white);
+  --color-button-secondary-bg-hover: var(--color-brand);
+  --color-button-secondary-text-hover: var(--color-white);
+
+  --color-link: var(--color-brand-hc-dark);
+  --color-link-hover: var(--color-brand);
+
+  --focus: 0 0 0px 3px rgba(25, 116, 220, 0.8);
 }
 
 @media (min-width: 1008px) {
@@ -129,7 +143,7 @@ main {
 main a,
 main a:link,
 main a:visited {
-  color: var(--color-brand-hc-dark);
+  color: var(--color-link);
   text-decoration: none;
   background: no-repeat left bottom
     linear-gradient(var(--color-brand-40), var(--color-brand-40));
@@ -137,18 +151,15 @@ main a:visited {
 }
 
 main a:focus,
-main a:hover {
-  color: var(--color-brand);
-}
-
+main a:hover,
 main a:active,
 main .active {
-  color: var(--color-brand);
+  color: var(--color-link-hover);
 }
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0px 3px rgba(25, 116, 220, 0.8);
+  box-shadow: var(--focus);
 }
 
 p {
