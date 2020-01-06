@@ -15,7 +15,7 @@
     </button>
 
     <ul class="navbar-list">
-      {{#each navLinks as |link index|}}
+      {{#each this.navLinks as |link index|}}
         {{es-header/navbar-link link=link index=index}}
       {{/each}}
     </ul>
