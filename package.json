@@ -29,6 +29,7 @@
     "@ember/render-modifiers": "^1.0.0",
     "broccoli-funnel": "^2.0.1",
     "broccoli-merge-trees": "^3.0.1",
+    "ember-angle-bracket-invocation-polyfill": "^2.0.2",
     "ember-cli-babel": "^7.7.3",
     "ember-cli-htmlbars": "^3.0.1",
     "ember-cli-postcss": "^4.2.0",
