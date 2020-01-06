@@ -8,16 +8,20 @@ import {
 } from '../constants/es-footer';
 
 export default class EsPageHeader extends Component {
-  currentYear = null
-
-  constructor() {
-    super();
-    this.currentYear = new Date().getUTCFullYear();
-  }
-
   socialLinks = socialLinks
 
   tagline = tagline
   contributorLinks = contributorLinks
-  infoLinks = infoLinks
+
+  get currentYear() {
+    return new Date().getUTCFullYear()
+  }
+
+  get infoLinks() {
+    if (this.args && this.args.infoLinks) {
+      return this.args.infoLinks;
+    }
+
+    return infoLinks;
+  }
 }

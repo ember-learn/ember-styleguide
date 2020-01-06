@@ -1,15 +1,15 @@
 <footer class="es-footer" ...attributes>
   {{!--
     Pass footer properties to support
-    {{es-footer tagline="My custom tagline" contributorLinks=myLinks}}
+    <EsFooter @infoLinks={{someOtherLinks}} />
   --}}
-  {{es-footer/es-info infoLinks=infoLinks}}
+  <EsFooter::EsInfo @infoLinks={{this.infoLinks}} />
 
   <hr class="footer-hr">
 
-  {{es-footer/es-statement tagline=tagline socialLinks=socialLinks}}
+  <EsFooter::EsStatement @tagline={{tagline}} @socialLinks={{socialLinks}} />
 
   <hr class="footer-hr">
 
-  {{es-footer/es-contributions contributorLinks=contributorLinks}}
+  <EsFooter::EsContributions @contributorLinks={{contributorLinks}} />
 </footer>
