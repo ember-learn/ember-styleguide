@@ -51,10 +51,10 @@ const infoLinks = [{
   href: 'https://emberjs.com/security'
 }, {
   name: 'Legal',
-  href: 'https://emberjs.com/legal'
+  href: 'https://emberjs.com/about/legal'
 }, {
   name: 'Branding',
-  href: 'https://emberjs.com/brand',
+  href: 'https://emberjs.com/logos',
   lineBreak: true
 }, {
   name: 'Community Guidelines',
