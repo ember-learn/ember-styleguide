@@ -1,4 +1,10 @@
 
+4.0.0-4 / 2020-01-07
+==================
+
+  * Fix nav-links and footer infoLinks overrides #259 from @mansona
+  * Add custom property for mono font stack #258 from @pichfl
+
 4.0.0-3 / 2019-11-25
 ==================
 
