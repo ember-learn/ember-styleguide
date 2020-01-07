@@ -15,8 +15,8 @@ export default class EsHeader extends Component {
   }
 
   get navLinks() {
-    if (this.links) {
-      return this.links;
+    if (this.args.links) {
+      return this.args.links;
     }
 
     return defaultLinks;
