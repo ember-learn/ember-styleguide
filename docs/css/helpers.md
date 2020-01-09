@@ -78,15 +78,15 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
     </tr>
   </thead>
   <tbody>
-    {{#each 
+    {{#each
       (array
-        (hash value='' name='all') 
-        (hash value='x' name="horizontal") 
-        (hash value='y' name="vertical") 
-        (hash value='t' name="top") 
+        (hash value='' name='all')
+        (hash value='x' name="horizontal")
+        (hash value='y' name="vertical")
+        (hash value='t' name="top")
         (hash value='r' name="right")
-        (hash value='b' name="bottom") 
-        (hash value='l' name="left") 
+        (hash value='b' name="bottom")
+        (hash value='l' name="left")
       ) as |direction|
     }}
       {{#each (array '0' '1' '2' '3' '4' '5') as |size|}}
@@ -117,15 +117,15 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
     </tr>
   </thead>
   <tbody>
-    {{#each 
+    {{#each
       (array
-        (hash value='' name='all') 
-        (hash value='x' name="horizontal") 
-        (hash value='y' name="vertical") 
-        (hash value='t' name="top") 
+        (hash value='' name='all')
+        (hash value='x' name="horizontal")
+        (hash value='y' name="vertical")
+        (hash value='t' name="top")
         (hash value='r' name="right")
-        (hash value='b' name="bottom") 
-        (hash value='l' name="left") 
+        (hash value='b' name="bottom")
+        (hash value='l' name="left")
       ) as |direction|
     }}
       {{#each (array '0' '1' '2' '3' '4' '5') as |size|}}
@@ -159,4 +159,14 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
   ></iframe>
   <!-- /code from YouTube -->
 </div>
+```
+
+### Hide elements on mobile
+
+If you would like to hide any element only on mobile screens you can use the `.hide-on-mobile` class helper.
+
+```html
+<h1 class="hide-on-mobile">A secret message for desktop users: ♥️</h1>
+
+<p>If you can see the secret message above try resizing the window!</p>
 ```
