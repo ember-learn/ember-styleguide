@@ -12,3 +12,9 @@
 .max-width {
   max-width: 100%;
 }
+
+@media (max-width: 1007px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
