@@ -15,6 +15,6 @@
 
 @media (max-width: 1007px) {
   .hide-on-mobile {
-    display: none;
+    display: none !important;
   }
 }
