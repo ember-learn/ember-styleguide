@@ -1,4 +1,10 @@
 
+4.0.0-6 / 2020-01-11
+==================
+
+  * fix Heroku logo breaking survey pages #263 from @mansona
+  * make hide-on-mobile !important #262 from @mansona
+
 4.0.0-5 / 2020-01-10
 ==================
 
