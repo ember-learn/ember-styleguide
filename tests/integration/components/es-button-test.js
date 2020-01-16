@@ -28,12 +28,6 @@ module('Integration | Component | es button', function(hooks){
     assert.ok(document.querySelector('.es-button'), 'has base es-button class');
   });
 
-  test('can set button-block class', async function(assert) {
-    await render(hbs`{{es-button isBlock=true}}`);
-
-    assert.ok(document.querySelector('.button-block'), 'has button-block class');
-  });
-
   test('can display set label', async function(assert) {
     const label = 'Button Label';
 
