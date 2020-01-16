@@ -1,4 +1,10 @@
 
+4.0.0-7 / 2020-01-16
+==================
+
+  * Add styling for secondary buttons and links #260 from @pichfl
+  * Fix dropdown caret for navbar #260 from @pichfl
+
 4.0.0-6 / 2020-01-11
 ==================
 
