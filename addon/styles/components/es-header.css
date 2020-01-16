@@ -216,7 +216,7 @@
     margin-left: -0.5rem;
     padding-right: 1rem;
     padding-left: 0.5rem;
-    background-position: right center;
+    background-position: right 1px center;
   }
 
   .navbar-dropdown-list {
