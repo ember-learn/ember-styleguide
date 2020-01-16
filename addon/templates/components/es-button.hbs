@@ -1,5 +1,5 @@
 <button
-  class="es-button {{if @isLight "button-light"}} {{if @isTiny "button-tiny"}} {{if @isBlock "button-block"}}"
+  class={{if @secondary "es-button-secondary" "es-button"}}
   aria-label={{@label}}
   onclick={{action this.buttonClicked}}
   ...attributes
