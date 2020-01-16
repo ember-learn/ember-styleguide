@@ -27,6 +27,11 @@
   background-color: var(--color-gray-200);
 }
 
+.bg-dark .card[card-link]:focus-within,
+.bg-dark .card[card-link]:hover {
+  background-color: var(--color-gray-800);
+}
+
 .card__image {
   display: block;
   max-width: 64px;

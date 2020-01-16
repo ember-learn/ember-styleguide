@@ -109,6 +109,21 @@ But if you would like the whole card to become interactive and act as a link you
 </ul>
 ```
 
+Here is what that looks like on a dark background
+
+```html
+<div class="bg-dark">
+  <ul class="list-unstyled layout">
+    <EsCard class="lg:col-3" @image="/images/icons/mic-icon.svg" card-link>
+      <h3>
+        <a href="http://discuss.emberjs.com">Discussion Forum</a>
+      </h3>
+      <p>Post and search longer-form questions in our public forum.</p>
+    </EsCard>
+  </ul>
+</div>
+```
+
 And here is a full card based page layout that might be useful when building sites using this component:
 
 ```html
