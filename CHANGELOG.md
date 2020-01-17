@@ -1,4 +1,10 @@
 
+4.0.0-8 / 2020-01-17
+==================
+
+  * Small SVG fixes for homepage background shapes #269 from @mansona
+  * Fix hover state on cards in a dark background #267 from @mansona
+
 4.0.0-7 / 2020-01-16
 ==================
 
