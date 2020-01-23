@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.bg-dark .card {
+  border-color: var(--color-gray-600);
+}
+
 .card[card-link] h1 > a::after,
 .card[card-link] h2 > a::after,
 .card[card-link] h3 > a::after,
