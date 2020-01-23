@@ -1,9 +1,11 @@
 <div class="es-page-header bg-shape-boxes-bottom" ...attributes>
-  <div class="container">
-    <h1 class="text-hero-xl">{{@headline}}</h1>
+  <div class="container layout">
+    <div class="lg:col-5">
+      <h1 class="text-hero-xl">{{@headline}}</h1>
 
-    <p class="text-hero-base {{if hasBlock "mb-2"}}">{{@detail}}</p>
+      <p class="text-hero-base {{if hasBlock "mb-2"}}">{{@detail}}</p>
 
-    {{yield}}
+      {{yield}}
+    </div>
   </div>
 </div>

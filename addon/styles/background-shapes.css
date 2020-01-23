@@ -32,3 +32,13 @@
   background-repeat: no-repeat;
   background-position: bottom left;
 }
+
+@media (max-width: 1007px) {
+  .bg-shape-boxes-bottom {
+    background-size: 300px;
+  }
+
+  .bg-shape-boxes-bottom + * {
+    background-size: 100px;
+  }
+}
