@@ -1,5 +1,5 @@
 # Footer
 
 ```handlebars
-{{es-footer}}
+<EsFooter />
 ```

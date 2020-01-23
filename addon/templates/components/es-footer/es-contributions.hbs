@@ -1,10 +1,10 @@
-<div class="footer-contributions-wrapper">
-  <div class="footer-contributions container">
+<div class="footer-contributions-wrapper container py-3">
+  <div class="footer-contributions">
     <span>Ember is generously supported by</span>
-    <div>
+    <div class="mt-1">
       {{#each args.contributorLinks as |link|}}
-        <a href={{link.href}} title={{link.title}} aria-label={{link.title}} class="ml-1">
-          {{svg-jar link.class class="footer-contributor-logo my-4"}}
+        <a href={{link.href}} title={{link.title}} aria-label={{link.title}} class="mr-2">
+          {{svg-jar link.class class="footer-contributor-logo"}}
         </a>
       {{/each}}
     </div>

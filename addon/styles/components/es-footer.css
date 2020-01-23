@@ -3,6 +3,8 @@
 } */
 
 .es-footer {
+  background-color: var(--color-white);
+
   & a,
   &:link,
   &:visited {
@@ -19,17 +21,33 @@
 
   & .footer-info {
     display: flex;
-    padding: var(--spacing-2) 0;
+    justify-content: space-between;
 
-    & .footer-logo {
-      height: 3rem;
+    & .logo-wrapper {
+      grid-row: 1 / 4;
     }
   }
 
   & .footer-info-links {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  & .footer-social {
+    display: grid;
+    grid-gap: 0.5rem;
+
+    & a {
+      align-items: center;
+      display: flex;
+    }
+
+    & svg {
+      fill: var(--color-gray-600);
+      margin-right: var(--spacing-1);
+      width: 1rem;
+    }
   }
 
   & .footer-hr {
@@ -39,22 +57,12 @@
   }
 
   & .footer-statement {
-    padding: var(--spacing-2) 0;
-    display: flex;
     justify-content: space-between;
+    background-color: var(--color-gray-100);
   }
 
   & .footer-copyright {
     color: var(--color-gray-600);
-  }
-
-  & .footer-social {
-    display: flex;
-    align-items: center;
-
-    & svg {
-      fill: var(--color-gray-600);
-    }
   }
 
   & .footer-contributions-wrapper {
@@ -62,16 +70,46 @@
   }
 
   & .footer-contributions {
+    align-items: center;
     color: var(--color-gray-600);
-    padding: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
-  & .footer-contributor-logo {
+  & .footer-contributor-logo,
+  & .footer-contributor-logo-link {
     height: 1.6875rem;
+    line-height: 1.6875rem;
     max-width: 4rem;
+  }
+
+  @media (max-width: 1007px) {
+    & .footer-info {
+      flex-direction: column;
+
+      & .footer-logo {
+        margin-bottom: var(--spacing-1);
+        width: 5rem;
+      }
+    }
+
+    & .footer-info-links {
+      display: flex;
+      flex-wrap: wrap;
+
+      & > a {
+        margin-right: var(--spacing-2);
+      }
+
+      & .logo-wrapper {
+        width: 100%;
+      }
+    }
+
+    & .footer-contributions {
+      align-items: start;
+      flex-direction: column;
+    }
   }
 }
 
