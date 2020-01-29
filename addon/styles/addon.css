@@ -5,9 +5,6 @@
 @import 'global.css';
 @import 'typography.css';
 
-/* Helpers */
-@import 'helpers/index.css';
-
 /* Modules */
 @import 'colors.css';
 @import 'container.css';
@@ -16,6 +13,9 @@
 @import 'icon.css';
 @import 'well.css';
 @import 'background-shapes.css';
+
+/* Helpers */
+@import 'helpers/index.css';
 
 /* Components */
 @import 'components/es-button.css';

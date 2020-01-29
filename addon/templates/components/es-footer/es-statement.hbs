@@ -1,15 +1,7 @@
-<div class="footer-statement container">
-  <div>
-    <p class="footer-copyright">
-      &copy; Copyright {{currentYear}} - <a href="https://www.tilde.io/" class="footer-copyright">Tilde Inc.</a>
-    </p>
-    <p class="footer-tagline">{{args.tagline}}</p>
-  </div>
-  <div class="footer-social">
-    {{#each args.socialLinks as |link|}}
-      <a href={{link.href}} title={{link.title}} aria-label={{link.label}} class="icon-wrapper m-1 text-sm">
-        {{svg-jar link.class class="icon" }}
-      </a>
-    {{/each}}
-  </div>
+<div class="footer-statement">
+  <p class="footer-copyright container py-3">
+    &copy; Copyright {{currentYear}} - <a href="https://www.tilde.io/" class="footer-copyright">Tilde Inc.</a>
+    <br>
+    {{args.tagline}}
+  </p>
 </div>

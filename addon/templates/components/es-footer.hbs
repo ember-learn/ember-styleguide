@@ -3,13 +3,9 @@
     Pass footer properties to support
     <EsFooter @infoLinks={{someOtherLinks}} />
   --}}
-  <EsFooter::EsInfo @infoLinks={{this.infoLinks}} />
+  <EsFooter::EsInfo @infoLinks={{this.infoLinks}} @socialLinks={{socialLinks}} />
 
-  <hr class="footer-hr">
-
-  <EsFooter::EsStatement @tagline={{tagline}} @socialLinks={{socialLinks}} />
-
-  <hr class="footer-hr">
+  <EsFooter::EsStatement @tagline={{tagline}} />
 
   <EsFooter::EsContributions @contributorLinks={{contributorLinks}} />
 </footer>

@@ -19,6 +19,11 @@ const socialLinks = [{
 
 const contributorLinks = [{
   name: 'Hosted by:',
+  title: "Netlify",
+  href: 'https://www.netlify.com/',
+  class: 'netlify-logo',
+}, {
+  name: 'Hosted by:',
   title: "Heroku",
   href: 'https://www.heroku.com/emberjs',
   class: 'heroku-logo',
