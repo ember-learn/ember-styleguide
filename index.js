@@ -31,9 +31,9 @@ module.exports = {
 
     svgJar: {
       sourceDirs: [
-        'public',
-        'node_modules/ember-styleguide/public',
-        'tests/dummy/public'
+        'public/images/icons',
+        'node_modules/ember-styleguide/public/images/icons',
+        'tests/dummy/public/images/icons'
       ]
     },
   },

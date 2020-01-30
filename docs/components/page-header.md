@@ -12,6 +12,12 @@ should use the `<EsPageHeader />` component:
 >
   <EsButton>Go</EsButton>
 </EsPageHeader>
+<section>
+  <div class="container">
+    <h2>Next Section</h2>
+    <p>This is here to show how the bg-shape continues onto the next section</p>
+  </div>
+</section>
 ```
 
 This example is making use of the [`dark` css helper](/css/helpers#dark)
