@@ -1,4 +1,14 @@
 
+4.0.0-9 / 2020-01-30
+==================
+
+  * make the footer look more like the design #275 from @mansona
+  * add netlify as a sponsor #275 from @mansona
+  * move css helpers so that they have higher precidence than `container` and `list-unstyled` #274 from @mansona
+  * add "dotted texture" to the background svg for the bg-shape-swipe-top #274 from @mansona
+  * stop including all svgs in svg-jar #274 from @mansona
+  * lighten border color of card when on a dark background #274 from @mansona
+
 4.0.0-8 / 2020-01-17
 ==================
 
