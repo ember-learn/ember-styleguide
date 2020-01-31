@@ -1,53 +1,33 @@
 .card {
-  border: 2px solid var(--color-gray-300);
+  align-items: flex-start;
+  border: 2px solid var(--color-card-border);
   border-radius: var(--radius-lg);
   height: 100%;
   overflow: hidden;
   position: relative;
-}
-
-.bg-dark .card {
-  border-color: var(--color-gray-600);
-}
-
-.card[card-link] h1 > a::after,
-.card[card-link] h2 > a::after,
-.card[card-link] h3 > a::after,
-.card[card-link] h4 > a::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  content: '';
-}
-
-.card[card-link] a {
-  color: inherit;
-}
-
-.card[card-link]:focus-within,
-.card[card-link]:hover {
-  background-color: var(--color-gray-200);
-}
-
-.bg-dark .card[card-link]:focus-within,
-.bg-dark .card[card-link]:hover {
-  background-color: var(--color-gray-800);
+  background: var(--color-card-bg);
+  color: var(--color-card-text);
 }
 
 .card__image {
   display: block;
-  max-width: 64px;
-  max-height: 64px;
-
-  margin: var(--spacing-2);
-  float: left;
+  max-width: 100%;
+  max-height: auto;
+  border-bottom: 2px solid var(--color-card-border);
 }
 
-.card[vertical] .card__image {
-  margin: var(--spacing-2) auto;
-  float: none;
+.card__icon {
+  display: block;
+  margin: var(--spacing-3) auto 0;
+  width: 64px;
+  height: auto;
+  flex: 0 0 auto;
+  color: var(--color-card-icon);
+}
+
+.card__content {
+  flex: 1 1 100%;
+  padding: var(--spacing-3);
 }
 
 .card[full-image] .card__image {
@@ -56,6 +36,32 @@
   margin: 0;
 }
 
-.card-content {
-  margin: var(--spacing-2);
+.card--link {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.card--link:focus-within,
+.card--link:hover {
+  background-color: var(--color-card-bg-hover);
+  border-color: var(--color-card-bg-hover);
+  color: var(--color-card-text-hover);
+}
+
+.card--link a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+}
+
+.card--link .card__icon {
+  margin: var(--spacing-3) 0 var(--spacing-3) var(--spacing-3);
+}
+
+.card--link:focus-within .card__icon,
+.card--link:hover .card__icon {
+  color: var(--color-card-icon-hover);
 }

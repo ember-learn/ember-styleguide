@@ -6,13 +6,13 @@
 @import 'typography.css';
 
 /* Modules */
-@import 'colors.css';
+@import 'backgrounds.css';
+@import 'background-shapes.css';
 @import 'container.css';
 @import 'layout.css';
 @import 'grid.css';
 @import 'icon.css';
 @import 'well.css';
-@import 'background-shapes.css';
 
 /* Helpers */
 @import 'helpers/index.css';

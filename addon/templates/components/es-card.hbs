@@ -1,8 +1,5 @@
-<li class="card" ...attributes>
-  {{#if @image}}
-    <img class="card__image" src={{@image}} alt={{if @alt @alt ""}} role={{unless @alt "presentation"}}>
-  {{/if}}
-  <div class="card-content">
+<li class="card {{if @image "card--image"}}" ...attributes>
+  <EsCardContent @icon={{@icon}} @image={{@image}}>
     {{yield}}
-  </div>
+  </EsCardContent>
 </li>

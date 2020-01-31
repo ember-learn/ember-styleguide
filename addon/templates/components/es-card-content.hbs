@@ -1,0 +1,18 @@
+{{#if @icon}}
+  {{svg-jar @icon class="card__icon" width="60px"}}
+{{/if}}
+
+{{#if @image}}
+  <img
+    class="card__image"
+    src={{@image.src}}
+    alt={{if @image.alt @image.alt ""}}
+    role={{unless @image.alt "presentation"}}
+    width={{@image.width}}
+    height={{@image.width}}
+  >
+{{/if}}
+
+<div class="card__content">
+  {{yield}}
+</div>
