@@ -72,7 +72,7 @@
   --color-button-text: var(--color-white);
   --color-button-bg: var(--color-brand);
   --color-button-bg-hover: var(--color-brand-hc-dark);
-  --color-button-secondary-text: var(--color-brand);
+  --color-button-secondary-text: var(--color-brand-hc-dark);
   --color-button-secondary-bg: var(--color-white);
   --color-button-secondary-bg-hover: var(--color-brand);
   --color-button-secondary-text-hover: var(--color-white);
