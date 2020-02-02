@@ -68,7 +68,6 @@
   --radius: 0.3125rem;
   --radius-lg: 0.625rem;
 
-
   --color-button-text: var(--color-white);
   --color-button-bg: var(--color-brand);
   --color-button-bg-hover: var(--color-brand-hc-dark);
@@ -76,6 +75,12 @@
   --color-button-secondary-bg: var(--color-white);
   --color-button-secondary-bg-hover: var(--color-brand);
   --color-button-secondary-text-hover: var(--color-white);
+
+  --color-card-bg: var(--color-gray-100);
+  --color-card-border: var(--color-gray-300);
+  --color-card-bg-hover: var(--color-gray-200);
+  --color-card-text: var(--color-gray-700);
+  --color-card-text-hover: var(---color-gray-900);
 
   --color-link: var(--color-brand-hc-dark);
   --color-link-hover: var(--color-brand);

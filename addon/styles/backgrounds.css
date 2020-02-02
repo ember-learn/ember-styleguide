@@ -32,6 +32,14 @@
   --color-link: var(--color-brand);
   --color-link-hover: var(--color-brand-hc-light);
 
+  --color-card-bg: var(--color-gray-900);
+  --color-card-border: var(--color-gray-700);
+  --color-card-bg-hover: var(--color-gray-800);
+  --color-card-icon: var(--color-gray-400);
+  --color-card-icon-hover: var(--color-white);
+  --color-card-text: var(--color-gray-400);
+  --color-card-text-hover: var(---color-white);
+
   & h1,
   & h2,
   & h3,
