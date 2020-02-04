@@ -1,4 +1,11 @@
 
+4.0.0-10 / 2020-02-04
+==================
+
+  * Add docs for the new Cards API #280 from @mansona
+  * Improve the ESCard API #279 from @pichfl
+  * use high-contrast brand colour for secondary button text #278 from @mansona
+
 4.0.0-9 / 2020-01-30
 ==================
 
