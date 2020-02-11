@@ -13,7 +13,7 @@ a.es-button-secondary:visited {
   padding-top: var(--spacing-1);
   padding-bottom: var(--spacing-1);
   border: 0;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius);
   font-size: var(--font-size-md);
   line-height: var(--line-height-md);
   transition: background-color 0.2s, color 0.1s;
