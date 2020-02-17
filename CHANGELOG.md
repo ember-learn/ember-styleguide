@@ -1,4 +1,11 @@
 
+4.0.0-11 / 2020-02-17
+==================
+
+  * Add bg-none CSS helper to reset background #293 from @melsumner
+  * remove EsPageHeader component #287 from @mansona
+  * Update EsButton CSS to fix border radius #282 from @melsumner
+
 4.0.0-10 / 2020-02-04
 ==================
 
