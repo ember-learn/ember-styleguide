@@ -65,6 +65,10 @@
   background: var(--color-info);
 }
 
+.bg-none {
+  background: none;
+}
+
 .text-light {
   color: var(--color-white);
 
