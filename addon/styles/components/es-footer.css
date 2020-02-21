@@ -23,8 +23,14 @@
     display: flex;
     justify-content: space-between;
 
-    & .logo-wrapper {
-      grid-row: 1 / 4;
+    & .spacer {
+      grid-row: 2 / 4;
+    }
+
+    & .info-link {
+      margin-top: auto;
+      margin-bottom: auto;
+      line-height: 40px;
     }
   }
 
@@ -58,15 +64,17 @@
 
   & .footer-statement {
     justify-content: space-between;
-    background-color: var(--color-gray-100);
   }
 
   & .footer-copyright {
     color: var(--color-gray-600);
   }
 
-  & .footer-contributions-wrapper {
-    background-color: var(--color-white);
+  & .footer-spacer {
+    border: 0;
+    border-top: 2px solid var(--color-gray-300);
+    display: block;
+    height: 2px;
   }
 
   & .footer-contributions {

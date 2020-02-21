@@ -1,10 +1,12 @@
-<div class="footer-info container py-2 text-sm">
+<div class="footer-info container py-5">
   <div class="footer-info-links">
-    <div class="logo-wrapper">
-      <img src="/images/ember-logo.svg" alt="Ember Logo" class="footer-logo">
-    </div>
+
+    <img src="/images/ember-logo.svg" height="40px" width="83px" alt="Ember Logo" class="footer-logo">
+
+    <div class="spacer"></div>
+
     {{#each args.infoLinks as |link|}}
-      <a href={{link.href}}>{{link.name}}</a>
+      <a href={{link.href}} class="info-link">{{link.name}}</a>
     {{/each}}
   </div>
   <div class="footer-social hide-on-mobile">
