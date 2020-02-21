@@ -20,6 +20,8 @@
   }
 
   & .footer-info {
+    padding-bottom: var(--spacing-5);
+    padding-top: var(--spacing-5);
     display: flex;
     justify-content: space-between;
 
@@ -82,6 +84,10 @@
     color: var(--color-gray-600);
     display: flex;
     justify-content: space-between;
+
+    & .sponsor-icons {
+      margin-top: var(--spacing-1);
+    }
   }
 
   & .footer-contributor-logo,
@@ -93,30 +99,31 @@
 
   @media (max-width: 1007px) {
     & .footer-info {
+      padding-bottom: var(--spacing-3);
+      padding-top: var(--spacing-3);
       flex-direction: column;
 
       & .footer-logo {
-        margin-bottom: var(--spacing-1);
         width: 5rem;
       }
     }
 
     & .footer-info-links {
-      display: flex;
+      display: block;
       flex-wrap: wrap;
 
       & > a {
         margin-right: var(--spacing-2);
-      }
-
-      & .logo-wrapper {
-        width: 100%;
       }
     }
 
     & .footer-contributions {
       align-items: start;
       flex-direction: column;
+
+      & .sponsor-icons {
+        margin-top: var(--spacing-2);
+      }
     }
   }
 }
