@@ -1,9 +1,6 @@
 'use strict';
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
-const CssImport = require('postcss-import')
-const PresetEnv = require('postcss-preset-env');
-
 module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
     fingerprint: {
@@ -17,21 +14,6 @@ module.exports = function(defaults) {
         'node_modules/ember-cli-addon-docs/public',
         'tests/dummy/public'
       ]
-    },
-    postcssOptions: {
-      compile: {
-        enabled: true,
-        plugins: [
-          { module: CssImport },
-          {
-            module: PresetEnv,
-            options: {
-              stage: 3,
-              features: { 'nesting-rules': true }
-            }
-          }
-        ]
-      }
     },
     // required until https://github.com/ember-cli/ember-cli/issues/8448 is fixed
     'ember-prism': {

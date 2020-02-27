@@ -1,9 +1,9 @@
-@import 'unstyled.css';
-@import 'embed.css';
-@import 'flex.css';
-@import 'margin.css';
-@import 'padding.css';
-@import 'rounded.css';
+@import 'helpers/unstyled.css';
+@import 'helpers/embed.css';
+@import 'helpers/flex.css';
+@import 'helpers/margin.css';
+@import 'helpers/padding.css';
+@import 'helpers/rounded.css';
 
 .img-fluid {
   width: 100%;
