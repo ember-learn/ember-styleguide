@@ -32,7 +32,7 @@ module.exports = {
     });
 
     const addonStyles = funnel(tree, {
-      include: ['**/*.css']
+      include: ['ember-styleguide.css']
     });
 
     // I don't know exactly why targets is private so I am using `get()` to make
