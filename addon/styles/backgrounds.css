@@ -65,7 +65,10 @@
   background: var(--color-info);
 }
 
-.bg-none {
+.bg-none,
+.bg-none a,
+.bg-none a:link,
+.bg-none a:visited {
   background: none;
 }
 

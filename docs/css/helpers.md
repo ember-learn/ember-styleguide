@@ -170,3 +170,21 @@ If you would like to hide any element only on mobile screens you can use the `.h
 
 <p>If you can see the secret message above try resizing the window!</p>
 ```
+
+## Turn off link-underline styles
+
+You will probably have noticed that all links automatically have custom underline functionality:
+
+```html
+<div class="p-3">
+  <a href="https://emberjs.com/">Ember Homepage</a>
+</div>
+```
+
+To get the style that we wanted we needed to implement a custom background image for all links instead of making use of the `text-decoration: underline` styles. If you have a link (or a set of links) that you would like to turn off this behaviour then you can use the `bg-none` helper to turn off this styling:
+
+```html
+<div class="p-3 bg-none">
+  <a href="https://emberjs.com/">Ember Homepage</a>
+</div>
+```
