@@ -1,4 +1,4 @@
-import Component from 'sparkles-component';
+import Component from '@glimmer/component';
 
 import {
   socialLinks,
@@ -7,7 +7,7 @@ import {
   tagline
 } from '../constants/es-footer';
 
-export default class EsPageHeader extends Component {
+export default class EsFooterComponent extends Component {
   socialLinks = socialLinks
 
   tagline = tagline
