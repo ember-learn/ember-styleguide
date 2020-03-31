@@ -1,5 +1,4 @@
-import Component from 'sparkles-component';
+import Component from '@glimmer/component';
 
-export default class EsCard extends Component {
-
+export default class EsCardComponent extends Component {
 }
