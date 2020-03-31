@@ -1,4 +1,4 @@
-import EsCard from './es-card';
+import Component from '@glimmer/component';
 
-export default class EsLinkCard extends EsCard {
+export default class EsLinkCardComponent extends Component {
 }
