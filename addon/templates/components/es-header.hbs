@@ -10,7 +10,7 @@
       >
     </a>
 
-    <button class="navbar-toggler ember-view" onclick={{action this.toggleMenu}} aria-expanded={{if this.expanded "true" "false"}}>
+    <button class="navbar-toggler ember-view" onclick={{action this.toggleMenu}} aria-expanded={{if this.expanded "true" "false"}} {{did-insert this.trackExpanded}}>
       Show Site Navigation
     </button>
 
