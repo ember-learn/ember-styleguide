@@ -1,6 +1,10 @@
-<header class="es-header" role="banner" ...attributes>
-  <nav class="es-navbar">
-    <a class="navbar-brand-wrapper" href={{navHome}}>
+<header
+  class="es-header"
+  role="banner"
+  ...attributes
+>
+  <nav class="es-navbar {{if this.expanded "navbar-expanded"}}">
+    <a class="navbar-brand-wrapper" href={{this.navHome}}>
       <img
         class="navbar-brand"
         src="/images/ember-logo.svg"
@@ -10,13 +14,21 @@
       >
     </a>
 
-    <button class="navbar-toggler ember-view" onclick={{action this.toggleMenu}} aria-expanded={{if this.expanded "true" "false"}} {{did-insert this.trackExpanded}}>
-      Show Site Navigation
+    <button
+      class="navbar-toggler"
+      type="button"
+      aria-expanded={{if this.expanded "true" "false"}}
+      {{on "click" this.onTogglerClick}}
+    >
+      {{if this.expanded "Hide" "Show"}} Site Navigation
     </button>
 
     <ul class="navbar-list">
       {{#each this.navLinks as |link index|}}
-        {{es-header/navbar-link link=link index=index}}
+        <EsHeader::NavbarLink
+          @link={{link}}
+          @index="{{index}}"
+        ></EsHeader::NavbarLink>
       {{/each}}
     </ul>
 
