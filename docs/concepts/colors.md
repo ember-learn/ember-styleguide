@@ -48,4 +48,86 @@ The primary palette is applied across every page of the website and contains the
 
 The secondary palette is applied to UI elements and it's not part of the base colors. The purpose of the secondary palette is to ensure the readability, usability, and accessibility of all UI elements and enhance the communication of actions, changes in state, or errors.
 
-The secondary palette is yet to be defined.
+<div class="layout">
+  <ColorPallet
+    class="lg:col-2"
+    @color="#0076D6"
+    @name="Dark Blue"
+    @variable="--color-blue-dark"
+    @textClasses={{array 'text-sm' 'text-base' 'text-md' 'text-lg' 'text-xl'}}
+    @textColorClasses={{array '' 'text-light'}}
+  />
+  <ColorPallet
+    class="lg:col-2"
+    @color="#10AAFF"
+    @name="Blue"
+    @variable="--color-blue"
+    @textClasses={{array 'text-sm' 'text-base' 'text-md' 'text-lg' 'text-xl'}}
+    @textColorClasses={{array '' 'text-light'}}
+  />
+  <ColorPallet
+    class="lg:col-2"
+    @color="#DFFDFF"
+    @name="Light Blue"
+    @variable="--color-blue-light"
+    @textClasses={{array 'text-sm' 'text-base' 'text-md' 'text-lg' 'text-xl'}}
+    @textColorClasses={{array '' 'text-light'}}
+  />
+</div>
+
+<div class="layout">
+  <ColorPallet
+    class="lg:col-2"
+    @color="#8BE998"
+    @name="Green"
+    @variable="--color-green"
+    @textClasses={{array 'text-sm' 'text-base' 'text-md' 'text-lg' 'text-xl'}}
+    @textColorClasses={{array '' 'text-light'}}
+  />
+  <ColorPallet
+    class="lg:col-2"
+    @color="#C7F9DE"
+    @name="Light Green"
+    @variable="--color-green-light"
+    @textClasses={{array 'text-sm' 'text-base' 'text-md' 'text-lg' 'text-xl'}}
+    @textColorClasses={{array '' 'text-light'}}
+  />
+</div>
+
+<div class="layout">
+  <ColorPallet
+    class="lg:col-2"
+    @color="#FFEC64"
+    @name="Yellow"
+    @variable="--color-yellow"
+    @textClasses={{array 'text-sm' 'text-base' 'text-md' 'text-lg' 'text-xl'}}
+    @textColorClasses={{array '' 'text-light'}}
+  />
+  <ColorPallet
+    class="lg:col-2"
+    @color="#FFFAD6"
+    @name="Light Yellow"
+    @variable="--color-yellow-light"
+    @textClasses={{array 'text-sm' 'text-base' 'text-md' 'text-lg' 'text-xl'}}
+    @textColorClasses={{array '' 'text-light'}}
+  />
+</div>
+
+<div class="layout">
+  <ColorPallet
+    class="lg:col-2"
+    @color="#7650F1"
+    @name="Lilac"
+    @variable="--color-lilac"
+    @textClasses={{array 'text-sm' 'text-base' 'text-md' 'text-lg' 'text-xl'}}
+    @textColorClasses={{array '' 'text-light'}}
+  />
+  <ColorPallet
+    class="lg:col-2"
+    @color="#D5CBFF"
+    @name="Light Lilac"
+    @variable="--color-lilac-light"
+    @textClasses={{array 'text-sm' 'text-base' 'text-md' 'text-lg' 'text-xl'}}
+    @textColorClasses={{array '' 'text-light'}}
+  />
+</div>
