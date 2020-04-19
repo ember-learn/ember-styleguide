@@ -1,22 +1,23 @@
-{{#if (eq link.type "link")}}
+{{#if (eq @link.type "link")}}
   <a
     class="navbar-list-item-link"
-    href={{link.href}}
+    href={{@link.href}}
   >
-    {{link.name}}
+    {{@link.name}}
   </a>
 {{/if}}
-{{#if (eq link.type "dropdown")}}
+{{#if (eq @link.type "dropdown")}}
   <button
-    onclick={{action "toggleDropdown"}}
-    class="navbar-list-item-dropdown-toggle {{if isDropdownOpen "active"}}"
-    aria-expanded={{isExpanded}}
+    type="button"
+    class="navbar-list-item-dropdown-toggle {{if this.isDropdownOpen "active"}}"
+    aria-expanded={{this.isExpanded}}
+    {{on "click" this.toggleDropdown}}
   >
-    {{link.name}}
+    {{@link.name}}
   </button>
-  {{#if isDropdownOpen}}
+  {{#if this.isDropdownOpen}}
     <ul class="navbar-dropdown-list">
-      {{#each link.items as |item|}}
+      {{#each @link.items as |item|}}
         {{#if (eq item.type "link")}}
           <li class="navbar-dropdown-list-item">
             <a
