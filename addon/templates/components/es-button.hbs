@@ -1,8 +1,9 @@
 <button
   class={{if @secondary "es-button-secondary" "es-button"}}
   aria-label={{@label}}
-  onclick={{action this.buttonClicked}}
+  type={{this._type}}
   ...attributes
+  {{on "click" this.buttonClicked}}
 >
   {{#if hasBlock}}
     {{yield}}
