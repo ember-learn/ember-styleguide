@@ -1,4 +1,4 @@
-import { set } from '@ember/object';
+import { set, action } from '@ember/object';
 import Component from '@glimmer/component';
 
 import defaultLinks from '../constants/links';
@@ -22,6 +22,7 @@ export default class EsHeaderComponent extends Component {
     return defaultLinks;
   }
 
+  @action
   toggleMenu() {
     set(this, 'expanded', !this.expanded);
   }
