@@ -8,10 +8,29 @@ import {
 } from '../constants/es-footer';
 
 export default class EsFooterComponent extends Component {
-  socialLinks = socialLinks
+  get socialLinks() {
+    if (this.args.socialLinks) {
+      return this.args.socialLinks;
+    }
 
-  tagline = tagline
-  contributorLinks = contributorLinks
+    return socialLinks;
+  }
+
+  get contributorLinks() {
+    if (this.args.contributorLinks) {
+      return this.args.contributorLinks;
+    }
+
+    return contributorLinks;
+  }
+
+  get tagline() {
+    if (this.args.tagline) {
+      return this.args.tagline;
+    }
+
+    return tagline;
+  }
 
   get currentYear() {
     return new Date().getUTCFullYear()
