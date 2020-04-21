@@ -1,9 +1,10 @@
 import Component from '@ember/component';
-import layout from './template';
+import layout from 'ember-styleguide/templates/components/es-header-navbar-link';
 import { computed } from '@ember/object';
 import { equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { schedule, next } from '@ember/runloop';
+import { action } from '@ember/object';
 
 export default Component.extend({
   layout,
@@ -47,26 +48,25 @@ export default Component.extend({
     });
   },
 
-  actions: {
-    toggleDropdown(event) {
-      this.get('navbar').closePopupMenu(this);
-      this.toggleProperty('isDropdownOpen');
+  @action
+  toggleDropdown(event) {
+    this.get('navbar').closePopupMenu(this);
+    this.toggleProperty('isDropdownOpen');
 
-      if (this.isDropdownOpen) {
-        // if it's open, let's make sure it can do some things
-        schedule('afterRender', this, function() {
-          this.setupLinkBlurs();
+    if (this.isDropdownOpen) {
+      // if it's open, let's make sure it can do some things
+      schedule('afterRender', this, function() {
+        this.setupLinkBlurs();
 
-          // move focus to the first item in the dropdown only when opened with keyboard
-          // ref https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail
-          if (event.detail === 0) {
-            this.processFirstElementFocus();
-          }
+        // move focus to the first item in the dropdown only when opened with keyboard
+        // ref https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail
+        if (event.detail === 0) {
+          this.processFirstElementFocus();
+        }
 
-          this.processKeyPress();
-        });
-      }
-    },
+        this.processKeyPress();
+      });
+    }
   },
 
   closeDropdown() {
