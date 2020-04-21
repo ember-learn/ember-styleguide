@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import layout from './template';
+import layout from 'ember-styleguide/templates/components/es-header-navbar-link';
 import { computed } from '@ember/object';
 import { equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
