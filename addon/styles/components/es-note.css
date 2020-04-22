@@ -1,6 +1,6 @@
 .cta-note {
   background-color: var(--color-gray-200);
-  border: 2px solid var(--color-card-border);
+  border: 2px solid var(--color-gray-600);
   border-radius: var(--radius-lg);
   margin: auto;
   max-width: 90%;
