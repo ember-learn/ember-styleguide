@@ -1,13 +1,11 @@
-<div class="cta-note">
-  <div class="cta-note-body">
-    <div class="cta-note-heading hide-in-percy">{{this.nameTitle}}</div>
-    <div class="cta-note-message">
-      {{#if hasBlock}}
+<div class="cta-note" ...attributes>
+  <div class="cta-note-content">
+    <div class="cta-note-body p-2">
+      <div class="text-lg mb-1 hide-in-percy">{{this.mascot.name}} says...</div>
+      <div class="cta-note-message">
         {{yield}}
-      {{else}}
-        {{this.defaultMessage}}
-      {{/if}}
+      </div>
     </div>
+    <img src={{this.mascot.image}} role="presentation" alt="" class="hide-in-percy cta-mascot m-2">
   </div>
-  <img src={{this.imageUrl}} role="presentation" alt="" class="hide-in-percy">
 </div>
