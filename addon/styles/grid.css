@@ -1,0 +1,50 @@
+/**
+* A grid is an equally spaced matrix of items of a common type.
+* e.q. a bunch of logos, mascots, cards, etc.
+*/
+.grid {
+  --column-count: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), 1fr);
+  grid-gap: var(--grid-gap-md);
+}
+
+.grid > * {
+  grid-column: span 1;
+  align-items: stretch;
+}
+
+@media (max-width: 1007px) {
+  .sm\:grid-2 {
+    --column-count: 2;
+  }
+
+  .sm\:grid-3 {
+    --column-count: 3;
+  }
+
+  .sm\:grid-4 {
+    --column-count: 4;
+  }
+}
+
+@media (min-width: 1008px) {
+  .lg\:grid-2 {
+    --column-count: 2;
+  }
+
+  .lg\:grid-3 {
+    --column-count: 3;
+  }
+
+  .lg\:grid-4 {
+    --column-count: 4;
+  }
+
+  .lg\:grid-5 {
+    --column-count: 5;
+
+    grid-gap: var(--grid-gap-sm);
+  }
+}

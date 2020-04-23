@@ -28,23 +28,6 @@ module('Integration | Component | es button', function(hooks){
     assert.ok(document.querySelector('.es-button'), 'has base es-button class');
   });
 
-  test('button supports font-awesome icon', async function(assert) {
-    const icon = 'fa-exit';
-
-    setProperties(this, { icon });
-
-    await render(hbs`{{es-button icon=icon}}`);
-
-    assert.ok(document.querySelector(`.${icon}`), 'has set icon class');
-    assert.ok(document.querySelector('.button-icon'), 'has class button-icon');
-  });
-
-  test('can set button-block class', async function(assert) {
-    await render(hbs`{{es-button isBlock=true}}`);
-
-    assert.ok(document.querySelector('.button-block'), 'has button-block class');
-  });
-
   test('can display set label', async function(assert) {
     const label = 'Button Label';
 
@@ -77,7 +60,7 @@ module('Integration | Component | es button', function(hooks){
 
     await render(hbs`{{es-button isDisabled=true}}`);
 
-    assert.ok(document.querySelector('.es-button').getAttribute('disabled'), 'button is disabled');
+    assert.dom('.es-button').hasAttribute('disabled');
   });
 
   skip('displays set data-role', async function(assert) {
@@ -87,7 +70,7 @@ module('Integration | Component | es button', function(hooks){
 
     await render(hbs`{{es-button}}`);
 
-    assert.ok(document.querySelector('.es-button').getAttribute('data-role'), 'set data-role is displayed');
+    assert.dom('.es-button').hasAttribute('data-role');
   });
 
   test('does not render aria-pressed unless set', async function(assert) {
@@ -95,14 +78,14 @@ module('Integration | Component | es button', function(hooks){
 
     setProperties(this, { ariaPressed });
 
-    await render(hbs`{{es-button ariaPressed=ariaPressed}}`);
+    await render(hbs`<EsButton />`);
 
-    assert.ok(document.querySelector('.es-button').getAttribute('aria-pressed'), 'does have aria-pressed attribute');
+    assert.dom('.es-button').doesNotHaveAttribute('aria-pressed')
 
     set(this, 'ariaPressed', null);
 
-    await render(hbs`{{es-button ariaPressed=ariaPressed}}`);
+    await render(hbs`<EsButton aria-pressed="true" />`);
 
-    assert.notOk(document.querySelector('.es-button').getAttribute('aria-pressed'), 'does not have aria-pressed attribute');
+    assert.dom('.es-button').hasAttribute('aria-pressed', 'true')
   });
 });

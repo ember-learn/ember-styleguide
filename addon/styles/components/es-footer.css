@@ -1,0 +1,138 @@
+/* .es-footer.container {
+  padding: 0;
+} */
+
+.es-footer {
+  background-color: var(--color-white);
+
+  & a,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: var(--color-gray-600);
+    background-image: none;
+  }
+
+  & a:focus,
+  & a:hover {
+    text-decoration: underline;
+    color: var(--color-brand);
+  }
+
+  & .footer-info {
+    padding-bottom: var(--spacing-5);
+    padding-top: var(--spacing-5);
+    display: flex;
+    justify-content: space-between;
+
+    & .spacer {
+      grid-row: 2 / 4;
+    }
+
+    & .info-link {
+      margin-top: auto;
+      margin-bottom: auto;
+      line-height: 40px;
+    }
+  }
+
+  & .footer-info-links {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  & .footer-social {
+    display: grid;
+    grid-gap: 0.5rem;
+
+    & a {
+      align-items: center;
+      display: flex;
+    }
+
+    & svg {
+      fill: var(--color-gray-600);
+      margin-right: var(--spacing-1);
+      width: 1rem;
+    }
+  }
+
+  & .footer-hr {
+    border: 0;
+    border-bottom: 2px solid var(--color-gray-200);
+    margin: 0;
+  }
+
+  & .footer-statement {
+    justify-content: space-between;
+  }
+
+  & .footer-copyright {
+    color: var(--color-gray-600);
+  }
+
+  & .footer-spacer {
+    border: 0;
+    border-top: 2px solid var(--color-gray-300);
+    display: block;
+    height: 2px;
+  }
+
+  & .footer-contributions {
+    align-items: center;
+    color: var(--color-gray-600);
+    display: flex;
+    justify-content: space-between;
+
+    & .sponsor-icons {
+      margin-top: var(--spacing-1);
+    }
+  }
+
+  & .footer-contributor-logo,
+  & .footer-contributor-logo-link {
+    height: 1.6875rem;
+    line-height: 1.6875rem;
+    max-width: 4rem;
+  }
+
+  @media (max-width: 1007px) {
+    & .footer-info {
+      padding-bottom: var(--spacing-3);
+      padding-top: var(--spacing-3);
+      flex-direction: column;
+
+      & .footer-logo {
+        width: 5rem;
+      }
+    }
+
+    & .footer-info-links {
+      display: block;
+      flex-wrap: wrap;
+
+      & > a {
+        margin-right: var(--spacing-2);
+      }
+    }
+
+    & .footer-contributions {
+      align-items: start;
+      flex-direction: column;
+
+      & .sponsor-icons {
+        margin-top: var(--spacing-2);
+      }
+    }
+  }
+}
+
+footer.es-footer {
+  & a,
+  &:link,
+  &:visited {
+    color: var(--color-gray-600);
+    background-image: none;
+  }
+}

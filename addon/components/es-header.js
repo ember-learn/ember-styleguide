@@ -1,15 +1,43 @@
-import Component from '@ember/component';
-import layout from '../templates/components/es-header';
+import { set, action } from '@ember/object';
+import Component from '@glimmer/component';
 
-export default Component.extend({
-  layout,
-  attributeBindings: ['ariaLabel:aria-label'],
-  classNames: ['es-header'],
-  tagName: 'header',
+import defaultLinks from '../constants/links';
 
-  //accessibility support
-  ariaDescribedby: null,
-  ariaLabel: null,
-  ariaRole: 'banner',
-  title: null
-});
+export default class EsHeaderComponent extends Component {
+  expanded = false;
+
+  get navHome() {
+    if (this.args.home) {
+      return this.args.home;
+    }
+
+    return 'https://www.emberjs.com';
+  }
+
+  get navLinks() {
+    if (this.args.links) {
+      return this.args.links;
+    }
+
+    return defaultLinks;
+  }
+
+  @action
+  toggleMenu() {
+    set(this, 'expanded', !this.expanded);
+  }
+
+  trackExpanded() {
+    // Ensure menu is marked as expanded if there is enough screen estate
+    // TODO: Dynamically calculate necessary horizontal space and collapse based on that
+    if (typeof FastBoot === 'undefined') {
+      const mq = matchMedia('(min-width: 992px)');
+
+      mq.addListener(event => {
+        if (event.matches) {
+          set(this, 'expanded', false);
+        }
+      });
+    }
+  }
+}

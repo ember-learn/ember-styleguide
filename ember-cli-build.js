@@ -1,11 +1,10 @@
 'use strict';
-const nodeSass = require('node-sass');
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
-    sassOptions: {
-      implementation: nodeSass
+    fingerprint: {
+      extensions: ['js', 'css', 'map']
     },
     svgJar: {
       sourceDirs: [
@@ -15,6 +14,23 @@ module.exports = function(defaults) {
         'node_modules/ember-cli-addon-docs/public',
         'tests/dummy/public'
       ]
+    },
+    // required until https://github.com/ember-cli/ember-cli/issues/8448 is fixed
+    'ember-prism': {
+      components: [
+        'apacheconf',
+        'bash',
+        'css',
+        'handlebars',
+        'http',
+        'javascript',
+        'json',
+        'markup-templating',
+        'ruby',
+        'scss'
+      ],
+
+      plugins: ['line-numbers', 'normalize-whitespace']
     }
   });
 

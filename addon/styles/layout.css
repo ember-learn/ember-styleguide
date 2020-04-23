@@ -1,0 +1,114 @@
+/**
+* Layout provides a way to arrange children of different types
+* in a designed and meaningful way.
+* Each child that should not cover the full width needs
+* at least a class that specifies how many columns it will span and may
+* have an additional class that specifies the start column.
+* Columns can be reordered by specifying a start column for two elements,
+* making them start in switched places.
+*
+* The layout uses 6 columns on large and 4 columns on smaller screens.
+*/
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: var(--grid-gap-md) var(--grid-gap-lg);
+  grid-auto-flow: row dense;
+}
+
+@media (max-width: 1007px) {
+  .layout > * {
+    grid-column-end: span 4;
+  }
+
+  .layout .sm\:col-1 {
+    grid-column-end: span 1;
+  }
+
+  .layout .sm\:col-2 {
+    grid-column-end: span 2;
+  }
+
+  .layout .sm\:col-3 {
+    grid-column-end: span 3;
+  }
+
+  .layout .sm\:col-4 {
+    grid-column-end: span 4;
+  }
+
+  .layout .sm\:start-1 {
+    grid-column-start: 1;
+  }
+
+  .layout .sm\:start-2 {
+    grid-column-start: 2;
+  }
+
+  .layout .sm\:start-3 {
+    grid-column-start: 3;
+  }
+
+  .layout .sm\:start-4 {
+    grid-column-start: 4;
+  }
+}
+
+@media (min-width: 1008px) {
+  .layout {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .layout > * {
+    grid-column-end: span 6;
+  }
+
+  .layout .lg\:col-1 {
+    grid-column-end: span 1;
+  }
+
+  .layout .lg\:col-2 {
+    grid-column-end: span 2;
+  }
+
+  .layout .lg\:col-3 {
+    grid-column-end: span 3;
+  }
+
+  .layout .lg\:col-4 {
+    grid-column-end: span 4;
+  }
+
+  .layout .lg\:col-5 {
+    grid-column-end: span 5;
+  }
+
+  .layout .lg\:col-6 {
+    grid-column-end: span 5;
+  }
+
+  .layout .lg\:start-1 {
+    grid-column-start: 1;
+  }
+
+  .layout .lg\:start-2 {
+    grid-column-start: 2;
+  }
+
+  .layout .lg\:start-3 {
+    grid-column-start: 3;
+  }
+
+  .layout .lg\:start-4 {
+    grid-column-start: 4;
+  }
+
+  .layout .lg\:start-5 {
+    grid-column-start: 5;
+  }
+
+  .layout .lg\:start-6 {
+    grid-column-start: 6;
+  }
+}

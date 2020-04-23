@@ -1,0 +1,37 @@
+{{#if (eq @link.type "link")}}
+  <a
+    class="navbar-list-item-link"
+    href={{@link.href}}
+  >
+    {{@link.name}}
+  </a>
+{{/if}}
+{{#if (eq @link.type "dropdown")}}
+  <button
+    type="button"
+    class="navbar-list-item-dropdown-toggle {{if this.isDropdownOpen "active"}}"
+    aria-expanded={{this.isExpanded}}
+    {{on "click" this.toggleDropdown}}
+  >
+    {{@link.name}}
+  </button>
+  {{#if this.isDropdownOpen}}
+    <ul class="navbar-dropdown-list">
+      {{#each @link.items as |item|}}
+        {{#if (eq item.type "link")}}
+          <li class="navbar-dropdown-list-item">
+            <a
+              class="navbar-dropdown-list-item-link"
+              href={{item.href}}
+            >
+              {{item.name}}
+            </a>
+          </li>
+        {{/if}}
+        {{#if (eq item.type "divider")}}
+          <li role="separator" class="separator"></li>
+        {{/if}}
+      {{/each}}
+    </ul>
+  {{/if}}
+{{/if}}

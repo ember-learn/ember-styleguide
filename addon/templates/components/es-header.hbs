@@ -1,2 +1,35 @@
-{{yield}}
+<header class="es-header" role="banner" ...attributes>
+  <nav class="es-navbar">
+    <a class="navbar-brand-wrapper" href={{this.navHome}}>
+      <img
+        class="navbar-brand"
+        src="/images/ember-logo.svg"
+        alt="home"
+        width="83"
+        height="40"
+      >
+    </a>
 
+    <button
+      type="button"
+      class="navbar-toggler ember-view"
+      aria-expanded={{if this.expanded "true" "false"}}
+      {{did-insert this.trackExpanded}}
+      {{on "click" this.toggleMenu}}
+    >
+      Show Site Navigation
+    </button>
+
+    <ul class="navbar-list">
+      {{#each this.navLinks as |link|}}
+        <EsHeaderNavbarLink @link={{link}} />
+      {{/each}}
+    </ul>
+
+    {{#if hasBlock}}
+      <div class="navbar-end">
+        {{yield}}
+      </div>
+    {{/if}}
+  </nav>
+</header>

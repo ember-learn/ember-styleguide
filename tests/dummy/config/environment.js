@@ -9,7 +9,7 @@ module.exports = function(environment) {
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
-        // e.g. 'with-controller': true
+        // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
@@ -20,6 +20,17 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    fastboot: {
+      hostWhitelist: [/^localhost:\d+$/]
+    },
+
+    'field-guide': {
+      name: 'Ember',
+      logo: '/ember-logo.png',
+      copyright: 'Ember Field Guide is designed to document the [ember-styleguide](https://github.com/ember-learn/ember-styleguide) project. For more information view the readme',
+      github: 'https://github.com/ember-learn/ember-styleguide'
     }
   };
 
@@ -44,8 +55,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // Allow ember-cli-addon-docs to update the rootURL in compiled assets
-    ENV.rootURL = '/';
     // here you can enable a production-specific feature
   }
 

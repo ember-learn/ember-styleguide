@@ -2,8 +2,7 @@ module.exports = {
   extends: 'stylelint-config-standard',
   plugins: [
     'stylelint-declaration-strict-value',
-    'stylelint-order',
-    'stylelint-scss'
+    'stylelint-order'
   ],
   rules: {
     // Disables this rule to allow case agnostic color hex values
@@ -18,7 +17,5 @@ module.exports = {
     'scale-unlimited/declaration-strict-value': [
       ['/color/'] // We can enforce variables for font-size, margin, etc as well by adding here
     ],
-    // Enforce that variables are all lowercase and dasherized
-    'scss/dollar-variable-pattern': '^[a-z][a-z-]+$'
   }
 };

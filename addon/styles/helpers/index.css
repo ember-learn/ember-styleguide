@@ -1,0 +1,20 @@
+@import 'helpers/unstyled.css';
+@import 'helpers/embed.css';
+@import 'helpers/flex.css';
+@import 'helpers/margin.css';
+@import 'helpers/padding.css';
+@import 'helpers/rounded.css';
+
+.img-fluid {
+  width: 100%;
+}
+
+.max-width {
+  max-width: 100%;
+}
+
+@media (max-width: 1007px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}

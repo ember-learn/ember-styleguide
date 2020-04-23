@@ -1,22 +1,15 @@
 import { find, render } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { setProperties } from '@ember/object';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | es note', function(hooks){
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    const testHeading = 'Tomster says... Zoey says...';
+    await render(hbs`<EsNote @mascot="tomster" />`);
 
-    await render(hbs`<EsNote />`);
-
-    assert.ok(
-      testHeading.includes(find('.cta-note-heading').textContent.trim()),
-      'displays heading'
-    );
-    assert.dom('.cta-note-message').hasText('Hello!!! No message provided.');
+    assert.dom('[data-test-es-note-heading]').hasText('Tomster says...');
 
     await render(hbs`
       <EsNote>
@@ -24,30 +17,17 @@ module('Integration | Component | es note', function(hooks){
       </EsNote>
     `);
 
-    assert.ok(
-      testHeading.includes(find('.cta-note-heading').textContent.trim()),
-      'displays heading'
-    );
-
     assert.dom('.cta-note-message').hasText('template block text');
   });
 
-  test('out of 2 mascots randomly selects each at least 1 in 10 renders', async function(assert) {
-    const mascots = [
-      { image: 'image/tomster', name: 'Tomster' },
-      { image: 'image/zoey', name: 'Zoey' },
-    ];
+  test('out of 2 mascots randomly selects each at least 1 in 15 renders', async function(assert) {
     const renderedNames = [];
 
-    setProperties(this, {
-      mascots,
-    });
-
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 15; i++) {
       let name;
 
-      await render(hbs`<EsNote @mascots={{mascots}} />`);
-      name = find('.cta-note-heading').textContent.trim().split(' ')[0];
+      await render(hbs`<EsNote />`);
+      name = find('[data-test-es-note-heading]').textContent.trim().split(' ')[0];
 
       renderedNames.push(name);
     }
@@ -61,6 +41,5 @@ module('Integration | Component | es note', function(hooks){
       renderedNames.includes('Zoey'),
       'Zoey rendered'
     );
-
   });
 });

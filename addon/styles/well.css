@@ -1,0 +1,56 @@
+.well {
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-gray-200);
+  overflow: hidden;
+}
+
+a.well:link,
+a.well:visited,
+.well {
+  background: var(--color-white);
+}
+
+a.well:focus {
+  border-color: var(--color-white);
+}
+
+a.well:hover {
+  border-color: var(--color-gray-300);
+}
+
+.well img {
+  display: block;
+  margin: auto;
+}
+
+[class*="well-"] {
+  position: relative;
+  height: 0;
+}
+
+.well-1\/1 {
+  height: 0;
+  padding: 0 0 100%;
+}
+
+.well-4\/3 {
+  height: 0;
+  padding: 0 0 75%;
+}
+
+.well-16\/9 {
+  height: 0;
+  padding: 0 0 56.25%;
+}
+
+[class*="well-"] img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: calc(100% - 2 * var(--spacing-3));
+  max-height: calc(100% - 2 * var(--spacing-3));
+  transform: translate(-50%, -50%);
+}

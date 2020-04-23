@@ -1,83 +1,78 @@
 'use strict';
-const mergeTrees = require('broccoli-merge-trees');
 const Funnel = require('broccoli-funnel');
 const path = require('path');
-const nodeSass = require('node-sass');
+
+const CssImport = require('postcss-import');
+const PresetEnv = require('postcss-preset-env');
+
+const broccoliPostCSS = require('broccoli-postcss')
+const mergeTrees = require('broccoli-merge-trees');
+const funnel = require('broccoli-funnel');
+const get = require('lodash.get');
+const { join } = require('path');
 
 module.exports = {
   name: require('./package').name,
-  // isDevelopingAddon() {
-  //   return true;
-  // },
 
   options: {
     svgJar: {
       sourceDirs: [
-        'public',
-        'node_modules/ember-styleguide/public',
-        'tests/dummy/public'
+        'public/images/icons',
+        'node_modules/ember-styleguide/public/images/icons',
+        'tests/dummy/public/images/icons'
       ]
     },
-    googleFonts: [
-      'Roboto:400,700'
-    ],
-    fontawesome: {
-      icons: {
-        'free-solid-svg-icons': 'all',
-        'free-regular-svg-icons': 'all',
-      }
-    },
   },
 
-  included(app, parentAddon) {
-    let target = (app || parentAddon);
-    target.options = target.options || {};
+  treeForAddon() {
+    var tree = this._super(...arguments);
 
-    const defaultEmberBootStrapOptions = {
-      bootstrapVersion: 4,
-      importBootstrapFont: false,
-      importBootstrapCSS: false
-    };
-
-    target.options['ember-bootstrap'] = target.options['ember-bootstrap'] || defaultEmberBootStrapOptions;
-
-    target.options.sassOptions = target.options.sassOptions || { implementation: nodeSass };
-
-    this.checkPreprocessor();
-
-    this._super.included.apply(this, arguments);
-  },
-
-  treeForStyles() {
-    return new Funnel(this.getEmberStyleguideStylesPath(), {
-      destDir: 'ember-styleguide'
+    const addonWithoutStyles = funnel(tree, {
+      exclude: ['**/*.css'],
     });
-  },
 
-  treeForAddonStyles(tree) {
-    let bootstrapTree = new Funnel(this.getBootstrapStylesPath(), {
-      destDir: 'ember-bootstrap'
+    const addonStyles = funnel(tree, {
+      include: ['ember-styleguide.css']
     });
-    return mergeTrees([bootstrapTree, tree]);
+
+    // I don't know exactly why targets is private so I am using `get()` to make
+    // sure that it isn't missing
+    let overrideBrowserslist = get(this, 'app.project._targets.browsers');
+
+    let processedStyles = broccoliPostCSS(addonStyles, {
+      plugins: [
+        CssImport({
+          path: join(__dirname, 'addon', 'styles'),
+        }),
+        PresetEnv({
+          stage: 3,
+          features: { 'nesting-rules': true },
+          overrideBrowserslist,
+        })
+      ]});
+
+    return mergeTrees([addonWithoutStyles, processedStyles]);
   },
 
   treeForPublic: function() {
     return new Funnel(path.join(this.root, 'public'));
   },
 
-  getEmberStyleguideStylesPath() {
-    let pkgPath = path.dirname(__filename);
-    return path.join(pkgPath, 'addon', 'styles');
-  },
+  contentFor: function(type) {
+    if (type === 'head') {
+      const filesToPreload = [
+        '/fonts/Inter-roman.var.woff2?v=3.11',
+        '/fonts/Inter-Regular.woff2?v=3.11',
+        '/fonts/Inter-SemiBold.woff2?v=3.11',
+        '/fonts/Inter-ExtraLight-BETA.woff2?v=3.11',
+      ];
 
-  getBootstrapStylesPath() {
-    let pkgPath = path.dirname(require.resolve(`bootstrap/package.json`));
-    return path.join(pkgPath, 'scss');
-  },
-
-  checkPreprocessor() {
-    if (this.app && !this.app.project.findAddonByName('ember-cli-sass')) {
-      this.ui.writeLine('ember-styleguide: npm package "ember-cli-sass" is missing. Consider using it to use `@import \'ember-styleguide/globals/variables\'` in your styles.');
+      // preload the most common fonts for modern browsers
+      return filesToPreload
+        .map(file => `<link rel="preload" as="font" type="font/woff2" href="${file}" crossorigin>`)
+        .join('\n');
     }
-  }
+
+    return '';
+  },
 };

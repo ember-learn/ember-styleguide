@@ -1,4 +1,136 @@
 
+4.0.0-14 / 2020-03-04
+==================
+
+  * manually run postcss and add it to vendor #297 from @mansona
+  * fix bg-none css helper #298 from @mansona
+
+4.0.0-13 / 2020-02-24
+==================
+
+  * Remove isDevelopingAddon config #296 from @sivakumar
+
+4.0.0-12 / 2020-02-21
+==================
+
+  * implement new footer design #295 from @mansona
+
+4.0.0-11 / 2020-02-17
+==================
+
+  * Add bg-none CSS helper to reset background #293 from @melsumner
+  * remove EsPageHeader component #287 from @mansona
+  * Update EsButton CSS to fix border radius #282 from @melsumner
+
+4.0.0-10 / 2020-02-04
+==================
+
+  * Add docs for the new Cards API #280 from @mansona
+  * Improve the ESCard API #279 from @pichfl
+  * use high-contrast brand colour for secondary button text #278 from @mansona
+
+4.0.0-9 / 2020-01-30
+==================
+
+  * make the footer look more like the design #275 from @mansona
+  * add netlify as a sponsor #275 from @mansona
+  * move css helpers so that they have higher precidence than `container` and `list-unstyled` #274 from @mansona
+  * add "dotted texture" to the background svg for the bg-shape-swipe-top #274 from @mansona
+  * stop including all svgs in svg-jar #274 from @mansona
+  * lighten border color of card when on a dark background #274 from @mansona
+
+4.0.0-8 / 2020-01-17
+==================
+
+  * Small SVG fixes for homepage background shapes #269 from @mansona
+  * Fix hover state on cards in a dark background #267 from @mansona
+
+4.0.0-7 / 2020-01-16
+==================
+
+  * Add styling for secondary buttons and links #260 from @pichfl
+  * Fix dropdown caret for navbar #260 from @pichfl
+
+4.0.0-6 / 2020-01-11
+==================
+
+  * fix Heroku logo breaking survey pages #263 from @mansona
+  * make hide-on-mobile !important #262 from @mansona
+
+4.0.0-5 / 2020-01-10
+==================
+
+  * add hide-on-mobile helper #261 from @mansona
+
+4.0.0-4 / 2020-01-07
+==================
+
+  * Fix nav-links and footer infoLinks overrides #259 from @mansona
+  * Add custom property for mono font stack #258 from @pichfl
+
+4.0.0-3 / 2019-11-25
+==================
+
+  * Scope link styling to main element #257 from @pichfl
+
+4.0.0-2 / 2019-11-22
+==================
+
+  * Fix inline link styling #252 from @pichfl
+  * Implemented `.well` css helper and added documentation #251 from @pichfl
+  * Significant font/spacing/padding/margin rework to align with the design #249 from @pichfl
+
+4.0.0-1 / 2019-11-15
+==================
+
+  * Helper for responsive video embeds #246 from @pichfl
+  * Overhaul Sizes, Layout and Grids #245 from @pichfl
+  * Add presentation role to image in es-card if its alternate text is empty string #243 from @ijlee2
+  * Add link underlines back #240 from @ghislaineguerin
+  * Update and cleanup CSS variables and related helpers #239 from @pichfl
+  * Add outside spacing for containers on mobile #238 from @pichfl
+
+4.0.0-0 / 2019-10-28
+==================
+
+  * Implement new Card Component #218 from @ghislaineguerin and @mansona
+  * Remove unused documentation #230 from @mansona
+  * Add more Css Helpers #221 from @ghislaineguerin
+  * Update global navigation to match latest design #227 from @pichfl
+  * Fixes to Inter font use #226 from @pichfl
+  * Introduce Inter font #225 from @pichfl
+  * fix background shape `swipe-top` #223 from @mansona
+  * small navbar fixes #220 from @mansona
+  * Fix initial navbar implementation #219 from @mansona
+  * Set body and text color #213 from @ghislaineguerin
+  * improve typography and color docs #214 from @ghislaineguerin
+  * implementing background shapes #204 from @mansona
+  * optimising ember-logo.svg with svgo #206 from @mansona
+  * Initial work on navbar redesign #202 from @MelSumner
+  * Remove es-ulist #203 from @mansona
+  * removing tabs implemenation #201 from @mansona
+  * Use CSS grid for layout classes #199 from @ghislaineguerin
+  * implementing new footer #197 from @mansona
+  * add icon classes #196 from @ghislaineguerin
+  * adding the ability to style links as buttons #195 from @mansona
+  * Fixing colour documentation on smaller screens #194 from @mansona
+  * Add offsets and spacing helper classes #193 from @ghislaineguerin
+  * Fixing tests, travis and turning on Percy #192 from @mansona
+  * finalising es-page-header #190 from @mansona
+  * Adding colour contrast test to colour pallet component #189 from @mansona
+  * Create accessibility docs from @MelSumner
+  * add primary and secondary palettes #181 from @ghislaineguerin
+  * Layout classes #177 from @ghislaineguerin
+  * Add typography styles #176 from @ghislaineguerin
+  * adding color pallet implementation #174 from @mansona
+  * Add styling for new nav component #162 from @ghislaineguerin
+  * documenting page-header and css helper `dark` #161 from @mansona
+  * using field-guide instead of ember-cli-addon-docs #156, #160, #186 from @ghislaineguerin and @mansona
+  * Starting typeography implementation #155 from @mansona
+  * Convert Button to sparkles component #154 from @mansona
+  * moving over to postcss
+  * starting out with a blank slate
+
 v3.1.1 / 2019-06-24
 ==================
 
@@ -23,9 +155,9 @@ v3.0.0 / 2018-05-23
   * Update legal and releases links #159 from @j-brennan
   * fixing accessibility bugs on navbar toggle button and footer links #149 from @alexpark90
   * Comply with axe-core 2.2 #150 from @wycats
-  * Update _es-navbar.scss #147 from @melsumner
+  * Update `_es-navbar.scss` #147 from @melsumner
   * Navbar tweaks #146 from @mansona
-  * Update _es-note.scss #144 from @melsumner
+  * Update `_es-note.scss` #144 from @melsumner
   * fixing z-index of dropdown #143 from @aklkv
   * Add closePopupMenu function to navbar service #142 from @patocallaghan
   * es-navbar: hide menu items when navbar is closed #140 from @mansona

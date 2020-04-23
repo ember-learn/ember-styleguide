@@ -1,0 +1,44 @@
+.bg-shape-boxes {
+  background-image: url('/images/boxes-top.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.bg-shape-boxes-bottom {
+  background-image: url('/images/boxes-bottom-light.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.dark .bg-shape-boxes-bottom {
+  background-image: url('/images/boxes-bottom.svg');
+}
+
+.bg-shape-boxes-bottom + * {
+  background-image: url('/images/boxes-bottom-continued.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.bg-shape-swipe-top {
+  background: var(--color-brand) url('/images/swipe-top.svg') no-repeat bottom left;
+  background-size: cover;
+  /* this fixes a slight rendering issue in chrome */
+  margin-bottom: -1px;
+}
+
+.bg-shape-swipe-bottom {
+  background-image: url('/images/swipe-bottom.svg');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+@media (max-width: 1007px) {
+  .bg-shape-boxes-bottom {
+    background-size: 300px;
+  }
+
+  .bg-shape-boxes-bottom + * {
+    background-size: 100px;
+  }
+}

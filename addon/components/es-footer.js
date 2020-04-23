@@ -1,5 +1,5 @@
-import Component from '@ember/component';
-import layout from '../templates/components/es-footer';
+import Component from '@glimmer/component';
+
 import {
   socialLinks,
   infoLinks,
@@ -7,26 +7,40 @@ import {
   tagline
 } from '../constants/es-footer';
 
+export default class EsFooterComponent extends Component {
+  get socialLinks() {
+    if (this.args.socialLinks) {
+      return this.args.socialLinks;
+    }
 
-export default Component.extend({
-  layout,
-  attributeBindings: ['ariaLabel:aria-label'],
-  classNames: ['es-footer'],
-  tagName: 'footer',
-  currentYear: null,
-  init() {
-    this._super(...arguments);
-    this.currentYear = new Date().getUTCFullYear();
-  },
+    return socialLinks;
+  }
 
-  socialLinks,
-  tagline,
-  contributorLinks,
-  infoLinks,
+  get contributorLinks() {
+    if (this.args.contributorLinks) {
+      return this.args.contributorLinks;
+    }
 
-  //accessibility support
-  ariaDescribedby: null,
-  ariaLabel: null,
-  ariaRole: 'contentinfo',
-  title: null
-});
+    return contributorLinks;
+  }
+
+  get tagline() {
+    if (this.args.tagline) {
+      return this.args.tagline;
+    }
+
+    return tagline;
+  }
+
+  get currentYear() {
+    return new Date().getUTCFullYear()
+  }
+
+  get infoLinks() {
+    if (this.args && this.args.infoLinks) {
+      return this.args.infoLinks;
+    }
+
+    return infoLinks;
+  }
+}

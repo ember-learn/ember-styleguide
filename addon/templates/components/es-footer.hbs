@@ -1,25 +1,13 @@
-<div class="footer responsive">
-  <div class="container">
+<footer class="es-footer" ...attributes>
+  {{!--
+    Pass footer properties to support
+    <EsFooter @infoLinks={{someOtherLinks}} />
+  --}}
+  <EsFooterInfo @infoLinks={{this.infoLinks}} @socialLinks={{this.socialLinks}} />
 
-    {{yield
-      (hash
-      info = (component "es-footer/es-info")
-      statement = (component "es-footer/es-statement")
-      contributions = (component "es-footer/es-contributions")
-      )
-    }}
+  <EsFooterStatement @tagline={{this.tagline}} />
 
-    {{#unless hasBlock}}
+  <hr class="footer-spacer container py-0 my-3">
 
-      {{!--
-        Pass footer properties to support
-        <EsFooter @tagline="My custom tagline" @contributorLinks={{myLinks}}/>
-      --}}
-      {{es-footer/es-info infoLinks=infoLinks}}
-      {{es-footer/es-statement tagline=tagline socialLinks=socialLinks}}
-      {{es-footer/es-contributions contributorLinks=contributorLinks}}
-
-    {{/unless}}
-
-  </div>
-</div>
+  <EsFooterContributions @contributorLinks={{this.contributorLinks}} />
+</footer>
