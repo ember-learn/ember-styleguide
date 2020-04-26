@@ -1,40 +1,26 @@
-import Component from '@ember/component';
-import { get } from '@ember/object';
-import layout from '../templates/components/es-note';
-import {
-  DefaultMessage as defaultMessage,
-  Mascots as mascots,
- } from '../constants/mascots';
+import Component from '@glimmer/component';
 
-export default Component.extend({
-  layout,
+const Mascots = {
+  tomster: { image: '/images/mascots/tomster.png', name: 'Tomster' },
+  zoey: { image: '/images/mascots/zoey.png', name: 'Zoey' },
+}
 
-  classNames: ['cta'],
+function randomMascot() {
+  let mascotKeys = Object.keys(Mascots);
 
-  imageUrl: null,
-  mascots,
-  nameTitle: null,
-  defaultMessage,
+  let randomIndex = Math.floor(Math.random() * Math.floor(mascotKeys.length));
 
-  init() {
-    this._super(...arguments);
+  return Mascots[mascotKeys[randomIndex]];
+}
 
-    this._randomMascot();
-  },
+export default class EsNoteComponent extends Component {
+  constructor() {
+    super(...arguments);
 
-  _randomMascot() {
-    const random = Math.random();
-    const mascots = get(this, 'mascots');
-    let randomIndex, mascot = mascots[0];
-
-    if (mascots.length > 1) {
-      randomIndex = Math.floor(random * Math.floor(2));
-      mascot = mascots[randomIndex];
+    if (this.args.mascot) {
+      this.mascot = Mascots[this.args.mascot];
+    } else {
+      this.mascot = randomMascot();
     }
-
-    this.setProperties({
-      imageUrl: get(mascot, 'image'),
-      nameTitle: `${get(mascot, 'name')} says...`,
-    });
-  },
-});
+  }
+}

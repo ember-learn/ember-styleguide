@@ -24,11 +24,8 @@
     </button>
 
     <ul class="navbar-list">
-      {{#each this.navLinks as |link index|}}
-        <EsHeader::NavbarLink
-          @link={{link}}
-          @index="{{index}}"
-        ></EsHeader::NavbarLink>
+      {{#each this.navLinks as |link|}}
+        <EsHeaderNavbarLink @link={{link}} />
       {{/each}}
     </ul>
 

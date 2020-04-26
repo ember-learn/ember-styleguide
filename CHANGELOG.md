@@ -1,4 +1,29 @@
 
+4.0.0 / 2020-04-23
+==================
+
+  This is a major release 🎉 a lot of work has been done over the last year to get
+  this project to 4.0. Most of the contributors have been mentioned as a reference
+  beside the changes below.
+
+  To see any of the individual changes please look at the pre-release versions
+  below but here are a few of the major changes:
+
+  * remove ember-cli-addon docs in favour of field-guide for better SEO
+  * remove components that are not actively being used in any project
+  * implement base styles that are common across all of the Ember websites
+  * implement common CSS helpers for things that don't need a dedicated component
+  * upgrade most of the remaining components to Glimmer components
+  * streamline the CSS build pipeline to remove duplicate CSS and improve lighthouse score
+
+4.0.0-x / 2020-03-04 (unreleased)
+==================
+
+  * update es-note #306 from @mansona
+  * update some comopnents to glimmer components #288 from @mansona
+  * update using ember-cli-update and npm-check #288 from @mansona
+  * delete non-doumented components missing implementations #301 from @mansona
+
 4.0.0-14 / 2020-03-04
 ==================
 

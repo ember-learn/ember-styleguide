@@ -3,11 +3,11 @@
     Pass footer properties to support
     <EsFooter @infoLinks={{someOtherLinks}} />
   --}}
-  <EsFooterInfo @infoLinks={{this.infoLinks}} @socialLinks={{socialLinks}} />
+  <EsFooterInfo @infoLinks={{this.infoLinks}} @socialLinks={{this.socialLinks}} />
 
-  <EsFooterStatement @tagline={{tagline}} />
+  <EsFooterStatement @tagline={{this.tagline}} />
 
   <hr class="footer-spacer container py-0 my-3">
 
-  <EsFooterContributions @contributorLinks={{contributorLinks}} />
+  <EsFooterContributions @contributorLinks={{this.contributorLinks}} />
 </footer>

@@ -1,0 +1,16 @@
+.cta-note {
+  background-color: var(--color-gray-200);
+  border: 2px solid var(--color-gray-600);
+  border-radius: var(--radius-lg);
+  margin: auto;
+  max-width: 90%;
+}
+
+.cta-note .cta-note-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cta-note .cta-mascot {
+  transform: rotate(15deg);
+}
