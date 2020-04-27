@@ -1,4 +1,10 @@
 
+4.0.1 / 2020-04-27
+==================
+
+  * make sure @glimmer/component is a dependency to support older Ember versions #316 from @mansona
+  * Update @ember/render-modifiers to 1.0.2 to fix beta and canary build #312 from @rwjblue
+
 4.0.0 / 2020-04-23
 ==================
 
