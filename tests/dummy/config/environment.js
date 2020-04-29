@@ -28,6 +28,7 @@ module.exports = function(environment) {
 
     'field-guide': {
       name: 'Ember',
+      tagLine: 'Ember Styleguide',
       logo: '/ember-logo.png',
       copyright: 'Ember Field Guide is designed to document the [ember-styleguide](https://github.com/ember-learn/ember-styleguide) project. For more information view the readme',
       github: 'https://github.com/ember-learn/ember-styleguide'
