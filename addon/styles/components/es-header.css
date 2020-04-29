@@ -59,11 +59,6 @@
   color: var(--color-white);
 }
 
-[aria-expanded="true"] ~ .navbar-list,
-[aria-expanded="true"] ~ .navbar-end {
-  display: block;
-}
-
 .navbar-toggler {
   display: block;
   width: 3rem;
@@ -77,6 +72,11 @@
   overflow: hidden;
   text-indent: -999rem;
   border-radius: var(--radius-lg);
+}
+
+.navbar-expanded .navbar-list,
+.navbar-expanded .navbar-end {
+  display: block;
 }
 
 .navbar-list-item {
@@ -186,7 +186,8 @@
     margin-right: var(--spacing-4);
   }
 
-  .navbar-list {
+  .navbar-list,
+  .navbar-expanded .navbar-list {
     display: flex;
     margin-top: 0;
   }
@@ -230,9 +231,6 @@
     position: absolute;
     left: -0.5rem;
     z-index: 100;
-  }
-
-  .navbar-dropdown-list-item-link {
   }
 
   .navbar-end {

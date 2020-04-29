@@ -1,43 +1,24 @@
-import { set, action } from '@ember/object';
 import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 
 import defaultLinks from '../constants/links';
 
+const defautHomePage = 'https://www.emberjs.com';
+
 export default class EsHeaderComponent extends Component {
-  expanded = false;
+  @tracked expanded = false;
 
   get navHome() {
-    if (this.args.home) {
-      return this.args.home;
-    }
-
-    return 'https://www.emberjs.com';
+    return this.args.home ?? defautHomePage;
   }
 
   get navLinks() {
-    if (this.args.links) {
-      return this.args.links;
-    }
-
-    return defaultLinks;
+    return this.args.links ?? defaultLinks;
   }
 
   @action
-  toggleMenu() {
-    set(this, 'expanded', !this.expanded);
-  }
-
-  trackExpanded() {
-    // Ensure menu is marked as expanded if there is enough screen estate
-    // TODO: Dynamically calculate necessary horizontal space and collapse based on that
-    if (typeof FastBoot === 'undefined') {
-      const mq = matchMedia('(min-width: 992px)');
-
-      mq.addListener(event => {
-        if (event.matches) {
-          set(this, 'expanded', false);
-        }
-      });
-    }
+  onTogglerClick() {
+    this.expanded = !this.expanded;
   }
 }
