@@ -1,13 +1,12 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
-import { action } from '@ember/object';
+import { action, set } from '@ember/object';
 
 import defaultLinks from '../constants/links';
 
 const defautHomePage = 'https://www.emberjs.com';
 
 export default class EsHeaderComponent extends Component {
-  @tracked expanded = false;
+  expanded = false;
 
   get navHome() {
     return this.args.home ?? defautHomePage;
@@ -19,6 +18,6 @@ export default class EsHeaderComponent extends Component {
 
   @action
   onTogglerClick() {
-    this.expanded = !this.expanded;
+    set(this, 'expanded', !this.expanded);
   }
 }
