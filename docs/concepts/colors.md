@@ -1,4 +1,4 @@
-# Colours
+# Colors
 
 ### Usage
 
@@ -6,11 +6,11 @@
 
 Website elements like text and icons should meet accesibility standards when used against colored backgrounds. The following swatches contain a sample of each of the primary palette colors, along with recommendations for its usage and the acceptable contrast guidelines when coupled with text.
 
-## Primary Colours
+## Primary Colors
 
 The primary palette is applied across every page of the website and contains the brand, accent and neutral colors. The purpose of the primary palette is to keep uniformity across all pages while encouraging accessibility best practices.
 
-<!-- fix for styleguide selector in the colour pallets -->
+<!-- fix for styleguide selector in the color pallets -->
 <style>
   .text-xl + * {
     margin-top: 0;
