@@ -3,5 +3,9 @@
     &copy; Copyright {{this.currentYear}} - <a href="https://www.tilde.io/" class="footer-copyright">Tilde Inc.</a>
     <br>
     {{@tagline}}
+    {{#if @contributeLink}}
+      <br>
+      <a href={{@contributeLink}}>Contribute to this page ?</a>
+    {{/if}}
   </p>
 </div>
