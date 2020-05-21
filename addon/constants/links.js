@@ -75,7 +75,7 @@ export default [{
     type: 'link'
   }, {
     href: 'https://help-wanted.emberjs.com/',
-    name: 'Contribute',
+    name: 'Help Wanted',
     type: 'link'
   }, {
     type: 'divider'
