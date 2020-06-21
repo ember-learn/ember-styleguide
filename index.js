@@ -1,15 +1,7 @@
 'use strict';
 const Funnel = require('broccoli-funnel');
 const path = require('path');
-
-const CssImport = require('postcss-import');
-const PresetEnv = require('postcss-preset-env');
-
-const broccoliPostCSS = require('broccoli-postcss')
-const mergeTrees = require('broccoli-merge-trees');
-const funnel = require('broccoli-funnel');
-const get = require('lodash.get');
-const { join } = require('path');
+const staticPostcssAddonTree = require('static-postcss-addon-tree');
 
 module.exports = {
   name: require('./package').name,
@@ -27,31 +19,11 @@ module.exports = {
   treeForAddon() {
     var tree = this._super(...arguments);
 
-    const addonWithoutStyles = funnel(tree, {
-      exclude: ['**/*.css'],
+    return staticPostcssAddonTree(tree, {
+      addonName: 'ember-styleguide',
+      addonFolder: __dirname,
+      project: this.app.project
     });
-
-    const addonStyles = funnel(tree, {
-      include: ['ember-styleguide.css']
-    });
-
-    // I don't know exactly why targets is private so I am using `get()` to make
-    // sure that it isn't missing
-    let overrideBrowserslist = get(this, 'app.project._targets.browsers');
-
-    let processedStyles = broccoliPostCSS(addonStyles, {
-      plugins: [
-        CssImport({
-          path: join(__dirname, 'addon', 'styles'),
-        }),
-        PresetEnv({
-          stage: 3,
-          features: { 'nesting-rules': true },
-          overrideBrowserslist,
-        })
-      ]});
-
-    return mergeTrees([addonWithoutStyles, processedStyles]);
   },
 
   treeForPublic: function() {
