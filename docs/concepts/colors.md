@@ -44,7 +44,7 @@ The primary palette is applied across every page of the website and contains the
   {{/each}}
 </div>
 
-## Secondary Colors
+## Illustration Colors
 
 These colors are for charts and diagrams only. The secondary palette is applied to UI elements and is not part of the base colors. The purpose of the secondary palette is to ensure the readability, usability, and accessibility of charts and diagrams and enhance the communication of actions, changes in state, or errors.
 
