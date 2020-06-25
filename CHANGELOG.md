@@ -1,3 +1,7 @@
+4.2.0 / 2020-06-25
+==================
+
+  * Add "Contribute to this page" link to footer #325 from @HarikumarG
 
 4.1.0 / 2020-06-25
 ==================
