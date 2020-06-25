@@ -70,6 +70,11 @@
 
   & .footer-copyright {
     color: var(--color-gray-600);
+
+    & svg {
+      fill: var(--color-gray-600);
+      width: 1rem;
+    }
   }
 
   & .footer-spacer {
