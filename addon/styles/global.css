@@ -26,6 +26,19 @@
   --color-brand-hc-dark: #cf2d20;
   --color-brand-40: rgba(224, 78, 57, 0.4);
 
+  --color-blue-dark: #0076D6;
+  --color-blue: #10AAFF;
+  --color-blue-light: #DFFDFF;
+
+  --color-green: #8BE998;
+  --color-green-light: #C7F9DE;
+
+  --color-yellow: #FFEC64;
+  --color-yellow-light: #FFFAD6;
+
+  --color-lilac: #7650F1;
+  --color-lilac-light: #D5CBFF;
+
   --color-gray: #a2a3a8;
   --color-success: #d9f9e3;
   --color-danger: #ffd8e1;
