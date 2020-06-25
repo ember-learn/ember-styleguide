@@ -1,4 +1,18 @@
 
+4.1.0 / 2020-06-25
+==================
+
+  * Secondary colors #305 from @mansona
+  * Add README link #332 from @amyrlam
+  * Remove Github parenthetical from Help Wanted contributing link #308 from @locks
+  * Introduce static-post-css-addon-tree #331 from @jaredgalanis
+  * Add an aria-label to the primary nav element #327 from @nickschot
+  * fix the build #326 from @mansona
+  * Add fontawesome edit pencil needed for the Guides #322 from @jenweber
+  * Simplify `EsHeaderComponent` implementation. #319 from @alexeykostevich
+  * Update spelling to use American English #315 from @alexeykostevich
+  * Fix the "tag line" #317 from @mansona
+
 4.0.1 / 2020-04-27
 ==================
 
