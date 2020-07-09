@@ -22,7 +22,7 @@ module.exports = {
     return staticPostcssAddonTree(tree, {
       addonName: 'ember-styleguide',
       addonFolder: __dirname,
-      project: this.app.project
+      project: this.project || this.app.project
     });
   },
 
