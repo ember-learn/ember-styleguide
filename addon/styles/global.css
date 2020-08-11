@@ -216,6 +216,14 @@ code {
   font-family: var(--font-family-mono);
 }
 
+hr {
+  background: var(--color-gray-300);
+  border: 1px var(--color-gray-300);
+  margin: 35px 0px;
+  border-radius: 1px;
+  height: 2px;
+}
+
 /*
 @media (max-width: 1280px) and (min-width: 421px) {
   body,
