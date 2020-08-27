@@ -58,12 +58,6 @@
     }
   }
 
-  & .footer-hr {
-    border: 0;
-    border-bottom: 2px solid var(--color-gray-200);
-    margin: 0;
-  }
-
   & .footer-statement {
     justify-content: space-between;
   }
@@ -79,7 +73,6 @@
 
   & .footer-spacer {
     border: 0;
-    border-top: 2px solid var(--color-gray-300);
     display: block;
     height: 2px;
   }
