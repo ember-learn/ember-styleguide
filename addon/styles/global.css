@@ -190,9 +190,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--font-weight-2);
+  font-weight: var(--font-weight-3);
   margin: 0 0 2rem 0;
   color: var(--color-gray-900);
+  font-size: inherit;
 }
 
 strong {
