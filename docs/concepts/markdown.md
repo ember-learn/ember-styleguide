@@ -20,6 +20,8 @@ This section won't have much text, but it will have some other examples!
 - list item 2
 - list item 3
 
+> You can also add some block quotes if you like.
+
 #### Header 4
 
 You thought you got away with 3 headers, well you haven't seen nothin yet!
