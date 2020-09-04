@@ -224,6 +224,26 @@ hr {
   height: 2px;
 }
 
+blockquote {
+  position: relative;
+  margin: var(--spacing-3) 0;
+  padding: var(--spacing-2) var(--spacing-5);
+
+  background: var(--color-gray-200);
+  border-radius: var(--radius-lg);
+
+  color: var(--color-gray-700);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-3);
+}
+
+blockquote:before {
+  content: url('/images/quotes.svg');
+  position: absolute;
+  left: var(--spacing-2);
+  top: var(--spacing-1);
+}
+
 /*
 @media (max-width: 1280px) and (min-width: 421px) {
   body,
