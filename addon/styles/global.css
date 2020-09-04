@@ -244,6 +244,10 @@ blockquote:before {
   top: var(--spacing-1);
 }
 
+img {
+  max-width: 100%;
+}
+
 /*
 @media (max-width: 1280px) and (min-width: 421px) {
   body,
