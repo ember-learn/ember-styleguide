@@ -98,7 +98,10 @@ h1 {
   line-height: var(--line-height-hero-2);
 }
 
-h1,
+h1 {
+  margin-bottom: var(--spacing-2);
+}
+
 h2,
 h3,
 h4,
