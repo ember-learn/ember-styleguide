@@ -1,3 +1,22 @@
+5.0.0 / 2020-09-17
+==================
+
+This is a major release because it changes the default behaviour of Header
+styles. The previous styles were more optomised for landing pages rather than a
+sensible default for all page types. Any site that was depending on the previous
+default behaviour should implement the necessary specific styles in their own
+CSS
+
+  * only preload variable font #345 from @mansona
+  * adds missing italic font faces #340 from @jaredgalanis
+  * fix image constraints #341 from @jaredgalanis
+  * fix header spacing #338 from @jaredgalanis
+  * BREAKING: h4 and h5 style fixes #339 from @jaredgalanis
+  * update field-guide-default-template #344 from @mansona
+  * adds markdown concept to show current state of markdown to html #335 from @jaredgalanis
+  * adds block quotes for markdown #342 from @jaredgalanis
+  * Add styling for &lt;hr/&gt; #334 from @Mikek2252
+
 4.2.1 / 2020-07-09
 ==================
 
