@@ -144,6 +144,10 @@ html {
   border: 0;
 }
 
+em, i {
+  font-family: "Inter web italic", var(--font-family-sans);
+}
+
 body {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
