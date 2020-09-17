@@ -34,7 +34,7 @@ You thought you got away with 3 headers, well you haven't seen nothin yet!
 
 Will the headers never stop!? 
 
-Sometimes you just want to be **bold with your words**! But other times *you might feel a bit off center*. 
+Sometimes you just want to be **bold with your words**! But other times _you might feel a bit off center_. And if you're really bad you might feel **both at the _same_ time**
 
 [Ember is the best framework](https://emberjs.com)
 
