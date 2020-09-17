@@ -98,28 +98,22 @@ h1 {
   line-height: var(--line-height-hero-2);
 }
 
-h1,
+h1 {
+  margin-bottom: var(--spacing-2);
+}
+
 h2,
-h3 {
+h3,
+h4,
+h5 {
   margin-bottom: var(--spacing-1);
 }
 
-.text-xl + *,
-h1 + * {
-  margin-top: var(--spacing-3);
-}
-
-* + .text-xl {
-  margin-top: var(--spacing-6);
-}
-
-* + .text-lg,
-* + h2 {
-  margin-top: var(--spacing-5);
-}
-
-* + .text-md,
-* + h3 {
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5 {
   margin-top: var(--spacing-3);
 }
 
