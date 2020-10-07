@@ -84,10 +84,6 @@ export default [{
     name: 'Meetups',
     type: 'link'
   }, {
-    href: 'http://jobs.emberjs.com/',
-    name: 'Job Board',
-    type: 'link'
-  }, {
     type: 'divider'
   }, {
     href: 'http://emberconf.com/',
