@@ -33,7 +33,7 @@ To add interactivity you can pass an action to `onClicked`
 ```
 
 ## Styling Links
-It is also possible to style a link to look like a button using the `something` class
+It is also possible to style a link to look like a button using the `es-button` or `es-button-secondary` class.
 
 ```html
 <a href="https://emberjs.com" class="es-button">Go to Ember homepage</a>
