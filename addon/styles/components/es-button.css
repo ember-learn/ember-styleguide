@@ -14,7 +14,7 @@ a.es-button-secondary:visited {
   padding-bottom: var(--spacing-1);
   border: 0;
   border-radius: var(--radius);
-  font-size: var(--font-size-md);
+  font-size: 20px;
   line-height: var(--line-height-md);
   transition: background-color 0.2s, color 0.1s;
   box-shadow: 0 0 2px -1px var(--color-gray-800), 0 2px 9px -5px var(--color-gray-800);
