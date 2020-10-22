@@ -1,3 +1,12 @@
+5.1.0 / 2020-10-22
+==================
+
+  * Update CSS class name in `button` documentation #352 from @neojp
+  * fix broken import from unused file #350 from @ef4
+  * Drop jobs.emberjs.com from the community menu #347 from @mixonic
+  * using a spacing variable for hr margin #349 from @mansona
+  * contact details in footer #337 from @fozy81
+
 5.0.0 / 2020-09-17
 ==================
 
