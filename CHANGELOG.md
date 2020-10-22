@@ -1,3 +1,8 @@
+4.3.0 / 2020-10-22
+==================
+
+  * Drop jobs.emberjs.com from the community menu #347 from @mixonic
+
 4.2.1 / 2020-07-09
 ==================
 
