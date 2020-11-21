@@ -1,3 +1,5 @@
+[![This project uses GitHub Actions for continuous integration.](https://github.com/ember-learn/ember-styleguide/workflows/CI/badge.svg)](https://github.com/ember-learn/ember-styleguide/actions?query=workflow%3ACI)
+[![This project uses Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Ember/ember-styleguide)
 [![Latest NPM release](https://img.shields.io/npm/v/ember-styleguide.svg)](https://www.npmjs.com/package/ember-styleguide.svg)
 
 ember-styleguide
