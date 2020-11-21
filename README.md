@@ -23,7 +23,7 @@ Installation
 
 * `git clone <repository-url>` this repository
 * `cd ember-styleguide`
-* `yarn install`
+* `npm install`
 
 ## Running
 

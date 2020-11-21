@@ -24,9 +24,9 @@
     "lint:js": "eslint .",
     "release": "np",
     "start": "ember serve",
-    "test": "npm-run-all lint:* test:*",
+    "test": "npm-run-all test:*",
     "test:ember": "ember test",
-    "ember-compatibility-test": "ember try:each"
+    "test:ember-compatibility": "ember try:one"
   },
   "dependencies": {
     "@ember/render-modifiers": "^1.0.2",
