@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+      - website-redesign-rfc
+    tags:
+      - v[0-9]+.[0-9]+.[0-9]+
+  pull_request:
+
+env:
+  NODE_VERSION: 10
+
+jobs:
+  lint:
+    name: Lint files
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check out a copy of the repo
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Cache npm cache and node_modules
+        id: cache-dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-${{ env.NODE_VERSION }}-
+
+      - name: Install dependencies
+        run: npm install
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+
+      - name: Lint
+        run: npm run lint
