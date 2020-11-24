@@ -8,12 +8,12 @@
 
 ## Linting
 
-* `npm run lint:hbs`
-* `npm run lint:js`
+* `npm run lint`
 * `npm run lint:js -- --fix`
 
 ## Running tests
 
+* `npm run test`
 * `ember test` – Runs the test suite on the current Ember version
 * `ember test --server` – Runs the test suite in "watch mode"
 * `ember try:each` – Runs the test suite against multiple Ember versions

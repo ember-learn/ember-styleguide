@@ -1,4 +1,8 @@
-ember-styleguide [![Build Status](https://travis-ci.org/ember-learn/ember-styleguide.svg?branch=master)](https://travis-ci.org/ember-learn/ember-styleguide) [![Latest NPM release](https://img.shields.io/npm/v/ember-styleguide.svg)](https://www.npmjs.com/package/ember-styleguide.svg)
+[![This project uses GitHub Actions for continuous integration.](https://github.com/ember-learn/ember-styleguide/workflows/CI/badge.svg)](https://github.com/ember-learn/ember-styleguide/actions?query=workflow%3ACI)
+[![This project uses Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Ember/ember-styleguide)
+[![Latest NPM release](https://img.shields.io/npm/v/ember-styleguide.svg)](https://www.npmjs.com/package/ember-styleguide.svg)
+
+ember-styleguide
 ==============================================================================
 
 This addon is intended to provide basic components for easier style coordination among the Ember family of websites, although the original intent is to support the emberjs.com website. We are committed to the goal of meeting WCAG 2.0 AA conformance standards.
@@ -21,7 +25,7 @@ Installation
 
 * `git clone <repository-url>` this repository
 * `cd ember-styleguide`
-* `yarn install`
+* `npm install`
 
 ## Running
 
