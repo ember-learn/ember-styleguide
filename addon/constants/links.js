@@ -50,6 +50,10 @@ export default [{
     name: 'Editions',
     type: 'link'
   }, {
+    href: 'https://emberjs.com/browser-support',
+    name: 'Browser Support',
+    type: 'link'
+  }, {
     href: 'https://deprecations.emberjs.com',
     name: 'Deprecations',
     type: 'link'
