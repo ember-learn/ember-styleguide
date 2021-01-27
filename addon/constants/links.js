@@ -94,7 +94,7 @@ export default [{
   name: 'About',
   type: 'dropdown',
   items: [{
-    href: 'https://emberjs.com/team',
+    href: 'https://emberjs.com/teams',
     name: 'The Team',
     type: 'link'
   }, {
