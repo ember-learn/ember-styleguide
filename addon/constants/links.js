@@ -53,10 +53,6 @@ export default [{
     href: 'https://deprecations.emberjs.com',
     name: 'Deprecations',
     type: 'link'
-  }, {
-    href: 'https://github.com/emberjs/rfc-tracking/issues',
-    name: 'RFC Tracking',
-    type: 'link'
   }]
 }, {
   href: 'https://blog.emberjs.com',
