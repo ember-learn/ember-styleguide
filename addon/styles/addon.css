@@ -13,6 +13,7 @@
 @import 'grid.css';
 @import 'icon.css';
 @import 'well.css';
+@import 'sidebar.css';
 
 /* Helpers */
 @import 'helpers/index.css';
