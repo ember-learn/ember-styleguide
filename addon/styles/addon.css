@@ -12,6 +12,7 @@
 @import 'layout.css';
 @import 'grid.css';
 @import 'icon.css';
+@import 'sidebar-container.css';
 @import 'well.css';
 
 /* Helpers */
@@ -23,3 +24,4 @@
 @import 'components/es-footer.css';
 @import 'components/es-header.css';
 @import 'components/es-note.css';
+@import 'components/es-sidebar.css';
