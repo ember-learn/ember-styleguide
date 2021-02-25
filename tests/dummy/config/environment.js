@@ -5,7 +5,8 @@ module.exports = function(environment) {
     modulePrefix: 'dummy',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'trailing-history',
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -32,7 +33,9 @@ module.exports = function(environment) {
       logo: '/ember-logo.png',
       copyright: 'Ember Field Guide is designed to document the [ember-styleguide](https://github.com/ember-learn/ember-styleguide) project. For more information view the [README](https://github.com/ember-learn/ember-styleguide),',
       github: 'https://github.com/ember-learn/ember-styleguide'
-    }
+    },
+
+    historySupportMiddleware: true
   };
 
   if (environment === 'development') {
