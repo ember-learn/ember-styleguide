@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 'use strict';
 const Funnel = require('broccoli-funnel');
 const path = require('path');

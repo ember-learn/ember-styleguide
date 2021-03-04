@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { click, render } from '@ember/test-helpers';
 import { setProperties } from '@ember/object';
 import { module, test } from 'qunit';

@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - website-redesign-rfc
     tags:
       - v[0-9]+.[0-9]+.[0-9]+
   pull_request:
@@ -16,7 +15,7 @@ env:
 
 jobs:
   lint:
-    name: Lint files
+    name: Lint and Test
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
@@ -45,6 +44,15 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Test
+        uses: percy/exec-action@v0.3.1
+        with:
+          custom-command: npm run test:ember
+        env:
+          PERCY_PARALLEL_NONCE: ${{ env.PERCY_PARALLEL_NONCE }}
+          PERCY_PARALLEL_TOTAL: ${{ env.PERCY_PARALLEL_TOTAL }}
+          PERCY_TOKEN: ee0a9d5c1122d6a21852edf19b5b309aaec18077fb3900c98995c90bc48ed240
+
 
   test-addon-floating:
     name: Test addon (floating dependencies)
@@ -65,44 +73,6 @@ jobs:
       - name: Test
         run: npm run test:ember
 
-
-  test-addon-locked:
-    name: Test addon (locked dependencies)
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - name: Check out a copy of the repo
-        uses: actions/checkout@v2
-
-      - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v2-beta
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Cache npm cache and node_modules
-        id: cache-dependencies
-        uses: actions/cache@v2
-        with:
-          path: |
-            ~/.npm
-            node_modules
-          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-${{ env.NODE_VERSION }}-
-
-      - name: Install dependencies
-        run: npm install
-        if: steps.cache-dependencies.outputs.cache-hit != 'true'
-
-      - name: Test
-        uses: percy/exec-action@v0.3.1
-        with:
-          custom-command: npm run test:ember
-        env:
-          PERCY_PARALLEL_NONCE: ${{ env.PERCY_PARALLEL_NONCE }}
-          PERCY_PARALLEL_TOTAL: ${{ env.PERCY_PARALLEL_TOTAL }}
-          PERCY_TOKEN: ee0a9d5c1122d6a21852edf19b5b309aaec18077fb3900c98995c90bc48ed240
-
-
   test-compatibility:
     name: Test compatibility
     runs-on: ubuntu-latest
@@ -110,8 +80,6 @@ jobs:
       fail-fast: true
       matrix:
         scenario:
-          - 'ember-lts-3.8'
-          - 'ember-lts-3.12'
           - 'ember-lts-3.16'
           - 'ember-lts-3.20'
           - 'ember-release'
@@ -144,4 +112,4 @@ jobs:
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
 
       - name: Test
-        run: npm run test:ember-compatibility ${{ matrix.scenario }}
+        run: npx ember try:one $EMBER_TRY_SCENARIO ${{ matrix.scenario }}
