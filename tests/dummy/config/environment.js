@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'dummy',
     environment,
@@ -14,8 +14,8 @@ module.exports = function(environment) {
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
-        Date: false
-      }
+        Date: false,
+      },
     },
 
     APP: {
@@ -35,7 +35,7 @@ module.exports = function(environment) {
       github: 'https://github.com/ember-learn/ember-styleguide'
     },
 
-    historySupportMiddleware: true
+    historySupportMiddleware: true,
   };
 
   if (environment === 'development') {
