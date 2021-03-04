@@ -1,3 +1,4 @@
+/* eslint-disable ember/no-classic-components, ember/no-classic-classes, ember/require-tagless-components, prettier/prettier, ember/no-get, ember/no-component-lifecycle-hooks, ember/require-super-in-lifecycle-hooks */
 import Component from '@ember/component';
 import layout from 'ember-styleguide/templates/components/es-header-navbar-link';
 import { computed } from '@ember/object';
