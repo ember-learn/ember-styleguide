@@ -70,7 +70,6 @@
     "ember-load-initializers": "^2.1.2",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-native-dom-helpers": "^0.6.2",
-    "ember-on-modifier": "^1.0.1",
     "ember-page-title": "^6.2.1",
     "ember-percy": "^1.6.0",
     "ember-qunit": "^5.1.2",
