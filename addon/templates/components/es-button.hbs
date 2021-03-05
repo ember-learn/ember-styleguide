@@ -5,7 +5,7 @@
   ...attributes
   {{on "click" this.buttonClicked}}
 >
-  {{#if hasBlock}}
+  {{#if (has-block)}}
     {{yield}}
   {{else}}
     {{@label}}
