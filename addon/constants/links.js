@@ -3,7 +3,7 @@ export default [{
   name: 'Docs',
   type: 'dropdown',
   items: [{
-    href: 'https://guides.emberjs.com',
+    href: 'https://guides.emberjs.com/release/',
     name: 'Ember.js Guides',
     type: 'link'
   }, {
