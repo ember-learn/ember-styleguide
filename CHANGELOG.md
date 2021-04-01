@@ -1,3 +1,18 @@
+6.0.0 / 2021-04-01
+==================
+
+  * Enable prettier for links file #377 from @ijlee2
+  * Remove ember-on-modifier #376 from @bertdeblock
+  * Update the link to the guides to include release #373 from @jenweber
+  * Use has-block helper instead of deprecated hasBlock #375 from @bertdeblock
+  * add es-sidebar component & sidebar-container styles #369 from @nickschot
+  * [BREAKING] Upgrade to latest Ember and make 3.16 the lowest supported version #370 from @mansona
+  * Upgrade field-guide to v1.4.0 #366 from @nickschot
+  * Upgrade ember-svg-jar to v2 #367 from @nickschot
+  * Remove RFC tracking link #365 from @locks
+  * Fix typo in email address / subject line for footer template #358 from @fozy81
+  * Migrated from Travis to GitHub Actions #355 from @ijlee2
+
 5.1.0 / 2020-10-22
 ==================
 
