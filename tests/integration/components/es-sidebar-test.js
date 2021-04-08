@@ -36,7 +36,7 @@ module('Integration | Component | es-sidebar', function (hooks) {
     `);
 
     assert.dom('.sidebar-container .es-sidebar').hasStyle({
-      width: '234px',
+      width: '256px',
     });
 
     await render(hbs`
@@ -47,10 +47,10 @@ module('Integration | Component | es-sidebar', function (hooks) {
     `);
 
     assert.dom('[data-test-content-left]').hasStyle({
-      width: '706px',
+      width: '684px',
     });
     assert.dom('.sidebar-container .es-sidebar').hasStyle({
-      width: '234px',
+      width: '256px',
       margin: '0px 0px 0px 32px',
     });
 
@@ -62,11 +62,11 @@ module('Integration | Component | es-sidebar', function (hooks) {
     `);
 
     assert.dom('.sidebar-container .es-sidebar').hasStyle({
-      width: '234px',
+      width: '256px',
       margin: '0px 32px 0px 0px',
     });
     assert.dom('[data-test-content-right]').hasStyle({
-      width: '706px',
+      width: '684px',
     });
   });
 });
