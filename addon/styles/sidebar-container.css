@@ -17,6 +17,7 @@
     width: 234px;
     margin-right: 32px;
     flex-grow: 0;
+    flex-shrink: 0;
   }
 
   .sidebar-container > *:not(.es-sidebar):not(.es-sidebar-toggle) {
