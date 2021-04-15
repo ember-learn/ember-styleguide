@@ -14,8 +14,8 @@
 
 @media (min-width: 769px) {
   .sidebar-container > .es-sidebar {
-    width: 234px;
-    margin-right: 32px;
+    width: 16rem;
+    margin-right: 2rem;
     flex-grow: 0;
     flex-shrink: 0;
   }
@@ -27,6 +27,6 @@
   .sidebar-container > * + .es-sidebar {
     order: 999;
     margin-right: unset;
-    margin-left: 32px;
+    margin-left: 2rem;
   }
 }
