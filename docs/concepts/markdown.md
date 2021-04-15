@@ -38,6 +38,10 @@ Sometimes you just want to be **bold with your words**! But other times _you mig
 
 [Ember is the best framework](https://emberjs.com)
 
+##### Inline code
+
+Let's refer to some libraries like `ember-cli` and make sure the inline code styles are applied.
+
 --- 
 
 ![Zoey Mascot](/images/mascots/zoey.png)
