@@ -1,3 +1,13 @@
+6.1.0 / 2021-04-15
+==================
+
+  * Add a background color to inline code #388 from @jenweber
+  * make sidebar wider to better match its contents' requirements #382 from @nickschot
+  * update lint-to-the-future #385 from @mansona
+  * Adding progress bar component #383 from @afzal273
+  * fix sidebar shrinking in certain cases when there's content next to it #381 from @nickschot
+  * Update field-guide #384 from @mansona
+
 6.0.0 / 2021-04-01
 ==================
 
