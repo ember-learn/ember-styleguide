@@ -274,3 +274,12 @@ img {
   padding-bottom: 8rem;
   border: 1px solid #ccc;
 }
+
+code:not([class*="language-"]) {
+  background-color: var(--color-gray-400);
+  color: var(--color-black);
+  border-radius: 3px;
+  font-size: .9em;
+  padding: .2em .5em;
+  margin: 0 .1em;
+}
