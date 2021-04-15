@@ -103,7 +103,7 @@
     "stylelint-order": "^4.0.0"
   },
   "engines": {
-    "node": "10.* || >= 12"
+    "node": ">=14"
   },
   "ember": {
     "edition": "octane"
