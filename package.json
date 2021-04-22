@@ -18,6 +18,7 @@
   ],
   "scripts": {
     "build": "ember build",
+    "changelog": "auto-changelog --template changelog.template --unreleased-only --prepend --load-github-issue-data --github-cache-dir .changelog",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
@@ -43,6 +44,7 @@
     "@fortawesome/ember-fontawesome": "^0.1.8",
     "@fortawesome/free-regular-svg-icons": "5.4.2",
     "@fortawesome/free-solid-svg-icons": "5.4.2",
+    "auto-changelog": "github:mansona/auto-changelog#epic",
     "broccoli-asset-rev": "^3.0.0",
     "ember-a11y-landmarks": "^1.0.1",
     "ember-cli": "~3.5.0",
