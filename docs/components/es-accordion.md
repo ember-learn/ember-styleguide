@@ -1,7 +1,6 @@
 # Accordion
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-accordion.hbs'}}
+```handlebars
     {{#es-accordion as |accordionState|}}
       {{#es-accordion/es-item
         title="JavaScript Modules API"
@@ -28,9 +27,8 @@
       {{/es-accordion/es-item}}
 
     {{/es-accordion}}
-  {{/demo.example}}
-  {{demo.snippet 'es-accordion.hbs'}}
-{{/docs-demo}}
+  
+```
 
 <aside role="note">
 

@@ -1,11 +1,9 @@
-# Header
+# Page Wrapper
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-header'}}
-    {{es-header}}
-  {{/demo.example}}
-  {{demo.snippet 'es-header'}}
-{{/docs-demo}}
+```handlebars
+    {{es-pagewrapper}}
+  
+```
 
 <aside role="note">
 

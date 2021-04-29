@@ -1,20 +1,16 @@
 # Note
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-note'}}
+```handlebars
     {{#es-note}}
       This is a note
     {{/es-note}}
-  {{/demo.example}}
-  {{demo.snippet 'es-note'}}
-{{/docs-demo}}
+  
+```
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-note-blank'}}
+```handlebars
     {{es-note}}
-  {{/demo.example}}
-  {{demo.snippet 'es-note-blank'}}
-{{/docs-demo}}
+  
+```
 
 <aside role="note">
 

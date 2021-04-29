@@ -1,11 +1,10 @@
-# Main
+# Search
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-main'}}
-    {{es-main}}
-  {{/demo.example}}
-  {{demo.snippet 'es-main'}}
-{{/docs-demo}}
+```handlebars
+    {{es-search}}
+  
+```
+
 
 <aside role="note">
 

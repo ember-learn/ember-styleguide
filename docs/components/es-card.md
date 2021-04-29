@@ -1,22 +1,18 @@
 # Card
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-card'}}
+```handlebars
     {{#es-card}}
       This is a card
     {{/es-card}}
-  {{/demo.example}}
-  {{demo.snippet 'es-card'}}
-{{/docs-demo}}
+  
+```
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-card-has-border'}}
+```handlebars
     {{#es-card hasBorder=true}}
       This is a card
     {{/es-card}}
-  {{/demo.example}}
-  {{demo.snippet 'es-card-has-border'}}
-{{/docs-demo}}
+  
+```
 
 <aside role="note">
 

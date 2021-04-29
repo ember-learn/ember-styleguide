@@ -7,14 +7,12 @@ Have ideas for this component? Submit an issue or a PR at [https://github.com/em
 
 </aside>
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-form.hbs'}}
+```handlebars
     {{#es-form}}
     ...
     {{/es-form}}
-  {{/demo.example}}
-  {{demo.snippet 'es-form.hbs'}}
-{{/docs-demo}}
+  
+```
 
 <aside role="note">
 

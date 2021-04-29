@@ -6,30 +6,24 @@ The list component is an unstyled, unordered list. A title must be defined, but 
 
 ### Unstyled, Unordered List
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-ulist.hbs'}}
+```handlebars
     {{es-ulist listTitle="Zoey by City" listItems=listItems}}
-  {{/demo.example}}
-  {{demo.snippet 'es-ulist.hbs'}}
-{{/docs-demo}}
+  
+```
 
 ### With Images
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-ulist-imagelist.hbs'}}
+```handlebars
     {{es-ulist listTitle="Zoey by City" listItems=listItems hasImage=true}}
-  {{/demo.example}}
-  {{demo.snippet 'es-ulist-imagelist.hbs'}}
-{{/docs-demo}}
+  
+```
 
 ### With Links
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-ulist-linklist.hbs'}}
+```handlebars
     {{es-ulist listTitle="Zoey by City" listItems=listItems hasImage=true hasLink=true}}
-  {{/demo.example}}
-  {{demo.snippet 'es-ulist-linklist.hbs'}}
-{{/docs-demo}}
+  
+```
 
 ## Other use cases
 

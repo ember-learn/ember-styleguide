@@ -1,6 +1,6 @@
 # Introduction
 
-```sh
+```bash
 ember install ember-styleguide
 ```
 

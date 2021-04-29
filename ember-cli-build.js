@@ -21,6 +21,22 @@ module.exports = function(defaults) {
         'node_modules/ember-cli-addon-docs/public',
         'tests/dummy/public'
       ]
+    },
+    'ember-prism': {
+      components: [
+        'apacheconf',
+        'bash',
+        'css',
+        'handlebars',
+        'http',
+        'javascript',
+        'json',
+        'markup-templating',
+        'ruby',
+        'scss'
+      ],
+
+      plugins: ['line-numbers', 'normalize-whitespace']
     }
   });
 

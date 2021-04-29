@@ -2,22 +2,19 @@
 
 ## Regular Post
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-blog-heading.hbs'}}
+```handlebars
     {{es-blog-heading
       author='Sara Poster'
       postDate='03-20-2018'
       postUrl='https://emberjs.com/blog'
       postTitle='Pretty Awesome Blog Post'
     }}
-  {{/demo.example}}
-  {{demo.snippet 'es-blog-heading.hbs'}}
-{{/docs-demo}}
+  
+```
 
 ## Guest Post
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-blog-heading-guest.hbs'}}
+```handlebars
     {{es-blog-heading
       author='Sara Poster'
       postDate='03-20-2018'
@@ -25,9 +22,8 @@
       postTitle='Pretty Awesome Blog Post'
       isGuestPost=true
     }}
-  {{/demo.example}}
-  {{demo.snippet 'es-blog-heading-guest.hbs'}}
-{{/docs-demo}}
+  
+```
 
 <aside role="note">
 

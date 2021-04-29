@@ -1,12 +1,10 @@
-# Code Sample
+# Button Bar
 
 This component is not yet implemented
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-codesample'}}
-    {{es-codesample}}
-  {{/demo.example}}
-  {{demo.snippet 'es-codesample'}}
-{{/docs-demo}}
+```handlebars
+    {{es-buttonbar}}
+  
+```
 
 <aside role="note">
 
