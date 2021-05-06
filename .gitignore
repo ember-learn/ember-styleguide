@@ -9,6 +9,8 @@
 /node_modules/
 
 # misc
+/.env*
+/.pnp*
 /.sass-cache
 /connect.lock
 /coverage/
@@ -16,9 +18,11 @@
 /npm-debug.log*
 /testem.log
 /yarn-error.log
-package-lock.json
 
 # ember-try
 /.node_modules.ember-try/
 /bower.json.ember-try
 /package.json.ember-try
+
+.vscode
+.changelog
