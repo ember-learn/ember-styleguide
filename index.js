@@ -39,4 +39,9 @@ module.exports = {
 
     return '';
   },
+
+  setupPreprocessorRegistry(type, registry) {
+    let emberBasicDropdown = this.addons.find((a) => a.name === 'ember-cli-clean-css');
+    return emberBasicDropdown.setupPreprocessorRegistry(type, registry);
+  }
 };
