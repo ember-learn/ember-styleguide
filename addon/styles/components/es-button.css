@@ -18,6 +18,7 @@ a.es-button-secondary:visited {
   line-height: var(--line-height-md);
   transition: background-color 0.2s, color 0.1s;
   box-shadow: 0 0 2px -1px var(--color-gray-800), 0 2px 9px -5px var(--color-gray-800);
+  cursor: pointer;
 }
 
 .es-button:focus,
