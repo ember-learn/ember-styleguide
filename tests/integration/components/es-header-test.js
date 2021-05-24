@@ -51,7 +51,17 @@ module('Integration | Component | es header', function(hooks) {
     await render(hbs`<EsHeader/>`);
 
     assert.dom('.es-navbar').doesNotHaveClass('navbar-expanded');
-    assert.dom('.navbar-toggler').containsText('Show Site Navigation');
+    assert.dom('.navbar-toggler').containsText('Menu');
+  });
+
+  test('it renders the navbar with aria label', async function(assert) {
+    await render(hbs`<EsHeader/>`);
+
+    assert.equal(document.querySelector("[aria-label='Show Site Navigation']").getAttribute(['aria-label']), 'Show Site Navigation', 'aria label on first render');
+
+    await click('.navbar-toggler');
+
+    assert.equal(document.querySelector("[aria-label='Hide Site Navigation']").getAttribute(['aria-label']), 'Hide Site Navigation', 'label changes after click');
   });
 
   test('it toggles the navbar when click the toggler', async function(assert) {
@@ -60,11 +70,11 @@ module('Integration | Component | es header', function(hooks) {
     await click('.navbar-toggler');
 
     assert.dom('.es-navbar').hasClass('navbar-expanded');
-    assert.dom('.navbar-toggler').containsText('Hide Site Navigation');
+    assert.dom('.navbar-toggler').containsText('Menu');
 
     await click('.navbar-toggler');
 
     assert.dom('.es-navbar').doesNotHaveClass('navbar-expanded');
-    assert.dom('.navbar-toggler').containsText('Show Site Navigation');
+    assert.dom('.navbar-toggler').containsText('Menu');
   });
 });
