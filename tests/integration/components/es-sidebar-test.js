@@ -51,7 +51,7 @@ module('Integration | Component | es-sidebar', function (hooks) {
     });
     assert.dom('.sidebar-container .es-sidebar').hasStyle({
       width: '256px',
-      margin: '0px 0px 0px 32px',
+      margin: '0px',
     });
 
     await render(hbs`
@@ -63,7 +63,7 @@ module('Integration | Component | es-sidebar', function (hooks) {
 
     assert.dom('.sidebar-container .es-sidebar').hasStyle({
       width: '256px',
-      margin: '0px 32px 0px 0px',
+      margin: '0px',
     });
     assert.dom('[data-test-content-right]').hasStyle({
       width: '684px',
