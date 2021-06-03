@@ -1,3 +1,11 @@
+6.1.1 / 2021-06-03
+==================
+
+  * use CSS grid for sidebar implementation #398 from @mansona
+  * Update accessibility.md #396 from @MelSumner
+  * Move component template files to be co-located #391 from @hannakim91
+  * Add "node: current" to targets for dummy app #390 from @mansona
+
 6.1.0 / 2021-04-15
 ==================
 
