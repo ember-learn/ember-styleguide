@@ -1,58 +1,53 @@
 /* eslint-disable ember/no-classic-components, ember/no-classic-classes, ember/require-tagless-components, prettier/prettier, ember/no-get, ember/no-component-lifecycle-hooks, ember/require-super-in-lifecycle-hooks */
-import Component from '@ember/component';
-import layout from 'ember-styleguide/templates/components/es-header-navbar-link';
-import { computed } from '@ember/object';
-import { equal } from '@ember/object/computed';
+import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { schedule, next } from '@ember/runloop';
 import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
 
-export default Component.extend({
-  layout,
-  tagName: 'li',
-  classNames: ['navbar-list-item'],
-  classNameBindings: ['isDropdown:dropdown'],
-  isDropdown: equal('link.type', 'dropdown'),
-  isDropdownOpen: false,
+export default class EsHeaderNavbarLink extends Component {
+  @service navbar;
+
+  @tracked element = null;
+  @tracked linkType = this.args.link.type;
+  @tracked isDropdownOpen = false;
+
+  get isDropdown() {
+    return this.linkType === 'dropdown';
+  }
 
   // because aria-expanded requires a string value instead of a boolean
-  isExpanded: computed('isDropdownOpen', function() {
+  get isExpanded() {
     return this.isDropdownOpen ? 'true' : 'false';
-  }),
+  }
 
-  navbar: service(),
-
-  init() {
-    this._super(...arguments);
-    this.get('navbar').register(this);
-  },
-
-  didInsertElement() {
-    let button = this.element.querySelector('.navbar-list-item-dropdown-toggle');
-
-    if (button) {
-      button.addEventListener('blur', () => this.processBlur());
-    }
-  },
+  constructor() {
+    super(...arguments);
+    this.navbar.register(this);
+  }
 
   setupLinkBlurs() {
     if (this.linkBlursActive) {
       return;
     }
 
-    this.set('linkBlursActive', true);
-
+    this.linkBlursActive = true;
     let links = Array.from(this.element.querySelectorAll('.navbar-dropdown-list-item-link'));
 
-    links.forEach(ancor => {
-      ancor.addEventListener('blur', () => this.processBlur());
+    links.forEach(anchor => {
+      anchor.addEventListener('blur', () => this.processBlur());
     });
-  },
+  }
+
+  @action
+  setElement(element) {
+    this.element = element;
+  }
 
   @action
   toggleDropdown(event) {
-    this.get('navbar').closePopupMenu(this);
-    this.toggleProperty('isDropdownOpen');
+    this.navbar.closePopupMenu(this);
+    this.isDropdownOpen = !this.isDropdownOpen;
 
     if (this.isDropdownOpen) {
       // if it's open, let's make sure it can do some things
@@ -68,20 +63,9 @@ export default Component.extend({
         this.processKeyPress();
       });
     }
-  },
+  }
 
-  closeDropdown() {
-    // set the isDropdownOpen to false, which will make the dropdown go away
-    this.set('isDropdownOpen', false);
-  },
-
-  openDropdown() {
-    //might not need this
-    // open the dropdown and set the focus to the first item inside
-    this.set('isDropdownOpen', true);
-    this.processFirstElementFocus();
-  },
-
+  @action
   processBlur() {
     next(this, function() {
       let subItems = Array.from(this.element.querySelectorAll('.navbar-dropdown-list li'));
@@ -92,17 +76,35 @@ export default Component.extend({
         this.closeDropdown();
       }
     });
-  },
+  }
+
+  @action
+  unregisterListener(element) {
+    element.removeEventListener('keydown', this.triggerDropdown);
+    element.removeEventListener('click', this.triggerDropdown);
+  }
+
+  closeDropdown() {
+    // set the isDropdownOpen to false, which will make the dropdown go away
+    this.isDropdownOpen = false;
+  }
+
+  openDropdown() {
+    //might not need this
+    // open the dropdown and set the focus to the first item inside
+    this.isDropdownOpen = true;
+    this.processFirstElementFocus();
+  }
 
   processClick() {
     // TODO handle mouseclick outside the current dropdown
-  },
+  }
 
   processFirstElementFocus() {
     // Identify the first item in the dropdown list & set focus on it
     let firstFocusable = this.element.querySelector('.navbar-dropdown-list li:first-of-type a');
     firstFocusable.focus();
-  },
+  }
 
   processKeyPress() {
     // add event listeners
@@ -122,7 +124,7 @@ export default Component.extend({
         return;
       }
     });
-  },
+  }
 
   returnFocus() {
     // after that rendering bit happens, we need to return the focus to the trigger
@@ -130,10 +132,5 @@ export default Component.extend({
       let dropdownTrigger = this.element.querySelector('.navbar-list-item-dropdown-toggle');
       dropdownTrigger.focus();
     });
-  },
-
-  willDestroyElement() {
-    document.removeEventListener('keydown', this.triggerDropdown);
-    // document.removeEventListener('click', this.triggerDropdown);
-  },
-});
+  }
+}
