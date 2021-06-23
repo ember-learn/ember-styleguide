@@ -1,0 +1,21 @@
+<div class="grid sm:grid-2 lg:grid-2">
+  <div>
+    {{#if (eq this.previousId "0")}}
+      <LinkTo @route="index">
+        &ShortLeftArrow; Newer articles
+      </LinkTo>
+    {{else if this.previousId}}
+      <LinkTo @route="page" @model={{this.previousId}}>
+        &ShortLeftArrow; Newer articles
+      </LinkTo>
+    {{/if}}
+  </div>
+
+  <div class="text-right">
+    {{#if this.nextId}}
+      <LinkTo @route="page" @model={{this.nextId}}>
+        Older articles &ShortRightArrow;
+      </LinkTo>
+    {{/if}}
+  </div>
+</div>
