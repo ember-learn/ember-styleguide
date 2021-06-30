@@ -8,11 +8,12 @@ export default class EsBannerComponent extends Component {
     return this.args.message ?? 'Important Message';
   }
 
-  get route() {
-    return this.args.route ?? '#';
+  get url() {
+    return this.args.link ?? '#';
   }
 
   get show() {
-    return this.router.currentRouteName !== this.route;
+    let routeUrl = this.router.currentURL;
+    return routeUrl !== this.url;
   }
 }

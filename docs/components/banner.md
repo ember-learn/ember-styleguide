@@ -5,8 +5,12 @@
 A banner with text in it, telling the user an important message.
 
 ```handlebars
-<EsBanner @message='Hamsters!' />
+<EsBanner @message='Hamsters!' @link='https://en.wikipedia.org/wiki/Hamster' />
 ```
+This would normally be addded to the application template so that it appears on all routes within the website.
+If the url matches the `@link` url, the banner won't be displayed. Therefore, if the user clicks the link in the banner,
+the banner will disappear.
+
 
 Also supported- block use:
 
