@@ -1,3 +1,9 @@
+6.1.2 / 2021-07-25
+==================
+
+  * fix htmlSafe import #402 from @mansona
+  * Convert classic component (es-navbar-link) to glimmer component and co-locate #399 from @hannakim91
+
 6.1.1 / 2021-06-03
 ==================
 
