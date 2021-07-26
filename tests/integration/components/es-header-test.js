@@ -15,7 +15,6 @@ module('Integration | Component | es header', function(hooks) {
 
     assert.dom('header').exists({ count: 1 });
     assert.dom('header').hasClass('es-header');
-    assert.dom('header').hasAttribute('role', 'banner');
   });
 
   test('it renders the logo', async function(assert) {
