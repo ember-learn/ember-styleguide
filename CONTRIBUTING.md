@@ -9,7 +9,7 @@
 ## Linting
 
 * `npm run lint`
-* `npm run lint:js -- --fix`
+* `npm run lint:fix`
 
 ## Running tests
 
