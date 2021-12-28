@@ -36,7 +36,7 @@ module('Integration | Component | es button', function(hooks){
 
     await render(hbs`
       {{es-button
-        label=label
+        label=this.label
       }}
     `);
 
@@ -48,7 +48,7 @@ module('Integration | Component | es button', function(hooks){
 
     setProperties(this, { onClicked });
 
-    await render(hbs`{{es-button onClicked=onClicked}}`);
+    await render(hbs`{{es-button onClicked=this.onClicked}}`);
     await click('button');
 
     assert.ok(onClicked.calledOnce, 'onClicked called');
