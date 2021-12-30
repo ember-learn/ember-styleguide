@@ -19,11 +19,11 @@ Also supported- block use:
 To add interactivity you can pass an action to `onClicked`
 
 ```handlebars
-<EsButton @onClicked={{action (mut value) (increment value)}}>
+<EsButton @onClicked={{this.incrementValue}}>
   Increment Value
 </EsButton>
 
-{{value}}
+{{this.value}}
 ```
 
 ## Secondary Buttons

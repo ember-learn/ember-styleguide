@@ -32,7 +32,7 @@ module('Integration | Component | es header', function(hooks) {
 
   test('it renders a link to a custom homepage', async function(assert) {
     setProperties(this, { customHomeUrl });
-    await render(hbs`<EsHeader @home={{customHomeUrl}} />`);
+    await render(hbs`<EsHeader @home={{this.customHomeUrl}} />`);
 
     assert.dom('.navbar-brand-wrapper').hasAttribute('href', customHomeUrl);
   });

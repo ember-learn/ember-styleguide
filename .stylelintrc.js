@@ -1,4 +1,4 @@
-/* eslint-disable prettier/prettier */
+/* eslint-disable no-undef, prettier/prettier */
 module.exports = {
   extends: 'stylelint-config-standard',
   plugins: [
