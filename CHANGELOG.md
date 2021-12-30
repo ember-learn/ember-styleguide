@@ -1,3 +1,11 @@
+7.0.0 / 2021-12-30
+==================
+
+  * Breaking: drop support for Node 10, update ember to 3.28, and remove deprecations #412 from @mansona
+  * Fix Heroku footer link #411 from @jgwhite
+  * update lint-to-the-future dependencies to the latest #409 from @mansona
+  * simplifying github ci file #404 from @mansona
+
 6.1.2 / 2021-07-25
 ==================
 
