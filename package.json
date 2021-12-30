@@ -5,7 +5,7 @@
   "keywords": [
     "ember-addon"
   ],
-  "homepage": "https://ember-learn.github.io/ember-styleguide",
+  "homepage": "https://ember-styleguide.netlify.app/",
   "repository": "https://github.com/ember-learn/ember-styleguide.git",
   "license": "MIT",
   "contributors": [
