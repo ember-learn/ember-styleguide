@@ -1,11 +1,9 @@
-<div class="cta-note" ...attributes>
-  <div class="cta-note-content">
-    <div class="cta-note-body p-2">
-      <div class="text-lg mb-1 hide-in-percy" data-test-es-note-heading>{{this.mascot.name}} says...</div>
-      <div class="cta-note-message">
-        {{yield}}
-      </div>
+<div class="cta" ...attributes>
+  <div class="cta-note">
+    <div class="cta-note-body">
+      <div class="cta-note-heading" data-test-es-note-heading>{{this.mascot.name}} says...</div>
+      <div class="cta-note-message">{{yield}}</div>
     </div>
-    <img src={{this.mascot.image}} role="presentation" alt="" class="hide-in-percy cta-mascot m-2">
+    <img src={{this.mascot.image}} role="presentation" alt="">
   </div>
 </div>
