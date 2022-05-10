@@ -4,7 +4,7 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
 import { rawTimeout, task, timeout } from 'ember-concurrency';
-import { buildWaiter } from 'ember-test-waiters';
+import { buildWaiter } from '@ember/test-waiters';
 
 const SPEED = 200;
 

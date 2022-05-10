@@ -1,4 +1,4 @@
-.cta-note {
+.cta {
   background-color: var(--color-yellow-light);
   border: 2px solid var(--color-gray-600);
   border-radius: var(--radius-lg);
@@ -6,11 +6,31 @@
   max-width: 90%;
 }
 
-.cta-note .cta-note-content {
+.cta .cta-note {
   display: flex;
   justify-content: space-between;
 }
 
-.cta-note .cta-mascot {
+.cta-note .cta-note-body {
+  padding: var(--spacing-2);
+}
+
+.cta-note .cta-note-heading {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-3);
+  line-height: var(--line-height-lg);
+  margin-bottom: var(--spacing-1);
+}
+
+.cta-note img {
+  margin: var(--spacing-2);
   transform: rotate(15deg);
 }
+
+@media only percy {
+  .cta-note .cta-note-heading,
+  .cta-note img {
+    visibility: hidden;
+  }
+}
+

@@ -26,7 +26,7 @@ const contributorLinks = [{
 }, {
   name: 'Hosted by:',
   title: "Heroku",
-  href: 'https://www.heroku.com/emberjs',
+  href: 'https://www.heroku.com/',
   class: 'heroku-logo',
 }, {
   name: 'CDN provided by:',
