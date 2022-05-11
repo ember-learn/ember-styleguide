@@ -32,7 +32,7 @@
     "ember-compatibility-tests": "ember try:all"
   },
   "dependencies": {
-    "@ember/render-modifiers": "^2.0.2",
+    "@ember/render-modifiers": "^2.0.4",
     "@glimmer/component": "^1.0.4",
     "broccoli-funnel": "^3.0.2",
     "broccoli-merge-trees": "^4.2.0",
