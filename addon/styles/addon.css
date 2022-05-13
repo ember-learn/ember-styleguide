@@ -19,6 +19,7 @@
 @import 'helpers/index.css';
 
 /* Components */
+@import 'components/es-banner.css';
 @import 'components/es-button.css';
 @import 'components/es-card.css';
 @import 'components/es-footer.css';
