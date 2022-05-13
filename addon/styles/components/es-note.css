@@ -32,13 +32,14 @@
 .cta:before {
   content: "";
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   width: 0px;
   height: 0px;
-  border-top: 30px solid var(--color-gray-100);
-  border-right: 30px solid var(--color-yellow);
   border-radius: 0 0 var(--radius-lg) 0;
+  border-width: 16px;
+  border-color: var(--color-gray-100) var(--color-yellow) var(--color-yellow) var(--color-gray-100);
+  border-style: solid;
 }
 
 @media only percy {
