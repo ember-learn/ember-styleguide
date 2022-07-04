@@ -1,9 +1,10 @@
 .cta {
-  background-color: var(--color-gray-200);
-  border: 2px solid var(--color-gray-600);
+  background-color: var(--color-yellow-light);
   border-radius: var(--radius-lg);
   margin: auto;
   max-width: 90%;
+  position: relative;
+  overflow: hidden;
 }
 
 .cta .cta-note {
@@ -13,6 +14,7 @@
 
 .cta-note .cta-note-body {
   padding: var(--spacing-2);
+  padding-left: var(--spacing-4);
 }
 
 .cta-note .cta-note-heading {
@@ -25,6 +27,19 @@
 .cta-note img {
   margin: var(--spacing-2);
   transform: rotate(15deg);
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  border-radius: 0 0 var(--radius-lg) 0;
+  border-width: 16px;
+  border-color: var(--color-gray-100) var(--color-yellow) var(--color-yellow) var(--color-gray-100);
+  border-style: solid;
 }
 
 @media only percy {
