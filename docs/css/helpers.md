@@ -144,6 +144,38 @@ In order to apply the spacing scale on pages, a set of predefined helper classes
   </tbody>
 </table>
 
+### Flex helpers
+
+We provide a few `flex` helpers to make it easier to position elements on your page. All classes provide the `display: flex` property.
+
+`.flex-horizontal-between` does `justify-content: space-between`.
+```html
+<div class="flex-horizontal-between">
+  <button>Let's do this</button><button>Don't do this</button>
+</div>
+```
+
+`.flex-center` does `justify-content: center` and `align-items: center`, making sure your content is centered.
+```html
+<div class="flex-centered">
+  <button>Let's do this</button><button>Don't do this</button>
+</div>
+```
+
+`.flex-responsive` adds `flex-wrap: wrap` to your element, making sure the content wraps with the parent. It adds a `gap` too. You can resize the window to see the effect of the class.
+```html
+<div class="flex-responsive">
+  <button>Let's do this</button><button>Don't do this</button>
+</div>
+```
+
+You can also combine these helper-classes, allowing the content to wrap and stay centered.
+```html
+<div class="flex-centered flex-responsive">
+  <button>Let's do this</button><button>Don't do this</button>
+</div>
+```
+
 ### Responsive Videos
 
 ```html
