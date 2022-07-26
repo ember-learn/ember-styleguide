@@ -1,3 +1,12 @@
+7.1.0 / 2022-07-26
+==================
+
+  * Flex helper classes #423 from @MinThaMie
+  * Adds dog eared note styling #421 from @MinThaMie
+  * update lint-to-the-future dependencies #424 from @mansona
+  * Creates banner with the same style as on the current website #419 from @MinThaMie
+  * Use CSS instead of utility classes from ESNote - to allow HTML to be backwards compatible #413 from @NullVoxPopuli
+
 7.0.0 / 2021-12-30
 ==================
 
