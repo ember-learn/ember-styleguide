@@ -2,7 +2,7 @@
 import { module, test } from 'qunit';
 import { visit } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
-import { percySnapshot } from 'ember-percy';
+import percySnapshot from '@percy/ember';
 
 async function renderFromToc(tableOfContents, path = "") {
   for (const item of tableOfContents) {
