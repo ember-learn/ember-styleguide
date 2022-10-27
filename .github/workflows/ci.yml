@@ -22,11 +22,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: mansona/npm-lockfile-version@v1
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 12.x
           cache: npm
-      - run: npm i -g npm@7
+      - run: npm i -g npm@8
       - run: npm ci
       - run: npm run lint
       - run: npx percy exec -- npm run test
@@ -37,11 +37,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 12.x
           cache: npm
-      - run: npm i -g npm@7
+      - run: npm i -g npm@8
       - run: npm install --no-shrinkwrap
       - run: npm run test:ember
 
@@ -70,11 +70,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 12.x
           cache: npm
-      - run: npm i -g npm@7
+      - run: npm i -g npm@8
       - run: npm ci
       - name: Run Tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
