@@ -6,38 +6,44 @@
   gap: 0px 40px;
   grid-template-areas:
     "previous next";
-}
+  & > .previous-wrapper{
+    grid-area: previous;
+    &::before {
+      content: "\2039";
+    }
 
-.previous-wrapper{
-  grid-area: previous;
-}
-
-.next-wrapper {
-  grid-area: next;
-  text-align: right;
-}
-
-.pagination-link {
-  &::before,
-  &::after {
-    display: inline-block;
-    font-weight: 700;
-    margin: 0 0.5em;
-    transition: transform 0.3s;
-  }
-  &:hover, &:focus, &:active {
-    .pagination-text {
+    &:hover::before {
+      transform: translateX(-0.5em);
       color: var(--color-link-hover);
+    }
+  }
+
+  & > .next-wrapper {
+    grid-area: next;
+    text-align: right;
+    &::after {
+      content: "\203A";
+    }
+
+    &:hover::after {
+      transform: translateX(0.5em);
+      color: var(--color-link-hover);
+    }
+  }
+
+  & > .previous-wrapper,  & > .next-wrapper {
+    &::before,
+    &::after {
+      color: var(--color-link);
+      display: inline-block;
+      font-weight: 700;
+      margin: 0 0.5em;
+      transition: transform 0.3s;
     }
   }
 }
 
-.pagination-text {
-  color: var(--color-link);
-  background: no-repeat left bottom
-  linear-gradient(var(--color-brand-40), var(--color-brand-40));
-  background-size: 100% 0.1875rem;
-}
+
 
 .previous {
   &::before {

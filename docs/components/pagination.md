@@ -1,29 +1,45 @@
 # Pagination
 
-Adds back and forth pagination, when provided with a `previous` object and a `next` object. These objects should look like this: 
-```js
-const object = {
-  route: "String",
-  model: {},
-  text: "The text that will show in the pagination"
-}
-```
+Adds back and forth pagination, using `named blocks`. You insert your previous link into a `<:previous></:previous>` block and the next link into a `<:next></:next>` block. This will add the underline styling to the link and an animated arrow to your link.
 
 ## Usage
 
 Add the following code to the template
 
 ```handlebars
-  <EsPagination @previous={{hash text="Older articles" route="prev"}} @next={{hash text="Newer articles" route="next"}}/>
+  <EsPagination>
+    <:previous> 
+        <LinkTo @route="page" @model={{this.previousId}}>
+          Newer articles
+        </LinkTo>
+    </:previous>
+    <:next>
+      <LinkTo @route="page" @model={{this.nextId}}>
+        Older articles
+      </LinkTo>
+    </:next>
+  </EsPagination>
 ```
 
-The example below show what happens if you only provide the `previous` object when it's the last page you are on.
+The example below show what happens if you only provide the `previous` block when it's the last page you are on.
 
 ```handlebars
-  <EsPagination @previous={{hash text="One before last article" route="prev"}}/>
+  <EsPagination>
+    <:previous> 
+        <LinkTo @route="page" @model={{this.previousId}}>
+          Newer articles
+        </LinkTo>
+    </:previous>
+  </EsPagination>
 ```
-The example below show what happens if you only provide the `next` object when it's the first page you are on.
+The example below show what happens if you only provide the `next` block when it's the first page you are on.
 
 ```handlebars
-  <EsPagination @next={{hash text="Second article" route="next"}}/>
+  <EsPagination>
+    <:next>
+      <LinkTo @route="page" @model={{this.nextId}}>
+        Older articles
+      </LinkTo>
+    </:next>
+  </EsPagination>
 ```
