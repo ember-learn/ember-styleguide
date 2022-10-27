@@ -1,0 +1,17 @@
+<div class="pagination-wrapper">
+  {{#if @previous}}
+    <div class="previous-wrapper bg-none">
+      <LinkTo class="pagination-link previous" @route={{@previous.route}} @model={{@previous.model}}>
+        <span class="pagination-text">{{@previous.text}}</span>
+      </LinkTo>
+    </div>
+  {{/if}}
+
+  {{#if @next}}
+    <div class="next-wrapper bg-none">
+      <LinkTo class="pagination-link next" @route={{@next.route}} @model={{@next.model}}>
+        <span class="pagination-text">{{@next.text}}</span>
+      </LinkTo>
+    </div>
+  {{/if}}
+</div>
