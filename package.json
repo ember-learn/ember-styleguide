@@ -47,6 +47,7 @@
     "normalize.css": "^8.0.1",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
+    "ember-named-blocks-polyfill": "^0.2.5",
     "static-postcss-addon-tree": "^2.0.0"
   },
   "devDependencies": {
