@@ -7,20 +7,17 @@ module('Integration | Component | es-pagination', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`<EsPagination />`);
-
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
     await render(hbs`
-      <EsPagination>
-        template block text
-      </EsPagination>
+    <EsPagination>
+      <:previous>
+        Newer articles
+      </:previous>
+      <:next>
+        Older articles
+      </:next>
+    </EsPagination>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).hasText('Newer articles Older articles');
   });
 });
