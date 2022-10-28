@@ -1,0 +1,13 @@
+<div class="pagination-wrapper">
+  {{#if (has-block "previous")}}
+    <div class="previous-wrapper">
+      {{yield to='previous'}}
+    </div>
+  {{/if}}
+
+  {{#if (has-block "next")}}
+    <div class="next-wrapper">
+      {{yield to='next'}}
+    </div>
+  {{/if}}
+</div>

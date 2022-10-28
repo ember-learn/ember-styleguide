@@ -1,0 +1,66 @@
+.pagination-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 40px;
+  grid-template-areas:
+    "previous next";
+  & > .previous-wrapper{
+    grid-area: previous;
+    &::before {
+      content: "\2039";
+    }
+
+    &:hover::before {
+      transform: translateX(-0.5em);
+      color: var(--color-link-hover);
+    }
+  }
+
+  & > .next-wrapper {
+    grid-area: next;
+    text-align: right;
+    &::after {
+      content: "\203A";
+    }
+
+    &:hover::after {
+      transform: translateX(0.5em);
+      color: var(--color-link-hover);
+    }
+  }
+
+  & > .previous-wrapper,  & > .next-wrapper {
+    &::before,
+    &::after {
+      color: var(--color-link);
+      display: inline-block;
+      font-weight: 700;
+      margin: 0 0.5em;
+      transition: transform 0.3s;
+    }
+  }
+}
+
+
+
+.previous {
+  &::before {
+    content: "\2039";
+  }
+
+  &:hover::before {
+    transform: translateX(-0.5em);
+  }
+}
+
+.next {
+  &::after {
+    content: "\203A";
+  }
+
+  &:hover::after {
+    transform: translateX(0.5em);
+  }
+}
