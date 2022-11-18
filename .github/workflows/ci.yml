@@ -12,12 +12,24 @@ concurrency:
    cancel-in-progress: true
 
 jobs:
-  test:
-    name: "Tests"
+  percy:
+    name: "Percy Tests"
     runs-on: ubuntu-latest
     env:
       PERCY_TOKEN: ee0a9d5c1122d6a21852edf19b5b309aaec18077fb3900c98995c90bc48ed240
-      RUN_PERCY_TESTS: true
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14.x
+          cache: npm
+      - run: npm i -g npm@8
+      - run: npm ci
+      - run: npx percy exec -- npm run test:docs
+
+  test:
+    name: "Tests"
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
