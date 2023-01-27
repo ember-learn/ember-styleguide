@@ -11,7 +11,7 @@
   </div>
   <div class="footer-social hide-on-mobile">
     {{#each @socialLinks as |link|}}
-      <a href={{link.href}} title={{link.title}} aria-label={{link.label}}>
+      <a href={{link.href}} title={{link.title}} aria-label={{link.label}} rel="me">
         {{svg-jar link.class}} {{link.title}}
       </a>
     {{/each}}
