@@ -93,6 +93,8 @@ jobs:
     name: ${{ matrix.try-scenario }} - Allowed to fail
     runs-on: ubuntu-latest
     needs: 'test'
+    permissions:
+      pull-requests: write
 
     strategy:
       fail-fast: false
