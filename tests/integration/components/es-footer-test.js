@@ -13,7 +13,7 @@ module('Integration | Component | es footer', function(hooks) {
     const footerSocialLinks = this.element.querySelectorAll('.footer-social a');
     const footerContribtuionsLinks = this.element.querySelectorAll('.footer-contributions a');
 
-    assert.equal(footerSocialLinks.length, 3, 'social links are loading');
+    assert.equal(footerSocialLinks.length, 4, 'social links are loading');
     assert.equal(footerContribtuionsLinks.length, 5, 'contributors links are loading');
   });
 });

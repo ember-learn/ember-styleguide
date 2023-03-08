@@ -15,6 +15,11 @@ const socialLinks = [{
   href: 'https://discordapp.com/invite/zT3asNS',
   class: 'discord-logo',
   label: 'Join the Ember Community Discord'
+}, {
+  title: 'Mastodon',
+  href: 'https://hachyderm.io/@emberjs',
+  class: 'mastodon-logo',
+  label: 'Official Ember Mastodon Account'
 }];
 
 
