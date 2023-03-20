@@ -1,3 +1,13 @@
+8.0.0 / 2023-03-20
+==================
+* Add link to Mastodon account #445 from @ef4
+* update percy-cli #451 from @mansona
+* add permissions for continue-on-error #449 from @mansona
+* Fix CI #422 from @mansona
+* Adds pagination component to the styleguide #433 from @MinThaMie
+* Update percy #434 from @mansona
+* Breaking: drop support for EOL Node - minimum supported now v14 #435 from @mansona
+
 7.1.0 / 2022-07-26
 ==================
 
