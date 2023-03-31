@@ -6,7 +6,7 @@ module.exports = function (environment) {
     modulePrefix: 'dummy',
     environment,
     rootURL: '/',
-    locationType: 'trailing-history',
+    locationType: 'auto',
 
     EmberENV: {
       FEATURES: {
