@@ -1,3 +1,8 @@
+8.0.1 / 2023-03-31
+==================
+* fix progress-bar transition aborted #453 from @mansona
+* update lint-to-the-future dashboard workflow #418 from @mansona
+
 8.0.0 / 2023-03-20
 ==================
 * Add link to Mastodon account #445 from @ef4
