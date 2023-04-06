@@ -1,13 +1,15 @@
 <div class="pagination-wrapper">
-  {{#if (has-block "previous")}}
+  {{#if @showPrevious}}
     <div class="previous-wrapper">
-      {{yield to='previous'}}
+      <img alt="left arrow" src="/images/icons/arrow-icon.svg" />
+      <div>{{yield to='previous'}}</div>
     </div>
   {{/if}}
 
-  {{#if (has-block "next")}}
+  {{#if @showNext}}
     <div class="next-wrapper">
-      {{yield to='next'}}
+      <div>{{yield to='next'}}</div>
+      <img alt="right arrow" src="/images/icons/arrow-icon.svg" />
     </div>
   {{/if}}
 </div>
