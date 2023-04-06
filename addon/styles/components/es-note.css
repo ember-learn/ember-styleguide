@@ -1,7 +1,7 @@
 .cta {
   background-color: var(--color-yellow-light);
   border-radius: var(--radius-lg);
-  margin: auto;
+  margin: var(--spacing-1) auto;
   max-width: 90%;
   position: relative;
   overflow: hidden;
@@ -27,6 +27,7 @@
 .cta-note img {
   margin: var(--spacing-2);
   transform: rotate(15deg);
+  object-fit: contain;
 }
 
 .cta:before {
