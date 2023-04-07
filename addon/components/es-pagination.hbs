@@ -6,7 +6,7 @@
     </div>
   {{/if}}
 
-  {{#if @showNext}}
+  {{#if (and (has-block "next") @showNext)}}
     <div class="next-wrapper">
       <div>{{yield to='next'}}</div>
       <img alt="right arrow" src="/images/icons/arrow-icon.svg" />
