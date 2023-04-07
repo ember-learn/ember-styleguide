@@ -253,19 +253,11 @@ img {
   max-width: 100%;
 }
 
-/*
-@media (max-width: 1280px) and (min-width: 421px) {
-  body,
-  html {
+@media (max-width: 1080px) {
+  hr {
+    margin: var(--spacing-2) 0px;
   }
 }
-
-@media (max-width: 520px) {
-  body,
-  html {
-  }
-}
-*/
 
 /* move beyond this point */
 
