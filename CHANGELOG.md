@@ -1,3 +1,9 @@
+8.1.0 / 2023-04-07
+==================
+* *Breaking* Update pagination component #457 from @MinThaMie
+* add @ember/string to ember-try beta and canary #458 from @mansona
+* Fix strechting of Zoeys and Tomsters and give them some space in Notes #455 from @MinThaMie
+
 8.0.1 / 2023-03-31
 ==================
 * fix progress-bar transition aborted #453 from @mansona
