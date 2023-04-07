@@ -1,0 +1,41 @@
+.pagination-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 40px;
+  grid-template-areas:
+    "previous next";
+  margin: var(--spacing-1) 0;
+  & > .previous-wrapper{
+    grid-area: previous;
+    & > img {
+      transform: rotate(90deg);
+    }
+    &:hover > img {
+      transform: rotate(90deg) translateY(0.5em);
+    }
+  }
+
+  & > .next-wrapper {
+    grid-area: next;
+    justify-content: end;
+    text-align: right;
+    & > img {
+      transform: rotate(270deg);
+    }
+
+    &:hover > img {
+      transform: rotate(270deg) translateY(0.5em);
+    }
+  }
+
+  & > .previous-wrapper,  & > .next-wrapper {
+    display: flex;
+    align-items: center;
+    & > img {
+      margin: 0 0.5em;
+      transition: transform 0.3s;
+    }
+  }
+}

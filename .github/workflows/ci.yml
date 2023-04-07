@@ -12,21 +12,33 @@ concurrency:
    cancel-in-progress: true
 
 jobs:
-  test:
-    name: "Tests"
+  percy:
+    name: "Percy Tests"
     runs-on: ubuntu-latest
     env:
       PERCY_TOKEN: ee0a9d5c1122d6a21852edf19b5b309aaec18077fb3900c98995c90bc48ed240
-      RUN_PERCY_TESTS: true
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14.x
+          cache: npm
+      - run: npm i -g npm@8
+      - run: npm ci
+      - run: npx percy exec -- npm run test:docs
+
+  test:
+    name: "Tests"
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
       - uses: mansona/npm-lockfile-version@v1
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 14.x
           cache: npm
-      - run: npm i -g npm@7
+      - run: npm i -g npm@8
       - run: npm ci
       - run: npm run lint
       - run: npx percy exec -- npm run test
@@ -37,11 +49,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 14.x
           cache: npm
-      - run: npm i -g npm@7
+      - run: npm i -g npm@8
       - run: npm install --no-shrinkwrap
       - run: npm run test:ember
 
@@ -60,21 +72,51 @@ jobs:
           - ember-lts-3.28
           - ember-release
           - ember-beta
-          - ember-canary
           - ember-classic
           - ember-default-with-jquery
           - embroider-safe
           - embroider-optimized
           - no-deprecations
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14.x
+          cache: npm
+      - run: npm i -g npm@8
+      - run: npm ci
+      - name: Run Tests
+        run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
+
+  allow-fail-try-scenarios:
+    name: ${{ matrix.try-scenario }} - Allowed to fail
+    runs-on: ubuntu-latest
+    needs: 'test'
+    permissions:
+      pull-requests: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        try-scenario:
+          - ember-canary
           - ember-release-no-deprecations
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 14.x
           cache: npm
-      - run: npm i -g npm@7
+      - run: npm i -g npm@8
       - run: npm ci
       - name: Run Tests
+        id: tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
+        continue-on-error: true
+      - uses: mainmatter/continue-on-error-comment@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          outcome: ${{ steps.tests.outcome }}
+          test-id: ${{ matrix.try-scenario }}

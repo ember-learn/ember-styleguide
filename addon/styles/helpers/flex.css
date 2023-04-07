@@ -4,3 +4,15 @@
   display: flex;
   justify-content: space-between;
 }
+
+.flex-responsive{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+}
+
+.flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

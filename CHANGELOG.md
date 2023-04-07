@@ -1,3 +1,33 @@
+8.1.0 / 2023-04-07
+==================
+* *Breaking* Update pagination component #457 from @MinThaMie
+* add @ember/string to ember-try beta and canary #458 from @mansona
+* Fix strechting of Zoeys and Tomsters and give them some space in Notes #455 from @MinThaMie
+
+8.0.1 / 2023-03-31
+==================
+* fix progress-bar transition aborted #453 from @mansona
+* update lint-to-the-future dashboard workflow #418 from @mansona
+
+8.0.0 / 2023-03-20
+==================
+* Add link to Mastodon account #445 from @ef4
+* update percy-cli #451 from @mansona
+* add permissions for continue-on-error #449 from @mansona
+* Fix CI #422 from @mansona
+* Adds pagination component to the styleguide #433 from @MinThaMie
+* Update percy #434 from @mansona
+* Breaking: drop support for EOL Node - minimum supported now v14 #435 from @mansona
+
+7.1.0 / 2022-07-26
+==================
+
+  * Flex helper classes #423 from @MinThaMie
+  * Adds dog eared note styling #421 from @MinThaMie
+  * update lint-to-the-future dependencies #424 from @mansona
+  * Creates banner with the same style as on the current website #419 from @MinThaMie
+  * Use CSS instead of utility classes from ESNote - to allow HTML to be backwards compatible #413 from @NullVoxPopuli
+
 7.0.0 / 2021-12-30
 ==================
 
