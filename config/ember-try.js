@@ -54,6 +54,7 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': await getChannelURL('beta'),
+            '@ember/string': '*',
           },
           overrides: {
             'ember-source': '$ember-source',
@@ -65,6 +66,7 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': await getChannelURL('canary'),
+            '@ember/string': '*',
           },
           overrides: {
             'ember-source': '$ember-source',
@@ -118,6 +120,7 @@ module.exports = async function () {
           devDependencies: {
             'ember-source': await getChannelURL('release'),
             'ember-deprecation-error': '*',
+            '@ember/string': '*',
           },
           overrides: {
             'ember-source': '$ember-source',
