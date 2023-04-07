@@ -1,5 +1,5 @@
 <div class="pagination-wrapper">
-  {{#if @showPrevious}}
+  {{#if (and (has-block "previous") @showPrevious)}}
     <div class="previous-wrapper">
       <img alt="left arrow" src="/images/icons/arrow-icon.svg" />
       <div>{{yield to='previous'}}</div>
