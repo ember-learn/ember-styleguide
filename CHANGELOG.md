@@ -1,3 +1,9 @@
+8.2.0 / 2023-04-15
+==================
+* Bump jsdom from 16.4.0 to 16.7.0 #428 from @dependabot[bot]
+* Bump minimatch from 3.0.4 to 3.1.2 #450 from @dependabot[bot]
+* Fix mobile margin for &lt;hr&gt; #459 from @MinThaMie
+
 8.1.0 / 2023-04-07
 ==================
 * *Breaking* Update pagination component #457 from @MinThaMie
