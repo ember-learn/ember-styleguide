@@ -15,7 +15,7 @@ module('Integration | Component | es footer', function(hooks) {
     const footerStyle = window.getComputedStyle(footer, null);
     const footerBgColor = footerStyle.getPropertyValue('background-color');
 
-    assert.equal(footerSocialLinks.length, 3, 'social links are loading');
+    assert.equal(footerSocialLinks.length, 4, 'social links are loading');
     assert.equal(footerContribtuionsLinks.length, 4, 'contributors links are loading');
     assert.equal(footerBgColor, 'rgb(242, 236, 233)', 'background color is rendering');
   });
