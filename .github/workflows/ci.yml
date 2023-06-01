@@ -45,11 +45,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     strategy:
+      fail-fast: false
       matrix:
         scenario:
-          - 'ember-release'
-          - 'ember-beta'
-          - 'ember-canary'
+          - 'ember-lts-3.28'
           - 'ember-default-with-jquery'
     steps:
       - uses: actions/checkout@v2
@@ -60,3 +59,37 @@ jobs:
       - run: npm ci
       - name: Test
         run: npx ember try:one $EMBER_TRY_SCENARIO ${{ matrix.scenario }}
+
+  allow-fail-try-scenarios:
+    name: ${{ matrix.try-scenario }} - Allowed to fail
+    runs-on: ubuntu-latest
+    needs: 'test'
+
+    permissions:
+      pull-requests: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        try-scenario:
+          - ember-release
+          - ember-beta
+          - ember-canary
+          - ember-release-no-deprecations
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - name: Run Tests
+        id: tests
+        run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
+        continue-on-error: true
+      - uses: mainmatter/continue-on-error-comment@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          outcome: ${{ steps.tests.outcome }}
+          test-id: ${{ matrix.try-scenario }}
