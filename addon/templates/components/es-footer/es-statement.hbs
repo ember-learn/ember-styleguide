@@ -5,7 +5,7 @@
   <p class="footer-tagline">{{tagline}}</p>
   <div class="footer-social">
     {{#each socialLinks as |link|}}
-      <a href={{link.href}} title={{link.title}}>
+      <a href={{link.href}} title={{link.title}} rel="me">
         {{svg-jar link.class}}
       </a>
     {{/each}}
