@@ -9,7 +9,7 @@ on:
   pull_request:
 
 env:
-  NODE_VERSION: 10
+  NODE_VERSION: 16
 
 jobs:
   test:
@@ -22,7 +22,6 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - run: npm i -g npm@7
       - run: npm ci
       - run: npm run lint:hbs
       - run: npm run lint:js
@@ -38,7 +37,6 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - run: npm i -g npm@7
       - run: npm install --no-package-lock
       - run: npm run test
 
@@ -59,7 +57,6 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - run: npm i -g npm@7
       - run: npm ci
       - name: Test
         run: npx ember try:one $EMBER_TRY_SCENARIO ${{ matrix.scenario }}
