@@ -4,7 +4,7 @@
 
 The sidebar component can be used together with the sidebar-container class to add a responsive sidebar to the page. If the sidebar is the first element in the sidebar-container it will display as a left sidebar. Otherwise it will display as a right sidebar.
 
-The sidebar component will automatically switch to the mobile mode once your browser window is smaller than or equal to 768px.
+The sidebar component will automatically switch to the mobile mode once your browser window is smaller than or equal to 844px.
 
 <style>
   .sidebar-container {
@@ -20,7 +20,7 @@ The sidebar component will automatically switch to the mobile mode once your bro
     background: #FFF;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 844px) {
     .sidebar-container .es-sidebar {
       width: calc(100% - var(--es-sidebar-padding) * 2);
     }

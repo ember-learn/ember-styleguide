@@ -9,7 +9,7 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 844px) {
   .es-sidebar-toggle {
     position: fixed;
     bottom: 30px;
