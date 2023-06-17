@@ -1,5 +1,5 @@
 :root {
-  --sidebar-width: 16rem;
+  --sidebar-width: 18.5rem;
 }
 
 .sidebar-container {
@@ -19,7 +19,7 @@
   grid-column: 2 / span 2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 844px) {
   .sidebar-container {
     display: block;
     padding: var(--spacing-4) var(--grid-margin);
