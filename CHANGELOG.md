@@ -1,3 +1,7 @@
+8.3.0 / 2023-06-29
+==================
+* Increase width sidebar #464 from @MinThaMie
+
 8.2.0 / 2023-04-15
 ==================
 * Bump jsdom from 16.4.0 to 16.7.0 #428 from @dependabot[bot]
