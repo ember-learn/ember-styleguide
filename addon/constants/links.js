@@ -66,8 +66,18 @@ export default [
         type: 'link',
       },
       {
+        href: 'https://emberjs.com/browser-support',
+        name: 'Browser Support',
+        type: 'link',
+      },
+      {
         href: 'https://deprecations.emberjs.com',
         name: 'Deprecations',
+        type: 'link',
+      },
+      {
+        href: 'https://rfcs.emberjs.com',
+        name: 'RFCs Website',
         type: 'link',
       },
     ],
@@ -92,24 +102,34 @@ export default [
         type: 'link',
       },
       {
+        href: 'https://emberjs.com/community/black-lives-matter/',
+        name: 'Black Lives Matter',
+        type: 'link',
+      },
+      {
+        type: 'divider',
+      },
+      {
         href: 'https://help-wanted.emberjs.com/',
         name: 'Help Wanted',
         type: 'link',
       },
       {
-        type: 'divider',
-      },
-      {
-        href: 'https://emberjs.com/community/meetups',
-        name: 'Meetups',
+        href: 'https://emberjs.com/survey',
+        name: 'Ember Community Survey',
         type: 'link',
       },
       {
         type: 'divider',
       },
       {
-        href: 'http://emberconf.com/',
-        name: 'Ember Conf',
+        href: 'https://emberconf.com/',
+        name: 'EmberConf',
+        type: 'link',
+      },
+      {
+        href: 'https://emberjs.com/community/meetups',
+        name: 'Meetups',
         type: 'link',
       },
     ],
@@ -119,7 +139,7 @@ export default [
     type: 'dropdown',
     items: [
       {
-        href: 'https://emberjs.com/team',
+        href: 'https://emberjs.com/teams',
         name: 'The Team',
         type: 'link',
       },
