@@ -43,6 +43,7 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': await getChannelURL('release'),
+            '@ember/string': '*',
           },
           overrides: {
             'ember-source': '$ember-source',
