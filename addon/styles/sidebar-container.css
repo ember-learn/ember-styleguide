@@ -19,6 +19,11 @@
   grid-column: 2 / span 2;
 }
 
+.sidebar-container--full-width {
+  max-width: 100%;
+  padding: 0;
+}
+
 @media (max-width: 844px) {
   .sidebar-container {
     display: block;
