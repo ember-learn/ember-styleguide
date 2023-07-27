@@ -9,6 +9,10 @@
   display: none;
 }
 
+.es-sidebar--border-right {
+  border-right: 2px solid var(--color-gray-300);
+}
+
 @media (max-width: 844px) {
   .es-sidebar-toggle {
     position: fixed;
@@ -82,5 +86,9 @@
 
   .es-sidebar-close svg path {
     fill: currentColor;
+  }
+
+  .es-sidebar--border-right {
+    border-right: none;
   }
 }
