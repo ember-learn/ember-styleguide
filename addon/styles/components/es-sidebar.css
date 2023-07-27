@@ -12,6 +12,7 @@
 @media (max-width: 844px) {
   .es-sidebar-toggle {
     position: fixed;
+    z-index: 1;
     bottom: 30px;
     right: 30px;
 
@@ -43,6 +44,7 @@
     box-sizing: border-box;
     display: none;
     position: fixed;
+    z-index: 1;
     top: var(--es-sidebar-padding);
     left: var(--es-sidebar-padding);
     height: calc(100% - var(--es-sidebar-padding) * 2);
