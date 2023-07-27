@@ -24,6 +24,10 @@
   padding: 0;
 }
 
+.es-sidebar--border-right {
+  border-right: 2px solid var(--color-gray-300);
+}
+
 @media (max-width: 844px) {
   .sidebar-container {
     display: block;
