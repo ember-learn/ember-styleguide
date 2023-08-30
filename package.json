@@ -60,7 +60,7 @@
     "@percy/ember": "^3.0.1",
     "@release-it-plugins/lerna-changelog": "^5.0.0",
     "babel-eslint": "^10.1.0",
-    "bottled-ember": "^0.6.2",
+    "bottled-ember": "^1.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "concurrently": "^7.6.0",
     "ember-array-helper": "^5.1.0",
