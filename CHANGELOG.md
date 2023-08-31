@@ -1,3 +1,14 @@
+8.5.0 / 2023-08-31
+==================
+* Pin node version in volta so that it runs for people who have node 18 #479 from @MinThaMie
+* Sidebar clean up + full width #478 from @MinThaMie
+
+8.4.0 / 2023-07-25
+==================
+
+* Add @ember/string to ember-release dependencies #474 from @nickschot
+* Sync menu content from ember-website to styleguide #473 from @nickschot
+
 8.3.0 / 2023-06-29
 ==================
 * Increase width sidebar #464 from @MinThaMie
