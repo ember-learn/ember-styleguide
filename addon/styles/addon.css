@@ -14,6 +14,7 @@
 @import 'icon.css';
 @import 'sidebar-container.css';
 @import 'well.css';
+@import 'algolia-search.css';
 
 /* Helpers */
 @import 'helpers/index.css';
