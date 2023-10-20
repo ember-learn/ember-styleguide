@@ -18,7 +18,6 @@
   },
   "scripts": {
     "build": "bottled-ember build --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember --links docs,public,docs-styles:app/styles --no-overlay --environment=production",
-    "changelog": "auto-changelog --template changelog.template --unreleased-only --prepend --load-github-issue-data --github-cache-dir .changelog",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel \"lint:!(fix)\"",
     "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*:fix",
     "lint:hbs": "ember-template-lint .",
@@ -59,7 +58,7 @@
     "@glimmer/tracking": "^1.0.4",
     "@percy/cli": "^1.20.2",
     "@percy/ember": "^3.0.1",
-    "auto-changelog": "https://git@github.com/mansona/auto-changelog.git#epic",
+    "@release-it-plugins/lerna-changelog": "^5.0.0",
     "babel-eslint": "^10.1.0",
     "bottled-ember": "^0.6.2",
     "broccoli-asset-rev": "^3.0.0",
@@ -105,6 +104,7 @@
     "prettier": "^2.5.1",
     "qunit": "^2.17.2",
     "qunit-dom": "^1.6.0",
+    "release-it": "^15.5.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-declaration-strict-value": "^1.8.0",
     "stylelint-order": "^4.0.0",
@@ -113,13 +113,31 @@
   "engines": {
     "node": "18.* || >= 20"
   },
+  "volta": {
+    "node": "18.18.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "ember": {
     "edition": "octane"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
   },
-  "volta": {
-    "node": "18.18.2"
+  "release-it": {
+    "plugins": {
+      "@release-it-plugins/lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
   }
 }
