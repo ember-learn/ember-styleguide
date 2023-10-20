@@ -16,3 +16,5 @@ module.exports['ember-cli-build'] = {
     extensions: ['js', 'css', 'map'],
   },
 };
+
+module.exports.fastbootDependencies = ['crypto'];
