@@ -1,7 +1,7 @@
 # Table of Contents
 
 Instead of providing a component we provide this concept for our table of contents. You can see the concept below.
-Every item in the list is either a `toc-heading`, giving it heading styling, or an `toc-item`. The `anchor`-tags wrapped in a `toc-item` will get specific styling. On the main level, not wrapped in a `sub-table-of contents`, they will be the brand-color. When they are wrapped in a `sub-table-of-contents`, they will have an "active" indicator and a hover state, this will also indent them from the main level.
+Every item in the list is either a `toc-heading`, giving it heading styling, or an `toc-item`. The `anchor`-tags wrapped in a `toc-item` will get specific styling. On the main level, not wrapped in a `sub-table-of-contents`, they will be the brand-color. When they are wrapped in a `sub-table-of-contents`, they will have an "active" indicator and a hover state, this will also indent them from the main level.
 
 ```html
 <ul class="table-of-contents">
