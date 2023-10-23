@@ -15,6 +15,7 @@
 @import 'sidebar-container.css';
 @import 'well.css';
 @import 'table-of-contents.css';
+@import 'header-anchor';
 
 /* Helpers */
 @import 'helpers/index.css';
