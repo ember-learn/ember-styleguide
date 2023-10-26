@@ -16,12 +16,12 @@
   margin-bottom: 0;
 }
 
-li.toc-heading {
+.table-of-contents li.toc-heading {
   margin-top: var(--spacing-4);
   color: var(--color-gray-600);
 }
 
-li.toc-heading:first-child {
+.table-of-contents li.toc-heading:first-child {
   margin-top: 0;
 }
 
