@@ -1,3 +1,21 @@
+
+## v9.0.0 (2023-10-26)
+
+#### :boom: Breaking Change
+* [#491](https://github.com/ember-learn/ember-styleguide/pull/491) Drop support for Ember < 3.28 ([@mansona](https://github.com/mansona))
+* [#488](https://github.com/ember-learn/ember-styleguide/pull/488) drop support for EOL node < 18 ([@mansona](https://github.com/mansona))
+
+#### :rocket: Enhancement
+* [#492](https://github.com/ember-learn/ember-styleguide/pull/492) Move table of contents styling into concepts ([@MinThaMie](https://github.com/MinThaMie))
+* [#493](https://github.com/ember-learn/ember-styleguide/pull/493) Move header anchor styling into styleguide ([@MinThaMie](https://github.com/MinThaMie))
+
+#### :house: Internal
+* [#489](https://github.com/ember-learn/ember-styleguide/pull/489) move to release-it for deploys ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Anne-Greeth Schot-van Herwijnen ([@MinThaMie](https://github.com/MinThaMie))
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 8.5.0 / 2023-08-31
 ==================
 * Pin node version in volta so that it runs for people who have node 18 #479 from @MinThaMie
