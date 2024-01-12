@@ -16,6 +16,8 @@
 @import 'well.css';
 @import 'table-of-contents.css';
 @import 'header-anchor';
+@import 'central-content.css';
+@import 'on-this-page.css';
 
 /* Helpers */
 @import 'helpers/index.css';
