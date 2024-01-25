@@ -1,0 +1,24 @@
+.on-this-page-wrapper ul {
+  list-style: none;
+  padding: 0;
+}
+
+.on-this-page-wrapper ul li {
+  margin-bottom: var(--spacing-1);
+}
+
+.on-this-page-wrapper-header {
+  color: var(--color-gray-600);
+  margin-top: 0.6em;
+}
+
+.on-this-page-wrapper hr {
+  margin-top: 0;
+  display: none;
+}
+
+main .on-this-page-wrapper a {
+  text-decoration: none;
+  color: var(--color-text);
+  background: none;
+}
