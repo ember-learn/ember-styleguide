@@ -8,14 +8,14 @@
   "homepage": "https://ember-learn.github.io/ember-styleguide",
   "repository": "https://github.com/ember-learn/ember-styleguide.git",
   "license": "MIT",
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
   "contributors": [
     "Sivakumar Kailasam <siva@rubberduck.engineering>",
     "Ember.JS Learning team"
   ],
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
   "scripts": {
     "build": "ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel \"lint:!(fix)\"",
@@ -100,6 +100,7 @@
     "prettier": "^2.5.1",
     "qunit": "^2.17.2",
     "qunit-dom": "^1.6.0",
+    "release-plan": "^0.7.0",
     "stylelint-config-standard": "^18.0.0",
     "stylelint-declaration-strict-value": "^1.0.4",
     "stylelint-order": "^1.0.0",
