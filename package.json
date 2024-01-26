@@ -55,7 +55,7 @@
     "@glimmer/tracking": "^1.0.4",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
-    "ember-a11y-landmarks": "^1.0.1",
+    "ember-a11y-landmarks": "^2.0.0",
     "ember-angle-bracket-invocation-polyfill": "^1.3.0",
     "ember-cli": "~3.28.6",
     "ember-cli-addon-docs": "^6.0.2",

@@ -79,8 +79,8 @@ devDependencies:
     specifier: ^3.0.0
     version: 3.0.0
   ember-a11y-landmarks:
-    specifier: ^1.0.1
-    version: 1.0.1(@babel/core@7.23.5)
+    specifier: ^2.0.0
+    version: 2.0.0
   ember-angle-bracket-invocation-polyfill:
     specifier: ^1.3.0
     version: 1.3.1(@babel/core@7.23.5)
@@ -1414,7 +1414,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.0
-    dev: true
 
   /@babel/template@7.22.15:
     resolution: {integrity: sha512-QPErUVm4uyJa60rkI73qneDacvdvzxshT3kksGqlGWYdOTIUOwJ7RDUL8sGqslY1uXWSL6xMFKEXDS3ox2uF0w==}
@@ -2735,7 +2734,7 @@ packages:
     resolution: {integrity: sha512-b3nLFGaGkJ9rzOcuXRfHkZMdjsawuDD0ENL9fzTophtBg8FJHSGbH7daXkEpcwy3v7Xol3pAvsmlYyFhR4pqJw==}
     dependencies:
       '@types/node': 20.10.4
-      '@types/unist': 2.0.10
+      '@types/unist': 3.0.2
       '@types/vfile-message': 2.0.0
     dev: true
 
@@ -3865,9 +3864,9 @@ packages:
       '@babel/types': 7.23.5
       lodash: 4.17.21
 
-  /babel-plugin-htmlbars-inline-precompile@0.2.6:
-    resolution: {integrity: sha512-H4H75TKGUFij8ukwEYWEERAgrUf16R8NSK1uDPe3QwxT8mnE1K8+/s6DVjUqbM5Pv6lSIcE4XufXdlSX+DTB6g==}
-    engines: {node: '>= 4'}
+  /babel-plugin-htmlbars-inline-precompile@3.2.0:
+    resolution: {integrity: sha512-IUeZmgs9tMUGXYu1vfke5I18yYJFldFGdNFQOWslXTnDWXzpwPih7QFduUqvT+awDpDuNtXpdt5JAf43Q1Hhzg==}
+    engines: {node: 8.* || 10.* || >= 12.*}
     dev: true
 
   /babel-plugin-htmlbars-inline-precompile@5.3.1:
@@ -4866,6 +4865,14 @@ packages:
     resolution: {integrity: sha512-VabSGRpKIzpmC+r+tJueCE5h8k6vON7EIMMWu6d/FyPdtijwLQ7QvzShEw+m3mHoDzUaj/kiZsDYrS8X2adsBg==}
     engines: {node: 8.* || >= 10.*}
 
+  /broccoli-output-wrapper@2.0.0:
+    resolution: {integrity: sha512-V/ozejo+snzNf75i/a6iTmp71k+rlvqjE3+jYfimuMwR1tjNNRdtfno+NGNQB2An9bIAeqZnKhMDurAznHAdtA==}
+    dependencies:
+      heimdalljs-logger: 0.1.10
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /broccoli-output-wrapper@3.2.5:
     resolution: {integrity: sha512-bQAtwjSrF4Nu0CK0JOy5OZqw9t5U0zzv2555EA/cF8/a8SLDTIetk9UgrtMVw7qKLKdSpOZ2liZNeZZDaKgayw==}
     engines: {node: 10.* || >= 12.*}
@@ -4959,6 +4966,21 @@ packages:
       quick-temp: 0.1.8
       rimraf: 2.7.1
       symlink-or-copy: 1.3.1
+
+  /broccoli-plugin@3.1.0:
+    resolution: {integrity: sha512-7w7FP8WJYjLvb0eaw27LO678TGGaom++49O1VYIuzjhXjK5kn2+AMlDm7CaUFw4F7CLGoVQeZ84d8gICMJa4lA==}
+    engines: {node: 8.* || 10.* || >= 12.*}
+    dependencies:
+      broccoli-node-api: 1.7.0
+      broccoli-output-wrapper: 2.0.0
+      fs-merger: 3.2.1
+      promise-map-series: 0.2.3
+      quick-temp: 0.1.8
+      rimraf: 2.7.1
+      symlink-or-copy: 1.3.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /broccoli-plugin@4.0.7:
     resolution: {integrity: sha512-a4zUsWtA1uns1K7p9rExYVYG99rdKeGRymW0qOCNkvDPHQxVi3yVyJHhQbM3EZwdt2E0mnhr5e0c/bPpJ7p3Wg==}
@@ -7254,15 +7276,13 @@ packages:
       minimalistic-crypto-utils: 1.0.1
     dev: true
 
-  /ember-a11y-landmarks@1.0.1(@babel/core@7.23.5):
-    resolution: {integrity: sha512-ZO3lnL7MwkXJ/rAf1RxctWF65dX0JJlOY9qM12ExQrZ4+jZWvqJMWmoEOUBnUeQJr/4L4J6Eqag/V8ivqxDa/g==}
-    engines: {node: '>= 4'}
+  /ember-a11y-landmarks@2.0.0:
+    resolution: {integrity: sha512-U3Fq4TDTv1P0rarjaiHQwYtRmmRQcpZKuPeC+XF14mppuH+U4VYKZjFhfLWkjehwaPlqfkAkomD5rQMcT0YUhg==}
+    engines: {node: 10.* || >= 12}
     dependencies:
-      ember-cli-babel: 6.18.0(@babel/core@7.23.5)
-      ember-cli-htmlbars: 1.3.5
-      ember-cli-htmlbars-inline-precompile: 0.4.4(ember-cli-babel@6.18.0)
+      ember-cli-babel: 7.26.11
+      ember-cli-htmlbars: 4.5.0
     transitivePeerDependencies:
-      - '@babel/core'
       - supports-color
     dev: true
 
@@ -7781,34 +7801,6 @@ packages:
       - supports-color
     dev: false
 
-  /ember-cli-htmlbars-inline-precompile@0.4.4(ember-cli-babel@6.18.0):
-    resolution: {integrity: sha512-6FmY+KsPZwT0l4MF3H8gDGC5zxZzt3/ILfPJg71xXe1l3zRAmUsX7SyUtKOaAKVEQJj8um2kZxbCx+mgzZt6Sw==}
-    engines: {node: '>= 4'}
-    deprecated: Use ember-cli-htmlbars instead.
-    peerDependencies:
-      ember-cli-babel: ^6.0.0
-    dependencies:
-      babel-plugin-htmlbars-inline-precompile: 0.2.6
-      ember-cli-babel: 6.18.0(@babel/core@7.23.5)
-      ember-cli-version-checker: 2.2.0
-      hash-for-dep: 1.5.1
-      silent-error: 1.1.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /ember-cli-htmlbars@1.3.5:
-    resolution: {integrity: sha512-Qur/anb0Vk57qmIhGLkSzl8X1QIMoae6pLa14MRQ8+YD2N5fNs3qdhEFf0SDBquPOH1QxQtraiNQvji47QBJyg==}
-    dependencies:
-      broccoli-persistent-filter: 1.4.6
-      ember-cli-version-checker: 1.3.1
-      hash-for-dep: 1.5.1
-      json-stable-stringify: 1.1.0
-      strip-bom: 2.0.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /ember-cli-htmlbars@2.0.5:
     resolution: {integrity: sha512-3f3PAxdnQ/fhQa8XP/3z4RLRgLHxV8j4Ln75aHbRdemOCjBa048KxL9l+acRLhCulbGQCMnLiIUIC89PAzLrcA==}
     engines: {node: '>= 4.0.0'}
@@ -7829,6 +7821,28 @@ packages:
       hash-for-dep: 1.5.1
       json-stable-stringify: 1.1.0
       strip-bom: 3.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /ember-cli-htmlbars@4.5.0:
+    resolution: {integrity: sha512-bYJpK1pqFu9AadDAGTw05g2LMNzY8xTCIqQm7dMJmKEoUpLRFbPf4SfHXrktzDh7Q5iggl6Skzf1M0bPlIxARw==}
+    engines: {node: 8.* || 10.* || >= 12.*}
+    dependencies:
+      '@ember/edition-utils': 1.2.0
+      babel-plugin-htmlbars-inline-precompile: 3.2.0
+      broccoli-debug: 0.6.5
+      broccoli-persistent-filter: 2.3.1
+      broccoli-plugin: 3.1.0
+      common-tags: 1.8.2
+      ember-cli-babel-plugin-helpers: 1.1.1
+      fs-tree-diff: 2.0.1
+      hash-for-dep: 1.5.1
+      heimdalljs-logger: 0.1.10
+      json-stable-stringify: 1.1.0
+      semver: 6.3.1
+      strip-bom: 4.0.0
+      walk-sync: 2.2.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8105,12 +8119,6 @@ packages:
       walk-sync: 2.2.0
     transitivePeerDependencies:
       - supports-color
-
-  /ember-cli-version-checker@1.3.1:
-    resolution: {integrity: sha512-mu1Apdd19ZuDsy9WAHheFhltaJx+0ardFNM8Hb/AeRO9RokOK/bdUq/Jc1oeg0/Hl18tnxg8STG9TyJ6HgE3+g==}
-    dependencies:
-      semver: 5.7.2
-    dev: true
 
   /ember-cli-version-checker@2.2.0:
     resolution: {integrity: sha512-G+KtYIVlSOWGcNaTFHk76xR4GdzDLzAS4uxZUKdASuFX0KJE43C6DaqL+y3VTpUFLI2FIkAS6HZ4I1YBi+S3hg==}
@@ -9918,6 +9926,7 @@ packages:
 
   /figgy-pudding@3.5.2:
     resolution: {integrity: sha512-0btnI/H8f2pavGMN8w40mlSKOfTK2SVJmBfBeVIj3kNw0swwgzyRq0d5TJVOwodFmtvpPeWPN/MCcfuWF0Ezbw==}
+    deprecated: This module is no longer supported.
     dev: true
 
   /figures@1.7.0:
@@ -11961,10 +11970,6 @@ packages:
   /is-url-superb@6.1.0:
     resolution: {integrity: sha512-LXdhGlYqUPdvEyIhWPEEwYYK3yrUiPcBjmFGlZNv1u5GtIL5qQRf7ddDyPNAvsMFqdzS923FROpTQU97tLe3JQ==}
     engines: {node: '>=12'}
-    dev: true
-
-  /is-utf8@0.2.1:
-    resolution: {integrity: sha512-rMYPYvCzsXywIsldgLaSoPlw5PfoB/ssr7hY4pLfcodrA5M/eArza1a9VmTiNIBNMjOGr1Ow9mTyU2o69U6U9Q==}
     dev: true
 
   /is-weakref@1.0.2:
@@ -15361,7 +15366,6 @@ packages:
 
   /regenerator-runtime@0.14.0:
     resolution: {integrity: sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==}
-    dev: true
 
   /regenerator-runtime@0.9.6:
     resolution: {integrity: sha512-D0Y/JJ4VhusyMOd/o25a3jdUqN/bC85EFsaoL9Oqmy/O4efCh+xhp7yj2EEOsj974qvMkcW8AwUzJ1jB/MbxCw==}
@@ -15377,7 +15381,7 @@ packages:
   /regenerator-transform@0.15.2:
     resolution: {integrity: sha512-hfMp2BoF0qOk3uc5V20ALGDS2ddjQaLrdl7xrGXvAIow7qeWRM2VA2HuCHkUKk9slq3VwEwLNK3DFBqDfPGYtg==}
     dependencies:
-      '@babel/runtime': 7.12.18
+      '@babel/runtime': 7.23.5
 
   /regex-not@1.0.2:
     resolution: {integrity: sha512-J6SDjUgDxQj5NusnOtdFxDwN/+HWykR8GELwctJ7mdqhcyy1xEc4SRFHUXvxTp661YaVKAjfRLZ9cCqS6tn32A==}
@@ -16713,13 +16717,6 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       ansi-regex: 6.0.1
-    dev: true
-
-  /strip-bom@2.0.0:
-    resolution: {integrity: sha512-kwrX1y7czp1E69n2ajbG65mIo9dqvJ+8aBQXOGVxqwvNbsXdFM6Lq37dLAY3mknUwru8CfcCbfOLL/gMo+fi3g==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      is-utf8: 0.2.1
     dev: true
 
   /strip-bom@3.0.0:
