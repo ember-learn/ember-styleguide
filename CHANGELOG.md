@@ -1,4 +1,20 @@
 # Changelog
+## Release (2024-01-26)
+
+ember-styleguide 9.1.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-styleguide`
+  * [#495](https://github.com/ember-learn/ember-styleguide/pull/495) Central content + on-this-page styling ([@MinThaMie](https://github.com/MinThaMie))
+
+#### :house: Internal
+* `ember-styleguide`
+  * [#498](https://github.com/ember-learn/ember-styleguide/pull/498) use release-plan ([@mansona](https://github.com/mansona))
+  * [#497](https://github.com/ember-learn/ember-styleguide/pull/497) update percy widths ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Anne-Greeth Schot-van Herwijnen ([@MinThaMie](https://github.com/MinThaMie))
+- Chris Manson ([@mansona](https://github.com/mansona))
 
 
 ## v9.0.0 (2023-10-26)
