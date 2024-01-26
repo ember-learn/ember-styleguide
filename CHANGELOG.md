@@ -2,6 +2,23 @@
 
 ## Release (2024-01-26)
 
+ember-styleguide 3.3.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-styleguide`
+  * [#501](https://github.com/ember-learn/ember-styleguide/pull/501) [lts-v3] get legacy release embroider compatible ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `ember-styleguide`
+  * [#505](https://github.com/ember-learn/ember-styleguide/pull/505) fix publish-branch for release-plan ([@mansona](https://github.com/mansona))
+  * [#504](https://github.com/ember-learn/ember-styleguide/pull/504) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- [@github-actions[bot]](https://github.com/apps/github-actions)
+
+## Release (2024-01-26)
+
 ember-styleguide 3.2.0 (minor)
 
 #### :rocket: Enhancement
