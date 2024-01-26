@@ -1,6 +1,16 @@
 # Changelog
 ## Release (2024-01-26)
 
+ember-styleguide 9.1.1 (patch)
+
+#### :house: Internal
+* `ember-styleguide`
+  * [#500](https://github.com/ember-learn/ember-styleguide/pull/500) use new lint-to-the-future dashboard action ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+## Release (2024-01-26)
+
 ember-styleguide 9.1.0 (minor)
 
 #### :rocket: Enhancement
