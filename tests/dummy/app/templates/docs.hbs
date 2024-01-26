@@ -2,28 +2,28 @@
 
   {{#viewer.nav as |nav|}}
     {{nav.section "Introduction"}}
-    {{nav.item "This project" "docs.index"}}
+    <nav.item @label="This project" @route="docs.index" />
 
     {{nav.section "Layout Components"}}
-    {{nav.item "Aside" "docs.components.es-aside"}}
-    {{nav.item "Footer" "docs.components.es-footer"}}
-    {{nav.item "Header" "docs.components.es-header"}}
-    {{nav.item "Main" "docs.components.es-main"}}
+    <nav.item @label="Aside" @route="docs.components.es-aside" />
+    <nav.item @label="Footer" @route="docs.components.es-footer" />
+    <nav.item @label="Header" @route="docs.components.es-header" />
+    <nav.item @label="Main" @route="docs.components.es-main" />
 
     {{nav.section "Components"}}
-    {{nav.item "Accordion" "docs.components.es-accordion"}}
-    {{nav.item "Form" "docs.components.es-form"}}
-    {{nav.item "List" "docs.components.es-ulist"}}
-    {{nav.item "Blog heading" "docs.components.es-blog-heading"}}
-    {{nav.item "Button" "docs.components.es-button"}}
-    {{nav.item "Buttonbar" "docs.components.es-buttonbar"}}
-    {{nav.item "Card" "docs.components.es-card"}}
-    {{nav.item "Codesample" "docs.components.es-codesample"}}
-    {{nav.item "Datatable" "docs.components.es-datatable"}}
-    {{nav.item "Heading" "docs.components.es-heading"}}
-    {{nav.item "Navbar" "docs.components.es-navbar"}}
-    {{nav.item "Note" "docs.components.es-note"}}
-    {{nav.item "Search" "docs.components.es-search"}}
+    <nav.item @label="Accordion" @route="docs.components.es-accordion"/>
+    <nav.item @label="Form" @route="docs.components.es-form"/>
+    <nav.item @label="List" @route="docs.components.es-ulist"/>
+    <nav.item @label="Blog heading" @route="docs.components.es-blog-heading"/>
+    <nav.item @label="Button" @route="docs.components.es-button"/>
+    <nav.item @label="Buttonbar" @route="docs.components.es-buttonbar"/>
+    <nav.item @label="Card" @route="docs.components.es-card"/>
+    <nav.item @label="Codesample" @route="docs.components.es-codesample"/>
+    <nav.item @label="Datatable" @route="docs.components.es-datatable"/>
+    <nav.item @label="Heading" @route="docs.components.es-heading"/>
+    <nav.item @label="Navbar" @route="docs.components.es-navbar"/>
+    <nav.item @label="Note" @route="docs.components.es-note"/>
+    <nav.item @label="Search" @route="docs.components.es-search"/>
   {{/viewer.nav}}
 
   {{#viewer.main}}

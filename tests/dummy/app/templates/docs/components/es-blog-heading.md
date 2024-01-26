@@ -2,22 +2,22 @@
 
 ## Regular Post
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-blog-heading.hbs'}}
+<DocsDemo as |demo|>
+  <demo.example @name="es-blog-heading.hbs">
     <EsBlogHeading
       @author='Sara Poster'
       @postDate='03-20-2018'
       @postUrl='https://emberjs.com/blog'
       @postTitle='Pretty Awesome Blog Post'
     />
-  {{/demo.example}}
-  {{demo.snippet 'es-blog-heading.hbs'}}
-{{/docs-demo}}
+  </demo.example>
+  <demo.snippet @name="es-blog-heading.hbs" />
+</DocsDemo>
 
 ## Guest Post
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-blog-heading-guest.hbs'}}
+<DocsDemo as |demo|>
+  <demo.example @name="es-blog-heading-guest.hbs">
     <EsBlogHeading
       @author='Sara Poster'
       @postDate='03-20-2018'
@@ -25,8 +25,8 @@
       @postTitle='Pretty Awesome Blog Post'
       @isGuestPost=true
     />
-  {{/demo.example}}
-  {{demo.snippet 'es-blog-heading-guest.hbs'}}
-{{/docs-demo}}
+  </demo.example>
+  <demo.snippet @name="es-blog-heading-guest.hbs" />
+</DocsDemo>
 
 {{docs-note}}

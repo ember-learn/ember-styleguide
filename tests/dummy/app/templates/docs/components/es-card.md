@@ -1,21 +1,21 @@
 # Card
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-card'}}
-    {{#es-card}}
+<DocsDemo as |demo|>
+  <demo.example @name="es-card">
+    <EsCard>
       This is a card
-    {{/es-card}}
-  {{/demo.example}}
-  {{demo.snippet 'es-card'}}
-{{/docs-demo}}
+    </EsCard>
+  </demo.example>
+  <demo.snippet @name="es-card" />
+</DocsDemo>
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-card-has-border'}}
-    {{#es-card hasBorder=true}}
+<DocsDemo as |demo|>
+  <demo.example @name="es-card-has-border">
+    <EsCard @hasBorder={{true}}>
       This is a card
-    {{/es-card}}
-  {{/demo.example}}
-  {{demo.snippet 'es-card-has-border'}}
-{{/docs-demo}}
+    </EsCard>
+  </demo.example>
+  <demo.snippet @name="es-card-has-border" />
+</DocsDemo>
 
 {{docs-note}}

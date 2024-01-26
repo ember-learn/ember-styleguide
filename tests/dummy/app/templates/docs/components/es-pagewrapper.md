@@ -1,10 +1,10 @@
 # Page Wrapper
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-pagewrapper'}}
+<DocsDemo as |demo|>
+  <demo.example @name="es-pagewrapper">
     {{es-pagewrapper}}
-  {{/demo.example}}
-  {{demo.snippet 'es-pagewrapper'}}
-{{/docs-demo}}
+  </demo.example>
+  <demo.snippet @name="es-pagewrapper" />
+</DocsDemo>
 
 {{docs-note}}

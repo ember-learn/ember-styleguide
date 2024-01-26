@@ -6,30 +6,30 @@ The list component is an unstyled, unordered list. A title must be defined, but 
 
 ### Unstyled, Unordered List
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-ulist.hbs'}}
-    {{es-ulist listTitle="Zoey by City" listItems=listItems}}
-  {{/demo.example}}
-  {{demo.snippet 'es-ulist.hbs'}}
-{{/docs-demo}}
+<DocsDemo as |demo|>
+  <demo.example @name="es-ulist.hbs">
+    <EsUlist @listTitle="Zoey by City" @listItems={{listItems}} />
+  </demo.example>
+  <demo.snippet @name="es-ulist.hbs" />
+</DocsDemo>
 
 ### With Images
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-ulist-imagelist.hbs'}}
-    {{es-ulist listTitle="Zoey by City" listItems=listItems hasImage=true}}
-  {{/demo.example}}
-  {{demo.snippet 'es-ulist-imagelist.hbs'}}
-{{/docs-demo}}
+<DocsDemo as |demo|>
+  <demo.example @name="es-ulist-imagelist.hbs">
+    <EsUlist @listTitle="Zoey by City" @listItems={{listItems}} @hasImage={{true}} />
+  </demo.example>
+  <demo.snippet @name="es-ulist-imagelist.hbs" />
+</DocsDemo>
 
 ### With Links
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-ulist-linklist.hbs'}}
-    {{es-ulist listTitle="Zoey by City" listItems=listItems hasImage=true hasLink=true}}
-  {{/demo.example}}
-  {{demo.snippet 'es-ulist-linklist.hbs'}}
-{{/docs-demo}}
+<DocsDemo as |demo|>
+  <demo.example @name="es-ulist-linklist.hbs">
+    <EsUlist @listTitle="Zoey by City" @listItems={{listItems}} @hasImage={{true}} @hasLink={{true}} />
+  </demo.example>
+  <demo.snippet @name="es-ulist-linklist.hbs" />
+</DocsDemo>
 
 ## Other use cases
 
