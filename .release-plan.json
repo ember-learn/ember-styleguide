@@ -1,14 +1,10 @@
 {
   "solution": {
     "ember-styleguide": {
-      "impact": "minor",
-      "oldVersion": "9.0.0",
-      "newVersion": "9.1.0",
+      "impact": "patch",
+      "oldVersion": "9.1.0",
+      "newVersion": "9.1.1",
       "constraints": [
-        {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
-        },
         {
           "impact": "patch",
           "reason": "Appears in changelog section :house: Internal"
@@ -17,5 +13,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-01-26)\n\nember-styleguide 9.1.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-styleguide`\n  * [#495](https://github.com/ember-learn/ember-styleguide/pull/495) Central content + on-this-page styling ([@MinThaMie](https://github.com/MinThaMie))\n\n#### :house: Internal\n* `ember-styleguide`\n  * [#498](https://github.com/ember-learn/ember-styleguide/pull/498) use release-plan ([@mansona](https://github.com/mansona))\n  * [#497](https://github.com/ember-learn/ember-styleguide/pull/497) update percy widths ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Anne-Greeth Schot-van Herwijnen ([@MinThaMie](https://github.com/MinThaMie))\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-01-26)\n\nember-styleguide 9.1.1 (patch)\n\n#### :house: Internal\n* `ember-styleguide`\n  * [#500](https://github.com/ember-learn/ember-styleguide/pull/500) use new lint-to-the-future dashboard action ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
