@@ -1,12 +1,16 @@
-name: github pages
+name: Lint to the Future Dashboard
 
 on:
   push:
     branches:
       - master
+      - main
 
 jobs:
   deploy:
-    uses: mansona/lint-to-the-future-dashboard-action/.github/workflows/dashboard.yml@main
-    with:
-      folder: ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mansona/lttf-dashboard@v1
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
