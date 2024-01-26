@@ -8,4 +8,4 @@ This component is not yet implemented
   <demo.snippet @name="es-buttonbar" />
 </DocsDemo>
 
-{{docs-note}}
+<DocsNote />

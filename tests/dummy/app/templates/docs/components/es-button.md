@@ -85,4 +85,4 @@ There are some other ways this component could be used:
 - as a link
 - as a toggle button (supports the aria-pressed attribute)
 
-{{docs-note}}
+<DocsNote />

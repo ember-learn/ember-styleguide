@@ -16,4 +16,4 @@ The navbar comes with the default Ember links, if you would like to override the
   <demo.snippet @name="es-navbar-custom.hbs" />
 </DocsDemo>
 
-{{docs-note}}
+<DocsNote />

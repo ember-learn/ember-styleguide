@@ -29,4 +29,4 @@
   <demo.snippet @name="es-blog-heading-guest.hbs" />
 </DocsDemo>
 
-{{docs-note}}
+<DocsNote />

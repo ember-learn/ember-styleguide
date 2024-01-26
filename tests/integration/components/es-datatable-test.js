@@ -11,7 +11,7 @@ module('Integration | Component | es datatable', function(hooks){
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.on('myAction', function(val) { ... });
 
-    await render(hbs`{{es-datatable}}`);
+    await render(hbs`<EsDatatable />`);
 
     assert.dom(this.element).hasText('');
 

@@ -2,9 +2,9 @@
 
 <DocsDemo as |demo|>
   <demo.example @name="es-aside.hbs">
-    {{es-aside}}
+    <EsAside />
   </demo.example>
   <demo.snippet @name='es-aside.hbs' />
 </DocsDemo>
 
-{{docs-note}}
+<DocsNote />

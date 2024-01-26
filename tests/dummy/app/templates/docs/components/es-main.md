@@ -7,4 +7,4 @@
   <demo.snippet @name="es-main" />
 </DocsDemo>
 
-{{docs-note}}
+<DocsNote />

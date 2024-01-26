@@ -11,7 +11,7 @@ module('Integration | Component | es codesample', function(hooks){
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.on('myAction', function(val) { ... });
 
-    await render(hbs`{{es-codesample}}`);
+    await render(hbs`<EsCodesample />`);
 
     assert.dom(this.element).hasText('');
 

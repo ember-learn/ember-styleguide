@@ -18,4 +18,4 @@
   <demo.snippet @name="es-card-has-border" />
 </DocsDemo>
 
-{{docs-note}}
+<DocsNote />

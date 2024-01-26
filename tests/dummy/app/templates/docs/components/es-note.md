@@ -16,4 +16,4 @@
   <demo.snippet @name="es-note-blank" />
 </DocsDemo>
 
-{{docs-note}}
+<DocsNote />

@@ -30,4 +30,4 @@
   <demo.snippet @name="es-heading-page-heading" />
 </DocsDemo>
 
-{{docs-note}}
+<DocsNote />

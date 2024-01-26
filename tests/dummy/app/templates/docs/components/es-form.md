@@ -11,4 +11,4 @@ This component is not yet implemented
   <demo.snippet @name="es-form.hbs" />
 </DocsDemo>
 
-{{docs-note}}
+<DocsNote />

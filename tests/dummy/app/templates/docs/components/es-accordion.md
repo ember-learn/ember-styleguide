@@ -20,4 +20,4 @@
   <demo.snippet @name="es-accordion.hbs" />
 </DocsDemo>
 
-{{docs-note}}
+<DocsNote />

@@ -8,4 +8,4 @@
   <demo.snippet @name="es-search" />
 </DocsDemo>
 
-{{docs-note}}
+<DocsNote />

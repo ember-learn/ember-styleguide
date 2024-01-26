@@ -37,4 +37,4 @@ The list component is an unstyled, unordered list. A title must be defined, but 
 - to use an ordered list: 'isUnorderedList=false',
 - to visually hide the list title (it still must exist for A11y): 'isTitleVisible=false' 
 
-{{docs-note}}
+<DocsNote />

@@ -7,4 +7,4 @@
   <demo.snippet @name="es-pagewrapper" />
 </DocsDemo>
 
-{{docs-note}}
+<DocsNote />
