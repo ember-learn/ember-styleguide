@@ -1,5 +1,5 @@
 diff --git a/index.js b/index.js
-index 8b380f1c5701f2959640804299d1430d13ae6eeb..b6392aadf9cba2aafa22f06c6d7779db41b2e075 100644
+index b66041f0486cf83a461344c82e74a55e45a211e3..fe50a7aa04e25c6822167f84fb5347c33c9ec6b3 100644
 --- a/index.js
 +++ b/index.js
 @@ -28,11 +28,7 @@ module.exports = {
@@ -9,7 +9,7 @@ index 8b380f1c5701f2959640804299d1430d13ae6eeb..b6392aadf9cba2aafa22f06c6d7779db
 -    const pathToCore = path.join(
 -      this._nodeModulesPath,
 -      '@fortawesome',
--      'fontawesome-svg-core',
+-      'fontawesome-svg-core'
 -    );
 +    const pathToCore = moduleDir;
  

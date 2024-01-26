@@ -47,8 +47,8 @@
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.6.0",
-    "@embroider/test-setup": "^0.48.1",
-    "@fortawesome/ember-fontawesome": "^2.0.0",
+    "@embroider/test-setup": "^3.0.3",
+    "@fortawesome/ember-fontawesome": "^1.0.0",
     "@fortawesome/free-regular-svg-icons": "5.4.2",
     "@fortawesome/free-solid-svg-icons": "5.4.2",
     "@glimmer/component": "^1.0.4",
@@ -122,7 +122,7 @@
   },
   "pnpm": {
     "patchedDependencies": {
-      "@fortawesome/ember-fontawesome@2.0.0": "patches/@fortawesome__ember-fontawesome@2.0.0.patch"
+      "@fortawesome/ember-fontawesome@1.0.3": "patches/@fortawesome__ember-fontawesome@1.0.3.patch"
     }
   }
 }
