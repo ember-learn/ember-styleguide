@@ -1,5 +1,4 @@
 import Component from '@ember/component';
-import layout from '../templates/components/es-footer';
 import {
   socialLinks,
   infoLinks,
@@ -9,11 +8,11 @@ import {
 
 
 export default Component.extend({
-  layout,
   attributeBindings: ['ariaLabel:aria-label'],
   classNames: ['es-footer'],
   tagName: 'footer',
   currentYear: null,
+
   init() {
     this._super(...arguments);
     this.currentYear = new Date().getUTCFullYear();
@@ -26,6 +25,7 @@ export default Component.extend({
 
   //accessibility support
   ariaDescribedby: null,
+
   ariaLabel: null,
   ariaRole: 'contentinfo',
   title: null

@@ -1,71 +1,76 @@
 import Component from '@ember/component';
-import layout from '../templates/components/es-button';
 import { computed } from '@ember/object';
 
 export default Component.extend({
-    layout,
-    tagName: 'button',
+  tagName: 'button',
+  classNames: ['es-button'],
 
-    classNames: ['es-button'],
-    classNameBindings: [
-      'buttonIcon',
-      'isDark:button-dark:button-light',
-      'isBlock:button-block',
-      'isDense:button-dense',
-      'isTiny:button-tiny',
-      'isLink:button-link',
-      'icon:button-icon',
-      'isDisabled:disabled'
-    ],
-    attributeBindings: [
-      'ariaDisabled:aria-disabled',
-      'ariaLabel:aria-label',
-      'ariaPressed:aria-pressed',
-      'dataRole:data-role',
-      'isDisabled:disabled',
-      'title',
-      'type'
-    ],
+  classNameBindings: [
+    'buttonIcon',
+    'isDark:button-dark:button-light',
+    'isBlock:button-block',
+    'isDense:button-dense',
+    'isTiny:button-tiny',
+    'isLink:button-link',
+    'icon:button-icon',
+    'isDisabled:disabled'
+  ],
 
-    //attributes
-    dataRole: null,
-    label: null, //require this
-    type: null,
+  attributeBindings: [
+    'ariaDisabled:aria-disabled',
+    'ariaLabel:aria-label',
+    'ariaPressed:aria-pressed',
+    'dataRole:data-role',
+    'isDisabled:disabled',
+    'title',
+    'type'
+  ],
 
-    //sizes
-    isBlock: false,
-    isDense: false,
-    isLink: false,
-    isTiny: false,
+  //attributes
+  dataRole: null,
 
-    //style
-    isDark: true,
-    isDisabled: false,
+  //require this
+  label: null,
 
-    //accessibility support
-    ariaDisabled: false,
-    ariaLabel: null,
-    ariaPressed: null,
-    title: null,
+  type: null,
 
-    //icon support
-    icon: null,
+  //sizes
+  isBlock: false,
 
-    buttonIcon: computed('icon', function() {
-      const icon = this.get('icon');
+  isDense: false,
+  isLink: false,
+  isTiny: false,
 
-      if (icon) {
-        return `fa ${this.get('icon')}`;
-      }
+  //style
+  isDark: true,
 
-      return null;
-    }),
+  isDisabled: false,
 
-    click() {
-      const onClicked = this.get('onClicked');
+  //accessibility support
+  ariaDisabled: false,
 
-      if (typeof(onClicked) === 'function') {
-        onClicked();
-      }
-    },
+  ariaLabel: null,
+  ariaPressed: null,
+  title: null,
+
+  //icon support
+  icon: null,
+
+  buttonIcon: computed('icon', function() {
+    const icon = this.get('icon');
+
+    if (icon) {
+      return `fa ${this.get('icon')}`;
+    }
+
+    return null;
+  }),
+
+  click() {
+    const onClicked = this.get('onClicked');
+
+    if (typeof(onClicked) === 'function') {
+      onClicked();
+    }
+  }
 });
