@@ -54,7 +54,7 @@ jobs:
           version: 8
       - run: pnpm install --frozen-lockfile
       - name: npm publish
-        run: pnpm release-plan publish --release-branch lts-v3 --tag v3
+        run: pnpm release-plan publish --publish-branch lts-v3 --tag legacy
 
         env:
           GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
