@@ -8,7 +8,7 @@ The list component is an unstyled, unordered list. A title must be defined, but 
 
 <DocsDemo as |demo|>
   <demo.example @name="es-ulist.hbs">
-    <EsUlist @listTitle="Zoey by City" @listItems={{listItems}} />
+    <EsUlist @listTitle="Zoey by City" @listItems={{this.listItems}} />
   </demo.example>
   <demo.snippet @name="es-ulist.hbs" />
 </DocsDemo>
@@ -17,7 +17,7 @@ The list component is an unstyled, unordered list. A title must be defined, but 
 
 <DocsDemo as |demo|>
   <demo.example @name="es-ulist-imagelist.hbs">
-    <EsUlist @listTitle="Zoey by City" @listItems={{listItems}} @hasImage={{true}} />
+    <EsUlist @listTitle="Zoey by City" @listItems={{this.listItems}} @hasImage={{true}} />
   </demo.example>
   <demo.snippet @name="es-ulist-imagelist.hbs" />
 </DocsDemo>
@@ -26,7 +26,7 @@ The list component is an unstyled, unordered list. A title must be defined, but 
 
 <DocsDemo as |demo|>
   <demo.example @name="es-ulist-linklist.hbs">
-    <EsUlist @listTitle="Zoey by City" @listItems={{listItems}} @hasImage={{true}} @hasLink={{true}} />
+    <EsUlist @listTitle="Zoey by City" @listItems={{this.listItems}} @hasImage={{true}} @hasLink={{true}} />
   </demo.example>
   <demo.snippet @name="es-ulist-linklist.hbs" />
 </DocsDemo>

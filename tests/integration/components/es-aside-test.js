@@ -11,15 +11,15 @@ module('Integration | Component | es aside', function(hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.on('myAction', function(val) { ... });
 
-    await render(hbs`{{es-aside}}`);
+    await render(hbs`<EsAside />`);
 
     assert.dom(this.element).hasText('');
 
     // Template block usage:
     await render(hbs`
-      {{#es-aside}}
+      <EsAside>
         template block text
-      {{/es-aside}}
+      </EsAside>
     `);
 
     assert.dom(this.element).hasText('template block text');

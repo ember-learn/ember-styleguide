@@ -2,7 +2,7 @@
 
 <DocsDemo as |demo|>
   <demo.example @name="es-main">
-    {{es-main}}
+    <EsMain />
   </demo.example>
   <demo.snippet @name="es-main" />
 </DocsDemo>

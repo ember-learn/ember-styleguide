@@ -1,9 +1,9 @@
-{{#if postUrl}}
+{{#if @postUrl}}
   <h2 class="post-title list-view">
-    <a href={{postUrl}}>{{postTitle}}</a>
+    <a href={{@postUrl}}>{{@postTitle}}</a>
   </h2>
 {{else}}
-  <h1 class="post-title page-view">{{postTitle}}</h1>
+  <h1 class="post-title page-view">{{@postTitle}}</h1>
 {{/if}}
-<div class="post-date">{{moment-format postDate "MMM DD, YYYY" "MM-DD-YYYY"}}</div>
-<div class="post-author {{if isGuestPost "guest"}}">By {{author}}</div>
+<div class="post-date">{{moment-format @postDate "MMM DD, YYYY" "MM-DD-YYYY"}}</div>
+<div class="post-author {{if @isGuestPost "guest"}}">By {{@author}}</div>

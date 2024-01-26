@@ -19,9 +19,9 @@
     {{!-- Check out the component blocks and their respective
     configuration --}}
     <EsFooter as |f|>
-      <f.info @infoLinks={{infoLinks}} />
-      <f.statement @socialLinks={{socialLinks}} />
-      <f.contributions @contributorLinks={{contributorLinks}} />
+      <f.info @infoLinks={{this.infoLinks}} />
+      <f.statement @socialLinks={{this.socialLinks}} />
+      <f.contributions @contributorLinks={{this.contributorLinks}} />
     </EsFooter>
   </demo.example>
   <demo.snippet @name="demo3" />
@@ -54,4 +54,4 @@
 </DocsDemo>
 
 
-{{docs-note}}
+<DocsNote />

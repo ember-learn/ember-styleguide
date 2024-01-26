@@ -10,7 +10,7 @@ module('Integration | Component | es navbar', function(hooks){
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.on('myAction', function(val) { ... });
 
-    await render(hbs`{{es-navbar}}`);
+    await render(hbs`<EsNavbar />`);
 
     assert.dom('label').hasText('Search');
 

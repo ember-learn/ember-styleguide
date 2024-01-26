@@ -11,7 +11,7 @@ module('Integration | Component | es heading', function(hooks){
       // Set any properties with this.set('myProperty', 'value');
       // Handle any actions with this.on('myAction', function(val) { ... });
 
-      await render(hbs `{{es-heading}}`);
+      await render(hbs `<EsHeading />`);
 
       assert.dom(this.element).hasText('');
 

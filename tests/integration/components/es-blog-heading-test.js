@@ -27,10 +27,10 @@ module('Integration | Component | es blog heading', function(hooks) {
 
     await render(hbs`
       <EsBlogHeading
-        @author={{author}}
-        @postDate={{postDate}}
-        @postUrl={{postUrl}}
-        @postTitle={{postTitle}}
+        @author={{this.author}}
+        @postDate={{this.postDate}}
+        @postUrl={{this.postUrl}}
+        @postTitle={{this.postTitle}}
       />
     `);
 
@@ -50,10 +50,10 @@ module('Integration | Component | es blog heading', function(hooks) {
 
     await render(hbs`
       <EsBlogHeading
-        @author={{author}}
-        @postDate={{postDate}}
-        @postUrl={{postUrl}}
-        @postTitle={{postTitle}}
+        @author={{this.author}}
+        @postDate={{this.postDate}}
+        @postUrl={{this.postUrl}}
+        @postTitle={{this.postTitle}}
       />
     `);
 

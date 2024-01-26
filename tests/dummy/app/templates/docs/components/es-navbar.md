@@ -4,14 +4,14 @@ The navbar comes with the default Ember links, if you would like to override the
 
 <DocsDemo as |demo|>
   <demo.example @name="es-navbar-default.hbs">
-    {{es-navbar}}
+    <EsNavbar />
   </demo.example>
   <demo.snippet @name="es-navbar-default.hbs" />
 </DocsDemo>
 
 <DocsDemo as |demo|>
   <demo.example @name="es-navbar-custom.hbs">
-    <EsNavbar @links={{customLinks}} />
+    <EsNavbar @links={{this.customLinks}} />
   </demo.example>
   <demo.snippet @name="es-navbar-custom.hbs" />
 </DocsDemo>

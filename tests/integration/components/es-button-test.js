@@ -9,7 +9,7 @@ module('Integration | Component | es button', function(hooks){
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    await render(hbs`{{es-button}}`);
+    await render(hbs`<EsButton />`);
 
     assert.dom(this.element).hasText('');
 
@@ -23,7 +23,7 @@ module('Integration | Component | es button', function(hooks){
   });
 
   test('has html button tag and base class', async function(assert) {
-    await render(hbs`{{es-button}}`);
+    await render(hbs`<EsButton />`);
     assert.dom('button').exists('has button tag');
     assert.ok(document.querySelector('.es-button'), 'has base es-button class');
   });
@@ -85,7 +85,7 @@ module('Integration | Component | es button', function(hooks){
 
     setProperties(this, { dataRole });
 
-    await render(hbs`{{es-button}}`);
+    await render(hbs`<EsButton />`);
 
     assert.ok(document.querySelector('.es-button').getAttribute('data-role'), 'set data-role is displayed');
   });

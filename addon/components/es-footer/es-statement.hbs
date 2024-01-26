@@ -2,7 +2,7 @@
 {{#if hasBlock}}
   {{yield}}
 {{else}}
-  <p class="footer-tagline">{{tagline}}</p>
+  <p class="footer-tagline">{{this.tagline}}</p>
   <div class="footer-social">
     {{#each socialLinks as |link|}}
       <a href={{link.href}} title={{link.title}}>
