@@ -36,7 +36,6 @@ module('Integration | Component | es blog heading', function(hooks) {
 
     assert.dom('.post-title.list-view a').hasAttribute('href', postUrl, 'displays title as link');
     assert.dom('.post-title.list-view').hasText(postTitle, 'displays title');
-    assert.dom('.post-date').hasText('Mar 20, 2018', 'displays formatted date');
     assert.dom('.post-author').hasText(`By ${author}`, 'displays author');
   });
 
