@@ -41,7 +41,9 @@ module.exports = {
 
     target.options['ember-bootstrap'] = target.options['ember-bootstrap'] || defaultEmberBootStrapOptions;
 
-    target.options.sassOptions = target.options.sassOptions || { implementation: nodeSass };
+    target.options.sassOptions = target.options.sassOptions || {};
+
+    target.options.sassOptions.implementation = nodeSass;
 
     this.checkPreprocessor();
 

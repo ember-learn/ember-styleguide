@@ -1,7 +1,7 @@
-<div class="list-title {{if isTitleVisible sr-only}}" id={{listId}}>{{listTitle}}</div>
+<div class="list-title {{if isTitleVisible sr-only}}" id={{this.listId}}>{{this.listTitle}}</div>
 
 {{#if isUnorderedList}}
-  <ul aria-labelledby={{listId}} class="list list-default">
+  <ul aria-labelledby={{this.listId}} class="list list-default">
     {{#each listItems as |item|}}
       <li class="list-item">
         {{#if hasLink}}

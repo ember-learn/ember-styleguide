@@ -1,10 +1,10 @@
 # Aside
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-aside.hbs'}}
-    {{es-aside}}
-  {{/demo.example}}
-  {{demo.snippet 'es-aside.hbs'}}
-{{/docs-demo}}
+<DocsDemo as |demo|>
+  <demo.example @name="es-aside.hbs">
+    <EsAside />
+  </demo.example>
+  <demo.snippet @name='es-aside.hbs' />
+</DocsDemo>
 
-{{docs-note}}
+<DocsNote />

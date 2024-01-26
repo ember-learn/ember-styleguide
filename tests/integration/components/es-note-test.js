@@ -46,7 +46,7 @@ module('Integration | Component | es note', function(hooks){
     for (let i = 0; i < 10; i++) {
       let name;
 
-      await render(hbs`<EsNote @mascots={{mascots}} />`);
+      await render(hbs`<EsNote @mascots={{this.mascots}} />`);
       name = find('.cta-note-heading').textContent.trim().split(' ')[0];
 
       renderedNames.push(name);

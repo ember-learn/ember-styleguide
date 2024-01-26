@@ -10,7 +10,7 @@ module('Integration | Component | es-section', function(hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{es-section}}`);
+    await render(hbs`<EsSection />`);
 
     assert.equal(this.element.textContent.trim(), '');
 

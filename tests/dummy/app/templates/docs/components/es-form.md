@@ -2,13 +2,13 @@
 
 This component is not yet implemented
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-form.hbs'}}
-    {{#es-form}}
+<DocsDemo as |demo|>
+  <demo.example @name="es-form.hbs">
+    <EsForm>
     ...
-    {{/es-form}}
-  {{/demo.example}}
-  {{demo.snippet 'es-form.hbs'}}
-{{/docs-demo}}
+    </EsForm>
+  </demo.example>
+  <demo.snippet @name="es-form.hbs" />
+</DocsDemo>
 
-{{docs-note}}
+<DocsNote />

@@ -1,13 +1,13 @@
 <div class="cta-note">
   <div class="cta-note-body">
-    <div class="cta-note-heading">{{nameTitle}}</div>
+    <div class="cta-note-heading">{{this.nameTitle}}</div>
     <div class="cta-note-message">
       {{#if hasBlock}}
         {{yield}}
       {{else}}
-        {{defaultMessage}}
+        {{this.defaultMessage}}
       {{/if}}
     </div>
   </div>
-  <img src={{imageUrl}} role="presentation" alt="Ember Mascot">
+  <img src={{this.imageUrl}} role="presentation" alt="Ember Mascot">
 </div>

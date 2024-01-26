@@ -1,0 +1,9 @@
+{{#if @postUrl}}
+  <h2 class="post-title list-view">
+    <a href={{@postUrl}}>{{@postTitle}}</a>
+  </h2>
+{{else}}
+  <h1 class="post-title page-view">{{@postTitle}}</h1>
+{{/if}}
+<div class="post-date"></div>
+<div class="post-author {{if @isGuestPost "guest"}}">By {{@author}}</div>

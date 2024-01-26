@@ -1,5 +1,4 @@
 import Component from '@ember/component';
-import layout from '../../templates/components/es-accordion/es-item';
 import {
   get,
   getProperties,
@@ -19,10 +18,7 @@ import {
 } from '@ember/utils';
 
 export default Component.extend({
-  layout,
-
   classNames: ['accordion'],
-
   accordionState: null,
   availability: null,
   accordionItemIndex: null,
@@ -127,5 +123,5 @@ export default Component.extend({
     }
 
     setActiveItem(index);
-  },
+  }
 });

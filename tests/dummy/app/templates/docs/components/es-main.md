@@ -1,10 +1,10 @@
 # Main
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-main'}}
-    {{es-main}}
-  {{/demo.example}}
-  {{demo.snippet 'es-main'}}
-{{/docs-demo}}
+<DocsDemo as |demo|>
+  <demo.example @name="es-main">
+    <EsMain />
+  </demo.example>
+  <demo.snippet @name="es-main" />
+</DocsDemo>
 
-{{docs-note}}
+<DocsNote />

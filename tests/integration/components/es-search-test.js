@@ -11,7 +11,7 @@ module('Integration | Component | es search', function(hooks){
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.on('myAction', function(val) { ... });
 
-    await render(hbs`{{es-search}}`);
+    await render(hbs`<EsSearch />`);
 
     assert.dom('*').hasText('');
 

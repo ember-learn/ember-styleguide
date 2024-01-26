@@ -1,9 +1,9 @@
 
-Copyright {{currentYear}}
+Copyright {{this.currentYear}}
 {{#if hasBlock}}
   {{yield}}
 {{else}}
-  {{#each infoLinks as |link index|}}
+  {{#each @infoLinks as |link index|}}
     <a href={{link.href}}>{{link.name}}</a>
     {{#if link.lineBreak}}
       <br>

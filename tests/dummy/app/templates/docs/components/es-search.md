@@ -1,11 +1,11 @@
 # Search
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-search'}}
-    {{es-search}}
-  {{/demo.example}}
+<DocsDemo as |demo|>
+  <demo.example @name="es-search">
+    <EsSearch />
+  </demo.example>
   
-  {{demo.snippet 'es-search'}}
-{{/docs-demo}}
+  <demo.snippet @name="es-search" />
+</DocsDemo>
 
-{{docs-note}}
+<DocsNote />

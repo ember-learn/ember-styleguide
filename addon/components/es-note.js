@@ -1,16 +1,12 @@
 import Component from '@ember/component';
 import { get } from '@ember/object';
-import layout from '../templates/components/es-note';
 import {
   DefaultMessage as defaultMessage,
   Mascots as mascots,
  } from '../constants/mascots';
 
 export default Component.extend({
-  layout,
-
   classNames: ['cta'],
-
   imageUrl: null,
   mascots,
   nameTitle: null,
@@ -36,5 +32,5 @@ export default Component.extend({
       imageUrl: get(mascot, 'image'),
       nameTitle: `${get(mascot, 'name')} says...`,
     });
-  },
+  }
 });

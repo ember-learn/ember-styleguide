@@ -1,10 +1,10 @@
 # Header
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='es-header'}}
-    {{es-header}}
-  {{/demo.example}}
-  {{demo.snippet 'es-header'}}
-{{/docs-demo}}
+<DocsDemo as |demo|>
+  <demo.example @name="es-header">
+    <EsHeader />
+  </demo.example>
+  <demo.snippet @name="es-header" />
+</DocsDemo>
 
-{{docs-note}}
+<DocsNote />

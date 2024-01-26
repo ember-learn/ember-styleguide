@@ -11,7 +11,7 @@ module('Integration | Component | es card', function(hooks){
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.on('myAction', function(val) { ... });
 
-    await render(hbs`{{es-card}}`);
+    await render(hbs`<EsCard />`);
     assert.dom('*').hasText('');
 
 

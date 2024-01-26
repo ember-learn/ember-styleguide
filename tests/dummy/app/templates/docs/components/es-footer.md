@@ -1,34 +1,34 @@
 # Footer
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='demo1'}}
+<DocsDemo as |demo|>
+  <demo.example @name="demo1">
     <EsFooter/>
-  {{/demo.example}}
-  {{demo.snippet 'demo1'}}
-{{/docs-demo}}
+  </demo.example>
+  <demo.snippet @name="demo1" />
+</DocsDemo>
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='demo2'}}
+<DocsDemo as |demo|>
+  <demo.example @name="demo2">
     <EsFooter @tagline="A framework for ambitious web developers"/>
-  {{/demo.example}}
-  {{demo.snippet 'demo2'}}
-{{/docs-demo}}
+  </demo.example>
+  <demo.snippet @name="demo2" />
+</DocsDemo>
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='demo3'}}
+<DocsDemo as |demo|>
+  <demo.example @name="demo3">
     {{!-- Check out the component blocks and their respective
     configuration --}}
     <EsFooter as |f|>
-      <f.info @infoLinks={{infoLinks}} />
-      <f.statement @socialLinks={{socialLinks}} />
-      <f.contributions @contributorLinks={{contributorLinks}} />
+      <f.info @infoLinks={{this.infoLinks}} />
+      <f.statement @socialLinks={{this.socialLinks}} />
+      <f.contributions @contributorLinks={{this.contributorLinks}} />
     </EsFooter>
-  {{/demo.example}}
-  {{demo.snippet 'demo3'}}
-{{/docs-demo}}
+  </demo.example>
+  <demo.snippet @name="demo3" />
+</DocsDemo>
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name='demo4'}}
+<DocsDemo as |demo|>
+  <demo.example @name="demo4">
     {{!-- You can also add your own content on each component block --}}
     <EsFooter as |f|>
       <f.info>
@@ -49,9 +49,9 @@
         </div>
       </f.contributions>
     </EsFooter>
-  {{/demo.example}}
-  {{demo.snippet 'demo4'}}
-{{/docs-demo}}
+  </demo.example>
+  <demo.snippet @name="demo4" />
+</DocsDemo>
 
 
-{{docs-note}}
+<DocsNote />
