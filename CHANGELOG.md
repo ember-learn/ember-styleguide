@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-01-26)
+
+ember-styleguide 3.2.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-styleguide`
+  * [#501](https://github.com/ember-learn/ember-styleguide/pull/501) [lts-v3] get legacy release embroider compatible ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 v3.1.1 / 2019-06-24
 ==================
 

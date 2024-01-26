@@ -1,0 +1,17 @@
+{
+  "solution": {
+    "ember-styleguide": {
+      "impact": "minor",
+      "oldVersion": "3.1.1",
+      "newVersion": "3.2.0",
+      "constraints": [
+        {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        }
+      ],
+      "pkgJSONPath": "./package.json"
+    }
+  },
+  "description": "## Release (2024-01-26)\n\nember-styleguide 3.2.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-styleguide`\n  * [#501](https://github.com/ember-learn/ember-styleguide/pull/501) [lts-v3] get legacy release embroider compatible ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+}
