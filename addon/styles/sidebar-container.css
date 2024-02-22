@@ -11,6 +11,10 @@
   padding: var(--spacing-6) var(--grid-margin);
 }
 
+.sidebar-container > *:not(.es-sidebar-toggle) {
+  padding: var(--spacing-4) var(--spacing-2);
+}
+
 .sidebar-container > *:not(.es-sidebar):not(.es-sidebar-toggle) {
   grid-column: 1 / span 2;
 }
