@@ -13,7 +13,11 @@
   border-right: 2px solid var(--color-gray-300);
 }
 
-@media (max-width: 844px) {
+.es-sidebar {
+  background-color: var(--color-gray-200);
+}
+
+@media (width <= 844px) {
   .es-sidebar-toggle {
     position: fixed;
     z-index: 1;

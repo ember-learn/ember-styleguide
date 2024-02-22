@@ -1,5 +1,5 @@
 :root {
-  --sidebar-width: 18.5rem;
+  --sidebar-width: 21rem;
 }
 
 .sidebar-container {
@@ -9,6 +9,10 @@
   margin: auto;
   max-width: var(--container-width);
   padding: var(--spacing-6) var(--grid-margin);
+}
+
+.sidebar-container > *:not(.es-sidebar-toggle) {
+  padding: var(--spacing-4) var(--spacing-2);
 }
 
 .sidebar-container > *:not(.es-sidebar):not(.es-sidebar-toggle) {
