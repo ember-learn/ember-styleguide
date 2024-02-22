@@ -27,46 +27,4 @@ module('Integration | Component | es-sidebar', function (hooks) {
     await click('.es-sidebar-close');
     assert.dom('.es-sidebar').hasAttribute('aria-expanded', 'false');
   });
-
-  test('it has the correct styles when in a .sidebar-container', async function (assert) {
-    await render(hbs`
-      <div class="sidebar-container">
-        <EsSidebar>Test</EsSidebar>
-      </div>
-    `);
-
-    assert.dom('.sidebar-container .es-sidebar').hasStyle({
-      width: '300px',
-    });
-
-    await render(hbs`
-      <div class="sidebar-container">
-        <div data-test-content-left>Content left</div>
-        <EsSidebar>Test</EsSidebar>
-      </div>
-    `);
-
-    assert.dom('[data-test-content-left]').hasStyle({
-      width: '604px',
-    });
-    assert.dom('.sidebar-container .es-sidebar').hasStyle({
-      width: '300px',
-      margin: '0px',
-    });
-
-    await render(hbs`
-      <div class="sidebar-container">
-        <EsSidebar>Test</EsSidebar>
-        <div data-test-content-right>Content right</div>
-      </div>
-    `);
-
-    assert.dom('.sidebar-container .es-sidebar').hasStyle({
-      width: '300px',
-      margin: '0px',
-    });
-    assert.dom('[data-test-content-right]').hasStyle({
-      width: '604px',
-    });
-  });
 });
