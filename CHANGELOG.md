@@ -1,4 +1,14 @@
 # Changelog
+## Release (2024-02-22)
+
+ember-styleguide 10.0.0 (major)
+
+#### :boom: Breaking Change
+* `ember-styleguide`
+  * [#507](https://github.com/ember-learn/ember-styleguide/pull/507) make sidebar content slightly wider and add background colour ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
 ## Release (2024-01-26)
 
 ember-styleguide 9.1.1 (patch)
