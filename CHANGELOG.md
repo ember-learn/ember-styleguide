@@ -1,4 +1,14 @@
 # Changelog
+## Release (2024-05-02)
+
+ember-styleguide 11.0.0 (major)
+
+#### :boom: Breaking Change
+* `ember-styleguide`
+  * [#509](https://github.com/ember-learn/ember-styleguide/pull/509) stop using svg-jar ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
 ## Release (2024-02-22)
 
 ember-styleguide 10.0.0 (major)
