@@ -7,15 +7,7 @@ const staticPostcssAddonTree = require('static-postcss-addon-tree');
 module.exports = {
   name: require('./package').name,
 
-  options: {
-    svgJar: {
-      sourceDirs: [
-        'public/images/icons',
-        'node_modules/ember-styleguide/public/images/icons',
-        'tests/dummy/public/images/icons'
-      ]
-    },
-  },
+  options: {},
 
   treeForAddon() {
     var tree = this._super(...arguments);
