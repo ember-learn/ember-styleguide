@@ -2,8 +2,8 @@
   "solution": {
     "ember-styleguide": {
       "impact": "major",
-      "oldVersion": "9.1.1",
-      "newVersion": "10.0.0",
+      "oldVersion": "10.0.0",
+      "newVersion": "11.0.0",
       "constraints": [
         {
           "impact": "major",
@@ -13,5 +13,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-02-22)\n\nember-styleguide 10.0.0 (major)\n\n#### :boom: Breaking Change\n* `ember-styleguide`\n  * [#507](https://github.com/ember-learn/ember-styleguide/pull/507) make sidebar content slightly wider and add background colour ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-05-02)\n\nember-styleguide 11.0.0 (major)\n\n#### :boom: Breaking Change\n* `ember-styleguide`\n  * [#509](https://github.com/ember-learn/ember-styleguide/pull/509) stop using svg-jar ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
