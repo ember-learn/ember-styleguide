@@ -268,7 +268,8 @@ img {
 }
 
 code:not([class*="language-"]) {
-  background-color: var(--color-gray-400);
+  background-color: var(--color-gray-200);
+  border: 1px solid var(--color-gray-300);
   color: var(--color-black);
   border-radius: 3px;
   font-size: .9em;
