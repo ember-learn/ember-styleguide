@@ -1,17 +1,21 @@
 {
   "solution": {
     "ember-styleguide": {
-      "impact": "major",
-      "oldVersion": "10.0.0",
-      "newVersion": "11.0.0",
+      "impact": "patch",
+      "oldVersion": "11.0.0",
+      "newVersion": "11.0.1",
       "constraints": [
         {
-          "impact": "major",
-          "reason": "Appears in changelog section :boom: Breaking Change"
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-05-02)\n\nember-styleguide 11.0.0 (major)\n\n#### :boom: Breaking Change\n* `ember-styleguide`\n  * [#509](https://github.com/ember-learn/ember-styleguide/pull/509) stop using svg-jar ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-06-26)\n\nember-styleguide 11.0.1 (patch)\n\n#### :bug: Bug Fix\n* `ember-styleguide`\n  * [#511](https://github.com/ember-learn/ember-styleguide/pull/511) style: lighten backtick style ([@IgnaceMaes](https://github.com/IgnaceMaes))\n\n#### :house: Internal\n* `ember-styleguide`\n  * [#513](https://github.com/ember-learn/ember-styleguide/pull/513) update release-plan ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Ignace Maes ([@IgnaceMaes](https://github.com/IgnaceMaes))\n"
 }
