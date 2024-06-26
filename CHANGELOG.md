@@ -1,4 +1,20 @@
 # Changelog
+
+## Release (2024-06-26)
+
+ember-styleguide 11.0.1 (patch)
+
+#### :bug: Bug Fix
+* `ember-styleguide`
+  * [#511](https://github.com/ember-learn/ember-styleguide/pull/511) style: lighten backtick style ([@IgnaceMaes](https://github.com/IgnaceMaes))
+
+#### :house: Internal
+* `ember-styleguide`
+  * [#513](https://github.com/ember-learn/ember-styleguide/pull/513) update release-plan ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Ignace Maes ([@IgnaceMaes](https://github.com/IgnaceMaes))
 ## Release (2024-05-02)
 
 ember-styleguide 11.0.0 (major)
