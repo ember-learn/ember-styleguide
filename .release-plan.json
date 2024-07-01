@@ -2,20 +2,16 @@
   "solution": {
     "ember-styleguide": {
       "impact": "patch",
-      "oldVersion": "11.0.0",
-      "newVersion": "11.0.1",
+      "oldVersion": "11.0.1",
+      "newVersion": "11.0.2",
       "constraints": [
         {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-06-26)\n\nember-styleguide 11.0.1 (patch)\n\n#### :bug: Bug Fix\n* `ember-styleguide`\n  * [#511](https://github.com/ember-learn/ember-styleguide/pull/511) style: lighten backtick style ([@IgnaceMaes](https://github.com/IgnaceMaes))\n\n#### :house: Internal\n* `ember-styleguide`\n  * [#513](https://github.com/ember-learn/ember-styleguide/pull/513) update release-plan ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Ignace Maes ([@IgnaceMaes](https://github.com/IgnaceMaes))\n"
+  "description": "## Release (2024-07-01)\n\nember-styleguide 11.0.2 (patch)\n\n#### :bug: Bug Fix\n* `ember-styleguide`\n  * [#514](https://github.com/ember-learn/ember-styleguide/pull/514) style: increase cta padding top ([@IgnaceMaes](https://github.com/IgnaceMaes))\n\n#### Committers: 1\n- Ignace Maes ([@IgnaceMaes](https://github.com/IgnaceMaes))\n"
 }

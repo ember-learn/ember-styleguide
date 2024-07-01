@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-07-01)
+
+ember-styleguide 11.0.2 (patch)
+
+#### :bug: Bug Fix
+* `ember-styleguide`
+  * [#514](https://github.com/ember-learn/ember-styleguide/pull/514) style: increase cta padding top ([@IgnaceMaes](https://github.com/IgnaceMaes))
+
+#### Committers: 1
+- Ignace Maes ([@IgnaceMaes](https://github.com/IgnaceMaes))
+
 ## Release (2024-06-26)
 
 ember-styleguide 11.0.1 (patch)
