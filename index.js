@@ -5,6 +5,17 @@ const path = require('path');
 const CssImport = require('postcss-import')
 const PresetEnv = require('postcss-preset-env');
 
+const plugins = [
+  { module: CssImport },
+  {
+    module: PresetEnv,
+    options: {
+      stage: 3,
+      features: { 'nesting-rules': true },
+    }
+  }
+];
+
 module.exports = {
   name: require('./package').name,
 
@@ -12,16 +23,18 @@ module.exports = {
     postcssOptions: {
       compile: {
         enabled: true,
-        plugins: [
-          { module: CssImport },
-          {
-            module: PresetEnv,
-            options: {
-              stage: 3,
-              features: { 'nesting-rules': true },
-            }
-          }
-        ]
+        plugins,
+      }
+    }
+  },
+
+  included: function(app) {
+    this._super.included.apply(this, arguments);
+    app.options = app.options || {};
+    app.options.postcssOptions = {
+      compile: {
+        enabled: true,
+        plugins,
       }
     }
   },
