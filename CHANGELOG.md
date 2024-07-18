@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-07-18)
+
+ember-styleguide 11.0.3 (patch)
+
+#### :bug: Bug Fix
+* `ember-styleguide`
+  * [#516](https://github.com/ember-learn/ember-styleguide/pull/516) use more standard postcss process ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-07-01)
 
 ember-styleguide 11.0.2 (patch)

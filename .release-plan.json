@@ -2,8 +2,8 @@
   "solution": {
     "ember-styleguide": {
       "impact": "patch",
-      "oldVersion": "11.0.1",
-      "newVersion": "11.0.2",
+      "oldVersion": "11.0.2",
+      "newVersion": "11.0.3",
       "constraints": [
         {
           "impact": "patch",
@@ -13,5 +13,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-07-01)\n\nember-styleguide 11.0.2 (patch)\n\n#### :bug: Bug Fix\n* `ember-styleguide`\n  * [#514](https://github.com/ember-learn/ember-styleguide/pull/514) style: increase cta padding top ([@IgnaceMaes](https://github.com/IgnaceMaes))\n\n#### Committers: 1\n- Ignace Maes ([@IgnaceMaes](https://github.com/IgnaceMaes))\n"
+  "description": "## Release (2024-07-18)\n\nember-styleguide 11.0.3 (patch)\n\n#### :bug: Bug Fix\n* `ember-styleguide`\n  * [#516](https://github.com/ember-learn/ember-styleguide/pull/516) use more standard postcss process ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
