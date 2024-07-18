@@ -2,21 +2,25 @@
 'use strict';
 const Funnel = require('broccoli-funnel');
 const path = require('path');
-const staticPostcssAddonTree = require('static-postcss-addon-tree');
+const CssImport = require('postcss-import')
+const PresetEnv = require('postcss-preset-env');
 
 module.exports = {
   name: require('./package').name,
 
-  options: {},
-
-  treeForAddon() {
-    var tree = this._super(...arguments);
-
-    return staticPostcssAddonTree(tree, {
-      addonName: 'ember-styleguide',
-      addonFolder: __dirname,
-      project: this.project || this.app.project
-    });
+  options: {
+    postcssOptions: {
+      compile: {
+        enabled: true,
+        plugins: [
+          { module: CssImport },
+          {
+            module: PresetEnv,
+            options: { stage: 3 }
+          }
+        ]
+      }
+    }
   },
 
   treeForPublic: function() {
