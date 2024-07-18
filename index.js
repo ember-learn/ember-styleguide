@@ -16,7 +16,10 @@ module.exports = {
           { module: CssImport },
           {
             module: PresetEnv,
-            options: { stage: 3 }
+            options: {
+              stage: 3,
+              features: { 'nesting-rules': true },
+            }
           }
         ]
       }
