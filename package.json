@@ -17,7 +17,7 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "bottled-ember build --ember-version 3.28 --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember --links docs,public,docs-styles:app/styles --no-overlay --environment=production",
+    "build": "bottled-ember build --ember-version 4.4 --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember --links docs,public,docs-styles:app/styles --no-overlay --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel \"lint:!(fix)\"",
     "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*:fix",
     "lint:hbs": "ember-template-lint .",
@@ -26,9 +26,9 @@
     "lint:js:fix": "eslint . --fix",
     "start": "concurrently \"npm:start:*\" --restart-after 5000 --prefix-colors cyan,white,yellow",
     "start:tests": "ember serve -p 0",
-    "start:docs": "bottled-ember serve --ember-version 3.28 --output-path dist-bottled-docs --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember,@percy/cli,@percy/ember --links docs,public,percy-test:tests/acceptance,docs-styles:app/styles --cache-name docs --no-overlay",
+    "start:docs": "bottled-ember serve --ember-version 4.4 --output-path dist-bottled-docs --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember,@percy/cli,@percy/ember --links docs,public,percy-test:tests/acceptance,docs-styles:app/styles --cache-name docs --no-overlay",
     "test": "npm-run-all lint test:*",
-    "test:docs": "bottled-ember test --ember-version 3.28 --output-path dist-bottled-docs --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember,@percy/cli,@percy/ember --links docs,public,percy-test:tests/acceptance,docs-styles:app/styles --cache-name docs --no-overlay",
+    "test:docs": "bottled-ember test --ember-version 4.4 --output-path dist-bottled-docs --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember,@percy/cli,@percy/ember --links docs,public,percy-test:tests/acceptance,docs-styles:app/styles --cache-name docs --no-overlay",
     "test:ember": "ember test",
     "ember-compatibility-tests": "ember try:all"
   },
@@ -37,6 +37,7 @@
     "@glimmer/component": "^1.0.4",
     "broccoli-funnel": "^3.0.2",
     "broccoli-merge-trees": "^4.2.0",
+    "ember-auto-import": "^2.2.4",
     "ember-cli-babel": "^7.26.10",
     "ember-cli-htmlbars": "^5.7.2",
     "ember-cli-postcss": "^8.2.0",
@@ -62,7 +63,6 @@
     "broccoli-asset-rev": "^3.0.0",
     "concurrently": "^7.6.0",
     "ember-array-helper": "^5.1.0",
-    "ember-auto-import": "^2.2.4",
     "ember-cli": "~3.28.5",
     "ember-cli-dependency-checker": "^3.2.0",
     "ember-cli-fastboot": "^4.1.2",
