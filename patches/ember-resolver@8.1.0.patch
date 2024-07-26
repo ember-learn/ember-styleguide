@@ -1,0 +1,21 @@
+diff --git a/package.json b/package.json
+index cfa624641c428833823c52427998e2f1bb6c7c87..45393c60d4a449e5d801191eca7d4be0df98ddc6 100644
+--- a/package.json
++++ b/package.json
+@@ -40,6 +40,8 @@
+     "broccoli-merge-trees": "^4.2.0",
+     "ember-cli-babel": "^7.26.6",
+     "ember-cli-version-checker": "^5.1.2",
++    "@ember/string": "*",
++    "ember-auto-import": "*",
+     "resolve": "^1.20.0"
+   },
+   "devDependencies": {
+@@ -47,7 +49,6 @@
+     "@ember/test-helpers": "^2.2.5",
+     "babel-eslint": "^10.1.0",
+     "broccoli-asset-rev": "^3.0.0",
+-    "ember-auto-import": "^1",
+     "ember-cli": "~3.27.0",
+     "ember-cli-dependency-checker": "^3.2.0",
+     "ember-cli-htmlbars": "^5.7.1",

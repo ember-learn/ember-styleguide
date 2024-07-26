@@ -4,6 +4,13 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+packageExtensionsChecksum: d1b4f31c8cd1a36340a1d65e28f03ea9
+
+patchedDependencies:
+  ember-resolver@8.1.0:
+    hash: podemozjzwecu4mms7l4dgewuy
+    path: patches/ember-resolver@8.1.0.patch
+
 importers:
 
   .:
@@ -143,7 +150,7 @@ importers:
         version: 5.1.5(@ember/test-helpers@2.9.4(@babel/core@7.24.9)(ember-source@3.28.12(@babel/core@7.24.9)))(qunit@2.21.1)
       ember-resolver:
         specifier: ^8.0.3
-        version: 8.1.0(@babel/core@7.24.9)
+        version: 8.1.0(patch_hash=podemozjzwecu4mms7l4dgewuy)(@babel/core@7.24.9)
       ember-scroll:
         specifier: ^1.0.3
         version: 1.0.3(@babel/core@7.24.9)
@@ -195,9 +202,6 @@ importers:
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
-      pnpm:
-        specifier: ^7.0.0
-        version: 7.33.7
       prember:
         specifier: ^2.0.0
         version: 2.1.0
@@ -6016,11 +6020,6 @@ packages:
   pkg-up@3.1.0:
     resolution: {integrity: sha512-nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==}
     engines: {node: '>=8'}
-
-  pnpm@7.33.7:
-    resolution: {integrity: sha512-ev4kEGQrOcaY30baTOXHIxpczjYGmNafjPj0IlfUCz5D8jEFOwe43oSf1P+/SnH/V7g1E3d3o1I4jz09p0cgDg==}
-    engines: {node: '>=14.6'}
-    hasBin: true
 
   portfinder@1.0.32:
     resolution: {integrity: sha512-on2ZJVVDXRADWE6jnQaX0ioEylzgBpQk8r55NE4wjXW1ZxO+BgDlY6DXwj20i0V8eB4SenDQ00WEaxfiIQPcxg==}
@@ -12805,7 +12804,7 @@ snapshots:
       - webpack-cli
       - webpack-command
 
-  ember-resolver@8.1.0(@babel/core@7.24.9):
+  ember-resolver@8.1.0(patch_hash=podemozjzwecu4mms7l4dgewuy)(@babel/core@7.24.9):
     dependencies:
       babel-plugin-debug-macros: 0.3.4(@babel/core@7.24.9)
       broccoli-funnel: 3.0.8
@@ -15897,8 +15896,6 @@ snapshots:
   pkg-up@3.1.0:
     dependencies:
       find-up: 3.0.0
-
-  pnpm@7.33.7: {}
 
   portfinder@1.0.32:
     dependencies:

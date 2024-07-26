@@ -122,5 +122,18 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "pnpm": {
+    "packageExtensions": {
+      "ember-resolver": {
+        "dependency": {
+          "@ember/string": "*",
+          "ember-auto-import": "*"
+        }
+      }
+    },
+    "patchedDependencies": {
+      "ember-resolver@8.1.0": "patches/ember-resolver@8.1.0.patch"
+    }
   }
 }
