@@ -3,7 +3,7 @@
 const socialLinks = [{
   title: 'Twitter',
   href: 'http://twitter.com/emberjs',
-  class: 'twitter-logo',
+  class: 'x-logo',
   label: 'Official Ember Twitter Account'
 }, {
   title: 'GitHub',
