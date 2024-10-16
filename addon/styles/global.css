@@ -155,7 +155,8 @@ body {
 
 a {
   color: var(--color-brand-hc-dark);
-  text-decoration: underline;
+  text-decoration-line: underline;
+  text-underline-offset: 0.2em;
 }
 
 main {
