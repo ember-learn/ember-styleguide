@@ -167,9 +167,9 @@ main a:link,
 main a:visited {
   color: var(--color-link);
   text-decoration: none;
-  background: no-repeat left bottom
-    linear-gradient(var(--color-brand-40), var(--color-brand-40));
+  background: linear-gradient(var(--color-brand-40), var(--color-brand-40));
   background-size: 100% 0.1875rem;
+  background-repeat: no-repeat;
 }
 
 main a:focus,
@@ -177,6 +177,7 @@ main a:hover,
 main a:active,
 main .active {
   color: var(--color-link-hover);
+  text-decoration: underline;
 }
 
 *:focus {
