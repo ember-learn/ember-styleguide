@@ -1,0 +1,17 @@
+{
+  "solution": {
+    "ember-styleguide": {
+      "impact": "patch",
+      "oldVersion": "11.0.2",
+      "newVersion": "11.0.3",
+      "constraints": [
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
+        }
+      ],
+      "pkgJSONPath": "./package.json"
+    }
+  },
+  "description": "## Release (2024-07-18)\n\nember-styleguide 11.0.3 (patch)\n\n#### :bug: Bug Fix\n* `ember-styleguide`\n  * [#516](https://github.com/ember-learn/ember-styleguide/pull/516) use more standard postcss process ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+}

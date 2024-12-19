@@ -1,3 +1,118 @@
+# Changelog
+
+## Release (2024-07-18)
+
+ember-styleguide 11.0.3 (patch)
+
+#### :bug: Bug Fix
+* `ember-styleguide`
+  * [#516](https://github.com/ember-learn/ember-styleguide/pull/516) use more standard postcss process ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2024-07-01)
+
+ember-styleguide 11.0.2 (patch)
+
+#### :bug: Bug Fix
+* `ember-styleguide`
+  * [#514](https://github.com/ember-learn/ember-styleguide/pull/514) style: increase cta padding top ([@IgnaceMaes](https://github.com/IgnaceMaes))
+
+#### Committers: 1
+- Ignace Maes ([@IgnaceMaes](https://github.com/IgnaceMaes))
+
+## Release (2024-06-26)
+
+ember-styleguide 11.0.1 (patch)
+
+#### :bug: Bug Fix
+* `ember-styleguide`
+  * [#511](https://github.com/ember-learn/ember-styleguide/pull/511) style: lighten backtick style ([@IgnaceMaes](https://github.com/IgnaceMaes))
+
+#### :house: Internal
+* `ember-styleguide`
+  * [#513](https://github.com/ember-learn/ember-styleguide/pull/513) update release-plan ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Ignace Maes ([@IgnaceMaes](https://github.com/IgnaceMaes))
+## Release (2024-05-02)
+
+ember-styleguide 11.0.0 (major)
+
+#### :boom: Breaking Change
+* `ember-styleguide`
+  * [#509](https://github.com/ember-learn/ember-styleguide/pull/509) stop using svg-jar ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+## Release (2024-02-22)
+
+ember-styleguide 10.0.0 (major)
+
+#### :boom: Breaking Change
+* `ember-styleguide`
+  * [#507](https://github.com/ember-learn/ember-styleguide/pull/507) make sidebar content slightly wider and add background colour ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+## Release (2024-01-26)
+
+ember-styleguide 9.1.1 (patch)
+
+#### :house: Internal
+* `ember-styleguide`
+  * [#500](https://github.com/ember-learn/ember-styleguide/pull/500) use new lint-to-the-future dashboard action ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+## Release (2024-01-26)
+
+ember-styleguide 9.1.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-styleguide`
+  * [#495](https://github.com/ember-learn/ember-styleguide/pull/495) Central content + on-this-page styling ([@MinThaMie](https://github.com/MinThaMie))
+
+#### :house: Internal
+* `ember-styleguide`
+  * [#498](https://github.com/ember-learn/ember-styleguide/pull/498) use release-plan ([@mansona](https://github.com/mansona))
+  * [#497](https://github.com/ember-learn/ember-styleguide/pull/497) update percy widths ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Anne-Greeth Schot-van Herwijnen ([@MinThaMie](https://github.com/MinThaMie))
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+
+## v9.0.0 (2023-10-26)
+
+#### :boom: Breaking Change
+* [#491](https://github.com/ember-learn/ember-styleguide/pull/491) Drop support for Ember < 3.28 ([@mansona](https://github.com/mansona))
+* [#488](https://github.com/ember-learn/ember-styleguide/pull/488) drop support for EOL node < 18 ([@mansona](https://github.com/mansona))
+
+#### :rocket: Enhancement
+* [#492](https://github.com/ember-learn/ember-styleguide/pull/492) Move table of contents styling into concepts ([@MinThaMie](https://github.com/MinThaMie))
+* [#493](https://github.com/ember-learn/ember-styleguide/pull/493) Move header anchor styling into styleguide ([@MinThaMie](https://github.com/MinThaMie))
+
+#### :house: Internal
+* [#489](https://github.com/ember-learn/ember-styleguide/pull/489) move to release-it for deploys ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Anne-Greeth Schot-van Herwijnen ([@MinThaMie](https://github.com/MinThaMie))
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+8.5.0 / 2023-08-31
+==================
+* Pin node version in volta so that it runs for people who have node 18 #479 from @MinThaMie
+* Sidebar clean up + full width #478 from @MinThaMie
+
+8.4.0 / 2023-07-25
+==================
+
+* Add @ember/string to ember-release dependencies #474 from @nickschot
+* Sync menu content from ember-website to styleguide #473 from @nickschot
+
 8.3.0 / 2023-06-29
 ==================
 * Increase width sidebar #464 from @MinThaMie

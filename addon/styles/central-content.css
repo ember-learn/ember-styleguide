@@ -1,0 +1,21 @@
+.content-wrapper {
+  display: grid;
+  gap: 3em;
+  grid-template-columns: minmax(20ch, 80ch) 16em;
+  padding-top: var(--spacing-4);
+  padding-bottom: var(--spacing-4);
+  justify-content: center;
+}
+
+@media (max-width: 80em) {
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: minmax(20ch, 80ch);
+    justify-content: center;
+    padding-bottom: var(--spacing-2);
+  }
+
+  .on-this-page-wrapper {
+    display: none;
+  }
+}

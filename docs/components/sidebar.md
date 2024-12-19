@@ -50,3 +50,42 @@ The sidebar component will automatically switch to the mobile mode once your bro
   </EsSidebar>
 </div>
 ```
+
+
+### Full Width Left Sidebar Example
+```handlebars
+<div class="sidebar-container sidebar-container--full-width">
+  <EsSidebar>
+    My Left Sidebar Content
+  </EsSidebar>
+  <div class="example-content">
+    My Content
+  </div>
+</div>
+```
+
+### Full Width Right Sidebar Example
+```handlebars
+<div class="sidebar-container sidebar-container--full-width">
+  <div class="example-content">
+    My Content
+  </div>
+  <EsSidebar>
+    My Right Sidebar Content
+  </EsSidebar>
+</div>
+```
+
+### Sidebar Right Border
+There is a class, `es-sidebar--border-right`, that you can add to your sidebar to give it a right border. This will not show up in mobile.
+```handlebars
+<div class="sidebar-container">
+  <EsSidebar class="es-sidebar--border-right">
+    My Left Sidebar Content
+  </EsSidebar>
+  <div class="example-content">
+    My Content
+  </div>
+</div>
+```
+

@@ -1,6 +1,6 @@
 {
   "name": "ember-styleguide",
-  "version": "8.4.0",
+  "version": "11.0.3",
   "description": "Addon to help standardize the ember family of websites",
   "keywords": [
     "ember-addon"
@@ -17,8 +17,7 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "bottled-ember build --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember --links docs,public,docs-styles:app/styles --no-overlay --environment=production",
-    "changelog": "auto-changelog --template changelog.template --unreleased-only --prepend --load-github-issue-data --github-cache-dir .changelog",
+    "build": "bottled-ember build --ember-version 3.28 --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember --links docs,public,docs-styles:app/styles --no-overlay --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel \"lint:!(fix)\"",
     "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*:fix",
     "lint:hbs": "ember-template-lint .",
@@ -27,9 +26,9 @@
     "lint:js:fix": "eslint . --fix",
     "start": "concurrently \"npm:start:*\" --restart-after 5000 --prefix-colors cyan,white,yellow",
     "start:tests": "ember serve -p 0",
-    "start:docs": "bottled-ember serve --output-path dist-bottled-docs --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember,@percy/cli,@percy/ember --links docs,public,percy-test:tests/acceptance,docs-styles:app/styles --cache-name docs --no-overlay",
+    "start:docs": "bottled-ember serve --ember-version 3.28 --output-path dist-bottled-docs --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember,@percy/cli,@percy/ember --links docs,public,percy-test:tests/acceptance,docs-styles:app/styles --cache-name docs --no-overlay",
     "test": "npm-run-all lint test:*",
-    "test:docs": "bottled-ember test --output-path dist-bottled-docs --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember,@percy/cli,@percy/ember --links docs,public,percy-test:tests/acceptance,docs-styles:app/styles --cache-name docs --no-overlay",
+    "test:docs": "bottled-ember test --ember-version 3.28 --output-path dist-bottled-docs --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember,@percy/cli,@percy/ember --links docs,public,percy-test:tests/acceptance,docs-styles:app/styles --cache-name docs --no-overlay",
     "test:ember": "ember test",
     "ember-compatibility-tests": "ember try:all"
   },
@@ -38,12 +37,11 @@
     "@glimmer/component": "^1.0.4",
     "broccoli-funnel": "^3.0.2",
     "broccoli-merge-trees": "^4.2.0",
-    "broccoli-postcss": "^5.1.0",
     "ember-cli-babel": "^7.26.10",
     "ember-cli-htmlbars": "^5.7.2",
+    "ember-cli-postcss": "^8.2.0",
     "ember-concurrency": "^2.2.0",
     "ember-named-blocks-polyfill": "^0.2.5",
-    "ember-svg-jar": "^2.3.3",
     "ember-test-waiters": "^2.1.3",
     "ember-truth-helpers": "^3.0.0",
     "lodash.get": "^4.4.2",
@@ -57,18 +55,17 @@
     "@ember/test-helpers": "^2.6.0",
     "@embroider/test-setup": "^0.48.1",
     "@glimmer/tracking": "^1.0.4",
-    "@percy/cli": "^1.20.2",
-    "@percy/ember": "^3.0.1",
-    "auto-changelog": "https://git@github.com/mansona/auto-changelog.git#epic",
+    "@percy/cli": "^1.27.7",
+    "@percy/ember": "^4.2.0",
     "babel-eslint": "^10.1.0",
-    "bottled-ember": "^0.6.2",
+    "bottled-ember": "^1.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "concurrently": "^7.6.0",
     "ember-array-helper": "^5.1.0",
     "ember-auto-import": "^2.2.4",
     "ember-cli": "~3.28.5",
     "ember-cli-dependency-checker": "^3.2.0",
-    "ember-cli-fastboot": "^3.2.0-beta.5",
+    "ember-cli-fastboot": "^4.1.2",
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-netlify": "^0.4.1",
     "ember-cli-sri": "^2.1.1",
@@ -88,7 +85,7 @@
     "ember-source": "~3.28.8",
     "ember-source-channel-url": "^3.0.0",
     "ember-template-lint": "^3.15.0",
-    "ember-try": "https://git@github.com/ember-cli/ember-try.git#master",
+    "ember-try": "^3.0.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-ember": "^10.5.8",
@@ -101,19 +98,29 @@
     "loader.js": "^4.7.0",
     "npm-run-all": "^4.1.5",
     "pnpm": "^7.0.0",
-    "prember": "^1.1.0",
+    "prember": "^2.0.0",
     "prettier": "^2.5.1",
     "qunit": "^2.17.2",
     "qunit-dom": "^1.6.0",
+    "release-plan": "^0.9.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-declaration-strict-value": "^1.8.0",
     "stylelint-order": "^4.0.0",
     "webpack": "^5.52.1"
   },
   "engines": {
-    "node": "12.* || 14.* || >= 16"
+    "node": "18.* || >= 20"
+  },
+  "volta": {
+    "node": "18.18.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "ember": {
+    "before": [
+      "ember-cli-postcss"
+    ],
     "edition": "octane"
   },
   "ember-addon": {

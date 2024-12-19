@@ -2,29 +2,41 @@
 'use strict';
 const Funnel = require('broccoli-funnel');
 const path = require('path');
-const staticPostcssAddonTree = require('static-postcss-addon-tree');
+const CssImport = require('postcss-import')
+const PresetEnv = require('postcss-preset-env');
+
+const plugins = [
+  { module: CssImport },
+  {
+    module: PresetEnv,
+    options: {
+      stage: 3,
+      features: { 'nesting-rules': true },
+    }
+  }
+];
 
 module.exports = {
   name: require('./package').name,
 
   options: {
-    svgJar: {
-      sourceDirs: [
-        'public/images/icons',
-        'node_modules/ember-styleguide/public/images/icons',
-        'tests/dummy/public/images/icons'
-      ]
-    },
+    postcssOptions: {
+      compile: {
+        enabled: true,
+        plugins,
+      }
+    }
   },
 
-  treeForAddon() {
-    var tree = this._super(...arguments);
-
-    return staticPostcssAddonTree(tree, {
-      addonName: 'ember-styleguide',
-      addonFolder: __dirname,
-      project: this.project || this.app.project
-    });
+  included: function(app) {
+    this._super.included.apply(this, arguments);
+    app.options = app.options || {};
+    app.options.postcssOptions = {
+      compile: {
+        enabled: true,
+        plugins,
+      }
+    }
   },
 
   treeForPublic: function() {
