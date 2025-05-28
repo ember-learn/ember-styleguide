@@ -7,7 +7,6 @@
 
 This addon is intended to provide basic components for easier style coordination among the Ember family of websites, although the original intent is to support the emberjs.com website. We are committed to the goal of meeting WCAG 2.0 AA conformance standards.
 
-
 ## Compatibility
 
 * Ember.js v3.24 or above

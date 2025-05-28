@@ -1,4 +1,4 @@
-/* eslint-disable ember/no-classic-components, ember/no-classic-classes, ember/require-tagless-components, prettier/prettier, ember/no-get, ember/no-component-lifecycle-hooks, ember/require-super-in-lifecycle-hooks */
+/* eslint-disable ember/no-classic-classes, ember/no-classic-components, ember/no-component-lifecycle-hooks, ember/no-get, ember/no-runloop, ember/no-tracked-properties-from-args, ember/require-super-in-lifecycle-hooks, ember/require-tagless-components, prettier/prettier */
 import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { schedule, next } from '@ember/runloop';
