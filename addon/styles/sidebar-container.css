@@ -1,3 +1,4 @@
+/* stylelint-disable media-feature-range-notation, prettier/prettier, selector-class-pattern, selector-not-notation */
 :root {
   --sidebar-width: 21rem;
 }

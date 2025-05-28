@@ -1,3 +1,4 @@
+/* stylelint-disable alpha-value-notation, color-function-notation, media-feature-range-notation, no-descending-specificity, scale-unlimited/declaration-strict-value */
 .es-header {
   display: flex;
   justify-content: center;

@@ -1,6 +1,8 @@
-/* eslint-disable no-undef, prettier/prettier */
+/* eslint-disable prettier/prettier */
+'use strict';
+
 module.exports = {
-  extends: 'stylelint-config-standard',
+  extends: ['stylelint-config-standard', 'stylelint-prettier/recommended'],
   plugins: [
     'stylelint-declaration-strict-value',
     'stylelint-order'

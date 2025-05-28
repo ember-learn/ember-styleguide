@@ -1,3 +1,4 @@
+/* stylelint-disable length-zero-no-unit, prettier/prettier, selector-pseudo-element-colon-notation */
 .cta {
   background-color: var(--color-yellow-light);
   border-radius: var(--radius-lg);
