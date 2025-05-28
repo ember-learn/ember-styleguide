@@ -61,4 +61,4 @@ m.forEach(t=>{e[t]&&(r=e[t].length),n[t]=r}),Date.UTC(b.getUTCFullYear(),b.getUT
 return n}})),define("lint-to-the-future/utils/time-series",["exports"],(function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(e){let t={}
 return Object.keys(e).forEach(r=>{Object.keys(e[r]).forEach(i=>{Object.keys(e[r][i]).forEach(n=>{let l=`${i}:${n}`
 t[l]?t[l][r]=e[r][i][n]:t[l]={[r]:e[r][i][n]}})})}),t}})),define("lint-to-the-future/config/environment",[],(function(){try{var e="lint-to-the-future/config/environment",t=document.querySelector('meta[name="'+e+'"]').getAttribute("content"),r={default:JSON.parse(decodeURIComponent(t))}
-return Object.defineProperty(r,"__esModule",{value:!0}),r}catch(i){throw new Error('Could not read config from meta tag with name "'+e+'".')}})),runningTests||require("lint-to-the-future/app").default.create({name:"lint-to-the-future",version:"1.1.0+1f1713e2"})
+return Object.defineProperty(r,"__esModule",{value:!0}),r}catch(i){throw new Error('Could not read config from meta tag with name "'+e+'".')}})),runningTests||require("lint-to-the-future/app").default.create({name:"lint-to-the-future",version:"1.3.1+9d0231d0"})
