@@ -1,5 +1,22 @@
 # Changelog
 
+## Release (2025-05-28)
+
+* ember-styleguide 11.1.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-styleguide`
+  * [#527](https://github.com/ember-learn/ember-styleguide/pull/527) move ember-auto-import to a dependency ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `ember-styleguide`
+  * [#531](https://github.com/ember-learn/ember-styleguide/pull/531) update to v5.12 with ember-cli-update ([@mansona](https://github.com/mansona))
+  * [#530](https://github.com/ember-learn/ember-styleguide/pull/530) Update to ember 4.12 with ember-cli-update ([@mansona](https://github.com/mansona))
+  * [#529](https://github.com/ember-learn/ember-styleguide/pull/529) start using pnpm ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-07-18)
 
 ember-styleguide 11.0.3 (patch)

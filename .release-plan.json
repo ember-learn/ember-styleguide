@@ -1,17 +1,22 @@
 {
   "solution": {
     "ember-styleguide": {
-      "impact": "patch",
-      "oldVersion": "11.0.2",
-      "newVersion": "11.0.3",
+      "impact": "minor",
+      "oldVersion": "11.0.3",
+      "newVersion": "11.1.0",
+      "tagName": "latest",
       "constraints": [
         {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
           "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-07-18)\n\nember-styleguide 11.0.3 (patch)\n\n#### :bug: Bug Fix\n* `ember-styleguide`\n  * [#516](https://github.com/ember-learn/ember-styleguide/pull/516) use more standard postcss process ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-05-28)\n\n* ember-styleguide 11.1.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-styleguide`\n  * [#527](https://github.com/ember-learn/ember-styleguide/pull/527) move ember-auto-import to a dependency ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `ember-styleguide`\n  * [#531](https://github.com/ember-learn/ember-styleguide/pull/531) update to v5.12 with ember-cli-update ([@mansona](https://github.com/mansona))\n  * [#530](https://github.com/ember-learn/ember-styleguide/pull/530) Update to ember 4.12 with ember-cli-update ([@mansona](https://github.com/mansona))\n  * [#529](https://github.com/ember-learn/ember-styleguide/pull/529) start using pnpm ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
