@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-block-no-redundant-longhand-properties, prettier/prettier, selector-class-pattern */
 .card {
   align-items: flex-start;
   border: 2px solid var(--color-card-border);

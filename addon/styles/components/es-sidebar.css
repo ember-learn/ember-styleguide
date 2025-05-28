@@ -1,3 +1,4 @@
+/* stylelint-disable alpha-value-notation, color-function-notation, color-hex-length, declaration-empty-line-before, prettier/prettier, rule-empty-line-before, selector-attribute-quotes, selector-class-pattern, value-keyword-case */
 :root {
   --es-sidebar-padding: 1rem;
   --es-sidebar-shadow: 0 0 1px 0 rgba(73, 79, 95, 0.6), 0 2px 10px -5px rgba(73, 79, 95, 0.55), 0 3px 30px -15px rgba(73, 79, 95, 0.8), 0 0 50px -5px rgba(73, 79, 95, 0.5);

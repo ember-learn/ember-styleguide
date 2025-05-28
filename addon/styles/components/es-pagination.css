@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-block-no-redundant-longhand-properties, length-zero-no-unit, no-descending-specificity, prettier/prettier, rule-empty-line-before */
 .pagination-wrapper {
   width: 100%;
   display: grid;

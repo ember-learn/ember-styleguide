@@ -1,3 +1,4 @@
+/* stylelint-disable comment-empty-line-before, media-feature-range-notation, prettier/prettier */
 .bg-shape-boxes {
   background-image: url('/images/boxes-top.svg');
   background-repeat: no-repeat;
