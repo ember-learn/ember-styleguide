@@ -4,16 +4,16 @@
 
 * `git clone <repository-url>`
 * `cd my-addon`
-* `npm install`
+* `pnpm install`
 
 ## Linting
 
-* `npm run lint`
-* `npm run lint:fix`
+* `pnpm run lint`
+* `pnpm run lint:fix`
 
 ## Running tests
 
-* `npm run test`
+* `pnpm run test`
 * `ember test` – Runs the test suite on the current Ember version
 * `ember test --server` – Runs the test suite in "watch mode"
 * `ember try:each` – Runs the test suite against multiple Ember versions

@@ -18,41 +18,43 @@ jobs:
     env:
       PERCY_TOKEN: ee0a9d5c1122d6a21852edf19b5b309aaec18077fb3900c98995c90bc48ed240
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18.x
-          cache: npm
-      - run: npm ci
-      - run: npx percy exec -- npm run test:docs
+          cache: pnpm
+      - run: pnpm install
+      - run: pnpm percy exec -- npm run test:docs
 
   test:
     name: "Tests"
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: mansona/npm-lockfile-version@v1
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18.x
-          cache: npm
-      - run: npm ci
-      - run: npm run lint
-      - run: npx percy exec -- npm run test
+          cache: pnpm
+      - run: pnpm install
+      - run: pnpm run lint
+      - run: pnpm percy exec -- pnpm run test
 
   floating:
     name: "Floating Dependencies"
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18.x
-          cache: npm
-      - run: npm install --no-shrinkwrap
-      - run: npm run test:ember
+          cache: pnpm
+      - run: pnpm install --no-lockfile
+      - run: pnpm run test:ember
 
   try-scenarios:
     name: ${{ matrix.try-scenario }}
@@ -73,12 +75,13 @@ jobs:
           - no-deprecations
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18.x
-          cache: npm
-      - run: npm ci
+          cache: pnpm
+      - run: pnpm install
       - name: Run Tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
 
@@ -97,12 +100,13 @@ jobs:
           - ember-release-no-deprecations
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18.x
-          cache: npm
-      - run: npm ci
+          cache: pnpm
+      - run: pnpm install
       - name: Run Tests
         id: tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
