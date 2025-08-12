@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
 
 const socialLinks = [{
-  title: 'Twitter',
-  href: 'http://twitter.com/emberjs',
-  class: 'twitter-logo',
-  label: 'Official Ember Twitter Account'
+  title: 'X',
+  href: 'http://x.com/emberjs',
+  class: 'x-logo',
+  label: 'Official Ember X Account'
 }, {
   title: 'GitHub',
   href: 'https://github.com/emberjs/ember.js',
