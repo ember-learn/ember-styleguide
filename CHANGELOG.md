@@ -2,6 +2,17 @@
 
 ## Release (2025-08-22)
 
+* ember-styleguide 11.3.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-styleguide`
+  * [#536](https://github.com/ember-learn/ember-styleguide/pull/536) Add blukesky logo to <EsIcon> list of icons ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
+## Release (2025-08-22)
+
 * ember-styleguide 11.2.0 (minor)
 
 #### :rocket: Enhancement
