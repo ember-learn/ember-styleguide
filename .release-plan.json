@@ -1,18 +1,18 @@
 {
   "solution": {
     "ember-styleguide": {
-      "impact": "minor",
-      "oldVersion": "11.2.0",
-      "newVersion": "11.3.0",
+      "impact": "patch",
+      "oldVersion": "11.3.0",
+      "newVersion": "11.3.1",
       "tagName": "latest",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-08-22)\n\n* ember-styleguide 11.3.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-styleguide`\n  * [#536](https://github.com/ember-learn/ember-styleguide/pull/536) Add blukesky logo to <EsIcon> list of icons ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-08-22)\n\n* ember-styleguide 11.3.1 (patch)\n\n#### :bug: Bug Fix\n* `ember-styleguide`\n  * [#538](https://github.com/ember-learn/ember-styleguide/pull/538) Add default class handling for icons ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }

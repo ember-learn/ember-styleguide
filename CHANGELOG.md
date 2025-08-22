@@ -2,6 +2,17 @@
 
 ## Release (2025-08-22)
 
+* ember-styleguide 11.3.1 (patch)
+
+#### :bug: Bug Fix
+* `ember-styleguide`
+  * [#538](https://github.com/ember-learn/ember-styleguide/pull/538) Add default class handling for icons ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
+## Release (2025-08-22)
+
 * ember-styleguide 11.3.0 (minor)
 
 #### :rocket: Enhancement
