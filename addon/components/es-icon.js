@@ -16,6 +16,10 @@ export default class EsIconComponent extends Component {
       );
     }
 
+    if (!this.args.class) {
+      return icons[this.args.icon];
+    }
+
     return icons[this.args.icon].replace(
       '<svg ',
       `<svg class="${this.args.class}"`
