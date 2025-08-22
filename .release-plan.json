@@ -2,21 +2,17 @@
   "solution": {
     "ember-styleguide": {
       "impact": "minor",
-      "oldVersion": "11.1.0",
-      "newVersion": "11.2.0",
+      "oldVersion": "11.2.0",
+      "newVersion": "11.3.0",
       "tagName": "latest",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-08-22)\n\n* ember-styleguide 11.2.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-styleguide`\n  * [#535](https://github.com/ember-learn/ember-styleguide/pull/535) Add new support page links (node-support, typescript-support) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :house: Internal\n* `ember-styleguide`\n  * [#534](https://github.com/ember-learn/ember-styleguide/pull/534) Update release plan and fix latest release ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-08-22)\n\n* ember-styleguide 11.3.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-styleguide`\n  * [#536](https://github.com/ember-learn/ember-styleguide/pull/536) Add blukesky logo to <EsIcon> list of icons ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
