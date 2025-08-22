@@ -1,5 +1,21 @@
 # Changelog
 
+## Release (2025-08-22)
+
+* ember-styleguide 11.2.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-styleguide`
+  * [#535](https://github.com/ember-learn/ember-styleguide/pull/535) Add new support page links (node-support, typescript-support) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :house: Internal
+* `ember-styleguide`
+  * [#534](https://github.com/ember-learn/ember-styleguide/pull/534) Update release plan and fix latest release ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-05-28)
 
 * ember-styleguide 11.1.0 (minor)
