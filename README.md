@@ -11,7 +11,7 @@ This addon is intended to provide basic components for easier style coordination
 
 * Ember.js v3.24 or above
 * Ember CLI v3.24 or above
-* Node.js v14 or above
+* Node.js v18 or above
 
 ## Contributing
 
