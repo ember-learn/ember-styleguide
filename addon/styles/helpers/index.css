@@ -1,4 +1,4 @@
-/* stylelint-disable import-notation, media-feature-range-notation, prettier/prettier */
+/* stylelint-disable import-notation, media-feature-range-notation */
 @import "./unstyled.css";
 @import "./embed.css";
 @import "./flex.css";
