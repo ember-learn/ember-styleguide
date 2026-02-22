@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import Component from '@glimmer/component';
 import { assert } from '@ember/debug';
 

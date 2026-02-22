@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-
 const socialLinks = [{
   title: 'Twitter',
   href: 'http://twitter.com/emberjs',

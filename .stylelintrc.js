@@ -1,15 +1,12 @@
-/* eslint-disable prettier/prettier */
 'use strict';
 
 module.exports = {
-  extends: ['stylelint-config-standard', 'stylelint-prettier/recommended'],
+  extends: ['stylelint-config-standard'],
   plugins: [
     'stylelint-declaration-strict-value',
     'stylelint-order'
   ],
   rules: {
-    // Disables this rule to allow case agnostic color hex values
-    'color-hex-case': null,
     // Require the long version of hex colors
     'color-hex-length': 'long',
     // Disallow ids

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { helper } from '@ember/component/helper';
 
 export function inc(params/*, hash*/) {
