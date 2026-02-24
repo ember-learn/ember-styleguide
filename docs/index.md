@@ -20,7 +20,7 @@ Currently, these websites are considered "core" websites and are maintained by c
 There are also other websites that are still maintained by contributors but would need an upgrade to be able to avail of ember-styleguide
 
 - ember-fastboot.com
-- ember-engines.com
+- ember-engines.netlify.app
 
 Ember components are ideal for this, because all of these websites need similar types of components. By standardizing our component approach, we could more easily contribute to any of the websites in the Ember ecosystem.
 
