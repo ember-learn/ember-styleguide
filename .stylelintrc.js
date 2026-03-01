@@ -2,10 +2,7 @@
 
 module.exports = {
   extends: ['stylelint-config-standard'],
-  plugins: [
-    'stylelint-declaration-strict-value',
-    'stylelint-order'
-  ],
+  plugins: ['stylelint-declaration-strict-value', 'stylelint-order'],
   rules: {
     // Require the long version of hex colors
     'color-hex-length': 'long',
@@ -13,7 +10,7 @@ module.exports = {
     'selector-max-id': 0,
     // Require that color, background-color, etc use variables for colors, instead of direct values
     'scale-unlimited/declaration-strict-value': [
-      ['/color/'] // We can enforce variables for font-size, margin, etc as well by adding here
+      ['/color/'], // We can enforce variables for font-size, margin, etc as well by adding here
     ],
-  }
+  },
 };

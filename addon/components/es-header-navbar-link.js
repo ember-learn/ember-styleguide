@@ -32,9 +32,11 @@ export default class EsHeaderNavbarLink extends Component {
     }
 
     this.linkBlursActive = true;
-    let links = Array.from(this.element.querySelectorAll('.navbar-dropdown-list-item-link'));
+    let links = Array.from(
+      this.element.querySelectorAll('.navbar-dropdown-list-item-link'),
+    );
 
-    links.forEach(anchor => {
+    links.forEach((anchor) => {
       anchor.addEventListener('blur', () => this.processBlur());
     });
   }
@@ -51,7 +53,7 @@ export default class EsHeaderNavbarLink extends Component {
 
     if (this.isDropdownOpen) {
       // if it's open, let's make sure it can do some things
-      schedule('afterRender', this, function() {
+      schedule('afterRender', this, function () {
         this.setupLinkBlurs();
 
         // move focus to the first item in the dropdown only when opened with keyboard
@@ -67,9 +69,13 @@ export default class EsHeaderNavbarLink extends Component {
 
   @action
   processBlur() {
-    next(this, function() {
-      let subItems = Array.from(this.element.querySelectorAll('.navbar-dropdown-list li'));
-      let focused = subItems.find(item => document.activeElement === item.querySelector('a'));
+    next(this, function () {
+      let subItems = Array.from(
+        this.element.querySelectorAll('.navbar-dropdown-list li'),
+      );
+      let focused = subItems.find(
+        (item) => document.activeElement === item.querySelector('a'),
+      );
 
       //if the dropdown isn't focused, close it
       if (!focused) {
@@ -102,7 +108,9 @@ export default class EsHeaderNavbarLink extends Component {
 
   processFirstElementFocus() {
     // Identify the first item in the dropdown list & set focus on it
-    let firstFocusable = this.element.querySelector('.navbar-dropdown-list li:first-of-type a');
+    let firstFocusable = this.element.querySelector(
+      '.navbar-dropdown-list li:first-of-type a',
+    );
     firstFocusable.focus();
   }
 
@@ -111,7 +119,7 @@ export default class EsHeaderNavbarLink extends Component {
     let dropdownList = this.element.querySelector('.navbar-dropdown-list');
 
     //...for certain keypress events
-    dropdownList.addEventListener('keydown', event => {
+    dropdownList.addEventListener('keydown', (event) => {
       // ESC key should close the dropdown and return focus to the toggle
       if (event.keyCode === 27 && this.isDropdownOpen) {
         this.closeDropdown();
@@ -128,8 +136,10 @@ export default class EsHeaderNavbarLink extends Component {
 
   returnFocus() {
     // after that rendering bit happens, we need to return the focus to the trigger
-    schedule('afterRender', this, function() {
-      let dropdownTrigger = this.element.querySelector('.navbar-list-item-dropdown-toggle');
+    schedule('afterRender', this, function () {
+      let dropdownTrigger = this.element.querySelector(
+        '.navbar-list-item-dropdown-toggle',
+      );
       dropdownTrigger.focus();
     });
   }

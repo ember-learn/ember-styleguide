@@ -9,7 +9,9 @@
   color: var(--color-white);
 }
 
-.es-banner a, .es-banner a:link, .es-banner a:visited {
+.es-banner a,
+.es-banner a:link,
+.es-banner a:visited {
   color: var(--color-white);
   text-decoration: none;
   border-bottom: 1px solid var(--color-white-40);
@@ -18,7 +20,8 @@
   line-height: 15px;
 }
 
-.es-banner a:hover, .es-banner a:focus {
+.es-banner a:hover,
+.es-banner a:focus {
   border-bottom: 1px solid var(--color-white);
 }
 
@@ -28,7 +31,7 @@
 }
 
 .es-banner a + a::before {
-  content: '';
+  content: "";
   width: 3px;
   height: 3px;
   background: var(--color-white);

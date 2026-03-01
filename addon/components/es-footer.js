@@ -4,7 +4,7 @@ import {
   socialLinks,
   infoLinks,
   contributorLinks,
-  tagline
+  tagline,
 } from '../constants/es-footer';
 
 export default class EsFooterComponent extends Component {
@@ -33,7 +33,7 @@ export default class EsFooterComponent extends Component {
   }
 
   get currentYear() {
-    return new Date().getUTCFullYear()
+    return new Date().getUTCFullYear();
   }
 
   get infoLinks() {

@@ -10,8 +10,8 @@ export default class EsIconComponent extends Component {
         `${
           this.args.icon
         } isn't a supported icon. We no longer support dynamid svg lookup and can only support the following icons: ${Object.keys(
-          icons
-        ).join(', ')}`
+          icons,
+        ).join(', ')}`,
       );
     }
 
@@ -21,7 +21,7 @@ export default class EsIconComponent extends Component {
 
     return icons[this.args.icon].replace(
       '<svg ',
-      `<svg class="${this.args.class}"`
+      `<svg class="${this.args.class}"`,
     );
   }
 }

@@ -13,9 +13,9 @@ export default Service.extend({
   },
 
   closePopupMenu(menu) {
-    this.items.forEach(item => {
-      if(item !== menu) {
-        item.closeDropdown()
+    this.items.forEach((item) => {
+      if (item !== menu) {
+        item.closeDropdown();
       }
     });
   },

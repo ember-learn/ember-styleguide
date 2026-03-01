@@ -6,7 +6,9 @@
 .sidebar-container {
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: var(--sidebar-width) minmax(0, 1fr) var(--sidebar-width);
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr) var(
+      --sidebar-width
+    );
   margin: auto;
   max-width: var(--container-width);
   padding: var(--spacing-6) var(--grid-margin);

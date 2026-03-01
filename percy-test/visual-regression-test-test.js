@@ -3,7 +3,7 @@ import { visit } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import percySnapshot from '@percy/ember';
 
-async function renderFromToc(tableOfContents, path = "") {
+async function renderFromToc(tableOfContents, path = '') {
   for (const item of tableOfContents) {
     if (!item.pages || item.pages.length === 0) {
       await visit(path + item.title);
@@ -14,10 +14,10 @@ async function renderFromToc(tableOfContents, path = "") {
   }
 }
 
-module('Acceptance | visual regression test', function(hooks) {
+module('Acceptance | visual regression test', function (hooks) {
   setupApplicationTest(hooks);
 
-  test(`visiting visual regressions with Percy`, async function(assert) {
+  test(`visiting visual regressions with Percy`, async function (assert) {
     assert.expect(0);
     await visit('/');
 

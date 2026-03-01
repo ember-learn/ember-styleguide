@@ -1,5 +1,5 @@
 /* stylelint-disable prettier/prettier */
-[class*='unstyled'],
+[class*="unstyled"],
 .list-unstyled {
   list-style: none;
   padding: 0;

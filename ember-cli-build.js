@@ -4,7 +4,7 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 module.exports = function (defaults) {
   const app = new EmberAddon(defaults, {
     fingerprint: {
-      extensions: ['js', 'css', 'map']
+      extensions: ['js', 'css', 'map'],
     },
     svgJar: {
       sourceDirs: [
@@ -12,8 +12,8 @@ module.exports = function (defaults) {
         'addon/public',
         'node_modules/ember-styleguide/public',
         'node_modules/ember-cli-addon-docs/public',
-        'tests/dummy/public'
-      ]
+        'tests/dummy/public',
+      ],
     },
     // required until https://github.com/ember-cli/ember-cli/issues/8448 is fixed
     'ember-prism': {
@@ -27,11 +27,11 @@ module.exports = function (defaults) {
         'json',
         'markup-templating',
         'ruby',
-        'scss'
+        'scss',
       ],
 
-      plugins: ['line-numbers', 'normalize-whitespace']
-    }
+      plugins: ['line-numbers', 'normalize-whitespace'],
+    },
   });
 
   /*
