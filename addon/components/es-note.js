@@ -1,10 +1,9 @@
-/* eslint-disable prettier/prettier */
 import Component from '@glimmer/component';
 
 const Mascots = {
   tomster: { image: '/images/mascots/tomster.png', name: 'Tomster' },
   zoey: { image: '/images/mascots/zoey.png', name: 'Zoey' },
-}
+};
 
 function randomMascot() {
   let mascotKeys = Object.keys(Mascots);

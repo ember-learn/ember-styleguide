@@ -2,11 +2,11 @@
 :root {
   /* Vertical rhythm is based on multiples of 8. */
 
-  --font-family-sans: "Inter var", "Inter web", -apple-system,
-    BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji;
-  --font-family-mono: SFMono-Regular, Consolas, Liberation Mono, Menlo,
-    monospace;
+  --font-family-sans:
+    "Inter var", "Inter web", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --font-family-mono:
+    SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
 
   --color-white: #fff;
   --color-gray-100: #f4f6f8;
@@ -27,18 +27,18 @@
   --color-brand-hc-dark: #cf2d20;
   --color-brand-40: rgba(224, 78, 57, 0.4);
 
-  --color-blue-dark: #0076D6;
-  --color-blue: #10AAFF;
-  --color-blue-light: #DFFDFF;
+  --color-blue-dark: #0076d6;
+  --color-blue: #10aaff;
+  --color-blue-light: #dffdff;
 
-  --color-green: #8BE998;
-  --color-green-light: #C7F9DE;
+  --color-green: #8be998;
+  --color-green-light: #c7f9de;
 
-  --color-yellow: #FFEC64;
-  --color-yellow-light: #FFFAD6;
+  --color-yellow: #ffec64;
+  --color-yellow-light: #fffad6;
 
-  --color-lilac: #7650F1;
-  --color-lilac-light: #D5CBFF;
+  --color-lilac: #7650f1;
+  --color-lilac-light: #d5cbff;
 
   --color-gray: #a2a3a8;
   --color-success: #d9f9e3;
@@ -145,7 +145,8 @@ html {
   border: 0;
 }
 
-em, i {
+em,
+i {
   font-family: "Inter web italic", var(--font-family-sans);
 }
 
@@ -244,7 +245,7 @@ blockquote {
 }
 
 blockquote:before {
-  content: url('/images/quotes.svg');
+  content: url("/images/quotes.svg");
   position: absolute;
   left: var(--spacing-2);
   top: var(--spacing-1);
@@ -273,7 +274,7 @@ code:not([class*="language-"]) {
   border: 1px solid var(--color-gray-300);
   color: var(--color-black);
   border-radius: 3px;
-  font-size: .9em;
-  padding: .2em .5em;
-  margin: 0 .1em;
+  font-size: 0.9em;
+  padding: 0.2em 0.5em;
+  margin: 0 0.1em;
 }

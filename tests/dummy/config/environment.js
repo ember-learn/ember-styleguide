@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 'use strict';
 
 module.exports = function (environment) {
@@ -21,15 +20,16 @@ module.exports = function (environment) {
     },
 
     fastboot: {
-      hostWhitelist: [/^localhost:\d+$/]
+      hostWhitelist: [/^localhost:\d+$/],
     },
 
     'field-guide': {
       name: 'Ember',
       tagLine: 'Ember Styleguide',
       logo: '/ember-logo.png',
-      copyright: 'Ember Field Guide is designed to document the [ember-styleguide](https://github.com/ember-learn/ember-styleguide) project. For more information view the [README](https://github.com/ember-learn/ember-styleguide),',
-      github: 'https://github.com/ember-learn/ember-styleguide'
+      copyright:
+        'Ember Field Guide is designed to document the [ember-styleguide](https://github.com/ember-learn/ember-styleguide) project. For more information view the [README](https://github.com/ember-learn/ember-styleguide),',
+      github: 'https://github.com/ember-learn/ember-styleguide',
     },
 
     historySupportMiddleware: true,

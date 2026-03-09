@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { render } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';

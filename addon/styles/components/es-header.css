@@ -222,7 +222,8 @@
   }
 
   .navbar-dropdown-list {
-    box-shadow: 0 0 1px 0 rgba(73, 79, 95, 0.6),
+    box-shadow:
+      0 0 1px 0 rgba(73, 79, 95, 0.6),
       0 2px 10px -5px rgba(73, 79, 95, 0.55),
       0 3px 30px -15px rgba(73, 79, 95, 0.8),
       0 0 50px -5px rgba(73, 79, 95, 0.5);

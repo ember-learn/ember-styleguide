@@ -41,7 +41,8 @@
   height: 0px;
   border-radius: 0 0 var(--radius-lg) 0;
   border-width: 16px;
-  border-color: var(--color-gray-100) var(--color-yellow) var(--color-yellow) var(--color-gray-100);
+  border-color: var(--color-gray-100) var(--color-yellow) var(--color-yellow)
+    var(--color-gray-100);
   border-style: solid;
 }
 
@@ -51,4 +52,3 @@
     visibility: hidden;
   }
 }
-

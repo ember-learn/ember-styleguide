@@ -5,10 +5,9 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 0px 40px;
-  grid-template-areas:
-    "previous next";
+  grid-template-areas: "previous next";
   margin: var(--spacing-1) 0;
-  & > .previous-wrapper{
+  & > .previous-wrapper {
     grid-area: previous;
     & > img {
       transform: rotate(90deg);
@@ -31,7 +30,8 @@
     }
   }
 
-  & > .previous-wrapper,  & > .next-wrapper {
+  & > .previous-wrapper,
+  & > .next-wrapper {
     display: flex;
     align-items: center;
     & > img {

@@ -1,10 +1,10 @@
 /* stylelint-disable import-notation, media-feature-range-notation, prettier/prettier */
-@import './unstyled.css';
-@import './embed.css';
-@import './flex.css';
-@import './margin.css';
-@import './padding.css';
-@import './rounded.css';
+@import "./unstyled.css";
+@import "./embed.css";
+@import "./flex.css";
+@import "./margin.css";
+@import "./padding.css";
+@import "./rounded.css";
 
 .img-fluid {
   width: 100%;
