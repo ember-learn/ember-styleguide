@@ -20,6 +20,11 @@ const socialLinks = [{
   href: 'https://hachyderm.io/@emberjs',
   class: 'mastodon-logo',
   label: 'Official Ember Mastodon Account'
+}, {
+  title: 'BlueSky',
+  href: 'https://bsky.app/profile/emberjs.com',
+  class: 'bluesky-logo',
+  label: 'Official Ember BlueSky Account'
 }];
 
 
