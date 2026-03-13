@@ -1,3 +1,10 @@
+import Component from '@glimmer/component';
+import { inject as service } from '@ember/service';
+
+export default class EsProgressBarComponent extends Component {
+  @service progress;
+}
+
 {{! template-lint-disable no-invalid-aria-attributes }}
 <div
   class="progress-bar"

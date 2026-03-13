@@ -1,3 +1,13 @@
+import Component from '@glimmer/component';
+
+export default class EsFooterStatementComponent extends Component {
+  constructor() {
+    super(...arguments);
+
+    this.currentYear = new Date().getUTCFullYear();
+  }
+}
+
 <div class="footer-statement">
   <p class="footer-copyright container py-1">
     &copy; Copyright

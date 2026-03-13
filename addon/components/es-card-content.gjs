@@ -1,3 +1,8 @@
+/* eslint-disable ember/no-empty-glimmer-component-classes */
+import Component from '@glimmer/component';
+
+export default class EsCardContentComponent extends Component {}
+
 {{! template-lint-disable require-valid-alt-text }}
 {{! Bug link: https://github.com/ember-template-lint/ember-template-lint/issues/1286 }}
 

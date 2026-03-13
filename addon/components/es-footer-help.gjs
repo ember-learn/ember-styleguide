@@ -1,3 +1,13 @@
+import Component from '@glimmer/component';
+
+export default class EsFooterHelpComponent extends Component {
+  get linkUrl() {
+    return (
+      this.args.contributeLink || 'https://github.com/ember-learn/ember-website'
+    );
+  }
+}
+
 {{! template-lint-disable no-whitespace-for-layout }}
 <div class="footer-help">
   <p class="container py-1">

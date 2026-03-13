@@ -1,3 +1,8 @@
+/* eslint-disable ember/no-empty-glimmer-component-classes */
+import Component from '@glimmer/component';
+
+export default class EsFooterInfoComponent extends Component {}
+
 {{! template-lint-disable no-redundant-role }}
 <div class="footer-info container">
   <div class="footer-info-links">
