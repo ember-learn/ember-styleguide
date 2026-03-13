@@ -18,6 +18,7 @@
   },
   "scripts": {
     "build": "bottled-ember build --ember-version 5.12 --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember --links docs,public,docs-styles:app/styles,config/fastboot.js --no-overlay --environment=production",
+    "ember-compatibility-tests": "ember try:all",
     "format": "prettier . --cache --write",
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\" --prefixColors auto",
     "lint:css": "stylelint \"**/*.css\"",
@@ -29,12 +30,11 @@
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
     "start": "concurrently \"npm:start:*\" --restart-after 5000 --prefix-colors cyan,white,yellow",
-    "start:tests": "ember serve -p 0",
     "start:docs": "bottled-ember serve --ember-version 5.12 --output-path dist-bottled-docs --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember,@percy/cli,@percy/ember --links docs,public,percy-test:tests/acceptance,docs-styles:app/styles,config/fastboot.js --cache-name docs --no-overlay",
+    "start:tests": "ember serve -p 0",
     "test": "concurrently \"pnpm:lint\" \"pnpm:test:*\" --names \"lint,test:\"",
     "test:docs": "bottled-ember test --ember-version 5.12 --output-path dist-bottled-docs --deps field-guide,field-guide-default-template,ember-cli-fastboot,prember,@percy/cli,@percy/ember --links docs,public,percy-test:tests/acceptance,docs-styles:app/styles,config/fastboot.js --cache-name docs --no-overlay",
-    "test:ember": "ember test",
-    "ember-compatibility-tests": "ember try:all"
+    "test:ember": "ember test"
   },
   "dependencies": {
     "@babel/core": "^7.25.2",
@@ -109,7 +109,7 @@
     "prettier-plugin-ember-template-tag": "^2.1.0",
     "qunit": "^2.22.0",
     "qunit-dom": "^3.2.1",
-    "release-plan": "^0.17.2",
+    "release-plan": "^0.17.4",
     "stylelint": "^16.25.0",
     "stylelint-config-standard": "^36.0.1",
     "stylelint-declaration-strict-value": "^1.8.0",
