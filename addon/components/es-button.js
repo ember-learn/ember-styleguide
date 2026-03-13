@@ -10,7 +10,9 @@ export default class EsButtonComponent extends Component {
     super(...arguments);
 
     if (!this.args.onClicked) {
-      console.warn(new Error('Button created with no onClicked'));
+      if (this.args.type !== 'submit') {
+        console.warn(new Error('Button created with no onClicked'));
+      }
     } else {
       this._onClicked = this.args.onClicked;
     }
