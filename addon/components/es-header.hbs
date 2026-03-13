@@ -1,10 +1,9 @@
 {{! template-lint-disable no-redundant-role }}
-<header
-  class="es-header"
-  role="banner"
-  ...attributes
->
-  <nav class="es-navbar {{if this.expanded "navbar-expanded"}}" aria-label="Primary site navigation">
+<header class="es-header" role="banner" ...attributes>
+  <nav
+    class="es-navbar {{if this.expanded 'navbar-expanded'}}"
+    aria-label="Primary site navigation"
+  >
     <a class="navbar-brand-wrapper" href={{this.navHome}}>
       <img
         class="navbar-brand"
@@ -12,7 +11,7 @@
         alt="home"
         width="83"
         height="40"
-      >
+      />
     </a>
 
     <button
@@ -21,7 +20,8 @@
       aria-expanded={{if this.expanded "true" "false"}}
       {{on "click" this.onTogglerClick}}
     >
-      {{if this.expanded "Hide" "Show"}} Site Navigation
+      {{if this.expanded "Hide" "Show"}}
+      Site Navigation
     </button>
 
     <ul class="navbar-list">
