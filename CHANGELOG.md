@@ -1,5 +1,31 @@
 # Changelog
 
+## Release (2026-03-13)
+
+* ember-styleguide 11.4.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-styleguide`
+  * [#542](https://github.com/ember-learn/ember-styleguide/pull/542) Convert all components to GJS ([@Windvis](https://github.com/Windvis))
+
+#### :bug: Bug Fix
+* `ember-styleguide`
+  * [#526](https://github.com/ember-learn/ember-styleguide/pull/526) #354 Fix onClicked warning if @type is "submit" ([@tcjr](https://github.com/tcjr))
+
+#### :house: Internal
+* `ember-styleguide`
+  * [#546](https://github.com/ember-learn/ember-styleguide/pull/546) update release-plan ([@mansona](https://github.com/mansona))
+  * [#542](https://github.com/ember-learn/ember-styleguide/pull/542) Convert all components to GJS ([@Windvis](https://github.com/Windvis))
+  * [#545](https://github.com/ember-learn/ember-styleguide/pull/545) Run prettier on hbs files ([@mansona](https://github.com/mansona))
+  * [#541](https://github.com/ember-learn/ember-styleguide/pull/541) Linting setup updates ([@Windvis](https://github.com/Windvis))
+  * [#543](https://github.com/ember-learn/ember-styleguide/pull/543) remove compromised website link ([@void-mAlex](https://github.com/void-mAlex))
+
+#### Committers: 4
+- Alex ([@void-mAlex](https://github.com/void-mAlex))
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Sam Van Campenhout ([@Windvis](https://github.com/Windvis))
+- Tom Carter ([@tcjr](https://github.com/tcjr))
+
 ## Release (2025-08-22)
 
 * ember-styleguide 11.3.1 (patch)

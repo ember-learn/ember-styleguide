@@ -1,18 +1,26 @@
 {
   "solution": {
     "ember-styleguide": {
-      "impact": "patch",
-      "oldVersion": "11.3.0",
-      "newVersion": "11.3.1",
+      "impact": "minor",
+      "oldVersion": "11.3.1",
+      "newVersion": "11.4.0",
       "tagName": "latest",
       "constraints": [
         {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-08-22)\n\n* ember-styleguide 11.3.1 (patch)\n\n#### :bug: Bug Fix\n* `ember-styleguide`\n  * [#538](https://github.com/ember-learn/ember-styleguide/pull/538) Add default class handling for icons ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2026-03-13)\n\n* ember-styleguide 11.4.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-styleguide`\n  * [#542](https://github.com/ember-learn/ember-styleguide/pull/542) Convert all components to GJS ([@Windvis](https://github.com/Windvis))\n\n#### :bug: Bug Fix\n* `ember-styleguide`\n  * [#526](https://github.com/ember-learn/ember-styleguide/pull/526) #354 Fix onClicked warning if @type is \"submit\" ([@tcjr](https://github.com/tcjr))\n\n#### :house: Internal\n* `ember-styleguide`\n  * [#546](https://github.com/ember-learn/ember-styleguide/pull/546) update release-plan ([@mansona](https://github.com/mansona))\n  * [#542](https://github.com/ember-learn/ember-styleguide/pull/542) Convert all components to GJS ([@Windvis](https://github.com/Windvis))\n  * [#545](https://github.com/ember-learn/ember-styleguide/pull/545) Run prettier on hbs files ([@mansona](https://github.com/mansona))\n  * [#541](https://github.com/ember-learn/ember-styleguide/pull/541) Linting setup updates ([@Windvis](https://github.com/Windvis))\n  * [#543](https://github.com/ember-learn/ember-styleguide/pull/543) remove compromised website link ([@void-mAlex](https://github.com/void-mAlex))\n\n#### Committers: 4\n- Alex ([@void-mAlex](https://github.com/void-mAlex))\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Sam Van Campenhout ([@Windvis](https://github.com/Windvis))\n- Tom Carter ([@tcjr](https://github.com/tcjr))\n"
 }
