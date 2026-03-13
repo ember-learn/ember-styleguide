@@ -1,26 +1,25 @@
-/* eslint-disable ember/no-empty-glimmer-component-classes */
-import Component from '@glimmer/component';
+import EsIcon from './es-icon';
 
-export default class EsCardContentComponent extends Component {}
+<template>
+  {{! template-lint-disable require-valid-alt-text }}
+  {{! Bug link: https://github.com/ember-template-lint/ember-template-lint/issues/1286 }}
 
-{{! template-lint-disable require-valid-alt-text }}
-{{! Bug link: https://github.com/ember-template-lint/ember-template-lint/issues/1286 }}
+  {{#if @icon}}
+    <EsIcon @icon={{@icon}} @class="card__icon" width="60px" />
+  {{/if}}
 
-{{#if @icon}}
-  <EsIcon @icon={{@icon}} @class="card__icon" width="60px" />
-{{/if}}
+  {{#if @image}}
+    <img
+      class="card__image"
+      src={{@image.src}}
+      alt={{if @image.alt @image.alt ""}}
+      role={{unless @image.alt "presentation"}}
+      width={{@image.width}}
+      height={{@image.width}}
+    />
+  {{/if}}
 
-{{#if @image}}
-  <img
-    class="card__image"
-    src={{@image.src}}
-    alt={{if @image.alt @image.alt ""}}
-    role={{unless @image.alt "presentation"}}
-    width={{@image.width}}
-    height={{@image.width}}
-  />
-{{/if}}
-
-<div class="card__content">
-  {{yield}}
-</div>
+  <div class="card__content">
+    {{yield}}
+  </div>
+</template>

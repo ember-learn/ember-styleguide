@@ -23,18 +23,20 @@ export default class EsNoteComponent extends Component {
       this.mascot = randomMascot();
     }
   }
-}
 
-{{! template-lint-disable no-redundant-role }}
-<div class="cta" ...attributes>
-  <div class="cta-note">
-    <div class="cta-note-body">
-      <div
-        class="cta-note-heading"
-        data-test-es-note-heading
-      >{{this.mascot.name}} says...</div>
-      <div class="cta-note-message">{{yield}}</div>
+  <template>
+    {{! template-lint-disable no-redundant-role }}
+    <div class="cta" ...attributes>
+      <div class="cta-note">
+        <div class="cta-note-body">
+          <div
+            class="cta-note-heading"
+            data-test-es-note-heading
+          >{{this.mascot.name}} says...</div>
+          <div class="cta-note-message">{{yield}}</div>
+        </div>
+        <img src={{this.mascot.image}} role="presentation" alt="" />
+      </div>
     </div>
-    <img src={{this.mascot.image}} role="presentation" alt="" />
-  </div>
-</div>
+  </template>
+}

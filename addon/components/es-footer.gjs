@@ -1,4 +1,8 @@
 import Component from '@glimmer/component';
+import EsFooterContributions from './es-footer-contributions';
+import EsFooterHelp from './es-footer-help';
+import EsFooterInfo from './es-footer-info';
+import EsFooterStatement from './es-footer-statement';
 
 import {
   socialLinks,
@@ -43,25 +47,27 @@ export default class EsFooterComponent extends Component {
 
     return infoLinks;
   }
+
+  <template>
+    <footer class="es-footer" ...attributes>
+      {{!--
+        Pass footer properties to support
+        <EsFooter @infoLinks={{someOtherLinks}} />
+      --}}
+      <EsFooterInfo
+        @infoLinks={{this.infoLinks}}
+        @socialLinks={{this.socialLinks}}
+      />
+
+      <EsFooterHelp @contributeLink={{@contributeLink}} />
+      <EsFooterStatement
+        @tagline={{this.tagline}}
+        @contributeLink={{@contributeLink}}
+      />
+
+      <hr class="footer-spacer container py-0 my-3" />
+
+      <EsFooterContributions @contributorLinks={{this.contributorLinks}} />
+    </footer>
+  </template>
 }
-
-<footer class="es-footer" ...attributes>
-  {{!--
-    Pass footer properties to support
-    <EsFooter @infoLinks={{someOtherLinks}} />
-  --}}
-  <EsFooterInfo
-    @infoLinks={{this.infoLinks}}
-    @socialLinks={{this.socialLinks}}
-  />
-
-  <EsFooterHelp @contributeLink={{@contributeLink}} />
-  <EsFooterStatement
-    @tagline={{this.tagline}}
-    @contributeLink={{@contributeLink}}
-  />
-
-  <hr class="footer-spacer container py-0 my-3" />
-
-  <EsFooterContributions @contributorLinks={{this.contributorLinks}} />
-</footer>

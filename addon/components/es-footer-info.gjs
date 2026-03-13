@@ -1,38 +1,37 @@
-/* eslint-disable ember/no-empty-glimmer-component-classes */
-import Component from '@glimmer/component';
+import EsIcon from './es-icon';
 
-export default class EsFooterInfoComponent extends Component {}
+<template>
+  {{! template-lint-disable no-redundant-role }}
+  <div class="footer-info container">
+    <div class="footer-info-links">
 
-{{! template-lint-disable no-redundant-role }}
-<div class="footer-info container">
-  <div class="footer-info-links">
+      <img
+        src="/images/ember-logo.svg"
+        height="40px"
+        width="83px"
+        alt=""
+        role="presentation"
+        class="footer-logo"
+      />
 
-    <img
-      src="/images/ember-logo.svg"
-      height="40px"
-      width="83px"
-      alt=""
-      role="presentation"
-      class="footer-logo"
-    />
+      <div class="spacer"></div>
 
-    <div class="spacer"></div>
-
-    {{#each @infoLinks as |link|}}
-      <a href={{link.href}} class="info-link">{{link.name}}</a>
-    {{/each}}
+      {{#each @infoLinks as |link|}}
+        <a href={{link.href}} class="info-link">{{link.name}}</a>
+      {{/each}}
+    </div>
+    <div class="footer-social hide-on-mobile">
+      {{#each @socialLinks as |link|}}
+        <a
+          href={{link.href}}
+          title={{link.title}}
+          aria-label={{link.label}}
+          rel="me"
+        >
+          <EsIcon @icon={{link.class}} />
+          {{link.title}}
+        </a>
+      {{/each}}
+    </div>
   </div>
-  <div class="footer-social hide-on-mobile">
-    {{#each @socialLinks as |link|}}
-      <a
-        href={{link.href}}
-        title={{link.title}}
-        aria-label={{link.label}}
-        rel="me"
-      >
-        <EsIcon @icon={{link.class}} />
-        {{link.title}}
-      </a>
-    {{/each}}
-  </div>
-</div>
+</template>

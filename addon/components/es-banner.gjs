@@ -1,3 +1,5 @@
-<div class="es-banner" data-test-es-banner>
-  {{yield}}
-</div>
+<template>
+  <div class="es-banner" data-test-es-banner>
+    {{yield}}
+  </div>
+</template>

@@ -1,9 +1,13 @@
-/* eslint-disable ember/no-runloop, ember/no-tracked-properties-from-args */
+/* eslint-disable ember/no-runloop, ember/no-tracked-properties-from-args, ember/no-at-ember-render-modifiers */
 import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { schedule, next } from '@ember/runloop';
 import { action } from '@ember/object';
+import { on } from '@ember/modifier';
 import { tracked } from '@glimmer/tracking';
+import didInsert from '@ember/render-modifiers/modifiers/did-insert';
+import willDestroy from '@ember/render-modifiers/modifiers/will-destroy';
+import eq from 'ember-truth-helpers/helpers/eq';
 
 export default class EsHeaderNavbarLink extends Component {
   @service navbar;
@@ -143,45 +147,47 @@ export default class EsHeaderNavbarLink extends Component {
       dropdownTrigger.focus();
     });
   }
-}
 
-{{! template-lint-disable no-at-ember-render-modifiers }}
-<li
-  class="navbar-list-item {{if this.isDropdown 'dropdown'}}"
-  {{did-insert this.setElement}}
-  {{will-destroy this.unregisterListener}}
->
-  {{#if (eq @link.type "link")}}
-    <a class="navbar-list-item-link" href={{@link.href}}>
-      {{@link.name}}
-    </a>
-  {{/if}}
-  {{#if (eq @link.type "dropdown")}}
-    <button
-      type="button"
-      class="navbar-list-item-dropdown-toggle
-        {{if this.isDropdownOpen 'active'}}"
-      aria-expanded={{this.isExpanded}}
-      {{on "click" this.toggleDropdown}}
-      {{on "blur" this.processBlur}}
+  <template>
+    {{! template-lint-disable no-at-ember-render-modifiers }}
+    <li
+      class="navbar-list-item {{if this.isDropdown 'dropdown'}}"
+      {{didInsert this.setElement}}
+      {{willDestroy this.unregisterListener}}
     >
-      {{@link.name}}
-    </button>
-    {{#if this.isDropdownOpen}}
-      <ul class="navbar-dropdown-list">
-        {{#each @link.items as |item|}}
-          {{#if (eq item.type "link")}}
-            <li class="navbar-dropdown-list-item">
-              <a class="navbar-dropdown-list-item-link" href={{item.href}}>
-                {{item.name}}
-              </a>
-            </li>
-          {{/if}}
-          {{#if (eq item.type "divider")}}
-            <li role="separator" class="separator"></li>
-          {{/if}}
-        {{/each}}
-      </ul>
-    {{/if}}
-  {{/if}}
-</li>
+      {{#if (eq @link.type "link")}}
+        <a class="navbar-list-item-link" href={{@link.href}}>
+          {{@link.name}}
+        </a>
+      {{/if}}
+      {{#if (eq @link.type "dropdown")}}
+        <button
+          type="button"
+          class="navbar-list-item-dropdown-toggle
+            {{if this.isDropdownOpen 'active'}}"
+          aria-expanded={{this.isExpanded}}
+          {{on "click" this.toggleDropdown}}
+          {{on "blur" this.processBlur}}
+        >
+          {{@link.name}}
+        </button>
+        {{#if this.isDropdownOpen}}
+          <ul class="navbar-dropdown-list">
+            {{#each @link.items as |item|}}
+              {{#if (eq item.type "link")}}
+                <li class="navbar-dropdown-list-item">
+                  <a class="navbar-dropdown-list-item-link" href={{item.href}}>
+                    {{item.name}}
+                  </a>
+                </li>
+              {{/if}}
+              {{#if (eq item.type "divider")}}
+                <li role="separator" class="separator"></li>
+              {{/if}}
+            {{/each}}
+          </ul>
+        {{/if}}
+      {{/if}}
+    </li>
+  </template>
+}
