@@ -1,0 +1,28 @@
+import Component from '@glimmer/component';
+import EsIcon from './es-icon';
+
+export default class EsFooterStatementComponent extends Component {
+  constructor() {
+    super(...arguments);
+
+    this.currentYear = new Date().getUTCFullYear();
+  }
+
+  <template>
+    <div class="footer-statement">
+      <p class="footer-copyright container py-1">
+        &copy; Copyright
+        {{this.currentYear}}
+        -
+        <a href="https://www.tilde.io/" class="footer-copyright">Tilde Inc.</a>
+        <br />
+        {{@tagline}}
+        {{#if @contributeLink}}
+          <br />
+          <a href={{@contributeLink}}>Contribute to this page
+            <EsIcon @icon="external-link" /></a>
+        {{/if}}
+      </p>
+    </div>
+  </template>
+}

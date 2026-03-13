@@ -24,4 +24,9 @@ export default class EsIconComponent extends Component {
       `<svg class="${this.args.class}"`,
     );
   }
+
+  <template>
+    {{! template-lint-disable no-triple-curlies }}
+    {{{this.icon}}}
+  </template>
 }
