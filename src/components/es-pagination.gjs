@@ -1,0 +1,21 @@
+function and(a, b) {
+  return a && b;
+}
+
+<template>
+  <div class="pagination-wrapper">
+    {{#if (and (has-block "previous") @showPrevious)}}
+      <div class="previous-wrapper">
+        <img alt="left arrow" src="/images/arrow-icon.svg" />
+        <div>{{yield to="previous"}}</div>
+      </div>
+    {{/if}}
+
+    {{#if (and (has-block "next") @showNext)}}
+      <div class="next-wrapper">
+        <div>{{yield to="next"}}</div>
+        <img alt="right arrow" src="/images/arrow-icon.svg" />
+      </div>
+    {{/if}}
+  </div>
+</template>

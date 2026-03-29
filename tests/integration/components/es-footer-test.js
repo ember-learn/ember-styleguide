@@ -10,8 +10,8 @@ module('Integration | Component | es footer', function (hooks) {
   test('it renders', async function (assert) {
     await render(hbs`<EsFooter/>`);
 
-    const footerSocialLinks = this.element.querySelectorAll('.footer-social a');
-    const footerContribtuionsLinks = this.element.querySelectorAll(
+    const footerSocialLinks = document.querySelectorAll('.footer-social a');
+    const footerContribtuionsLinks = document.querySelectorAll(
       '.footer-contributions a',
     );
 
