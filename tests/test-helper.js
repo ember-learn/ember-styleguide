@@ -62,6 +62,23 @@ class TestApp extends EmberApp {
     './routes/basicy': BasicyRoute,
     './routes/slow': SlowRoute,
     './routes/fancy': FancyRoute,
+    './components/es-banner': EsBanner,
+    './components/es-button': EsButton,
+    './components/es-card-content': EsCardContent,
+    './components/es-card': EsCard,
+    './components/es-footer-contributions': EsFooterContributions,
+    './components/es-footer-help': EsFooterHelp,
+    './components/es-footer-info': EsFooterInfo,
+    './components/es-footer-statement': EsFooterStatement,
+    './components/es-footer': EsFooter,
+    './components/es-header-navbar-link': EsHeaderNavbarLink,
+    './components/es-header': EsHeader,
+    './components/es-icon': EsIcon,
+    './components/es-link-card': EsLinkCard,
+    './components/es-note': EsNote,
+    './components/es-pagination': EsPagination,
+    './components/es-progress-bar': EsProgressBar,
+    './components/es-sidebar': EsSidebar,
   };
 }
 
