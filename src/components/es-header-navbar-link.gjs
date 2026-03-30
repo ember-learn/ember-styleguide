@@ -88,14 +88,6 @@ export default class EsHeaderNavbarLink extends Component {
     this.isDropdownOpen = false;
   }
 
-  get isLink() {
-    return this.args.type === 'link';
-  }
-
-  get isDropdown() {
-    return this.args.type === 'dropdown';
-  }
-
   <template>
     {{! template-lint-disable no-at-ember-render-modifiers }}
     <li
@@ -103,12 +95,12 @@ export default class EsHeaderNavbarLink extends Component {
       {{this.setElement}}
       {{on "focusout" this.handleFocusOut}}
     >
-      {{#if this.isLink}}
+      {{#if (isLink @link)}}
         <a class="navbar-list-item-link" href={{@link.href}}>
           {{@link.name}}
         </a>
       {{/if}}
-      {{#if this.isDropdown}}
+      {{#if (isDropdown @link)}}
         <button
           type="button"
           class="navbar-list-item-dropdown-toggle

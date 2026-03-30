@@ -5,6 +5,7 @@
   "keywords": [
     "ember-addon"
   ],
+  "type": "module",
   "homepage": "https://ember-styleguide.netlify.app/",
   "repository": "https://github.com/ember-learn/ember-styleguide.git",
   "license": "MIT",
@@ -51,7 +52,7 @@
     "@glimmer/component": "2.0.0",
     "@shikijs/rehype": "^4.0.2",
     "decorator-transforms": "^2.3.0",
-    "ember-concurrency": "^4.0.0",
+    "ember-concurrency": "^5.0.0",
     "ember-modifier": "^4.3.0",
     "ember-primitives": "^0.55.0",
     "ember-repl": "^8.0.2",
