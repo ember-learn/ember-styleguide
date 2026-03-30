@@ -7,10 +7,7 @@ import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
 export default class ApplicationRoute extends Route {
   async model() {
     const highlighter = await createHighlighterCore({
-      themes: [
-        import('shiki/themes/github-dark.mjs'),
-        import('shiki/themes/github-light.mjs'),
-      ],
+      themes: [import('shiki/themes/github-dark.mjs'), import('shiki/themes/github-light.mjs')],
       langs: [
         import('shiki/langs/javascript.mjs'),
         import('shiki/langs/typescript.mjs'),
