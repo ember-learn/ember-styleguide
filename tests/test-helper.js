@@ -8,6 +8,13 @@ import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';
 import { start as qunitStart, setupEmberOnerrorValidation } from 'ember-qunit';
 
+// Addon styles
+import '#src/styles/addon.css';
+
+// Test app templates
+import * as ApplicationTemplate from './templates/application.gjs';
+import * as IndexTemplate from './templates/index.gjs';
+
 // Addon services needed by tests
 import NavbarService from '#src/services/navbar';
 import ProgressService from '#src/services/progress';
@@ -62,6 +69,8 @@ class TestApp extends EmberApp {
     './routes/basicy': BasicyRoute,
     './routes/slow': SlowRoute,
     './routes/fancy': FancyRoute,
+    './templates/application': ApplicationTemplate,
+    './templates/index': IndexTemplate,
     './components/es-banner': EsBanner,
     './components/es-button': EsButton,
     './components/es-card-content': EsCardContent,
