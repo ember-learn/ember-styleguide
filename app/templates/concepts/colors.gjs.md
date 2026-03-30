@@ -18,7 +18,7 @@ The primary palette is applied across every page of the website and contains the
 </style>
 
 ```gjs live
-import ColorPallet from 'demo-app/components/color-pallet.gjs';
+import ColorPallet from '#demo-app/components/color-pallet.gjs';
 import { array } from '@ember/helper';
 import { hash } from '@ember/helper';
 
@@ -57,7 +57,7 @@ import { hash } from '@ember/helper';
 These colors are for charts and diagrams only. The secondary palette is applied to UI elements and is not part of the base colors. The purpose of the secondary palette is to ensure the readability, usability, and accessibility of charts and diagrams and enhance the communication of actions, changes in state, or errors.
 
 ```gjs live
-import ColorPallet from 'demo-app/components/color-pallet.gjs';
+import ColorPallet from '#demo-app/components/color-pallet.gjs';
 import { array } from '@ember/helper';
 
 <template>
@@ -91,7 +91,7 @@ import { array } from '@ember/helper';
 ```
 
 ```gjs live
-import ColorPallet from 'demo-app/components/color-pallet.gjs';
+import ColorPallet from '#demo-app/components/color-pallet.gjs';
 import { array } from '@ember/helper';
 
 <template>
@@ -117,7 +117,7 @@ import { array } from '@ember/helper';
 ```
 
 ```gjs live
-import ColorPallet from 'demo-app/components/color-pallet.gjs';
+import ColorPallet from '#demo-app/components/color-pallet.gjs';
 import { array } from '@ember/helper';
 
 <template>
@@ -143,7 +143,7 @@ import { array } from '@ember/helper';
 ```
 
 ```gjs live
-import ColorPallet from 'demo-app/components/color-pallet.gjs';
+import ColorPallet from '#demo-app/components/color-pallet.gjs';
 import { array } from '@ember/helper';
 
 <template>
