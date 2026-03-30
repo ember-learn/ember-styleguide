@@ -70,10 +70,10 @@
     "@eslint/js": "^9.37.0",
     "@glimmer/tracking": "^1.1.2",
     "@percy/cli": "^1.27.7",
-    "@percy/ember": "^4.2.0",
-    "@rollup/plugin-babel": "^6.0.4",
+    "@percy/ember": "^5.0.0",
+    "@rollup/plugin-babel": "^7.0.0",
     "babel-plugin-ember-template-compilation": "^4.0.0",
-    "concurrently": "^8.2.2",
+    "concurrently": "^9.2.1",
     "ember-page-title": "^9.0.3",
     "ember-qunit": "^9.0.2",
     "ember-source": "6.12.0-beta.3",
@@ -103,9 +103,9 @@
     "stylelint-declaration-strict-value": "^1.8.0",
     "stylelint-order": "^4.0.0",
     "testem": "^3.15.1",
-    "vite": "^7.1.9"
+    "vite": "^8.0.3"
   },
-  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977",
+  "packageManager": "pnpm@10.33.0",
   "engines": {
     "node": ">= 24"
   },
