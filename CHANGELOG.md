@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2026-05-08)
+
+* ember-styleguide 11.5.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-styleguide`
+  * [#548](https://github.com/ember-learn/ember-styleguide/pull/548) update test-waiters ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `ember-styleguide`
+  * [#550](https://github.com/ember-learn/ember-styleguide/pull/550) update release-plan ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2026-03-13)
 
 * ember-styleguide 11.4.0 (minor)
