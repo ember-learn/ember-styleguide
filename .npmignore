@@ -1,5 +1,4 @@
 # compiled output
-/dist/
 /tmp/
 
 # misc
@@ -20,6 +19,8 @@
 /CONTRIBUTING.md
 /ember-cli-build.js
 /eslint.config.mjs
+/rollup.config.mjs
+/postcss.config.cjs
 /testem.js
 /tests/
 /tsconfig.declarations.json

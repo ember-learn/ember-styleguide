@@ -18,7 +18,7 @@ module('Integration | Component | es-pagination', function (hooks) {
     </EsPagination>
     `);
 
-    assert.dom(this.element).hasText('Newer articles Older articles');
+    assert.dom('.pagination-wrapper').hasText('Newer articles Older articles');
   });
   test('it renders only previous', async function (assert) {
     await render(hbs`
@@ -32,8 +32,8 @@ module('Integration | Component | es-pagination', function (hooks) {
     </EsPagination>
     `);
 
-    assert.dom(this.element).hasText('Newer articles');
-    assert.dom(this.element).doesNotIncludeText('Older articles');
+    assert.dom('.pagination-wrapper').hasText('Newer articles');
+    assert.dom('.pagination-wrapper').doesNotIncludeText('Older articles');
   });
   test('it renders only next', async function (assert) {
     await render(hbs`
@@ -47,7 +47,7 @@ module('Integration | Component | es-pagination', function (hooks) {
     </EsPagination>
     `);
 
-    assert.dom(this.element).hasText('Older articles');
-    assert.dom(this.element).doesNotIncludeText('Newer articles');
+    assert.dom('.pagination-wrapper').hasText('Older articles');
+    assert.dom('.pagination-wrapper').doesNotIncludeText('Newer articles');
   });
 });

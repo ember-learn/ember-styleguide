@@ -1,0 +1,3 @@
+{
+  "order": ["banner", "button", "card", "footer", "header", "link-card", "note", "pagination", "progress-bar", "sidebar"]
+}
