@@ -9,9 +9,28 @@ This addon is intended to provide basic components for easier style coordination
 
 ## Compatibility
 
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v18 or above
+* Ember.js v4.12 or above
+* Node.js v20 or above
+
+## Installation
+
+```bash
+pnpm add ember-styleguide
+```
+
+## Usage
+
+### CSS
+
+Import the addon's styles in your app's CSS (e.g., `app/styles/app.css`):
+
+```css
+@import 'ember-styleguide/styles.css';
+```
+
+### Components
+
+The addon provides components like `<EsHeader>`, `<EsFooter>`, `<EsCard>`, `<EsNote>`, etc. See the demo app for usage examples.
 
 ## Contributing
 
