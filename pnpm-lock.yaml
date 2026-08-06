@@ -11,9 +11,6 @@ importers:
       '@babel/core':
         specifier: ^7.25.2
         version: 7.27.3
-      '@ember/render-modifiers':
-        specifier: ^2.0.2
-        version: 2.1.0(@babel/core@7.27.3)(ember-source@5.12.0(@glimmer/component@1.1.2(@babel/core@7.27.3))(rsvp@4.8.5)(webpack@5.99.9))
       '@ember/test-waiters':
         specifier: ^4.1.1
         version: 4.1.1
@@ -41,6 +38,9 @@ importers:
       ember-concurrency:
         specifier: ^2.2.0
         version: 2.3.7(@babel/core@7.27.3)
+      ember-modifier:
+        specifier: ^4.3.0
+        version: 4.3.0(@babel/core@7.27.3)
       ember-named-blocks-polyfill:
         specifier: ^0.2.5
         version: 0.2.5
@@ -900,16 +900,6 @@ packages:
   '@ember/optional-features@2.2.0':
     resolution: {integrity: sha512-a1OQ+w9vDvMXd9BNA9r779yr8MAPguGaMGbIeTMPWACeWBdD6bACBB5iKE3gNyrJAYKMq2wab6BKmRFS3Qw3hw==}
     engines: {node: 10.* || 12.* || >= 14}
-
-  '@ember/render-modifiers@2.1.0':
-    resolution: {integrity: sha512-LruhfoDv2itpk0fA0IC76Sxjcnq/7BC6txpQo40hOko8Dn6OxwQfxkPIbZGV0Cz7df+iX+VJrcYzNIvlc3w2EQ==}
-    engines: {node: 12.* || 14.* || >= 16}
-    peerDependencies:
-      '@glint/template': ^1.0.2
-      ember-source: ^3.8 || ^4.0.0 || ^5.0.0
-    peerDependenciesMeta:
-      '@glint/template':
-        optional: true
 
   '@ember/test-helpers@5.4.2':
     resolution: {integrity: sha512-ZT++x8DbixXgvxO00J064rzNcsn9WycMPisNvee6dg9u6G4Z1yx0Hc8HqUFBJP7NyxVKZCokHlRWRQuz9S6wvQ==}
@@ -3418,9 +3408,8 @@ packages:
     resolution: {integrity: sha512-CYR+U/wRxLbrfYN3dh+0Tb6mFaxJKfdyz+wNql6cqTrA0BBi9k6J3AaKXj273TqvEpyyXegQFFkZEiuZdYtgJw==}
     engines: {node: 6.* || 8.* || >= 10.*}
 
-  ember-modifier-manager-polyfill@1.2.0:
-    resolution: {integrity: sha512-bnaKF1LLKMkBNeDoetvIJ4vhwRPKIIumWr6dbVuW6W6p4QV8ZiO+GdF8J7mxDNlog9CeL9Z/7wam4YS86G8BYA==}
-    engines: {node: 6.* || 8.* || >= 10.*}
+  ember-modifier@4.3.0:
+    resolution: {integrity: sha512-O0rirSLQbGg0VJ/NqoQ4uN1bh2iAekZC/Ykma+FkjCM2ofrO38u+d8n3+AK6uVWeMJmogGX2KL+Is5fofoInJg==}
 
   ember-named-blocks-polyfill@0.2.5:
     resolution: {integrity: sha512-OVMxzkfqJrEvmiky7gFzmuTaImCGm7DOudHWTdMBPO7E+dQSunrcRsJMgO9ZZ56suqBIz/yXbEURrmGS+avHxA==}
@@ -8506,16 +8495,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@ember/render-modifiers@2.1.0(@babel/core@7.27.3)(ember-source@5.12.0(@glimmer/component@1.1.2(@babel/core@7.27.3))(rsvp@4.8.5)(webpack@5.99.9))':
-    dependencies:
-      '@embroider/macros': 1.18.0
-      ember-cli-babel: 7.26.11
-      ember-modifier-manager-polyfill: 1.2.0(@babel/core@7.27.3)
-      ember-source: 5.12.0(@glimmer/component@1.1.2(@babel/core@7.27.3))(rsvp@4.8.5)(webpack@5.99.9)
-    transitivePeerDependencies:
-      - '@babel/core'
-      - supports-color
-
   '@ember/test-helpers@5.4.2(@babel/core@7.27.3)':
     dependencies:
       '@ember/test-waiters': 4.1.1
@@ -12279,11 +12258,10 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  ember-modifier-manager-polyfill@1.2.0(@babel/core@7.27.3):
+  ember-modifier@4.3.0(@babel/core@7.27.3):
     dependencies:
-      ember-cli-babel: 7.26.11
-      ember-cli-version-checker: 2.2.0
-      ember-compatibility-helpers: 1.2.7(@babel/core@7.27.3)
+      '@embroider/addon-shim': 1.10.2
+      decorator-transforms: 2.3.2(@babel/core@7.27.3)
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
