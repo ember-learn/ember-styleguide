@@ -1,0 +1,6 @@
+import { LinkTo } from '@ember/routing';
+
+<template>
+  <LinkTo @route="basicy" data-test-basic-route>Go to my basic route</LinkTo>
+  <LinkTo @route="slow" data-test-slow-route>Go to my slow route</LinkTo>
+</template>

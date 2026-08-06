@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render, click } from '@ember/test-helpers';
-import EsSidebar from 'ember-styleguide/components/es-sidebar';
+import EsSidebar from '#src/components/es-sidebar.gjs';
 
 module('Integration | Component | es-sidebar', function (hooks) {
   setupRenderingTest(hooks);

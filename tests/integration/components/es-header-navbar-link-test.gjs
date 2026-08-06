@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { blur, click, render, triggerKeyEvent } from '@ember/test-helpers';
-import EsHeaderNavbarLink from 'ember-styleguide/components/es-header-navbar-link';
+import EsHeaderNavbarLink from '#src/components/es-header-navbar-link.gjs';
 
 const community = {
   type: 'dropdown',

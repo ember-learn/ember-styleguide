@@ -2,7 +2,7 @@ import { click, render } from '@ember/test-helpers';
 import { module, test, skip } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { setProperties, set } from '@ember/object';
-import EsButton from 'ember-styleguide/components/es-button';
+import EsButton from '#src/components/es-button.gjs';
 
 module('Integration | Component | es button', function (hooks) {
   setupRenderingTest(hooks);

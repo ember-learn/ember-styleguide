@@ -2,7 +2,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
-import EsFooter from 'ember-styleguide/components/es-footer';
+import EsFooter from '#src/components/es-footer.gjs';
 
 module('Integration | Component | es footer', function (hooks) {
   setupRenderingTest(hooks);

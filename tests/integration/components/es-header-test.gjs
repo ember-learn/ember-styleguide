@@ -1,7 +1,7 @@
 import { click, render } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import EsHeader from 'ember-styleguide/components/es-header';
+import EsHeader from '#src/components/es-header.gjs';
 
 const customHomeUrl = 'https://github.com/emberjs';
 

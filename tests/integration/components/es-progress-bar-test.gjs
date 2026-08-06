@@ -1,7 +1,7 @@
 import { render } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import EsProgressBar from 'ember-styleguide/components/es-progress-bar';
+import EsProgressBar from '#src/components/es-progress-bar.gjs';
 
 module('Integration | Component | es progress bar', function (hooks) {
   setupRenderingTest(hooks);
