@@ -38,7 +38,6 @@
   },
   "dependencies": {
     "@babel/core": "^7.25.2",
-    "@ember/render-modifiers": "^2.0.2",
     "@ember/test-waiters": "^4.1.1",
     "@glimmer/component": "^1.1.2",
     "broccoli-funnel": "^3.0.2",
@@ -47,6 +46,7 @@
     "ember-cli-htmlbars": "^6.3.0",
     "ember-cli-postcss": "^8.2.0",
     "ember-concurrency": "^2.2.0",
+    "ember-modifier": "^4.3.0",
     "ember-template-imports": "^4.4.0",
     "ember-truth-helpers": "^3.0.0",
     "normalize.css": "^8.0.1",
