@@ -1,0 +1,11 @@
+[build]
+  command = "corepack enable && pnpm install --frozen-lockfile && pnpm build:styleguide && pnpm build"
+  publish = "dist-demo"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

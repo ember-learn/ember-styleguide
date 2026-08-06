@@ -1,0 +1,32 @@
+import Component from '@glimmer/component';
+import { assert } from '@ember/debug';
+
+import icons from '../constants/icons.js';
+
+export default class EsIconComponent extends Component {
+  get icon() {
+    if (!(this.args.icon in icons)) {
+      assert(
+        `${
+          this.args.icon
+        } isn't a supported icon. We no longer support dynamid svg lookup and can only support the following icons: ${Object.keys(
+          icons,
+        ).join(', ')}`,
+      );
+    }
+
+    if (!this.args.class) {
+      return icons[this.args.icon];
+    }
+
+    return icons[this.args.icon].replace(
+      '<svg ',
+      `<svg class="${this.args.class}"`,
+    );
+  }
+
+  <template>
+    {{! template-lint-disable no-triple-curlies }}
+    {{{this.icon}}}
+  </template>
+}
