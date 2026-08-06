@@ -1,6 +1,6 @@
 /* eslint-disable ember/no-runloop, ember/no-tracked-properties-from-args */
 import Component from '@glimmer/component';
-import { inject as service } from '@ember/service';
+import { service } from '@ember/service';
 import { schedule, next } from '@ember/runloop';
 import { action } from '@ember/object';
 import { on } from '@ember/modifier';
