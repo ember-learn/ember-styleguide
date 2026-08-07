@@ -1,7 +1,7 @@
 import { render } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import hbs from 'htmlbars-inline-precompile';
+import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | es card', function (hooks) {
   setupRenderingTest(hooks);
@@ -10,14 +10,14 @@ module('Integration | Component | es card', function (hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.on('myAction', function(val) { ... });
 
-    await render(hbs`{{es-card}}`);
+    await render(hbs`<EsCard />`);
     assert.dom('*').hasText('');
 
     // Template block usage:
     await render(hbs`
-      {{#es-card}}
+      <EsCard>
         template block text
-      {{/es-card}}
+      </EsCard>
     `);
 
     assert.dom(this.element).hasText('template block text');
