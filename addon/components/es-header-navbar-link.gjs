@@ -1,12 +1,11 @@
-/* eslint-disable ember/no-runloop, ember/no-tracked-properties-from-args, ember/no-at-ember-render-modifiers */
+/* eslint-disable ember/no-runloop, ember/no-tracked-properties-from-args */
 import Component from '@glimmer/component';
-import { inject as service } from '@ember/service';
+import { service } from '@ember/service';
 import { schedule, next } from '@ember/runloop';
 import { action } from '@ember/object';
 import { on } from '@ember/modifier';
 import { tracked } from '@glimmer/tracking';
-import didInsert from '@ember/render-modifiers/modifiers/did-insert';
-import willDestroy from '@ember/render-modifiers/modifiers/will-destroy';
+import { modifier } from 'ember-modifier';
 import eq from 'ember-truth-helpers/helpers/eq';
 
 export default class EsHeaderNavbarLink extends Component {
@@ -44,6 +43,12 @@ export default class EsHeaderNavbarLink extends Component {
       anchor.addEventListener('blur', () => this.processBlur());
     });
   }
+
+  setup = modifier((element) => {
+    this.setElement(element);
+
+    return () => this.unregisterListener(element);
+  });
 
   @action
   setElement(element) {
@@ -149,11 +154,9 @@ export default class EsHeaderNavbarLink extends Component {
   }
 
   <template>
-    {{! template-lint-disable no-at-ember-render-modifiers }}
     <li
       class="navbar-list-item {{if this.isDropdown 'dropdown'}}"
-      {{didInsert this.setElement}}
-      {{willDestroy this.unregisterListener}}
+      {{this.setup}}
     >
       {{#if (eq @link.type "link")}}
         <a class="navbar-list-item-link" href={{@link.href}}>
