@@ -1,0 +1,8 @@
+# Unlabeled Changes
+
+* `ember-styleguide`
+  * [#558](https://github.com/ember-learn/ember-styleguide/pull/558) Convert navbar service to a native class ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+  * [#552](https://github.com/ember-learn/ember-styleguide/pull/552) Remove unused dependencies ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+
+
+*Cannot plan release until the above changes are labeled*.
