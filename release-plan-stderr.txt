@@ -1,0 +1,12 @@
+# Unlabeled Changes
+
+* `ember-styleguide`
+  * [#562](https://github.com/ember-learn/ember-styleguide/pull/562) Remove ember-barrel usage from the dependency graph ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+  * [#557](https://github.com/ember-learn/ember-styleguide/pull/557) Remove inert devDependencies ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+  * [#554](https://github.com/ember-learn/ember-styleguide/pull/554) Get service from @ember/service in a version-safe way ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+  * [#553](https://github.com/ember-learn/ember-styleguide/pull/553) Replace @ember/render-modifiers with ember-modifier ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+  * [#558](https://github.com/ember-learn/ember-styleguide/pull/558) Convert navbar service to a native class ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+  * [#552](https://github.com/ember-learn/ember-styleguide/pull/552) Remove unused dependencies ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+
+
+*Cannot plan release until the above changes are labeled*.
