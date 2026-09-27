@@ -30,7 +30,8 @@ module.exports = {
   included: function (app) {
     this._super.included.apply(this, arguments);
     app.options = app.options || {};
-    app.options.postcssOptions = {
+    // default only: an app that configures postcssOptions itself wins
+    app.options.postcssOptions = app.options.postcssOptions || {
       compile: {
         enabled: true,
         plugins,
