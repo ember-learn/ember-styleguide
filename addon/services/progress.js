@@ -1,10 +1,14 @@
-import Service, { inject as service } from '@ember/service';
+import Service from '@ember/service';
+import * as serviceModule from '@ember/service';
 import { htmlSafe } from '@ember/template';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
 import { rawTimeout, task } from 'ember-concurrency';
 import { buildWaiter } from '@ember/test-waiters';
+
+// `service` was added in Ember 4.1; fall back to `inject` on older versions
+const service = serviceModule.service ?? serviceModule.inject;
 
 const SPEED = 200;
 

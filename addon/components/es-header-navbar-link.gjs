@@ -1,12 +1,15 @@
 /* eslint-disable ember/no-runloop, ember/no-tracked-properties-from-args */
 import Component from '@glimmer/component';
-import { inject as service } from '@ember/service';
+import * as serviceModule from '@ember/service';
 import { schedule, next } from '@ember/runloop';
 import { action } from '@ember/object';
 import { on } from '@ember/modifier';
 import { tracked } from '@glimmer/tracking';
 import { modifier } from 'ember-modifier';
 import eq from 'ember-truth-helpers/helpers/eq';
+
+// `service` was added in Ember 4.1; fall back to `inject` on older versions
+const service = serviceModule.service ?? serviceModule.inject;
 
 export default class EsHeaderNavbarLink extends Component {
   @service navbar;
