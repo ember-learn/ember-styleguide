@@ -338,9 +338,6 @@ importers:
       loader.js:
         specifier: ^4.7.0
         version: 4.7.0
-      pnpm:
-        specifier: ^7.0.0
-        version: 7.33.7
       prember:
         specifier: ^2.0.0
         version: 2.1.0(supports-color@8.1.1)
@@ -5998,11 +5995,6 @@ packages:
   pkg-up@3.1.0:
     resolution: {integrity: sha512-nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==}
     engines: {node: '>=8'}
-
-  pnpm@7.33.7:
-    resolution: {integrity: sha512-ev4kEGQrOcaY30baTOXHIxpczjYGmNafjPj0IlfUCz5D8jEFOwe43oSf1P+/SnH/V7g1E3d3o1I4jz09p0cgDg==}
-    engines: {node: '>=14.6'}
-    hasBin: true
 
   portfinder@1.0.37:
     resolution: {integrity: sha512-yuGIEjDAYnnOex9ddMnKZEMFE0CcGo6zbfzDklkmT1m5z734ss6JMzN9rNB3+RR7iS+F10D4/BVIaXOyh8PQKw==}
@@ -15251,8 +15243,6 @@ snapshots:
   pkg-up@3.1.0:
     dependencies:
       find-up: 3.0.0
-
-  pnpm@7.33.7: {}
 
   portfinder@1.0.37(supports-color@8.1.1):
     dependencies:
