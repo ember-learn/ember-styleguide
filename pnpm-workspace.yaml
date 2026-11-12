@@ -1,0 +1,3 @@
+allowBuilds:
+  "@percy/core": false
+  core-js: false
