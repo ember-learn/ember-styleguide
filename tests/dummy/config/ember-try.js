@@ -12,9 +12,34 @@ const preOwnerEmber = {
   'ember-concurrency': '^4.0.0',
 };
 
+// Ember 7 no longer publishes AMD bundles, so classic builds need current
+// build tooling: https://deprecations.emberjs.com/id/using-amd-bundles
+const modernBuildTooling = {
+  devDependencies: {
+    'ember-cli': '^7.0.0',
+    'ember-cli-babel': '^8.3.2',
+    'ember-cli-htmlbars': '^7.0.0',
+    'ember-auto-import': '^2.13.1',
+    // v2 addon; the v1 2.x release does not compile with ember-cli-babel 8
+    'ember-load-initializers': '^3.0.0',
+    // 4.x calls the removed `inject` from @ember/service; 6.x uses `service`
+    'ember-cli-fastboot': '^6.0.0',
+    // 8.x calls the removed `inject` at module eval; 9.x uses `service`
+    'ember-page-title': '^9.0.0',
+    // eagerly instantiates a service that calls the removed `inject`;
+    // unused by the test app, and no release without `inject` exists
+    'ember-scroll': null,
+  },
+  // overrides force the nested copies inside other v1 addons too
+  overrides: {
+    'ember-cli-babel': '^8.3.2',
+    'ember-cli-htmlbars': '^7.0.0',
+    'ember-auto-import': '^2.13.1',
+  },
+};
 module.exports = async function () {
   return {
-    usePnpm: true,
+    packageManager: 'pnpm',
     scenarios: [
       {
         name: 'ember-lts-3.28',
@@ -86,9 +111,13 @@ module.exports = async function () {
           devDependencies: {
             'ember-source': await getChannelURL('release'),
             '@ember/string': '*',
+            ...modernBuildTooling.devDependencies,
           },
-          overrides: {
-            'ember-source': '$ember-source',
+          pnpm: {
+            overrides: {
+              'ember-source': '$ember-source',
+              ...modernBuildTooling.overrides,
+            },
           },
         },
       },
@@ -98,9 +127,13 @@ module.exports = async function () {
           devDependencies: {
             'ember-source': await getChannelURL('beta'),
             '@ember/string': '*',
+            ...modernBuildTooling.devDependencies,
           },
-          overrides: {
-            'ember-source': '$ember-source',
+          pnpm: {
+            overrides: {
+              'ember-source': '$ember-source',
+              ...modernBuildTooling.overrides,
+            },
           },
         },
       },
@@ -110,9 +143,13 @@ module.exports = async function () {
           devDependencies: {
             'ember-source': await getChannelURL('canary'),
             '@ember/string': '*',
+            ...modernBuildTooling.devDependencies,
           },
-          overrides: {
-            'ember-source': '$ember-source',
+          pnpm: {
+            overrides: {
+              'ember-source': '$ember-source',
+              ...modernBuildTooling.overrides,
+            },
           },
         },
       },
@@ -133,9 +170,13 @@ module.exports = async function () {
             'ember-source': await getChannelURL('release'),
             'ember-deprecation-error': '*',
             '@ember/string': '*',
+            ...modernBuildTooling.devDependencies,
           },
-          overrides: {
-            'ember-source': '$ember-source',
+          pnpm: {
+            overrides: {
+              'ember-source': '$ember-source',
+              ...modernBuildTooling.overrides,
+            },
           },
         },
       },
