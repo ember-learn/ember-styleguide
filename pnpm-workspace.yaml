@@ -1,0 +1,6 @@
+allowBuilds:
+  "@percy/core": false
+  core-js: false
+  protobufjs: false
+minimumReleaseAgeExclude:
+  - ember-try@5.0.0
