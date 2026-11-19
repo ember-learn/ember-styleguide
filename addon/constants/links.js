@@ -1,5 +1,10 @@
 export default [
   {
+    name: 'Try',
+    type: 'link',
+    href: 'https://limber.glimdown.com/edit?format=gjs&c=DwFwpgtgDgNghuAfAKAASuACwIyIBJgwwD2ANKgOrEBOMAJgITAD0OKL408SyQA',
+  },
+  {
     name: 'Docs',
     type: 'dropdown',
     items: [
