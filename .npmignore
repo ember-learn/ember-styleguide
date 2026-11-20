@@ -10,10 +10,10 @@
 /.github/
 /.gitignore
 /.prettierignore
-/.prettierrc.js
+/.prettierrc.cjs
 /.stylelintignore
-/.stylelintrc.js
-/.template-lintrc.js
+/.stylelintrc.cjs
+/.template-lintrc.cjs
 /.travis.yml
 /.watchmanconfig
 /CONTRIBUTING.md

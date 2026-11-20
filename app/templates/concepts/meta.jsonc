@@ -1,3 +1,15 @@
 {
-  "order": ["accessibility", "background-shapes", "central-content", "colors", "header-anchor", "layout", "markdown", "on-this-page", "table-of-contents", "typography", "wells"]
+  "order": [
+    "accessibility",
+    "background-shapes",
+    "central-content",
+    "colors",
+    "header-anchor",
+    "layout",
+    "markdown",
+    "on-this-page",
+    "table-of-contents",
+    "typography",
+    "wells",
+  ],
 }
