@@ -80,10 +80,10 @@ export default class EsSidebarComponent extends Component {
         viewBox="0 0 36 36"
         xmlns="http://www.w3.org/2000/svg"
       ><path
-            fill="#FFF"
-            fill-rule="evenodd"
-            d="M28 24.5a1 1 0 010 2H13a1 1 0 010-2h15zm0-7a1 1 0 010 2H13a1 1 0 010-2h15zm0-7a1 1 0 010 2H13a1 1 0 010-2h15zM9 24a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"
-          /></svg>
+          fill="#FFF"
+          fill-rule="evenodd"
+          d="M28 24.5a1 1 0 010 2H13a1 1 0 010-2h15zm0-7a1 1 0 010 2H13a1 1 0 010-2h15zm0-7a1 1 0 010 2H13a1 1 0 010-2h15zM9 24a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"
+        /></svg>
     </EsButton>
   </template>
 }

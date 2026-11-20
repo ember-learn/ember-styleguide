@@ -15,10 +15,7 @@ export default {
   output: addon.output(),
   plugins: [
     addon.publicEntrypoints(['**/*.js']),
-    addon.appReexports([
-      'components/**/*.js',
-      'services/**/*.js',
-    ]),
+    addon.appReexports(['components/**/*.js', 'services/**/*.js']),
     addon.dependencies(),
     addon.gjs(),
     babel({

@@ -27,6 +27,7 @@ const esmParserOptions = {
   ecmaVersion: 'latest',
   requireConfigFile: false,
   babelOptions: {
+    configFile: false,
     plugins: [
       ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
     ],
@@ -87,9 +88,6 @@ export default [
       'testem.js',
       'testem*.js',
       'index.js',
-      '.prettierrc.js',
-      '.stylelintrc.js',
-      '.template-lintrc.js',
       'ember-cli-build.js',
     ],
     plugins: {

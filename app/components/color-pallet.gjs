@@ -1,11 +1,12 @@
 import Component from '@glimmer/component';
+import { htmlSafe } from '@ember/template';
 
 function luminance(hex) {
   const r = parseInt(hex.slice(1, 3), 16) / 255;
   const g = parseInt(hex.slice(3, 5), 16) / 255;
   const b = parseInt(hex.slice(5, 7), 16) / 255;
   const [rs, gs, bs] = [r, g, b].map((c) =>
-    c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
+    c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4),
   );
   return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
 }
@@ -51,6 +52,10 @@ export default class ColorPallet extends Component {
     return hexToRgb(this.args.color);
   }
 
+  get swatchStyle() {
+    return htmlSafe(`background-color: ${this.args.color}`);
+  }
+
   get darkRow() {
     const bg = this.args.color;
     const ratio = contrastRatio(bg, DARK_TEXT);
@@ -71,7 +76,7 @@ export default class ColorPallet extends Component {
 
   <template>
     <div class="field-guide-color-pallet" ...attributes>
-      <div class="color-pallet__example" style="background-color: {{@color}}">
+      <div class="color-pallet__example" style={{this.swatchStyle}}>
         <div class="color-pallet__example-text-row">
           {{#each this.darkRow as |item|}}
             <div class="color-pallet__example-text-result">
@@ -83,7 +88,9 @@ export default class ColorPallet extends Component {
         <div class="color-pallet__example-text-row">
           {{#each this.lightRow as |item|}}
             <div class="color-pallet__example-text-result text-light">
-              <span class="{{item.cls}} color-pallet__example-text text-light">A</span>
+              <span
+                class="{{item.cls}} color-pallet__example-text text-light"
+              >A</span>
               <span class="score">{{item.score}}</span>
             </div>
           {{/each}}
