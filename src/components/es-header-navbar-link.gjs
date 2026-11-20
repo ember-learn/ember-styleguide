@@ -1,13 +1,10 @@
 import Component from '@glimmer/component';
-import * as serviceModule from '@ember/service';
+import { service } from '@ember/service';
 import { action } from '@ember/object';
 import { on } from '@ember/modifier';
 import { tracked } from '@glimmer/tracking';
 import { modifier } from 'ember-modifier';
 import { helper } from '@ember/component/helper';
-
-// `service` was added in Ember 4.1; fall back to `inject` on older versions
-const service = serviceModule.service ?? serviceModule.inject;
 
 /** Plain function helpers need Ember 4.5. */
 const isType = helper(([item, type]) => item.type === type);

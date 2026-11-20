@@ -12,6 +12,19 @@ This addon is intended to provide basic components for easier style coordination
 * Ember.js v4.12 or above
 * Node.js v20 or above
 
+<details>
+<summary>Ember.js 3.28 to 4.11</summary>
+
+Apps on Ember.js 3.28 to 4.11 must use `ember-styleguide@11`:
+
+```bash
+pnpm add ember-styleguide@11
+```
+
+Ember.js deprecates `inject` from `@ember/service`. If your app or its other addons still use `inject`, add [`babel-plugin-undeprecate-inject-from-at-ember-service`](https://github.com/NullVoxPopuli/undeprecate-inject-from-at-ember-service). It rewrites `inject` to `service` at build time.
+
+</details>
+
 ## Installation
 
 ```bash
