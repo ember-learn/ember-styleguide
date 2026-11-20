@@ -1,16 +1,11 @@
-/* eslint-disable ember/no-classic-classes */
 import Service from '@ember/service';
 
-export default Service.extend({
-  init() {
-    this._super(...arguments);
-
-    this.items = [];
-  },
+export default class NavbarService extends Service {
+  items = [];
 
   register(item) {
     this.items.push(item);
-  },
+  }
 
   closePopupMenu(menu) {
     this.items.forEach((item) => {
@@ -18,5 +13,5 @@ export default Service.extend({
         item.closeDropdown();
       }
     });
-  },
-});
+  }
+}

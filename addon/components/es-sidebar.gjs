@@ -1,8 +1,11 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
-import { inject as service } from '@ember/service';
+import * as serviceModule from '@ember/service';
 import EsButton from './es-button';
+
+// `service` was added in Ember 4.1; fall back to `inject` on older versions
+const service = serviceModule.service ?? serviceModule.inject;
 
 export default class EsSidebarComponent extends Component {
   @service router;

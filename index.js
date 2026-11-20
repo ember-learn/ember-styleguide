@@ -19,6 +19,12 @@ module.exports = {
   name: require('./package').name,
 
   options: {
+    babel: {
+      // compiles the `task(async () => {})` calls in this addon's code
+      plugins: [
+        require.resolve('ember-concurrency/async-arrow-task-transform'),
+      ],
+    },
     postcssOptions: {
       compile: {
         enabled: true,

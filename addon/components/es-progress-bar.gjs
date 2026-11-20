@@ -1,5 +1,8 @@
 import Component from '@glimmer/component';
-import { inject as service } from '@ember/service';
+import * as serviceModule from '@ember/service';
+
+// `service` was added in Ember 4.1; fall back to `inject` on older versions
+const service = serviceModule.service ?? serviceModule.inject;
 
 export default class EsProgressBarComponent extends Component {
   @service progress;

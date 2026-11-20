@@ -1,10 +1,14 @@
-import Service, { inject as service } from '@ember/service';
+import Service from '@ember/service';
+import * as serviceModule from '@ember/service';
 import { htmlSafe } from '@ember/template';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
 import { rawTimeout, task } from 'ember-concurrency';
 import { buildWaiter } from '@ember/test-waiters';
+
+// `service` was added in Ember 4.1; fall back to `inject` on older versions
+const service = serviceModule.service ?? serviceModule.inject;
 
 const SPEED = 200;
 
@@ -46,7 +50,7 @@ export default class ProgressService extends Service {
     this.updateTask.cancelAll();
   }
 
-  @(task(function* () {
+  updateTask = task({ drop: true }, async () => {
     let token = waiter.beginAsync();
 
     this.progress = 0;
@@ -54,7 +58,7 @@ export default class ProgressService extends Service {
 
     try {
       while (true) {
-        yield rawTimeout(SPEED);
+        await rawTimeout(SPEED);
 
         let currentAmount;
         if (this.progress >= 0 && this.progress < 0.2) {
@@ -80,13 +84,12 @@ export default class ProgressService extends Service {
       }
     } finally {
       this._style = `transition: width ${SPEED}ms linear; width: 100%`;
-      yield rawTimeout(SPEED);
+      await rawTimeout(SPEED);
       this._style = `transition: opacity ${
         SPEED * 2
       }ms linear; width: 100%; opacity: 0`;
 
       waiter.endAsync(token);
     }
-  }).drop())
-  updateTask;
+  });
 }
