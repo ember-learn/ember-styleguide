@@ -9,21 +9,21 @@ module('Integration | Component | es button', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(hbs`{{es-button}}`);
+    await render(hbs`<EsButton />`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom('button').hasText('');
 
     await render(hbs`
-      {{#es-button}}
+      <EsButton>
         template block text
-      {{/es-button}}
+      </EsButton>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom('button').hasText('template block text');
   });
 
   test('has html button tag and base class', async function (assert) {
-    await render(hbs`{{es-button}}`);
+    await render(hbs`<EsButton />`);
     assert.dom('button').exists('has button tag');
     assert.ok(document.querySelector('.es-button'), 'has base es-button class');
   });
@@ -34,12 +34,10 @@ module('Integration | Component | es button', function (hooks) {
     setProperties(this, { label });
 
     await render(hbs`
-      {{es-button
-        label=this.label
-      }}
+      <EsButton @label={{this.label}} />
     `);
 
-    assert.dom(this.element).hasText(label, 'displays button label');
+    assert.dom('button').hasText(label, 'displays button label');
   });
 
   test('calls closure function when clicked', async function (assert) {
@@ -47,7 +45,7 @@ module('Integration | Component | es button', function (hooks) {
 
     setProperties(this, { onClicked });
 
-    await render(hbs`{{es-button onClicked=this.onClicked}}`);
+    await render(hbs`<EsButton @onClicked={{this.onClicked}} />`);
     await click('button');
 
     assert.ok(onClicked.calledOnce, 'onClicked called');
@@ -58,7 +56,7 @@ module('Integration | Component | es button', function (hooks) {
 
     setProperties(this, { disabled });
 
-    await render(hbs`{{es-button isDisabled=true}}`);
+    await render(hbs`<EsButton @isDisabled={{true}} />`);
 
     assert.dom('.es-button').hasAttribute('disabled');
   });
@@ -68,7 +66,7 @@ module('Integration | Component | es button', function (hooks) {
 
     setProperties(this, { dataRole });
 
-    await render(hbs`{{es-button}}`);
+    await render(hbs`<EsButton />`);
 
     assert.dom('.es-button').hasAttribute('data-role');
   });
