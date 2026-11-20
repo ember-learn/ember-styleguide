@@ -196,12 +196,6 @@ importers:
       ember-primitives:
         specifier: ^0.55.0
         version: 0.55.0(@babel/core@7.29.0(supports-color@8.1.1))(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@ember/test-waiters@4.1.1(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(ember-modifier@4.3.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1))(ember-resources@7.0.7(@babel/core@7.29.0(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(supports-color@8.1.1)
-      ember-repl:
-        specifier: ^8.0.2
-        version: 8.0.2(@babel/core@7.29.0(supports-color@8.1.1))(@codemirror/lang-css@6.3.1)(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(@lezer/javascript@1.5.4)(@lezer/lr@1.4.8)(ember-modifier@4.3.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1))(encoding@0.1.13)(supports-color@8.1.1)
-      kolay:
-        specifier: ^5.1.4
-        version: 5.1.4(@babel/core@7.29.0(supports-color@8.1.1))(@codemirror/lang-css@6.3.1)(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@lezer/javascript@1.5.4)(@lezer/lr@1.4.8)(encoding@0.1.13)(supports-color@8.1.1)(typescript@5.9.3)
     devDependencies:
       '@babel/core':
         specifier: ^7.25.2
@@ -254,6 +248,9 @@ importers:
       ember-qunit:
         specifier: ^9.2.0
         version: 9.2.1(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(qunit@2.25.0)(supports-color@8.1.1)
+      ember-repl:
+        specifier: ^8.0.2
+        version: 8.0.2(@babel/core@7.29.0(supports-color@8.1.1))(@codemirror/lang-css@6.3.1)(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(@lezer/javascript@1.5.4)(@lezer/lr@1.4.8)(ember-modifier@4.3.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1))(encoding@0.1.13)(supports-color@8.1.1)
       ember-source:
         specifier: 6.12.0-beta.3
         version: 6.12.0-beta.3(@glimmer/component@2.0.0(supports-color@8.1.1))(rsvp@4.8.5)(supports-color@8.1.1)
@@ -281,6 +278,9 @@ importers:
       globals:
         specifier: ^15.15.0
         version: 15.15.0
+      kolay:
+        specifier: ^5.1.4
+        version: 5.1.4(@babel/core@7.29.0(supports-color@8.1.1))(@codemirror/lang-css@6.3.1)(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@lezer/javascript@1.5.4)(@lezer/lr@1.4.8)(encoding@0.1.13)(supports-color@8.1.1)(typescript@5.9.3)
       normalize.css:
         specifier: ^8.0.1
         version: 8.0.1
