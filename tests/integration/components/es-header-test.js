@@ -2,7 +2,7 @@ import { click, render } from '@ember/test-helpers';
 import { setProperties } from '@ember/object';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import hbs from 'htmlbars-inline-precompile';
+import { hbs } from 'ember-cli-htmlbars';
 
 const customHomeUrl = 'https://github.com/emberjs';
 
