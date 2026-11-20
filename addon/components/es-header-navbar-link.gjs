@@ -4,10 +4,13 @@ import { action } from '@ember/object';
 import { on } from '@ember/modifier';
 import { tracked } from '@glimmer/tracking';
 import { modifier } from 'ember-modifier';
-import eq from 'ember-truth-helpers/helpers/eq';
+import { helper } from '@ember/component/helper';
 
 // `service` was added in Ember 4.1; fall back to `inject` on older versions
 const service = serviceModule.service ?? serviceModule.inject;
+
+/** Plain function helpers need Ember 4.5. */
+const isType = helper(([item, type]) => item.type === type);
 
 export default class EsHeaderNavbarLink extends Component {
   @service navbar;
@@ -79,12 +82,12 @@ export default class EsHeaderNavbarLink extends Component {
       {{this.setup}}
       {{on "focusout" this.closeOnFocusLeave}}
     >
-      {{#if (eq @link.type "link")}}
+      {{#if (isType @link "link")}}
         <a class="navbar-list-item-link" href={{@link.href}}>
           {{@link.name}}
         </a>
       {{/if}}
-      {{#if (eq @link.type "dropdown")}}
+      {{#if (isType @link "dropdown")}}
         <button
           type="button"
           class="navbar-list-item-dropdown-toggle
@@ -97,7 +100,7 @@ export default class EsHeaderNavbarLink extends Component {
         {{#if this.isDropdownOpen}}
           <ul class="navbar-dropdown-list" {{this.focusFirstItem}}>
             {{#each @link.items as |item|}}
-              {{#if (eq item.type "link")}}
+              {{#if (isType item "link")}}
                 <li class="navbar-dropdown-list-item">
                   <a
                     class="navbar-dropdown-list-item-link"
@@ -108,7 +111,7 @@ export default class EsHeaderNavbarLink extends Component {
                   </a>
                 </li>
               {{/if}}
-              {{#if (eq item.type "divider")}}
+              {{#if (isType item "divider")}}
                 <li role="separator" class="separator"></li>
               {{/if}}
             {{/each}}
