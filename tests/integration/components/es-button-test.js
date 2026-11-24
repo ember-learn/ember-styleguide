@@ -3,7 +3,6 @@ import { module, test, skip } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { setProperties, set } from '@ember/object';
 import hbs from 'htmlbars-inline-precompile';
-import sinon from 'sinon';
 
 module('Integration | Component | es button', function (hooks) {
   setupRenderingTest(hooks);
@@ -43,14 +42,14 @@ module('Integration | Component | es button', function (hooks) {
   });
 
   test('calls closure function when clicked', async function (assert) {
-    const onClicked = sinon.spy();
+    const onClicked = () => assert.step('clicked');
 
     setProperties(this, { onClicked });
 
     await render(hbs`{{es-button onClicked=this.onClicked}}`);
     await click('button');
 
-    assert.ok(onClicked.calledOnce, 'onClicked called');
+    assert.verifySteps(['clicked'], 'onClicked called once');
   });
 
   skip('can disable button', async function (assert) {
