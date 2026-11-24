@@ -10,7 +10,7 @@ module('Integration | Component | es button', function (hooks) {
   test('it renders', async function (assert) {
     await render(hbs`<EsButton />`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom('button').hasText('');
 
     await render(hbs`
       <EsButton>
@@ -18,7 +18,7 @@ module('Integration | Component | es button', function (hooks) {
       </EsButton>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom('button').hasText('template block text');
   });
 
   test('has html button tag and base class', async function (assert) {
@@ -33,12 +33,10 @@ module('Integration | Component | es button', function (hooks) {
     setProperties(this, { label });
 
     await render(hbs`
-      <EsButton
-        @label={{this.label}}
-      />
+      <EsButton @label={{this.label}} />
     `);
 
-    assert.dom(this.element).hasText(label, 'displays button label');
+    assert.dom('button').hasText(label, 'displays button label');
   });
 
   test('calls closure function when clicked', async function (assert) {
