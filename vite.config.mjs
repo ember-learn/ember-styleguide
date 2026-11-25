@@ -1,9 +1,14 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'node:path';
-import { extensions, ember, hbs } from '@embroider/vite';
+import { extensions, ember, hbs, classicEmberSupport } from '@embroider/vite';
 import { babel } from '@rollup/plugin-babel';
 import { kolay } from 'kolay/vite';
 import rehypeShiki from '@shikijs/rehype';
+
+/**
+ * The try scenarios for Ember.js below 6.1 set ENABLE_COMPAT_BUILD.
+ */
+const isCompat = Boolean(process.env.ENABLE_COMPAT_BUILD);
 
 export default defineConfig({
   resolve: {
@@ -14,6 +19,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    ...(isCompat ? [classicEmberSupport()] : []),
     hbs(),
     ember(),
     kolay({

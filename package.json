@@ -69,7 +69,6 @@
     "@embroider/vite": "^1.1.5",
     "@eslint/js": "^9.37.0",
     "@percy/cli": "^1.27.7",
-    "@percy/ember": "^5.0.0",
     "@rollup/plugin-babel": "^7.0.0",
     "babel-plugin-ember-template-compilation": "^4.0.0",
     "concurrently": "^9.2.1",

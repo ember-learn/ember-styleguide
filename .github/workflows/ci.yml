@@ -22,10 +22,10 @@ jobs:
       - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v4
         with:
-          node-version: 22.x
+          node-version: 24.x
           cache: pnpm
-      - run: pnpm install
-      - run: pnpm run lint
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
 
   percy:
     name: "Percy Tests"
@@ -38,25 +38,34 @@ jobs:
       - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v4
         with:
-          node-version: 22.x
+          node-version: 24.x
           cache: pnpm
-      - run: pnpm install
-      - run: pnpm percy exec -- npm run test:docs
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - name: Serve the docs app
+        run: |
+          pnpm vite preview --port 4173 --strictPort &
+          curl --silent --retry 30 --retry-connrefused --retry-delay 1 --output /dev/null http://localhost:4173/
+      - run: pnpm percy snapshot percy-snapshots.mjs --base-url http://localhost:4173
 
   test:
     name: "Tests"
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
 
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v4
         with:
-          node-version: 22.x
+          node-version: 24.x
           cache: pnpm
-      - run: pnpm install
-      - run: pnpm run test:ember
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - id: set-matrix
+        run: echo "matrix=$(pnpm -s dlx @embroider/try list)" >> $GITHUB_OUTPUT
 
   floating:
     name: "Floating Dependencies"
@@ -68,73 +77,29 @@ jobs:
       - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v4
         with:
-          node-version: 22.x
+          node-version: 24.x
           cache: pnpm
       - run: pnpm install --no-lockfile
-      - run: pnpm run test:ember
+      - run: pnpm test
 
   try-scenarios:
-    name: ${{ matrix.try-scenario }}
+    name: ${{ matrix.name }}
     runs-on: ubuntu-latest
     needs: "test"
     timeout-minutes: 10
 
     strategy:
       fail-fast: false
-      matrix:
-        try-scenario:
-          - ember-lts-3.28
-          - ember-lts-4.4
-          - ember-lts-4.8
-          - ember-lts-4.12
-          - ember-lts-5.4
-          - ember-lts-5.8
-          - ember-release
-          - ember-beta
-          - embroider-safe
-          - embroider-optimized
-          - no-deprecations
+      matrix: ${{ fromJson(needs.test.outputs.matrix) }}
 
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v4
         with:
-          node-version: 22.x
+          node-version: 24.x
           cache: pnpm
-      - run: pnpm install
-      - name: Run Tests
-        run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
-
-  allow-fail-try-scenarios:
-    name: ${{ matrix.try-scenario }} - Allowed to fail
-    runs-on: ubuntu-latest
-    needs: 'test'
-    timeout-minutes: 10
-    permissions:
-      pull-requests: write
-
-    strategy:
-      fail-fast: false
-      matrix:
-        try-scenario:
-          - ember-canary
-          - ember-release-no-deprecations
-
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v6
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22.x
-          cache: pnpm
-      - run: pnpm install
-      - name: Run Tests
-        id: tests
-        run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
-        continue-on-error: true
-      - uses: mainmatter/continue-on-error-comment@v1
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          outcome: ${{ steps.tests.outcome }}
-          test-id: ${{ matrix.try-scenario }}
+      - run: pnpm dlx @embroider/try apply ${{ matrix.name }}
+      - run: pnpm install --no-lockfile
+      - run: pnpm test
+        env: ${{ matrix.env }}
