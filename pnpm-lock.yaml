@@ -245,9 +245,6 @@ importers:
       ember-qunit:
         specifier: ^9.2.0
         version: 9.2.1(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(qunit@2.25.0)(supports-color@8.1.1)
-      ember-repl:
-        specifier: ^8.0.2
-        version: 8.0.2(@babel/core@7.29.0(supports-color@8.1.1))(@codemirror/lang-css@6.3.1)(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(@lezer/javascript@1.5.4)(@lezer/lr@1.4.8)(ember-modifier@4.3.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1))(encoding@0.1.13)(supports-color@8.1.1)
       ember-source:
         specifier: 6.12.0-beta.3
         version: 6.12.0-beta.3(@glimmer/component@2.0.0(supports-color@8.1.1))(rsvp@4.8.5)(supports-color@8.1.1)
@@ -276,8 +273,8 @@ importers:
         specifier: ^15.15.0
         version: 15.15.0
       kolay:
-        specifier: ^5.1.4
-        version: 5.1.4(@babel/core@7.29.0(supports-color@8.1.1))(@codemirror/lang-css@6.3.1)(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@lezer/javascript@1.5.4)(@lezer/lr@1.4.8)(encoding@0.1.13)(supports-color@8.1.1)(typescript@5.9.3)
+        specifier: ^5.4.0
+        version: 5.4.0(@babel/core@7.29.0(supports-color@8.1.1))(@codemirror/lang-css@6.3.1)(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@lezer/javascript@1.5.4)(@lezer/lr@1.4.8)(encoding@0.1.13)(supports-color@8.1.1)(typescript@5.9.3)
       normalize.css:
         specifier: ^8.0.1
         version: 8.0.1
@@ -2194,6 +2191,7 @@ packages:
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
+    deprecated: Potential CWE-502 - Update to 1.3.1 or higher
 
   '@xmldom/xmldom@0.8.12':
     resolution: {integrity: sha512-9k/gHF6n/pAi/9tqr3m3aqkuiNosYTurLLUtc7xQ9sxB/wm7WPygCv8GYa6mS0fLJEHhqMC1ATYhz++U/lRHqg==}
@@ -3025,6 +3023,9 @@ packages:
   decorator-transforms@2.3.1:
     resolution: {integrity: sha512-PDOk74Zqqy0946Lx4ckXxbgG6uhPScOICtrxL/pXmfznxchqNee0TaJISClGJQe6FeT8ohGqsOgdjfahm4FwEw==}
 
+  decorator-transforms@2.3.2:
+    resolution: {integrity: sha512-XcErcjlmCzG5ODgYjt6ZTXwd6S8fPKln/sJmw15ZXkWG2JpoQNwszis+AwF6XSGlOoG7g8MCEO97g+Yw3fk5OQ==}
+
   deep-extend@0.6.0:
     resolution: {integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==}
     engines: {node: '>=4.0.0'}
@@ -3192,8 +3193,8 @@ packages:
       '@glint/template':
         optional: true
 
-  ember-primitives@0.53.1:
-    resolution: {integrity: sha512-Jb5MBilMTWJFaDhw3Z/uL3s3Y+G/HzmfLX8eTECkyBoQibApuvA5CMwVHmkDU1ItvndXqBqT0ougAdLqotW+Xg==}
+  ember-primitives@0.55.0:
+    resolution: {integrity: sha512-UlSeLlU36n9Ui/plTuHo+8DyQFf11vLDXW5LaFjxDEaHokgws9OWkxOHRg0xmz3I5UeTPbkUAGsHF2u2YJwR2w==}
     hasBin: true
     peerDependencies:
       '@ember/test-helpers': '>= 3.2.0'
@@ -3208,14 +3209,14 @@ packages:
       '@glint/template':
         optional: true
 
-  ember-primitives@0.55.0:
-    resolution: {integrity: sha512-UlSeLlU36n9Ui/plTuHo+8DyQFf11vLDXW5LaFjxDEaHokgws9OWkxOHRg0xmz3I5UeTPbkUAGsHF2u2YJwR2w==}
+  ember-primitives@0.60.1:
+    resolution: {integrity: sha512-OLUSUM4eqGVaxWGnq3oV1FIBE8JyYUTDTXYWDHd8OHdiFbU10CUJ4A7k6FbpCfBXO7k0Ce+aualiyuIpY28mmg==}
     hasBin: true
     peerDependencies:
       '@ember/test-helpers': '>= 3.2.0'
       '@ember/test-waiters': '>= 3.0.2'
       '@glimmer/component': 2.0.0
-      '@glint/template': 1.7.4
+      '@glint/template': ^1.7.4
       ember-modifier: '>= 4.1.0'
       ember-resources: '>= 6.1.0'
     peerDependenciesMeta:
@@ -4227,8 +4228,8 @@ packages:
   known-css-properties@0.37.0:
     resolution: {integrity: sha512-JCDrsP4Z1Sb9JwG0aJ8Eo2r7k4Ou5MwmThS/6lcIe1ICyb7UBJKGRIUUdqc2ASdE/42lgz6zFUnzAIhtXnBVrQ==}
 
-  kolay@5.1.4:
-    resolution: {integrity: sha512-rq+LJ1Z9Yw+uCOclSAuP52ckEsEoVVHZXZcz4n01wjzZztTKe3PSeeGisrC+JODbdJwpOGI1RXghYISQrMDjSQ==}
+  kolay@5.4.0:
+    resolution: {integrity: sha512-sC7YPuIbOwwdvSUczYbU9d9KwuyR+hPiEsINhy2TfJkPuS6JFAfJODNnxaPt+zcxi5zwzUPdOboByqRpnUZH6w==}
     engines: {node: '>= 18'}
 
   ky@1.14.3:
@@ -6025,6 +6026,9 @@ packages:
   tracked-toolbox@2.2.0:
     resolution: {integrity: sha512-YknotXj74U0nCqBk9nh1Uv1IWTnVOgt8sXIecNkyEq4oFOU70niQUlozO4E3kMKx7ae/rNlOtoF+1ALcHYzCrQ==}
 
+  tracked-toolbox@3.0.0:
+    resolution: {integrity: sha512-9Q5SH+0jevfB07oL2bsjxIDv0jQ2A6IgminkvnMMzGLc2EqCFm/yKuqNeUFvN3n+TOAQk+PZcePtIaxIo/1now==}
+
   tree-kill@1.2.2:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
     hasBin: true
@@ -6320,6 +6324,9 @@ packages:
 
   which-heading-do-i-need@0.2.6:
     resolution: {integrity: sha512-LdN2lY5hFfgla4vV6YkM0Q0dZLQeJ+fwVbXNl3ByjlWELyeh7LQAx3L9+jf5dvwCh4wBCF8u/Mj0+YSCqI9FUw==}
+
+  which-heading-do-i-need@0.4.1:
+    resolution: {integrity: sha512-NUwKC7rjs6hFqdr6Yu+4Hd9muQEL5XW3QvV8hj/uHSBo8o9FRsWOqArgWcL4IIvUDpS+KCoaRW/8+jHhNL8itQ==}
 
   which@1.3.1:
     resolution: {integrity: sha512-HxJdYWq1MTIQbJ3nw0cqssHoTNU267KlrDuGZ1WYlxDStUtKUhOaJmh112/TZmHxxUfuJqPXSOm7tDyas0OSIQ==}
@@ -9807,6 +9814,13 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
 
+  decorator-transforms@2.3.2(@babel/core@7.29.0(supports-color@8.1.1)):
+    dependencies:
+      '@babel/plugin-syntax-decorators': 7.28.6(@babel/core@7.29.0(supports-color@8.1.1))
+      babel-import-util: 3.0.1
+    transitivePeerDependencies:
+      - '@babel/core'
+
   deep-extend@0.6.0: {}
 
   deep-is@0.1.4: {}
@@ -10072,7 +10086,7 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  ember-primitives@0.53.1(@babel/core@7.29.0(supports-color@8.1.1))(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@ember/test-waiters@4.1.1(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(ember-modifier@4.3.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1))(ember-resources@7.0.7(@babel/core@7.29.0(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(supports-color@8.1.1):
+  ember-primitives@0.55.0(@babel/core@7.29.0(supports-color@8.1.1))(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@ember/test-waiters@4.1.1(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(ember-modifier@4.3.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1))(ember-resources@7.0.7(@babel/core@7.29.0(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(supports-color@8.1.1):
     dependencies:
       '@babel/runtime': 7.29.2
       '@ember/test-waiters': 4.1.1(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1)
@@ -10098,15 +10112,14 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  ember-primitives@0.55.0(@babel/core@7.29.0(supports-color@8.1.1))(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@ember/test-waiters@4.1.1(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(ember-modifier@4.3.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1))(ember-resources@7.0.7(@babel/core@7.29.0(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(supports-color@8.1.1):
+  ember-primitives@0.60.1(@babel/core@7.29.0(supports-color@8.1.1))(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@ember/test-waiters@4.1.1(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(ember-modifier@4.3.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1))(ember-resources@7.0.7(@babel/core@7.29.0(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(supports-color@8.1.1):
     dependencies:
       '@babel/runtime': 7.29.2
       '@ember/test-waiters': 4.1.1(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1)
       '@embroider/addon-shim': 1.10.2(supports-color@8.1.1)
-      '@embroider/macros': 1.20.2(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1)
       '@floating-ui/dom': 1.7.6
       '@glimmer/component': 2.0.0(supports-color@8.1.1)
-      decorator-transforms: 2.3.1(@babel/core@7.29.0(supports-color@8.1.1))
+      decorator-transforms: 2.3.2(@babel/core@7.29.0(supports-color@8.1.1))
       ember-element-helper: 0.8.8(supports-color@8.1.1)
       ember-modifier: 4.3.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1)
       ember-resources: 7.0.7(@babel/core@7.29.0(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1)
@@ -10115,8 +10128,8 @@ snapshots:
       should-handle-link: 1.3.0
       tabster: 8.7.0
       tracked-built-ins: 4.1.2(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1)
-      tracked-toolbox: 2.2.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1)
-      which-heading-do-i-need: 0.2.6
+      tracked-toolbox: 3.0.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1)
+      which-heading-do-i-need: 0.4.1
     optionalDependencies:
       '@ember/test-helpers': 5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1)
       '@glint/template': 1.7.4
@@ -11383,7 +11396,7 @@ snapshots:
 
   known-css-properties@0.37.0: {}
 
-  kolay@5.1.4(@babel/core@7.29.0(supports-color@8.1.1))(@codemirror/lang-css@6.3.1)(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@lezer/javascript@1.5.4)(@lezer/lr@1.4.8)(encoding@0.1.13)(supports-color@8.1.1)(typescript@5.9.3):
+  kolay@5.4.0(@babel/core@7.29.0(supports-color@8.1.1))(@codemirror/lang-css@6.3.1)(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@lezer/javascript@1.5.4)(@lezer/lr@1.4.8)(encoding@0.1.13)(supports-color@8.1.1)(typescript@5.9.3):
     dependencies:
       '@ember/test-waiters': 4.1.1(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1)
       '@embroider/addon-shim': 1.10.2(supports-color@8.1.1)
@@ -11394,7 +11407,7 @@ snapshots:
       content-tag: 4.1.1
       decorator-transforms: 2.3.1(@babel/core@7.29.0(supports-color@8.1.1))
       ember-modifier: 4.3.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1)
-      ember-primitives: 0.53.1(@babel/core@7.29.0(supports-color@8.1.1))(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@ember/test-waiters@4.1.1(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(ember-modifier@4.3.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1))(ember-resources@7.0.7(@babel/core@7.29.0(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(supports-color@8.1.1)
+      ember-primitives: 0.60.1(@babel/core@7.29.0(supports-color@8.1.1))(@ember/test-helpers@5.8.0(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@ember/test-waiters@4.1.1(@babel/core@7.29.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(ember-modifier@4.3.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1))(ember-resources@7.0.7(@babel/core@7.29.0(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1))(supports-color@8.1.1)
       ember-repl: 8.0.2(@babel/core@7.29.0(supports-color@8.1.1))(@codemirror/lang-css@6.3.1)(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(@lezer/javascript@1.5.4)(@lezer/lr@1.4.8)(ember-modifier@4.3.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1))(encoding@0.1.13)(supports-color@8.1.1)
       ember-resources: 7.0.7(@babel/core@7.29.0(supports-color@8.1.1))(@glimmer/component@2.0.0(supports-color@8.1.1))(@glint/template@1.7.4)(supports-color@8.1.1)
       globby: 16.2.0
@@ -13741,6 +13754,14 @@ snapshots:
       - '@babel/core'
       - supports-color
 
+  tracked-toolbox@3.0.0(@babel/core@7.29.0(supports-color@8.1.1))(supports-color@8.1.1):
+    dependencies:
+      '@embroider/addon-shim': 1.10.2(supports-color@8.1.1)
+      decorator-transforms: 2.3.1(@babel/core@7.29.0(supports-color@8.1.1))
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
+
   tree-kill@1.2.2: {}
 
   tree-sync@1.4.0(supports-color@8.1.1):
@@ -14006,6 +14027,8 @@ snapshots:
   which-heading-do-i-need@0.2.4: {}
 
   which-heading-do-i-need@0.2.6: {}
+
+  which-heading-do-i-need@0.4.1: {}
 
   which@1.3.1:
     dependencies:
