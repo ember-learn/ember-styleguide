@@ -10,7 +10,7 @@ import rehypeShiki from '@shikijs/rehype';
  */
 const isCompat = Boolean(process.env.ENABLE_COMPAT_BUILD);
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   resolve: {
     // NOTE: only the demo app is allowed to use this
     alias: {
@@ -43,8 +43,16 @@ export default defineConfig({
   ],
   build: {
     outDir: 'dist-demo',
+    /**
+     * `pnpm test` builds in development mode. The tests do not use the docs
+     * app, and the docs app needs a newer Ember.js than the try scenarios.
+     */
+    rollupOptions:
+      mode === 'development'
+        ? { input: { tests: 'tests/index.html' } }
+        : undefined,
   },
   optimizeDeps: {
     exclude: ['kolay'],
   },
-});
+}));
