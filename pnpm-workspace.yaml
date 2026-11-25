@@ -1,3 +1,5 @@
+packages:
+  - docs-app
 allowBuilds:
   "@percy/core": false
   core-js: false

@@ -1,8 +1,8 @@
 import { pageTitle } from 'ember-page-title';
 
-import EsHeader from '#src/components/es-header';
-import EsFooter from '#src/components/es-footer';
-import EsProgressBar from '#src/components/es-progress-bar';
+import EsHeader from 'ember-styleguide/components/es-header';
+import EsFooter from 'ember-styleguide/components/es-footer';
+import EsProgressBar from 'ember-styleguide/components/es-progress-bar';
 
 <template>
   {{pageTitle "Ember Styleguide"}}

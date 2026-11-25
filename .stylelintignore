@@ -9,3 +9,4 @@
 /.node_modules.ember-try/
 
 /node_modules/
+/docs-app/dist/

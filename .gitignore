@@ -1,11 +1,12 @@
 # compiled output
 /dist/
 /dist-*
+/docs-app/dist/
 /tmp/
 /declarations/
 
 # dependencies
-/node_modules/
+node_modules/
 
 # misc
 /.env*

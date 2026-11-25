@@ -17,7 +17,7 @@ module.exports = {
   overrides: [
     {
       // the docs app styles BEM classes from ember-repl and its own demos
-      files: ['app/**/*.css'],
+      files: ['docs-app/app/**/*.css'],
       rules: {
         'selector-class-pattern': [
           '^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?$',

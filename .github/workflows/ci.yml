@@ -41,12 +41,14 @@ jobs:
           node-version: 24.x
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm build
+      - run: pnpm build:docs
       - name: Serve the docs app
+        working-directory: docs-app
         run: |
-          pnpm vite preview --port 4173 --strictPort &
+          pnpm preview --port 4173 --strictPort &
           curl --silent --retry 30 --retry-connrefused --retry-delay 1 --output /dev/null http://localhost:4173/
       - run: pnpm percy snapshot percy-snapshots.mjs --base-url http://localhost:4173
+        working-directory: docs-app
 
   test:
     name: "Tests"

@@ -1,6 +1,6 @@
 [build]
-  command = "corepack enable && pnpm install --frozen-lockfile && pnpm build:styleguide && pnpm build"
-  publish = "dist-demo"
+  command = "corepack enable && pnpm install --frozen-lockfile && pnpm build:docs"
+  publish = "docs-app/dist"
 
 [build.environment]
   NODE_VERSION = "24"
