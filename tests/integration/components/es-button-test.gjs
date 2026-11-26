@@ -2,27 +2,29 @@ import { click, render } from '@ember/test-helpers';
 import { module, test, skip } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { setProperties, set } from '@ember/object';
-import { hbs } from 'ember-cli-htmlbars';
+import EsButton from 'ember-styleguide/components/es-button';
 
 module('Integration | Component | es button', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(hbs`<EsButton />`);
+    await render(<template><EsButton /></template>);
 
     assert.dom('button').hasText('');
 
-    await render(hbs`
-      <EsButton>
-        template block text
-      </EsButton>
-    `);
+    await render(
+      <template>
+        <EsButton>
+          template block text
+        </EsButton>
+      </template>,
+    );
 
     assert.dom('button').hasText('template block text');
   });
 
   test('has html button tag and base class', async function (assert) {
-    await render(hbs`<EsButton />`);
+    await render(<template><EsButton /></template>);
     assert.dom('button').exists('has button tag');
     assert.ok(document.querySelector('.es-button'), 'has base es-button class');
   });
@@ -30,11 +32,7 @@ module('Integration | Component | es button', function (hooks) {
   test('can display set label', async function (assert) {
     const label = 'Button Label';
 
-    setProperties(this, { label });
-
-    await render(hbs`
-      <EsButton @label={{this.label}} />
-    `);
+    await render(<template><EsButton @label={{label}} /></template>);
 
     assert.dom('button').hasText(label, 'displays button label');
   });
@@ -42,9 +40,7 @@ module('Integration | Component | es button', function (hooks) {
   test('calls closure function when clicked', async function (assert) {
     const onClicked = () => assert.step('clicked');
 
-    setProperties(this, { onClicked });
-
-    await render(hbs`<EsButton @onClicked={{this.onClicked}} />`);
+    await render(<template><EsButton @onClicked={{onClicked}} /></template>);
     await click('button');
 
     assert.verifySteps(['clicked'], 'onClicked called once');
@@ -55,7 +51,7 @@ module('Integration | Component | es button', function (hooks) {
 
     setProperties(this, { disabled });
 
-    await render(hbs`<EsButton @isDisabled={{true}} />`);
+    await render(<template><EsButton @isDisabled={{true}} /></template>);
 
     assert.dom('.es-button').hasAttribute('disabled');
   });
@@ -65,7 +61,7 @@ module('Integration | Component | es button', function (hooks) {
 
     setProperties(this, { dataRole });
 
-    await render(hbs`<EsButton />`);
+    await render(<template><EsButton /></template>);
 
     assert.dom('.es-button').hasAttribute('data-role');
   });
@@ -75,13 +71,13 @@ module('Integration | Component | es button', function (hooks) {
 
     setProperties(this, { ariaPressed });
 
-    await render(hbs`<EsButton />`);
+    await render(<template><EsButton /></template>);
 
     assert.dom('.es-button').doesNotHaveAttribute('aria-pressed');
 
     set(this, 'ariaPressed', null);
 
-    await render(hbs`<EsButton aria-pressed="true" />`);
+    await render(<template><EsButton aria-pressed="true" /></template>);
 
     assert.dom('.es-button').hasAttribute('aria-pressed', 'true');
   });

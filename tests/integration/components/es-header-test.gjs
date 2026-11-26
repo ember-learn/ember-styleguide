@@ -1,8 +1,7 @@
 import { click, render } from '@ember/test-helpers';
-import { setProperties } from '@ember/object';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { hbs } from 'ember-cli-htmlbars';
+import EsHeader from 'ember-styleguide/components/es-header';
 
 const customHomeUrl = 'https://github.com/emberjs';
 
@@ -10,7 +9,7 @@ module('Integration | Component | es header', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it uses the header HTML element with correct attributes', async function (assert) {
-    await render(hbs`<EsHeader/>`);
+    await render(<template><EsHeader /></template>);
 
     assert.dom('header').exists({ count: 1 });
     assert.dom('header').hasClass('es-header');
@@ -18,13 +17,13 @@ module('Integration | Component | es header', function (hooks) {
   });
 
   test('it renders the logo', async function (assert) {
-    await render(hbs`<EsHeader/>`);
+    await render(<template><EsHeader /></template>);
 
     assert.dom('.navbar-brand').hasAttribute('src', '/images/ember-logo.svg');
   });
 
   test('it renders the link to the Ember homepage by default', async function (assert) {
-    await render(hbs`<EsHeader/>`);
+    await render(<template><EsHeader /></template>);
 
     assert
       .dom('.navbar-brand-wrapper')
@@ -32,31 +31,32 @@ module('Integration | Component | es header', function (hooks) {
   });
 
   test('it renders a link to a custom homepage', async function (assert) {
-    setProperties(this, { customHomeUrl });
-    await render(hbs`<EsHeader @home={{this.customHomeUrl}} />`);
+    await render(<template><EsHeader @home={{customHomeUrl}} /></template>);
 
     assert.dom('.navbar-brand-wrapper').hasAttribute('href', customHomeUrl);
   });
 
   test('it renders custom content at the end', async function (assert) {
-    await render(hbs`
-      <EsHeader>
-        Custom content
-      </EsHeader>
-    `);
+    await render(
+      <template>
+        <EsHeader>
+          Custom content
+        </EsHeader>
+      </template>,
+    );
 
     assert.dom('.navbar-end').containsText('Custom content');
   });
 
   test('it renders the navbar collapsed by default', async function (assert) {
-    await render(hbs`<EsHeader/>`);
+    await render(<template><EsHeader /></template>);
 
     assert.dom('.es-navbar').doesNotHaveClass('navbar-expanded');
     assert.dom('.navbar-toggler').containsText('Show Site Navigation');
   });
 
   test('it toggles the navbar when click the toggler', async function (assert) {
-    await render(hbs`<EsHeader/>`);
+    await render(<template><EsHeader /></template>);
 
     await click('.navbar-toggler');
 
