@@ -69,8 +69,14 @@ export default class EsHeaderNavbarLink extends Component {
     }
   }
 
+  /**
+   * The render that removes an open list fires `focusout` on its focused link,
+   * and a closed dropdown must not set its state again in that render.
+   */
   closeDropdown() {
-    this.isDropdownOpen = false;
+    if (this.isDropdownOpen) {
+      this.isDropdownOpen = false;
+    }
   }
 
   <template>
