@@ -1,7 +1,13 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { blur, click, render, triggerKeyEvent } from '@ember/test-helpers';
-import EsHeaderNavbarLink from 'ember-styleguide/components/es-header-navbar-link';
+import {
+  blur,
+  click,
+  render,
+  settled,
+  triggerKeyEvent,
+} from '@ember/test-helpers';
+import EsHeaderNavbarLink from '#src/components/es-header-navbar-link.gjs';
 
 const community = {
   type: 'dropdown',
@@ -79,6 +85,21 @@ module('Integration | Component | es-header-navbar-link', function (hooks) {
     await blur(firstItem);
 
     assert.dom('.navbar-dropdown-list').doesNotExist();
+  });
+
+  test('closing the dropdown from the navbar service removes the focused list', async function (assert) {
+    await render(
+      <template><EsHeaderNavbarLink @link={{community}} /></template>,
+    );
+    await click(toggle, { detail: 0 });
+
+    assert.dom(firstItem).isFocused();
+
+    this.owner.lookup('service:navbar').closePopupMenu();
+    await settled();
+
+    assert.dom('.navbar-dropdown-list').doesNotExist();
+    assert.dom(toggle).hasAttribute('aria-expanded', 'false');
   });
 
   test('opening one dropdown closes the other', async function (assert) {

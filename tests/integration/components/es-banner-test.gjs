@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
-import EsBanner from 'ember-styleguide/components/es-banner';
+import EsBanner from '#src/components/es-banner.gjs';
 
 module('Integration | Component | es-banner', function (hooks) {
   setupRenderingTest(hooks);

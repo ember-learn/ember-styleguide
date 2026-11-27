@@ -1,6 +1,8 @@
+packages:
+  - docs-app
 allowBuilds:
   "@percy/core": false
   core-js: false
   protobufjs: false
-minimumReleaseAgeExclude:
-  - ember-try@5.0.0
+overrides:
+  "@glimmer/component": $@glimmer/component

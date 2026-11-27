@@ -13,13 +13,12 @@
 
 ## Running tests
 
-- `pnpm test` – Runs the test suite on the current Ember version
-- `pnpm test:ember --server` – Runs the test suite in "watch mode"
-- `pnpm test:ember-compatibility` – Runs the test suite against multiple Ember versions
+- `pnpm test` runs the test suite on the current Ember.js version.
+- `pnpm dlx @embroider/try list` lists the scenarios for other Ember.js versions. CI runs each one.
 
-## Running the dummy application
+## Running the docs app
+
+The docs app is in `docs-app/`. It uses the addon source in `src/` directly.
 
 - `pnpm start`
-- Visit the dummy application at [http://localhost:4200](http://localhost:4200).
-
-For more information on using ember-cli, visit [https://cli.emberjs.com/release/](https://cli.emberjs.com/release/).
+- Open the URL that Vite prints.

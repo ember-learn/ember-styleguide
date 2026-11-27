@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
-import EsPagination from 'ember-styleguide/components/es-pagination';
+import EsPagination from '#src/components/es-pagination.gjs';
 
 module('Integration | Component | es-pagination', function (hooks) {
   setupRenderingTest(hooks);

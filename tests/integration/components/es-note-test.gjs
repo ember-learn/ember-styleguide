@@ -1,7 +1,7 @@
 import { find, render } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import EsNote from 'ember-styleguide/components/es-note';
+import EsNote from '#src/components/es-note.gjs';
 
 module('Integration | Component | es note', function (hooks) {
   setupRenderingTest(hooks);

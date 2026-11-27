@@ -27,6 +27,7 @@ const esmParserOptions = {
   ecmaVersion: 'latest',
   requireConfigFile: false,
   babelOptions: {
+    configFile: false,
     plugins: [
       ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
     ],
@@ -43,7 +44,14 @@ export default [
    * https://eslint.org/docs/latest/use/configure/ignore
    */
   {
-    ignores: ['dist/', 'dist-*/', 'node_modules/', 'coverage/', '!**/.*'],
+    ignores: [
+      'dist/',
+      'dist-*/',
+      'docs-app/dist/',
+      'node_modules/',
+      'coverage/',
+      '!**/.*',
+    ],
   },
   /**
    * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
@@ -87,9 +95,6 @@ export default [
       'testem.js',
       'testem*.js',
       'index.js',
-      '.prettierrc.js',
-      '.stylelintrc.js',
-      '.template-lintrc.js',
       'ember-cli-build.js',
     ],
     plugins: {

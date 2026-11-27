@@ -1,7 +1,7 @@
 import { click, render } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import EsHeader from 'ember-styleguide/components/es-header';
+import EsHeader from '#src/components/es-header.gjs';
 
 const customHomeUrl = 'https://github.com/emberjs';
 
@@ -19,7 +19,12 @@ module('Integration | Component | es header', function (hooks) {
   test('it renders the logo', async function (assert) {
     await render(<template><EsHeader /></template>);
 
-    assert.dom('.navbar-brand').hasAttribute('src', '/images/ember-logo.svg');
+    let logo = document.querySelector('.navbar-brand');
+
+    await logo.decode();
+
+    assert.dom(logo).hasAttribute('alt');
+    assert.true(logo.naturalWidth > 0, 'the logo image loads');
   });
 
   test('it renders the link to the Ember homepage by default', async function (assert) {

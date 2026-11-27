@@ -1,7 +1,7 @@
 import { render } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import EsCard from 'ember-styleguide/components/es-card';
+import EsCard from '#src/components/es-card.gjs';
 
 module('Integration | Component | es card', function (hooks) {
   setupRenderingTest(hooks);
