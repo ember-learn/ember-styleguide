@@ -9,6 +9,7 @@ module.exports = {
           'ember-cli-htmlbars',
           'htmlbars-inline-precompile',
         ],
+        targetFormat: 'hbs',
       },
     ],
     [
