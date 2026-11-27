@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { blur, click, render, triggerKeyEvent } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
+import EsHeaderNavbarLink from 'ember-styleguide/components/es-header-navbar-link';
 
 const community = {
   type: 'dropdown',
@@ -26,18 +26,18 @@ module('Integration | Component | es-header-navbar-link', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders a plain link', async function (assert) {
-    this.link = { type: 'link', href: '/blog', name: 'Blog' };
+    const link = { type: 'link', href: '/blog', name: 'Blog' };
 
-    await render(hbs`<EsHeaderNavbarLink @link={{this.link}} />`);
+    await render(<template><EsHeaderNavbarLink @link={{link}} /></template>);
 
     assert.dom('.navbar-list-item-link').hasAttribute('href', '/blog');
     assert.dom(toggle).doesNotExist();
   });
 
   test('a mouse click opens the dropdown and leaves focus on the toggle', async function (assert) {
-    this.link = community;
-
-    await render(hbs`<EsHeaderNavbarLink @link={{this.link}} />`);
+    await render(
+      <template><EsHeaderNavbarLink @link={{community}} /></template>,
+    );
 
     assert.dom(toggle).hasAttribute('aria-expanded', 'false');
     assert.dom('.navbar-dropdown-list').doesNotExist();
@@ -51,18 +51,18 @@ module('Integration | Component | es-header-navbar-link', function (hooks) {
   });
 
   test('a keyboard click opens the dropdown and focuses the first item', async function (assert) {
-    this.link = community;
-
-    await render(hbs`<EsHeaderNavbarLink @link={{this.link}} />`);
+    await render(
+      <template><EsHeaderNavbarLink @link={{community}} /></template>,
+    );
     await click(toggle, { detail: 0 });
 
     assert.dom(firstItem).isFocused();
   });
 
   test('Escape closes the dropdown and focuses the toggle', async function (assert) {
-    this.link = community;
-
-    await render(hbs`<EsHeaderNavbarLink @link={{this.link}} />`);
+    await render(
+      <template><EsHeaderNavbarLink @link={{community}} /></template>,
+    );
     await click(toggle, { detail: 0 });
     await triggerKeyEvent(firstItem, 'keydown', 'Escape');
 
@@ -72,9 +72,9 @@ module('Integration | Component | es-header-navbar-link', function (hooks) {
   });
 
   test('focus that leaves the dropdown closes it', async function (assert) {
-    this.link = community;
-
-    await render(hbs`<EsHeaderNavbarLink @link={{this.link}} />`);
+    await render(
+      <template><EsHeaderNavbarLink @link={{community}} /></template>,
+    );
     await click(toggle, { detail: 0 });
     await blur(firstItem);
 
@@ -82,13 +82,12 @@ module('Integration | Component | es-header-navbar-link', function (hooks) {
   });
 
   test('opening one dropdown closes the other', async function (assert) {
-    this.community = community;
-    this.docs = docs;
-
-    await render(hbs`
-      <EsHeaderNavbarLink @link={{this.community}} />
-      <EsHeaderNavbarLink @link={{this.docs}} />
-    `);
+    await render(
+      <template>
+        <EsHeaderNavbarLink @link={{community}} />
+        <EsHeaderNavbarLink @link={{docs}} />
+      </template>,
+    );
 
     let [communityToggle, docsToggle] = this.element.querySelectorAll(toggle);
 

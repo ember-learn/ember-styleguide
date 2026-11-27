@@ -2,16 +2,16 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
+import EsFooter from 'ember-styleguide/components/es-footer';
 
 module('Integration | Component | es footer', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(hbs`<EsFooter/>`);
+    await render(<template><EsFooter /></template>);
 
-    const footerSocialLinks = this.element.querySelectorAll('.footer-social a');
-    const footerContribtuionsLinks = this.element.querySelectorAll(
+    const footerSocialLinks = document.querySelectorAll('.footer-social a');
+    const footerContribtuionsLinks = document.querySelectorAll(
       '.footer-contributions a',
     );
 

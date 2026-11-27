@@ -1,13 +1,17 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render, click } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
+import EsSidebar from 'ember-styleguide/components/es-sidebar';
 
 module('Integration | Component | es-sidebar', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders correctly in desktop mode', async function (assert) {
-    await render(hbs`<EsSidebar>Test</EsSidebar>`);
+    await render(
+      <template>
+        <EsSidebar>Test</EsSidebar>
+      </template>,
+    );
 
     assert.dom('.es-sidebar .es-sidebar-content').hasText('Test');
     assert.dom('.es-sidebar-toggle').exists();
@@ -17,7 +21,11 @@ module('Integration | Component | es-sidebar', function (hooks) {
   });
 
   test('it opens/closes', async function (assert) {
-    await render(hbs`<EsSidebar>Test</EsSidebar>`);
+    await render(
+      <template>
+        <EsSidebar>Test</EsSidebar>
+      </template>,
+    );
 
     assert.dom('.es-sidebar').hasAttribute('aria-expanded', 'false');
 

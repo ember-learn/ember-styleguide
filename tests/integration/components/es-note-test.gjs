@@ -1,21 +1,23 @@
 import { find, render } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { hbs } from 'ember-cli-htmlbars';
+import EsNote from 'ember-styleguide/components/es-note';
 
 module('Integration | Component | es note', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(hbs`<EsNote @mascot="tomster" />`);
+    await render(<template><EsNote @mascot="tomster" /></template>);
 
     assert.dom('[data-test-es-note-heading]').hasText('Tomster says...');
 
-    await render(hbs`
-      <EsNote>
-        template block text
-      </EsNote>
-    `);
+    await render(
+      <template>
+        <EsNote>
+          template block text
+        </EsNote>
+      </template>,
+    );
 
     assert.dom('.cta-note-message').hasText('template block text');
   });
@@ -26,7 +28,7 @@ module('Integration | Component | es note', function (hooks) {
     for (let i = 0; i < 15; i++) {
       let name;
 
-      await render(hbs`<EsNote />`);
+      await render(<template><EsNote /></template>);
       name = find('[data-test-es-note-heading]')
         .textContent.trim()
         .split(' ')[0];
