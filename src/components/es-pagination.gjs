@@ -1,4 +1,5 @@
-import arrowIcon from '../assets/images/arrow-icon.svg';
+const arrowIcon = new URL('../assets/images/arrow-icon.svg', import.meta.url)
+  .href;
 
 <template>
   <div class="pagination-wrapper">

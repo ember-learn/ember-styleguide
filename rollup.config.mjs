@@ -8,15 +8,14 @@ const rootDirectory = dirname(fileURLToPath(import.meta.url));
 const babelPublishConfig = resolve(rootDirectory, './babel.publish.config.cjs');
 
 const sourceDirectory = resolve(rootDirectory, 'src');
-const ASSET = /\.(svg|png|jpg|woff2?)$/;
 
 /**
- * Keeps each import of an image or font as a relative import, and copies the file to the same place in dist.
- * The app's bundler then resolves the file, as it does for any other import.
+ * Copies each file of src/assets to the same place in dist. The components refer to images with
+ * `new URL('../assets/...', import.meta.url)`, which webpack 5 and Vite resolve without a loader.
  */
-function keepAssetImports() {
+function copyAssets() {
   return {
-    name: 'keep-asset-imports',
+    name: 'copy-assets',
     buildStart() {
       /**
        * Apps link some files by URL, such as ember-logo.png, so each file of src/assets is in dist.
@@ -28,11 +27,6 @@ function keepAssetImports() {
           source: readFileSync(resolve(sourceDirectory, file)),
         });
       }
-    },
-    resolveId(source, importer) {
-      if (!ASSET.test(source) || !importer) return null;
-
-      return { id: source, external: 'relative' };
     },
   };
 }
@@ -55,7 +49,7 @@ export default {
       configFile: babelPublishConfig,
     }),
     addon.keepAssets(['**/*.css']),
-    keepAssetImports(),
+    copyAssets(),
     addon.clean(),
   ],
 };

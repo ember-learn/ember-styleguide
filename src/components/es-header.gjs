@@ -4,7 +4,8 @@ import { on } from '@ember/modifier';
 import EsHeaderNavbarLink from './es-header-navbar-link.gjs';
 
 import defaultLinks from '../constants/links.js';
-import emberLogo from '../assets/images/ember-logo.svg';
+const emberLogo = new URL('../assets/images/ember-logo.svg', import.meta.url)
+  .href;
 
 const defautHomePage = 'https://www.emberjs.com';
 

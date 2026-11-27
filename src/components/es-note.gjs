@@ -1,6 +1,10 @@
 import Component from '@glimmer/component';
-import tomsterImage from '../assets/images/mascots/tomster.png';
-import zoeyImage from '../assets/images/mascots/zoey.png';
+const tomsterImage = new URL(
+  '../assets/images/mascots/tomster.png',
+  import.meta.url,
+).href;
+const zoeyImage = new URL('../assets/images/mascots/zoey.png', import.meta.url)
+  .href;
 
 const Mascots = {
   tomster: { image: tomsterImage, name: 'Tomster' },

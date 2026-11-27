@@ -1,5 +1,6 @@
 import EsIcon from './es-icon.gjs';
-import emberLogo from '../assets/images/ember-logo.svg';
+const emberLogo = new URL('../assets/images/ember-logo.svg', import.meta.url)
+  .href;
 
 <template>
   {{! template-lint-disable no-redundant-role }}
