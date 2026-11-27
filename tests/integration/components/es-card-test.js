@@ -7,11 +7,8 @@ module('Integration | Component | es card', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });
-
     await render(hbs`<EsCard />`);
-    assert.dom('*').hasText('');
+    assert.dom('.card').exists();
 
     // Template block usage:
     await render(hbs`
@@ -20,6 +17,6 @@ module('Integration | Component | es card', function (hooks) {
       </EsCard>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom('.card').hasText('template block text');
   });
 });
