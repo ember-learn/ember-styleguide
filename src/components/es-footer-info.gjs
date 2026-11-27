@@ -1,4 +1,5 @@
 import EsIcon from './es-icon.gjs';
+import emberLogo from '../assets/images/ember-logo.svg';
 
 <template>
   {{! template-lint-disable no-redundant-role }}
@@ -6,7 +7,7 @@ import EsIcon from './es-icon.gjs';
     <div class="footer-info-links">
 
       <img
-        src="/images/ember-logo.svg"
+        src={{emberLogo}}
         height="40px"
         width="83px"
         alt=""

@@ -4,6 +4,7 @@ import { on } from '@ember/modifier';
 import EsHeaderNavbarLink from './es-header-navbar-link.gjs';
 
 import defaultLinks from '../constants/links.js';
+import emberLogo from '../assets/images/ember-logo.svg';
 
 const defautHomePage = 'https://www.emberjs.com';
 
@@ -32,7 +33,7 @@ export default class EsHeaderComponent extends Component {
         <a class="navbar-brand-wrapper" href={{this.navHome}}>
           <img
             class="navbar-brand"
-            src="/images/ember-logo.svg"
+            src={{emberLogo}}
             alt="home"
             width="83"
             height="40"

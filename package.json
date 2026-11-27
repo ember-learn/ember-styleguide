@@ -16,8 +16,7 @@
   "files": [
     "addon-main.cjs",
     "dist",
-    "src",
-    "public"
+    "src"
   ],
   "imports": {
     "#src/*": "./src/*"
@@ -25,6 +24,7 @@
   "exports": {
     ".": "./dist/index.js",
     "./*": "./dist/*.js",
+    "./assets/*": "./dist/assets/*",
     "./*.css": "./dist/*.css",
     "./addon-main": "./addon-main.cjs"
   },
@@ -86,6 +86,7 @@
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
     "postcss-preset-env": "^10.0.0",
+    "postcss-url": "^10.1.4",
     "prettier": "^3.6.2",
     "prettier-plugin-ember-template-tag": "^2.1.0",
     "qunit": "^2.22.0",
@@ -116,33 +117,6 @@
     "version": 2,
     "type": "addon",
     "main": "addon-main.cjs",
-    "public-assets": {
-      "./public/ember-logo.png": "/ember-logo.png",
-      "./public/emberconf.jpg": "/emberconf.jpg",
-      "./public/fonts/Inter-ExtraLight.woff": "/fonts/Inter-ExtraLight.woff",
-      "./public/fonts/Inter-ExtraLight.woff2": "/fonts/Inter-ExtraLight.woff2",
-      "./public/fonts/Inter-Italic.woff": "/fonts/Inter-Italic.woff",
-      "./public/fonts/Inter-Italic.woff2": "/fonts/Inter-Italic.woff2",
-      "./public/fonts/Inter-Regular.woff": "/fonts/Inter-Regular.woff",
-      "./public/fonts/Inter-Regular.woff2": "/fonts/Inter-Regular.woff2",
-      "./public/fonts/Inter-SemiBold.woff": "/fonts/Inter-SemiBold.woff",
-      "./public/fonts/Inter-SemiBold.woff2": "/fonts/Inter-SemiBold.woff2",
-      "./public/fonts/Inter-SemiBoldItalic.woff": "/fonts/Inter-SemiBoldItalic.woff",
-      "./public/fonts/Inter-SemiBoldItalic.woff2": "/fonts/Inter-SemiBoldItalic.woff2",
-      "./public/fonts/Inter-roman.var.woff2": "/fonts/Inter-roman.var.woff2",
-      "./public/images/arrow-icon.svg": "/images/arrow-icon.svg",
-      "./public/images/boxes-bottom-continued.svg": "/images/boxes-bottom-continued.svg",
-      "./public/images/boxes-bottom-light.svg": "/images/boxes-bottom-light.svg",
-      "./public/images/boxes-bottom.svg": "/images/boxes-bottom.svg",
-      "./public/images/boxes-top.svg": "/images/boxes-top.svg",
-      "./public/images/ember-logo-white.svg": "/images/ember-logo-white.svg",
-      "./public/images/ember-logo.svg": "/images/ember-logo.svg",
-      "./public/images/mascots/tomster.png": "/images/mascots/tomster.png",
-      "./public/images/mascots/zoey.png": "/images/mascots/zoey.png",
-      "./public/images/quotes.svg": "/images/quotes.svg",
-      "./public/images/swipe-bottom.svg": "/images/swipe-bottom.svg",
-      "./public/images/swipe-top.svg": "/images/swipe-top.svg"
-    },
     "app-js": {
       "./components/es-banner.js": "./dist/_app_/components/es-banner.js",
       "./components/es-button.js": "./dist/_app_/components/es-button.js",

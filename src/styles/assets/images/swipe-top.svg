@@ -1,0 +1,8 @@
+<svg width="1200" height="350" xmlns="http://www.w3.org/2000/svg">
+  <path fill="url(#Pattern)" fill-rule="nonzero" d="M 1200 350 V 0 L 0 350 z"/>
+
+  <pattern id="Pattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <rect x="0" y="0" width="30" height="30" fill="#f4f6f8"/>
+    <circle cx="15" cy="15" r="1" fill="#e04e39" />
+  </pattern>
+</svg>

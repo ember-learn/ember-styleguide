@@ -1,8 +1,10 @@
 import Component from '@glimmer/component';
+import tomsterImage from '../assets/images/mascots/tomster.png';
+import zoeyImage from '../assets/images/mascots/zoey.png';
 
 const Mascots = {
-  tomster: { image: '/images/mascots/tomster.png', name: 'Tomster' },
-  zoey: { image: '/images/mascots/zoey.png', name: 'Zoey' },
+  tomster: { image: tomsterImage, name: 'Tomster' },
+  zoey: { image: zoeyImage, name: 'Zoey' },
 };
 
 function randomMascot() {

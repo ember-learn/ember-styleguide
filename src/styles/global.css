@@ -245,7 +245,7 @@ blockquote {
 }
 
 blockquote:before {
-  content: url("/images/quotes.svg");
+  content: url("../assets/images/quotes.svg");
   position: absolute;
   left: var(--spacing-2);
   top: var(--spacing-1);
